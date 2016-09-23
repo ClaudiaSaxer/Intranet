@@ -1,0 +1,76 @@
+#---------------------------------
+# Repository (GitHub)
+#---------------------------------
+
+# Set clone depth to speed up clone
+clone_depth: 10
+# Folder to clone the repository to
+clone_folder: C:\git\Intranet
+
+# Skipping commits with noCI in commit message
+skip_commits:
+  message: ^.*\b(noCI)\b.*$
+  
+#---------------------------------
+# Before build
+#---------------------------------
+
+# Version format
+version: 1.0.{build}
+
+# Patch assembly info
+assembly_info:
+  patch: true
+  file: AssemblyInfo.*
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+
+# Cache configuration
+cache:
+# Cache NuGet packages until packages.config changes
+  - .Src\packages -> **\packages.config
+  
+#---------------------------------
+# Build configuration
+#---------------------------------
+
+# Build OS
+os: Visual Studio 2015
+
+# Build configuration
+configuration: Release
+
+# Build platform
+platform: Any CPU
+
+# Environment variables
+environment:
+  emailc:
+    secure: 0LbYTXPAt5NzUjRS9UwU9khIR5JYcldNoVS9rSsSuW8=
+  emailf:
+    secure: KonHUFllqKO/bGlIlAqeKuwKtUCsuM+GtelFuv/MCjY=
+  webhookurl:
+    secure: zBePHnst4bTYscBb8VXBz6thCBSQymnTc+YX5r2MY/YPFlHEV0cM3YFrVcX9o96U6sQ8qZUS9moaNPtEv9ce8w==
+    
+#---------------------------------
+# Build
+#---------------------------------
+
+# Script to build all the solution
+build_script:
+- ps: .Build\Build.ps1
+
+#---------------------------------
+# Notifications
+#---------------------------------
+
+notifications:
+- provider: Email
+  to:
+  - frank.jordi@hsr.ch
+  - claudia.saxer@hsr.ch
+  subject: Build failure
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: false
