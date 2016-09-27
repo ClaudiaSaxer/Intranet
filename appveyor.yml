@@ -69,7 +69,7 @@ notifications:
 - provider: HipChat
   room: Sa-intranet
   auth_token:
-    secure: 2Mxfkp7ypVRWiXd13hrgy6y5FhFO5Br0aYqn7MKx8uL3bnVsX6d0H3U81b9SNyyg
+    secure: h6ZOVsH//G6fYXy2W7n6tFAFv/tJdWLxDBo38Cs1vNj+Bo+Irz6xLF1bNGJVvuys
   on_build_success: true
   on_build_failure: true
   on_build_status_changed: true
