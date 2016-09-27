@@ -67,7 +67,7 @@ build_script:
 
 notifications:
 - provider: HipChat
-  room: Sa-Intranet
+  room: Sa-intranet
   auth_token:
     secure: 2Mxfkp7ypVRWiXd13hrgy6y5FhFO5Br0aYqn7MKx8uL3bnVsX6d0H3U81b9SNyyg
   on_build_success: true
