@@ -66,11 +66,10 @@ build_script:
 #---------------------------------
 
 notifications:
-- provider: Email
-  to:
-  - frank.jordi@hsr.ch
-  - claudia.saxer@hsr.ch
-  subject: Build failure
-  on_build_success: false
+- provider: HipChat
+  room: Sa-Intranet
+  auth_token:
+    secure: 2Mxfkp7ypVRWiXd13hrgy6y5FhFO5Br0aYqn7MKx8uL3bnVsX6d0H3U81b9SNyyg
+  on_build_success: true
   on_build_failure: true
-  on_build_status_changed: false
+  on_build_status_changed: true
