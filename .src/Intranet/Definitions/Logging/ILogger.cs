@@ -4,7 +4,7 @@ using System;
 
 #endregion
 
-namespace Intranet.Common
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Interface representing a loggerFactory

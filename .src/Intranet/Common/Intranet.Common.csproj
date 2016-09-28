@@ -49,16 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommonBaseTypes\LoggingBase.cs" />
-    <Compile Include="Logging\Definition\ILogger.cs" />
-    <Compile Include="Logging\Definition\ILoggerFactory.cs" />
-    <Compile Include="Logging\Definition\LogLevel.cs" />
+    <Compile Include="Logging\BaseClass\LoggingBase.cs" />
     <Compile Include="Logging\NLogExtesions.cs" />
     <Compile Include="Logging\NLogLoggerFactory.cs" />
     <Compile Include="Logging\NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
+      <Project>{095033fb-4c81-4556-a7bb-f0c69d7617ee}</Project>
+      <Name>Intranet.Definition</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

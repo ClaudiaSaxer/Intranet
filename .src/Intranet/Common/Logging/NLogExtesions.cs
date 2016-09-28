@@ -1,6 +1,7 @@
 ﻿using System;
+using Intranet.Definition;
 
-namespace Intranet.Common
+namespace Intranet.Common.Logging
 {
     /// <summary>
     ///     Class containing all NLog extensions
@@ -8,7 +9,7 @@ namespace Intranet.Common
     public static class NLogExtensions
     {
         /// <summary>
-        ///     Convert a <see cref="Common.LogLevel" /> value to a <see cref="NLog.LogLevel" /> value
+        ///     Convert a <see cref="LogLevel" /> value to a <see cref="NLog.LogLevel" /> value
         /// </summary>
         /// <param name="level">The level to convert</param>
         /// <exception cref="ArgumentException">level is out of range.</exception>

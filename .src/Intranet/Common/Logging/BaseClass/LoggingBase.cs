@@ -1,5 +1,6 @@
 ﻿using System;
 using Extend;
+using Intranet.Definition;
 
 namespace Intranet.Common
 {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Intranet.Shell.Bll
 {
-    public class Class1
+    public class LoggingTest 
     {
     }
 }

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Intranet.Definition;
 using NLog;
+using ILogger = Intranet.Definition.ILogger;
 
-namespace Intranet.Common
+namespace Intranet.Common.Logging
 {
     /// <summary>
     ///     A NLog loggerFactory factory.

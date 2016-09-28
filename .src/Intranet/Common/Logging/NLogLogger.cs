@@ -1,7 +1,10 @@
 ﻿using System;
 using NLog;
+using Intranet.Definition;
+using ILogger = Intranet.Definition.ILogger;
+using LogLevel = Intranet.Definition.LogLevel;
 
-namespace Intranet.Common
+namespace Intranet.Common.Logging
 {
     /// <summary>
     ///     A NLog loggerFactory.
