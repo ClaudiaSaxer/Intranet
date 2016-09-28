@@ -7,27 +7,39 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.ViewModel", "Intra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Model", "Intranet\Model\Intranet.Model.csproj", "{0BF2D570-E789-4D08-9A98-8F019BB03DA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Dal", "Intranet\Dal\Intranet.Dal.csproj", "{6E55F106-4C2A-4DEE-9F3E-530731447C45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Shell.Dal", "Intranet\Shell\Dal\Intranet.Shell.Dal.csproj", "{6E55F106-4C2A-4DEE-9F3E-530731447C45}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Definitions", "Intranet\Definitions\Intranet.Definitions.csproj", "{095033FB-4C81-4556-A7BB-F0C69D7617EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Bll", "Intranet\Bll\Intranet.Bll.csproj", "{51428790-ED54-48A4-9EEC-C25E99936E65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Bll", "Intranet\Labor\Bll\Intranet.Labor.Bll.csproj", "{51428790-ED54-48A4-9EEC-C25E99936E65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Web", "Intranet\Web\Intranet.Web.csproj", "{E59426F1-7AA2-463D-B136-A3E8BD2C95D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Common", "Intranet\Common\Intranet.Common.csproj", "{9AED7002-C17B-437B-8599-9C0430E19B60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Bll.Test", "Intranet.Testing\Bll\Intranet.Bll.Test.csproj", "{D54BA11F-6C74-489A-A140-18D89DB89937}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Bll.Test", "Intranet.Testing\Labor\Bll\Intranet.Labor.Bll.Test.csproj", "{D54BA11F-6C74-489A-A140-18D89DB89937}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.ViewModel.Test", "Intranet.Testing\ViewModel\Intranet.ViewModel.Test.csproj", "{8AEE9D65-8904-44A5-B7F9-CCD0DB9977B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Dal.Test", "Intranet.Testing\Dal\Intranet.Dal.Test.csproj", "{E4D3343F-6D08-4CB3-A15D-7B7880BC97BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Shell.Dal.Test", "Intranet.Testing\Shell\Dal\Intranet.Shell.Dal.Test.csproj", "{E4D3343F-6D08-4CB3-A15D-7B7880BC97BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Model.Test", "Intranet.Testing\Model\Intranet.Model.Test.csproj", "{3758228E-0EA5-4771-8DBA-3FA2C20C508E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Web.Test", "Intranet.Testing\Web\Intranet.Web.Test.csproj", "{4DF76230-9DD2-4B26-8F47-D96158CBEAA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Common.Test", "Intranet.Testing\Common\Intranet.Common.Test.csproj", "{30A218FA-36CD-4A57-BB77-4CB0B9EF448C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Shell.Bll", "Intranet\Shell\Bll\Intranet.Shell.Bll.csproj", "{E2CB059B-136D-4CC2-AC50-E28D71ED7378}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Shell.Bll.Test", "Intranet.Testing\Shell\Bll\Intranet.Shell.Bll.Test.csproj", "{04025ED2-A9DD-4210-A16B-D4033494A867}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Shell.Definitions", "Intranet\Shell\Definitions\Intranet.Shell.Definitions.csproj", "{7BFEABBC-29CD-4535-A381-825A58FCCBD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Definitions", "Intranet\Labor\Definitions\Intranet.Labor.Definitions.csproj", "{B9F53677-B67F-4AA7-9300-B90E7B2F706B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Dal", "Intranet\Labor\Dal\Intranet.Labor.Dal.csproj", "{FA137C05-185F-4036-86FD-D8A09998A250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Dal.Test", "Intranet.Testing\Labor\Dal\Intranet.Labor.Dal.Test.csproj", "{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +99,30 @@ Global
 		{30A218FA-36CD-4A57-BB77-4CB0B9EF448C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30A218FA-36CD-4A57-BB77-4CB0B9EF448C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30A218FA-36CD-4A57-BB77-4CB0B9EF448C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2CB059B-136D-4CC2-AC50-E28D71ED7378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2CB059B-136D-4CC2-AC50-E28D71ED7378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2CB059B-136D-4CC2-AC50-E28D71ED7378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2CB059B-136D-4CC2-AC50-E28D71ED7378}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04025ED2-A9DD-4210-A16B-D4033494A867}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04025ED2-A9DD-4210-A16B-D4033494A867}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04025ED2-A9DD-4210-A16B-D4033494A867}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04025ED2-A9DD-4210-A16B-D4033494A867}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFEABBC-29CD-4535-A381-825A58FCCBD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFEABBC-29CD-4535-A381-825A58FCCBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFEABBC-29CD-4535-A381-825A58FCCBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFEABBC-29CD-4535-A381-825A58FCCBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F53677-B67F-4AA7-9300-B90E7B2F706B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F53677-B67F-4AA7-9300-B90E7B2F706B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F53677-B67F-4AA7-9300-B90E7B2F706B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F53677-B67F-4AA7-9300-B90E7B2F706B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA137C05-185F-4036-86FD-D8A09998A250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA137C05-185F-4036-86FD-D8A09998A250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA137C05-185F-4036-86FD-D8A09998A250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA137C05-185F-4036-86FD-D8A09998A250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
