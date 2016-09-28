@@ -66,13 +66,6 @@ build_script:
 #---------------------------------
 
 notifications:
-- provider: HipChat
-  room: Sa-intranet
-  auth_token:
-    secure: h6ZOVsH//G6fYXy2W7n6tFAFv/tJdWLxDBo38Cs1vNj+Bo+Irz6xLF1bNGJVvuys
-  on_build_success: true
-  on_build_failure: true
-  on_build_status_changed: true
 - provider: Slack
   auth_token:
     secure: MNtlzkQTM6Crw4YKvykSzCddR9SYMtH35Z13KzsoVXlWY58fPs/Mb6SwOvUp42RcC5fQVjhYFExp4xIHtZm0aPk4sdtQgtRitSfYwTQDD0g=
