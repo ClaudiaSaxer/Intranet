@@ -5,11 +5,6 @@ namespace Intranet.Dal.Test
 {
     public class TestClass
     {
-        #region Ctor
-
-    
-        #endregion
-
         [Fact]
         public void PassingTest()
         {
