@@ -23,20 +23,19 @@ Task("Clean")
     .Does(() =>
 {	
     CleanDirectory( sourceDirectory + Directory("Labor/Bll/bin") );
-    CleanDirectory( sourceDirectory + Directory("Shell/Bll/bin") );
+    CleanDirectory( sourceDirectory + Directory("Bll/bin") );
     CleanDirectory( sourceDirectory + Directory("Common/bin") );
-    CleanDirectory( sourceDirectory + Directory("Shell/Dal/bin") );
+    CleanDirectory( sourceDirectory + Directory("Dal/bin") );
     CleanDirectory( sourceDirectory + Directory("Labor/Dal/bin") );
     CleanDirectory( sourceDirectory + Directory("Definitions/bin") );
     CleanDirectory( sourceDirectory + Directory("Labor/Definitions/bin") );
-    CleanDirectory( sourceDirectory + Directory("Shell/Definitions/bin") );
     CleanDirectory( sourceDirectory + Directory("Model/bin") );
     CleanDirectory( sourceDirectory + Directory("ViewModel/bin") );
     CleanDirectory( sourceDirectory + Directory("Web/bin") );
-    CleanDirectory( testDirectory + Directory("Shell/Bll/bin") );    
+    CleanDirectory( testDirectory + Directory("Bll/bin") );    
     CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( testDirectory + Directory("Common/bin") );
-    CleanDirectory( testDirectory + Directory("Shell/Dal/bin") );
+    CleanDirectory( testDirectory + Directory("Dal/bin") );
     CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
     CleanDirectory( testDirectory + Directory("Model/bin") );
     CleanDirectory( testDirectory + Directory("ViewModel/bin") );

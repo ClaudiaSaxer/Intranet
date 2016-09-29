@@ -1,5 +1,6 @@
 ﻿using System;
 using Intranet.Definition;
+using Intranet.Definition.Logger;
 
 namespace Intranet.Shell.Bll
 {

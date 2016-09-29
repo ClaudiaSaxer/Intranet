@@ -1,6 +1,6 @@
 ﻿using System;
 using Extend;
-using Intranet.Definition;
+using Intranet.Definition.Logger;
 
 namespace Intranet.Common
 {

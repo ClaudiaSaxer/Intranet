@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Disposable\DisposableBase.cs" />
     <Compile Include="Logging\BaseClass\LoggingBase.cs" />
     <Compile Include="Logging\NLogExtesions.cs" />
     <Compile Include="Logging\NLogLoggerFactory.cs" />
