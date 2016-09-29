@@ -1,7 +1,8 @@
 ﻿using System;
 using NLog;
-using ILogger = Intranet.Definition.ILogger;
-using LogLevel = Intranet.Definition.LogLevel;
+using ILogger = Intranet.Definition.Logger.ILogger;
+using LogLevel = Intranet.Definition.Logger.LogLevel;
+using Intranet.Definition.Logger;
 
 namespace Intranet.Common.Logging
 {
@@ -19,19 +20,7 @@ namespace Intranet.Common.Logging
 
         #endregion
 
-        #region Ctor
-
-        /// <summary>
-        ///     Initialize a new <see cref="NLogLogger" />
-        /// </summary>
-        /// <param name="logger">A NLog loggerFactory</param>
-        public NLogLogger( Logger logger )
-        {
-            _internalLogger = logger;
-            DefaultLevel = LogLevel.Debug;
-        }
-
-        #endregion
+        #region Properties
 
         /// <summary>
         ///     Gets or sets the default log level
@@ -83,6 +72,22 @@ namespace Intranet.Common.Logging
         {
             get { return _internalLogger.IsDebugEnabled; }
         }
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        ///     Initialize a new <see cref="NLogLogger" />
+        /// </summary>
+        /// <param name="logger">A NLog loggerFactory</param>
+        public NLogLogger( Logger logger )
+        {
+            _internalLogger = logger;
+            DefaultLevel = LogLevel.Debug;
+        }
+
+        #endregion
 
         #region Log
 

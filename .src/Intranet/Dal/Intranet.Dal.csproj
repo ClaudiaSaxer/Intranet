@@ -31,11 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -45,7 +53,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbCommit.cs" />
+    <Compile Include="DbFactory.cs" />
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="IntranetContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\TestRepository.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Intranet.Common.csproj">
+      <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
+      <Name>Intranet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
+      <Project>{095033fb-4c81-4556-a7bb-f0c69d7617ee}</Project>
+      <Name>Intranet.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
