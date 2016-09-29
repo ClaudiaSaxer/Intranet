@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -20,7 +19,7 @@ namespace Intranet.Definition.Dal
         /// </summary>
         /// <param name="entity">The entity to add.</param>
         /// <returns>Returns the added entity.</returns>
-        TEntity Add(TEntity entity);
+        TEntity Add( TEntity entity );
 
         /// <summary>
         ///     Adds the given collection of entities into context underlying the set with
@@ -29,14 +28,14 @@ namespace Intranet.Definition.Dal
         /// </summary>
         /// <param name="entities">The collection of entities to add.</param>
         /// <returns>The collection of entities.</returns>
-        IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities);
+        IEnumerable<TEntity> AddRange( IEnumerable<TEntity> entities );
 
         /// <summary>
         ///     Attaches the given entity to the current database context.
         /// </summary>
         /// <param name="entity">The entity to attach.</param>
         /// <returns>Returns the attached entity.</returns>
-        TEntity Attach(TEntity entity);
+        TEntity Attach( TEntity entity );
 
         /// <summary>
         ///     Gets the number of records of the repositories table.
@@ -58,7 +57,7 @@ namespace Intranet.Definition.Dal
         /// <typeparam name="TAnyEntity">The type of the entity.</typeparam>
         /// <param name="entity">The entity.</param>
         /// <returns>Returns an entry for the entity.</returns>
-        DbEntityEntry<TAnyEntity> Entry<TAnyEntity>(TAnyEntity entity) where TAnyEntity : class;
+        DbEntityEntry<TAnyEntity> Entry<TAnyEntity>( TAnyEntity entity ) where TAnyEntity : class;
 
         /// <summary>
         ///     Asynchronously finds an entity with the given primary key values.  If an
@@ -77,7 +76,7 @@ namespace Intranet.Definition.Dal
         /// </remarks>
         /// <param name="keyValues">The values of the primary key for the entity to be found.</param>
         /// <returns>A task that represents the asynchronous find operation. The task result contains the entity found, or null.</returns>
-        Task<TEntity> FindAsync(params Object[] keyValues);
+        Task<TEntity> FindAsync( params Object[] keyValues );
 
         /// <summary>
         ///     Gets all entities.
@@ -90,7 +89,7 @@ namespace Intranet.Definition.Dal
         /// </summary>
         /// <param name="entity">The entity to remove.</param>
         /// <returns>Returns the removed entity.</returns>
-        TEntity Remove(TEntity entity);
+        TEntity Remove( TEntity entity );
 
         /// <summary>
         ///     Saves all changes made in this context to the underlying database.
@@ -106,13 +105,13 @@ namespace Intranet.Definition.Dal
         ///     A task that represents the asynchronous save operation.
         ///     The task result contains the number of Objects written to the underlying database.
         /// </returns>
-        Task<Int32> SaveChangesAsync(CancellationToken? cancellationToken = null);
+        Task<Int32> SaveChangesAsync( CancellationToken? cancellationToken = null );
 
         /// <summary>
         ///     Sets the state of the given entity to modified.
         /// </summary>
         /// <param name="entity">The entity to mark as modified.</param>
-        void SetModified(TEntity entity);
+        void SetModified( TEntity entity );
 
         /// <summary>
         ///     Creates a raw SQL query that will return entities in this set. By default,
@@ -144,13 +143,13 @@ namespace Intranet.Definition.Dal
         ///     A <see cref="System.Data.Entity.Infrastructure.DbSqlQuery{TEntity}" /> Object that will execute the query when
         ///     it is enumerated.
         /// </returns>
-        DbSqlQuery<TEntity> SqlQuery(String sql, params Object[] parameters);
+        DbSqlQuery<TEntity> SqlQuery( String sql, params Object[] parameters );
 
         /// <summary>
         ///     Gets the entities matching the given predicate.
         /// </summary>
         /// <param name="predicate">The predicate.</param>
         /// <returns>The entities matching the given predicate.</returns>
-        IQueryable<TEntity> Where(Expression<Func<TEntity, Boolean>> predicate);
+        IQueryable<TEntity> Where( Expression<Func<TEntity, Boolean>> predicate );
     }
 }

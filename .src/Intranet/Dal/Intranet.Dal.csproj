@@ -53,7 +53,6 @@
     <Compile Include="DbCommit.cs" />
     <Compile Include="DbFactory.cs" />
     <Compile Include="GenericRepository.cs" />
-    <Compile Include="IntranetContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

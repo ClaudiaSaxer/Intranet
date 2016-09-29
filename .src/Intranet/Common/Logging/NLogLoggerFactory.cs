@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Intranet.Definition;
+using Intranet.Definition.Logger;
 using NLog;
-using ILogger = Intranet.Definition.ILogger;
+using ILogger = Intranet.Definition.Logger.ILogger;
 
 namespace Intranet.Common.Logging
 {
