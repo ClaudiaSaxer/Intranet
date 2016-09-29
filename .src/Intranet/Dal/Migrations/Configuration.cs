@@ -9,7 +9,7 @@ namespace Intranet.Dal.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(Intranet.Dal.IntranetContext context)
