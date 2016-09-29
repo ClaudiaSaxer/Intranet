@@ -69,17 +69,15 @@ Task("Build")
 Task("RunTests")
     .IsDependentOn("Build")
     .Does(() =>
-{
-    
-    XUnit2( testDirectory.ToString() +"/**/bin/Release/*.Test.dll", new XUnit2Settings
-     { 
-        ToolPath = xUnit,
-        Parallelism = ParallelismOption.All,
-        HtmlReport = true,
-        NoAppDomain = true,
-        OutputDirectory = outputDirectory
-    });    
-
+{    
+    XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
+		{ 
+			ToolPath = xUnit,
+			Parallelism = ParallelismOption.All,
+			HtmlReport = true,
+			NoAppDomain = true,
+			OutputDirectory = outputDirectory
+		});    
 });
 
 
