@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
@@ -45,10 +49,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IoC\Registration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll\Intranet.Bll.csproj">
+      <Project>{e2cb059b-136d-4cc2-ac50-e28d71ed7378}</Project>
+      <Name>Intranet.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Intranet.Common.csproj">
+      <Project>{9aed7002-c17b-437b-8599-9c0430e19b60}</Project>
+      <Name>Intranet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal\Intranet.Dal.csproj">
+      <Project>{6e55f106-4c2a-4dee-9f3e-530731447c45}</Project>
+      <Name>Intranet.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
+      <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
+      <Name>Intranet.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labor\Dal\Intranet.Labor.Dal.csproj">
+      <Project>{fa137c05-185f-4036-86fd-d8a09998a250}</Project>
+      <Name>Intranet.Labor.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406f0c-12ee-4385-b6de-6f54519bd086}</Project>
+      <Name>Intranet.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
