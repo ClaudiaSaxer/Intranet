@@ -17,10 +17,9 @@ namespace Intranet.Bll.Test
                 // Arrange - configure the mock
                 mock.Mock<ITestAutofac>().Setup(x => x.GetHelloWorld("world")).Returns("Hello world");
                 var sut = mock.Create<ITestAutofac>();
-
+                var target = new TestUseAutofac { TestAutofac = sut };
                 // Act
-                var target = new TestUseAutofac();
-                target.TestAutofac = sut;
+
                 var hello = target.GetHelloWorldAndNumer("world", 42);
 
                 // Assert - assert on the mock
