@@ -1,5 +1,7 @@
-﻿using Autofac.Extras.Moq;
+﻿using System;
+using FluentAssertions;
 using Intranet.Definition;
+using Moq;
 using Xunit;
 
 namespace Intranet.Bll.Test
@@ -9,23 +11,42 @@ namespace Intranet.Bll.Test
         [Fact]
         public void HelloWorldAndNumberTest()
         {
-            using ( var mock = AutoMock.GetLoose() )
+            var invoked = false;
+            var testAutofac = MockHelper.GetTestAutofac( x => "Hello world", x => invoked = true );
+            var target = new TestUseAutofac
             {
-                // Arrange - configure the mock
-                mock.Mock<ITestAutofac>()
-                    .Setup( x => x.GetHelloWorld( "world" ) )
-                    .Returns( "Hello world" );
-                var sut = mock.Create<ITestAutofac>();
-                var target = new TestUseAutofac { TestAutofac = sut };
-                // Act
+                TestAutofac = testAutofac
+            };
 
-                var hello = target.GetHelloWorldAndNumer( "world", 42 );
+            var actual = target.GetHelloWorldAndNumer( "world", 42 );
 
-                // Assert - assert on the mock
-                mock.Mock<ITestAutofac>()
-                    .Verify( x => x.GetHelloWorld( "world" ) );
-                Assert.Equal( "Hello world 42", hello );
-            }
+            invoked.Should()
+                   .BeTrue( "My class should call this method" );
+            actual
+                .Should()
+                  .Be( "Hello world 42" );
+        }
+    }
+
+    public static class MockHelper
+    {
+        public static ITestAutofac GetTestAutofac(
+            Func<String, String> getHelloWorldFunc = null, 
+            Action<String>  getHelloWorldCallback = null )
+        {
+            var mock = new Mock<ITestAutofac>
+            {
+                Name = "MockHelper.GetTestAutofac",
+                DefaultValue = DefaultValue.Mock
+            };
+
+
+            mock
+                .Setup( x => x.GetHelloWorld( It.IsAny<String>() ) )
+                .Returns( ( String s ) => getHelloWorldFunc?.Invoke( s ) )
+                .Callback( ( String s ) => getHelloWorldCallback?.Invoke( s ) );
+
+            return mock.Object;
         }
     }
 }
