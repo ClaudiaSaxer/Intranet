@@ -1,4 +1,6 @@
-﻿using Xunit;
+﻿using Autofac.Extras.Moq;
+using Intranet.Definition;
+using Xunit;
 
 namespace Intranet.Bll.Test
 {
@@ -9,9 +11,23 @@ namespace Intranet.Bll.Test
         [Fact]
         public void HelloWorldAndNumberTest()
         {
-            var target = new TestUseAutofac();
-            var hello = target.GetHelloWorldAndNumer( "world", 42 );
-            Assert.Equal( "Hello world 42", hello );
+
+            using (var mock = AutoMock.GetLoose())
+            {
+                // Arrange - configure the mock
+                mock.Mock<ITestAutofac>().Setup(x => x.GetHelloWorld("world")).Returns("Hello world");
+                var sut = mock.Create<ITestAutofac>();
+
+                // Act
+                var target = new TestUseAutofac();
+                target.TestAutofac = sut;
+                var hello = target.GetHelloWorldAndNumer("world", 42);
+
+                // Assert - assert on the mock
+                mock.Mock<ITestAutofac>().Verify(x => x.GetHelloWorld("world"));
+                Assert.Equal("Hello world 42", hello);
+            }
+
         }
     }
 }
