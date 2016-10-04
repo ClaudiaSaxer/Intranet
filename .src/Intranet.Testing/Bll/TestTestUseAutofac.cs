@@ -4,20 +4,7 @@ namespace Intranet.Bll.Test
 {
     public class TestTestUseAutofac
     {
-        //#region Fields
-
-        //private readonly TestUseAutofac _useautofac;
-
-        //#endregion
-
-        //#region Ctor
-
-        //public TestTestUseAutofac()
-        //{
-        //    _useautofac = new TestUseAutofac();
-        //}
-
-        //#endregion
+       
 
         [Fact]
         public void HelloWorldAndNumberTest()
