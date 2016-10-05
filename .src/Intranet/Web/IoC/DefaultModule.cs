@@ -62,25 +62,12 @@ namespace Intranet.Web.IoC
                    .AsSelf()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<TestBll>()
+                   .As<ITestBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
-
-        /// <summary>
-        ///     Register MVC 
-        /// </summary>
-        /// <param name="builder">The builder through which components can be registered.</param>
-        private void RegisterMVC( ContainerBuilder builder )
-        {
-            // Register dependencies in controllers
-            builder.RegisterControllers(typeof(MvcApplication).Assembly);
-
-            // Register dependencies in filter attributes
-            builder.RegisterFilterProvider();
-
-            // Register dependencies in custom views
-            builder.RegisterSource(new ViewRegistrationSource());
-            
-        }
-           
 
         /// <summary>
         ///     Registers the data access components.
@@ -110,11 +97,32 @@ namespace Intranet.Web.IoC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
         private void RegisterLoggingComponents( ContainerBuilder builder )
-            => builder.RegisterType<NLogLoggerFactory>()
-                      .As<ILoggerFactory>()
-                      .PropertiesAutowired()
-                      .SingleInstance();
+        {
+            builder.RegisterType<NLogLoggerFactory>()
+                   .As<ILoggerFactory>()
+                   .PropertiesAutowired()
+                   .SingleInstance();
 
+            builder.RegisterType<NLogLogger>()
+                   .As<ILogger>()
+                   .PropertiesAutowired()
+                   .SingleInstance();
+        }
 
+        /// <summary>
+        ///     Register MVC
+        /// </summary>
+        /// <param name="builder">The builder through which components can be registered.</param>
+        private void RegisterMVC( ContainerBuilder builder )
+        {
+            // Register dependencies in controllers
+            builder.RegisterControllers( typeof(MvcApplication).Assembly );
+
+            // Register dependencies in filter attributes
+            builder.RegisterFilterProvider();
+
+            // Register dependencies in custom views
+            builder.RegisterSource( new ViewRegistrationSource() );
+        }
     }
 }

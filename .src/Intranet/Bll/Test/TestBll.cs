@@ -7,9 +7,9 @@ using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
 
-namespace Intranet.Bll.Test
+namespace Intranet.Bll
 {
-    internal class TestBll: ITestBll
+    public class TestBll: ITestBll
     {
         #region Fields
 
