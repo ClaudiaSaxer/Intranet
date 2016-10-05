@@ -1,23 +1,26 @@
 ﻿using System.Web.Mvc;
+using Autofac;
 using Intranet.Definition;
 using Intranet.ViewModel;
+using Intranet.Web.IoC;
 
 namespace Intranet.Web.Controllers
 {
     public class HomeController : Controller
     {
+     
         #region Properties
 
         public IVMHelper VmHelper { get; set; }
 
+        
         #endregion
 
-        #region Ctor
-
-        public HomeController( IVMHelper VmHelper )
+        public HomeController( IVMHelper helper )
         {
-            this.VmHelper = VmHelper;
+            VmHelper = helper;
         }
+        #region Ctor
 
         #endregion
 

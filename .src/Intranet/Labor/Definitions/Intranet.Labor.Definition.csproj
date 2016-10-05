@@ -7,8 +7,8 @@
     <ProjectGuid>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intranet.Labor.Definitions</RootNamespace>
-    <AssemblyName>Intranet.Labor.Definitions</AssemblyName>
+    <RootNamespace>Intranet.Labor.Definition</RootNamespace>
+    <AssemblyName>Intranet.Labor.Definition</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

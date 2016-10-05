@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Linq.Expressions;
 
 namespace Intranet.ViewModel
 {
-    public class TestViewModel
+    public class TestViewModel 
     {
         #region Properties
 
