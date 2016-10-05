@@ -69,6 +69,13 @@ build_script:
 - ps: .Build\Build.ps1
 
 #---------------------------------
+# Testing
+#---------------------------------
+
+# Turn off automatic test discovery
+test: off
+
+#---------------------------------
 # Notifications
 #---------------------------------
 
