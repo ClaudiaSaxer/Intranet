@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace Intranet.WebTemp
+namespace Intranet.Web
 {
     public class RouteConfig
     {

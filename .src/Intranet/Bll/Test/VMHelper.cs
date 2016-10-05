@@ -1,5 +1,5 @@
 ﻿using Intranet.Definition;
-using Intranet.ViewModel.Test;
+using Intranet.ViewModel;
 
 namespace Intranet.Bll
 {

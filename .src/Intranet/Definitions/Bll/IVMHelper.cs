@@ -1,4 +1,4 @@
-﻿using Intranet.ViewModel.Test;
+﻿using Intranet.ViewModel;
 
 namespace Intranet.Definition
 {

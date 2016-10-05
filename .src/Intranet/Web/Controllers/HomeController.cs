@@ -1,13 +1,23 @@
 ﻿using System.Web.Mvc;
 using Intranet.Definition;
+using Intranet.ViewModel;
 
-namespace Intranet.WebTemp.Controllers
+namespace Intranet.Web.Controllers
 {
     public class HomeController : Controller
     {
         #region Properties
 
         public IVMHelper VmHelper { get; set; }
+
+        #endregion
+
+        #region Ctor
+
+        public HomeController( IVMHelper VmHelper )
+        {
+            this.VmHelper = VmHelper;
+        }
 
         #endregion
 
@@ -27,7 +37,7 @@ namespace Intranet.WebTemp.Controllers
 
         public ActionResult Index()
         {
-            var view = VmHelper.getTestVM();
+            TestViewModel view = VmHelper.getTestVM();
             return View( view );
         }
     }
