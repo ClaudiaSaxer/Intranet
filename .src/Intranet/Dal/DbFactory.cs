@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Common.Disposable;
-using Intranet.Definition.Dal;
-using Intranet.Definition.Logger;
+using Intranet.Definition;
 
 namespace Intranet.Dal
 {
@@ -36,20 +31,20 @@ namespace Intranet.Dal
         ///     Initialize a new instance of the <see cref="DbFactory{TContext}" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public DbFactory(ILoggerFactory loggerFactory)
-            : base(loggerFactory.CreateLogger(typeof(DbFactory<TContext>)))
+        public DbFactory( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(DbFactory<TContext>) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         /// <summary>
         ///     Initialize a new instance of the <see cref="DbFactory{TContext}" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        public DbFactory(ILogger logger)
-            : base(logger)
+        public DbFactory( ILogger logger )
+            : base( logger )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
@@ -62,9 +57,9 @@ namespace Intranet.Dal
         /// <value>The database context.</value>
         public TContext GetDb()
         {
-            lock (_syncRoot)
+            lock ( _syncRoot )
             {
-                if (_dbContext != null)
+                if ( _dbContext != null )
                     return _dbContext;
 
                 _dbContext = CreateContext();
@@ -81,10 +76,8 @@ namespace Intranet.Dal
         /// </summary>
         /// <exception cref="InvalidOperationException">Failed to create DbContext.</exception>
         /// <returns>A new DbContext of type <typeparamref name="TContext" />.</returns>
-        protected virtual TContext CreateContext()
-        {
-            return new TContext();
-        }
+        protected virtual TContext CreateContext() 
+            => new TContext();
 
         #endregion
 
@@ -93,11 +86,8 @@ namespace Intranet.Dal
         /// <summary>
         ///     Dispose all managed resources.
         /// </summary>
-        protected override void Disposed()
-        {
-            if (_dbContext != null)
-                _dbContext.Dispose();
-        }
+        protected override void Disposed() 
+            => _dbContext?.Dispose();
 
         #endregion
     }

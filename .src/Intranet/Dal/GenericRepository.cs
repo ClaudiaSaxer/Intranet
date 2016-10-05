@@ -5,12 +5,10 @@ using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Intranet.Common.Disposable;
-using Intranet.Definition.Dal;
-using Intranet.Definition.Logger;
+using Intranet.Definition;
 
 namespace Intranet.Dal
 {
@@ -49,9 +47,9 @@ namespace Intranet.Dal
         {
             get
             {
-                if (_context == null)
+                if ( _context == null )
                 {
-                    Logger.Debug("Request DbContext form database factory.");
+                    Logger.Debug( "Request DbContext form database factory." );
                     _context = DatabaseFactory.GetDb();
                 }
                 return _context;
@@ -77,7 +75,7 @@ namespace Intranet.Dal
         /// <value>The DbSet of the repositories table.</value>
         private DbSet<TEntity> DbSet
         {
-            get { return _dbSet ?? (_dbSet = Context.Set<TEntity>()); }
+            get { return _dbSet ?? ( _dbSet = Context.Set<TEntity>() ); }
         }
 
         #endregion
@@ -89,10 +87,10 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        protected GenericRepository(IDatabaseFactory<TContext> databaseFactory, ILoggerFactory loggerFactory)
-            : base(loggerFactory.CreateLogger(typeof(GenericRepository<TContext, TEntity>)))
+        protected GenericRepository( IDatabaseFactory<TContext> databaseFactory, ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(GenericRepository<TContext, TEntity>) ) )
         {
-            Logger.Trace("Enter Ctor - Exit on next line.");
+            Logger.Trace( "Enter Ctor - Exit on next line." );
             DatabaseFactory = databaseFactory;
         }
 
@@ -103,11 +101,8 @@ namespace Intranet.Dal
         /// <summary>
         ///     Dispose all managed resources.
         /// </summary>
-        protected override void Disposed()
-        {
-            if (_context != null)
-                _context.Dispose();
-        }
+        protected override void Disposed() 
+            => _context?.Dispose();
 
         #endregion
 
@@ -119,7 +114,7 @@ namespace Intranet.Dal
         /// <returns>All entities</returns>
         public virtual IQueryable<TEntity> GetAll()
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return DbSet;
         }
@@ -129,12 +124,12 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="predicate">The predicate.</param>
         /// <returns>The entities matching the given predicate.</returns>
-        public virtual IQueryable<TEntity> Where(Expression<Func<TEntity, Boolean>> predicate)
+        public virtual IQueryable<TEntity> Where( Expression<Func<TEntity, Boolean>> predicate )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return GetAll()
-                .Where(predicate);
+                .Where( predicate );
         }
 
         /// <summary>
@@ -142,11 +137,11 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="entity">The entity to add.</param>
         /// <returns>Returns the added entity.</returns>
-        public virtual TEntity Add(TEntity entity)
+        public virtual TEntity Add( TEntity entity )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return DbSet.Add(entity);
+            return DbSet.Add( entity );
         }
 
         /// <summary>
@@ -156,11 +151,11 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="entities">The collection of entities to add.</param>
         /// <returns>The collection of entities.</returns>
-        public virtual IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities)
+        public virtual IEnumerable<TEntity> AddRange( IEnumerable<TEntity> entities )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return DbSet.AddRange(entities);
+            return DbSet.AddRange( entities );
         }
 
         /// <summary>
@@ -168,22 +163,22 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="entity">The entity to remove.</param>
         /// <returns>Returns the removed entity.</returns>
-        public virtual TEntity Remove(TEntity entity)
+        public virtual TEntity Remove( TEntity entity )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return DbSet.Remove(entity);
+            return DbSet.Remove( entity );
         }
 
         /// <summary>
         ///     Sets the state of the given entity to modified.
         /// </summary>
         /// <param name="entity">The entity to mark as modified.</param>
-        public virtual void SetModified(TEntity entity)
+        public virtual void SetModified( TEntity entity )
         {
-            Logger.Trace("Enter - Exit after next line.");
+            Logger.Trace( "Enter - Exit after next line." );
 
-            Entry(entity)
+            Entry( entity )
                 .State = EntityState.Modified;
         }
 
@@ -192,11 +187,11 @@ namespace Intranet.Dal
         /// </summary>
         /// <param name="entity">The entity to attach.</param>
         /// <returns>Returns the attached entity.</returns>
-        public virtual TEntity Attach(TEntity entity)
+        public virtual TEntity Attach( TEntity entity )
         {
-            Logger.Trace("Enter - Exit after next line.");
+            Logger.Trace( "Enter - Exit after next line." );
 
-            return DbSet.Attach(entity);
+            return DbSet.Attach( entity );
         }
 
         /// <summary>
@@ -205,7 +200,7 @@ namespace Intranet.Dal
         /// <returns>The number of Objects written to the underlying database.</returns>
         public virtual Int32 SaveChanges()
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return DbCommit.Commit();
         }
@@ -218,13 +213,13 @@ namespace Intranet.Dal
         ///     A task that represents the asynchronous save operation.
         ///     The task result contains the number of Objects written to the underlying database.
         /// </returns>
-        public virtual Task<Int32> SaveChangesAsync(CancellationToken? cancellationToken = null)
+        public virtual Task<Int32> SaveChangesAsync( CancellationToken? cancellationToken = null )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return cancellationToken == null
                 ? DbCommit.CommitAsync()
-                : DbCommit.CommitAsync(cancellationToken.Value);
+                : DbCommit.CommitAsync( cancellationToken.Value );
         }
 
         /// <summary>
@@ -235,11 +230,11 @@ namespace Intranet.Dal
         /// <typeparam name="TAnyEntity">The type of the entity.</typeparam>
         /// <param name="entity">The entity.</param>
         /// <returns>Returns an entry for the entity.</returns>
-        public virtual DbEntityEntry<TAnyEntity> Entry<TAnyEntity>(TAnyEntity entity) where TAnyEntity : class
+        public virtual DbEntityEntry<TAnyEntity> Entry<TAnyEntity>( TAnyEntity entity ) where TAnyEntity : class
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return Context.Entry(entity);
+            return Context.Entry( entity );
         }
 
         /// <summary>
@@ -248,7 +243,7 @@ namespace Intranet.Dal
         /// <returns>Returns the number records of the repositories table.</returns>
         public virtual Int32 CountRecords()
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return DbSet.Count();
         }
@@ -259,7 +254,7 @@ namespace Intranet.Dal
         /// <returns>Returns the number records of the repositories table.</returns>
         public virtual Task<Int32> CountRecordsAsync()
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
             return DbSet.CountAsync();
         }
@@ -281,11 +276,11 @@ namespace Intranet.Dal
         /// </remarks>
         /// <param name="keyValues">The values of the primary key for the entity to be found.</param>
         /// <returns>A task that represents the asynchronous find operation. The task result contains the entity found, or null.</returns>
-        public virtual Task<TEntity> FindAsync(params Object[] keyValues)
+        public virtual Task<TEntity> FindAsync( params Object[] keyValues )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return DbSet.FindAsync(keyValues);
+            return DbSet.FindAsync( keyValues );
         }
 
         /// <summary>
@@ -318,13 +313,12 @@ namespace Intranet.Dal
         ///     A <see cref="System.Data.Entity.Infrastructure.DbSqlQuery{TEntity}" /> Object that will execute the query when
         ///     it is enumerated.
         /// </returns>
-        public virtual DbSqlQuery<TEntity> SqlQuery(String sql, params Object[] parameters)
+        public virtual DbSqlQuery<TEntity> SqlQuery( String sql, params Object[] parameters )
         {
-            Logger.Trace("Enter - Exit on next line.");
+            Logger.Trace( "Enter - Exit on next line." );
 
-            return DbSet.SqlQuery(sql, parameters);
+            return DbSet.SqlQuery( sql, parameters );
         }
-
 
         #endregion Implementation of IGenericRepository{T}
     }

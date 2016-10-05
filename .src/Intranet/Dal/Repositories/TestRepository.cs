@@ -1,5 +1,4 @@
-﻿using Intranet.Definition.Dal;
-using Intranet.Definition.Logger;
+﻿using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Dal.Repositories

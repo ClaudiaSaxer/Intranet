@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intranet.Definition.Dal
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Interface representing a class creating database contexts.

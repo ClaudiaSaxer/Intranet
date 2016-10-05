@@ -1,4 +1,4 @@
-﻿namespace Intranet.Definition.Logger
+﻿namespace Intranet.Definition
 {
     /// <summary>
     ///     Enumeration of all available log levels.

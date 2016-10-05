@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Intranet.Definition.Dal
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Interface representing a class able to commit changes to the database.

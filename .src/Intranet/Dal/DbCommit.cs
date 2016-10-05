@@ -3,8 +3,7 @@ using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
 using Intranet.Common.Disposable;
-using Intranet.Definition.Dal;
-using Intranet.Definition.Logger;
+using Intranet.Definition;
 
 namespace Intranet.Dal
 {
@@ -72,10 +71,7 @@ namespace Intranet.Dal
         /// <summary>
         ///     Dispose all managed resources.
         /// </summary>
-        protected override void Disposed()
-        {
-            _context?.Dispose();
-        }
+        protected override void Disposed() => _context?.Dispose();
 
         #endregion
 
@@ -94,6 +90,7 @@ namespace Intranet.Dal
         /// <summary>
         ///     Commits all pending changes to the database asynchronously.
         /// </summary>
+        /// <param name="cancellationToken">cancellationToken</param>
         /// <returns>Returns the number of changed records asynchronously.</returns>
         public Task<Int32> CommitAsync( CancellationToken? cancellationToken = null )
         {

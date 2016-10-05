@@ -204,7 +204,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Scripts\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -231,6 +231,10 @@
     <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406f0c-12ee-4385-b6de-6f54519bd086}</Project>
+      <Name>Intranet.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

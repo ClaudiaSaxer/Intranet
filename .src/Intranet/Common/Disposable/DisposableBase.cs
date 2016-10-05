@@ -1,6 +1,6 @@
 ﻿using System;
 using Extend;
-using Intranet.Definition.Logger;
+using Intranet.Definition;
 
 namespace Intranet.Common.Disposable
 {
