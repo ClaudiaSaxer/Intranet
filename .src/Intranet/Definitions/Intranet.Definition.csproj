@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Bll\IVMHelper.cs" />
     <Compile Include="Bll\ITestAutofac.cs" />
+    <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Dal\IDatabaseFactory.cs" />
     <Compile Include="Dal\IDbCommit.cs" />
     <Compile Include="Dal\IGenericRepository.cs" />
@@ -70,6 +71,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Intranet.Model.csproj">
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
       <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
       <Name>Intranet.ViewModel</Name>

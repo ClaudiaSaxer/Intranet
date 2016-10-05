@@ -9,7 +9,7 @@ using Intranet.Definition;
 
 namespace Intranet.Bll.Test
 {
-    internal class TestBll
+    internal class TestBll: ITestBll
     {
         #region Fields
 
@@ -38,7 +38,7 @@ namespace Intranet.Bll.Test
         /// Add Test to DB
         /// </summary>
         /// <param name="customer"></param>
-        public void AddTest(Model.Test test)
+        public override void AddTest(Model.Test test)
         {
             using (var factory = new DbFactory<IntranetContext>(loggerFactory))
             using (var repo = new TestRepository(factory, loggerFactory))
@@ -60,7 +60,7 @@ namespace Intranet.Bll.Test
         /// <summary>
         ///     Deletes Test from DB
         /// </summary>
-        public void RemoveTest(Model.Test test)
+        public override void RemoveTest(Model.Test test)
         {
             using (var factory = new DbFactory<IntranetContext>(loggerFactory))
             using (var repo = new TestRepository(factory, loggerFactory))
@@ -84,7 +84,7 @@ namespace Intranet.Bll.Test
         /// <summary>
         ///     Update Car from DB
         /// </summary>
-        public void UpdateTest(Model.Test test, Model.Test original)
+        public override void UpdateTest(Model.Test test, Model.Test original)
         {
             using (var factory = new DbFactory<IntranetContext>(loggerFactory))
             using (var repo = new TestRepository(factory, loggerFactory))
