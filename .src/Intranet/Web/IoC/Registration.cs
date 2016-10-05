@@ -16,6 +16,11 @@ namespace Intranet.Definition.Autofac
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
+            builder.RegisterType<VMHelper>()
+                   .As<IVMHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
             builder.RegisterType<TestUseAutofac>()
                    .AsSelf()
                    .PropertiesAutowired()

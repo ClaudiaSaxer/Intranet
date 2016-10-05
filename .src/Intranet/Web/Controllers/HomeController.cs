@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Intranet.Definition;
 
 namespace Intranet.WebTemp.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
-        {
-            return View();
-        }
+        #region Properties
+
+        public IVMHelper VmHelper { get; set; }
+
+        #endregion
 
         public ActionResult About()
         {
@@ -25,6 +23,12 @@ namespace Intranet.WebTemp.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Index()
+        {
+            var view = VmHelper.getTestVM();
+            return View( view );
         }
     }
 }
