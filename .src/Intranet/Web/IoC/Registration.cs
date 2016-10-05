@@ -19,7 +19,7 @@ namespace Intranet.Definition.Autofac
             builder.RegisterType<TestUseAutofac>()
                    .AsSelf()
                    .PropertiesAutowired()
-                   .InstancePerRequest(); 
+                   .InstancePerRequest();
 
             /*
             // Register instances of objects you create...

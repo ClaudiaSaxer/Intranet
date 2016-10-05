@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Definition", "Intr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Bll", "Intranet\Labor\Bll\Intranet.Labor.Bll.csproj", "{51428790-ED54-48A4-9EEC-C25E99936E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Web", "Intranet\Web\Intranet.Web.csproj", "{E59426F1-7AA2-463D-B136-A3E8BD2C95D5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Common", "Intranet\Common\Intranet.Common.csproj", "{9AED7002-C17B-437B-8599-9C0430E19B60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Bll.Test", "Intranet.Testing\Labor\Bll\Intranet.Labor.Bll.Test.csproj", "{D54BA11F-6C74-489A-A140-18D89DB89937}"
@@ -44,6 +42,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Test", "_Test", "{F6EC038D-E5BE-4E36-A51C-B47A8EB28808}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Test", "_Test", "{B453FACC-237D-4829-BC66-4241D304FD6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Web", "Intranet\Web\Intranet.Web.csproj", "{856AD2F8-A951-44AD-B159-8C3F880C0F79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +123,10 @@ Global
 		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5080CF1D-01D0-4F3B-BBD0-B7480258F5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856AD2F8-A951-44AD-B159-8C3F880C0F79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856AD2F8-A951-44AD-B159-8C3F880C0F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856AD2F8-A951-44AD-B159-8C3F880C0F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856AD2F8-A951-44AD-B159-8C3F880C0F79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
