@@ -1,6 +1,4 @@
 ﻿using System.Linq;
-using Extend;
-using Intranet.Bll.Test;
 using Intranet.Definition;
 using Intranet.Model;
 using Intranet.ViewModel;
@@ -9,16 +7,21 @@ namespace Intranet.Bll
 {
     public class VMHelper : IVMHelper
     {
+        #region Fields
+
         private readonly TestBll _testBll = new TestBll();
+
+        #endregion
+
         public TestViewModel getTestVM()
         {
-
-            var model = new Model.Test();
+            var model = new Test();
             var tests = _testBll.Tests;
 
             var vm = new TestViewModel
             {
-                Name = tests.First().TestString
+                Name = tests.First()
+                            .TestString
             };
             return vm;
         }
