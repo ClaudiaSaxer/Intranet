@@ -27,7 +27,7 @@ namespace Intranet.Common.Disposable
         protected Disposable( ILogger logger )
             : base( logger )
         {
-            logger.ThrowIfNull( () => logger );
+            logger.ThrowIfNull( nameof(logger));
 
             Logger.Trace( "Enter Ctor - Exit." );
         }

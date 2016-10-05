@@ -24,22 +24,21 @@ namespace Intranet.Bll.Test
                    .BeTrue( "My class should call this method" );
             actual
                 .Should()
-                  .Be( "Hello world 42" );
+                .Be( "Hello world 42" );
         }
     }
 
     public static class MockHelper
     {
         public static ITestAutofac GetTestAutofac(
-            Func<String, String> getHelloWorldFunc = null, 
-            Action<String>  getHelloWorldCallback = null )
+            Func<String, String> getHelloWorldFunc = null,
+            Action<String> getHelloWorldCallback = null )
         {
             var mock = new Mock<ITestAutofac>
             {
                 Name = "MockHelper.GetTestAutofac",
                 DefaultValue = DefaultValue.Mock
             };
-
 
             mock
                 .Setup( x => x.GetHelloWorld( It.IsAny<String>() ) )
