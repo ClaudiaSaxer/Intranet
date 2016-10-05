@@ -36,9 +36,9 @@ namespace Intranet.Web.IoC
 
             addModule( builder );
             var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
             Initialize( container );
-            DependencyResolver.SetResolver( new AutofacDependencyResolver( container ) );
 
             return container;
         }
