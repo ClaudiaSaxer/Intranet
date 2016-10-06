@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 using Intranet.Model;
 
 namespace Intranet.Dal
 {
     /// <summary>
-    /// The DB Context for the IntranetDB
+    ///     The DB Context for the IntranetDB
     /// </summary>
     public class IntranetContext : DbContext
     {
+        #region Properties
+
         /// <summary>
-        /// Test set
-        /// to be removed
+        ///     Test set
+        ///     to be removed
         /// </summary>
         public DbSet<Test> Tests { get; set; }
-    }
 
+        #endregion
+    }
 }

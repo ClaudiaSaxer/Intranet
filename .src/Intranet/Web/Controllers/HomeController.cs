@@ -5,7 +5,6 @@ using ControllerBase = Intranet.Common.Web.ControllerBase;
 namespace Intranet.Web.Controllers
 {
     /// <summary>
-    /// 
     /// </summary>
     public class HomeController : ControllerBase
     {
@@ -36,7 +35,6 @@ namespace Intranet.Web.Controllers
         #endregion
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public ActionResult About()
@@ -47,7 +45,6 @@ namespace Intranet.Web.Controllers
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public ActionResult Contact()
@@ -58,7 +55,6 @@ namespace Intranet.Web.Controllers
         }
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
@@ -68,8 +64,6 @@ namespace Intranet.Web.Controllers
         }
 
         #region Overrides of ControllerBase
-
-     
 
         #endregion
     }

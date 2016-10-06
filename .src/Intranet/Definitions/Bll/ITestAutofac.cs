@@ -3,12 +3,12 @@
 namespace Intranet.Definition
 {
     /// <summary>
-    /// TODO
+    ///     TODO
     /// </summary>
     public interface ITestAutofac
     {
         /// <summary>
-        /// TODO
+        ///     TODO
         /// </summary>
         /// <param name="worldname"></param>
         /// <returns></returns>

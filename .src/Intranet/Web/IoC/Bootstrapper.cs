@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Autofac;
 using Autofac.Configuration;
 using Autofac.Integration.Mvc;
@@ -57,11 +55,12 @@ namespace Intranet.Web.IoC
             logger.Info( "IoC finished" );
         }
 
-     /*   private void addModule( ContainerBuilder builder )
+        /*   private void addModule( ContainerBuilder builder )
         {
             builder.RegisterModule( new DefaultModule() );
         }
 */
+
         /// <summary>
         ///     Reads the Json configuration file (Autofac.json) and adds the defined registrations to the builder.
         /// </summary>
@@ -70,12 +69,12 @@ namespace Intranet.Web.IoC
         {
             // Add the configuration to the ConfigurationBuilder.
             var config = new ConfigurationBuilder();
-            config.AddJsonFile("autofac.json");
+            config.AddJsonFile( "autofac.json" );
 
             // Register the ConfigurationModule with Autofac.
-            var module = new ConfigurationModule(config.Build());
-            builder.RegisterModule(module);
-    }
+            var module = new ConfigurationModule( config.Build() );
+            builder.RegisterModule( module );
+        }
 
         #endregion
     }

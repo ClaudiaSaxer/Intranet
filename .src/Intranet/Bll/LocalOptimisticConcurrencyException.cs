@@ -3,7 +3,7 @@
 namespace Intranet.Bll
 {
     /// <summary>
-    /// Local Optimistic Concurrency Exception
+    ///     Local Optimistic Concurrency Exception
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class LocalOptimisticConcurrencyException<T> : Exception
@@ -11,7 +11,7 @@ namespace Intranet.Bll
         #region Properties
 
         /// <summary>
-        /// Gets and Sets the Merged Entity
+        ///     Gets and Sets the Merged Entity
         /// </summary>
         public T MergedEntity { get; set; }
 
@@ -20,7 +20,7 @@ namespace Intranet.Bll
         #region Ctor
 
         /// <summary>
-        /// Constructs the LocalOptimisticConcurrencyException
+        ///     Constructs the LocalOptimisticConcurrencyException
         /// </summary>
         /// <param name="msg">The message to be set</param>
         public LocalOptimisticConcurrencyException( String msg )
@@ -29,7 +29,7 @@ namespace Intranet.Bll
         }
 
         /// <summary>
-        /// Constructs the LocalOptimisticConcurrencyException
+        ///     Constructs the LocalOptimisticConcurrencyException
         /// </summary>
         /// <param name="msg">The message to be set</param>
         /// <param name="mergedEntity">the merged Entity</param>

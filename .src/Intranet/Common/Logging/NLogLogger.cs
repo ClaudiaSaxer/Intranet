@@ -93,14 +93,14 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Log( Func<String> messageFunc ) 
+        public void Log( Func<String> messageFunc )
             => _internalLogger.Log( DefaultLevel.ToLogLevel(), new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
         ///     Writes the diagnostic message at the default level.
         /// </summary>
         /// <param name="message">The message to log</param>
-        public void Log( String message ) 
+        public void Log( String message )
             => _internalLogger.Log( DefaultLevel.ToLogLevel(), message );
 
         /// <summary>
@@ -108,7 +108,7 @@ namespace Intranet.Common.Logging
         /// </summary>
         /// <param name="message">The message to log</param>
         /// <param name="level">The log level.</param>
-        public void Log( String message, LogLevel level ) 
+        public void Log( String message, LogLevel level )
             => _internalLogger.Log( level.ToLogLevel(), message );
 
         #endregion Log
@@ -122,14 +122,14 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Trace( Func<String> messageFunc ) 
+        public void Trace( Func<String> messageFunc )
             => _internalLogger.Trace( new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
         ///     Writes the diagnostic message at the Trace level.
         /// </summary>
         /// <param name="message">The message to log</param>
-        public void Trace( String message ) 
+        public void Trace( String message )
             => _internalLogger.Trace( message );
 
         #endregion Trace
@@ -143,7 +143,7 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Debug( Func<String> messageFunc ) 
+        public void Debug( Func<String> messageFunc )
             => _internalLogger.Debug( new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
@@ -185,14 +185,14 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Warn( Func<String> messageFunc ) 
+        public void Warn( Func<String> messageFunc )
             => _internalLogger.Warn( new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
         ///     Writes the diagnostic message at the Warn level.
         /// </summary>
         /// <param name="message">The message to log</param>
-        public void Warn( String message ) 
+        public void Warn( String message )
             => _internalLogger.Warn( message );
 
         #endregion Warn
@@ -206,14 +206,14 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Error( Func<String> messageFunc ) 
+        public void Error( Func<String> messageFunc )
             => _internalLogger.Error( new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
         ///     Writes the diagnostic message at the Error level.
         /// </summary>
         /// <param name="message">The message to log</param>
-        public void Error( String message ) 
+        public void Error( String message )
             => _internalLogger.Error( message );
 
         #endregion Error
@@ -227,14 +227,14 @@ namespace Intranet.Common.Logging
         ///     A function returning message to be written. Function is not evaluated if logging is not
         ///     enabled.
         /// </param>
-        public void Fatal( Func<String> messageFunc ) 
+        public void Fatal( Func<String> messageFunc )
             => _internalLogger.Fatal( new LogMessageGenerator( messageFunc ) );
 
         /// <summary>
         ///     Writes the diagnostic message at the Fatal level.
         /// </summary>
         /// <param name="message">The message to log</param>
-        public void Fatal( String message ) 
+        public void Fatal( String message )
             => _internalLogger.Fatal( message );
 
         #endregion Fatal

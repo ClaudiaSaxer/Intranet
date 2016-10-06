@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.Entity;
-using Intranet.Common.Disposable;
 using Intranet.Definition;
 
 namespace Intranet.Common
@@ -77,7 +76,7 @@ namespace Intranet.Common
         /// </summary>
         /// <exception cref="InvalidOperationException">Failed to create DbContext.</exception>
         /// <returns>A new DbContext of type <typeparamref name="TContext" />.</returns>
-        protected virtual TContext CreateContext() 
+        protected virtual TContext CreateContext()
             => new TContext();
 
         #endregion
@@ -87,7 +86,7 @@ namespace Intranet.Common
         /// <summary>
         ///     Dispose all managed resources.
         /// </summary>
-        protected override void Disposed() 
+        protected override void Disposed()
             => _dbContext?.Dispose();
 
         #endregion

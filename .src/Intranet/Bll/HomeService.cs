@@ -8,10 +8,14 @@ namespace Intranet.Bll
     /// </summary>
     public class HomeService : LoggingBase, IHomeService
     {
+        #region Properties
+
         /// <summary>
-        /// 
         /// </summary>
         public ITestBll Bll { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -29,14 +33,14 @@ namespace Intranet.Bll
         #region Implementation of IHomeService
 
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         public TestViewModel getTestViewModel()
         {
-            var result = new TestViewModel()
+            var result = new TestViewModel
             {
-                Name = Bll.Tests.First().TestString
+                Name = Bll.Tests.First()
+                          .TestString
             };
 
             return result;

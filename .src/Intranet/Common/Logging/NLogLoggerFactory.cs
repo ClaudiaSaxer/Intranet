@@ -18,7 +18,7 @@ namespace Intranet.Common.Logging
         /// </summary>
         /// <param name="loggerName">The name of the loggerFactory.</param>
         /// <returns>A loggerFactory with specified name.</returns>
-        public ILogger CreateLogger( String loggerName ) 
+        public ILogger CreateLogger( String loggerName )
             => new NLogLogger( LogManager.GetLogger( loggerName ) );
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace Intranet.Common.Logging
         /// </summary>
         /// <param name="t">The type of the logging class.</param>
         /// <returns>A loggerFactory for the specified type.</returns>
-        public ILogger CreateLogger( Type t ) 
+        public ILogger CreateLogger( Type t )
             => new NLogLogger( LogManager.GetLogger( t.Name ) );
 
         /// <summary>

@@ -7,13 +7,13 @@ using Intranet.Common;
 using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
+using Intranet.Model;
 
 namespace Intranet.Bll
 {
     /// <summary>
-    /// 
     /// </summary>
-    public class TestBll: ITestBll
+    public class TestBll : ITestBll
     {
         #region Fields
 
@@ -24,9 +24,9 @@ namespace Intranet.Bll
         #region Properties
 
         /// <summary>
-        /// Gets Tests from DB
+        ///     Gets Tests from DB
         /// </summary>
-        public IEnumerable<Model.Test> Tests
+        public IEnumerable<Test> Tests
         {
             get
             {
@@ -40,82 +40,81 @@ namespace Intranet.Bll
         #endregion
 
         /// <summary>
-        /// Add Test to DB
+        ///     Add Test to DB
         /// </summary>
-        public override void AddTest(Model.Test test)
+        public override void AddTest( Test test )
         {
-            using (var factory = new DbFactory<IntranetContext>(loggerFactory))
-            using (var repo = new TestRepository(factory, loggerFactory))
-            using (var dbCommit = new DbCommit<IntranetContext>(factory, loggerFactory))
-            {
-                repo.DbCommit = dbCommit;
-                repo.Add(test);
-                try
-                {
-                    repo.SaveChanges();
-                }
-                catch (DBConcurrencyException)
-                {
-                    HandleDbConcurrencyException(new DbFactory<IntranetContext>(loggerFactory).GetDb(), test);
-                }
-            }
+            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
+                using ( var repo = new TestRepository( factory, loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
+                    {
+                        repo.DbCommit = dbCommit;
+                        repo.Add( test );
+                        try
+                        {
+                            repo.SaveChanges();
+                        }
+                        catch ( DBConcurrencyException )
+                        {
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), test );
+                        }
+                    }
         }
 
         /// <summary>
         ///     Deletes Test from DB
         /// </summary>
-        public override void RemoveTest(Model.Test test)
+        public override void RemoveTest( Test test )
         {
-            using (var factory = new DbFactory<IntranetContext>(loggerFactory))
-            using (var repo = new TestRepository(factory, loggerFactory))
-            using (var dbCommit = new DbCommit<IntranetContext>(factory, loggerFactory))
+            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
+                using ( var repo = new TestRepository( factory, loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
 
-            {
-                repo.DbCommit = dbCommit;
-                test = repo.Attach(test);
-                repo.Remove(test);
-                try
-                {
-                    repo.SaveChanges();
-                }
-                catch (DBConcurrencyException)
-                {
-                    HandleDbConcurrencyException(new DbFactory<IntranetContext>(loggerFactory).GetDb(), test);
-                }
-            }
+                    {
+                        repo.DbCommit = dbCommit;
+                        test = repo.Attach( test );
+                        repo.Remove( test );
+                        try
+                        {
+                            repo.SaveChanges();
+                        }
+                        catch ( DBConcurrencyException )
+                        {
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), test );
+                        }
+                    }
         }
 
         /// <summary>
         ///     Update Car from DB
         /// </summary>
-        public override void UpdateTest(Model.Test test, Model.Test original)
+        public override void UpdateTest( Test test, Test original )
         {
-            using (var factory = new DbFactory<IntranetContext>(loggerFactory))
-            using (var repo = new TestRepository(factory, loggerFactory))
-            using (var dbCommit = new DbCommit<IntranetContext>(factory, loggerFactory))
-            {
-                repo.DbCommit = dbCommit;
-                test = repo.Attach(test);
-                repo.SetModified(test);
-                try
-                {
-                    repo.SaveChanges();
-                }
-                catch (DBConcurrencyException)
-                {
-                    HandleDbConcurrencyException(new DbFactory<IntranetContext>(loggerFactory).GetDb(), original);
-                }
-            }
+            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
+                using ( var repo = new TestRepository( factory, loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
+                    {
+                        repo.DbCommit = dbCommit;
+                        test = repo.Attach( test );
+                        repo.SetModified( test );
+                        try
+                        {
+                            repo.SaveChanges();
+                        }
+                        catch ( DBConcurrencyException )
+                        {
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), original );
+                        }
+                    }
         }
 
-
-        private static void HandleDbConcurrencyException<T>(IntranetContext context, T original) where T : class
+        private static void HandleDbConcurrencyException<T>( IntranetContext context, T original ) where T : class
         {
-            var databaseValue = context.Entry(original)
+            var databaseValue = context.Entry( original )
                                        .GetDatabaseValues();
-            context.Entry(original)
-                   .CurrentValues.SetValues(databaseValue);
-            throw new LocalOptimisticConcurrencyException<T>(String.Format("Update {0}: Concurrency-Fehler", typeof(T).Name), original);
+            context.Entry( original )
+                   .CurrentValues.SetValues( databaseValue );
+            throw new LocalOptimisticConcurrencyException<T>( $"Update {typeof(T).Name}: Concurrency-Fehler", original );
         }
     }
 }

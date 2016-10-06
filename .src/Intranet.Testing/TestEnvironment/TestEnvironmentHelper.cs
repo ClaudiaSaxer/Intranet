@@ -5,12 +5,12 @@ using Intranet.Dal;
 namespace IntranetTestEnvironment
 {
     /// <summary>
-    /// Helper for the test environment
+    ///     Helper for the test environment
     /// </summary>
     public static class TestEnvironmentHelper
     {
         /// <summary>
-        /// Initializes test data
+        ///     Initializes test data
         /// </summary>
         public static void InitializeTestData()
         {
@@ -55,10 +55,10 @@ namespace IntranetTestEnvironment
 
         private static void SetAutoIncrementOnTable( SqlConnection connection, String table, Boolean autoIncrementIsOn )
         {
-            using (var command = new SqlCommand())
+            using ( var command = new SqlCommand() )
             {
                 command.Connection = connection;
-                command.CommandText = "SET IDENTITY_INSERT " + table + (autoIncrementIsOn ? " ON" : " OFF");
+                command.CommandText = "SET IDENTITY_INSERT " + table + ( autoIncrementIsOn ? " ON" : " OFF" );
                 command.ExecuteNonQuery();
             }
         }

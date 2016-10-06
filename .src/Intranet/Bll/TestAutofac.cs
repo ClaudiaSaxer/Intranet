@@ -4,7 +4,7 @@ using Intranet.Definition;
 namespace Intranet.Bll
 {
     /// <summary>
-    /// Test File to be removed
+    ///     Test File to be removed
     /// </summary>
     public class TestAutofac : ITestAutofac
 
