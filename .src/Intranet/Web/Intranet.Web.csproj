@@ -245,6 +245,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Areas\Labor\Views\web.config" />
     <Content Include="autofac.json" />
+    <Content Include="NLog.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
