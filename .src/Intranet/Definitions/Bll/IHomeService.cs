@@ -8,7 +8,6 @@ namespace Intranet.Definition
     public interface IHomeService
     {
         /// <summary>
-        /// 
         /// </summary>
         /// <returns></returns>
         TestViewModel getTestViewModel();

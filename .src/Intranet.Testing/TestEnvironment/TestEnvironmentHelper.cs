@@ -4,8 +4,14 @@ using Intranet.Dal;
 
 namespace IntranetTestEnvironment
 {
+    /// <summary>
+    /// Helper for the test environment
+    /// </summary>
     public static class TestEnvironmentHelper
     {
+        /// <summary>
+        /// Initializes test data
+        /// </summary>
         public static void InitializeTestData()
         {
             using ( var context = new IntranetContext() )
