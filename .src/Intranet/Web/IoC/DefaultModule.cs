@@ -104,10 +104,10 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .SingleInstance();
 
-            builder.RegisterType<NLogLogger>()
+          /*  builder.RegisterType<NLogLogger>()
                    .As<ILogger>()
                    .PropertiesAutowired()
-                   .SingleInstance();
+                   .SingleInstance();*/
         }
 
         /// <summary>

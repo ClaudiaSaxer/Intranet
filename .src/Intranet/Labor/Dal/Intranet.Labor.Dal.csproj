@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Intranet.Labor.Dal.XML</DocumentationFile>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -64,7 +66,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Intranet.Labor.Model\Intranet.Labor.Model.csproj">
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
       <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
       <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
