@@ -34,7 +34,6 @@ namespace Intranet.Common.Web
 
         /// <summary>
         ///     Begins to invoke the action in the current controller context.
-        ///     Sets the current culture and UI culture based on the settings of the user.
         /// </summary>
         /// <returns>
         ///     Returns an IAsyncController instance.
