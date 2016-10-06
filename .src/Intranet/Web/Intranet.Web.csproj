@@ -313,6 +313,18 @@
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labor\Dal\Intranet.Labor.Dal.csproj">
+      <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
+      <Name>Intranet.Labor.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labor\Model\Intranet.Labor.Model.csproj">
+      <Project>{ce4caf79-b268-4fa9-9d1a-b6c3f3db4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Model.csproj">
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
       <Project>{64406f0c-12ee-4385-b6de-6f54519bd086}</Project>
       <Name>Intranet.ViewModel</Name>

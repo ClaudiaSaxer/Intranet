@@ -5,7 +5,10 @@ using Intranet.Bll;
 using Intranet.Common;
 using Intranet.Common.Logging;
 using Intranet.Dal;
+using Intranet.Dal.Repositories;
 using Intranet.Definition;
+using Intranet.Labor.Dal;
+using Intranet.Model;
 
 namespace Intranet.Web.IoC
 {
@@ -88,6 +91,16 @@ namespace Intranet.Web.IoC
             builder.RegisterAssemblyTypes( typeof(IntranetContext).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<TestRepository>()
+                   .As<GenericRepository<IntranetContext, Test>>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborRepository>()
+                   .As<GenericRepository<LaborContext, Labor.Model.Labor>>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }

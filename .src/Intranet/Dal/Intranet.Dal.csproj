@@ -66,7 +66,7 @@
       <Name>Intranet.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
-      <Project>{095033fb-4c81-4556-a7bb-f0c69d7617ee}</Project>
+      <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Intranet.Model.csproj">

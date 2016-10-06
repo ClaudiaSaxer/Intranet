@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Dal;
-using Intranet.Dal.Repositories;
 using Intranet.Definition;
 using Intranet.Model;
 
@@ -23,19 +21,9 @@ namespace Intranet.Bll
 
         #region Properties
 
-        /// <summary>
-        ///     Gets Tests from DB
-        /// </summary>
-        public IEnumerable<Test> Tests
-        {
-            get
-            {
-                using ( var repo = new TestRepository( new DbFactory<IntranetContext>( _loggerFactory ), _loggerFactory ) )
-                    return repo.GetAll()
-                               .AsNoTracking()
-                               .ToList();
-            }
-        }
+        private GenericRepository<IntranetContext, Test> TestRepository { get; set; }
+        private IDatabaseFactory<IntranetContext> DbFactory { get; set; }
+        private IDbCommit<IntranetContext> DbCommit { get; set; }
 
         #endregion
 
@@ -43,9 +31,9 @@ namespace Intranet.Bll
         ///     Add Test to DB
         /// </summary>
         /// <param name="test">todo: describe test parameter on AddTest</param>
-        public override void AddTest( Test test )
+        public void AddTest( Test test )
         {
-            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+            /*using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
                 using ( var repo = new TestRepository( factory, _loggerFactory ) )
                     using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
                     {
@@ -59,30 +47,80 @@ namespace Intranet.Bll
                         {
                             HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), test );
                         }
+                    }*/
+
+            using ( DbFactory )
+                using ( TestRepository )
+                    using ( DbCommit )
+                    {
+                        TestRepository.DbCommit = DbCommit;
+                        TestRepository.Add( test );
+                        try
+                        {
+                            TestRepository.SaveChanges();
+                        }
+                        catch ( DBConcurrencyException )
+                        {
+                            HandleDbConcurrencyException( DbFactory.GetDb(), test );
+                        }
                     }
+        }
+
+        /// <summary>
+        ///     Gets Tests from DB
+        /// </summary>
+        public IEnumerable<Test> AllTests()
+        {
+            using ( TestRepository )
+
+                return TestRepository.GetAll()
+                                     .AsNoTracking()
+                                     .ToList();
+
+            /*  using ( var repo = new TestRepository( new DbFactory<IntranetContext>( _loggerFactory ), _loggerFactory ) )
+                  return repo.GetAll()
+                             .AsNoTracking()
+                             .ToList();*/
         }
 
         /// <summary>
         ///     Deletes Test from DB
         /// </summary>
         /// <param name="test">todo: describe test parameter on RemoveTest</param>
-        public override void RemoveTest( Test test )
+        public void RemoveTest( Test test )
         {
-            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
-                using ( var repo = new TestRepository( factory, _loggerFactory ) )
-                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
+            /*   using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+                   using ( var repo = new TestRepository( factory, _loggerFactory ) )
+                       using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
 
+                       {
+                           repo.DbCommit = dbCommit;
+                           test = repo.Attach( test );
+                           repo.Remove( test );
+                           try
+                           {
+                               repo.SaveChanges();
+                           }
+                           catch ( DBConcurrencyException )
+                           {
+                               HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), test );
+                           }
+                       }*/
+
+            using ( DbFactory )
+                using ( TestRepository )
+                    using ( DbCommit )
                     {
-                        repo.DbCommit = dbCommit;
-                        test = repo.Attach( test );
-                        repo.Remove( test );
+                        TestRepository.DbCommit = DbCommit;
+                        test = TestRepository.Attach( test );
+                        TestRepository.Remove( test );
                         try
                         {
-                            repo.SaveChanges();
+                            TestRepository.SaveChanges();
                         }
                         catch ( DBConcurrencyException )
                         {
-                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), test );
+                            HandleDbConcurrencyException( DbFactory.GetDb(), test );
                         }
                     }
         }
@@ -92,22 +130,38 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="test">todo: describe test parameter on UpdateTest</param>
         /// <param name="original">todo: describe original parameter on UpdateTest</param>
-        public override void UpdateTest( Test test, Test original )
+        public void UpdateTest( Test test, Test original )
         {
-            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
-                using ( var repo = new TestRepository( factory, _loggerFactory ) )
-                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
+            /*  using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+                  using ( var repo = new TestRepository( factory, _loggerFactory ) )
+                      using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
+                      {
+                          repo.DbCommit = dbCommit;
+                          test = repo.Attach( test );
+                          repo.SetModified( test );
+                          try
+                          {
+                              repo.SaveChanges();
+                          }
+                          catch ( DBConcurrencyException )
+                          {
+                              HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), original );
+                          }
+                      }*/
+            using ( DbFactory )
+                using ( TestRepository )
+                    using ( DbCommit )
                     {
-                        repo.DbCommit = dbCommit;
-                        test = repo.Attach( test );
-                        repo.SetModified( test );
+                        TestRepository.DbCommit = DbCommit;
+                        test = TestRepository.Attach( test );
+                        TestRepository.SetModified( test );
                         try
                         {
-                            repo.SaveChanges();
+                            TestRepository.SaveChanges();
                         }
                         catch ( DBConcurrencyException )
                         {
-                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), original );
+                            HandleDbConcurrencyException( DbFactory.GetDb(), original );
                         }
                     }
         }
