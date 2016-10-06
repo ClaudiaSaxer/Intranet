@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using Intranet.Definition;
 
 namespace Intranet.Common.Web
@@ -30,5 +31,17 @@ namespace Intranet.Common.Web
         }
 
         #endregion
+
+        /// <summary>
+        ///     Begins to invoke the action in the current controller context.
+        ///     Sets the current culture and UI culture based on the settings of the user.
+        /// </summary>
+        /// <returns>
+        ///     Returns an IAsyncController instance.
+        /// </returns>
+        /// <param name="callback">The callback.</param>
+        /// <param name="state">The state.</param>
+        protected override IAsyncResult BeginExecuteCore( AsyncCallback callback, Object state )
+            => base.BeginExecuteCore( callback, state );
     }
 }

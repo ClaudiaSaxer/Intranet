@@ -54,8 +54,8 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<VMHelper>()
-                   .As<IVMHelper>()
+            builder.RegisterType<HomeService>()
+                   .As<IHomeService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
@@ -98,17 +98,10 @@ namespace Intranet.Web.IoC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
         private void RegisterLoggingComponents( ContainerBuilder builder )
-        {
-            builder.RegisterType<NLogLoggerFactory>()
-                   .As<ILoggerFactory>()
-                   .PropertiesAutowired()
-                   .SingleInstance();
-
-          /*  builder.RegisterType<NLogLogger>()
-                   .As<ILogger>()
-                   .PropertiesAutowired()
-                   .SingleInstance();*/
-        }
+            => builder.RegisterType<NLogLoggerFactory>()
+                      .As<ILoggerFactory>()
+                      .PropertiesAutowired()
+                      .SingleInstance();
 
         /// <summary>
         ///     Register MVC

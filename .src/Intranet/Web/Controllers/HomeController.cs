@@ -1,29 +1,44 @@
 ﻿using System.Web.Mvc;
-using Autofac;
 using Intranet.Definition;
-using Intranet.ViewModel;
-using Intranet.Web.IoC;
+using ControllerBase = Intranet.Common.Web.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {
-    public class HomeController : Controller
+    /// <summary>
+    /// 
+    /// </summary>
+    public class HomeController : ControllerBase
     {
-     
         #region Properties
 
-        public IVMHelper VmHelper { get; set; }
+        /// <summary>
+        ///     Gets or sets a <see cref="IHomeService" />
+        /// </summary>
+        /// <value>
+        ///     <see cref="IHomeService" />
+        /// </value>
+        public IHomeService HomeService { get; set; }
 
-        
         #endregion
 
-        public HomeController( IVMHelper helper )
-        {
-            VmHelper = helper;
-        }
         #region Ctor
 
+        /// <summary>
+        ///     Initialize a new instance of the <see cref="HomeController" /> class.
+        /// </summary>
+        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
+        public HomeController( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(HomeController) ) )
+        {
+            Logger.Trace( "Enter Ctor - Exit." );
+        }
+
         #endregion
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -31,6 +46,10 @@ namespace Intranet.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
@@ -38,10 +57,20 @@ namespace Intranet.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
-            TestViewModel view = VmHelper.getTestVM();
+            var view = HomeService.getTestViewModel();
             return View( view );
         }
+
+        #region Overrides of ControllerBase
+
+     
+
+        #endregion
     }
 }

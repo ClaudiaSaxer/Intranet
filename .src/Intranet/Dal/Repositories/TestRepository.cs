@@ -4,6 +4,10 @@ using Intranet.Model;
 
 namespace Intranet.Dal.Repositories
 {
+    /// <summary>
+    /// A Test Repository
+    /// to be removed
+    /// </summary>
     public class TestRepository : GenericRepository<IntranetContext, Test>
     {
         #region Ctor

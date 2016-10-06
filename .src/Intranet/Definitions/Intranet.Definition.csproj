@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bll\IVMHelper.cs" />
+    <Compile Include="Bll\IHomeService.cs" />
     <Compile Include="Bll\ITestAutofac.cs" />
     <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Dal\IDatabaseFactory.cs" />

@@ -3,6 +3,9 @@ using Intranet.Definition;
 
 namespace Intranet.Labor.Dal
 {
+    /// <summary>
+    /// The Repository for the Labor Module
+    /// </summary>
     public class LaborRepository : GenericRepository<LaborContext, Model.Labor>
     {
         #region Ctor

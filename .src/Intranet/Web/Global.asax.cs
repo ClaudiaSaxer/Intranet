@@ -6,8 +6,14 @@ using Intranet.Web.IoC;
 
 namespace Intranet.Web
 {
+    /// <summary>
+    /// The Application
+    /// </summary>
     public class MvcApplication : HttpApplication
     {
+        /// <summary>
+        /// What to run at application start
+        /// </summary>
         protected void Application_Start()
         {
             AutofacConfig.ConfigureContainer();

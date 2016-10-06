@@ -1,24 +1,26 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace Intranet.Web.Areas.Labor
 {
-    public class LaborAreaRegistration : AreaRegistration 
+    /// <summary>
+    ///     Registration for the Labor Area
+    /// </summary>
+    public class LaborAreaRegistration : AreaRegistration
     {
-        public override string AreaName 
-        {
-            get 
-            {
-                return "Labor";
-            }
-        }
+        #region Properties
 
-        public override void RegisterArea(AreaRegistrationContext context) 
-        {
-            context.MapRoute(
+        /// <inheritdoc />
+        public override String AreaName { get; } = "Labor";
+
+        #endregion
+
+        /// <inheritdoc />
+        public override void RegisterArea( AreaRegistrationContext context )
+            => context.MapRoute(
                 "Labor_default",
                 "Labor/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional }
             );
-        }
     }
 }

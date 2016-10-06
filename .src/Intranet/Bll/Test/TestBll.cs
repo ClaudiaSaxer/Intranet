@@ -10,6 +10,9 @@ using Intranet.Definition;
 
 namespace Intranet.Bll
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TestBll: ITestBll
     {
         #region Fields
@@ -35,10 +38,10 @@ namespace Intranet.Bll
         }
 
         #endregion
+
         /// <summary>
         /// Add Test to DB
         /// </summary>
-        /// <param name="customer"></param>
         public override void AddTest(Model.Test test)
         {
             using (var factory = new DbFactory<IntranetContext>(loggerFactory))

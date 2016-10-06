@@ -3,14 +3,10 @@ using Intranet.Definition;
 
 namespace Intranet.Shell.Bll
 {
+    /// <summary>
+    /// </summary>
     public class LoggingTest : LoggingBase
     {
-        #region Properties
-
-        public ILoggerFactory LoggerFactory { get; set; }
-
-        #endregion
-
         #region Ctor
 
         /// <summary>
