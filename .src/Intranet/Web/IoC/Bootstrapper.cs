@@ -1,7 +1,11 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.IO;
+using System.Web.Mvc;
 using Autofac;
+using Autofac.Configuration;
 using Autofac.Integration.Mvc;
 using Intranet.Definition;
+using Microsoft.Extensions.Configuration;
 
 namespace Intranet.Web.IoC
 {
@@ -34,9 +38,9 @@ namespace Intranet.Web.IoC
         {
             var builder = new ContainerBuilder();
 
-            addModule( builder );
+            ReadJsonConfig( builder );
             var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            DependencyResolver.SetResolver( new AutofacDependencyResolver( container ) );
 
             Initialize( container );
 
@@ -53,12 +57,25 @@ namespace Intranet.Web.IoC
             logger.Info( "IoC finished" );
         }
 
+     /*   private void addModule( ContainerBuilder builder )
+        {
+            builder.RegisterModule( new DefaultModule() );
+        }
+*/
         /// <summary>
-        ///     Reads the XML configuration file (Autofac.xml) and adds the defined registrations to the builder.
+        ///     Reads the Json configuration file (Autofac.json) and adds the defined registrations to the builder.
         /// </summary>
         /// <param name="builder">A <see cref="ContainerBuilder" /> used to register the types.</param>
-        private void addModule( ContainerBuilder builder )
-            => builder.RegisterModule( new DefaultModule() );
+        private void ReadJsonConfig( ContainerBuilder builder )
+        {
+            // Add the configuration to the ConfigurationBuilder.
+            var config = new ConfigurationBuilder();
+            config.AddJsonFile("autofac.json");
+
+            // Register the ConfigurationModule with Autofac.
+            var module = new ConfigurationModule(config.Build());
+            builder.RegisterModule(module);
+    }
 
         #endregion
     }

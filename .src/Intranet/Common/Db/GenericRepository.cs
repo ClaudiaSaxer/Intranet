@@ -7,10 +7,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Intranet.Common.Disposable;
 using Intranet.Definition;
 
-namespace Intranet.Dal
+namespace Intranet.Common
 {
     /// <summary>
     ///     Generic base class for a repository.
@@ -18,7 +17,7 @@ namespace Intranet.Dal
     /// <typeparam name="TContext">The type of the database context used by the repository.</typeparam>
     /// <typeparam name="TEntity">The type of the entities in the repository.</typeparam>
     [DebuggerStepThrough]
-    public abstract class GenericRepository<TContext, TEntity> : Disposable, IGenericRepository<TEntity>
+    public abstract class GenericRepository<TContext, TEntity> : Disposable.Disposable, IGenericRepository<TEntity>
         where TEntity : class
         where TContext : DbContext, new()
     {
@@ -101,7 +100,7 @@ namespace Intranet.Dal
         /// <summary>
         ///     Dispose all managed resources.
         /// </summary>
-        protected override void Disposed() 
+        protected override void Disposed()
             => _context?.Dispose();
 
         #endregion

@@ -1,0 +1,15 @@
+﻿{
+  "defaultAssembly": "Intranet.Web",
+  "components": [
+  ],
+  "modules": [
+    {
+      "type": "Intranet.Web.IoC.DefaultModule, Intranet.Web",
+      "properties": {
+        "valueDefaultExceptionLogLevel": "Error",
+        "ApplicationAssemblyName": "Intranet.Web"
+      },
+      "injectProperties": true
+    }
+  ]
+}

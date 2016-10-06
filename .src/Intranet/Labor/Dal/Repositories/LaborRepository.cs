@@ -1,10 +1,9 @@
 ﻿using Intranet.Common;
 using Intranet.Definition;
-using Intranet.Model;
 
-namespace Intranet.Dal.Repositories
+namespace Intranet.Labor.Dal
 {
-    public class TestRepository : GenericRepository<IntranetContext, Test>
+    public class LaborRepository : GenericRepository<LaborContext, Model.Labor>
     {
         #region Ctor
 
@@ -13,7 +12,7 @@ namespace Intranet.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public TestRepository( IDatabaseFactory<IntranetContext> databaseFactory, ILoggerFactory loggerFactory )
+        public LaborRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
             : base( databaseFactory, loggerFactory )
         {
             Logger.Trace( "Enter Ctor - Exit on next line." );

@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E55F106-4C2A-4DEE-9F3E-530731447C45}</ProjectGuid>
+    <ProjectGuid>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intranet.Dal</RootNamespace>
-    <AssemblyName>Intranet.Dal</AssemblyName>
+    <RootNamespace>Intranet.Labor.Model</RootNamespace>
+    <AssemblyName>Intranet.Labor.Model</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,15 +31,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
-    </Reference>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -53,24 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntranetContext.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\TestRepository.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Intranet.Common.csproj">
-      <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
-      <Name>Intranet.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
-      <Project>{095033fb-4c81-4556-a7bb-f0c69d7617ee}</Project>
-      <Name>Intranet.Definition</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Intranet.Model.csproj">
-      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
-      <Name>Intranet.Model</Name>
-    </ProjectReference>
+    <Compile Include="Labor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

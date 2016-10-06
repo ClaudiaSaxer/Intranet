@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Intranet.Common.Disposable;
 using Intranet.Definition;
 
-namespace Intranet.Dal
+namespace Intranet.Common
 {
     /// <summary>
     ///     Class responsible for committing pending changes to the database.
     /// </summary>
     /// <typeparam name="TContext"></typeparam>
-    public class DbCommit<TContext> : Disposable, IDbCommit<TContext>
+    public class DbCommit<TContext> : Disposable.Disposable, IDbCommit<TContext>
         where TContext : DbContext, new()
     {
         #region Fields
