@@ -42,6 +42,7 @@ namespace Intranet.Bll
         /// <summary>
         ///     Add Test to DB
         /// </summary>
+        /// <param name="test">todo: describe test parameter on AddTest</param>
         public override void AddTest( Test test )
         {
             using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
@@ -64,6 +65,7 @@ namespace Intranet.Bll
         /// <summary>
         ///     Deletes Test from DB
         /// </summary>
+        /// <param name="test">todo: describe test parameter on RemoveTest</param>
         public override void RemoveTest( Test test )
         {
             using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
@@ -88,6 +90,8 @@ namespace Intranet.Bll
         /// <summary>
         ///     Update Car from DB
         /// </summary>
+        /// <param name="test">todo: describe test parameter on UpdateTest</param>
+        /// <param name="original">todo: describe original parameter on UpdateTest</param>
         public override void UpdateTest( Test test, Test original )
         {
             using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
