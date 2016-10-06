@@ -1,13 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using Intranet.Definition;
 
 namespace Intranet.Common.Web
 {
-    class ControllerBase : Controller
+    /// <summary>
+    ///     Abstract base class for MVC controllers.
+    /// </summary>
+    public abstract class ControllerBase : Controller
     {
+        #region Fields
+
+        /// <summary>
+        ///     The logger used by the controller.
+        /// </summary>
+        protected readonly ILogger Logger;
+
+        #endregion
+
+        #region Ctor
+
+        /// <summary>
+        ///     Initialize a new instance of the <see cref="ControllerBase" /> class.
+        /// </summary>
+        /// <param name="logger">A <see cref="ILogger" />.</param>
+        protected ControllerBase( ILogger logger )
+        {
+            Logger = logger;
+            Logger.Trace( "Enter Ctor - Exit." );
+        }
+
+        #endregion
     }
 }
