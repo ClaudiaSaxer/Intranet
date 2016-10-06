@@ -35,7 +35,7 @@ namespace Intranet.Bll
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public TestViewModel getTestViewModel()
+        public TestViewModel GetTestViewModel()
         {
             var result = new TestViewModel
             {

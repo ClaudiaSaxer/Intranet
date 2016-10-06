@@ -17,7 +17,7 @@ namespace Intranet.Bll
     {
         #region Fields
 
-        private readonly ILoggerFactory loggerFactory;
+        private readonly ILoggerFactory _loggerFactory;
 
         #endregion
 
@@ -30,7 +30,7 @@ namespace Intranet.Bll
         {
             get
             {
-                using ( var repo = new TestRepository( new DbFactory<IntranetContext>( loggerFactory ), loggerFactory ) )
+                using ( var repo = new TestRepository( new DbFactory<IntranetContext>( _loggerFactory ), _loggerFactory ) )
                     return repo.GetAll()
                                .AsNoTracking()
                                .ToList();
@@ -45,9 +45,9 @@ namespace Intranet.Bll
         /// <param name="test">todo: describe test parameter on AddTest</param>
         public override void AddTest( Test test )
         {
-            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
-                using ( var repo = new TestRepository( factory, loggerFactory ) )
-                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
+            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+                using ( var repo = new TestRepository( factory, _loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
                     {
                         repo.DbCommit = dbCommit;
                         repo.Add( test );
@@ -57,7 +57,7 @@ namespace Intranet.Bll
                         }
                         catch ( DBConcurrencyException )
                         {
-                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), test );
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), test );
                         }
                     }
         }
@@ -68,9 +68,9 @@ namespace Intranet.Bll
         /// <param name="test">todo: describe test parameter on RemoveTest</param>
         public override void RemoveTest( Test test )
         {
-            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
-                using ( var repo = new TestRepository( factory, loggerFactory ) )
-                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
+            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+                using ( var repo = new TestRepository( factory, _loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
 
                     {
                         repo.DbCommit = dbCommit;
@@ -82,7 +82,7 @@ namespace Intranet.Bll
                         }
                         catch ( DBConcurrencyException )
                         {
-                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), test );
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), test );
                         }
                     }
         }
@@ -94,9 +94,9 @@ namespace Intranet.Bll
         /// <param name="original">todo: describe original parameter on UpdateTest</param>
         public override void UpdateTest( Test test, Test original )
         {
-            using ( var factory = new DbFactory<IntranetContext>( loggerFactory ) )
-                using ( var repo = new TestRepository( factory, loggerFactory ) )
-                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, loggerFactory ) )
+            using ( var factory = new DbFactory<IntranetContext>( _loggerFactory ) )
+                using ( var repo = new TestRepository( factory, _loggerFactory ) )
+                    using ( var dbCommit = new DbCommit<IntranetContext>( factory, _loggerFactory ) )
                     {
                         repo.DbCommit = dbCommit;
                         test = repo.Attach( test );
@@ -107,7 +107,7 @@ namespace Intranet.Bll
                         }
                         catch ( DBConcurrencyException )
                         {
-                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( loggerFactory ).GetDb(), original );
+                            HandleDbConcurrencyException( new DbFactory<IntranetContext>( _loggerFactory ).GetDb(), original );
                         }
                     }
         }

@@ -47,7 +47,6 @@ namespace Intranet.Web.IoC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
         private void RegisterBllComponents( ContainerBuilder builder )
-
         {
             builder.RegisterType<TestAutofac>()
                    .As<ITestAutofac>()
@@ -79,18 +78,18 @@ namespace Intranet.Web.IoC
             builder.RegisterType<DbFactory<IntranetContext>>()
                    .As<IDatabaseFactory<IntranetContext>>()
                    .PropertiesAutowired()
-                   .InstancePerLifetimeScope();
+                   .InstancePerRequest();
 
             builder.RegisterType<DbCommit<IntranetContext>>()
                    .As<IDbCommit<IntranetContext>>()
                    .PropertiesAutowired()
-                   .InstancePerLifetimeScope();
+                   .InstancePerRequest();
 
             builder.RegisterAssemblyTypes( typeof(IntranetContext).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
-                   .InstancePerLifetimeScope();
+                   .InstancePerRequest();
         }
 
         /// <summary>

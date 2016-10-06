@@ -10,6 +10,6 @@ namespace Intranet.Definition
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        TestViewModel getTestViewModel();
+        TestViewModel GetTestViewModel();
     }
 }

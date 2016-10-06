@@ -59,7 +59,7 @@ namespace Intranet.Web.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            var view = HomeService.getTestViewModel();
+            var view = HomeService.GetTestViewModel();
             return View( view );
         }
 

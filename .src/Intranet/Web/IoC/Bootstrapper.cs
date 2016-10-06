@@ -48,6 +48,7 @@ namespace Intranet.Web.IoC
         /// <summary>
         ///     Initialize some components.
         /// </summary>
+        /// <param name="container">todo: describe container parameter on Initialize</param>
         private void Initialize( IContainer container )
         {
             var loggerFactory = container.Resolve<ILoggerFactory>();
@@ -55,11 +56,6 @@ namespace Intranet.Web.IoC
             logger.Info( "IoC finished" );
         }
 
-        /*   private void addModule( ContainerBuilder builder )
-        {
-            builder.RegisterModule( new DefaultModule() );
-        }
-*/
 
         /// <summary>
         ///     Reads the Json configuration file (Autofac.json) and adds the defined registrations to the builder.
