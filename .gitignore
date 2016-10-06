@@ -242,3 +242,6 @@ ModelManifest.xml
 /.tools/Cake/Roslyn.Compilers.dll
 /.tools/Cake/Roslyn.Compilers.CSharp.dll
 /.Output
+
+#Logfiles
+/.log
