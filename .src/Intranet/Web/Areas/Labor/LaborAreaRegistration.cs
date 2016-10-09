@@ -11,7 +11,7 @@ namespace Intranet.Web.Areas.Labor
         #region Properties
 
         /// <inheritdoc />
-        public override String AreaName { get; } = nameof(Labor);
+        public override String AreaName { get; } = nameof( Labor );
 
         #endregion
 

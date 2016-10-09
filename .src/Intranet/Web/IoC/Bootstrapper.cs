@@ -56,7 +56,6 @@ namespace Intranet.Web.IoC
             logger.Info( "IoC finished" );
         }
 
-
         /// <summary>
         ///     Reads the Json configuration file (Autofac.json) and adds the defined registrations to the builder.
         /// </summary>

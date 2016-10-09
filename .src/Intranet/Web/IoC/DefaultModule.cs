@@ -8,7 +8,6 @@ using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
 using Intranet.Labor.Dal;
-using Intranet.Model;
 
 namespace Intranet.Web.IoC
 {
@@ -42,14 +41,14 @@ namespace Intranet.Web.IoC
             RegisterLoggingComponents( builder );
             RegisterDataAccessComponents( builder );
             RegisterBllComponents( builder );
-            RegisterMVC( builder );
+            RegisterMvc( builder );
         }
 
         /// <summary>
         ///     Registers the BLL components.
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private void RegisterBllComponents( ContainerBuilder builder )
+        private static void RegisterBllComponents( ContainerBuilder builder )
         {
             builder.RegisterType<TestAutofac>()
                    .As<ITestAutofac>()
@@ -76,7 +75,7 @@ namespace Intranet.Web.IoC
         ///     Registers the data access components.
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private void RegisterDataAccessComponents( ContainerBuilder builder )
+        private static void RegisterDataAccessComponents( ContainerBuilder builder )
         {
             builder.RegisterType<DbFactory<IntranetContext>>()
                    .As<IDatabaseFactory<IntranetContext>>()
@@ -88,19 +87,15 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(IntranetContext).Assembly )
+            builder.RegisterAssemblyTypes( typeof(TestRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<TestRepository>()
-                   .As<GenericRepository<IntranetContext, Test>>()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-
-            builder.RegisterType<LaborRepository>()
-                   .As<GenericRepository<LaborContext, Labor.Model.Labor>>()
+            builder.RegisterAssemblyTypes( typeof(LaborRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }
@@ -109,7 +104,7 @@ namespace Intranet.Web.IoC
         ///     Registers the logging components.
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private void RegisterLoggingComponents( ContainerBuilder builder )
+        private static void RegisterLoggingComponents( ContainerBuilder builder )
             => builder.RegisterType<NLogLoggerFactory>()
                       .As<ILoggerFactory>()
                       .PropertiesAutowired()
@@ -119,16 +114,17 @@ namespace Intranet.Web.IoC
         ///     Register MVC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private void RegisterMVC( ContainerBuilder builder )
+        private static void RegisterMvc( ContainerBuilder builder )
         {
             // Register dependencies in controllers
-            builder.RegisterControllers( typeof(MvcApplication).Assembly );
+            builder.RegisterControllers( typeof(MvcApplication).Assembly )
+                   .PropertiesAutowired();
 
             // Register dependencies in filter attributes
             builder.RegisterFilterProvider();
 
             // Register dependencies in custom views
-            builder.RegisterSource( new ViewRegistrationSource() );
+            //builder.RegisterSource( new ViewRegistrationSource() );
         }
     }
 }

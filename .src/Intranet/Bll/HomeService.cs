@@ -39,8 +39,9 @@ namespace Intranet.Bll
         {
             var result = new TestViewModel
             {
-                Name = Bll.AllTests().First()
-                          .TestString
+                Name = Bll.AllTests()
+                          .FirstOrDefault()
+                          ?.TestString
             };
 
             return result;
