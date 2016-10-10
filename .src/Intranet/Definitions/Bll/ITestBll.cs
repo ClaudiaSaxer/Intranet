@@ -7,7 +7,7 @@ namespace Intranet.Definition
     /// <summary>
     /// </summary>
     public interface ITestBll
-    {
+    {/*
         /// <summary>
         /// </summary>
         /// <param name="test"></param>
@@ -27,5 +27,6 @@ namespace Intranet.Definition
         /// <param name="test"></param>
         /// <param name="original"></param>
         void UpdateTest( Test test, Test original );
+        */
     }
 }

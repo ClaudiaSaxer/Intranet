@@ -1,13 +1,17 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Intranet.Bll;
-using Intranet.Common;
+using Intranet.Common.Db;
 using Intranet.Common.Logging;
 using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
 using Intranet.Labor.Dal;
+
+#endregion
 
 namespace Intranet.Web.IoC
 {
@@ -87,7 +91,19 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(TestRepository).Assembly )
+            builder.RegisterAssemblyTypes( typeof(ModuleRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes( typeof(RoleRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes( typeof(RoleTypeRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()

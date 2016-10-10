@@ -12,14 +12,14 @@ namespace Intranet.Labor.Model
         #region Properties
 
         /// <summary>
-        ///     Gets and sets the Id of the Labor
+        ///     Gets or sets the Id of the Labor
         /// </summary>
         [Key]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
         public Guid LaborId { get; set; }
 
         /// <summary>
-        ///     Gets and sets the String Bla
+        ///     Gets or sets the String Bla
         /// </summary>
         public String Bla { get; set; }
 

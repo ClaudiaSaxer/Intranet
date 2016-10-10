@@ -10,7 +10,7 @@ namespace Intranet.Labor.Dal
         #region Properties
 
         /// <summary>
-        ///     Gets and sets the Tests
+        ///     Gets or sets the Tests
         /// </summary>
         public DbSet<Model.Labor> Tests { get; set; }
 

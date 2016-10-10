@@ -13,7 +13,7 @@ namespace Intranet.Bll
         #region Properties
 
         /// <summary>
-        ///     Gets and sets TestAutofac
+        ///     Gets or sets TestAutofac
         /// </summary>
         public ITestAutofac TestAutofac { get; set; }
 
