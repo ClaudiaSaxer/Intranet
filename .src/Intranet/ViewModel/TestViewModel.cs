@@ -10,7 +10,7 @@ namespace Intranet.ViewModel
         #region Properties
 
         /// <summary>
-        ///     Gets and sets the name
+        ///     Gets or sets the name
         /// </summary>
         public String Name { get; set; }
 

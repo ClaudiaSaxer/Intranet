@@ -9,6 +9,7 @@ namespace Intranet.Dal.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         #endregion

@@ -1,13 +1,16 @@
-﻿using Intranet.Definition;
+﻿#region Usings
+
+using Intranet.Definition;
 using Intranet.Model;
+
+#endregion
 
 namespace Intranet.Dal.Repositories
 {
     /// <summary>
-    ///     A Test Repository
-    ///     to be removed
+    /// The Repository for the Module
     /// </summary>
-    public class TestRepository : GenericRepository<IntranetContext, Test>
+    public class ModuleRepository : GenericRepository<IntranetContext, Module>
     {
         #region Ctor
 
@@ -16,10 +19,9 @@ namespace Intranet.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public TestRepository( IDatabaseFactory<IntranetContext> databaseFactory, ILoggerFactory loggerFactory )
+        public ModuleRepository( IDatabaseFactory<IntranetContext> databaseFactory, ILoggerFactory loggerFactory )
             : base( databaseFactory, loggerFactory )
         {
-            Logger.Trace( "Enter Ctor - Exit on next line." );
         }
 
         #endregion
