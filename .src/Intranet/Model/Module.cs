@@ -10,26 +10,59 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Intranet.Model
 {
     /// <summary>
-    ///     Module that will be in the IntranetShell
+    ///     Class representing a Module
     /// </summary>
     public class Module
     {
         #region Properties
 
+        /// <summary>
+        ///     Gets or sets the Id of the module
+        /// </summary>
+        /// <value>The module id of the module.</value>
         [Key]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        [Column( "Id" )]
-        public Guid ModuleId { get; set; }
-
-        public String Name { get; set; }
-        public String Description { get; set; }
-        public String Path { get; set; }
-
+        public Int32 ModuleId { get; set; }
 
         /// <summary>
-        /// Collection of Submodules to this Module
+        ///     Gets or sets the name of the module
         /// </summary>
-        public virtual ICollection<Submodule> Submodules { get; set; }
+        /// <example>
+        ///     name example: Labor
+        /// </example>
+        /// <value>The name of the module.</value>
+        public String Name { get; set; }
+
+        /// <summary>
+        ///     Gets or sets a description of the module
+        /// </summary>
+        /// <value>The description of the module.</value>
+        public String Description { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the path to the module start page
+        /// </summary>
+        /// <value>The path of the module.</value>
+        public String Path { get; set; }
+
+        /// <summary>
+        ///     Gets or sets Collection of role types to this module
+        /// </summary>
+        /// <value>The roletypes of the module.</value>
+        public virtual ICollection<RoleType> RoleTypes { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the roletype id of the module.
+        /// </summary>
+        /// <value>The roletype id of the module.</value>
+        [Index( "IX_Module_RoleTypeId", IsUnique = false )]
+        public Int32 RoleTypeId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets Collection of Submodules to this module
+        /// </summary>
+        /// <value>The submodules of the module.</value>
+        public virtual ICollection<Module> Submodules { get; set; }
 
         #endregion
     }
