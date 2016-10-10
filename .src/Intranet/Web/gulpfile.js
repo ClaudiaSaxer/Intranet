@@ -36,7 +36,7 @@ gulp.task('ts', function (done) {
 
 gulp.task('sass',
     function () {
-        return gulp.src('/sass/**/*.scss')
+        return gulp.src('./Content/own/**/*.scss')
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest('./Content'));
     });

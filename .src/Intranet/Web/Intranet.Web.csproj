@@ -321,6 +321,7 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\own\temporaryForTesting.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
