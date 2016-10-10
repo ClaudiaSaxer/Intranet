@@ -248,7 +248,6 @@
     <Content Include="Areas\Labor\Views\web.config" />
     <Content Include="autofac.json" />
     <Content Include="NLog.config" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
