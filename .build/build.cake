@@ -5,6 +5,7 @@ var verbosity = Argument("verbosity", "Diagnostic");
 
 // Paths to the root directories
 var sourceDirectory = Directory("../.Src");
+var sourcecodeDirectory = Directory("../.Src/Intranet");
 var testDirectory = Directory("../.Src/Intranet.Testing");
 var toolDirectory = Directory("../.Tools");
 var buildDirectory = Directory("../.Build");
@@ -22,16 +23,16 @@ var xUnit = toolDirectory + File("XUnit/xunit.console.exe");
 Task("Clean")
     .Does(() =>
 {	
-    CleanDirectory( sourceDirectory + Directory("Labor/Bll/bin") );
-    CleanDirectory( sourceDirectory + Directory("Bll/bin") );
-    CleanDirectory( sourceDirectory + Directory("Common/bin") );
-    CleanDirectory( sourceDirectory + Directory("Dal/bin") );
-    CleanDirectory( sourceDirectory + Directory("Labor/Dal/bin") );
-    CleanDirectory( sourceDirectory + Directory("Definitions/bin") );
-    CleanDirectory( sourceDirectory + Directory("Labor/Definitions/bin") );
-    CleanDirectory( sourceDirectory + Directory("Model/bin") );
-    CleanDirectory( sourceDirectory + Directory("ViewModel/bin") );
-    CleanDirectory( sourceDirectory + Directory("Web/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Bll/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Bll/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Common/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Dal/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Dal/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Definitions/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Model/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("ViewModel/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Web/bin") );
     CleanDirectory( testDirectory + Directory("Bll/bin") );    
     CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( testDirectory + Directory("Common/bin") );
