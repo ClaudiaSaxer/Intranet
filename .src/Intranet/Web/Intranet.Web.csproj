@@ -224,6 +224,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.min.css" />
+    <Content Include="Content\temporaryForTesting.css" />
+    <Content Include="Content\temporaryForTesting.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -244,6 +247,7 @@
     <Content Include="package.json" />
     <Content Include="Content\own\temporaryForTesting.scss" />
     <Content Include="Content\_bootstrap.scss" />
+    <Content Include="Content\own\Site.scss" />
     <Content Include="Content\bootstrap\_wells.scss" />
     <Content Include="Content\bootstrap\_variables.scss" />
     <Content Include="Content\bootstrap\_utilities.scss" />
