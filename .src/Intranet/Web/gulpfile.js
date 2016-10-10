@@ -12,3 +12,15 @@ gulp.task('sass', function () {
 gulp.task('sass:watch', function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
 });
+
+gulp.task('scripts', function () {
+    var tsResult = gulp.src('lib/**/*.ts')
+        .pipe(ts({
+            declaration: true
+        }));
+
+    return merge([
+        tsResult.dts.pipe(gulp.dest('release/definitions')),
+        tsResult.js.pipe(gulp.dest('release/js'))
+    ]);
+});
