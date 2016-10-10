@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.TestEnvironment", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model", "Intranet\Labor\Model\Intranet.Labor.Model.csproj", "{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Controllers", "Intranet\Labor\Controllers\Intranet.Labor.Controllers.csproj", "{AAA74141-4EC6-492D-B457-21D0AC5117FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA74141-4EC6-492D-B457-21D0AC5117FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA74141-4EC6-492D-B457-21D0AC5117FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA74141-4EC6-492D-B457-21D0AC5117FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA74141-4EC6-492D-B457-21D0AC5117FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -154,5 +160,6 @@ Global
 		{B453FACC-237D-4829-BC66-4241D304FD6A} = {22989D42-464A-41BE-BA0A-4140951AE958}
 		{FD9CEB16-DA47-4DAD-B1AB-7EAA27C3BE13} = {F6EC038D-E5BE-4E36-A51C-B47A8EB28808}
 		{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801} = {22989D42-464A-41BE-BA0A-4140951AE958}
+		{AAA74141-4EC6-492D-B457-21D0AC5117FA} = {22989D42-464A-41BE-BA0A-4140951AE958}
 	EndGlobalSection
 EndGlobal

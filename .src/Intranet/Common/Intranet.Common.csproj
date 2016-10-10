@@ -66,14 +66,10 @@
   <ItemGroup>
     <Compile Include="Db\DbCommit.cs" />
     <Compile Include="Db\DbFactory.cs" />
-    <Compile Include="Db\GenericRepository.cs" />
-    <Compile Include="Disposable\DisposableBase.cs" />
-    <Compile Include="Logging\BaseClass\LoggingBase.cs" />
     <Compile Include="Logging\NLogExtesions.cs" />
     <Compile Include="Logging\NLogLoggerFactory.cs" />
     <Compile Include="Logging\NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\ControllerBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">

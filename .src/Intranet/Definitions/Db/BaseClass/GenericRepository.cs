@@ -7,9 +7,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
-using Intranet.Definition;
 
-namespace Intranet.Common
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Generic base class for a repository.
@@ -17,7 +16,7 @@ namespace Intranet.Common
     /// <typeparam name="TContext">The type of the database context used by the repository.</typeparam>
     /// <typeparam name="TEntity">The type of the entities in the repository.</typeparam>
     [DebuggerStepThrough]
-    public abstract class GenericRepository<TContext, TEntity> : Disposable.Disposable, IGenericRepository<TEntity>
+    public abstract class GenericRepository<TContext, TEntity> : DisposableBase, IGenericRepository<TEntity>
         where TEntity : class
         where TContext : DbContext, new()
     {

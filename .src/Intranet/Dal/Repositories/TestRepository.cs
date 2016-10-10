@@ -1,5 +1,4 @@
-﻿using Intranet.Common;
-using Intranet.Definition;
+﻿using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Dal.Repositories

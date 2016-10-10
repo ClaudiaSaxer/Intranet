@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
-using Intranet.Definition;
 
-namespace Intranet.Common.Web
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Abstract base class for MVC controllers.

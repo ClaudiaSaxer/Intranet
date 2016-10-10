@@ -2,12 +2,12 @@
 using Extend;
 using Intranet.Definition;
 
-namespace Intranet.Common.Disposable
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Base class for disposable Objects.
     /// </summary>
-    public abstract class Disposable : LoggingBase, IDisposable
+    public abstract class DisposableBase : LoggingBase, IDisposable
     {
         #region Fields
 
@@ -21,10 +21,10 @@ namespace Intranet.Common.Disposable
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="Disposable" /> class.
+        ///     Initialize a new instance of the <see cref="DisposableBase" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        protected Disposable( ILogger logger )
+        protected DisposableBase( ILogger logger )
             : base( logger )
         {
             logger.ThrowIfNull( nameof( logger ) );
@@ -39,7 +39,7 @@ namespace Intranet.Common.Disposable
         /// <summary>
         ///     Destructs the instance.
         /// </summary>
-        ~Disposable()
+        ~DisposableBase()
         {
             Logger?.Debug( "Destruct instance." );
 
