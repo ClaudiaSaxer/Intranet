@@ -244,9 +244,7 @@
     <Content Include="Areas\Labor\Views\web.config" />
     <Content Include="autofac.json" />
     <Content Include="NLog.config" />
-<<<<<<< HEAD
     <Content Include="Areas\Labor\Views\Experimental\Index.cshtml" />
-=======
     <Content Include="package.json" />
     <Content Include="Content\own\temporaryForTesting.scss" />
     <Content Include="Content\_bootstrap.scss" />
@@ -320,7 +318,6 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
->>>>>>> origin/dev
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
