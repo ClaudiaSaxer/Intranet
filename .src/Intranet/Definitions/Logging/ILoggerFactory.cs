@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Intranet.Definition.Logger
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Creates a <see cref="ILogger" /> Object which can be used to log some messages.

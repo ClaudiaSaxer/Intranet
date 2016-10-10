@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Intranet.Definition;
-using Intranet.Definition.Logger;
 using NLog;
-using ILogger = Intranet.Definition.Logger.ILogger;
+using ILogger = Intranet.Definition.ILogger;
 
 namespace Intranet.Common.Logging
 {
@@ -20,9 +19,7 @@ namespace Intranet.Common.Logging
         /// <param name="loggerName">The name of the loggerFactory.</param>
         /// <returns>A loggerFactory with specified name.</returns>
         public ILogger CreateLogger( String loggerName )
-        {
-            return new NLogLogger( LogManager.GetLogger( loggerName ) );
-        }
+            => new NLogLogger( LogManager.GetLogger( loggerName ) );
 
         /// <summary>
         ///     Gets a loggerFactory for the specified type.
@@ -30,9 +27,7 @@ namespace Intranet.Common.Logging
         /// <param name="t">The type of the logging class.</param>
         /// <returns>A loggerFactory for the specified type.</returns>
         public ILogger CreateLogger( Type t )
-        {
-            return new NLogLogger( LogManager.GetLogger( t.Name ) );
-        }
+            => new NLogLogger( LogManager.GetLogger( t.Name ) );
 
         /// <summary>
         ///     Adds the given parameter to the current context of the logging framework.

@@ -1,7 +1,7 @@
 ﻿using System;
 using Extend;
 
-namespace Intranet.Definition.Logger
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Abstract base class providing logging features.

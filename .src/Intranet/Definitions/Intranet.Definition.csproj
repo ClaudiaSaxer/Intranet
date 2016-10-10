@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Intranet.Definition.XML</DocumentationFile>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -54,7 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\IHomeService.cs" />
     <Compile Include="Bll\ITestAutofac.cs" />
+    <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Dal\IDatabaseFactory.cs" />
     <Compile Include="Dal\IDbCommit.cs" />
     <Compile Include="Dal\IGenericRepository.cs" />
@@ -68,6 +72,21 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Labor\Bll\Intranet.Labor.Bll.csproj">
+      <Project>{51428790-ed54-48a4-9eec-c25e99936e65}</Project>
+      <Name>Intranet.Labor.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Model.csproj">
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
+      <Name>Intranet.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

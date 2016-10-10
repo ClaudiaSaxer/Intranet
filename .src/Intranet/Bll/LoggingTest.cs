@@ -1,17 +1,12 @@
 ﻿using System;
 using Intranet.Definition;
-using Intranet.Definition.Logger;
 
 namespace Intranet.Shell.Bll
 {
+    /// <summary>
+    /// </summary>
     public class LoggingTest : LoggingBase
     {
-        #region Properties
-
-        public ILoggerFactory LoggerFactory { get; set; }
-
-        #endregion
-
         #region Ctor
 
         /// <summary>

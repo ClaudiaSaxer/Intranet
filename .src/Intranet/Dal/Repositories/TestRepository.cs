@@ -1,9 +1,13 @@
-﻿using Intranet.Definition.Dal;
-using Intranet.Definition.Logger;
+﻿using Intranet.Common;
+using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Dal.Repositories
 {
+    /// <summary>
+    ///     A Test Repository
+    ///     to be removed
+    /// </summary>
     public class TestRepository : GenericRepository<IntranetContext, Test>
     {
         #region Ctor
