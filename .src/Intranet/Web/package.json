@@ -1,7 +1,15 @@
-﻿{
-	"version": "1.0.0",
-	"name": "asp.net",
-	"private": true,
-	"devDependencies": {
-	}
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
