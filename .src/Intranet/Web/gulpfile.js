@@ -1,31 +1,56 @@
 ﻿'use strict';
 
+    
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var ts = require('gulp-typescript');
-var merge = require('merge2');  // Requires separate installation
+var merge = require('merge2'); 
+var rimraf = require("rimraf");
+var concat = require("gulp-concat");
+var cssmin = require("gulp-cssmin");
+var uglify = require("gulp-uglify");
+var clean = require('gulp-clean');
 
-gulp.task('sass', function () {
-    return gulp.src('./sass/**/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./css'));
+var destPath = './libs/';
+
+
+// Delete the dist directory
+gulp.task('clean', function () {
+    return gulp.src(destPath)
+        .pipe(clean());
 });
 
 
-gulp.task('scripts', function () {
-    var tsResult = gulp.src('lib/**/*.ts')
-        .pipe(ts({
-            declaration: true
-        }));
+var tsProject = ts.createProject('tsScripts/tsconfig.json', {
+    typescript: require('typescript')
+});
+gulp.task('ts', function (done) {
 
-    return merge([
-        tsResult.dts.pipe(gulp.dest('release/definitions')),
-        tsResult.js.pipe(gulp.dest('release/js'))
-    ]);
+    var tsResult = gulp.src([
+            "tsScripts/*.ts"
+    ])
+        .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
+    return tsResult.js.pipe(gulp.dest('./Scripts'));
 });
 
-gulp.task('watch', ['scripts'], function () {
-    gulp.watch('lib/*.ts', ['scripts']);
+gulp.task('sass',
+    function () {
+        return gulp.src('/sass/**/*.scss')
+            .pipe(sass().on('error', sass.logError))
+            .pipe(gulp.dest('./Content'));
+    });
+
+
+
+gulp.task('watch.ts', ['sass'], function () {
     gulp.watch('./sass/**/*.scss', ['sass']);
-
 });
+gulp.task('watch.ts', ['ts'], function () {
+    return gulp.watch('tsScripts/*.ts', ['ts']);
+});
+gulp.task('watch', ['watch.ts']);
+gulp.task('watch', ['watch.sass']);
+
+gulp.task('default', ['ts', 'sass','watch']);
+
