@@ -8,7 +8,7 @@ using Microsoft.Ajax.Utilities;
 namespace Intranet.Web.ViewEngine
 {
     /// <summary>
-    /// 
+    ///     View Engine which locates the location of the views
     /// </summary>
     public class CustomViewEngine : RazorViewEngine
     {
@@ -21,9 +21,9 @@ namespace Intranet.Web.ViewEngine
         #region Ctor
 
         /// <summary>
-        /// 
+        ///     Inizialize the CustomViewEngine
         /// </summary>
-        /// <param name="pluginPaths"></param>
+        /// <param name="pluginPaths">Paths where the Controller.dll from the modules are stored</param>
         public CustomViewEngine( IEnumerable<String> pluginPaths )
         {
             _plugins = GetModuleNames(pluginPaths);
