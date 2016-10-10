@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var ts = require('gulp-typescript');
+var merge = require('merge2');  // Requires separate installation
 
 gulp.task('sass', function () {
     return gulp.src('./sass/**/*.scss')
@@ -9,9 +11,6 @@ gulp.task('sass', function () {
       .pipe(gulp.dest('./css'));
 });
 
-gulp.task('sass:watch', function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
-});
 
 gulp.task('scripts', function () {
     var tsResult = gulp.src('lib/**/*.ts')
@@ -23,4 +22,10 @@ gulp.task('scripts', function () {
         tsResult.dts.pipe(gulp.dest('release/definitions')),
         tsResult.js.pipe(gulp.dest('release/js'))
     ]);
+});
+
+gulp.task('watch', ['scripts'], function () {
+    gulp.watch('lib/*.ts', ['scripts']);
+    gulp.watch('./sass/**/*.scss', ['sass']);
+
 });
