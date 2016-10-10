@@ -1,6 +1,6 @@
 ﻿using System;
 using Extend;
-using Intranet.Definition.Logger;
+using Intranet.Definition;
 
 namespace Intranet.Common.Disposable
 {
@@ -27,7 +27,7 @@ namespace Intranet.Common.Disposable
         protected Disposable( ILogger logger )
             : base( logger )
         {
-            logger.ThrowIfNull( nameof(logger));
+            logger.ThrowIfNull( nameof( logger ) );
 
             Logger.Trace( "Enter Ctor - Exit." );
         }

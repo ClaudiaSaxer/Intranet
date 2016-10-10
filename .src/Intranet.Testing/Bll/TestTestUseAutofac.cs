@@ -6,8 +6,16 @@ using Xunit;
 
 namespace Intranet.Bll.Test
 {
+    /// <summary>
+    ///     to be removed
+    ///     tests autofac
+    /// </summary>
     public class TestTestUseAutofac
     {
+        /// <summary>
+        ///     A test
+        ///     to be removed
+        /// </summary>
         [Fact]
         public void HelloWorldAndNumberTest()
         {
@@ -28,8 +36,17 @@ namespace Intranet.Bll.Test
         }
     }
 
+    /// <summary>
+    ///     A mock helper class
+    /// </summary>
     public static class MockHelper
     {
+        /// <summary>
+        ///     A mock
+        /// </summary>
+        /// <param name="getHelloWorldFunc"></param>
+        /// <param name="getHelloWorldCallback"></param>
+        /// <returns></returns>
         public static ITestAutofac GetTestAutofac(
             Func<String, String> getHelloWorldFunc = null,
             Action<String> getHelloWorldCallback = null )

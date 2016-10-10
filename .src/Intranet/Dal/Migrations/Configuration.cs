@@ -1,18 +1,19 @@
+using System.Data.Entity.Migrations;
+
 namespace Intranet.Dal.Migrations
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<Intranet.Dal.IntranetContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<IntranetContext>
     {
+        #region Ctor
+
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Intranet.Dal.IntranetContext context)
+        #endregion
+
+        protected override void Seed( IntranetContext context )
         {
             //  This method will be called after migrating to the latest version.
 
