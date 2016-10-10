@@ -14,6 +14,7 @@ namespace Intranet.Bll
         /// </summary>
         public IGenericRepository<Test> TestRepository { get; set; }
 
+
         #endregion
 
         /// <summary>
@@ -32,9 +33,7 @@ namespace Intranet.Bll
         ///     Deletes Test from DB
         /// </summary>
         /// <param name="test">todo: describe test parameter on RemoveTest</param>
-        public void RemoveTest( Test test )
-        {
-        }
+        public void RemoveTest( Test test ) => TestRepository.Remove( test );
 
         /// <summary>
         ///     Update Car from DB
@@ -44,5 +43,6 @@ namespace Intranet.Bll
         public void UpdateTest( Test test, Test original )
         {
         }
+
     }
 }

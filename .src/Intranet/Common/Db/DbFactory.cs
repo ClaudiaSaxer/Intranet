@@ -2,13 +2,13 @@
 using System.Data.Entity;
 using Intranet.Definition;
 
-namespace Intranet.Common
+namespace Intranet.Common.Db
 
 {
     /// <summary>
     ///     Class creating database contexts.
     /// </summary>
-    public class DbFactory<TContext> : Disposable.Disposable, IDatabaseFactory<TContext>
+    public class DbFactory<TContext> : DisposableBase, IDatabaseFactory<TContext>
         where TContext : DbContext, new()
     {
         #region Fields

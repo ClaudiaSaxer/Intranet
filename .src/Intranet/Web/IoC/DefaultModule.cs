@@ -2,7 +2,7 @@
 using Autofac;
 using Autofac.Integration.Mvc;
 using Intranet.Bll;
-using Intranet.Common;
+using Intranet.Common.Db;
 using Intranet.Common.Logging;
 using Intranet.Dal;
 using Intranet.Dal.Repositories;
