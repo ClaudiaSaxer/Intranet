@@ -2,7 +2,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Web.Mvc;
+using Intranet.Web.ControllerFactory;
 using Intranet.Web.IoC;
+using Intranet.Web.ViewEngine;
 
 #endregion
 
@@ -16,8 +21,27 @@ namespace Intranet.Web.App_Start
         /// <summary>
         ///     Configurate the container
         /// </summary>
-        /// <param name="pluginPaths">String with pathes for the Plugins</param>
-        public static void ConfigureContainer( IEnumerable<String> pluginPaths )
-            => Bootstrapper.Compose( pluginPaths );
+        public static void ConfigureContainer()
+        {
+            var pluginPaths = GetPluginPaths();
+            Bootstrapper.Compose(pluginPaths);
+            ControllerBuilder.Current.SetControllerFactory(new CustomControllerFactory());
+            ViewEngines.Engines.Add(new CustomViewEngine(pluginPaths));
+        }
+           
+
+        private static ICollection<String> GetPluginPaths()
+        {
+            var directory = AppDomain.CurrentDomain.BaseDirectory.Replace( "\\Web", "" );
+
+            return Directory.EnumerateDirectories( directory )
+                            .Where( d => d.ToLower()
+                                          .Equals( "controllers" ) || d.ToLower()
+                                                                       .Equals( "bin" ) || d.ToLower()
+                                                                                            .Equals( "debug" ) )
+                            .ToList();
+        }
     }
+
+  
 }
