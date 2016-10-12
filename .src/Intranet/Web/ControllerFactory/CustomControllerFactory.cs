@@ -40,7 +40,7 @@ namespace Intranet.Web.ControllerFactory
         /// </summary>
         /// <param name="requestContext">The Request Context with the module name in the Request Url</param>
         /// <returns></returns>
-        private String GetModuleName( RequestContext requestContext )
+        private static String GetModuleName( RequestContext requestContext )
         {
             if ( requestContext.RouteData.DataTokens.Count == 0 )
                 return "";
