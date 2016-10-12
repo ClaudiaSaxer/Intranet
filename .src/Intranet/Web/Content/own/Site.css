@@ -1,8 +1,7 @@
 @charset "UTF-8";
-body th {
-  font-weight: lighter;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  border-color: #5cb85c; }
+body {
+  border-color: #8a6d3b;
+  border: double; }
 
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)

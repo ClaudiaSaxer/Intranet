@@ -11,7 +11,7 @@ namespace Intranet.Web
         public static void ConfigureContainer()
         {
             var b = new Bootstrapper();
-            b.Run();
+            Bootstrapper.Run();
         }
     }
 }
