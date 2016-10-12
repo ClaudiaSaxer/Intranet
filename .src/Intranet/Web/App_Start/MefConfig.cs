@@ -11,7 +11,7 @@ namespace Intranet.Web.App_Start
     /// <summary>
     ///     Class representing the configuration for Mef
     /// </summary>
-    public static class MefConfig
+    public class MefConfig
     {
         /// <summary>
         ///     Configurate the container
