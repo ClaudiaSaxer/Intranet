@@ -29,7 +29,10 @@ namespace Intranet.Web.App_Start
             ViewEngines.Engines.Add(new CustomViewEngine(pluginPaths));
         }
            
-
+        /// <summary>
+        /// Gets the Plugin Pathes
+        /// </summary>
+        /// <returns>A Collection of all Pathes to the Plugins</returns>
         private static ICollection<String> GetPluginPaths()
         {
             var directory = AppDomain.CurrentDomain.BaseDirectory.Replace( "\\Web", "" );
