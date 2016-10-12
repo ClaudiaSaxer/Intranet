@@ -81,7 +81,7 @@
       <Name>Intranet.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
-      <Project>{64406f0c-12ee-4385-b6de-6f54519bd086}</Project>
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
       <Name>Intranet.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>
