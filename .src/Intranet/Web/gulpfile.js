@@ -29,8 +29,9 @@ var tsProject = ts.createProject('tsScripts/tsconfig.json',
 {
     typescript: require('typescript')
 });
+
 gulp.task('ts',
-    function(done) {
+    function() {
 
         var tsResult = gulp.src([
                 'tsScripts/*.ts'
@@ -78,12 +79,12 @@ gulp.task('minify-css',
 gulp.task('watch.sass',
     ['sass'],
     function() {
-        gulp.watch('./sass/**/*.scss', ['sass']);
+        gulp.watch('./Content/own/**.scss', ['sass']);
     });
 gulp.task('watch.ts',
     ['ts'],
     function() {
-        return gulp.watch('tsScripts/*.ts', ['ts']);
+        return gulp.watch('./tsScripts/*.ts', ['ts']);
     });
 gulp.task('watch', ['watch.ts']);
 gulp.task('watch', ['watch.sass']);
