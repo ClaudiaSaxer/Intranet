@@ -89,10 +89,9 @@ namespace Intranet.Dal
 
             //SubModule MainModul
             modelBuilder.Entity<SubModule>()
-                        .HasOptional<MainModule>(s => s.MainModule) 
-                        .WithMany(s => s.SubModules)
-                        .Map(s => s.MapKey( "MainModulRefId" )); 
-
+                        .HasOptional<MainModule>( s => s.MainModule )
+                        .WithMany( s => s.SubModules )
+                        .Map( s => s.MapKey( "MainModulRefId" ) );
         }
 
         #endregion

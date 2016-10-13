@@ -60,7 +60,8 @@
     <Compile Include="IntranetContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\ModuleRepository.cs" />
+    <Compile Include="Repositories\SubModulRepository.cs" />
+    <Compile Include="Repositories\MainModulRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
   </ItemGroup>
   <ItemGroup>
