@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
@@ -15,6 +16,16 @@ namespace Intranet.Model
     public class MainModule : Module
     {
         #region Properties
+
+
+        /// <summary>
+        ///     Gets or sets the Id of the module
+        /// </summary>
+        /// <value>The module id of the module.</value>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Int32 MainModuleId { get; set; }
+
 
         /// <summary>
         ///     If Main Module is Visible in Shell or not

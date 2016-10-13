@@ -1,6 +1,8 @@
 ﻿#region Usings
 
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
@@ -14,6 +16,16 @@ namespace Intranet.Model
     public class SubModule : Module
     {
         #region Properties
+
+
+        /// <summary>
+        ///     Gets or sets the Id of the module
+        /// </summary>
+        /// <value>The module id of the module.</value>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Int32 SubModuleId { get; set; }
+
 
         /// <summary>
         ///     Gets or sets Collection of Submodules to this module

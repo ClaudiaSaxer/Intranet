@@ -19,10 +19,16 @@ namespace Intranet.Dal
         /// </summary>
         public DbSet<Role> Roles { get; set; }
 
+       
         /// <summary>
         ///     Gets or sets the dbset of the model module
         /// </summary>
-        public DbSet<Module> Modules { get; set; }
+        public DbSet<MainModule> MainModules { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the dbset of the model module
+        /// </summary>
+        public DbSet<SubModule> SubModules { get; set; }
 
         #endregion
 

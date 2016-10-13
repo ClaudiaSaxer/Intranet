@@ -1,4 +1,8 @@
+using System.Collections.ObjectModel;
 using System.Data.Entity.Migrations;
+using Intranet.Dal.Repositories;
+using Intranet.Definition;
+using Intranet.Model;
 
 namespace Intranet.Dal.Migrations
 {
@@ -28,6 +32,22 @@ namespace Intranet.Dal.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            var admin = new Role { Name = "Administrator" };
+            var laboruser = new Role { Name = "LaborUser" };
+            var laborviewer = new Role { Name = "LaborViewer" };
+
+            context.Roles.AddOrUpdate(m => m.Name, admin, laboruser, laborviewer );
+            var roles = new Collection<Role> { admin, laboruser, laborviewer };
+
+            var labor = new MainModule { Name = "Labor", Description = "Labor QS", Path = "/Labor", Visible = true,Roles = roles};
+          
+            context.MainModules.AddOrUpdate(m => m.Name, labor );
+
+            var creator = new SubModule { Description = "Labor QS Creator", MainModule = labor, Name = "LaborCreator", Path = "/Labor/Creator",Roles = roles};
+            var dashboard = new SubModule { Description = "Labor QS Dashboard", MainModule = labor, Name = "LaborDashboard", Path = "/Labor/Dashboard", Roles = roles };
+
+            context.SubModules.AddOrUpdate(m => m.Name, creator, dashboard);
         }
     }
 }
