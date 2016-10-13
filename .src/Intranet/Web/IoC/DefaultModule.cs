@@ -1,6 +1,8 @@
 ﻿#region Usings
 
 using System;
+using System.Linq;
+using System.Reflection;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Intranet.Bll;
@@ -10,6 +12,7 @@ using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
 using Intranet.Labor.Dal;
+using Module = Autofac.Module;
 
 #endregion
 
@@ -52,28 +55,13 @@ namespace Intranet.Web.IoC
         ///     Registers the BLL components.
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private static void RegisterBllComponents( ContainerBuilder builder )
-        {
-            builder.RegisterType<TestAutofac>()
-                   .As<ITestAutofac>()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-
-            builder.RegisterType<HomeService>()
-                   .As<IHomeService>()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-
-            builder.RegisterType<TestUseAutofac>()
-                   .AsSelf()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-
-            builder.RegisterType<TestBll>()
-                   .As<ITestBll>()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-        }
+        private static void RegisterBllComponents( ContainerBuilder builder ) => builder.RegisterAssemblyTypes( AppDomain.CurrentDomain.GetAssemblies() )
+                                                                                        .Where( t => t.Namespace != null && t.IsClass && t.Namespace.Contains( "Bll" ) && t.GetInterfaces()
+                                                                                                                                                                           .Length != 0 )
+                                                                                        .As( t => t.GetInterfaces()
+                                                                                                   .Single( i => i.Name == "I" + t.Name ) )
+                                                                                        .PropertiesAutowired()
+                                                                                        .InstancePerRequest();
 
         /// <summary>
         ///     Registers the data access components.
@@ -97,19 +85,17 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes(typeof(SubModuleRepository).Assembly)
-                  .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
-                  .AsImplementedInterfaces()
-                  .PropertiesAutowired()
-                  .InstancePerRequest();
+            builder.RegisterAssemblyTypes( typeof(SubModuleRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
 
             builder.RegisterAssemblyTypes( typeof(RoleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
-
-          
 
             builder.RegisterAssemblyTypes( typeof(LaborRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
