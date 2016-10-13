@@ -32,6 +32,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Intranet.Web.Test.XML</DocumentationFile>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">

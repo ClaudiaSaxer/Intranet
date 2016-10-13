@@ -1,7 +1,6 @@
 ﻿#region Usings
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -12,7 +11,7 @@ namespace Intranet.Model
     /// <summary>
     ///     Class representing a Module
     /// </summary>
-    public class Module
+    public abstract class Module
     {
         #region Properties
 
@@ -44,25 +43,6 @@ namespace Intranet.Model
         /// </summary>
         /// <value>The path of the module.</value>
         public String Path { get; set; }
-
-        /// <summary>
-        ///     Gets or sets Collection of role types to this module
-        /// </summary>
-        /// <value>The roletypes of the module.</value>
-        public virtual ICollection<RoleType> RoleTypes { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the roletype id of the module.
-        /// </summary>
-        /// <value>The roletype id of the module.</value>
-        [Index( "IX_Module_RoleTypeId", IsUnique = false )]
-        public Int32 RoleTypeId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets Collection of Submodules to this module
-        /// </summary>
-        /// <value>The submodules of the module.</value>
-        public virtual ICollection<Module> Submodules { get; set; }
 
         #endregion
     }

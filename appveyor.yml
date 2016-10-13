@@ -18,13 +18,6 @@ skip_commits:
 # Version format
 version: 1.0.{build}
 
-#github branches to build
-branches:
-  only:
-  - master
-  - dev
-
-
 # Patch assembly info
 assembly_info:
   patch: true

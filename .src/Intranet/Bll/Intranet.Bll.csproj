@@ -31,6 +31,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
+    <DocumentationFile>bin\Release\Intranet.Bll.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -79,7 +81,7 @@
       <Name>Intranet.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.ViewModel.csproj">
-      <Project>{64406f0c-12ee-4385-b6de-6f54519bd086}</Project>
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
       <Name>Intranet.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>

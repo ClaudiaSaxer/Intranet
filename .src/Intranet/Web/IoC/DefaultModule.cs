@@ -91,11 +91,17 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(ModuleRepository).Assembly )
+            builder.RegisterAssemblyTypes( typeof(MainModuleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(SubModuleRepository).Assembly)
+                  .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                  .AsImplementedInterfaces()
+                  .PropertiesAutowired()
+                  .InstancePerRequest();
 
             builder.RegisterAssemblyTypes( typeof(RoleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
@@ -103,11 +109,7 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(RoleTypeRepository).Assembly )
-                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
-                   .AsImplementedInterfaces()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
+          
 
             builder.RegisterAssemblyTypes( typeof(LaborRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )

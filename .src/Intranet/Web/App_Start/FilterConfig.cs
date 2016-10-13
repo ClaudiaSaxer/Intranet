@@ -5,7 +5,7 @@ namespace Intranet.Web
     /// <summary>
     ///     Filter Config
     /// </summary>
-    public class FilterConfig
+    public static class FilterConfig
     {
         /// <summary>
         ///     Registers Global Filters
