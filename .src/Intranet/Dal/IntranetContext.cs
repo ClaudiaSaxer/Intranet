@@ -20,11 +20,6 @@ namespace Intranet.Dal
         public DbSet<Role> Roles { get; set; }
 
         /// <summary>
-        ///     Gets or sets the dbset of the model roletypes
-        /// </summary>
-        public DbSet<RoleType> RoleTypes { get; set; }
-
-        /// <summary>
         ///     Gets or sets the dbset of the model module
         /// </summary>
         public DbSet<Module> Modules { get; set; }
@@ -50,17 +45,54 @@ namespace Intranet.Dal
         /// <param name="modelBuilder"> The builder that defines the model for the context being created. </param>
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
-            base.OnModelCreating( modelBuilder );
-            modelBuilder.Entity<Module>()
-                        .HasMany( m => m.Submodules )
-                        .WithMany()
+            //TPC
+            modelBuilder.Entity<SubModule>()
                         .Map( m =>
                               {
-                                  m.MapLeftKey( "ModuleId" );
-                                  m.MapRightKey("SubmoduleId");
-                                  m.ToTable( "ModuleSubmodule" );
-                              }
-                        );
+                                  m.MapInheritedProperties();
+                                  m.ToTable( "SubModule" );
+                              } );
+
+            modelBuilder.Entity<MainModule>()
+                        .Map( m =>
+                              {
+                                  m.MapInheritedProperties();
+                                  m.ToTable( "MainModule" );
+                              } );
+            //MainModule Role
+            modelBuilder.Entity<MainModule>()
+                        .HasMany( r => r.Roles )
+                        .WithMany( s => s.MainModules )
+                        .Map( mr =>
+                              {
+                                  mr.MapLeftKey( "MainModulRefId" );
+                                  mr.MapRightKey( "RoleRefId" );
+                                  mr.ToTable( "MainModuleRole" );
+                              } );
+
+            //SubModule Role
+            modelBuilder.Entity<SubModule>()
+                        .HasMany( r => r.Roles )
+                        .WithMany( s => s.SubModules )
+                        .Map( sr =>
+                              {
+                                  sr.MapLeftKey( "SubModulRefId" );
+                                  sr.MapRightKey( "RoleRefId" );
+                                  sr.ToTable( "SubModuleRole" );
+                              } );
+
+            //SubModule Submodule
+            modelBuilder.Entity<SubModule>()
+                        .HasMany( s => s.SubModules )
+                        .WithOptional()
+                        .Map( ss => ss.MapKey( "SubModulRefId" ) );
+
+            //SubModule MainModul
+            modelBuilder.Entity<SubModule>()
+                        .HasOptional<MainModule>(s => s.MainModule) 
+                        .WithMany(s => s.SubModules)
+                        .Map(s => s.MapKey( "MainModulRefId" )); 
+
         }
 
         #endregion

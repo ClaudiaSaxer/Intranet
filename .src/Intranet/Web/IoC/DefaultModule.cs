@@ -103,11 +103,7 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(RoleTypeRepository).Assembly )
-                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
-                   .AsImplementedInterfaces()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
+          
 
             builder.RegisterAssemblyTypes( typeof(LaborRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )

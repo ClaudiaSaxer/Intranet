@@ -12,6 +12,8 @@ namespace Intranet.Model
     /// <summary>
     ///     Class representing a Role
     /// </summary>
+
+    [Table("Role")]
     public class Role
     {
         #region Properties
@@ -31,17 +33,16 @@ namespace Intranet.Model
         public String Name { get; set; }
 
         /// <summary>
-        ///     Gets or sets a collection of roletypes for the role
+        ///     Gets or sets a collection of mainmodules for the role
         /// </summary>
         /// <value>The roletypes of the Role.</value>
-        public virtual ICollection<RoleType> RoleTypes { get; set; }
+        public virtual ICollection<MainModule> MainModules { get; set; }
 
         /// <summary>
-        ///     Gets or sets the roletype id of the role.
+        ///     Gets or sets a collection of sub modules for the role
         /// </summary>
-        /// <value>The roletype id of the Role.</value>
-        [Index( "IX_Role_RoleTypesId", IsUnique = false )]
-        public Int32 RoleTypeId { get; set; }
+        /// <value>The roletypes of the Role.</value>
+        public virtual ICollection<SubModule> SubModules { get; set; }
 
         #endregion
     }
