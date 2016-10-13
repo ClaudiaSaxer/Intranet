@@ -1,6 +1,8 @@
 ﻿#region Usings
 
 using System;
+using System.Linq;
+using System.Reflection;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Intranet.Bll;
@@ -10,6 +12,7 @@ using Intranet.Dal;
 using Intranet.Dal.Repositories;
 using Intranet.Definition;
 using Intranet.Labor.Dal;
+using Module = Autofac.Module;
 
 #endregion
 
@@ -54,6 +57,11 @@ namespace Intranet.Web.IoC
         /// <param name="builder">The builder through which components can be registered.</param>
         private static void RegisterBllComponents( ContainerBuilder builder )
         {
+          /*  builder.RegisterAssemblyTypes( Assembly.GetExecutingAssembly() )
+                   .Where( t => t.IsClass )
+                   .As( t => t.GetInterfaces()
+                              .Single( i => i.Name.Equals( "I" + t.Name ) ) );*/
+
             builder.RegisterType<TestAutofac>()
                    .As<ITestAutofac>()
                    .PropertiesAutowired()
@@ -97,19 +105,17 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes(typeof(SubModuleRepository).Assembly)
-                  .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
-                  .AsImplementedInterfaces()
-                  .PropertiesAutowired()
-                  .InstancePerRequest();
+            builder.RegisterAssemblyTypes( typeof(SubModuleRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
 
             builder.RegisterAssemblyTypes( typeof(RoleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
-
-          
 
             builder.RegisterAssemblyTypes( typeof(LaborRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
