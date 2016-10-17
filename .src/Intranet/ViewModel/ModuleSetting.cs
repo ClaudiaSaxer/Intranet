@@ -9,7 +9,7 @@ namespace Intranet.ViewModel
     /// <summary>
     ///     Class representing ModuleSettings
     /// </summary>
-    public abstract class ModuleSetting
+    public class ModuleSetting
     {
         /// <summary>
         ///     Gets or sets the name of the module
