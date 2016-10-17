@@ -15,14 +15,14 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the Id of the Labor
         /// </summary>
         [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        [DatabaseGenerated( DatabaseGeneratedOption.Identity )] 
         public Guid LaborId { get; set; }
 
         /// <summary>
         ///     Gets or sets the String Bla
-        /// </summary>
+        /// </summary> 
         public String Bla { get; set; }
-
+         
         #endregion
     }
 }

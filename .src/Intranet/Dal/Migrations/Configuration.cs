@@ -33,9 +33,11 @@ namespace Intranet.Dal.Migrations
             //    );
             //
 
-            var admin = new Role { Name = "Administrator" };
+          //  var admin = new Role { Name = "Administrator" };
+            var admin = new Role { Name = "Everyone" };
             var laboruser = new Role { Name = "LaborUser" };
             var laborviewer = new Role { Name = "LaborViewer" };
+
 
             context.Roles.AddOrUpdate(m => m.Name, admin, laboruser, laborviewer );
             var roles = new Collection<Role> { admin, laboruser, laborviewer };
@@ -44,7 +46,7 @@ namespace Intranet.Dal.Migrations
             var labor = new MainModule { Name = "Labor", Description = "Labor QS", ActionName = "Index", ControllerName = "LaborHome", Visible = true,Roles = roles};
             var adminshell = new MainModule { Name = "Einstellungen", Description = "Einstellungen für die Shell", ActionName = "Index", ControllerName = "SettingHome", Visible = true, Roles = rolesadmin };
 
-            context.MainModules.AddOrUpdate(m => m.Name, labor );
+            context.MainModules.AddOrUpdate(m => m.Name, labor, adminshell );
 
             var creator = new SubModule { Description = "Labor QS Creator", MainModule = labor, Name = "LaborCreator", ControllerName = "LaborCreatorHome",ActionName = "Index",Roles = roles};
             var dashboard = new SubModule { Description = "Labor QS Dashboard", MainModule = labor, Name = "LaborDashboard", ControllerName = "LaborDashboardHome", ActionName = "Index", Roles = roles };
