@@ -38,8 +38,11 @@ namespace Intranet.Bll
         /// <returns></returns>
         public HomeViewModel GetHomeViewModel()
         {
+			Logger.Trace( "Enter GetTestViewModel - Exit" );
+
             var roleNames = Roles.GetRolesForUser();
             var result = new HomeViewModel
+
             {
               /*  Name = Bll.AllTests()
                           .FirstOrDefault()

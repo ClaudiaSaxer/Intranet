@@ -63,6 +63,7 @@ namespace Intranet.Web.IoC
                                                                                         .PropertiesAutowired()
                                                                                         .InstancePerRequest();
 
+
         /// <summary>
         ///     Registers the data access components.
         /// </summary>
