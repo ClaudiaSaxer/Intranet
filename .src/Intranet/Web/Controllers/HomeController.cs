@@ -1,6 +1,10 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Web.Mvc;
+using System.Web.Security;
 using Intranet.Definition;
 using ControllerBase = Intranet.Definition.ControllerBase;
+using System.Security.Principal;
 
 namespace Intranet.Web.Controllers
 {
@@ -59,6 +63,7 @@ namespace Intranet.Web.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
+            var roleNames = Roles.GetRolesForUser();
             var view = HomeService.GetTestViewModel();
             return View( view );
         }

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Web.Security;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
@@ -37,6 +38,7 @@ namespace Intranet.Bll
         /// <returns></returns>
         public TestViewModel GetTestViewModel()
         {
+            var roleNames = Roles.GetRolesForUser();
             var result = new TestViewModel
             {
               /*  Name = Bll.AllTests()
