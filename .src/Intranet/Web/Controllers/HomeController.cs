@@ -64,7 +64,7 @@ namespace Intranet.Web.Controllers
         public ActionResult Index()
         {
             var roleNames = Roles.GetRolesForUser();
-            var view = HomeService.GetTestViewModel();
+            var view = HomeService.GetHomeViewModel();
             return View( view );
         }
 

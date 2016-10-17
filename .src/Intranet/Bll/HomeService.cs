@@ -36,15 +36,15 @@ namespace Intranet.Bll
         /// <summary>
         /// </summary>
         /// <returns></returns>
-        public TestViewModel GetTestViewModel()
+        public HomeViewModel GetHomeViewModel()
         {
             var roleNames = Roles.GetRolesForUser();
-            var result = new TestViewModel
+            var result = new HomeViewModel
             {
               /*  Name = Bll.AllTests()
                           .FirstOrDefault()
-                          ?.TestString*/
-                          Name = "this and so"
+                          ?.TestString
+                          Name = "this and so" */
             };
 
             return result;
