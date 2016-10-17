@@ -5,7 +5,7 @@ namespace Intranet.ViewModel
     /// <summary>
     ///     The View Model of Test
     /// </summary>
-    public class TestViewModel
+    public class TestViewModel:BaseViewModel
     {
         #region Properties
 
