@@ -10,6 +10,7 @@ namespace Intranet.Web.Controllers
     /// <summary>
     ///     Class representing the HomeController
     /// </summary>
+    [Authorize]
     public class HomeController : ControllerBase
     {
         #region Properties
