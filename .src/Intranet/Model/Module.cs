@@ -22,7 +22,7 @@ namespace Intranet.Model
         ///     name example: Labor
         /// </example>
         /// <value>The name of the module.</value>
-        [Index(IsUnique = true)]
+        [UniqueKey]
         public String Name { get; set; }
 
         /// <summary>
