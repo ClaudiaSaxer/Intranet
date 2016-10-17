@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Model;
 
 namespace Intranet.Definition.Bll
 {
     /// <summary>
-    /// Interface representing the bll for the navigation
+    ///     Interface representing the bll for the navigation
     /// </summary>
     public interface INavigationBll
     {
-       /// <summary>
-       /// Query for all Modules for a given roles. 
-       /// </summary>
-       /// <param name="rolenames">The name of the roles the user has.</param>
-       /// <returns>All Modules for the given roles</returns>
-        IQueryable<Module> AllModulesForRoles(IEnumerable<String> rolenames);
+        /// <summary>
+        ///     Query for all MainModules for a given roles.
+        /// </summary>
+        /// <param name="rolenames">The name of the roles the user has.</param>
+        /// <returns>All MainModules for the given roles</returns>
+        IQueryable<MainModule> AllMainModulesForRoles( IEnumerable<String> rolenames );
     }
 }
