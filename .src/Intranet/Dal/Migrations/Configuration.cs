@@ -39,13 +39,15 @@ namespace Intranet.Dal.Migrations
 
             context.Roles.AddOrUpdate(m => m.Name, admin, laboruser, laborviewer );
             var roles = new Collection<Role> { admin, laboruser, laborviewer };
+            var rolesadmin = new Collection<Role> { admin};
 
-            var labor = new MainModule { Name = "Labor", Description = "Labor QS", Path = "/Labor", Visible = true,Roles = roles};
-          
+            var labor = new MainModule { Name = "Labor", Description = "Labor QS", ActionName = "Index", ControllerName = "LaborHome", Visible = true,Roles = roles};
+            var adminshell = new MainModule { Name = "Einstellungen", Description = "Einstellungen für die Shell", ActionName = "Index", ControllerName = "SettingHome", Visible = true, Roles = rolesadmin };
+
             context.MainModules.AddOrUpdate(m => m.Name, labor );
 
-            var creator = new SubModule { Description = "Labor QS Creator", MainModule = labor, Name = "LaborCreator", Path = "/Labor/Creator",Roles = roles};
-            var dashboard = new SubModule { Description = "Labor QS Dashboard", MainModule = labor, Name = "LaborDashboard", Path = "/Labor/Dashboard", Roles = roles };
+            var creator = new SubModule { Description = "Labor QS Creator", MainModule = labor, Name = "LaborCreator", ControllerName = "LaborCreatorHome",ActionName = "Index",Roles = roles};
+            var dashboard = new SubModule { Description = "Labor QS Dashboard", MainModule = labor, Name = "LaborDashboard", ControllerName = "LaborDashboardHome", ActionName = "Index", Roles = roles };
 
             context.SubModules.AddOrUpdate(m => m.Name, creator, dashboard);
         }

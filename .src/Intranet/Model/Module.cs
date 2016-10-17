@@ -42,7 +42,14 @@ namespace Intranet.Model
         ///     Gets or sets the path to the module start page
         /// </summary>
         /// <value>The path of the module.</value>
-        public String Path { get; set; }
+        public String ActionName { get; set; }
+
+
+        /// <summary>
+        ///     Gets or sets the path to the module start page
+        /// </summary>
+        /// <value>The path of the module.</value>
+        public String ControllerName { get; set; }
 
         #endregion
     }

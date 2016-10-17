@@ -37,6 +37,7 @@ namespace Intranet.Bll
         /// <returns></returns>
         public TestViewModel GetTestViewModel()
         {
+            Logger.Trace( "Enter GetTestViewModel - Exit" );
             var result = new TestViewModel
             {
               /*  Name = Bll.AllTests()
