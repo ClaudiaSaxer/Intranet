@@ -29,9 +29,9 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="LoggingBase" /> class.
         /// </summary>
         /// <exception cref="ArgumentNullException">loggerFactory can not be null</exception>
-        /// <param name="logger">A <see cref="ILogger" />.</param>
-        public NavigationService( ILogger logger )
-            : base( logger )
+        /// <param name="loggerFactory"><see cref="ILoggerFactory" />.</param>
+        public NavigationService(ILoggerFactory loggerFactory)
+            : base(loggerFactory.CreateLogger(typeof(NavigationService)))
         {
         }
 
