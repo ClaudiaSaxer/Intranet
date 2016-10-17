@@ -14,14 +14,6 @@ namespace Intranet.Model
     public abstract class Module
     {
         #region Properties
-/*
-        /// <summary>
-        ///     Gets or sets the Id of the module
-        /// </summary>
-        /// <value>The module id of the module.</value>
-        [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public Int32 ModuleId { get; set; }*/
 
         /// <summary>
         ///     Gets or sets the name of the module
