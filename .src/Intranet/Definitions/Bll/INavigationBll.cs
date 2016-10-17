@@ -15,6 +15,6 @@ namespace Intranet.Definition.Bll
         /// </summary>
         /// <param name="rolenames">The name of the roles the user has.</param>
         /// <returns>All MainModules for the given roles</returns>
-        IQueryable<MainModule> AllMainModulesForRoles( IEnumerable<String> rolenames );
+        IQueryable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> rolenames );
     }
 }

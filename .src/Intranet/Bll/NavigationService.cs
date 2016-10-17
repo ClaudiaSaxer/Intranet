@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Web.Security;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
@@ -18,7 +20,11 @@ namespace Intranet.Bll
         public NavigationViewModel NavigationViewModel { get; private set; }
         #region Ctor
 
+        /// <summary>
+        /// Gets or sets the bll for the navigation.
+        /// </summary>
         public INavigationBll NavigationBll { get; set; }
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="LoggingBase" /> class.
         /// </summary>
@@ -33,13 +39,22 @@ namespace Intranet.Bll
 
         #region Implementation of INavigationService
 
+
+        #endregion
+
+        #region Implementation of INavigationService
+
         /// <summary>
         /// All main models that the current User is allowed to see. 
         /// </summary>
         /// <returns>The ViewModel for the navigation</returns>
-        public NavigationViewModel AllMainModelsForCurrentUser()
+        public NavigationViewModel NavicationViewModel()
         {
-               var moduels = 
+            var roleNames = Roles.GetRolesForUser();
+
+            NavigationViewModel.Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames );
+            return NavicationViewModel();
+
         }
 
         #endregion

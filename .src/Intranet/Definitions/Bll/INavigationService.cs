@@ -16,7 +16,7 @@ namespace Intranet.Definition.Bll
         /// All main models that the current User is allowed to see. 
         /// </summary>
         /// <returns>The ViewModel for the navigation</returns>
-        NavigationViewModel AllMainModelsForCurrentUser();
+        NavigationViewModel NavicationViewModel();
 
    
     }
