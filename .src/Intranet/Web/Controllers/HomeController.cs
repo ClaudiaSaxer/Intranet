@@ -4,11 +4,11 @@ using System.Web.Mvc;
 using System.Web.Security;
 using Intranet.Definition;
 using ControllerBase = Intranet.Definition.ControllerBase;
-using System.Security.Principal;
 
 namespace Intranet.Web.Controllers
 {
     /// <summary>
+    ///     Class representing the HomeController
     /// </summary>
     public class HomeController : ControllerBase
     {
@@ -40,8 +40,9 @@ namespace Intranet.Web.Controllers
 
 
         /// <summary>
+        ///     Loads the index page of the HomeController
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
             var viewModel = HomeService.GetHomeViewModel();
