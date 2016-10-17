@@ -38,34 +38,14 @@ namespace Intranet.Web.Controllers
 
         #endregion
 
-        /// <summary>
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
 
         /// <summary>
         /// </summary>
         /// <returns></returns>
         public ActionResult Index()
         {
-            var roleNames = Roles.GetRolesForUser();
-            var view = HomeService.GetHomeViewModel();
-            return View( view );
+            var viewModel = HomeService.GetHomeViewModel();
+            return View( viewModel );
         }
 
         #region Overrides of ControllerBase
