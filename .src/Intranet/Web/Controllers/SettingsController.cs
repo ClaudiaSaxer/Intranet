@@ -11,7 +11,7 @@ using ControllerBase = Intranet.Definition.ControllerBase;
 namespace Intranet.Web.Controllers
 {
     /// <summary>
-    /// 
+    ///     Class representing the SettingsController
     /// </summary>
     public class SettingsController : ControllerBase
     {
@@ -42,9 +42,9 @@ namespace Intranet.Web.Controllers
         #endregion
 
         /// <summary>
-        /// 
+        ///     Loads the index page of the SettingsController
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
             var viewModel = SettingsService.GetSettingsViewModel();
