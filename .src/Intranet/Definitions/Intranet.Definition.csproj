@@ -91,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\IHomeService.cs" />
+    <Compile Include="Bll\INavigationBll.cs" />
+    <Compile Include="Bll\INavigationService.cs" />
     <Compile Include="Bll\ITestAutofac.cs" />
     <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Db\BaseClass\GenericRepository.cs" />
