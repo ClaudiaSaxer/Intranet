@@ -14,14 +14,6 @@ namespace Intranet.Model
     public abstract class Module
     {
         #region Properties
-/*
-        /// <summary>
-        ///     Gets or sets the Id of the module
-        /// </summary>
-        /// <value>The module id of the module.</value>
-        [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public Int32 ModuleId { get; set; }*/
 
         /// <summary>
         ///     Gets or sets the name of the module
@@ -30,6 +22,7 @@ namespace Intranet.Model
         ///     name example: Labor
         /// </example>
         /// <value>The name of the module.</value>
+        [UniqueKey]
         public String Name { get; set; }
 
         /// <summary>
@@ -42,7 +35,14 @@ namespace Intranet.Model
         ///     Gets or sets the path to the module start page
         /// </summary>
         /// <value>The path of the module.</value>
-        public String Path { get; set; }
+        public String ActionName { get; set; }
+
+
+        /// <summary>
+        ///     Gets or sets the path to the module start page
+        /// </summary>
+        /// <value>The path of the module.</value>
+        public String ControllerName { get; set; }
 
         #endregion
     }

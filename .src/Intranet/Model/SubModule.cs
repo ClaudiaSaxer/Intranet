@@ -36,7 +36,7 @@ namespace Intranet.Model
         /// <summary>
         /// Gets or sets MainModul
         /// </summary>
-        /// <value>the mainmodule of the submodule</value>
+        /// <value>The mainmodule of the submodule</value>
         public MainModule MainModule { get; set; }
 
         /// <summary>

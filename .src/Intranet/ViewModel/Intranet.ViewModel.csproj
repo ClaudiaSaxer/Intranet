@@ -49,8 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+
     <Compile Include="HomeViewModel.cs" />
     <Compile Include="ModuleSetting.cs" />
+    <Compile Include="NavigationViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsViewModel.cs" />
     <Compile Include="TestViewModel.cs" />
