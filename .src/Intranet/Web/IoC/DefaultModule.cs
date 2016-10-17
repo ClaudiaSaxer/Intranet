@@ -48,6 +48,7 @@ namespace Intranet.Web.IoC
             RegisterLoggingComponents( builder );
             RegisterDataAccessComponents( builder );
             RegisterBllComponents( builder );
+            RegisterViewModelComponents( builder );
             RegisterMvc( builder );
         }
 
@@ -60,6 +61,16 @@ namespace Intranet.Web.IoC
                                                                                                                                                                            .Length != 0 )
                                                                                         .As( t => t.GetInterfaces()
                                                                                                    .Single( i => i.Name == "I" + t.Name ) )
+                                                                                        .PropertiesAutowired()
+                                                                                        .InstancePerRequest();
+
+        /// <summary>
+        ///     Registers the ViewModel components.
+        /// </summary>
+        /// <param name="builder">The builder through which components can be registered.</param>
+        private static void RegisterViewModelComponents(ContainerBuilder builder) => builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
+                                                                                        .Where(t => t.Namespace != null && t.IsClass && t.Namespace.Contains("ViewModel"))
+                                                                                        .AsSelf()
                                                                                         .PropertiesAutowired()
                                                                                         .InstancePerRequest();
 

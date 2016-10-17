@@ -1,12 +1,13 @@
 ﻿using System;
 using Intranet.Definition;
+using Intranet.Definition.Bll;
 
 namespace Intranet.Bll
 {
     /// <summary>
     ///     Service for the nav
     /// </summary>
-    public class NavigationService : LoggingBase
+    public class NavigationService : LoggingBase, INavigationService
 
     {
         #region Ctor
