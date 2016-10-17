@@ -2,10 +2,10 @@
 
 namespace Intranet.Model
 {
-    ///<summary> 
-    ///Class representing a unique attribute.
-    ///</summary> 
-    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
+    /// <summary>
+    ///     Class representing a unique attribute.
+    /// </summary>
+    [AttributeUsage( AttributeTargets.Property )]
     public class UniqueKeyAttribute : Attribute
     {
     }

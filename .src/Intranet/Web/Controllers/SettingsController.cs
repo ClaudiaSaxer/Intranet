@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
@@ -33,10 +29,10 @@ namespace Intranet.Web.Controllers
         ///     Initialize a new instance of the <see cref="HomeController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="Definition.ILoggerFactory" />.</param>
-        public SettingsController(ILoggerFactory loggerFactory)
+        public SettingsController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(SettingsController) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
@@ -57,12 +53,12 @@ namespace Intranet.Web.Controllers
         /// <param name="moduleSetting">The moduleSetting which will be updated</param>
         /// <returns>Redirect to the Index View</returns>
         [HttpPost]
-        public ActionResult Update(ModuleSetting moduleSetting)
+        public ActionResult Update( ModuleSetting moduleSetting )
         {
             try
             {
                 SettingsService.UpdateModuleSetting( moduleSetting );
-                return RedirectToAction("Index");
+                return RedirectToAction( "Index" );
             }
             catch
             {

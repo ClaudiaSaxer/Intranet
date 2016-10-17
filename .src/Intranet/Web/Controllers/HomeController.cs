@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Mvc;
-using System.Web.Security;
+﻿using System.Web.Mvc;
 using Intranet.Definition;
 using ControllerBase = Intranet.Definition.ControllerBase;
 
@@ -38,7 +35,6 @@ namespace Intranet.Web.Controllers
         }
 
         #endregion
-
 
         /// <summary>
         ///     Loads the index page of the HomeController

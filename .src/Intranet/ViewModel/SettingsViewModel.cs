@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Intranet.ViewModel
 {
@@ -11,6 +7,8 @@ namespace Intranet.ViewModel
     /// </summary>
     public class SettingsViewModel
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the ModuleSettings for the SettingsViewModel
         /// </summary>
@@ -18,5 +16,7 @@ namespace Intranet.ViewModel
         ///     The ModuleSettings
         /// </value>
         public IEnumerable<ModuleSetting> ModuleSettings { get; set; }
+
+        #endregion
     }
 }

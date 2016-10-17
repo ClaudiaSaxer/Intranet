@@ -1,8 +1,6 @@
 ﻿#region Usings
 
 using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
 
@@ -36,7 +34,6 @@ namespace Intranet.Model
         /// </summary>
         /// <value>The path of the module.</value>
         public String ActionName { get; set; }
-
 
         /// <summary>
         ///     Gets or sets the path to the module start page

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Extend;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
 using Intranet.Model;
@@ -32,14 +31,12 @@ namespace Intranet.Bll
         /// <returns>All Modules for the given roles</returns>
         public IEnumerable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> roleNames )
         {
-         
             var modules = RoleRepository.GetAll()
-                                      .Where( role => roleNames.Any(n => n.Contains( role.Name)) )
-                                      .SelectMany( role => role.MainModules )
-                                      .Distinct()
-                                      .ToList();
+                                        .Where( role => roleNames.Any( n => n.Contains( role.Name ) ) )
+                                        .SelectMany( role => role.MainModules )
+                                        .Distinct()
+                                        .ToList();
             return modules;
-
         }
 
         #endregion

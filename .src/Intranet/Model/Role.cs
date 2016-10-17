@@ -12,8 +12,7 @@ namespace Intranet.Model
     /// <summary>
     ///     Class representing a Role
     /// </summary>
-
-    [Table("Role")]
+    [Table( "Role" )]
     public class Role
     {
         #region Properties

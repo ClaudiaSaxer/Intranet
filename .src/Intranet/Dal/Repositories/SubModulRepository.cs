@@ -1,5 +1,4 @@
-﻿
-#region Usings
+﻿#region Usings
 
 using Intranet.Definition;
 using Intranet.Model;
@@ -9,10 +8,12 @@ using Intranet.Model;
 namespace Intranet.Dal.Repositories
 {
     /// <summary>
-    /// The Repository for the SubModule
+    ///     The Repository for the SubModule
     /// </summary>
     public class SubModuleRepository : GenericRepository<IntranetContext, SubModule>
     {
+        #region Ctor
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="GenericRepository{TContext, TEntity}" /> class.
         /// </summary>
@@ -22,5 +23,7 @@ namespace Intranet.Dal.Repositories
             : base( databaseFactory, loggerFactory )
         {
         }
+
+        #endregion
     }
 }

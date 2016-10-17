@@ -1,16 +1,14 @@
-﻿using System.Linq;
-using System.Web.Security;
+﻿using System.Web.Security;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll
 {
     /// <summary>
-    /// TODO
+    ///     TODO
     /// </summary>
     public class HomeService : LoggingBase, IHomeService
     {
-     
         #region Ctor
 
         /// <summary>
@@ -28,20 +26,16 @@ namespace Intranet.Bll
         #region Implementation of IHomeService
 
         /// <summary>
-        /// TODO
+        ///     TODO
         /// </summary>
         /// <returns></returns>
         public HomeViewModel GetHomeViewModel()
         {
-        //TODO implement
-			Logger.Trace( "Enter GetTestViewModel - Exit" );
+            //TODO implement
+            Logger.Trace( "Enter GetTestViewModel - Exit" );
 
             var roleNames = Roles.GetRolesForUser();
-            var result = new HomeViewModel
-
-            {
-             
-            };
+            var result = new HomeViewModel();
 
             return result;
         }

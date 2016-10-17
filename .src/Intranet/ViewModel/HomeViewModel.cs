@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Intranet.Model;
 
 namespace Intranet.ViewModel
@@ -12,6 +8,8 @@ namespace Intranet.ViewModel
     /// </summary>
     public class HomeViewModel
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the Modules for the HomeViewModel
         /// </summary>
@@ -19,5 +17,7 @@ namespace Intranet.ViewModel
         ///     The Modules
         /// </value>
         public IEnumerable<Module> Modules { get; set; }
+
+        #endregion
     }
 }

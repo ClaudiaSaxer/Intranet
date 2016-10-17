@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Intranet.ViewModel;
+﻿using Intranet.ViewModel;
 
 namespace Intranet.Definition.Bll
 {
@@ -22,6 +17,6 @@ namespace Intranet.Definition.Bll
         ///     Updates the settings for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        void UpdateModuleSetting(ModuleSetting moduleSetting);
+        void UpdateModuleSetting( ModuleSetting moduleSetting );
     }
 }

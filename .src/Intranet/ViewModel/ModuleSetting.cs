@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Intranet.ViewModel
 {
@@ -11,6 +7,8 @@ namespace Intranet.ViewModel
     /// </summary>
     public class ModuleSetting
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the name of the module
         /// </summary>
@@ -22,5 +20,7 @@ namespace Intranet.ViewModel
         /// </summary>
         /// <value>The visibility status of the module</value>
         public Boolean Visible { get; set; }
+
+        #endregion
     }
 }

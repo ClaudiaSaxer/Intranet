@@ -14,7 +14,7 @@
             <ul class="nav navbar-nav">
                 @foreach ( var item in Model.Modules )
                 {
-                    <li>@Html.ActionLink( item.Name, item.ActionName, item.ControllerName , null, new { id = item.Name})</li>
+                    <li>@Html.ActionLink( item.Name, item.ActionName, item.ControllerName, null, new { id = item.Name } )</li>
                 }
             </ul>
         </div>

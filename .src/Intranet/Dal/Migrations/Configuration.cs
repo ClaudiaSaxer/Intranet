@@ -1,7 +1,5 @@
 using System.Collections.ObjectModel;
 using System.Data.Entity.Migrations;
-using Intranet.Dal.Repositories;
-using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Dal.Migrations
@@ -33,25 +31,48 @@ namespace Intranet.Dal.Migrations
             //    );
             //
 
-          //  var admin = new Role { Name = "Administrator" };
+            //  var admin = new Role { Name = "Administrator" };
             var admin = new Role { Name = "Everyone" };
             var laboruser = new Role { Name = "LaborUser" };
             var laborviewer = new Role { Name = "LaborViewer" };
 
-
-            context.Roles.AddOrUpdate(m => m.Name, admin, laboruser, laborviewer );
+            context.Roles.AddOrUpdate( m => m.Name, admin, laboruser, laborviewer );
             var roles = new Collection<Role> { admin, laboruser, laborviewer };
-            var rolesadmin = new Collection<Role> { admin};
+            var rolesadmin = new Collection<Role> { admin };
 
-            var labor = new MainModule { Name = "Labor", Description = "Labor QS", ActionName = "Index", ControllerName = "LaborHome", Visible = true,Roles = roles};
-            var adminshell = new MainModule { Name = "Einstellungen", Description = "Einstellungen für die Shell", ActionName = "Index", ControllerName = "SettingHome", Visible = true, Roles = rolesadmin };
+            var labor = new MainModule { Name = "Labor", Description = "Labor QS", ActionName = "Index", ControllerName = "LaborHome", Visible = true, Roles = roles };
+            var adminshell = new MainModule
+            {
+                Name = "Einstellungen",
+                Description = "Einstellungen für die Shell",
+                ActionName = "Index",
+                ControllerName = "SettingHome",
+                Visible = true,
+                Roles = rolesadmin
+            };
 
-            context.MainModules.AddOrUpdate(m => m.Name, labor, adminshell );
+            context.MainModules.AddOrUpdate( m => m.Name, labor, adminshell );
 
-            var creator = new SubModule { Description = "Labor QS Creator", MainModule = labor, Name = "LaborCreator", ControllerName = "LaborCreatorHome",ActionName = "Index",Roles = roles};
-            var dashboard = new SubModule { Description = "Labor QS Dashboard", MainModule = labor, Name = "LaborDashboard", ControllerName = "LaborDashboardHome", ActionName = "Index", Roles = roles };
+            var creator = new SubModule
+            {
+                Description = "Labor QS Creator",
+                MainModule = labor,
+                Name = "LaborCreator",
+                ControllerName = "LaborCreatorHome",
+                ActionName = "Index",
+                Roles = roles
+            };
+            var dashboard = new SubModule
+            {
+                Description = "Labor QS Dashboard",
+                MainModule = labor,
+                Name = "LaborDashboard",
+                ControllerName = "LaborDashboardHome",
+                ActionName = "Index",
+                Roles = roles
+            };
 
-            context.SubModules.AddOrUpdate(m => m.Name, creator, dashboard);
+            context.SubModules.AddOrUpdate( m => m.Name, creator, dashboard );
         }
     }
 }

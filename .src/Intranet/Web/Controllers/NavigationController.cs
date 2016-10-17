@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Web.Mvc;
-using Intranet.Bll;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
 using ControllerBase = Intranet.Definition.ControllerBase;
@@ -12,22 +11,28 @@ namespace Intranet.Web.Controllers
     /// </summary>
     public class NavigationController : ControllerBase
     {
+        #region Properties
 
         /// <summary>
         ///     Gets or sets the viewmodel for the navigation
         /// </summary>
         public INavigationService NavigationService { get; set; }
 
+        #endregion
+
+        #region Ctor
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="NavigationController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="Definition.ILoggerFactory" />.</param>
-        public NavigationController(ILoggerFactory loggerFactory)
+        public NavigationController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(NavigationController) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
+        #endregion
 
         // GET: Navigation
         /// <summary>
@@ -38,8 +43,8 @@ namespace Intranet.Web.Controllers
         [ChildActionOnly]
         public ActionResult GetNavigation()
         {
-            return PartialView( "_HeaderNavBar",NavigationService.GetNavigationViewModel());
-        } 
+            return PartialView( "_HeaderNavBar", NavigationService.GetNavigationViewModel() );
+        }
 
         #region Overrides of ControllerBase
 

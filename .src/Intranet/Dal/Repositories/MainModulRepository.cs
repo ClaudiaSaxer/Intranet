@@ -8,10 +8,12 @@ using Intranet.Model;
 namespace Intranet.Dal.Repositories
 {
     /// <summary>
-    /// The Repository for the Module
+    ///     The Repository for the Module
     /// </summary>
     public class MainModuleRepository : GenericRepository<IntranetContext, MainModule>
     {
+        #region Ctor
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="GenericRepository{TContext, TEntity}" /> class.
         /// </summary>
@@ -21,5 +23,7 @@ namespace Intranet.Dal.Repositories
             : base( databaseFactory, loggerFactory )
         {
         }
+
+        #endregion
     }
 }

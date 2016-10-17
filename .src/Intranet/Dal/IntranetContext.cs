@@ -19,7 +19,6 @@ namespace Intranet.Dal
         /// </summary>
         public DbSet<Role> Roles { get; set; }
 
-       
         /// <summary>
         ///     Gets or sets the dbset of the model module
         /// </summary>
@@ -95,7 +94,7 @@ namespace Intranet.Dal
 
             //SubModule MainModul
             modelBuilder.Entity<SubModule>()
-                        .HasOptional<MainModule>( s => s.MainModule )
+                        .HasOptional( s => s.MainModule )
                         .WithMany( s => s.SubModules )
                         .Map( s => s.MapKey( "MainModulRefId" ) );
         }

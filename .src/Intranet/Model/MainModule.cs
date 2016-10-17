@@ -17,15 +17,13 @@ namespace Intranet.Model
     {
         #region Properties
 
-
         /// <summary>
         ///     Gets or sets the Id of the module
         /// </summary>
         /// <value>The module id of the module.</value>
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
         public Int32 MainModuleId { get; set; }
-
 
         /// <summary>
         ///     If Main Module is Visible in Shell or not
