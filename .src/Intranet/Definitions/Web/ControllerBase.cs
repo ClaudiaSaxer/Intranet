@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Web.Mvc;
-using Intranet.Definition.Bll;
-using Intranet.ViewModel;
 
 namespace Intranet.Definition
 {
@@ -16,15 +14,6 @@ namespace Intranet.Definition
         ///     The logger used by the controller.
         /// </summary>
         protected readonly ILogger Logger;
-
-        #endregion
-
-        #region Properties
-
-        /// <summary>
-        ///     Gets or sets the viewmodel for the navigation
-        /// </summary>
-        public INavigationService NavigationService { get; set; }
 
         #endregion
 
@@ -43,20 +32,14 @@ namespace Intranet.Definition
         #endregion
 
         /// <summary>
-        ///     The Partial View Result for the Navigation with the MainModules
+        ///     Begins to invoke the action in the current controller context.
         /// </summary>
-        /// <returns>Partial View Result with Navigation Modules</returns>
-        public PartialViewResult Navigation() => PartialView( "_HeaderNavBar", NavigationService.GetNavicationViewModel());
-
-        /// <summary>
-    ///     Begins to invoke the action in the current controller context.
-    /// </summary>
-    /// <returns>
-    ///     Returns an IAsyncController instance.
-    /// </returns>
-    /// <param name="callback">The callback.</param>
-    /// <param name="state">The state.</param>
-    protected override IAsyncResult BeginExecuteCore( AsyncCallback callback, Object state )
+        /// <returns>
+        ///     Returns an IAsyncController instance.
+        /// </returns>
+        /// <param name="callback">The callback.</param>
+        /// <param name="state">The state.</param>
+        protected override IAsyncResult BeginExecuteCore( AsyncCallback callback, Object state )
             => base.BeginExecuteCore( callback, state );
     }
 }

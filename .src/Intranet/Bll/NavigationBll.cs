@@ -27,6 +27,7 @@ namespace Intranet.Bll
         /// <returns>All Modules for the given roles</returns>
         public IQueryable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> rolenames )
         {
+            
             var roles = RoleRepository.GetAll().Where( role =>role.Name.IsIn( rolenames )  ).AsEnumerable();
             var modules = MainModuleRepository.GetAll().Where( module => module.Roles.IsIn( roles ) ).Where( module => module.Visible );
             return modules;

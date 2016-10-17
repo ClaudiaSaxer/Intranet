@@ -17,7 +17,7 @@ namespace Intranet.Bll
         /// Gets or sets the view model for the navigation.
         /// </summary>
         /// <value>the viewmodel for the navigation</value>
-        public NavigationViewModel NavigationViewModel { get; private set; }
+        public NavigationViewModel NavigationViewModel { get; set; }
         #region Ctor
 
         /// <summary>
@@ -48,12 +48,17 @@ namespace Intranet.Bll
         /// All main models that the current User is allowed to see. 
         /// </summary>
         /// <returns>The ViewModel for the navigation</returns>
-        public NavigationViewModel GetNavicationViewModel()
+        public NavigationViewModel GetNavigationViewModel()
         {
             var roleNames = Roles.GetRolesForUser();
 
-            NavigationViewModel.Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames );
-            return NavigationViewModel;
+            var vm = new NavigationViewModel
+            {
+                Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames )
+                                       .ToList()
+            };
+            // NavigationViewModel.Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames ).ToList();
+            return vm;
 
         }
 
