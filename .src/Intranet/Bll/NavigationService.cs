@@ -55,7 +55,6 @@ namespace Intranet.Bll
             var vm = new NavigationViewModel
             {
                 Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames )
-                                       .ToList()
             };
             // NavigationViewModel.Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames ).ToList();
             return vm;
@@ -64,4 +63,4 @@ namespace Intranet.Bll
 
         #endregion
     }
-}
+} 

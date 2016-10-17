@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Extend;
@@ -14,23 +13,33 @@ namespace Intranet.Bll
     /// </summary>
     internal class NavigationBll : INavigationBll
     {
+        #region Properties
+
         /// <summary>
         /// </summary>
         public IGenericRepository<MainModule> MainModuleRepository { get; set; }
+
+        #endregion
+
         #region Implementation of INavigationBll
+
         public IGenericRepository<Role> RoleRepository { get; set; }
 
         /// <summary>
         ///     Query for all Modules for a given roles.
         /// </summary>
-        /// <param name="rolenames">The name of the roles the user has.</param>
+        /// <param name="roleNames">The name of the roles the user has.</param>
         /// <returns>All Modules for the given roles</returns>
-        public IQueryable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> rolenames )
+        public IEnumerable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> roleNames )
         {
-            
-            var roles = RoleRepository.GetAll().Where( role =>role.Name.IsIn( rolenames )  ).AsEnumerable();
-            var modules = MainModuleRepository.GetAll().Where( module => module.Roles.IsIn( roles ) ).Where( module => module.Visible );
+         
+            var modules = RoleRepository.GetAll()
+                                      .Where( role => roleNames.Any(n => n.Contains( role.Name)) )
+                                      .SelectMany( role => role.MainModules )
+                                      .Distinct()
+                                      .ToList();
             return modules;
+
         }
 
         #endregion
