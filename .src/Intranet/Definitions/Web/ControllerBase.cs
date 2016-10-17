@@ -46,7 +46,7 @@ namespace Intranet.Definition
         ///     The Partial View Result for the Navigation with the MainModules
         /// </summary>
         /// <returns>Partial View Result with Navigation Modules</returns>
-        public PartialViewResult Navigation() => PartialView( "_HeaderNavBar", NavigationService.NavicationViewModel());
+        public PartialViewResult Navigation() => PartialView( "_HeaderNavBar", NavigationService.GetNavicationViewModel());
 
         /// <summary>
     ///     Begins to invoke the action in the current controller context.

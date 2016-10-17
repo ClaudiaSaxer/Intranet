@@ -48,12 +48,12 @@ namespace Intranet.Bll
         /// All main models that the current User is allowed to see. 
         /// </summary>
         /// <returns>The ViewModel for the navigation</returns>
-        public NavigationViewModel NavicationViewModel()
+        public NavigationViewModel GetNavicationViewModel()
         {
             var roleNames = Roles.GetRolesForUser();
 
             NavigationViewModel.Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames );
-            return NavicationViewModel();
+            return NavigationViewModel;
 
         }
 
