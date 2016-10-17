@@ -94,8 +94,6 @@
     <Compile Include="Bll\ISettingsService.cs" />
     <Compile Include="Bll\INavigationBll.cs" />
     <Compile Include="Bll\INavigationService.cs" />
-    <Compile Include="Bll\ITestAutofac.cs" />
-    <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Db\BaseClass\GenericRepository.cs" />
     <Compile Include="Db\IDatabaseFactory.cs" />
     <Compile Include="Db\IDbCommit.cs" />
