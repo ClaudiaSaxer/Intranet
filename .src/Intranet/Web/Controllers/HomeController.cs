@@ -1,5 +1,7 @@
-﻿using System.Web.Mvc;
+﻿
+using System.Web.Mvc;
 using Intranet.Definition;
+using Intranet.ViewModel;
 using ControllerBase = Intranet.Definition.ControllerBase;
 
 namespace Intranet.Web.Controllers
@@ -43,6 +45,13 @@ namespace Intranet.Web.Controllers
         public ActionResult Index()
         {
             var viewModel = HomeService.GetHomeViewModel();
+            viewModel = new HomeViewModel();
+            var moduleList = new System.Collections.Generic.List<Intranet.Model.Module>();
+            moduleList.Add( new Intranet.Model.MainModule { Name = "Labor", Description = "Laborbeschreibung", ActionName = "Index", ControllerName = "LaborHome" } );
+            moduleList.Add(new Intranet.Model.MainModule { Name = "Modul1", Description = "Modul1 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            moduleList.Add(new Intranet.Model.MainModule { Name = "Modul2", Description = "Modul2 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            moduleList.Add(new Intranet.Model.MainModule { Name = "Einstellungen", Description = "Einstellungen beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            viewModel.Modules = moduleList;
             return View( viewModel );
         }
 

@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -216,6 +216,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
@@ -228,6 +229,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\own\IntigenaVariables.css">
+      <DependentUpon>IntigenaVariables.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\own\Shell.css">
+      <DependentUpon>Shell.scss</DependentUpon>
+    </Content>
     <Content Include="Content\own\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -329,6 +336,9 @@
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\own\temporaryForTesting.scss" />
+    <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
+    <Content Include="Content\own\Shell.scss" />
+    <Content Include="Content\own\IntigenaVariables.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -382,7 +392,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Labor\Controllers\" />
     <Folder Include="Areas\Labor\Views\Shared\" />
     <Folder Include="Scripts\own\" />
     <Folder Include="Views\Navigation\" />
