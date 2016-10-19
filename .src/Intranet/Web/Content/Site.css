@@ -5880,6 +5880,9 @@ body {
   font-size: x-large;
   color: #555555; }
 
+.image-margin {
+  margin: 0.5rem; }
+
 .intigena-blue {
   background-color: #539ad8; }
 

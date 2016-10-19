@@ -44,8 +44,8 @@ namespace Intranet.Web.Controllers
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
-            //var viewModel = HomeService.GetHomeViewModel();
-            var viewModel = new HomeViewModel();
+            var viewModel = HomeService.GetHomeViewModel();
+            viewModel = new HomeViewModel();
             var moduleList = new System.Collections.Generic.List<Intranet.Model.Module>();
             moduleList.Add( new Intranet.Model.MainModule { Name = "Labor", Description = "Laborbeschreibung", ActionName = "Index", ControllerName = "LaborHome" } );
             moduleList.Add(new Intranet.Model.MainModule { Name = "Modul1", Description = "Modul1 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
