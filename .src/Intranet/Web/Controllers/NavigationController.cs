@@ -2,7 +2,6 @@
 using System.Web.Mvc;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
-using Intranet.ViewModel;
 using ControllerBase = Intranet.Definition.ControllerBase;
 
 namespace Intranet.Web.Controllers
