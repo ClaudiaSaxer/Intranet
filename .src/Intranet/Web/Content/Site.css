@@ -1,5 +1,5 @@
-﻿@charset "UTF-8";
-.nounderline {
+@charset "UTF-8";
+.no-underline-hyperlink:hover {
   text-decoration: none; }
 
 .modul-item {
