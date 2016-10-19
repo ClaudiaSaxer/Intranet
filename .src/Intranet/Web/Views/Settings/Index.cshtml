@@ -6,6 +6,7 @@
 
 <link href="/Content/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="/Scripts/bootstrap-toggle.min.js"></script>
+<script src="/Scripts/own/shell-settings.js"></script>
 <h2>Index</h2>
 <table class="table">
     <thead>
@@ -20,7 +21,7 @@
         <tr class="intigena-table-item">
             <td>@item.Name</td>
             <td>
-                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" id="@item.Name" data-on="Sichtbar" data-off="Unsichtbar">
+                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" id="@item.Name" data-on="Sichtbar" data-off="Unsichtbar" class="visible-toggle">
             </td>
         </tr>
     }

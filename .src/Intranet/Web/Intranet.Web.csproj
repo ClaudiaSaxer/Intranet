@@ -339,7 +339,7 @@
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\own\temporaryForTesting.scss" />
-	<Content Include="Content\bootstrap-toggle.min.css" />
+    <Content Include="Content\bootstrap-toggle.min.css" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <Content Include="Content\own\Shell.scss" />
     <Content Include="Content\own\IntigenaVariables.scss" />
@@ -359,7 +359,7 @@
     <Content Include="Scripts\bootstrap\tab.js" />
     <Content Include="Scripts\bootstrap\tooltip.js" />
     <Content Include="Scripts\bootstrap\transition.js" />
-	<Content Include="Scripts\bootstrap-toggle.min.js" />
+    <Content Include="Scripts\bootstrap-toggle.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -372,6 +372,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\own\shell-settings.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -400,7 +401,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Labor\Views\Shared\" />
-    <Folder Include="Scripts\own\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>
