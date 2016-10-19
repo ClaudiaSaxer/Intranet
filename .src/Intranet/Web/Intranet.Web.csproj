@@ -232,6 +232,9 @@
     <Content Include="Content\own\IntigenaVariables.css">
       <DependentUpon>IntigenaVariables.scss</DependentUpon>
     </Content>
+    <Content Include="Content\own\layout.css">
+      <DependentUpon>layout.scss</DependentUpon>
+    </Content>
     <Content Include="Content\own\Shell.css">
       <DependentUpon>Shell.scss</DependentUpon>
     </Content>
@@ -344,6 +347,7 @@
     <Content Include="Content\own\Shell.scss" />
     <Content Include="Content\own\IntigenaVariables.scss" />
     <Content Include="Content\own\ShellSettings.scss" />
+    <Content Include="Content\own\layout.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -401,6 +405,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Labor\Views\Shared\" />
+    <Folder Include="res\images\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>

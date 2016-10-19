@@ -1,4 +1,4 @@
-﻿function sendForm(name,visibleStatus) {
+function sendForm(name,visibleStatus) {
     $.ajax({
         url: '/Settings/Update',
         type: 'POST',

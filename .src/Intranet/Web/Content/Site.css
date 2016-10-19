@@ -38,10 +38,6 @@ tr.intigena-table-header th:last-child {
 tr.intigena-table-item td:last-child {
   text-align: right; }
 
-body {
-  border-color: #8a6d3b;
-  border: double; }
-
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5863,3 +5859,31 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+body {
+  padding-top: 70px; }
+
+.vertical-line {
+  width: auto;
+  height: 5px;
+  background-color: #539ad8;
+  margin: 0 auto; }
+
+.bg-intigena-footer {
+  padding: 1rem;
+  background-color: #539ad8; }
+
+.footer-text {
+  color: white; }
+
+.intigena-nav-text {
+  font-size: x-large;
+  color: #555555; }
+
+.intigena-blue {
+  background-color: #539ad8; }
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 40px;
+    padding-bottom: 10px; } }

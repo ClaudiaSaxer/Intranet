@@ -1,0 +1,37 @@
+@import "IntigenaVariables.scss";
+
+body { 
+    padding-top: 70px;
+}
+
+.vertical-line {
+    width: auto;
+    height: 5px;
+    background-color: $intigena-blue;
+    margin: 0 auto;
+}
+
+.bg-intigena-footer{
+    padding: 1rem;
+    background-color: $intigena-blue;
+}
+
+.footer-text{
+    color:white;
+}
+
+.intigena-nav-text{
+    font-size:x-large;
+    color:$intigena-title-gray;
+}
+
+.intigena-blue{
+    background-color:$intigena-blue;
+}
+
+@media (min-width: 768px){
+    .navbar-nav > li > a {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+}

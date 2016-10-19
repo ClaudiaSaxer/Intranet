@@ -1,20 +1,22 @@
 ﻿@model Intranet.ViewModel.NavigationViewModel
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar  navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span class="icon-bar intigena-blue"></span>
+                <span class="icon-bar intigena-blue"></span>
+                <span class="icon-bar intigena-blue"></span>
             </button>
-            @Html.ActionLink( "Intigena", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" } )
+            <a href="@Url.Action("Index", "Home",  new { area = "" })">
+                <img src="@Url.Content("/res/images/logo-intigena.png")" alt="" />
+            </a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav navbar-right">
                 @foreach ( var item in Model.Modules )
                 {
-                    <li>@Html.ActionLink( item.Name, item.ActionName, item.ControllerName, null, new { id = item.Name } )</li>
+                    <li>@Html.ActionLink( item.Name, item.ActionName, item.ControllerName, null, new { id = item.Name, @class = "intigena-nav-text" })</li>
                 }
             </ul>
         </div>
