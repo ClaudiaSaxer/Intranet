@@ -43,7 +43,13 @@ namespace Intranet.Web.Controllers
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
-            var viewModel = SettingsService.GetSettingsViewModel();
+            //var viewModel = SettingsService.GetSettingsViewModel();
+            var viewModel = new SettingsViewModel();
+            var moduleList = new System.Collections.Generic.List<ModuleSetting>();
+            moduleList.Add(new ModuleSetting { Name = "Labor", Visible = true });
+            moduleList.Add(new ModuleSetting { Name = "Modul1", Visible = true });
+            moduleList.Add(new ModuleSetting { Name = "Modul2", Visible = false });
+            viewModel.ModuleSettings = moduleList;
             return View( viewModel );
         }
 

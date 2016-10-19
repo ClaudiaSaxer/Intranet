@@ -1,9 +1,28 @@
 ﻿@model Intranet.ViewModel.SettingsViewModel
 
 @{
-    ViewBag.Title = "Settings";
+    ViewBag.Title = "Einstellungen";
 }
 
-
+<link href="/Content/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="/Scripts/bootstrap-toggle.min.js"></script>
 <h2>Index</h2>
-<h3>@Model.ModuleSettings.First().Name</h3>
+<table class="table">
+    <thead>
+        <tr class="intigena-table-header">
+            <th>Modul Name</th>
+            <th>Sichtbar</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.ModuleSettings)
+    {
+        <tr class="intigena-table-item">
+            <td>@item.Name</td>
+            <td>
+                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" id="@item.Name" data-on="Sichtbar" data-off="Unsichtbar">
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

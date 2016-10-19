@@ -235,6 +235,9 @@
     <Content Include="Content\own\Shell.css">
       <DependentUpon>Shell.scss</DependentUpon>
     </Content>
+    <Content Include="Content\own\ShellSettings.css">
+      <DependentUpon>ShellSettings.scss</DependentUpon>
+    </Content>
     <Content Include="Content\own\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
     </Content>
@@ -336,9 +339,11 @@
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
     <Content Include="Content\own\temporaryForTesting.scss" />
+	<Content Include="Content\bootstrap-toggle.min.css" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <Content Include="Content\own\Shell.scss" />
     <Content Include="Content\own\IntigenaVariables.scss" />
+    <Content Include="Content\own\ShellSettings.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -354,6 +359,7 @@
     <Content Include="Scripts\bootstrap\tab.js" />
     <Content Include="Scripts\bootstrap\tooltip.js" />
     <Content Include="Scripts\bootstrap\transition.js" />
+	<Content Include="Scripts\bootstrap-toggle.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <None Include="Scripts\jquery-3.1.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
@@ -378,12 +384,13 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Scripts\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="tsScripts\tsconfig.json" />

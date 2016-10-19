@@ -1,0 +1,17 @@
+@import "IntigenaVariables.scss";
+
+.intigena-table-header{
+    font-size: xx-large;
+    color: $intigena-title-gray;
+}
+tr.intigena-table-header th:last-child{
+    text-align:right;
+}
+
+.intigena-table-item{
+    font-size: x-large;
+    color: $intigena-title-gray;
+}
+tr.intigena-table-item td:last-child{
+    text-align:right;
+}

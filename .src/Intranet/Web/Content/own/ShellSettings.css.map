@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,sBAAsB;EAClB,SAAS,EAAE,QAAQ;EACnB,KAAK,ECFe,OAAO;;ADI/B,sCAAsC;EAClC,UAAU,EAAC,KAAK;;AAGpB,oBAAoB;EAChB,SAAS,EAAE,OAAO;EAClB,KAAK,ECVe,OAAO;;ADY/B,oCAAoC;EAChC,UAAU,EAAC,KAAK",
+"sources": ["ShellSettings.scss","IntigenaVariables.scss"],
+"names": [],
+"file": "ShellSettings.css"
+}

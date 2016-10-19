@@ -1,0 +1,15 @@
+.intigena-table-header {
+  font-size: xx-large;
+  color: #555555; }
+
+tr.intigena-table-header th:last-child {
+  text-align: right; }
+
+.intigena-table-item {
+  font-size: x-large;
+  color: #555555; }
+
+tr.intigena-table-item td:last-child {
+  text-align: right; }
+
+/*# sourceMappingURL=ShellSettings.css.map */
