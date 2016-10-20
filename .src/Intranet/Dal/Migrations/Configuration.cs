@@ -84,9 +84,9 @@ namespace Intranet.Dal.Migrations
                 Name = "Einstellungen",
                 Description = "Einstellungen für die Shell",
                 ActionName = "Index",
-                ControllerName = "SettingHome",
+                ControllerName = "Settings",
                 Visible = true,
-                AreaName = "Settings",
+                AreaName = "",
                 Type = ModuleType.Setting,
                 Roles = rolesadmin
             };

@@ -15,13 +15,13 @@
             <ul class="nav navbar-nav">
                 @foreach ( var item in @ViewBag.Navigation.MainModules)
                 {
-                    <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, null, new { id = item.Name, @class = "intigena-nav-text" })</li>
+                    <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, new { area = (string)item.AreaName }, new { id = item.Name, @class = "intigena-nav-text" })</li>
                 }
 			</ul>
             <ul class="nav navbar-nav navbar-right">    
                 @foreach (var item in @ViewBag.Navigation.SettingModules)
                 {
-					<li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, null, new { id = item.Name, @class = "intigena-nav-text" })</li>
+					<li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, new { area = (string)item.AreaName }, new { id = item.Name, @class = "intigena-nav-text" })</li>
                 }
             </ul>
 
