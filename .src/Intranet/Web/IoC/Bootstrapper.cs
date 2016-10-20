@@ -3,7 +3,6 @@ using Autofac;
 using Autofac.Configuration;
 using Autofac.Integration.Mvc;
 using Intranet.Common;
-using Intranet.Definition;
 using Microsoft.Extensions.Configuration;
 
 namespace Intranet.Web.IoC
