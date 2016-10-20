@@ -5,7 +5,7 @@ namespace Intranet.Common
     /// <summary>
     ///     Abstract base class for MVC controllers.
     /// </summary>
-    public abstract class ControllerBase : Controller
+    public abstract class BaseController : Controller
     {
         #region Fields
 
@@ -28,10 +28,10 @@ namespace Intranet.Common
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="ControllerBase" /> class.
+        ///     Initialize a new instance of the <see cref="BaseController" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        protected ControllerBase( ILogger logger )
+        protected BaseController( ILogger logger )
         {
             Logger = logger;
             Logger.Trace( "Enter Ctor - Exit." );
@@ -39,16 +39,11 @@ namespace Intranet.Common
 
         #endregion
 
-        // GET: Navigation
-        /// <summary>
-        ///     The Partial View Result for the Navigation with the MainModules
-        /// </summary>
-        /// <returns>Partial View Result with Navigation Modules</returns>
-        [AllowAnonymous]
-        [ChildActionOnly]
-        public ActionResult GetNavigation()
+        /// <inheritdoc />
+        protected override void OnActionExecuting( ActionExecutingContext filterContext )
         {
-            return PartialView( "_HeaderNavBar", NavigationService.GetNavigationViewModel() );
+            ViewBag.Navigation = NavigationService.GetNavigationViewModel();
+            base.OnActionExecuting( filterContext );
         }
     }
 }
