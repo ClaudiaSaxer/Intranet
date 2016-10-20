@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Intranet.Definition;
-using Intranet.Definition.Bll;
+using Intranet.Common;
 using Intranet.Model;
 
 namespace Intranet.Bll
