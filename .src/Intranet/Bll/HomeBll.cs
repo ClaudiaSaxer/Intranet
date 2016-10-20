@@ -29,7 +29,7 @@ namespace Intranet.Bll
             var modules = RoleRepository.GetAll()
                                         .Where( role => rolenames.Any( n => n.Contains( role.Name ) ) )
                                         .SelectMany( role => role.Modules )
-                                        .Where( module => ( module.Type == ModuleType.Setting ) || ( module.Type == ModuleType.Main ) )
+                                        .Where( module => ( module.Visible == true ) && ( ( module.Type == ModuleType.Setting ) || ( module.Type == ModuleType.Main ) ) )
                                         .Distinct()
                                         .ToList();
             return modules;
