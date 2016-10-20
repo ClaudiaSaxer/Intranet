@@ -6,9 +6,9 @@ using Intranet.ViewModel;
 namespace Intranet.Web.Controllers
 {
     /// <summary>
-    ///     Class representing the SettingsBaseController
+    ///     Class representing the SettingsController
     /// </summary>
-    public class SettingsBaseController : BaseController
+    public class SettingsController : BaseController
     {
         #region Properties
 
@@ -28,8 +28,8 @@ namespace Intranet.Web.Controllers
         ///     Initialize a new instance of the <see cref="HomeController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public SettingsBaseController( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(SettingsBaseController) ) )
+        public SettingsController( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(SettingsController) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -37,7 +37,7 @@ namespace Intranet.Web.Controllers
         #endregion
 
         /// <summary>
-        ///     Loads the index page of the SettingsBaseController
+        ///     Loads the index page of the SettingsController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()

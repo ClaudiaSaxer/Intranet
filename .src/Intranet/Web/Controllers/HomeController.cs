@@ -1,7 +1,6 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Definition;
-using ControllerBase = Intranet.Common.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {
@@ -9,7 +8,7 @@ namespace Intranet.Web.Controllers
     ///     Class representing the HomeController
     /// </summary>
     [Authorize]
-    public class HomeController : ControllerBase
+    public class HomeController : BaseController
     {
         #region Properties
 
@@ -47,7 +46,7 @@ namespace Intranet.Web.Controllers
             return View( viewModel );
         }
 
-        #region Overrides of ControllerBase
+        #region Overrides of BaseController
 
         #endregion
     }
