@@ -90,4 +90,4 @@ gulp.task('watch.ts',
 gulp.task('watch', ['watch.ts']);
 gulp.task('watch', ['watch.sass']);
 
-gulp.task('default', ['ts', 'sass', 'minify-js', 'minify-css', 'watch']);
+gulp.task('default', ['ts', 'sass', 'minify-js', 'minify-css']);
