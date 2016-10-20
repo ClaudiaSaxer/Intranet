@@ -83,7 +83,7 @@
     <Compile Include="Logging\NLogLoggerFactory.cs" />
     <Compile Include="Logging\NLogLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\ControllerBase.cs" />
+    <Compile Include="Web\BaseController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">

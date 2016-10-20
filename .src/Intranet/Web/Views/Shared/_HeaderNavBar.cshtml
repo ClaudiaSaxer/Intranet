@@ -1,5 +1,4 @@
-﻿@model Intranet.ViewModel.NavigationViewModel
-
+﻿
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
@@ -12,9 +11,9 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @foreach ( var item in Model.Modules )
+                @foreach ( var item in @ViewBag.Navigation.Modules )
                 {
-                    <li>@Html.ActionLink( item.Name, item.ActionName, item.ControllerName, null, new { id = item.Name } )</li>
+                    <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, null, new { id = item.Name } )</li>
                 }
             </ul>
         </div>
