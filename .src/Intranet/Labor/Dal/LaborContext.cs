@@ -7,13 +7,5 @@ namespace Intranet.Labor.Dal
     /// </summary>
     public class LaborContext : DbContext
     {
-        #region Properties
-
-        /// <summary>
-        ///     Gets or sets the Tests
-        /// </summary>
-        public DbSet<Model.Labor> Tests { get; set; }
-
-        #endregion
     }
 }

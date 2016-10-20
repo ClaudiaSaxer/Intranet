@@ -90,20 +90,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\ISettingsBll.cs" />
     <Compile Include="Bll\IHomeService.cs" />
-    <Compile Include="Bll\ITestAutofac.cs" />
-    <Compile Include="Bll\ITestBll.cs" />
-    <Compile Include="Db\BaseClass\GenericRepository.cs" />
-    <Compile Include="Db\IDatabaseFactory.cs" />
-    <Compile Include="Db\IDbCommit.cs" />
-    <Compile Include="Db\IGenericRepository.cs" />
-    <Compile Include="Disposable\BaseClass\DisposableBase.cs" />
-    <Compile Include="Logging\BaseClass\LoggingBase.cs" />
-    <Compile Include="Logging\ILogger.cs" />
-    <Compile Include="Logging\ILoggerFactory.cs" />
-    <Compile Include="Logging\LogLevel.cs" />
+    <Compile Include="Bll\IHomeBll.cs" />
+    <Compile Include="Bll\ISettingsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\ControllerBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

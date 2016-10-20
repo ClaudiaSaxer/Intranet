@@ -1,9 +1,22 @@
-﻿@model Intranet.ViewModel.TestViewModel
+﻿@model Intranet.ViewModel.HomeViewModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Intigena Intranet";
 }
 
-
-<h2>Index</h2>
-<h3>@Model.Name</h3>
+<div class="row">
+    @foreach (var item in Model.Modules)
+    {<div class="col-md-6">
+        <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = item.AreaName })" class="no-underline-hyperlink">
+            <div class="modul-item">
+                <div class="modul-item-title">
+                    @item.Name
+                </div>
+                <div class="modul-item-description">
+                    @item.Description
+                </div>
+            </div>
+        </a>
+    </div>
+    }
+</div>

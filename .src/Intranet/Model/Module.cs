@@ -1,6 +1,8 @@
 ﻿#region Usings
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -11,7 +13,7 @@ namespace Intranet.Model
     /// <summary>
     ///     Class representing a Module
     /// </summary>
-    public abstract class Module
+    public class Module
     {
         #region Properties
 
@@ -30,6 +32,7 @@ namespace Intranet.Model
         ///     name example: Labor
         /// </example>
         /// <value>The name of the module.</value>
+        [UniqueKey]
         public String Name { get; set; }
 
         /// <summary>
@@ -42,7 +45,43 @@ namespace Intranet.Model
         ///     Gets or sets the path to the module start page
         /// </summary>
         /// <value>The path of the module.</value>
-        public String Path { get; set; }
+        public String ActionName { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the path to the module start page
+        /// </summary>
+        /// <value>The path of the module.</value>
+        public String ControllerName { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the are to the module
+        /// </summary>
+        /// <value>The are of the module.</value>
+        public String AreaName { get; set; }
+
+        /// <summary>
+        ///     If Main Module is Visible in Shell or not
+        /// </summary>
+        /// <value>The visability of the module. Null if type is not main</value>
+        public Boolean? Visible { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the are to the module
+        /// </summary>
+        /// <value>The are of the module.</value>
+        public ModuleType Type { get; set; }
+
+        /// <summary>
+        ///     Gets or sets Collection of Submodules to this module
+        /// </summary>
+        /// <value>The submodules of the module.</value>
+        public virtual ICollection<Module> Submodules { get; set; }
+
+        /// <summary>
+        ///     Gets or sets Collection of role types to this module
+        /// </summary>
+        /// <value>The roletypes of the module.</value>
+        public virtual ICollection<Role> Roles { get; set; }
 
         #endregion
     }

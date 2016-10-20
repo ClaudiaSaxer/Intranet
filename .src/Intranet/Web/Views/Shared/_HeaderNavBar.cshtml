@@ -1,0 +1,30 @@
+
+<div class="navbar  navbar-fixed-top intigena-navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar intigena-blue"></span>
+                <span class="icon-bar intigena-blue"></span>
+                <span class="icon-bar intigena-blue"></span>
+            </button>
+            <a href="@Url.Action("Index", "Home",  new { area = "" })">
+                <img src="@Url.Content("/resources/img/logo-intigena.png")" alt="" class="image-margin"/>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                @foreach ( var item in @ViewBag.Navigation.MainModules)
+                {
+                    <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, new { area = (string)item.AreaName }, new { id = item.Name, @class = "intigena-nav-text" })</li>
+                }
+			</ul>
+            <ul class="nav navbar-nav navbar-right">    
+                @foreach (var item in @ViewBag.Navigation.SettingModules)
+                {
+					<li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, new { area = (string)item.AreaName }, new { id = item.Name, @class = "intigena-nav-text" })</li>
+                }
+            </ul>
+
+        </div>
+    </div>
+</div>

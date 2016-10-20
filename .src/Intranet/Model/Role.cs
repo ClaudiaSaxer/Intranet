@@ -12,8 +12,7 @@ namespace Intranet.Model
     /// <summary>
     ///     Class representing a Role
     /// </summary>
-
-    [Table("Role")]
+    [Table( "Role" )]
     public class Role
     {
         #region Properties
@@ -33,16 +32,10 @@ namespace Intranet.Model
         public String Name { get; set; }
 
         /// <summary>
-        ///     Gets or sets a collection of mainmodules for the role
+        ///     Gets or sets a collection of modules for the role
         /// </summary>
         /// <value>The roletypes of the Role.</value>
-        public virtual ICollection<MainModule> MainModules { get; set; }
-
-        /// <summary>
-        ///     Gets or sets a collection of sub modules for the role
-        /// </summary>
-        /// <value>The roletypes of the Role.</value>
-        public virtual ICollection<SubModule> SubModules { get; set; }
+        public virtual ICollection<Module> Modules { get; set; }
 
         #endregion
     }

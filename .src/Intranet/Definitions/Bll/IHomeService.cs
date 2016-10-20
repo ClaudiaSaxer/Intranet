@@ -3,13 +3,14 @@
 namespace Intranet.Definition
 {
     /// <summary>
-    ///     TODO
+    ///     The Interface for the HomeService
     /// </summary>
     public interface IHomeService
     {
         /// <summary>
+        ///     Gets the HomeViewModel
         /// </summary>
-        /// <returns></returns>
-        TestViewModel GetTestViewModel();
+        /// <returns>The HomeViewModel</returns>
+        HomeViewModel GetHomeViewModel();
     }
 }

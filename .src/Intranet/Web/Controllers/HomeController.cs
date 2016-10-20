@@ -1,12 +1,15 @@
-﻿using System.Web.Mvc;
+using System.Web.Mvc;
+using Intranet.Common;
 using Intranet.Definition;
-using ControllerBase = Intranet.Definition.ControllerBase;
+using Intranet.ViewModel;
 
 namespace Intranet.Web.Controllers
 {
     /// <summary>
+    ///     Class representing the HomeController
     /// </summary>
-    public class HomeController : ControllerBase
+    [Authorize]
+    public class HomeController : BaseController
     {
         #region Properties
 
@@ -35,35 +38,15 @@ namespace Intranet.Web.Controllers
         #endregion
 
         /// <summary>
+        ///     Loads the index page of the HomeController
         /// </summary>
-        /// <returns></returns>
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <returns></returns>
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        /// <summary>
-        /// </summary>
-        /// <returns></returns>
+        /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
-            var view = HomeService.GetTestViewModel();
-            return View( view );
+            return View( HomeService.GetHomeViewModel() );
         }
 
-        #region Overrides of ControllerBase
+        #region Overrides of BaseController
 
         #endregion
     }

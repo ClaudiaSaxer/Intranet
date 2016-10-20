@@ -35,7 +35,6 @@
     <DocumentationFile>bin\Release\Intranet.Bll.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
@@ -48,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +56,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SettingsBll.cs" />
+    <Compile Include="SettingsService.cs" />
     <Compile Include="HomeService.cs" />
-    <Compile Include="LoggingTest.cs" />
+    <Compile Include="HomeBll.cs" />
+    <Compile Include="NavigationBll.cs" />
+    <Compile Include="NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestUseAutofac.cs" />
-    <Compile Include="TestAutofac.cs" />
-    <Compile Include="Test\TestBll.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Intranet.Common.csproj">

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Intranet.Definition;
+﻿using Intranet.Common;
 using Intranet.Model;
 
 namespace Intranet.Dal.Repositories
 {
     /// <summary>
-    /// Repository for the Roles
+    ///     Repository for the Roles
     /// </summary>
-   public class RoleRepository: GenericRepository<IntranetContext, Role>
+    public class RoleRepository : GenericRepository<IntranetContext, Role>
     {
+        #region Ctor
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="GenericRepository{TContext, TEntity}" /> class.
         /// </summary>
@@ -22,5 +19,7 @@ namespace Intranet.Dal.Repositories
             : base( databaseFactory, loggerFactory )
         {
         }
+
+        #endregion
     }
 }

@@ -1,18 +1,21 @@
-﻿using System.Linq;
+﻿using System.Web.Security;
+using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll
 {
     /// <summary>
+    ///     Class Representing the Service for Home
     /// </summary>
     public class HomeService : LoggingBase, IHomeService
     {
         #region Properties
 
         /// <summary>
+        ///     Gets or sets the bll for the home.
         /// </summary>
-        public ITestBll Bll { get; set; }
+        public IHomeBll HomeBll { get; set; }
 
         #endregion
 
@@ -33,19 +36,18 @@ namespace Intranet.Bll
         #region Implementation of IHomeService
 
         /// <summary>
+        ///     All main models and setting models that the current User is allowed to see.
         /// </summary>
-        /// <returns></returns>
-        public TestViewModel GetTestViewModel()
+        /// <returns>The ViewModel for the home</returns>
+        public HomeViewModel GetHomeViewModel()
         {
-            var result = new TestViewModel
-            {
-              /*  Name = Bll.AllTests()
-                          .FirstOrDefault()
-                          ?.TestString*/
-                          Name = "this and so"
-            };
+            var roleNames = Roles.GetRolesForUser();
 
-            return result;
+            var vm = new HomeViewModel
+            {
+                Modules = HomeBll.AllVisibleModulesForRoles( roleNames )
+            };
+            return vm;
         }
 
         #endregion
