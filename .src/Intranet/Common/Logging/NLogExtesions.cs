@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Intranet.Common.Logging
+namespace Intranet.Common
 {
     /// <summary>
     ///     Class containing all NLog extensions
@@ -8,35 +8,35 @@ namespace Intranet.Common.Logging
     public static class NLogExtensions
     {
         /// <summary>
-        ///     Convert a <see cref="Definition.LogLevel" /> value to a <see cref="NLog.LogLevel" /> value
+        ///     Convert a <see cref="LogLevel" /> value to a <see cref="NLog.LogLevel" /> value
         /// </summary>
         /// <param name="level">The level to convert</param>
         /// <exception cref="ArgumentException">level is out of range.</exception>
         /// <returns>The converted NLog value</returns>
-        public static LogLevel ToLogLevel( this Definition.LogLevel level )
+        public static NLog.LogLevel ToLogLevel( this LogLevel level )
         {
             switch ( level )
             {
-                case Definition.LogLevel.Debug:
-                    return LogLevel.Debug;
+                case LogLevel.Debug:
+                    return NLog.LogLevel.Debug;
 
-                case Definition.LogLevel.Error:
-                    return LogLevel.Error;
+                case LogLevel.Error:
+                    return NLog.LogLevel.Error;
 
-                case Definition.LogLevel.Fatal:
-                    return LogLevel.Fatal;
+                case LogLevel.Fatal:
+                    return NLog.LogLevel.Fatal;
 
-                case Definition.LogLevel.Info:
-                    return LogLevel.Info;
+                case LogLevel.Info:
+                    return NLog.LogLevel.Info;
 
-                case Definition.LogLevel.Off:
-                    return LogLevel.Off;
+                case LogLevel.Off:
+                    return NLog.LogLevel.Off;
 
-                case Definition.LogLevel.Trace:
-                    return LogLevel.Trace;
+                case LogLevel.Trace:
+                    return NLog.LogLevel.Trace;
 
-                case Definition.LogLevel.Warn:
-                    return LogLevel.Warn;
+                case LogLevel.Warn:
+                    return NLog.LogLevel.Warn;
 
                 default:
                     //Not testable with unit tests
