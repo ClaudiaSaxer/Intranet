@@ -14,10 +14,10 @@ namespace Intranet.Web.Controllers
         #region Properties
 
         /// <summary>
-        ///     Gets or sets a <see cref="ISettingsService" />
+        ///     Gets or sets a <see cref="IHomeBll" />
         /// </summary>
         /// <value>
-        ///     <see cref="ISettingsService" />
+        ///     <see cref="IHomeBll" />
         /// </value>
         public ISettingsService SettingsService { get; set; }
 
