@@ -1,10 +1,10 @@
-﻿#region Usings
+#region Usings
 
 using System;
 
 #endregion
 
-namespace Intranet.Definition
+namespace Intranet.Common
 {
     /// <summary>
     ///     Interface representing a loggerFactory

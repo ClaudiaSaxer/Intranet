@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
+using Intranet.Common;
 using Intranet.Definition;
-using ControllerBase = Intranet.Definition.ControllerBase;
+using ControllerBase = Intranet.Common.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {

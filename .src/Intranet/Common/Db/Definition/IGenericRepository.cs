@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Intranet.Definition
+namespace Intranet.Common
 {
     /// <summary>
     ///     Interface representing a repository.

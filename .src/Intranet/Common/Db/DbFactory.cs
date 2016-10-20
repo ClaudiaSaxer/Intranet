@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data.Entity;
-using Intranet.Definition;
 
 namespace Intranet.Common.Db
 

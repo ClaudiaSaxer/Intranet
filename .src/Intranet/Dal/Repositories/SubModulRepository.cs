@@ -1,6 +1,6 @@
 ﻿#region Usings
 
-using Intranet.Definition;
+using Intranet.Common;
 using Intranet.Model;
 
 #endregion

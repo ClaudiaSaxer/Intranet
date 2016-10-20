@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Security;
-using Intranet.Definition;
-using Intranet.Definition.Bll;
+using Intranet.Common;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll

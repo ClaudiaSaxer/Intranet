@@ -1,6 +1,6 @@
 ﻿using Intranet.ViewModel;
 
-namespace Intranet.Definition.Bll
+namespace Intranet.Common
 {
     /// <summary>
     ///     Interface representing the service for the navigation

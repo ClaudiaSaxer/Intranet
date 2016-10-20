@@ -2,7 +2,7 @@
 using Autofac;
 using Autofac.Configuration;
 using Autofac.Integration.Mvc;
-using Intranet.Definition;
+using Intranet.Common;
 using Microsoft.Extensions.Configuration;
 
 namespace Intranet.Web.IoC

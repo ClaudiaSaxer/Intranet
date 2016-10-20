@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Web.Mvc;
-using Intranet.Definition;
-using Intranet.Definition.Bll;
-using ControllerBase = Intranet.Definition.ControllerBase;
+using Intranet.Common;
+using ControllerBase = Intranet.Common.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {
@@ -25,7 +24,7 @@ namespace Intranet.Web.Controllers
         /// <summary>
         ///     Initialize a new instance of the <see cref="NavigationController" /> class.
         /// </summary>
-        /// <param name="loggerFactory">A <see cref="Definition.ILoggerFactory" />.</param>
+        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public NavigationController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(NavigationController) ) )
         {
