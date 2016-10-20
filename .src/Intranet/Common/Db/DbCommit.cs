@@ -2,7 +2,6 @@
 using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
-using Intranet.Definition;
 
 namespace Intranet.Common.Db
 {

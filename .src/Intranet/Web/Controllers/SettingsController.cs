@@ -1,15 +1,14 @@
 ﻿using System.Web.Mvc;
-using Intranet.Definition;
+using Intranet.Common;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
-using ControllerBase = Intranet.Definition.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {
     /// <summary>
     ///     Class representing the SettingsController
     /// </summary>
-    public class SettingsController : ControllerBase
+    public class SettingsController : BaseController
     {
         #region Properties
 
@@ -28,7 +27,7 @@ namespace Intranet.Web.Controllers
         /// <summary>
         ///     Initialize a new instance of the <see cref="HomeController" /> class.
         /// </summary>
-        /// <param name="loggerFactory">A <see cref="Definition.ILoggerFactory" />.</param>
+        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public SettingsController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(SettingsController) ) )
         {

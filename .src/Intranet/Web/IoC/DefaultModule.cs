@@ -4,11 +4,10 @@ using System;
 using System.Linq;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Intranet.Common;
 using Intranet.Common.Db;
-using Intranet.Common.Logging;
 using Intranet.Dal;
 using Intranet.Dal.Repositories;
-using Intranet.Definition;
 
 #endregion
 
@@ -95,7 +94,6 @@ namespace Intranet.Web.IoC
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
-
         }
 
         /// <summary>

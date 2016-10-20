@@ -1,4 +1,5 @@
 ﻿using System.Web.Security;
+using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
 

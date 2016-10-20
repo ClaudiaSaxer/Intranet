@@ -4,15 +4,12 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render( "~/Content/Site.css" )
+    @Styles.Render("~/bundles/css")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
 </head>
 <body>
-@{ Html.RenderAction( "GetNavigation", "Navigation", new { area = "" }); }
-
-    <div class="vertical-line"></div>
-
+@{ Html.RenderPartial( "_HeaderNavBar" ); }
 <div class="container body-content">
     @RenderBody()
 </div>
