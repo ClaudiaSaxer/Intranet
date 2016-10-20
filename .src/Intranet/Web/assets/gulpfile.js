@@ -14,18 +14,17 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
 
 
-var destPath = './libs/';
-var tsPath = 'assets/ts';
-var tsconfigPath = tsPath + 'tsconfig.json';
-var sassPath = 'assets/sass';
-var jsPath = './js';
-var cssPath = './css';
+var tsPath = './ts';
+var tsconfigPath = tsPath + '/tsconfig.json';
+var sassPath = './sass';
+var jsPath = '../resources/js/intigena';
+var cssPath = '../resources/css/intigena';
 
 // Delete the dist directory
 gulp.task('clean',
     function() {
-        return gulp.src(destPath)
-            .pipe(clean());
+        return gulp.src([jsPath,cssPath])
+            .pipe(clean({ force: true }));
     });
 
 
@@ -37,18 +36,16 @@ var tsProject = ts.createProject(tsconfigPath,
 gulp.task('ts',
     function() {
 
-        var tsResult = gulp.src([
-                tsPath+'/*.ts'
-            ])
+        var tsResult = gulp.src(tsPath+'/*.ts')
             .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
         return tsResult.js.pipe(gulp.dest(jsPath));
     });
 
 gulp.task('sass',
     function() {
-        return gulp.src(sassPath+'/**.scss')
+        return gulp.src([sassPath+'/**.scss', '!'+sassPath+'/bootstrap'])
             .pipe(sass().on('error', sass.logError))
-            .pipe(gulp.dest('./Content'));
+            .pipe(gulp.dest(cssPath));
     });
 
 

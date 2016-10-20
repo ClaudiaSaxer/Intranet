@@ -1,6 +1,6 @@
-﻿@import "../bootstrap/variables";
+﻿@import "bootstrap/_variables.scss"
 
-body {
+body{
     border-color:$alert-warning-text;
     border: double;
 }
