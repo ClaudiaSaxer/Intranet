@@ -24,6 +24,9 @@
   text-align: center;
   color: #555555; }
 
+.intigena-settings-table {
+  margin-top: 3rem; }
+
 .intigena-table-header {
   font-size: xx-large;
   color: #555555; }
@@ -5854,10 +5857,6 @@ body {
   font-size: x-large;
   color: #555555; }
 
-.intigena-nav-text:hover {
-  color: #539ad8;
-  background-color: white; }
-
 .image-margin {
   margin: 0.5rem; }
 
@@ -5869,6 +5868,10 @@ body {
   border-width: 5px;
   border-bottom-color: #539ad8;
   background-color: #E6F0F7; }
+
+.nav > li > a:hover {
+  color: #539ad8;
+  background-color: white; }
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {

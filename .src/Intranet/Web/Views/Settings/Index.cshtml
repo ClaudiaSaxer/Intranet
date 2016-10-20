@@ -6,10 +6,10 @@
 <link href="/Content/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="/Scripts/bootstrap-toggle.min.js"></script>
 <script src="/Scripts/own/shell-settings.js"></script>
-<table class="table">
+<table class="table intigena-settings-table">
     <thead>
         <tr class="intigena-table-header">
-            <th>Modul Name</th>
+            <th>Modul</th>
             <th>Sichtbar</th>
         </tr>
     </thead>
@@ -19,7 +19,7 @@
         <tr class="intigena-table-item">
             <td>@item.Name</td>
             <td>
-                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" id="@item.Name" data-on="Sichtbar" data-off="Unsichtbar" class="visible-toggle">
+                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" id="@item.Name" data-on="Aktiviert" data-off="Deaktiviert" class="visible-toggle">
             </td>
         </tr>
     }

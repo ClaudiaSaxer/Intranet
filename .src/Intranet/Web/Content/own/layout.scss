@@ -25,10 +25,6 @@ body {
     color:$intigena-title-gray;
 }
 
-.intigena-nav-text:hover{
-    color:$intigena-blue;
-    background-color:white;
-}
 
 .image-margin{
     margin:0.5rem;
@@ -43,6 +39,11 @@ body {
     border-width:5px;
     border-bottom-color: $intigena-blue;
     background-color: $intigena-light-blue;
+}
+
+.nav > li > a:hover{
+    color:$intigena-blue;
+    background-color:white;
 }
 
 @media (min-width: 768px){
