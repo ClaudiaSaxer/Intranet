@@ -15,7 +15,7 @@ namespace Intranet.Bll
 
         /// <summary>
         /// </summary>
-        public IGenericRepository<MainModule> MainModuleRepository { get; set; }
+        public IGenericRepository<Module> ModuleRepository { get; set; }
 
         #endregion
 
@@ -28,16 +28,30 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="roleNames">The name of the roles the user has.</param>
         /// <returns>All Modules for the given roles</returns>
-        public IEnumerable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> roleNames )
+        public IEnumerable<Module> AllVisibleMainModulesForRoles( IEnumerable<String> roleNames )
         {
             var modules = RoleRepository.GetAll()
                                         .Where( role => roleNames.Any( n => n.Contains( role.Name ) ) )
-                                        .SelectMany( role => role.MainModules )
+                                        .SelectMany( role => role.Modules ).Where(  module => module.Type == ModuleType.Main  )
                                         .Distinct()
                                         .ToList();
             return modules;
         }
 
-        #endregion
+        /// <summary>
+        ///     Query for all SettingsModules for a given roles.
+        /// </summary>
+        /// <param name="rolenames">The name of the roles the user has.</param>
+        /// <returns>All Settings for the given roles</returns>
+        public IEnumerable<Module> AllSettingsForRoles( IEnumerable<String> rolenames )
+        {
+            var modules = RoleRepository.GetAll()
+                                          .Where(role => roleNames.Any(n => n.Contains(role.Name)))
+                                          .SelectMany(role => role.Modules).Where(module => module.Type == ModuleType.Setting)
+                                          .Distinct()
+                                          .ToList();
+            return modules;
+        }
+
     }
 }

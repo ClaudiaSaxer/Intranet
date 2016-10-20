@@ -46,7 +46,8 @@ namespace Intranet.Bll
 
             var vm = new NavigationViewModel
             {
-                Modules = NavigationBll.AllVisibleMainModulesForRoles( roleNames )
+                MainModules = NavigationBll.AllVisibleMainModulesForRoles( roleNames ),
+                SettingModules = NavigationBll.AllSettingsForRoles( roleNames )
             };
             return vm;
         }
