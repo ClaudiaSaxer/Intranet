@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,IAAK;EACD,YAAY,EC4tBc,OAAmB;ED3tB7C,MAAM,EAAE,MAAM",
-"sources": ["temporaryForTesting.scss","../bootstrap/_variables.scss"],
-"names": [],
-"file": "temporaryForTesting.css"
-}

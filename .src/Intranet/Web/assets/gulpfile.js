@@ -15,7 +15,11 @@ var rename = require('gulp-rename');
 
 
 var destPath = './libs/';
-
+var tsPath = 'assets/ts';
+var tsconfigPath = tsPath + 'tsconfig.json';
+var sassPath = 'assets/sass';
+var jsPath = './js';
+var cssPath = './css';
 
 // Delete the dist directory
 gulp.task('clean',
@@ -25,7 +29,7 @@ gulp.task('clean',
     });
 
 
-var tsProject = ts.createProject('tsScripts/tsconfig.json',
+var tsProject = ts.createProject(tsconfigPath,
 {
     typescript: require('typescript')
 });
@@ -34,15 +38,15 @@ gulp.task('ts',
     function() {
 
         var tsResult = gulp.src([
-                'tsScripts/*.ts'
+                tsPath+'/*.ts'
             ])
             .pipe(ts(tsProject), undefined, ts.reporter.fullReporter());
-        return tsResult.js.pipe(gulp.dest('./Scripts/own'));
+        return tsResult.js.pipe(gulp.dest(jsPath));
     });
 
 gulp.task('sass',
     function() {
-        return gulp.src('./Content/own/**.scss')
+        return gulp.src(sassPath+'/**.scss')
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest('./Content'));
     });
@@ -51,7 +55,7 @@ gulp.task('sass',
 gulp.task('minify-js',
     ['ts'],
     function() {
-        gulp.src(['./Scripts/own/**/*.js', '!./Scripts/own/**/*min.js'])
+        gulp.src([jsPath+'/**/*.js', '!'+jsPath+'**/*min.js'])
             .pipe(minify({
                 ext: {
                     src: '.js',
@@ -60,31 +64,31 @@ gulp.task('minify-js',
                 exclude: ['tasks'],
                 ignoreFiles: ['.combo.js', '.min.js']
             }))
-            .pipe(gulp.dest('./Scripts/own'));
+            .pipe(gulp.dest(jsPath));
     });
 
 gulp.task('minify-css',
     ['sass'],
     function() {
         return gulp.src([
-                './Content/*.css', '!./Content/*.min.css'
+                cssPath+'/*.css', '!'+cssPath+'/*.min.css'
             ])
             .pipe(cleanCSS({ compatibility: 'ie8' }))
             .pipe(rename({
                 suffix: '.min'
             }))
-            .pipe(gulp.dest('./Content'));
+            .pipe(gulp.dest(cssPath));
     });
 
 gulp.task('watch.sass',
     ['sass'],
     function() {
-        gulp.watch('./Content/own/**.scss', ['sass']);
+        gulp.watch(sassPath+'/**.scss', ['sass']);
     });
 gulp.task('watch.ts',
     ['ts'],
     function() {
-        return gulp.watch('./tsScripts/*.ts', ['ts']);
+        return gulp.watch(tsPath+'/*.ts', ['ts']);
     });
 gulp.task('watch', ['watch.ts']);
 gulp.task('watch', ['watch.sass']);
