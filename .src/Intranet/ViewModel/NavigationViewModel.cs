@@ -11,11 +11,16 @@ namespace Intranet.ViewModel
         #region Properties
 
         /// <summary>
-        ///     Gets or sets the modules
+        ///     Gets or sets the main modules
         /// </summary>
-        /// <value>the modules from the shell</value>
-        public IEnumerable<Module> Modules { get; set; }
+        /// <value>the main modules from the shell</value>
+        public IEnumerable<Module> MainModules { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the setting modules
+        /// </summary>
+        /// <value>the setting modules from the shell</value>
+        public IEnumerable<Module> SettingModules { get; set; }
         #endregion
     }
 }

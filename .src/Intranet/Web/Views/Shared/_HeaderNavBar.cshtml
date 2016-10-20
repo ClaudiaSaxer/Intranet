@@ -11,11 +11,17 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                @foreach ( var item in @ViewBag.Navigation.Modules )
+                @foreach ( var item in @ViewBag.Navigation.MainModules)
                 {
                     <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, null, new { id = item.Name } )</li>
                 }
+                
+                @foreach (var item in @ViewBag.Navigation.SettingModules)
+                {
+                <li>@Html.ActionLink((string)item.Name, (string)item.ActionName, (string)item.ControllerName, null, new { id = item.Name })</li>
+                }
             </ul>
+
         </div>
     </div>
 </div>
