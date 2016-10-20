@@ -231,6 +231,7 @@
     <Content Include="assets\sass\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
     </Content>
+    <Content Include="resources\css\bootstrap-toggle.min.css" />
     <Content Include="resources\css\intigena\bootstrap.css" />
     <Content Include="resources\css\intigena\bootstrap.min.css" />
     <Content Include="resources\css\intigena\Site.css" />
@@ -327,6 +328,7 @@
     <Content Include="assets\sass\temporaryForTesting.scss" />
     <Content Include="assets\sass\bootstrap.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
     <Content Include="resources\js\bootstrap.min.js" />
     <Content Include="resources\js\bootstrap\affix.js" />
@@ -352,6 +354,8 @@
     <Content Include="resources\js\jquery.validate.min.js" />
     <Content Include="resources\js\jquery.validate.unobtrusive.js" />
     <Content Include="resources\js\jquery.validate.unobtrusive.min.js" />
+    <Content Include="resources\js\shell-settings.js" />
+    <Content Include="resources\js\shell-settings.min.js" />
     <Content Include="resources\js\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

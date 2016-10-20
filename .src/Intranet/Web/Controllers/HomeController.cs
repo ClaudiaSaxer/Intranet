@@ -46,10 +46,10 @@ namespace Intranet.Web.Controllers
             var viewModel = HomeService.GetHomeViewModel();
             viewModel = new HomeViewModel();
             var moduleList = new System.Collections.Generic.List<Intranet.Model.Module>();
-            moduleList.Add( new Intranet.Model.MainModule { Name = "Labor", Description = "Laborbeschreibung", ActionName = "Index", ControllerName = "LaborHome" } );
-            moduleList.Add(new Intranet.Model.MainModule { Name = "Modul1", Description = "Modul1 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
-            moduleList.Add(new Intranet.Model.MainModule { Name = "Modul2", Description = "Modul2 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
-            moduleList.Add(new Intranet.Model.MainModule { Name = "Einstellungen", Description = "Einstellungen beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            moduleList.Add( new Intranet.Model.Module { Name = "Labor", Description = "Laborbeschreibung", ActionName = "Index", ControllerName = "LaborHome" } );
+            moduleList.Add(new Intranet.Model.Module { Name = "Modul1", Description = "Modul1 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            moduleList.Add(new Intranet.Model.Module { Name = "Modul2", Description = "Modul2 beispiel", ActionName = "Index", ControllerName = "LaborHome" });
+            moduleList.Add(new Intranet.Model.Module { Name = "Einstellungen", Description = "Einstellungen beispiel", ActionName = "Index", ControllerName = "LaborHome" });
             viewModel.Modules = moduleList;
             return View( viewModel );
         }
