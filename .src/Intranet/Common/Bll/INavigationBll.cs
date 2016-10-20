@@ -14,6 +14,13 @@ namespace Intranet.Common
         /// </summary>
         /// <param name="rolenames">The name of the roles the user has.</param>
         /// <returns>All MainModules for the given roles</returns>
-        IEnumerable<MainModule> AllVisibleMainModulesForRoles( IEnumerable<String> rolenames );
+        IEnumerable<Module> AllVisibleMainModulesForRoles( IEnumerable<String> rolenames );
+
+        /// <summary>
+        ///     Query for all SettingsModules for a given roles.
+        /// </summary>
+        /// <param name="rolenames">The name of the roles the user has.</param>
+        /// <returns>All Setting Modules for the given roles</returns>
+        IEnumerable<Module> AllSettingsForRoles( IEnumerable<String> rolenames );
     }
 }

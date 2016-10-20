@@ -77,13 +77,7 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes( typeof(MainModuleRepository).Assembly )
-                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
-                   .AsImplementedInterfaces()
-                   .PropertiesAutowired()
-                   .InstancePerRequest();
-
-            builder.RegisterAssemblyTypes( typeof(SubModuleRepository).Assembly )
+            builder.RegisterAssemblyTypes( typeof(ModuleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()

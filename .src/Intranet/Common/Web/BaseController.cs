@@ -31,7 +31,7 @@ namespace Intranet.Common
         ///     Initialize a new instance of the <see cref="BaseController" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        protected BaseController(ILogger logger)
+        protected BaseController( ILogger logger )
         {
             Logger = logger;
             Logger.Trace("Enter Ctor - Exit.");
@@ -40,10 +40,10 @@ namespace Intranet.Common
         #endregion
 
         /// <inheritdoc />
-        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        protected override void OnActionExecuting( ActionExecutingContext filterContext )
         {
             ViewBag.Navigation = NavigationService.GetNavigationViewModel();
-            base.OnActionExecuting(filterContext);
+            base.OnActionExecuting( filterContext );
         }
     }
 }
