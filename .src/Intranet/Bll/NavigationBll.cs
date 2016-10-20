@@ -13,10 +13,7 @@ namespace Intranet.Bll
     {
         #region Properties
 
-        /// <summary>
-        /// </summary>
-        public IGenericRepository<Module> ModuleRepository { get; set; }
-
+  
         public IGenericRepository<Role> RoleRepository { get; set; }
 
         #endregion

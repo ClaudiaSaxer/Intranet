@@ -56,7 +56,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SettingsBll.cs" />
+    <Compile Include="SettingsService.cs" />
     <Compile Include="HomeService.cs" />
+    <Compile Include="HomeBll.cs" />
     <Compile Include="NavigationBll.cs" />
     <Compile Include="NavigationService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

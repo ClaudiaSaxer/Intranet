@@ -17,6 +17,6 @@ namespace Intranet.Definition.Bll
         ///     Updates the settings for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        void UpdateModuleSetting( ModuleSetting moduleSetting );
+        void UpdateModuleSetting(ModuleSetting moduleSetting);
     }
 }
