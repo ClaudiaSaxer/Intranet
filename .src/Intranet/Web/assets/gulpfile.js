@@ -43,7 +43,7 @@ gulp.task('ts',
 
 gulp.task('sass',
     function() {
-        return gulp.src([sassPath+'/**.scss', '!'+sassPath+'/bootstrap'])
+        return gulp.src([sassPath+'/**/*.scss', '!'+sassPath+'/bootstrap'])
             .pipe(sass().on('error', sass.logError))
             .pipe(gulp.dest(cssPath));
     });
