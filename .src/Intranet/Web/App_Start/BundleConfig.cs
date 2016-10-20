@@ -23,16 +23,9 @@ namespace Intranet.Web
             bundles.Add( new ScriptBundle( "~/bundles/bootstrap" ).Include(
                              "~/resources/js/bootstrap.js",
                              "~/resources/js/respond.js") );
-
-<<<<<<< HEAD
-            bundles.Add( new StyleBundle( "~/Content/css" ).Include(
-                             /*"~/Content/bootstrap.css",*/
-                             "~/Content/site.css" ) );
-=======
             bundles.Add( new StyleBundle("~/bundles/css").Include(
                              "~/resources/css/intigena/bootstrap.css",
                              "~/resources/css/intigena/site.css") );
->>>>>>> dev
         }
     }
 }

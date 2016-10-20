@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Intranet.Definition;
-using Intranet.Web.Controllers;
-using ControllerBase = Intranet.Definition.ControllerBase;
+﻿using System.Web.Mvc;
+using Intranet.Common;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     /// 
     /// </summary>
-    public class LaborHomeController : ControllerBase
+    public class LaborHomeController : BaseController
     {
         #region Ctor
 

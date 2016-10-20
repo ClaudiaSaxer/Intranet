@@ -228,6 +228,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\sass\bootstrap.css">
+      <DependentUpon>bootstrap.scss</DependentUpon>
+    </Content>
     <Content Include="resources\css\intigena\bootstrap.css" />
     <Content Include="resources\css\intigena\bootstrap.min.css" />
     <Content Include="resources\css\intigena\Site.css" />
