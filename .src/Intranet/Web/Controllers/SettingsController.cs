@@ -25,7 +25,7 @@ namespace Intranet.Web.Controllers
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="HomeBaseController" /> class.
+        ///     Initialize a new instance of the <see cref="HomeController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public SettingsBaseController( ILoggerFactory loggerFactory )
