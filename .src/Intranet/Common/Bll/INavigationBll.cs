@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Intranet.Model;
 
-namespace Intranet.Definition.Bll
+namespace Intranet.Common
 {
     /// <summary>
     ///     Interface representing the bll for the navigation
