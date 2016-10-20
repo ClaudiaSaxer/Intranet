@@ -2,14 +2,13 @@
 using Intranet.Common;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
-using ControllerBase = Intranet.Common.ControllerBase;
 
 namespace Intranet.Web.Controllers
 {
     /// <summary>
-    ///     Class representing the SettingsController
+    ///     Class representing the SettingsBaseController
     /// </summary>
-    public class SettingsController : ControllerBase
+    public class SettingsBaseController : BaseController
     {
         #region Properties
 
@@ -26,11 +25,11 @@ namespace Intranet.Web.Controllers
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="HomeController" /> class.
+        ///     Initialize a new instance of the <see cref="HomeBaseController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public SettingsController( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(SettingsController) ) )
+        public SettingsBaseController( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(SettingsBaseController) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -38,7 +37,7 @@ namespace Intranet.Web.Controllers
         #endregion
 
         /// <summary>
-        ///     Loads the index page of the SettingsController
+        ///     Loads the index page of the SettingsBaseController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()

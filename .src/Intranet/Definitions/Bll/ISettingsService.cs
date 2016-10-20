@@ -3,7 +3,7 @@
 namespace Intranet.Definition.Bll
 {
     /// <summary>
-    ///     The Interface for the SettingsController
+    ///     The Interface for the SettingsBaseController
     /// </summary>
     public interface ISettingsService
     {

@@ -1,15 +1,21 @@
-﻿using System;
-using System.Web.Mvc;
-using Intranet.Common;
-using ControllerBase = Intranet.Common.ControllerBase;
+﻿using System.Web.Mvc;
 
-namespace Intranet.Web.Controllers
+namespace Intranet.Common
 {
     /// <summary>
-    ///     TODO
+    ///     Abstract base class for MVC controllers.
     /// </summary>
-    public class NavigationController : ControllerBase
+    public abstract class ControllerBase : Controller
     {
+        #region Fields
+
+        /// <summary>
+        ///     The logger used by the controller.
+        /// </summary>
+        protected readonly ILogger Logger;
+
+        #endregion
+
         #region Properties
 
         /// <summary>
@@ -22,12 +28,12 @@ namespace Intranet.Web.Controllers
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="NavigationController" /> class.
+        ///     Initialize a new instance of the <see cref="ControllerBase" /> class.
         /// </summary>
-        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public NavigationController( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(NavigationController) ) )
+        /// <param name="logger">A <see cref="ILogger" />.</param>
+        protected ControllerBase( ILogger logger )
         {
+            Logger = logger;
             Logger.Trace( "Enter Ctor - Exit." );
         }
 
@@ -44,15 +50,5 @@ namespace Intranet.Web.Controllers
         {
             return PartialView( "_HeaderNavBar", NavigationService.GetNavigationViewModel() );
         }
-
-        #region Overrides of ControllerBase
-
-        /// <summary>Executes the request.</summary>
-        protected override void ExecuteCore()
-        {
-            throw new NotImplementedException();
-        }
-
-        #endregion
     }
 }

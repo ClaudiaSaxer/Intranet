@@ -219,7 +219,6 @@
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
-    <Compile Include="Controllers\NavigationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,6 +227,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="resources\css\intigena\bootstrap.css" />
+    <Content Include="resources\css\intigena\bootstrap.min.css" />
+    <Content Include="resources\css\intigena\Site.css" />
+    <Content Include="resources\css\intigena\Site.min.css" />
+    <Content Include="resources\css\intigena\temporaryForTesting.css" />
+    <Content Include="resources\css\intigena\temporaryForTesting.min.css" />
     <Content Include="resources\img\favicon.ico" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -244,7 +249,6 @@
     <Content Include="NLog.config" />
     <Content Include="Areas\Labor\Views\Experimental\Index.cshtml" />
     <Content Include="assets\package.json" />
-    <Content Include="assets\sass\_bootstrap.scss" />
     <Content Include="assets\sass\Site.scss" />
     <Content Include="assets\sass\bootstrap\_wells.scss" />
     <Content Include="assets\sass\bootstrap\_variables.scss" />
@@ -317,6 +321,7 @@
     <Content Include="assets\sass\bootstrap\mixins\_background-variant.scss" />
     <Content Include="assets\sass\bootstrap\mixins\_alerts.scss" />
     <Content Include="assets\sass\temporaryForTesting.scss" />
+    <Content Include="assets\sass\bootstrap.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap.js" />
     <Content Include="resources\js\bootstrap.min.js" />
@@ -366,7 +371,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Labor\Controllers\" />
     <Folder Include="Areas\Labor\Views\Shared\" />
-    <Folder Include="resources\css\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>
