@@ -17,11 +17,25 @@ namespace Intranet.Bll
         /// </summary>
         public IGenericRepository<Module> ModuleRepository { get; set; }
 
+        public IGenericRepository<Role> RoleRepository { get; set; }
+
         #endregion
 
-        #region Implementation of INavigationBll
-
-        public IGenericRepository<Role> RoleRepository { get; set; }
+        /// <summary>
+        ///     Query for all SettingsModules for a given roles.
+        /// </summary>
+        /// <param name="roleNames">The name of the roles the user has.</param>
+        /// <returns>All Settings for the given roles</returns>
+        public IEnumerable<Module> AllSettingsForRoles( IEnumerable<String> roleNames )
+        {
+            var modules = RoleRepository.GetAll()
+                                        .Where( role => roleNames.Any( n => n.Contains( role.Name ) ) )
+                                        .SelectMany( role => role.Modules )
+                                        .Where( module => module.Type == ModuleType.Setting )
+                                        .Distinct()
+                                        .ToList();
+            return modules;
+        }
 
         /// <summary>
         ///     Query for all Modules for a given roles.
@@ -32,26 +46,11 @@ namespace Intranet.Bll
         {
             var modules = RoleRepository.GetAll()
                                         .Where( role => roleNames.Any( n => n.Contains( role.Name ) ) )
-                                        .SelectMany( role => role.Modules ).Where(  module => module.Type == ModuleType.Main  )
+                                        .SelectMany( role => role.Modules )
+                                        .Where( module => module.Type == ModuleType.Main )
                                         .Distinct()
                                         .ToList();
             return modules;
         }
-
-        /// <summary>
-        ///     Query for all SettingsModules for a given roles.
-        /// </summary>
-        /// <param name="rolenames">The name of the roles the user has.</param>
-        /// <returns>All Settings for the given roles</returns>
-        public IEnumerable<Module> AllSettingsForRoles( IEnumerable<String> rolenames )
-        {
-            var modules = RoleRepository.GetAll()
-                                          .Where(role => roleNames.Any(n => n.Contains(role.Name)))
-                                          .SelectMany(role => role.Modules).Where(module => module.Type == ModuleType.Setting)
-                                          .Distinct()
-                                          .ToList();
-            return modules;
-        }
-
     }
 }
