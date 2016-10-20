@@ -26,7 +26,7 @@ namespace Intranet.Bll
         public IEnumerable<Module> AllVisibleModulesForRoles()
         {
             var modules = ModuleRepository.GetAll()
-                                          .Where( module => module.Type == ModuleType.Setting )
+                                          .Where( module => module.Type == ModuleType.Main )
                                           .ToList();
             return modules;
         }
