@@ -6,10 +6,19 @@ using Intranet.ViewModel;
 namespace Intranet.Bll
 {
     /// <summary>
-    ///     TODO
+    ///     Class Representing the Service for Home
     /// </summary>
     public class HomeService : LoggingBase, IHomeService
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets the bll for the home.
+        /// </summary>
+        public IHomeBll HomeBll { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -27,18 +36,18 @@ namespace Intranet.Bll
         #region Implementation of IHomeService
 
         /// <summary>
-        ///     TODO
+        ///     All main models and setting models that the current User is allowed to see.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The ViewModel for the home</returns>
         public HomeViewModel GetHomeViewModel()
         {
-            //TODO implement
-            Logger.Trace( "Enter GetTestViewModel - Exit" );
-
             var roleNames = Roles.GetRolesForUser();
-            var result = new HomeViewModel();
 
-            return result;
+            var vm = new HomeViewModel
+            {
+                Modules = HomeBll.AllVisibleModulesForRoles( roleNames )
+            };
+            return vm;
         }
 
         #endregion
