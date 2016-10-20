@@ -7,7 +7,7 @@
 <div class="row">
     @foreach (var item in Model.Modules)
     {<div class="col-md-6">
-        <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = "Labor" })" class="no-underline-hyperlink">
+        <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = item.AreaName })" class="no-underline-hyperlink">
             <div class="modul-item">
                 <div class="modul-item-title">
                     @item.Name
