@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Intranet.Definition
+namespace Intranet.Common
 {
     /// <summary>
     ///     Generic base class for a repository.
