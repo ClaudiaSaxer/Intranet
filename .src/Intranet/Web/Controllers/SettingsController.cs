@@ -43,7 +43,7 @@ namespace Intranet.Web.Controllers
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
-            return View( SettingsService.GetSettingsViewModel() );
+            return View( "Index", SettingsService.GetSettingsViewModel() );
         }
 
         /// <summary>
