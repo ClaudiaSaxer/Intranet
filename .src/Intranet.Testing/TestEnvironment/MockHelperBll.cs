@@ -44,8 +44,8 @@ namespace Intranet.TestEnvironment
         /// <returns></returns>
         public static INavigationBll GetNavigationBll(
             Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllSettingsFunc = null,
-            Action<IEnumerable<Module>> getNavigationBllSettingsCallback = null,
             Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllModuleFunc = null,
+            Action<IEnumerable<Module>> getNavigationBllSettingsCallback = null,
             Action<IEnumerable<Module>> getNavigationBllModuleCallback = null )
         {
             var mock = new Mock<INavigationBll>

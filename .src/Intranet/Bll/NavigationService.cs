@@ -8,7 +8,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the service for the navigation.
     /// </summary>
-    public class NavigationService : LoggingBase, INavigationService
+    public class NavigationService : LoggingBase, INavigationService, IServiceBase
 
     {
         #region Properties

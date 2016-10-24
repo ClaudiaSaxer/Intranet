@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MockHelperBll.cs" />
-    <Compile Include="TestEnvironmentHelper.cs" />
+    <Compile Include="EnvironmentHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
