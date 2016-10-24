@@ -16,11 +16,10 @@ namespace Intranet.Common
         IEnumerable<Module> AllVisibleMainModules();
 
         /// <summary>
-        /// Updates the Module visability in the db
+        ///     Updates the Module visability in the db
         /// </summary>
         /// <param name="id">the id of the module</param>
         /// <param name="visability">the visability of the module</param>
-        void UpdateModuleVisability( Int32 id, Boolean visability );
-
+        Module UpdateModuleVisability( Int32 id, Boolean visability );
     }
 }

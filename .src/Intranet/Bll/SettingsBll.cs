@@ -46,11 +46,12 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="id">the id of the module</param>
         /// <param name="visability">the visability of the module</param>
-        public void UpdateModuleVisability( Int32 id, Boolean visability )
+        public Module UpdateModuleVisability( Int32 id, Boolean visability )
         {
             var module = GetModule( id );
             module.Visible = visability;
             ModuleRepository.SaveChanges();
+            return module;
         }
 
         #endregion
