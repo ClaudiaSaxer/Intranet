@@ -13,22 +13,22 @@ namespace Intranet.TestEnvironment
         /// <summary>
         ///     Mock for Service Base
         /// </summary>
-        /// <param name="getServiceBaseFunc">func for servicebase</param>
-        /// <param name="getServiceBaseCallback">callback for servicebase</param>
+        /// <param name="getRolesFunc">func for roles</param>
+        /// <param name="getRolesCallback">callback for roles</param>
         /// <returns></returns>
         public static IRoles GetRoles(
-            Func<IEnumerable<String>, IEnumerable<String>> getServiceBaseFunc = null,
-            Action<IEnumerable<String>> getServiceBaseCallback = null )
+            Func<IEnumerable<String>, IEnumerable<String>> getRolesFunc = null,
+            Action<IEnumerable<String>> getRolesCallback = null )
         {
             var mock = new Mock<IRoles>
             {
-                Name = "MockHelper.GetServiceBase",
+                Name = "MockHelper.GetRoles",
                 DefaultValue = DefaultValue.Mock
             };
 
             mock.Setup( x => x.GetRolesForUser() )
-                .Returns( ( IEnumerable<String> roles ) => getServiceBaseFunc?.Invoke( roles ) )
-                .Callback( ( IEnumerable<String> roles ) => getServiceBaseCallback?.Invoke( roles ) );
+                .Returns( ( IEnumerable<String> roles ) => getRolesFunc?.Invoke( roles ) )
+                .Callback( ( IEnumerable<String> roles ) => getRolesCallback?.Invoke( roles ) );
 
             return mock.Object;
         }

@@ -15,7 +15,7 @@ namespace Intranet.Common.Bll
         /// <summary>
         ///     The Roles for the current user
         /// </summary>
-        public IEnumerable<String> RolesForUser { get; set; }
+        public IRoles Roles { get; set; }
 
         #endregion
 
@@ -29,7 +29,7 @@ namespace Intranet.Common.Bll
         public ServiceBase( ILogger logger, IRoles roles)
             : base( logger )
         {
-            RolesForUser = roles.GetRolesForUser();
+            Roles = roles;
             logger.ThrowIfNull( nameof( logger ) );
         }
 

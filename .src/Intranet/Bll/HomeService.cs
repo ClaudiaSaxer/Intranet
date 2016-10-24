@@ -27,7 +27,7 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="HomeService" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        /// <param name="roles">Roles for the current user</param>
+        /// <param name="roles">Roles for the current user <see cref="IRoles" />.</param>
         public HomeService( ILoggerFactory loggerFactory, IRoles roles)
             : base( loggerFactory.CreateLogger( typeof(HomeService)),roles)
         {
@@ -45,7 +45,7 @@ namespace Intranet.Bll
         public HomeViewModel GetHomeViewModel()
         {
             
-            var roleNames = RolesForUser;
+            var roleNames = Roles.GetRolesForUser();
 
             var vm = new HomeViewModel
             {

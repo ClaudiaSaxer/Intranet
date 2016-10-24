@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockHelperRoles.cs" />
     <Compile Include="MockHelperBll.cs" />
     <Compile Include="EnvironmentHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

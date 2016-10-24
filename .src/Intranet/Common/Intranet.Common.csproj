@@ -69,7 +69,8 @@
   <ItemGroup>
     <Compile Include="Bll\INavigationBll.cs" />
     <Compile Include="Bll\INavigationService.cs" />
-    <Compile Include="Bll\IServiceBase.cs" />
+    <Compile Include="Role\Definition\IRoles.cs" />
+    <Compile Include="Role\SystemWebSecurityRoles.cs" />
     <Compile Include="Bll\ServiceBase.cs" />
     <Compile Include="Db\BaseClass\GenericRepository.cs" />
     <Compile Include="Db\DbCommit.cs" />

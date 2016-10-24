@@ -29,7 +29,7 @@ namespace Intranet.Bll
         /// </summary>
         /// <exception cref="ArgumentNullException">loggerFactory can not be null</exception>
         /// <param name="loggerFactory"><see cref="ILoggerFactory" />.</param>
-        /// <param name="roles">The roles for the current user</param>
+        /// <param name="roles">Roles for the current user <see cref="IRoles" />.</param>
         public NavigationService( ILoggerFactory loggerFactory, IRoles roles)
             : base( loggerFactory.CreateLogger( typeof(NavigationService) ),roles)
         {
@@ -45,7 +45,7 @@ namespace Intranet.Bll
         /// <returns>The ViewModel for the navigation</returns>
         public NavigationViewModel GetNavigationViewModel()
         {
-            var roleNames = RolesForUser;
+            var roleNames = Roles.GetRolesForUser();
 
             var vm = new NavigationViewModel
             {

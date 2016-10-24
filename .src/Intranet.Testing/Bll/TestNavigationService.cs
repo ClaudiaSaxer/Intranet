@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Model;
@@ -31,9 +32,9 @@ namespace Intranet.Bll.Test
                     x => new List<Module> { new Module { Visible = false, Name = m1 }, new Module { Name = m2, Visible = true }, new Module { Name = m3, Visible = true } },
                     y => new List<Module> { new Module { Name = m4, Visible = true } } );
 
-            var serviceBaseMock = MockHelperServiceBase.GetServiceBase();           
+            var serviceBaseMock = MockHelperRoles.GetRoles();           
 
-            var target = new NavigationService( new NLogLoggerFactory(),serviceBaseMock )
+            var target = new NavigationService( new NLogLoggerFactory(), serviceBaseMock )
             {
                 NavigationBll = navigationBllMock
             };

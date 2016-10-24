@@ -5,7 +5,7 @@ using System.Web.Security;
 namespace Intranet.Common
 {
     /// <summary>
-    ///     A SystemWebSecurityRoles Role factory.
+    ///     Roles for System.Web.Security .
     /// </summary>
     public class SystemWebSecurityRoles : IRoles
     {

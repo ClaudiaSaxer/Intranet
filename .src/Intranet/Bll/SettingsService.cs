@@ -28,7 +28,7 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="SettingsService" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        /// <param name="roles">roles for the current user</param>
+        /// <param name="roles">Roles for the current user <see cref="IRoles" />.</param>
         public SettingsService( ILoggerFactory loggerFactory, IRoles roles )
             : base( loggerFactory.CreateLogger( typeof(SettingsService) ), roles)
         {
