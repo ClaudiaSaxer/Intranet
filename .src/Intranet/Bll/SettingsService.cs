@@ -44,7 +44,7 @@ namespace Intranet.Bll
         {
             var settings = new Collection<ModuleSetting>();
 
-            SettingsBll.AllVisibleModulesForRoles()
+            SettingsBll.AllVisibleMainModules()
                        .ForEach( module => settings.Add(
                                      new ModuleSetting
                                      {

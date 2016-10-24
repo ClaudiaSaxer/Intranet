@@ -13,7 +13,7 @@ namespace Intranet.Common
         ///     Query for all main modules to edit their settings.
         /// </summary>
         /// <returns>All modules with type main o</returns>
-        IEnumerable<Module> AllVisibleModulesForRoles();
+        IEnumerable<Module> AllVisibleMainModules();
 
         /// <summary>
         /// Updates the Module visability in the db
@@ -21,5 +21,6 @@ namespace Intranet.Common
         /// <param name="id">the id of the module</param>
         /// <param name="visability">the visability of the module</param>
         void UpdateModuleVisability( Int32 id, Boolean visability );
+
     }
 }
