@@ -13,12 +13,12 @@ namespace Intranet.TestEnvironment
         /// <summary>
         ///     Mock for Service Base
         /// </summary>
-        /// <param name="getRolesFunc">func for roles</param>
-        /// <param name="getRolesCallback">callback for roles</param>
+       
+        /// <param name="roles"></param>
         /// <returns></returns>
-        public static IRoles GetRoles(
+        /*public static IRoles GetRoles(
             Func<IEnumerable<String>> getRolesFunc = null,
-            Action<IEnumerable<String>> getRolesCallback = null )
+            Action<String> getRolesCallback = null )
         {
             var mock = new Mock<IRoles>
             {
@@ -26,9 +26,23 @@ namespace Intranet.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup( x => x.GetRolesForUser() ) 
-                .Returns( ( IEnumerable<String> roles ) => getRolesFunc?.Invoke() )
-                .Callback( ( IEnumerable<String> roles ) => getRolesCallback?.Invoke( roles ) );
+            mock.Setup( x => x.GetRolesForUser() )
+                .Returns( () => getRolesFunc?.Invoke() )
+                .Callback( ( String s ) => getRolesCallback?.Invoke( s ) );
+
+            return mock.Object;
+        }
+    }*/
+        public static IRoles GetRoles(IEnumerable<String> roles)
+        {
+            var mock = new Mock<IRoles>
+            {
+                Name = "MockHelper.GetRoles",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetRolesForUser() )
+                .Returns(roles);
 
             return mock.Object;
         }

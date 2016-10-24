@@ -25,11 +25,9 @@ namespace Intranet.Common.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        /// <param name="roles">The roles for the current user</param>
-        public ServiceBase( ILogger logger, IRoles roles)
+        public ServiceBase( ILogger logger)
             : base( logger )
         {
-            Roles = roles;
             logger.ThrowIfNull( nameof( logger ) );
         }
 

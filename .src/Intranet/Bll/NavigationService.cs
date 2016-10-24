@@ -30,9 +30,8 @@ namespace Intranet.Bll
         /// </summary>
         /// <exception cref="ArgumentNullException">loggerFactory can not be null</exception>
         /// <param name="loggerFactory"><see cref="ILoggerFactory" />.</param>
-        /// <param name="roles">Roles for the current user <see cref="IRoles" />.</param>
-        public NavigationService( ILoggerFactory loggerFactory, IRoles roles)
-            : base( loggerFactory.CreateLogger( typeof(NavigationService) ),roles)
+        public NavigationService( ILoggerFactory loggerFactory)
+            : base( loggerFactory.CreateLogger( typeof(NavigationService) ))
         {
         }
 

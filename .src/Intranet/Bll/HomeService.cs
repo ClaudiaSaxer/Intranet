@@ -27,9 +27,8 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="HomeService" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        /// <param name="roles">Roles for the current user <see cref="IRoles" />.</param>
-        public HomeService( ILoggerFactory loggerFactory, IRoles roles)
-            : base( loggerFactory.CreateLogger( typeof(HomeService)),roles)
+        public HomeService( ILoggerFactory loggerFactory)
+            : base( loggerFactory.CreateLogger( typeof(HomeService)))
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
