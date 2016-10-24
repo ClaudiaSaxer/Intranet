@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Intranet.Common;
 using Intranet.Model;
 using Moq;
@@ -37,12 +38,15 @@ namespace Intranet.TestEnvironment
         /// <summary>
         /// A mock for NavigationBll
         /// </summary>
-        /// <param name="getNavigationBllFunc">Func for NavigationBll</param>
-        /// <param name="getNavigationBllCallback">Callback for NavigationBll</param>
+        /// <param name="getNavigationBllSettingsFunc">Func for AllSettingsForRoles for NavigationBll</param>
+        /// <param name="getNavigationBllSettingsCallback">Callback for AllSettingsForRoles for NavigationBll</param>
+        /// <param name="getNavigationBllModuleFunc">Func for AllVisibleMainModulesForRoles for NavigationBll</param>
+        /// <param name="getNavigationBllModuleCallback">Callback for AllVisibleMainModulesForRoles for NavigationBll</param>
         /// <returns></returns>
         public static INavigationBll GetNavigationBll( 
-            Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllFunc = null,
-            Action<IEnumerable<Module>> getNavigationBllCallback = null )
+            Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllSettingsFunc = null,
+            Action<IEnumerable<Module>> getNavigationBllSettingsCallback = null, Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllModuleFunc = null,
+            Action<IEnumerable<Module>> getNavigationBllModuleCallback = null)
         {
             var mock = new Mock<INavigationBll>
             {
@@ -50,10 +54,12 @@ namespace Intranet.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
             mock.Setup( x => x.AllSettingsForRoles( It.IsAny<IEnumerable<String>>() ) )
-                .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllFunc?.Invoke( settingmodules ) )
-                .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllCallback?.Invoke( settingmodules ) );
+                .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllSettingsFunc?.Invoke( settingmodules ) )
+                .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllSettingsCallback?.Invoke( settingmodules ) );
 
-
+            mock.Setup( x => x.AllVisibleMainModulesForRoles(It.IsAny<IEnumerable<String>>()))
+                .Returns((IEnumerable<Module> settingmodules) => getNavigationBllModuleFunc?.Invoke(settingmodules))
+                .Callback((IEnumerable<Module> settingmodules) => getNavigationBllModuleCallback?.Invoke(settingmodules));
             return mock.Object;
         }
 
