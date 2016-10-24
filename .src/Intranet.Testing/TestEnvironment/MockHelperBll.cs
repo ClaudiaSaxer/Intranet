@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Intranet.Common;
 using Intranet.Model;
 using Moq;
@@ -16,7 +17,7 @@ namespace Intranet.TestEnvironment
         /// </summary>
         /// <param name="modules">Modules returned by AllVisibleModulesForRoles</param>
         /// <returns></returns>
-        public static IHomeBll GetHomeBll( IEnumerable<Module> modules)
+        public static IHomeBll GetHomeBll( IEnumerable<Module> modules )
         {
             var mock = new Mock<IHomeBll>
             {
@@ -54,31 +55,28 @@ namespace Intranet.TestEnvironment
             return mock.Object;
         }
 
-        /// <summary>
-        ///     A mock for SettingsBll
-        /// </summary>
-        /// <param name="getSettingsBllModuleFunc">Func for AllVisibleMainModules for SettingsBll</param>
-        /// <param name="getSettingsBllModuleCallback">Callback for AllVisibleMainModules for SettingsBll</param>
-        /// <param name="getSettingsBllVisabilityCallback">Callback for UpdateModuleVisability for SettingsBll</param>
-        /// <param name="getSettingsBllVisabilityFunc">Func for UpdateModuleVisability for SettingsBll</param>
+        /// <param name="modules">All Modules</param>
         /// <returns></returns>
-        public static ISettingsBll GetSettingsBll( Func<IEnumerable<Module>> getSettingsBllModuleFunc = null,
-                                                   Action<String> getSettingsBllModuleCallback = null,
-                                                   Func<Int32, Boolean, Module> getSettingsBllVisabilityFunc = null,
-                                                   Action<Int32, Boolean> getSettingsBllVisabilityCallback = null )
+        public static ISettingsBll GetSettingsBll( IEnumerable<Module> modules  )
         {
             var mock = new Mock<ISettingsBll>
             {
                 Name = "MockHelper.GetSettingsBll",
                 DefaultValue = DefaultValue.Mock
             };
+
             mock.Setup( x => x.AllVisibleMainModules() )
-                .Returns( () => getSettingsBllModuleFunc?.Invoke() )
-                .Callback( ( String s ) => getSettingsBllModuleCallback?.Invoke( s ) );
+                .Returns(modules);
 
             mock.Setup( x => x.UpdateModuleVisability( It.IsAny<Int32>(), It.IsAny<Boolean>() ) )
-                .Returns( ( Int32 i, Boolean v ) => getSettingsBllVisabilityFunc?.Invoke( i, v ) )
-                .Callback( ( Int32 i, Boolean v ) => getSettingsBllVisabilityCallback?.Invoke( i, v ) );
+                .Returns( ( Int32 i, Boolean v ) =>
+                          {
+                              var m = modules.Where( module => module.ModuleId == i )
+                                         .FirstOrDefault();
+                              if ( m != null )
+                                  m.Visible = v;
+                              return m;
+                          } );
 
             return mock.Object;
         }
