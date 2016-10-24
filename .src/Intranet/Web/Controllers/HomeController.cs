@@ -43,7 +43,7 @@ namespace Intranet.Web.Controllers
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
         {
-            return View( HomeService.GetHomeViewModel() );
+            return View("Index", HomeService.GetHomeViewModel() );
         }
 
         #region Overrides of BaseController
