@@ -1,4 +1,5 @@
-﻿using Intranet.Definition;
+﻿using System;
+using Intranet.Definition;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
 using Moq;
@@ -23,6 +24,27 @@ namespace Intranet.TestEnvironment
 
             mock.Setup( homeService => homeService.GetHomeViewModel() )
                 .Returns(homeViewModel);
+
+            return mock.Object;
+        }
+
+
+        /// <summary>
+        ///     The Mock for the SettingsService
+        /// </summary>
+        public static ISettingsService GetSettingsService(SettingsViewModel settingsViewModel)
+        {
+            var mock = new Mock<ISettingsService>
+            {
+                Name = "MockHelperService.GetSettingService",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(settingsService => settingsService.GetSettingsViewModel())
+                .Returns(settingsViewModel);
+
+            mock.Setup(settingsService => settingsService.UpdateModuleSetting(It.IsNotNull<ModuleSetting>()));
+            mock.Setup(settingsService => settingsService.UpdateModuleSetting(null)).Throws(new Exception());
 
             return mock.Object;
         }
