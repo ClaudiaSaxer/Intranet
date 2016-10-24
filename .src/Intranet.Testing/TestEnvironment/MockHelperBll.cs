@@ -53,6 +53,27 @@ namespace Intranet.TestEnvironment
                 .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllFunc?.Invoke( settingmodules ) )
                 .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllCallback?.Invoke( settingmodules ) );
 
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        /// A mock for SettingsBll
+        /// </summary>
+        /// <param name="getSettingsBllFunc">Func for SettingsBll</param>
+        /// <param name="getSettingsBllCallback">Callback for SettingsBll</param>
+        /// <returns></returns>
+        public static ISettingsBll GetSettingsBll( Func<IEnumerable<Module>, IEnumerable<Module>> getSettingsBllFunc = null, Action<IEnumerable<Module>> getSettingsBllCallback = null )
+        {
+            var mock = new Mock<ISettingsBll>
+            {
+                Name = "MockHelper.GetSettingsBll",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup( x => x.AllVisibleMainModules() )
+                .Returns((IEnumerable<Module> mainmodules ) => getSettingsBllFunc?.Invoke(mainmodules))
+                .Callback( (IEnumerable<Module> mainmodules) => getSettingsBllCallback?.Invoke( mainmodules ) );
+
             return mock.Object;
         }
     }

@@ -13,7 +13,7 @@ namespace Intranet.Common
         ///     Query for all main modules to edit their settings.
         /// </summary>
         /// <returns>All modules with type main o</returns>
-        IEnumerable<Module> AllVisibleModulesForRoles();
+        IEnumerable<Module> AllVisibleMainModules();
 
         /// <summary>
         /// Updates the Module visability in the db
