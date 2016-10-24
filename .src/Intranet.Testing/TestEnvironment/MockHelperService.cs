@@ -15,7 +15,7 @@ namespace Intranet.TestEnvironment
     public static class MockHelperService
     {
         /// <summary>
-        /// 
+        ///     The Mock for the HomeService
         /// </summary>
         public static IHomeService GetHomeService(HomeViewModel homeViewModel)
         {
