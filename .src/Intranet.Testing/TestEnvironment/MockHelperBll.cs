@@ -17,7 +17,9 @@ namespace Intranet.TestEnvironment
         /// <param name="getHomeBllFunc">Func for HomeBll</param>
         /// <param name="getHomeBllCallback">Callback for HomeBll</param>
         /// <returns></returns>
-        public static IHomeBll GetHomeBll( Func<IEnumerable<Module>, IEnumerable<Module>> getHomeBllFunc = null,Action<IEnumerable<Module>> getHomeBllCallback = null )
+        public static IHomeBll GetHomeBll( 
+            Func<IEnumerable<Module>, IEnumerable<Module>> getHomeBllFunc = null, 
+            Action<IEnumerable<Module>> getHomeBllCallback = null )
         {
             var mock = new Mock<IHomeBll>
             {
@@ -26,8 +28,30 @@ namespace Intranet.TestEnvironment
             };
 
             mock.Setup( x => x.AllVisibleModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
-                .Returns( ( IEnumerable<Module> modules ) => getHomeBllFunc?.Invoke(modules) )
-                .Callback( ( IEnumerable<Module> modules) => getHomeBllCallback?.Invoke(modules) );
+                .Returns( ( IEnumerable<Module> modules ) => getHomeBllFunc?.Invoke( modules ) )
+                .Callback( ( IEnumerable<Module> modules ) => getHomeBllCallback?.Invoke( modules ) );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        /// A mock for NavigationBll
+        /// </summary>
+        /// <param name="getNavigationBllFunc">Func for NavigationBll</param>
+        /// <param name="getNavigationBllCallback">Callback for NavigationBll</param>
+        /// <returns></returns>
+        public static INavigationBll GetNavigationBll( 
+            Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllFunc = null,
+            Action<IEnumerable<Module>> getNavigationBllCallback = null )
+        {
+            var mock = new Mock<INavigationBll>
+            {
+                Name = "MockHelper.GetNavigationBll",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup( x => x.AllSettingsForRoles( It.IsAny<IEnumerable<String>>() ) )
+                .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllFunc?.Invoke( settingmodules ) )
+                .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllCallback?.Invoke( settingmodules ) );
 
             return mock.Object;
         }
