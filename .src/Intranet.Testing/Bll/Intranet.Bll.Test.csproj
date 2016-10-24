@@ -95,6 +95,7 @@
     <Compile Include="HomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NavigationServiceTest.cs" />
+    <Compile Include="TempTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

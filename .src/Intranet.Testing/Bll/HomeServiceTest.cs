@@ -15,6 +15,7 @@ namespace Intranet.Bll.Test
     /// </summary>
     public class HomeServiceTest
     {
+
         /// <summary>
         ///     Normal Passing Test with 2 model
         /// </summary>
