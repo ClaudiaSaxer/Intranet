@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
+using System.Web.Security;
 using Extend;
 using Intranet.Common;
+using Intranet.Common.Bll;
 using Intranet.Definition.Bll;
 using Intranet.ViewModel;
 
@@ -9,7 +11,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the service for the settings
     /// </summary>
-    public class SettingsService : LoggingBase, ISettingsService
+    public class SettingsService : ServiceBase, ISettingsService
     {
         #region Properties
 
@@ -26,8 +28,9 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="SettingsService" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public SettingsService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(SettingsService) ) )
+        /// <param name="roles">roles for the current user</param>
+        public SettingsService( ILoggerFactory loggerFactory, IRoles roles )
+            : base( loggerFactory.CreateLogger( typeof(SettingsService) ), roles)
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }

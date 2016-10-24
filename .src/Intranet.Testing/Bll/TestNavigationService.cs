@@ -4,6 +4,7 @@ using Intranet.Common;
 using Intranet.Model;
 using Intranet.TestEnvironment;
 using IntranetTestEnvironment;
+using Moq;
 using Xunit;
 
 namespace Intranet.Bll.Test
@@ -25,14 +26,18 @@ namespace Intranet.Bll.Test
             var m4 = "So Istellige halt";
 
             var invoked = false;
-            var navigationBllMock =
+            var navigationBllMock = 
                 MockHelperBll.GetNavigationBll(
                     x => new List<Module> { new Module { Visible = false, Name = m1 }, new Module { Name = m2, Visible = true }, new Module { Name = m3, Visible = true } },
                     y => new List<Module> { new Module { Name = m4, Visible = true } } );
-            var target = new NavigationService( new NLogLoggerFactory() )
+
+            var serviceBaseMock = MockHelperServiceBase.GetServiceBase();           
+
+            var target = new NavigationService( new NLogLoggerFactory(),serviceBaseMock )
             {
                 NavigationBll = navigationBllMock
             };
+            
             var actual = target.GetNavigationViewModel();
 
             invoked.Should()

@@ -41,6 +41,7 @@ namespace Intranet.Web.IoC
         protected override void Load( ContainerBuilder builder )
         {
             RegisterLoggingComponents( builder );
+            RegisterRolesComponents( builder );
             RegisterDataAccessComponents( builder );
             RegisterBllComponents( builder );
             RegisterMvc( builder );
@@ -50,16 +51,17 @@ namespace Intranet.Web.IoC
         ///     Registers the BLL components.
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
-        private static void RegisterBllComponents( ContainerBuilder builder ) => builder.RegisterAssemblyTypes( AppDomain.CurrentDomain.GetAssemblies() )
-                                                                                        .Where(
-                                                                                            t =>
-                                                                                                ( t.Namespace != null ) && t.IsClass && t.Namespace.Contains( "Bll" )
-                                                                                                && ( t.GetInterfaces()
-                                                                                                      .Length != 0 ) )
-                                                                                        .As( t => t.GetInterfaces()
-                                                                                                   .Single( i => i.Name == "I" + t.Name ) )
-                                                                                        .PropertiesAutowired()
-                                                                                        .InstancePerRequest();
+        private static void RegisterBllComponents( ContainerBuilder builder )
+            => builder.RegisterAssemblyTypes( AppDomain.CurrentDomain.GetAssemblies() )
+                      .Where(
+                          t =>
+                              ( t.Namespace != null ) && t.IsClass && t.Namespace.Contains( "Bll" )
+                              && ( t.GetInterfaces()
+                                    .Length != 0 ) )
+                      .As( t => t.GetInterfaces()
+                                 .Single( i => i.Name == "I" + t.Name ) )
+                      .PropertiesAutowired()
+                      .InstancePerRequest();
 
         /// <summary>
         ///     Registers the data access components.
@@ -99,6 +101,16 @@ namespace Intranet.Web.IoC
                       .As<ILoggerFactory>()
                       .PropertiesAutowired()
                       .SingleInstance();
+
+        /// <summary>
+        ///     Registers the roles components.
+        /// </summary>
+        /// <param name="builder">The builder through which components can be registered.</param>
+        private static void RegisterRolesComponents(ContainerBuilder builder)
+            => builder.RegisterType<SystemWebSecurityRoles>()
+                      .As<IRoles>()
+                      .PropertiesAutowired()
+                      .InstancePerRequest();
 
         /// <summary>
         ///     Register MVC
