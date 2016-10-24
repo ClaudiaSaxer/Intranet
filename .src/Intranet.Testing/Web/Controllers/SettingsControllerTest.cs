@@ -57,5 +57,41 @@ namespace Intranet.Web.Test.Controllers
             var settingsViewModel = (SettingsViewModel)result?.ViewData.Model;
             Assert.Equal(expectedSettingsViewModel, settingsViewModel);
         }
+
+        /// <summary>
+        ///     Tests if the Update Action doesnt throw an exception if input correct
+        ///     Should return a RedirectToRouteResult
+        /// </summary>
+        [Fact]
+        public void SettingsControllerUpdateDontThrowTest()
+        {
+            var settingsService = MockHelperService.GetSettingsService(null);
+            var settingsController = new SettingsController(new NLogLoggerFactory())
+            {
+                SettingsService = settingsService
+            };
+            var result = settingsController.Update(new ModuleSetting());
+            Assert.Equal("RedirectToRouteResult",
+                          result.GetType()
+                                .Name);
+        }
+
+        /// <summary>
+        ///     Tests if the Update Action couldnt update cause an exception
+        ///     Should return a fault ViewResult
+        /// </summary>
+        [Fact]
+        public void SettingsControllerUpdateFailTest()
+        {
+            var settingsService = MockHelperService.GetSettingsService( null );
+            var settingsController = new SettingsController( new NLogLoggerFactory() )
+            {
+                SettingsService = settingsService
+            };
+            var result = settingsController.Update( null );
+            Assert.Equal( "ViewResult",
+                          result.GetType()
+                                .Name );
+        }
     }
 }

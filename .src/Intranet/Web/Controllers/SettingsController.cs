@@ -57,7 +57,7 @@ namespace Intranet.Web.Controllers
             try
             {
                 SettingsService.UpdateModuleSetting( moduleSetting );
-                return RedirectToAction( "Index" );
+                return RedirectToAction("Index");
             }
             catch
             {
