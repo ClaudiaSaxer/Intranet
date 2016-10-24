@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using Intranet.Common;
 using Intranet.Model;
 using Moq;
@@ -18,8 +17,8 @@ namespace Intranet.TestEnvironment
         /// <param name="getHomeBllFunc">Func for HomeBll</param>
         /// <param name="getHomeBllCallback">Callback for HomeBll</param>
         /// <returns></returns>
-        public static IHomeBll GetHomeBll( 
-            Func<IEnumerable<Module>, IEnumerable<Module>> getHomeBllFunc = null, 
+        public static IHomeBll GetHomeBll(
+            Func<IEnumerable<Module>, IEnumerable<Module>> getHomeBllFunc = null,
             Action<IEnumerable<Module>> getHomeBllCallback = null )
         {
             var mock = new Mock<IHomeBll>
@@ -36,17 +35,18 @@ namespace Intranet.TestEnvironment
         }
 
         /// <summary>
-        /// A mock for NavigationBll
+        ///     A mock for NavigationBll
         /// </summary>
         /// <param name="getNavigationBllSettingsFunc">Func for AllSettingsForRoles for NavigationBll</param>
         /// <param name="getNavigationBllSettingsCallback">Callback for AllSettingsForRoles for NavigationBll</param>
         /// <param name="getNavigationBllModuleFunc">Func for AllVisibleMainModulesForRoles for NavigationBll</param>
         /// <param name="getNavigationBllModuleCallback">Callback for AllVisibleMainModulesForRoles for NavigationBll</param>
         /// <returns></returns>
-        public static INavigationBll GetNavigationBll( 
+        public static INavigationBll GetNavigationBll(
             Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllSettingsFunc = null,
-            Action<IEnumerable<Module>> getNavigationBllSettingsCallback = null, Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllModuleFunc = null,
-            Action<IEnumerable<Module>> getNavigationBllModuleCallback = null)
+            Action<IEnumerable<Module>> getNavigationBllSettingsCallback = null,
+            Func<IEnumerable<Module>, IEnumerable<Module>> getNavigationBllModuleFunc = null,
+            Action<IEnumerable<Module>> getNavigationBllModuleCallback = null )
         {
             var mock = new Mock<INavigationBll>
             {
@@ -57,19 +57,22 @@ namespace Intranet.TestEnvironment
                 .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllSettingsFunc?.Invoke( settingmodules ) )
                 .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllSettingsCallback?.Invoke( settingmodules ) );
 
-            mock.Setup( x => x.AllVisibleMainModulesForRoles(It.IsAny<IEnumerable<String>>()))
-                .Returns((IEnumerable<Module> settingmodules) => getNavigationBllModuleFunc?.Invoke(settingmodules))
-                .Callback((IEnumerable<Module> settingmodules) => getNavigationBllModuleCallback?.Invoke(settingmodules));
+            mock.Setup( x => x.AllVisibleMainModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
+                .Returns( ( IEnumerable<Module> settingmodules ) => getNavigationBllModuleFunc?.Invoke( settingmodules ) )
+                .Callback( ( IEnumerable<Module> settingmodules ) => getNavigationBllModuleCallback?.Invoke( settingmodules ) );
             return mock.Object;
         }
 
         /// <summary>
-        /// A mock for SettingsBll
+        ///     A mock for SettingsBll
         /// </summary>
-        /// <param name="getSettingsBllFunc">Func for SettingsBll</param>
-        /// <param name="getSettingsBllCallback">Callback for SettingsBll</param>
+        /// <param name="getSettingsBllModuleFunc">Func for AllVisibleMainModules for SettingsBll</param>
+        /// <param name="getSettingsBllModuleCallback">Callback for AllVisibleMainModules for SettingsBll</param>
+        /// <param name="getSettingsBllVisabilityCallback">Callback for UpdateModuleVisability for SettingsBll</param>
         /// <returns></returns>
-        public static ISettingsBll GetSettingsBll( Func<IEnumerable<Module>, IEnumerable<Module>> getSettingsBllFunc = null, Action<IEnumerable<Module>> getSettingsBllCallback = null )
+        public static ISettingsBll GetSettingsBll( Func<IEnumerable<Module>, IEnumerable<Module>> getSettingsBllModuleFunc = null,
+                                                   Action<IEnumerable<Module>> getSettingsBllModuleCallback = null,
+                                                   Action<Int32, Boolean> getSettingsBllVisabilityCallback = null )
         {
             var mock = new Mock<ISettingsBll>
             {
@@ -77,8 +80,12 @@ namespace Intranet.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
             mock.Setup( x => x.AllVisibleMainModules() )
-                .Returns((IEnumerable<Module> mainmodules ) => getSettingsBllFunc?.Invoke(mainmodules))
-                .Callback( (IEnumerable<Module> mainmodules) => getSettingsBllCallback?.Invoke( mainmodules ) );
+                .Returns( ( IEnumerable<Module> mainmodules ) => getSettingsBllModuleFunc?.Invoke( mainmodules ) )
+                .Callback( ( IEnumerable<Module> mainmodules ) => getSettingsBllModuleCallback?.Invoke( mainmodules ) );
+
+            mock.Setup( x => x.UpdateModuleVisability( It.IsAny<Int32>(), It.IsAny<Boolean>() ) )
+                .Callback( ( Int32 id, Boolean visability ) => getSettingsBllVisabilityCallback?.Invoke( id, visability ) );
+            ;
 
             return mock.Object;
         }

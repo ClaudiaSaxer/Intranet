@@ -21,5 +21,6 @@ namespace Intranet.Common
         /// <param name="id">the id of the module</param>
         /// <param name="visability">the visability of the module</param>
         void UpdateModuleVisability( Int32 id, Boolean visability );
+
     }
 }
