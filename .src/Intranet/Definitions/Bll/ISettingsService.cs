@@ -1,4 +1,5 @@
-﻿using Intranet.ViewModel;
+﻿using Intranet.Model;
+using Intranet.ViewModel;
 
 namespace Intranet.Definition.Bll
 {
@@ -17,6 +18,6 @@ namespace Intranet.Definition.Bll
         ///     Updates the settings for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        void UpdateModuleSetting(ModuleSetting moduleSetting);
+        Module UpdateModuleSetting(ModuleSetting moduleSetting);
     }
 }

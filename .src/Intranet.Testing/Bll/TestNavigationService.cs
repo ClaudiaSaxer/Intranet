@@ -4,8 +4,6 @@ using FluentAssertions;
 using Intranet.Common;
 using Intranet.Model;
 using Intranet.TestEnvironment;
-using IntranetTestEnvironment;
-using Moq;
 using Xunit;
 
 namespace Intranet.Bll.Test
@@ -26,23 +24,45 @@ namespace Intranet.Bll.Test
             var m3 = "Kaffii trinkä";
             var m4 = "So Istellige halt";
 
-            var invoked = false;
-            var navigationBllMock = 
+            var invokedSettings = false;
+            var invokedModules = false;
+            var invokedRules = false;
+
+            var modules = new List<Module>
+            {
+                new Module { Visible = false, Name = m1 },
+                new Module { Name = m2, Visible = true },
+                new Module { Name = m3, Visible = true }
+            };
+            var settings = new List<Module> { new Module { Name = m4, Visible = true } };
+
+            var navigationBllMock =
                 MockHelperBll.GetNavigationBll(
-                    x => new List<Module> { new Module { Visible = false, Name = m1 }, new Module { Name = m2, Visible = true }, new Module { Name = m3, Visible = true } },
-                    y => new List<Module> { new Module { Name = m4, Visible = true } } );
+                    x => modules,
+                    x => invokedSettings = true,
+                    x => settings,
+                    x => invokedModules = true
+                );
 
-            var serviceBaseMock = MockHelperRoles.GetRoles();           
+            var serviceRolesMock = MockHelperRoles.GetRoles(
+                () => new List<String> {},
+                x => invokedRules = true
+            );
 
-            var target = new NavigationService( new NLogLoggerFactory(), serviceBaseMock )
+            var target = new NavigationService( new NLogLoggerFactory(), serviceRolesMock )
             {
                 NavigationBll = navigationBllMock
             };
-            
+
             var actual = target.GetNavigationViewModel();
 
-            invoked.Should()
-                   .BeTrue( "My class should call this method" );
+            invokedRules.Should()
+                        .BeTrue( "My class should call this method for rules" );
+
+            invokedSettings.Should()
+                           .BeTrue( "My class should call this method for settings" );
+            invokedModules.Should()
+                          .BeTrue( "My class should call this method for modules" );
 
             actual.MainModules.GetEnumerator()
                   .Should()

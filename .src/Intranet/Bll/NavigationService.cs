@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Security;
 using Intranet.Common;
 using Intranet.Common.Bll;
@@ -45,7 +46,7 @@ namespace Intranet.Bll
         /// <returns>The ViewModel for the navigation</returns>
         public NavigationViewModel GetNavigationViewModel()
         {
-            var roleNames = Roles.GetRolesForUser();
+            var roleNames = Roles.GetRolesForUser().ToArray();
 
             var vm = new NavigationViewModel
             {

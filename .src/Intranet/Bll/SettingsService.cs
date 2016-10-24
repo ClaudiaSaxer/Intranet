@@ -4,6 +4,7 @@ using Extend;
 using Intranet.Common;
 using Intranet.Common.Bll;
 using Intranet.Definition.Bll;
+using Intranet.Model;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll
@@ -68,7 +69,7 @@ namespace Intranet.Bll
         ///     Updates the visibility for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        public void UpdateModuleSetting( ModuleSetting moduleSetting )
+        public Module UpdateModuleSetting( ModuleSetting moduleSetting )
             => SettingsBll.UpdateModuleVisability( moduleSetting.Id, moduleSetting.Visible );
 
         #endregion

@@ -13,10 +13,10 @@ namespace Intranet.Common
     /// </summary>
     public interface IRoles
     {
-     
         /// <summary>
         /// The Roles for the current User
         /// </summary>
+        /// <param name="isAny"></param>
         /// <returns>the current user roles</returns>
         IEnumerable<String> GetRolesForUser();
 
