@@ -143,7 +143,7 @@ namespace Intranet.Bll.Test
                 Roles = rolesMock
             };
 
-            var actual = target.UpdateModuleSetting( new ModuleSetting { Visible = vis, Name = n1, Id = 0 } );
+            var actual = target.UpdateModuleSetting( new ModuleSetting { Visible = vis, Name = n1, Id = id1 } );
 
             actual.Should()
                   .BeNull( "because no modules exist" );
