@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.Security;
 using Intranet.Common;
+using Intranet.Common.Bll;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll
@@ -8,7 +11,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the service for the navigation.
     /// </summary>
-    public class NavigationService : LoggingBase, INavigationService
+    public class NavigationService : ServiceBase, INavigationService
 
     {
         #region Properties
@@ -27,8 +30,8 @@ namespace Intranet.Bll
         /// </summary>
         /// <exception cref="ArgumentNullException">loggerFactory can not be null</exception>
         /// <param name="loggerFactory"><see cref="ILoggerFactory" />.</param>
-        public NavigationService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(NavigationService) ) )
+        public NavigationService( ILoggerFactory loggerFactory)
+            : base( loggerFactory.CreateLogger( typeof(NavigationService) ))
         {
         }
 
@@ -42,7 +45,7 @@ namespace Intranet.Bll
         /// <returns>The ViewModel for the navigation</returns>
         public NavigationViewModel GetNavigationViewModel()
         {
-            var roleNames = Roles.GetRolesForUser();
+            var roleNames = Roles.GetRolesForUser().ToArray();
 
             var vm = new NavigationViewModel
             {

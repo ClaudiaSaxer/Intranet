@@ -1,7 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Web.Security;
 using Extend;
 using Intranet.Common;
+using Intranet.Common.Bll;
 using Intranet.Definition.Bll;
+using Intranet.Model;
 using Intranet.ViewModel;
 
 namespace Intranet.Bll
@@ -9,7 +12,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the service for the settings
     /// </summary>
-    public class SettingsService : LoggingBase, ISettingsService
+    public class SettingsService : ServiceBase, ISettingsService
     {
         #region Properties
 
@@ -27,7 +30,7 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public SettingsService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(SettingsService) ) )
+            : base( loggerFactory.CreateLogger( typeof(SettingsService) ))
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -44,7 +47,7 @@ namespace Intranet.Bll
         {
             var settings = new Collection<ModuleSetting>();
 
-            SettingsBll.AllVisibleModulesForRoles()
+            SettingsBll.AllVisibleMainModules()
                        .ForEach( module => settings.Add(
                                      new ModuleSetting
                                      {
@@ -65,7 +68,7 @@ namespace Intranet.Bll
         ///     Updates the visibility for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        public void UpdateModuleSetting( ModuleSetting moduleSetting )
+        public Module UpdateModuleSetting( ModuleSetting moduleSetting )
             => SettingsBll.UpdateModuleVisability( moduleSetting.Id, moduleSetting.Visible );
 
         #endregion

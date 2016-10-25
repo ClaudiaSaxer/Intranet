@@ -66,6 +66,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -90,7 +91,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SettingsServiceTest.cs" />
+    <Compile Include="HomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NavigationServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -101,9 +105,25 @@
       <Project>{E2CB059B-136D-4CC2-AC50-E28D71ED7378}</Project>
       <Name>Intranet.Bll</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Common\Intranet.Common.csproj">
+      <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
+      <Name>Intranet.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Intranet\Definitions\Intranet.Definition.csproj">
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
+      <Name>Intranet.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestEnvironment\Intranet.TestEnvironment.csproj">
+      <Project>{fd9ceb16-da47-4dad-b1ab-7eaa27c3be13}</Project>
+      <Name>Intranet.TestEnvironment</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
