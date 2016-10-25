@@ -327,6 +327,10 @@
     <Content Include="assets\sass\bootstrap\mixins\_alerts.scss" />
     <Content Include="assets\sass\temporaryForTesting.scss" />
     <Content Include="assets\sass\bootstrap.scss" />
+    <Content Include="assets\sass\IntigenaVariables.scss" />
+    <Content Include="assets\sass\layout.scss" />
+    <Content Include="assets\sass\Shell.scss" />
+    <Content Include="assets\sass\ShellSettings.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
