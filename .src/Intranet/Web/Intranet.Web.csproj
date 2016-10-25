@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -325,7 +325,6 @@
     <Content Include="assets\sass\bootstrap\mixins\_border-radius.scss" />
     <Content Include="assets\sass\bootstrap\mixins\_background-variant.scss" />
     <Content Include="assets\sass\bootstrap\mixins\_alerts.scss" />
-    <Content Include="assets\sass\temporaryForTesting.scss" />
     <Content Include="assets\sass\bootstrap.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
