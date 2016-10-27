@@ -52,15 +52,10 @@ namespace Intranet.Web.Controllers
         [HttpPost]
         public ActionResult Update( ModuleSetting moduleSetting )
         {
-            try
-            {
-                SettingsService.UpdateModuleSetting( moduleSetting );
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            if ( SettingsService.UpdateModuleSetting( moduleSetting ) != null )
+                return RedirectToAction( "Index" );
+            Logger.Error( "Module Settings haven't been updated!" );
+            return View();
         }
     }
 }
