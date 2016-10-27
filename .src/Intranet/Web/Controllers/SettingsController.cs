@@ -8,7 +8,7 @@ namespace Intranet.Web.Controllers
     /// <summary>
     ///     Class representing the SettingsController
     /// </summary>
-    [Authorize(Roles = "Everyone")]
+    [Authorize( Roles = "Everyone" )]
     public class SettingsController : BaseController
     {
         #region Properties
@@ -42,9 +42,7 @@ namespace Intranet.Web.Controllers
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
-        {
-            return View( SettingsService.GetSettingsViewModel() );
-        }
+            => View( SettingsService.GetSettingsViewModel() );
 
         /// <summary>
         ///     Update a module setting

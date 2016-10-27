@@ -27,9 +27,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// 
         /// </summary>
         /// <returns></returns>
-        public ActionResult Index()
-        {
-            return View();
-        }
+        public ActionResult Index() 
+            => View();
     }
 }
