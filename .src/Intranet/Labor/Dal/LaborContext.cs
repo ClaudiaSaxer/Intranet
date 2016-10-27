@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using Intranet.Labor.Model.fa;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.Dal
 {

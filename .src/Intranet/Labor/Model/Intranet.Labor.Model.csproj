@@ -54,14 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fa\Article.cs" />
-    <Compile Include="fa\ArticleType.cs" />
-    <Compile Include="fa\Component.cs" />
-    <Compile Include="fa\Error.cs" />
-    <Compile Include="fa\Machine.cs" />
-    <Compile Include="fa\ProductionOrder.cs" />
+    <Compile Include="intigena\Article.cs" />
+    <Compile Include="intigena\ArticleType.cs" />
+    <Compile Include="intigena\Component.cs" />
+    <Compile Include="intigena\Error.cs" />
+    <Compile Include="intigena\Machine.cs" />
+    <Compile Include="intigena\ProductionOrder.cs" />
+    <Compile Include="intigena\ShiftSchedule.cs" />
     <Compile Include="instron\Instron.cs" />
     <Compile Include="instron\InstronValue.cs" />
+    <Compile Include="intigena\ShiftType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UniqueKeyAttribute.cs" />
   </ItemGroup>
