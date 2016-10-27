@@ -1,4 +1,5 @@
-function sendForm(id,name,visibleStatus) {
+/// <reference path="jquery.d.ts" />
+function sendForm(id, name, visibleStatus) {
     $.ajax({
         url: '/Settings/Update',
         type: 'POST',
@@ -13,11 +14,10 @@ function sendForm(id,name,visibleStatus) {
         }
     });
 }
-
 $(function () {
     $('.visible-toggle')
         .change(function () {
-            console.log('Toggle: ' + $(this).prop('checked'));
-            sendForm($(this).prop('id'), $(this).prop('name'), $(this).prop('checked'));
-        });
+        console.log('Toggle: ' + $(this).prop('checked'));
+        sendForm($(this).prop('id'), $(this).prop('name'), $(this).prop('checked'));
+    });
 });
