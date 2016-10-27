@@ -9,9 +9,12 @@ using Xunit;
 
 namespace Intranet.Integrationtest
 {
+    /// <summary>
+    ///     A test class for integration tests
+    /// </summary>
     public class ShellIntegrationTest : SeleniumTest
     {
-        [Fact]
+        [Fact(Skip = "Integrationstest with IIS Doesnt Work ATM")]
         [Trait("Integration Test", "Shell")]
         public void CountOfModulesTest()
         {
@@ -22,7 +25,7 @@ namespace Intranet.Integrationtest
             Assert.Equal(2, countOfModules);
         }
 
-        [Fact]
+        [Fact(Skip = "Integrationstest with IIS Doesnt Work ATM")]
         [Trait("Integration Test","Shell")]
         public void LinkToSettingsTest()
         {

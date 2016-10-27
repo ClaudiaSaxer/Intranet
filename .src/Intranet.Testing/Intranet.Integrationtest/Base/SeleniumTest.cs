@@ -9,12 +9,12 @@ namespace Intranet.Integrationtest.Base
 {
     public abstract class SeleniumTest : IDisposable
     {
-        private String _webApplicationName = "Intranet.Web";
-        private Int32 _iisPort = 29549;
+        private const String WebApplicationName = "Intranet.Web";
+        private const Int32 IisPort = 29549;
         private Process _iisProcess;
 
-        public FirefoxDriver FirefoxDriver { get; set; }
-        public InternetExplorerDriver InternetExplorerDriver { get; set; }
+        //protected FirefoxDriver FirefoxDriver { get; }
+        protected InternetExplorerDriver InternetExplorerDriver { get; }
 
         protected SeleniumTest()
         {
@@ -23,7 +23,8 @@ namespace Intranet.Integrationtest.Base
 
             // Start Selenium Drivers
             //FirefoxDriver = new FirefoxDriver("C:\\Users\\fjordi\\Intranet\\.tools\\Selenium");
-            InternetExplorerDriver = new InternetExplorerDriver("C:\\Users\\fjordi\\Intranet\\.tools\\Selenium");
+            var seleniumToolsPath = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory))))) + "\\.tools\\Selenium";
+            InternetExplorerDriver = new InternetExplorerDriver(seleniumToolsPath);
         }
 
         public void Dispose()
@@ -46,16 +47,16 @@ namespace Intranet.Integrationtest.Base
 
             _iisProcess = new Process();
             _iisProcess.StartInfo.FileName = programFiles + "\\IIS Express\\iisexpress.exe";
-            _iisProcess.StartInfo.Arguments = String.Format("/config:{0} /site:{1}", configPath, _webApplicationName);
+            _iisProcess.StartInfo.Arguments = String.Format("/config:{0} /site:{1}", configPath, WebApplicationName);
             _iisProcess.StartInfo.UseShellExecute = true;
             _iisProcess.Start();
         }
 
-        public String GetAbsoluteUrl(String relativeUrl)
+        protected static String GetAbsoluteUrl(String relativeUrl)
         {
             if (!relativeUrl.StartsWith("/", StringComparison.Ordinal))
                 relativeUrl = "/" + relativeUrl;
-            return String.Format("http://localhost:{0}{1}", _iisPort, relativeUrl);
+            return String.Format("http://localhost:{0}{1}", IisPort, relativeUrl);
         }
     }
 }
