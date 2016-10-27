@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Intranet.Labor.Model.fa
 {
@@ -13,6 +15,8 @@ namespace Intranet.Labor.Model.fa
         ///     Gets or sets the id of the production order
         /// </summary>
         /// <value>the id of the production order</value>
+        [Key]
+        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
         public Int32 FaId { get; set; }
 
         /// <summary>
@@ -34,7 +38,7 @@ namespace Intranet.Labor.Model.fa
         public DateTime End { get; set; }
 
         /// <summary>
-        /// Gets or sets the article for this production order <see cref="Article"/>
+        ///     Gets or sets the article for this production order <see cref="Article" />
         /// </summary>
         /// <value>the article for the production order</value>
         public Article Article { get; set; }

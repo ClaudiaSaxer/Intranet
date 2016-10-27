@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Intranet.Labor.Model.fa
 {
@@ -14,6 +16,8 @@ namespace Intranet.Labor.Model.fa
         ///     Gets or sets the id of the article
         /// </summary>
         /// <value>the id of the article</value>
+        [Key]
+        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
         public Int32 ArticleId { get; set; }
 
         /// <summary>
