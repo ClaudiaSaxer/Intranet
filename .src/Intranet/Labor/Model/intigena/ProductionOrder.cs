@@ -29,13 +29,13 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the start Date and Time of the production order
         /// </summary>
         /// <value>The start date and time of the production order</value>
-        public DateTime Start { get; set; }
+        public DateTime StartDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the end Data and Time of the production order
         /// </summary>
         /// <value>The end date and time of the production order</value>
-        public DateTime End { get; set; }
+        public DateTime EndDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the article for this production order <see cref="Article" />
@@ -44,13 +44,13 @@ namespace Intranet.Labor.Model
         public Article Article { get; set; }
 
         /// <summary>
-        /// Gets or sets the component for the production order
+        ///     Gets or sets the component for the production order
         /// </summary>
         /// <value>the component for the production order</value>
         public Component Component { get; set; }
 
         /// <summary>
-        /// Gets or sets the machine for the production order
+        ///     Gets or sets the machine for the production order
         /// </summary>
         /// <value>the machine for the production order</value>
         public Machine Machine { get; set; }

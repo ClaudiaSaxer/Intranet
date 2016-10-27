@@ -68,9 +68,6 @@ namespace Intranet.Labor.Dal
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
             //ProductionOrder - Component
-            modelBuilder.Entity<ProductionOrder>()
-                        .HasOptional( x => x.Component );
-
             modelBuilder.Entity<Component>()
                         .HasRequired( x => x.ProductionOrder )
                         .WithRequiredDependent()
@@ -80,13 +77,14 @@ namespace Intranet.Labor.Dal
             modelBuilder.Entity<Machine>()
                         .HasMany( x => x.ProductionOrders )
                         .WithOptional()
-                        .Map( x => x.MapKey( "ProductionOrderRefId" ) );
+                        .Map( x => x.MapKey( "MachineRefId" ) );
 
             //ProductionOrder - Article
             modelBuilder.Entity<Article>()
                         .HasMany( x => x.ProductionOrders )
                         .WithOptional()
-                        .Map( x => x.MapKey( "ProductionOrderRefId" ) );
+                        .Map( x => x.MapKey( "ArticleRefId" ) );
+            
         }
     }
 }

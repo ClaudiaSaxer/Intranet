@@ -44,10 +44,11 @@ namespace Intranet.Labor.Model
         public String ComponentNr { get; set; }
 
         /// <summary>
-        /// Gets or sets the production order for the component
+        ///     Gets or sets the production order for the component
         /// </summary>
         /// <value>the production order for the component</value>
         public ProductionOrder ProductionOrder { get; set; }
+
         #endregion
     }
 }

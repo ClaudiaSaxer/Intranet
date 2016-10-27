@@ -38,10 +38,11 @@ namespace Intranet.Labor.Model
         public Double StandardDeviation { get; set; }
 
         /// <summary>
-        /// Gets or sets the Instron for the Value.
+        ///     Gets or sets the Instron for the Value.
         /// </summary>
         /// <value>the instron for the value</value>
         public Instron Instron { get; set; }
+
         #endregion
     }
 }
