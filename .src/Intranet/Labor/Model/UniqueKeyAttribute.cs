@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Intranet.Labor
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing a unique attribute.

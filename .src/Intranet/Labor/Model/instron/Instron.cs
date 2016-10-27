@@ -21,9 +21,9 @@ namespace Intranet.Labor.Model
         private Int32 IntstronId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Fertigungsauftrag Number
+        ///     Gets or sets the ProductionOrder Number
         /// </summary>
-        /// <value>The Fertigungsauftrag Number of Instron.</value>
+        /// <value>The ProductionOrder Number of Instron.</value>
         [UniqueKey]
         private String FaNr { get; set; }
 

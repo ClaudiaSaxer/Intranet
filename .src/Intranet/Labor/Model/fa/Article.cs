@@ -30,15 +30,17 @@ namespace Intranet.Labor.Model.fa
         public String Name { get; set; }
 
         /// <summary>
-        ///     Gets or sets the type of the article <see cref="ArticleType"/>
+        ///     Gets or sets the type of the article <see cref="ArticleType" />
         /// </summary>
         /// <value>the type of the article</value>
         public ArticleType ArticleType { get; set; }
+
         /// <summary>
-        /// Gets or sets the production orders of the article <see cref="ProductionOrder"/>
+        ///     Gets or sets the production orders of the article <see cref="ProductionOrder" />
         /// </summary>
         /// <value>the production orders of the article </value>
         public ICollection<ProductionOrder> ProductionOrders { get; set; }
+
         #endregion
     }
 }
