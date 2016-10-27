@@ -34,6 +34,20 @@ namespace Intranet.Labor.Dal
         /// <value>the production orders</value>
         public DbSet<ProductionOrder> ProductionOrders { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the shift shedules for the labor
+        /// </summary>
+        /// <value>the shift shedules</value>
+        public DbSet<ShiftSchedule> ShiftSchedules { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the machines for the labor
+        /// </summary>
+        /// <value>
+        ///     the machines
+        /// </value>
+        public DbSet<Machine> Machines { get; set; }
+
         #endregion
 
         /// <summary>
@@ -53,8 +67,26 @@ namespace Intranet.Labor.Dal
         /// <param name="modelBuilder"> The builder that defines the model for the context being created. </param>
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
+            //ProductionOrder - Component
             modelBuilder.Entity<ProductionOrder>()
                         .HasOptional( x => x.Component );
+
+            modelBuilder.Entity<Component>()
+                        .HasRequired( x => x.ProductionOrder )
+                        .WithRequiredDependent()
+                        .Map( x => x.MapKey( "ProductionOrderRefId" ) );
+
+            //ProductionOrder - Machine
+            modelBuilder.Entity<Machine>()
+                        .HasMany( x => x.ProductionOrders )
+                        .WithOptional()
+                        .Map( x => x.MapKey( "ProductionOrderRefId" ) );
+
+            //ProductionOrder - Article
+            modelBuilder.Entity<Article>()
+                        .HasMany( x => x.ProductionOrders )
+                        .WithOptional()
+                        .Map( x => x.MapKey( "ProductionOrderRefId" ) );
         }
     }
 }
