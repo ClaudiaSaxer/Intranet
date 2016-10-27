@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Intranet.Labor.Model.fa
+namespace Intranet.Labor.Model
 {
     /// <summary>
     /// Class representing Errors

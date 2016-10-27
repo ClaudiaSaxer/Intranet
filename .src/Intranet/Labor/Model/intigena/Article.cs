@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.fa
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     The class representing an article.

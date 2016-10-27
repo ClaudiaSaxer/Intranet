@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.fa
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing a component
