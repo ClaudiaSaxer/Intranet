@@ -49,6 +49,12 @@ namespace Intranet.Labor.Model.fa
         /// <value>the component for the production order</value>
         public Component Component { get; set; }
 
+        /// <summary>
+        /// Gets or sets the machine for the production order
+        /// </summary>
+        /// <value>the machine for the production order</value>
+        public Machine Machine { get; set; }
+
         #endregion
     }
 }

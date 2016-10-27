@@ -56,6 +56,9 @@
   <ItemGroup>
     <Compile Include="fa\Article.cs" />
     <Compile Include="fa\ArticleType.cs" />
+    <Compile Include="fa\Component.cs" />
+    <Compile Include="fa\Error.cs" />
+    <Compile Include="fa\Machine.cs" />
     <Compile Include="fa\ProductionOrder.cs" />
     <Compile Include="instron\Instron.cs" />
     <Compile Include="instron\InstronValue.cs" />
