@@ -43,6 +43,12 @@ namespace Intranet.Labor.Model.fa
         /// <value>the article for the production order</value>
         public Article Article { get; set; }
 
+        /// <summary>
+        /// Gets or sets the component for the production order
+        /// </summary>
+        /// <value>the component for the production order</value>
+        public Component Component { get; set; }
+
         #endregion
     }
 }
