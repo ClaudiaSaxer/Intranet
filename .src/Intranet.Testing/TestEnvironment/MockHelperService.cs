@@ -1,6 +1,7 @@
 ﻿using System;
 using Intranet.Definition;
 using Intranet.Definition.Bll;
+using Intranet.Model;
 using Intranet.ViewModel;
 using Moq;
 
@@ -43,8 +44,10 @@ namespace Intranet.TestEnvironment
             mock.Setup(settingsService => settingsService.GetSettingsViewModel())
                 .Returns(settingsViewModel);
 
-            mock.Setup(settingsService => settingsService.UpdateModuleSetting(It.IsNotNull<ModuleSetting>()));
-            mock.Setup(settingsService => settingsService.UpdateModuleSetting(null)).Throws(new Exception());
+            mock.Setup(settingsService => settingsService.UpdateModuleSetting(It.IsNotNull<ModuleSetting>())).Returns( new Module() );
+            Module nullModule = null;
+            mock.Setup( settingsService => settingsService.UpdateModuleSetting( null ) )
+                .Returns( nullModule );
 
             return mock.Object;
         }
