@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Intranet.Model;
 
-namespace Intranet.Common
+namespace Intranet.Definition
 {
     /// <summary>
     ///     Interface representing the bll for the settings

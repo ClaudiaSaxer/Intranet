@@ -1,6 +1,4 @@
-﻿using System;
-using Intranet.Definition;
-using Intranet.Definition.Bll;
+﻿using Intranet.Definition;
 using Intranet.Model;
 using Intranet.ViewModel;
 using Moq;
@@ -15,7 +13,7 @@ namespace Intranet.TestEnvironment
         /// <summary>
         ///     The Mock for the HomeService
         /// </summary>
-        public static IHomeService GetHomeService(HomeViewModel homeViewModel)
+        public static IHomeService GetHomeService( HomeViewModel homeViewModel )
         {
             var mock = new Mock<IHomeService>
             {
@@ -24,16 +22,15 @@ namespace Intranet.TestEnvironment
             };
 
             mock.Setup( homeService => homeService.GetHomeViewModel() )
-                .Returns(homeViewModel);
+                .Returns( homeViewModel );
 
             return mock.Object;
         }
 
-
         /// <summary>
         ///     The Mock for the SettingsService
         /// </summary>
-        public static ISettingsService GetSettingsService(SettingsViewModel settingsViewModel)
+        public static ISettingsService GetSettingsService( SettingsViewModel settingsViewModel )
         {
             var mock = new Mock<ISettingsService>
             {
@@ -41,10 +38,11 @@ namespace Intranet.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup(settingsService => settingsService.GetSettingsViewModel())
-                .Returns(settingsViewModel);
+            mock.Setup( settingsService => settingsService.GetSettingsViewModel() )
+                .Returns( settingsViewModel );
 
-            mock.Setup(settingsService => settingsService.UpdateModuleSetting(It.IsNotNull<ModuleSetting>())).Returns( new Module() );
+            mock.Setup( settingsService => settingsService.UpdateModuleSetting( It.IsNotNull<ModuleSetting>() ) )
+                .Returns( new Module() );
             Module nullModule = null;
             mock.Setup( settingsService => settingsService.UpdateModuleSetting( null ) )
                 .Returns( nullModule );

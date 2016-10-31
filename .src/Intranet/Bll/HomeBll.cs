@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Bll
@@ -9,10 +10,13 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the bll of the home.
     /// </summary>
-    internal class HomeBll : IHomeBll
+    public class HomeBll : IHomeBll
     {
         #region Properties
 
+        /// <summary>
+        /// Repository for Roles
+        /// </summary>
         public IGenericRepository<Role> RoleRepository { get; set; }
 
         #endregion

@@ -5,7 +5,7 @@ using Intranet.Model;
 
 #endregion
 
-namespace Intranet.Dal.Repositories
+namespace Intranet.Dal
 {
     /// <summary>
     ///     The Repository for the SubModule

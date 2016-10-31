@@ -1,6 +1,4 @@
-﻿using System.Web.Security;
-using Intranet.Common;
-using Intranet.Common.Bll;
+﻿using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
@@ -18,7 +16,6 @@ namespace Intranet.Bll
         /// </summary>
         public IHomeBll HomeBll { get; set; }
 
-
         #endregion
 
         #region Ctor
@@ -27,8 +24,8 @@ namespace Intranet.Bll
         ///     Initialize a new instance of the <see cref="HomeService" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public HomeService( ILoggerFactory loggerFactory)
-            : base( loggerFactory.CreateLogger( typeof(HomeService)))
+        public HomeService( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(HomeService) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -43,7 +40,6 @@ namespace Intranet.Bll
         /// <returns>The ViewModel for the home</returns>
         public HomeViewModel GetHomeViewModel()
         {
-            
             var roleNames = Roles.GetRolesForUser();
 
             var vm = new HomeViewModel

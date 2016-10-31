@@ -3,7 +3,7 @@ using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Intranet.Common.Db
+namespace Intranet.Common
 {
     /// <summary>
     ///     Class responsible for committing pending changes to the database.

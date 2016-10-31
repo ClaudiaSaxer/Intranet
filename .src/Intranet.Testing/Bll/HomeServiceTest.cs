@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Extend;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Model;
@@ -15,7 +14,6 @@ namespace Intranet.Bll.Test
     /// </summary>
     public class HomeServiceTest
     {
-
         /// <summary>
         ///     Normal Passing Test with 2 model
         /// </summary>

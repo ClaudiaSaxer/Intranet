@@ -1,9 +1,7 @@
 ﻿using System.Collections.ObjectModel;
-using System.Web.Security;
 using Extend;
 using Intranet.Common;
-using Intranet.Common.Bll;
-using Intranet.Definition.Bll;
+using Intranet.Definition;
 using Intranet.Model;
 using Intranet.ViewModel;
 
@@ -30,7 +28,7 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public SettingsService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(SettingsService) ))
+            : base( loggerFactory.CreateLogger( typeof(SettingsService) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
