@@ -33,7 +33,7 @@ namespace Intranet.Labor.Bll
             var modules = RoleRepository.GetAll()
                                         .Where(role => rolenames.Any(n => n.Contains(role.Name)))
                                         .SelectMany(role => role.Modules)
-                                        .Where(module => (module.Visible == true) && (module.Type == ModuleType.Sub) && module.AreaName.Equals( "Labor" ))
+                                        .Where(module => (module.Type == ModuleType.Sub) && module.AreaName.Equals( "Labor" ))
                                         .Distinct()
                                         .ToList();
             return modules;
