@@ -40,7 +40,7 @@ namespace Intranet.Web.Controllers
         ///     Loads the index page of the HomeController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View( HomeService.GetHomeViewModel() );
+        public ActionResult Index() => View( "Index", HomeService.GetHomeViewModel() );
 
         #region Overrides of BaseController
 
