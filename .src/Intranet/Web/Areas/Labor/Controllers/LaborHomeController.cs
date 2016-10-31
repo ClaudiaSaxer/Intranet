@@ -17,7 +17,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>
         ///     <see cref="ILaborHomeService" />
         /// </value>
-        private ILaborHomeService LaborHomeService { get; set; }
+        public ILaborHomeService LaborHomeService { get; set; }
 
         #endregion
 

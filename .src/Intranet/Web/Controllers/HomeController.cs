@@ -1,6 +1,7 @@
 using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Definition;
+using Intranet.Labor.Definition;
 
 namespace Intranet.Web.Controllers
 {
@@ -40,7 +41,10 @@ namespace Intranet.Web.Controllers
         ///     Loads the index page of the HomeController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View( "Index", HomeService.GetHomeViewModel() );
+        public ActionResult Index()
+        {
+            return View( "Index", HomeService.GetHomeViewModel() );
+        }
 
         #region Overrides of BaseController
 

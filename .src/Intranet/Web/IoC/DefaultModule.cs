@@ -7,6 +7,8 @@ using Intranet.Bll;
 using Intranet.Common;
 using Intranet.Dal;
 using Intranet.Definition;
+using Intranet.Labor.Bll;
+using Intranet.Labor.Definition;
 
 #endregion
 
@@ -90,6 +92,16 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<NavigationService>()
                    .As<INavigationService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborHomeBll>()
+                   .As<ILaborHomeBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborHomeService>()
+                   .As<ILaborHomeService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }
