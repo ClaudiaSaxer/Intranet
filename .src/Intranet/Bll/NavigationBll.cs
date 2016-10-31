@@ -9,11 +9,14 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the bll of the navigation.
     /// </summary>
-    internal class NavigationBll : INavigationBll
+    public class NavigationBll : INavigationBll
     {
         #region Properties
 
   
+        /// <summary>
+        /// Repository for Roles
+        /// </summary>
         public IGenericRepository<Role> RoleRepository { get; set; }
 
         #endregion

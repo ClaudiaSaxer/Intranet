@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using System.Data.Entity.Migrations;
 using Intranet.Model;
 
-namespace Intranet.Dal.Migrations
+namespace Intranet.Dal
 {
     internal sealed class Configuration : DbMigrationsConfiguration<IntranetContext>
     {

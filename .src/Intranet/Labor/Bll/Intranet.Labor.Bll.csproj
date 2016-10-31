@@ -35,8 +35,8 @@
     <DocumentationFile>bin\Release\Intranet.Labor.Bll.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -58,19 +58,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Intranet.Common.csproj">
-      <Project>{9aed7002-c17b-437b-8599-9c0430e19b60}</Project>
+      <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
       <Name>Intranet.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
-      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
       <Name>Intranet.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
-      <Project>{b9f53677-b67f-4aa7-9300-b90e7b2f706b}</Project>
+      <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
       <Name>Intranet.Labor.Definition</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
-      <Project>{e569d010-8acf-406e-8021-6fec422960ad}</Project>
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
       <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,6 +1,7 @@
 using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Definition;
+using Intranet.Labor.Definition;
 
 namespace Intranet.Web.Controllers
 {

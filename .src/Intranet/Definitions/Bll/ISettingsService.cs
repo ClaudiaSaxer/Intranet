@@ -1,7 +1,7 @@
 ﻿using Intranet.Model;
 using Intranet.ViewModel;
 
-namespace Intranet.Definition.Bll
+namespace Intranet.Definition
 {
     /// <summary>
     ///     The Interface for the SettingsController
