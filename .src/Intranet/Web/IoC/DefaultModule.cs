@@ -1,11 +1,12 @@
 ﻿#region Usings
 
 using System;
-using System.Linq;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Intranet.Bll;
 using Intranet.Common;
 using Intranet.Dal;
+using Intranet.Definition;
 
 #endregion
 
@@ -50,16 +51,48 @@ namespace Intranet.Web.IoC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
         private static void RegisterBllComponents( ContainerBuilder builder )
-            => builder.RegisterAssemblyTypes( AppDomain.CurrentDomain.GetAssemblies() )
+        {
+            /* => builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
                       .Where(
                           t =>
-                              ( t.Namespace != null ) && t.IsClass && t.Namespace.Contains( "Bll" )
-                              && ( t.GetInterfaces()
-                                    .Length != 0 ) )
-                      .As( t => t.GetInterfaces()
-                                 .Single( i => i.Name == "I" + t.Name ) )
+                              (t.Namespace != null) && t.IsClass && t.Namespace.Contains("Bll")
+                              && (t.GetInterfaces()
+                                    .Length != 0))
+                      .As(t => t.GetInterfaces()
+                                .Single(i => i.Name == "I" + t.Name))
                       .PropertiesAutowired()
-                      .InstancePerRequest();
+                      .InstancePerRequest();*/
+
+            builder.RegisterType<HomeBll>()
+                   .As<IHomeBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<HomeService>()
+                   .As<IHomeService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<SettingsBll>()
+                   .As<ISettingsBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<SettingsService>()
+                   .As<ISettingsService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<NavigationBll>()
+                   .As<INavigationBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<NavigationService>()
+                   .As<INavigationService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+        }
 
         /// <summary>
         ///     Registers the data access components.

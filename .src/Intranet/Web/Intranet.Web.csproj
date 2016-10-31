@@ -403,6 +403,10 @@
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labor\Bll\Intranet.Labor.Bll.csproj">
+      <Project>{51428790-ed54-48a4-9eec-c25e99936e65}</Project>
+      <Name>Intranet.Labor.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Labor\Dal\Intranet.Labor.Dal.csproj">
       <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
       <Name>Intranet.Labor.Dal</Name>

@@ -10,10 +10,13 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the bll of the settings.
     /// </summary>
-    internal class SettingsBll : ISettingsBll
+    public class SettingsBll : ISettingsBll
     {
         #region Properties
 
+        /// <summary>
+        /// Repository for Modules
+        /// </summary>
         public IGenericRepository<Module> ModuleRepository { get; set; }
 
         #endregion
