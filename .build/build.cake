@@ -23,24 +23,29 @@ var xUnit = toolDirectory + File("XUnit/xunit.console.exe");
 Task("Clean")
     .Does(() =>
 {	
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Bll/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Common/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Dal/bin") );
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Dal/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Definitions/bin") );
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Model/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("ViewModel/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Web/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/Bll/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Model/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/ViewModel/bin") );
     CleanDirectory( testDirectory + Directory("Bll/bin") );    
-    CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( testDirectory + Directory("Common/bin") );
     CleanDirectory( testDirectory + Directory("Dal/bin") );
-    CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( testDirectory + Directory("Integrationtest/bin") );
     CleanDirectory( testDirectory + Directory("Model/bin") );
     CleanDirectory( testDirectory + Directory("ViewModel/bin") );
+    CleanDirectory( testDirectory + Directory("TestEnvironment/bin") );
     CleanDirectory( testDirectory + Directory("Web/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
     CleanDirectory( outputDirectory );
 });
 
@@ -73,7 +78,6 @@ Task("RunTests")
     XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
 		{ 
 			ToolPath = xUnit,
-			Parallelism = ParallelismOption.All,
 			HtmlReport = true,
 			NoAppDomain = true,
 			OutputDirectory = outputDirectory

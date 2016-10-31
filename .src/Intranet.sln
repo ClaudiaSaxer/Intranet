@@ -51,7 +51,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model", "Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.ViewModel", "Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj", "{E569D010-8ACF-406E-8021-6FEC422960AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Integrationtest", "Intranet.Testing\Intranet.Integrationtest\Intranet.Integrationtest.csproj", "{D0729311-52B7-478F-92E0-BDE08E91798C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Integrationtest", "Intranet.Testing\Integrationtest\Intranet.Integrationtest.csproj", "{D0729311-52B7-478F-92E0-BDE08E91798C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
