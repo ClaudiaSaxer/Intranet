@@ -5,9 +5,7 @@ using System.Linq;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Intranet.Common;
-using Intranet.Common.Db;
 using Intranet.Dal;
-using Intranet.Dal.Repositories;
 
 #endregion
 
@@ -103,16 +101,6 @@ namespace Intranet.Web.IoC
                       .SingleInstance();
 
         /// <summary>
-        ///     Registers the roles components.
-        /// </summary>
-        /// <param name="builder">The builder through which components can be registered.</param>
-        private static void RegisterRolesComponents(ContainerBuilder builder)
-            => builder.RegisterType<SystemWebSecurityRoles>()
-                      .As<IRoles>()
-                      .PropertiesAutowired()
-                      .InstancePerRequest();
-
-        /// <summary>
         ///     Register MVC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
@@ -128,5 +116,15 @@ namespace Intranet.Web.IoC
             // Register dependencies in custom views
             //builder.RegisterSource( new ViewRegistrationSource() );
         }
+
+        /// <summary>
+        ///     Registers the roles components.
+        /// </summary>
+        /// <param name="builder">The builder through which components can be registered.</param>
+        private static void RegisterRolesComponents( ContainerBuilder builder )
+            => builder.RegisterType<SystemWebSecurityRoles>()
+                      .As<IRoles>()
+                      .PropertiesAutowired()
+                      .InstancePerRequest();
     }
 }
