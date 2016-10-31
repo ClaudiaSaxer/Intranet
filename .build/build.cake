@@ -70,28 +70,22 @@ Task("Build")
             .SetVerbosity( Verbosity.Minimal ) );
 });
 
+
 // Run the unit tests
 Task("RunTests")
     .IsDependentOn("Build")
     .Does(() =>
 {    
-	
-   XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
-		{ 
-			ToolPath = xUnit,
-			HtmlReport = true,
-			NoAppDomain = true,
-			OutputDirectory = outputDirectory
-		});    
-		
-
-});
-// Run the unit tests
-Task("RunWebTests")
-    .IsDependentOn("Build")
-    .Does(() =>
-{    
-   XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Web.Test.dll", new XUnit2Settings
+	//  XUnit2( testDirectory.ToString()+ "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
+	XUnit2(new []{
+		testDirectory.ToString()+"/Web/bin/Release/Intranet.Web.Test.dll",
+		testDirectory.ToString()+"/Bll/bin/Release/Intranet.Bll.Test.dll",
+		testDirectory.ToString()+"/Common/bin/Release/Intranet.Common.Test.dll",
+		testDirectory.ToString()+"/Dal/bin/Release/Intranet.Dal.Test.dll",
+		testDirectory.ToString()+"/Labor/Bll/bin/Release/Intranet.Labor.Bll.Test.dll",
+		testDirectory.ToString()+"/Labor/Dal/bin/Release/Intranet.Labor.Dal.Test.dll",
+		testDirectory.ToString()+"/ViewModel/bin/Release/Intranet.ViewModel.Test.dll"
+	}, new XUnit2Settings
 		{ 
 			ToolPath = xUnit,
 			HtmlReport = true,
