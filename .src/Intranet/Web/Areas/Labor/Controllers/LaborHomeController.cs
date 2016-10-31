@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {

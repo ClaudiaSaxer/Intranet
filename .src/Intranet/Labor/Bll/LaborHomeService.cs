@@ -2,7 +2,7 @@
 
 using Intranet.Common;
 using Intranet.Common.Bll;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 
 #endregion

@@ -1,6 +1,6 @@
 ﻿using Intranet.Labor.ViewModel;
 
-namespace Intranet.Labor.Definition.Bll
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     The Interface for the LaborHomeService

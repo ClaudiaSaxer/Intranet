@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Model;
 using Moq;
 

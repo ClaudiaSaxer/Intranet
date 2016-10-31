@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Model;
 
 namespace Intranet.Labor.Bll

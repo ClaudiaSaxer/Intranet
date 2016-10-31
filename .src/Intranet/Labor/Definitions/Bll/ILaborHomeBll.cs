@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Intranet.Model;
 
-namespace Intranet.Labor.Definition.Bll
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interface representing the bll for the labor home
