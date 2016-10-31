@@ -5,7 +5,7 @@ using Intranet.Labor.Definition;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    /// 
+    ///     Class representing the LaborHomeController
     /// </summary>
     public class LaborHomeController : BaseController
     {
