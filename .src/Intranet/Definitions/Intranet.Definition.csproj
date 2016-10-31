@@ -101,10 +101,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Labor\Bll\Intranet.Labor.Bll.csproj">
-      <Project>{51428790-ed54-48a4-9eec-c25e99936e65}</Project>
-      <Name>Intranet.Labor.Bll</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Model\Intranet.Model.csproj">
       <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
       <Name>Intranet.Model</Name>

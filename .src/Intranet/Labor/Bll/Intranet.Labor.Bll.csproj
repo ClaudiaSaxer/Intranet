@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaborHomeBll.cs" />
     <Compile Include="LaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -56,12 +57,20 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Common\Intranet.Common.csproj">
+      <Project>{9aed7002-c17b-437b-8599-9c0430e19b60}</Project>
+      <Name>Intranet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
       <Project>{b9f53677-b67f-4aa7-9300-b90e7b2f706b}</Project>
       <Name>Intranet.Labor.Definition</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
-      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Project>{e569d010-8acf-406e-8021-6fec422960ad}</Project>
       <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
   </ItemGroup>

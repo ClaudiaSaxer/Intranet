@@ -1,35 +1,56 @@
-﻿
+﻿#region Usings
+
 using Intranet.Common;
 using Intranet.Common.Bll;
 using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Bll
 {
     /// <summary>
-    /// 
     /// </summary>
     public class LaborHomeService : ServiceBase, ILaborHomeService
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets the bll for the labor home.
+        /// </summary>
+        public ILaborHomeBll HomeBll { get; set; }
+
+        #endregion
+
+        #region Ctor
+
         /// <summary>
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
-        /// <param name="logger">A <see cref="ILogger" />.</param>
-        public LaborHomeService( ILogger loggerFactory)
-            : base(loggerFactory.CreateLogger(typeof(LaborHomeService)))
+        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
+        public LaborHomeService( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(LaborHomeService) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
+
+        #endregion
 
         #region Implementation of ILaborHomeService
 
         /// <summary>
-        ///     Gets the LaborHomeViewModel
+        ///     All labor submodules that the current User is allowed to see.
         /// </summary>
-        /// <returns>The LaborHomeViewModel</returns>
+        /// <returns>The ViewModel for the home</returns>
         public LaborHomeViewModel GetLaborHomeViewModel()
         {
-            throw new System.NotImplementedException();
+            var roleNames = Roles.GetRolesForUser();
+
+            var vm = new LaborHomeViewModel
+            {
+                Modules = HomeBll.AllLaborModulesForRoles( roleNames )
+            };
+            return vm;
         }
 
         #endregion
