@@ -2,6 +2,8 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Model;
 using Moq;
@@ -30,6 +32,25 @@ namespace Intranet.Labor.TestEnvironment
 
             mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
                 .Returns( modules );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for GenericRepository
+        /// </summary>
+        /// <param name="roles">Queryable Roles returned by GetAll</param>
+        /// <returns></returns>
+        public static IGenericRepository<Role> GetAllRoles(IQueryable<Role> roles)
+        {
+            var mock = new Mock<IGenericRepository<Role>>
+            {
+                Name = "MockHelper.GetAllRoles",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetAll())
+                .Returns(roles);
 
             return mock.Object;
         }
