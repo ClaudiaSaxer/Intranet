@@ -75,13 +75,29 @@ Task("RunTests")
     .IsDependentOn("Build")
     .Does(() =>
 {    
-    XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
+	
+   XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
 		{ 
 			ToolPath = xUnit,
 			HtmlReport = true,
 			NoAppDomain = true,
 			OutputDirectory = outputDirectory
 		});    
+		
+
+});
+// Run the unit tests
+Task("RunWebTests")
+    .IsDependentOn("Build")
+    .Does(() =>
+{    
+   XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Web.Test.dll", new XUnit2Settings
+		{ 
+			ToolPath = xUnit,
+			HtmlReport = true,
+			NoAppDomain = true,
+			OutputDirectory = outputDirectory
+		});    	
 });
 
 
@@ -92,6 +108,7 @@ Task("Default")
 {
     Information("Default task started");
 });
+
 
 RunTarget(target);
 
