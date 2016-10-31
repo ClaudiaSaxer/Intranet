@@ -60,11 +60,13 @@ namespace Intranet.Labor.Model
         /// <summary>
         ///     Gets or sets the article ref id
         /// </summary>
+        /// <value>the ref id of the article</value>
         public Int32 ArticleRefId { get; set; }
 
         /// <summary>
         ///     Gets or sets the machine ref id
         /// </summary>
+        /// <value>the ref id of the machine</value>
         public Int32 MachineRefId { get; set; }
 
         #endregion
