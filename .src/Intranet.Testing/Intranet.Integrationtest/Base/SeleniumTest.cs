@@ -7,6 +7,9 @@ using Xunit;
 
 namespace Intranet.Integrationtest.Base
 {
+    /// <summary>
+    ///     Base Class for Selenium Tests
+    /// </summary>
     public abstract class SeleniumTest : IDisposable
     {
         private const String WebApplicationName = "Intranet.Web";
@@ -14,8 +17,14 @@ namespace Intranet.Integrationtest.Base
         private Process _iisProcess;
 
         //protected FirefoxDriver FirefoxDriver { get; }
+        /// <summary>
+        ///     The IE Driver for Selenium
+        /// </summary>
         protected InternetExplorerDriver InternetExplorerDriver { get; }
 
+        /// <summary>
+        ///     Ctor for SeleniumTests
+        /// </summary>
         protected SeleniumTest()
         {
             // Start IISExpress
@@ -27,6 +36,9 @@ namespace Intranet.Integrationtest.Base
             InternetExplorerDriver = new InternetExplorerDriver(seleniumToolsPath);
         }
 
+        /// <summary>
+        ///     shutdown all process
+        /// </summary>
         public void Dispose()
         {
             // Ensure IISExpress is stopped
@@ -39,7 +51,9 @@ namespace Intranet.Integrationtest.Base
         }
 
 
-
+        /// <summary>
+        ///     Starts the IIS
+        /// </summary>
         private void StartIIS()
         {
             var configPath = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory)))) + "\\.vs\\config\\applicationhost.config";
@@ -52,6 +66,11 @@ namespace Intranet.Integrationtest.Base
             _iisProcess.Start();
         }
 
+        /// <summary>
+        ///     Gets the absolute URL (adds http://localhost:port/...)
+        /// </summary>
+        /// <param name="relativeUrl">The relative URL</param>
+        /// <returns>The absolute URL</returns>
         protected static String GetAbsoluteUrl(String relativeUrl)
         {
             if (!relativeUrl.StartsWith("/", StringComparison.Ordinal))
