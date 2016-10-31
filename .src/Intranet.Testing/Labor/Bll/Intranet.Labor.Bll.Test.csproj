@@ -99,7 +99,7 @@
       <Name>Intranet.TestEnvironment</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestEnvironment\Intranet.Labor.TestEnvironment.csproj">
-      <Project>{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}</Project>
+      <Project>{f7bac127-5b8b-4c83-938a-33c2e8a8c25c}</Project>
       <Name>Intranet.Labor.TestEnvironment</Name>
     </ProjectReference>
   </ItemGroup>
