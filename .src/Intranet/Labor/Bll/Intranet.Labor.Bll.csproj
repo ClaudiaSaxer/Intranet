@@ -7,8 +7,8 @@
     <ProjectGuid>{51428790-ED54-48A4-9EEC-C25E99936E65}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intranet.Bll</RootNamespace>
-    <AssemblyName>Intranet.Bll</AssemblyName>
+    <RootNamespace>Intranet.Labor.Bll</RootNamespace>
+    <AssemblyName>Intranet.Labor.Bll</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Intranet.Bll.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Intranet.Labor.Bll.xml</DocumentationFile>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
-    <DocumentationFile>bin\Release\Intranet.Bll.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Intranet.Labor.Bll.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">

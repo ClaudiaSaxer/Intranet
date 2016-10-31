@@ -7,7 +7,7 @@ using Intranet.Labor.ViewModel;
 
 #endregion
 
-namespace Intranet.Bll
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     /// </summary>

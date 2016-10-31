@@ -5,7 +5,7 @@ using Intranet.Common;
 using Intranet.Labor.Definition.Bll;
 using Intranet.Model;
 
-namespace Intranet.Bll
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing the bll of the labor home.

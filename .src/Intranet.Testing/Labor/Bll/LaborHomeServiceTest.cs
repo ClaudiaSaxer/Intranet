@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Intranet.Bll;
+using Intranet.Labor.Bll;
 using Intranet.Common;
 using Intranet.Model;
 using Intranet.TestEnvironment;
