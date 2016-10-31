@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Definition;
 using Intranet.Model;
 using Moq;
 
@@ -57,7 +58,7 @@ namespace Intranet.TestEnvironment
 
         /// <param name="modules">All Modules</param>
         /// <returns></returns>
-        public static ISettingsBll GetSettingsBll( IEnumerable<Module> modules  )
+        public static ISettingsBll GetSettingsBll( IEnumerable<Module> modules )
         {
             var mock = new Mock<ISettingsBll>
             {
@@ -66,13 +67,13 @@ namespace Intranet.TestEnvironment
             };
 
             mock.Setup( x => x.AllVisibleMainModules() )
-                .Returns(modules);
+                .Returns( modules );
 
             mock.Setup( x => x.UpdateModuleVisability( It.IsAny<Int32>(), It.IsAny<Boolean>() ) )
                 .Returns( ( Int32 i, Boolean v ) =>
                           {
                               var m = modules.Where( module => module.ModuleId == i )
-                                         .FirstOrDefault();
+                                             .FirstOrDefault();
                               if ( m != null )
                                   m.Visible = v;
                               return m;

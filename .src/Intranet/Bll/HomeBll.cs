@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Definition;
 using Intranet.Model;
 
 namespace Intranet.Bll
