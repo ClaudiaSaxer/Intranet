@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Definition.Bll
 {
     /// <summary>
     ///     The Interface for the LaborHomeService
     /// </summary>
-    interface ILaborHomeService
+    public interface ILaborHomeService
     {
         /// <summary>
         ///     Gets the LaborHomeViewModel

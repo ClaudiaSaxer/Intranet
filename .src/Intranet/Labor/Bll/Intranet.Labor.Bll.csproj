@@ -49,10 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
+      <Project>{b9f53677-b67f-4aa7-9300-b90e7b2f706b}</Project>
+      <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

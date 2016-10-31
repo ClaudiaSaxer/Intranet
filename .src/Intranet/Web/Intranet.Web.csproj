@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -252,7 +252,6 @@
     <Content Include="Areas\Labor\Views\web.config" />
     <Content Include="autofac.json" />
     <Content Include="NLog.config" />
-    <Content Include="Areas\Labor\Views\Experimental\Index.cshtml" />
     <Content Include="assets\package.json" />
     <Content Include="assets\sass\Site.scss" />
     <Content Include="assets\sass\bootstrap\_wells.scss" />
@@ -330,6 +329,7 @@
     <Content Include="assets\sass\layout.scss" />
     <Content Include="assets\sass\Shell.scss" />
     <Content Include="assets\sass\ShellSettings.scss" />
+    <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
