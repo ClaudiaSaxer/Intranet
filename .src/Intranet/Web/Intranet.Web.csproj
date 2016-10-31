@@ -407,9 +407,17 @@
       <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
       <Name>Intranet.Labor.Dal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labor\Definitions\Intranet.Labor.Definition.csproj">
+      <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
+      <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Labor\Model\Intranet.Labor.Model.csproj">
       <Project>{ce4caf79-b268-4fa9-9d1a-b6c3f3db4801}</Project>
       <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Intranet.Model.csproj">
       <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>

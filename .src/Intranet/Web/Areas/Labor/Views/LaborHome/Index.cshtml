@@ -1,8 +1,24 @@
-﻿@{
-    ViewBag.Title = "Labor Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿@model Intranet.Labor.ViewModel.LaborHomeViewModel
 
-<p>EXPERIMENTAL TEST</p>
+@{
+    ViewBag.Title = "Intigena Intranet - Labor Module";
+}
+
+<div class="container body-content">
+    <div class="row">
+        @foreach (var item in Model.Modules)
+        {<div class="col-md-6">
+            <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = item.AreaName })" class="no-underline-hyperlink">
+                <div class="modul-item">
+                    <div class="modul-item-title">
+                        @item.Name
+                    </div>
+                    <div class="modul-item-description">
+                        @item.Description
+                    </div>
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>
