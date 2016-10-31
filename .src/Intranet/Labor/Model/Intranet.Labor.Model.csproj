@@ -56,7 +56,7 @@
   <ItemGroup>
     <Compile Include="intigena\Article.cs" />
     <Compile Include="intigena\ArticleType.cs" />
-    <Compile Include="intigena\Component.cs" />
+    <Compile Include="intigena\ProductionOrderComponent.cs" />
     <Compile Include="intigena\Error.cs" />
     <Compile Include="intigena\Machine.cs" />
     <Compile Include="intigena\ProductionOrder.cs" />

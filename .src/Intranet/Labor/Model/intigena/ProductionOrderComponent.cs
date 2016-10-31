@@ -7,17 +7,16 @@ namespace Intranet.Labor.Model
     /// <summary>
     ///     Class representing a component
     /// </summary>
-    public class Component
+    public class ProductionOrderComponent
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets the id of the component
+        ///     Gets or sets the production order ref id
         /// </summary>
-        /// <value>the id of the component</value>
-        [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public Int32 ComponentId { get; set; }
+        [ForeignKey("ProductionOrder")]
+        public Int32 ProductionOrderComponentId { get; set; }
+
 
         /// <summary>
         ///     Gets or sets the SAP
@@ -47,8 +46,9 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the production order for the component
         /// </summary>
         /// <value>the production order for the component</value>
-        public ProductionOrder ProductionOrder { get; set; }
+        public virtual ProductionOrder ProductionOrder { get; set; }
 
+   
         #endregion
     }
 }

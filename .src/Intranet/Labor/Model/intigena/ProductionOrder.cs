@@ -41,19 +41,31 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the article for this production order <see cref="Article" />
         /// </summary>
         /// <value>the article for the production order</value>
+        [ForeignKey("ArticleRefId")]
         public Article Article { get; set; }
 
         /// <summary>
         ///     Gets or sets the component for the production order
         /// </summary>
         /// <value>the component for the production order</value>
-        public Component Component { get; set; }
+        public virtual ProductionOrderComponent Component { get; set; }
 
         /// <summary>
         ///     Gets or sets the machine for the production order
         /// </summary>
         /// <value>the machine for the production order</value>
+        [ForeignKey("MachineRefId")]
         public Machine Machine { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the article ref id
+        /// </summary>
+        public Int32 ArticleRefId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the machine ref id
+        /// </summary>
+        public Int32 MachineRefId { get; set; }
 
         #endregion
     }

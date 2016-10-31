@@ -20,7 +20,7 @@ namespace Intranet.Labor.Dal
         ///     Gets or sets the components for the labor
         /// </summary>
         /// <value>the components</value>
-        public DbSet<Component> Components { get; set; }
+        public DbSet<ProductionOrderComponent> Components { get; set; }
 
         /// <summary>
         ///     Gets or sets the errors for the labor
@@ -67,7 +67,7 @@ namespace Intranet.Labor.Dal
         /// <param name="modelBuilder"> The builder that defines the model for the context being created. </param>
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
-            //ProductionOrder - Component
+           /* //ProductionOrder - Component
             modelBuilder.Entity<Component>()
                         .HasRequired( x => x.ProductionOrder )
                         .WithRequiredDependent()
@@ -83,7 +83,7 @@ namespace Intranet.Labor.Dal
             modelBuilder.Entity<Article>()
                         .HasMany( x => x.ProductionOrders )
                         .WithOptional()
-                        .Map( x => x.MapKey( "ArticleRefId" ) );
+                        .Map( x => x.MapKey( "ArticleRefId" ) );*/
             
         }
     }
