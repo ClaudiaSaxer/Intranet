@@ -1,11 +1,12 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Labor.Definition.Bll;
 using Intranet.Model;
 using Moq;
+
+#endregion
 
 namespace Intranet.Labor.TestEnvironment
 {
@@ -19,7 +20,7 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
         /// <returns></returns>
-        public static ILaborHomeBll GetLaborHomeBll(IEnumerable<Module> modules)
+        public static ILaborHomeBll GetLaborHomeBll( IEnumerable<Module> modules )
         {
             var mock = new Mock<ILaborHomeBll>
             {
@@ -27,8 +28,8 @@ namespace Intranet.Labor.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup(x => x.AllLaborModulesForRoles(It.IsAny<IEnumerable<String>>()))
-                .Returns(modules);
+            mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
+                .Returns( modules );
 
             return mock.Object;
         }
