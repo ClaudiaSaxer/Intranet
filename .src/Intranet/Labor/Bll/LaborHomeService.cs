@@ -1,7 +1,6 @@
 ﻿#region Usings
 
 using Intranet.Common;
-using Intranet.Common.Bll;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 
