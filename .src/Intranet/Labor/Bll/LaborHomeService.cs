@@ -18,7 +18,7 @@ namespace Intranet.Bll
         /// <summary>
         ///     Gets or sets the bll for the labor home.
         /// </summary>
-        public ILaborHomeBll HomeBll { get; set; }
+        public ILaborHomeBll LaborHomeBll { get; set; }
 
         #endregion
 
@@ -48,7 +48,7 @@ namespace Intranet.Bll
 
             var vm = new LaborHomeViewModel
             {
-                Modules = HomeBll.AllLaborModulesForRoles( roleNames )
+                Modules = LaborHomeBll.AllLaborModulesForRoles( roleNames )
             };
             return vm;
         }
