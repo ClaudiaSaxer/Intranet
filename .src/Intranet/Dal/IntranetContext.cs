@@ -53,7 +53,7 @@ namespace Intranet.Dal
                         .WithMany( s => s.Modules )
                         .Map( mr =>
                               {
-                                  mr.MapLeftKey( "nModulRefId" );
+                                  mr.MapLeftKey( "ModulRefId" );
                                   mr.MapRightKey( "RoleRefId" );
                                   mr.ToTable( "ModuleRole" );
                               } );

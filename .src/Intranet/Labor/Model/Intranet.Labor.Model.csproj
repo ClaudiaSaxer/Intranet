@@ -54,11 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="intigena\Article.cs" />
+    <Compile Include="intigena\ArticleType.cs" />
+    <Compile Include="intigena\ProductionOrderComponent.cs" />
+    <Compile Include="intigena\Error.cs" />
+    <Compile Include="intigena\Machine.cs" />
+    <Compile Include="intigena\ProductionOrder.cs" />
+    <Compile Include="intigena\ShiftSchedule.cs" />
+    <Compile Include="instron\Instron.cs" />
+    <Compile Include="instron\InstronValue.cs" />
+    <Compile Include="intigena\ShiftType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UniqueKeyAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="labor\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
