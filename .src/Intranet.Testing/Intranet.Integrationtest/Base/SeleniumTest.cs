@@ -18,12 +18,12 @@ namespace Intranet.Integrationtest.Base
 
         //protected FirefoxDriver FirefoxDriver { get; }
         /// <summary>
-        /// 
+        ///     The IE Driver for Selenium
         /// </summary>
         protected InternetExplorerDriver InternetExplorerDriver { get; }
 
         /// <summary>
-        ///     Starts the IIS
+        ///     Ctor for SeleniumTests
         /// </summary>
         protected SeleniumTest()
         {
@@ -52,7 +52,7 @@ namespace Intranet.Integrationtest.Base
 
 
         /// <summary>
-        ///     
+        ///     Starts the IIS
         /// </summary>
         private void StartIIS()
         {
@@ -67,10 +67,10 @@ namespace Intranet.Integrationtest.Base
         }
 
         /// <summary>
-        /// 
+        ///     Gets the absolute URL (adds http://localhost:port/...)
         /// </summary>
-        /// <param name="relativeUrl"></param>
-        /// <returns></returns>
+        /// <param name="relativeUrl">The relative URL</param>
+        /// <returns>The absolute URL</returns>
         protected static String GetAbsoluteUrl(String relativeUrl)
         {
             if (!relativeUrl.StartsWith("/", StringComparison.Ordinal))

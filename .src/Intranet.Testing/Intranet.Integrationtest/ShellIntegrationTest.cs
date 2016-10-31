@@ -15,7 +15,7 @@ namespace Intranet.Integrationtest
     public class ShellIntegrationTest : SeleniumTest
     {
         /// <summary>
-        /// 
+        ///     Looks if there are 2 Modules
         /// </summary>
         [Fact(Skip = "Integrationstest with IIS Doesnt Work ATM")]
         [Trait("Integration Test", "Shell")]
@@ -29,7 +29,7 @@ namespace Intranet.Integrationtest
         }
 
         /// <summary>
-        /// 
+        ///     Tests if the navbar link to settings works
         /// </summary>
         [Fact(Skip = "Integrationstest with IIS Doesnt Work ATM")]
         [Trait("Integration Test","Shell")]
