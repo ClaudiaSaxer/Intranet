@@ -42,7 +42,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the timestamp of the creation of the test sheet
         /// </summary>
         /// <value>the timestamp of the creation</value>
-        public DateTime Created { get; set; }
+        public DateTime CreatedDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the number of the machine
