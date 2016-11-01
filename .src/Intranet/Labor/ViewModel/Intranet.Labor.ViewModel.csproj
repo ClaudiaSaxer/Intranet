@@ -40,14 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaborCreatorViewModel.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\PenetrationTimeTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\Retention.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\RetentionTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\Rewet.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\RewetTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\TestInfo.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\LaborCreatorViewModel.cs" />
     <Compile Include="LaborHomeViewModel.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\PenetrationTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
       <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
       <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

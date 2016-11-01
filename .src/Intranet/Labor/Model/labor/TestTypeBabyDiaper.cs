@@ -13,6 +13,11 @@
         /// <summary>
         ///     A Test representing a retention test
         /// </summary>
-        Retention
+        Retention,
+
+        /// <summary>
+        ///     A Test representing a penetration time test
+        /// </summary>
+        PenetrationTime
     }
 }
