@@ -14,7 +14,7 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the value for the revet after 140ml
         /// </summary>
         /// <value>the value for the revet after 140ml</value>
-        public Double Revert140Value { get; set; }
+        public Double Revet140Value { get; set; }
 
         /// <summary>
         ///     Gets or sets the value for revet after 120ml

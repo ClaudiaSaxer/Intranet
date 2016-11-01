@@ -10,6 +10,11 @@ namespace Intranet.Labor.ViewModel
     public class TestInfo
     {
         /// <summary>
+        /// Gets or sets the Person who did the test
+        /// </summary>
+        /// <value>the test person</value>
+        public String TestPerson { get; set; }
+        /// <summary>
         ///     Gets or sets the production code from the diaper
         /// </summary>
         /// <value>the production code from the diaper</value>

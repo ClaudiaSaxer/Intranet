@@ -237,8 +237,6 @@
     <Content Include="resources\css\intigena\bootstrap.min.css" />
     <Content Include="resources\css\intigena\Site.css" />
     <Content Include="resources\css\intigena\Site.min.css" />
-    <Content Include="resources\css\intigena\temporaryForTesting.css" />
-    <Content Include="resources\css\intigena\temporaryForTesting.min.css" />
     <Content Include="resources\img\favicon.ico" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
