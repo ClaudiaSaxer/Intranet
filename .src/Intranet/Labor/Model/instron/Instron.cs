@@ -37,7 +37,7 @@ namespace Intranet.Labor.Model
         ///     Gets or sets a Collection from Instron Values <see cref="InstronValues" />
         /// </summary>
         /// <value>The Values for the Instron</value>
-        public ICollection<InstronValue> InstronValues { get; set; }
+        public virtual ICollection<InstronValue> InstronValues { get; set; }
 
         #endregion
     }

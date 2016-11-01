@@ -97,7 +97,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the standard deviation of the baby diapers
         /// </summary>
         /// <value>the standard deviation of the baby diapers</value>
-        [ForeignKey( "BabyDiaperStandardDeviationnRefId" )]
+        [ForeignKey( "BabyDiaperStandardDeviationRefId" )]
         public BabyDiaperTestValue BabyDiaperStandardDeviation { get; set; }
 
         /// <summary>
