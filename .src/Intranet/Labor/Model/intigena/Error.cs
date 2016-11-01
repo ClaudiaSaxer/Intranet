@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Model
 {
@@ -22,6 +24,12 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the value or a description of the error</value>
         public String Value { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test notes existing with this error
+        /// </summary>
+        /// <value>the test notes with this error</value>
+        public ICollection<TestNote> TestNotes { get; set; }
 
         #endregion
     }
