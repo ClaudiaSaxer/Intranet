@@ -1,22 +1,24 @@
-﻿using System;
-
-namespace Intranet.Labor.ViewModel
+﻿namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    /// Class representing the view model of the penetration time test value
+    ///     Class representing the view model of the penetration time test value
     /// </summary>
     public class PenetrationTimeTestValue
     {
+        #region Properties
+
         /// <summary>
-        /// Gets or sets the test info
+        ///     Gets or sets the test info
         /// </summary>
         /// <value>the test info</value>
         public TestInfo TestInfo { get; set; }
 
         /// <summary>
-        /// Gets or sets the penetration time data
+        ///     Gets or sets the penetration time data
         /// </summary>
         /// <value>the penetration time data</value>
         public PenetrationTime PenetrationTime { get; set; }
+
+        #endregion
     }
 }

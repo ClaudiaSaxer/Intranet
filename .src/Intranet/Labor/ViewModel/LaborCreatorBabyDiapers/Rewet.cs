@@ -4,12 +4,12 @@ using Intranet.Labor.Model.labor;
 namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    /// Class representing the view model of the rewet
+    ///     Class representing the view model of the rewet
     /// </summary>
     public class Rewet
     {
+        #region Properties
 
-       
         /// <summary>
         ///     Gets or sets the value for the revet after 140ml
         /// </summary>
@@ -46,6 +46,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the RW of the revet for 210ml</value>
         public RwType Revet210Rw { get; set; }
 
-
+        #endregion
     }
 }

@@ -16,7 +16,9 @@ namespace Intranet.Web
         {
             bundles.Add( new ScriptBundle( "~/bundles/jquery" ).Include(
                              "~/resources/js/jquery-{version}.js",
-                             "~/resources/js/bootstrap.min.js" ) );
+                             "~/resources/js/bootstrap.min.js",
+                             "~/resources/js/moment.min.js",
+                            "~/resources/js/bootstrap-sortable.js") );
 
             bundles.Add( new ScriptBundle( "~/bundles/jqueryval" ).Include(
                              "~/resources/js/jquery.validate*" ) );
@@ -27,6 +29,7 @@ namespace Intranet.Web
 
             bundles.Add( new StyleBundle( "~/bundles/css" ).Include(
                              "~/resources/css/bootstrap.min.css",
+                             "~/resources/css/bootstrap-sortable.css",
                              "~/resources/css/bootstrap-theme.min.css",
                              "~/resources/css/bootstrap-toggle.min.css",
                              "~/resources/css/intigena/site.css" ) );

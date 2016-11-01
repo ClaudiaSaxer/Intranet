@@ -232,6 +232,7 @@
     <Content Include="assets\sass\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
     </Content>
+    <Content Include="resources\css\bootstrap-sortable.css" />
     <Content Include="resources\css\bootstrap-theme.min.css" />
     <Content Include="resources\css\bootstrap-toggle.min.css" />
     <Content Include="resources\css\bootstrap.min.css" />
@@ -245,6 +246,7 @@
     <Content Include="assets\gulpfile.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="resources\fonts\glyphicons-halflings-regular.woff" />
@@ -333,7 +335,8 @@
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <Content Include="Areas\Labor\Views\LaborCreator\Edit.cshtml" />
     <Content Include="assets\sass\Labor.scss" />
-    <None Include="resources\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="resources\img\logo-intigena.png" />
+    <Content Include="resources\js\bootstrap-sortable.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
     <Content Include="resources\js\bootstrap.min.js" />
@@ -349,6 +352,8 @@
     <Content Include="resources\js\bootstrap\tab.js" />
     <Content Include="resources\js\bootstrap\tooltip.js" />
     <Content Include="resources\js\bootstrap\transition.js" />
+    <Content Include="resources\js\intigena\shell-settings.js" />
+    <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
     <None Include="resources\js\jquery-3.1.1-vsdoc.js" />
     <Content Include="resources\js\jquery-3.1.1.js" />
@@ -360,9 +365,8 @@
     <Content Include="resources\js\jquery.validate.min.js" />
     <Content Include="resources\js\jquery.validate.unobtrusive.js" />
     <Content Include="resources\js\jquery.validate.unobtrusive.min.js" />
-    <Content Include="resources\js\shell-settings.js" />
-    <Content Include="resources\js\shell-settings.min.js" />
-    <Content Include="resources\js\_references.js" />
+    <None Include="resources\js\_references.js" />
+    <Content Include="resources\js\moment.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -375,8 +379,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="resources\js\jquery-3.1.1.slim.min.map" />
-    <Content Include="resources\js\jquery-3.1.1.min.map" />
     <Content Include="assets\ts\tsconfig.json" />
     <Content Include="Views\Settings\Index.cshtml" />
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
@@ -441,6 +443,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="assets\ts\jquery.d.ts" />
     <TypeScriptCompile Include="assets\ts\shell-settings.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\js\jquery-3.1.1.min.map" />
+    <Content Include="resources\js\jquery-3.1.1.slim.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

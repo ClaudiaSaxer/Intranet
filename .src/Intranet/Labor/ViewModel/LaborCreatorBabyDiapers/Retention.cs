@@ -4,11 +4,11 @@ using Intranet.Labor.Model.labor;
 namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    /// Class representing the view model for the retention
+    ///     Class representing the view model for the retention
     /// </summary>
     public class Retention
     {
-      
+        #region Properties
 
         /// <summary>
         ///     Gets or sets the RW of the retention
@@ -52,5 +52,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the sap number</value>
         public String SapNr { get; set; }
 
+        #endregion
     }
 }

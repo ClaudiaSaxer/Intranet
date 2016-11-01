@@ -1,13 +1,12 @@
-﻿using System;
-using Intranet.Labor.Model.labor;
-
-namespace Intranet.Labor.ViewModel
+﻿namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    /// Class representing the view model for the retention test value
+    ///     Class representing the view model for the retention test value
     /// </summary>
     public class RetentionTestValue
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the retention data
         /// </summary>
@@ -20,6 +19,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the test info</value>
         public TestInfo TestInfo { get; set; }
 
-       
+        #endregion
     }
 }
