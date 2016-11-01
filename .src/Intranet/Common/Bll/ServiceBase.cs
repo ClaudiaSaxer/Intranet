@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web.Security;
-using Extend;
+﻿using Extend;
 
-namespace Intranet.Common.Bll
+namespace Intranet.Common
 {
     /// <summary>
     ///     Class representing the base class for all services
     /// </summary>
-    public class ServiceBase: LoggingBase
+    public class ServiceBase : LoggingBase
     {
         #region Properties
 
@@ -25,7 +22,7 @@ namespace Intranet.Common.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="logger">A <see cref="ILogger" />.</param>
-        public ServiceBase( ILogger logger)
+        public ServiceBase( ILogger logger )
             : base( logger )
         {
             logger.ThrowIfNull( nameof( logger ) );

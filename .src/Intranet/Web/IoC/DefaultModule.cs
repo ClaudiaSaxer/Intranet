@@ -1,13 +1,14 @@
 ﻿#region Usings
 
 using System;
-using System.Linq;
 using Autofac;
 using Autofac.Integration.Mvc;
+using Intranet.Bll;
 using Intranet.Common;
-using Intranet.Common.Db;
 using Intranet.Dal;
-using Intranet.Dal.Repositories;
+using Intranet.Definition;
+using Intranet.Labor.Bll;
+using Intranet.Labor.Definition;
 
 #endregion
 
@@ -52,16 +53,58 @@ namespace Intranet.Web.IoC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
         private static void RegisterBllComponents( ContainerBuilder builder )
-            => builder.RegisterAssemblyTypes( AppDomain.CurrentDomain.GetAssemblies() )
+        {
+            /* => builder.RegisterAssemblyTypes(AppDomain.CurrentDomain.GetAssemblies())
                       .Where(
                           t =>
-                              ( t.Namespace != null ) && t.IsClass && t.Namespace.Contains( "Bll" )
-                              && ( t.GetInterfaces()
-                                    .Length != 0 ) )
-                      .As( t => t.GetInterfaces()
-                                 .Single( i => i.Name == "I" + t.Name ) )
+                              (t.Namespace != null) && t.IsClass && t.Namespace.Contains("Bll")
+                              && (t.GetInterfaces()
+                                    .Length != 0))
+                      .As(t => t.GetInterfaces()
+                                .Single(i => i.Name == "I" + t.Name))
                       .PropertiesAutowired()
-                      .InstancePerRequest();
+                      .InstancePerRequest();*/
+
+            builder.RegisterType<HomeBll>()
+                   .As<IHomeBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<HomeService>()
+                   .As<IHomeService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<SettingsBll>()
+                   .As<ISettingsBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<SettingsService>()
+                   .As<ISettingsService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<NavigationBll>()
+                   .As<INavigationBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<NavigationService>()
+                   .As<INavigationService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborHomeBll>()
+                   .As<ILaborHomeBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborHomeService>()
+                   .As<ILaborHomeService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+        }
 
         /// <summary>
         ///     Registers the data access components.
@@ -103,16 +146,6 @@ namespace Intranet.Web.IoC
                       .SingleInstance();
 
         /// <summary>
-        ///     Registers the roles components.
-        /// </summary>
-        /// <param name="builder">The builder through which components can be registered.</param>
-        private static void RegisterRolesComponents(ContainerBuilder builder)
-            => builder.RegisterType<SystemWebSecurityRoles>()
-                      .As<IRoles>()
-                      .PropertiesAutowired()
-                      .InstancePerRequest();
-
-        /// <summary>
         ///     Register MVC
         /// </summary>
         /// <param name="builder">The builder through which components can be registered.</param>
@@ -128,5 +161,15 @@ namespace Intranet.Web.IoC
             // Register dependencies in custom views
             //builder.RegisterSource( new ViewRegistrationSource() );
         }
+
+        /// <summary>
+        ///     Registers the roles components.
+        /// </summary>
+        /// <param name="builder">The builder through which components can be registered.</param>
+        private static void RegisterRolesComponents( ContainerBuilder builder )
+            => builder.RegisterType<SystemWebSecurityRoles>()
+                      .As<IRoles>()
+                      .PropertiesAutowired()
+                      .InstancePerRequest();
     }
 }

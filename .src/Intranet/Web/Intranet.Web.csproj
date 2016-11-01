@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -78,8 +78,8 @@
       <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -252,7 +252,6 @@
     <Content Include="Areas\Labor\Views\web.config" />
     <Content Include="autofac.json" />
     <Content Include="NLog.config" />
-    <Content Include="Areas\Labor\Views\Experimental\Index.cshtml" />
     <Content Include="assets\package.json" />
     <Content Include="assets\sass\Site.scss" />
     <Content Include="assets\sass\bootstrap\_wells.scss" />
@@ -330,6 +329,7 @@
     <Content Include="assets\sass\layout.scss" />
     <Content Include="assets\sass\Shell.scss" />
     <Content Include="assets\sass\ShellSettings.scss" />
+    <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
@@ -403,13 +403,25 @@
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labor\Bll\Intranet.Labor.Bll.csproj">
+      <Project>{51428790-ed54-48a4-9eec-c25e99936e65}</Project>
+      <Name>Intranet.Labor.Bll</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Labor\Dal\Intranet.Labor.Dal.csproj">
       <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
       <Name>Intranet.Labor.Dal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Labor\Definitions\Intranet.Labor.Definition.csproj">
+      <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
+      <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Labor\Model\Intranet.Labor.Model.csproj">
       <Project>{ce4caf79-b268-4fa9-9d1a-b6c3f3db4801}</Project>
       <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Intranet.Model.csproj">
       <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
@@ -424,7 +436,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="assets\ts\temp.ts" />
+    <TypeScriptCompile Include="assets\ts\jquery.d.ts" />
+    <TypeScriptCompile Include="assets\ts\shell-settings.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

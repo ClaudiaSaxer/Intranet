@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 
-namespace Intranet.Common.Db
+namespace Intranet.Common
 
 {
     /// <summary>
