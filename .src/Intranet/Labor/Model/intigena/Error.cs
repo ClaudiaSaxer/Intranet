@@ -29,7 +29,7 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the test notes existing with this error
         /// </summary>
         /// <value>the test notes with this error</value>
-        public ICollection<TestNote> TestNotes { get; set; }
+        public virtual ICollection<TestNote> TestNotes { get; set; }
 
         #endregion
     }

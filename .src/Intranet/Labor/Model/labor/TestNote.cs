@@ -29,7 +29,28 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the error of the test note
         /// </summary>
         /// <value>the error of the test note</value>
+        [ForeignKey("ErrorRefId")]
         public Error Error { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ref id of the error
+        /// </summary>
+        /// <value>the ref id of the error</value>
+        public Int32 ErrorRefId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test value for the error
+        /// </summary>
+        /// <value>the test value</value>
+        [ForeignKey("TestValueRefId")]
+
+        public TestValue TestValue { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ref id of the test value
+        /// </summary>
+        /// <value>the ref id of the test value</value>
+        public Int32 TestValueRefId { get; set; }
 
         #endregion
     }

@@ -3,9 +3,9 @@
 namespace Intranet.Labor.Model.labor
 {
     /// <summary>
-    /// Enum representing the types of tests
+    /// Enum representing the types of tests for baby diapers
     /// </summary>
-    public enum TestType
+    public enum TestTypeBabyDiaper
     {
         /// <summary>
         /// A Test representing a rewet test

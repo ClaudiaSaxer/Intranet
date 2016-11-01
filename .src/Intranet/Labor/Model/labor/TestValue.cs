@@ -44,28 +44,42 @@ namespace Intranet.Labor.Model.labor
         public String LastEditedPerson { get; set; }
 
         /// <summary>
-        ///     The Type of the test for the testvalue
+        ///     The article type of the test for the testvalue
         /// </summary>
-        /// <value>the type of the test</value>
-        public TestType TestType { get; set; }
+        /// <value>the article type of the test</value>
+        public ArticleType ArticleTestType { get; set; }
 
         /// <summary>
         ///     Gets or sets the notes to the testvalues
         /// </summary>
         /// <value>notes for the testvalue</value>
-        public ICollection<TestNote> TestNotes { get; set; }
+        public virtual ICollection<TestNote> TestNotes { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper test value
         /// </summary>
         /// <value>the baby diaper test value</value>
+        [ForeignKey( "BabyDiaperTestValueRefId" )]
         public BabyDiaperTestValue BabyDiaperTestValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the incontinence pad test value
         /// </summary>
         /// <value>the incontinence pad test value</value>
+        [ForeignKey( "IncontinencePadTestValueRefId" )]
         public IncontinencePadTestValue IncontinencePadTestValue { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ref id of the baby diaper test value
+        /// </summary>
+        /// <value>the ref id of the baby diaper test value</value>
+        public Int32 BabyDiaperTestValueRefId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ref id of the incontinence pad test value
+        /// </summary>
+        /// <value>the ref id of the incontinence pad test value</value>
+        public Int32 IncontinencePadTestValueRefId { get; set; }
 
         #endregion
     }

@@ -164,10 +164,22 @@ namespace Intranet.Labor.Model.labor
         public RWType RewetAfterAcquisitionTimeRw { get; set; }
 
         /// <summary>
-        ///     Gets or sets the test sheet of theincontinence pad test value
+        ///     Gets or sets the test sheet of the incontinence pad test value
         /// </summary>
         /// <value>gets or sets the test sheet</value>
-        public TestSheet TestSheet { get; set; }
+        public virtual TestSheet TestSheet { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test value of the incontinence pad test value
+        /// </summary>
+        /// <value>the test value</value>
+        public virtual TestValue TestValue { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test type of the incontinence pad test value
+        /// </summary>
+        /// <value>the test typof the incontinence pad test value</value>
+        public TestTypeIncontinencePad TestType { get; set; }
 
         #endregion
     }

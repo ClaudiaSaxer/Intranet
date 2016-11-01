@@ -101,7 +101,18 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the test sheet of the baby diaper test value
         /// </summary>
         /// <value>gets or sets the test sheet</value>
-        public TestSheet TestSheet { get; set; }
+        public virtual TestSheet TestSheet { get; set; }
+        /// <summary>
+        /// Gets or sets the test value of the baby diaper test value
+        /// </summary>
+        /// <value>the test value</value>
+        public virtual TestValue TestValue { get; set; }
+
+        /// <summary>
+        /// Gets or sets the test type of the baby diaper test value
+        /// </summary>
+        /// <value>the test type of the baby diaper test value</value>
+        public TestTypeBabyDiaper TestType { get; set; }
 
         #endregion
     }
