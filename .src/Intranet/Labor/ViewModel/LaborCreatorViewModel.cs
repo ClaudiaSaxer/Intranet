@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.ViewModel
@@ -27,33 +28,13 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the production order number</value>
         public String FaNr { get; set; }
-
     
-
         /// <summary>
         ///     Gets or sets the timestamp of the creation of the test sheet
         /// </summary>
         /// <value>the timestamp of the creation</value>
         public String CreatedDate { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the number of the machine
-        /// </summary>
-        /// <value>the number of the machine</value>
-        public String MachineNr { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the type of the SAP
-        /// </summary>
-        /// <value>the type of the SAP</value>
-        public String SAPType { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the number of the SAP
-        /// </summary>
-        /// <value>the number of the SAP</value>
-        public String SAPNr { get; set; }
-
+        
         /// <summary>
         ///     Gets or sets the name of the product
         /// </summary>
@@ -65,6 +46,22 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the name of the size</value>
         public String SizeName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rewets
+        /// </summary>
+        /// <value>collection of rewet</value>
+        public ICollection<RewetViewModel> Rewets { get; set; }
+       /// <summary>
+       /// Gets or sets the retentions
+       /// </summary>
+       /// <value>collection of retention</value>
+        public ICollection<RetentionViewModel> Retentions { get; set; }
+        /// <summary>
+        /// Gets or sets the PenetrationTimes
+        /// </summary>
+        /// <value>collection of penetrationtime</value>
+        public ICollection<PenetrationTimeViewModel> PenetrationTimes { get; set; }
 
         #endregion
     }

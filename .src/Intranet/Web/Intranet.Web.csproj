@@ -332,6 +332,7 @@
     <Content Include="assets\sass\ShellSettings.scss" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <Content Include="Areas\Labor\Views\LaborCreator\Edit.cshtml" />
+    <Content Include="assets\sass\Labor.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />

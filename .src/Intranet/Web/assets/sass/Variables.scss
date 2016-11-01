@@ -2,5 +2,9 @@ $intigena-blue:         #539ad8;
 $intigena-light-blue:   #E6F0F7;
 $intigena-title-gray:   #555555;
 
-$background-color: #F4F4F4;
-$button-color: #E9E9E9;
+$lightgray:  #F4F4F4;
+$darkgrey: #E9E9E9;
+
+
+$background-color: $lightgray;
+$button-color: $darkgrey;
