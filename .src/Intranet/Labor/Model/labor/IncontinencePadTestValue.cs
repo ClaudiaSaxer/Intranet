@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Intranet.Labor.Model.labor
@@ -15,8 +14,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the id of the incontinence pad test value
         /// </summary>
         /// <value>the incontinence pad test value id </value>
-        [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        [ForeignKey( "TestValue" )]
         public Int32 IncontinencePadTestValueId { get; set; }
 
         /// <summary>

@@ -15,8 +15,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the id of the baby diaper test value
         /// </summary>
         /// <value>the baby diaper test value id </value>
-        [Key]
-        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
+        [ForeignKey("TestValue")]
         public Int32 BabyDiaperTestValueId { get; set; }
 
         /// <summary>
