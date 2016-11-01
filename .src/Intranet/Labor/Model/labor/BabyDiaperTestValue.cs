@@ -65,19 +65,19 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the RW of the revet for 140ml
         /// </summary>
         /// <value>the RW of the revet for 140ml</value>
-        public RWType Revet140RW { get; set; }
+        public RWType Revet140Rw { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW of the revet for 210ml
         /// </summary>
         /// <value>the RW of the revet for 210ml</value>
-        public RWType Revet210RW { get; set; }
+        public RWType Revet210Rw { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW of the retention
         /// </summary>
         /// <value>the RW of the retention</value>
-        public RWType RetentionRW { get; set; }
+        public RWType RetentionRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the rentention value after the zentrifuge
@@ -95,7 +95,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the value for the SAP g/Höwi
         /// </summary>
         /// <value>the SAP g/Höwi value</value>
-        public Double SAPgHoewiValue { get; set; }
+        public Double SapGHoewiValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the test sheet of the baby diaper test value
