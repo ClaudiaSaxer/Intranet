@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Globalization;
 using Intranet.Common;
+using Intranet.Labor.Bll;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -45,7 +48,13 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
             var vm = new LaborCreatorViewModel
             {
-                TestSheet = new TestSheet { FaNr = "Fa123"}
+                Producer = "Intigena",
+                Shift =  ShiftType.Morning.ToFriendlyString(),
+                FaNr = "Fa123",
+                ProductName = "Babydream",
+                SizeName = "Maxi-Plus",
+                CreatedDate= "12.12.2015"
+               
             };
             return vm;
         }
