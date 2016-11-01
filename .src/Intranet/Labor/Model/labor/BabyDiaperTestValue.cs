@@ -102,6 +102,30 @@ namespace Intranet.Labor.Model.labor
         public virtual TestValue TestValue { get; set; }
 
         /// <summary>
+        ///     Gets or sets the value of the penetrationTime of the first addition
+        /// </summary>
+        /// <value>penetration time value for the first addition</value>
+        public Double PenetrationTimeAdditionFirst { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the value of the penetrationTime of the second addition
+        /// </summary>
+        /// <value>penetration time value for the second addition</value>
+        public Double PenetrationTimeAdditionSecond { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the value of the penetrationTime of the third addition
+        /// </summary>
+        /// <value>penetration time value for the third addition</value>
+        public Double PenetrationTimeAdditionThird { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the value of the penetrationTime of the fourth addition
+        /// </summary>
+        /// <value>penetration time value for the fourth addition</value>
+        public Double PenetrationTimeAdditionFourth { get; set; }
+
+        /// <summary>
         ///     Gets or sets the test type of the baby diaper test value
         /// </summary>
         /// <value>the test type of the baby diaper test value</value>
