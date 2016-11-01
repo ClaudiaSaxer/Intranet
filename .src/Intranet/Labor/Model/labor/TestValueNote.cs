@@ -51,7 +51,6 @@ namespace Intranet.Labor.Model.labor
         /// <value>the ref id of the test value</value>
         public Int32 TestValueRefId { get; set; }
 
-
         #endregion
     }
 }

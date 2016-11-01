@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Intranet.Labor.Model
@@ -14,9 +13,8 @@ namespace Intranet.Labor.Model
         /// <summary>
         ///     Gets or sets the production order ref id
         /// </summary>
-        [ForeignKey("ProductionOrder")]
+        [ForeignKey( "ProductionOrder" )]
         public Int32 ProductionOrderComponentId { get; set; }
-
 
         /// <summary>
         ///     Gets or sets the SAP
@@ -48,7 +46,6 @@ namespace Intranet.Labor.Model
         /// <value>the production order for the component</value>
         public virtual ProductionOrder ProductionOrder { get; set; }
 
-   
         #endregion
     }
 }
