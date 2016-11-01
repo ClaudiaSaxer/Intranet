@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace Intranet.Labor.Model.labor
 {
     /// <summary>
-    ///     Class representing notes for a test
+    ///     Class representing notes for a test value
     /// </summary>
-    public class TestNote
+    public class TestValueNote
     {
         #region Properties
 
@@ -17,7 +17,7 @@ namespace Intranet.Labor.Model.labor
         /// <value>the test note id </value>
         [Key]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public Int32 TestNoteId { get; set; }
+        public Int32 TestValueNoteId { get; set; }
 
         /// <summary>
         ///     Gets or sets the message for the test note
@@ -50,6 +50,7 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the ref id of the test value</value>
         public Int32 TestValueRefId { get; set; }
+
 
         #endregion
     }

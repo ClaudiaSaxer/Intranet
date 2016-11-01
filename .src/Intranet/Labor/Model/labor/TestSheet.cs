@@ -91,28 +91,28 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>The average of the baby diapers</value>
         [ForeignKey( "BabyDiaperAverageRefId" )]
-        public BabyDiaperTestValue BabyDiaperAverage { get; set; }
+        public virtual BabyDiaperTestValue BabyDiaperAverage { get; set; }
 
         /// <summary>
         ///     Gets or sets the standard deviation of the baby diapers
         /// </summary>
         /// <value>the standard deviation of the baby diapers</value>
         [ForeignKey( "BabyDiaperStandardDeviationRefId" )]
-        public BabyDiaperTestValue BabyDiaperStandardDeviation { get; set; }
+        public virtual BabyDiaperTestValue BabyDiaperStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the average of the incontinence pads
         /// </summary>
         /// <value>The average of the incontinence pads</value>
         [ForeignKey( "IncontinencePadAverageRefId" )]
-        public IncontinencePadTestValue IncontinencePadAverage { get; set; }
+        public virtual IncontinencePadTestValue IncontinencePadAverage { get; set; }
 
         /// <summary>
         ///     Gets or sets the standard deviation of the incontinence pads
         /// </summary>
         /// <value>the standard deviation of the incontinence pads</value>
         [ForeignKey( "IncontinencePadStandardDeviationRefId" )]
-        public IncontinencePadTestValue IncontinencePadStandardDeviation { get; set; }
+        public virtual IncontinencePadTestValue IncontinencePadStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the rf id of the average of the baby diapers

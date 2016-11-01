@@ -83,7 +83,7 @@ namespace Intranet.Labor.Dal
         ///     Gets or sets the test notes
         /// </summary>
         /// <value>the test notes</value>
-        public DbSet<TestNote> TestNotes { get; set; }
+        public DbSet<TestValueNote> TestNotes { get; set; }
 
         /// <summary>
         ///     Gets or sets the test sheets

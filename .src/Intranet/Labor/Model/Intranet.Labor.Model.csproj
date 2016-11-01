@@ -67,7 +67,7 @@
     <Compile Include="labor\BabyDiaperTestValue.cs" />
     <Compile Include="labor\IncontinencePadTestValue.cs" />
     <Compile Include="labor\RWType.cs" />
-    <Compile Include="labor\TestNote.cs" />
+    <Compile Include="labor\TestValueNote.cs" />
     <Compile Include="labor\TestSheet.cs" />
     <Compile Include="labor\TestTypeBabyDiaper.cs" />
     <Compile Include="labor\TestTypeIncontinencePad.cs" />
