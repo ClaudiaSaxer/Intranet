@@ -15,17 +15,21 @@ namespace Intranet.Web
         public static void RegisterBundles( BundleCollection bundles )
         {
             bundles.Add( new ScriptBundle( "~/bundles/jquery" ).Include(
-                             "~/resources/js/jquery-{version}.js" ) );
+                             "~/resources/js/jquery-{version}.js",
+                             "~/resources/js/bootstrap.min.js" ) );
 
             bundles.Add( new ScriptBundle( "~/bundles/jqueryval" ).Include(
-                             "~/resources/js/jquery.validate*") );
+                             "~/resources/js/jquery.validate*" ) );
 
             bundles.Add( new ScriptBundle( "~/bundles/bootstrap" ).Include(
                              "~/resources/js/bootstrap.js",
-                             "~/resources/js/respond.js") );
-            bundles.Add( new StyleBundle("~/bundles/css").Include(
-                             "~/resources/css/intigena/bootstrap.css",
-                             "~/resources/css/intigena/site.css") );
+                             "~/resources/js/respond.js" ) );
+
+            bundles.Add( new StyleBundle( "~/bundles/css" ).Include(
+                             "~/resources/css/bootstrap.min.css",
+                             "~/resources/css/bootstrap-theme.min.css",
+                             "~/resources/css/bootstrap-toggle.min.css",
+                             "~/resources/css/intigena/site.css" ) );
         }
     }
 }
