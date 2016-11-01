@@ -97,11 +97,6 @@ namespace Intranet.Labor.Model.labor
         public Double SapGHoewiValue { get; set; }
 
         /// <summary>
-        ///     Gets or sets the test sheet of the baby diaper test value
-        /// </summary>
-        /// <value>gets or sets the test sheet</value>
-        public virtual TestSheet TestSheet { get; set; }
-        /// <summary>
         /// Gets or sets the test value of the baby diaper test value
         /// </summary>
         /// <value>the test value</value>
