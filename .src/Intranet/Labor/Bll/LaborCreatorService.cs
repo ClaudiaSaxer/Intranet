@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Globalization;
+using System.Collections.Generic;
+using Extend;
 using Intranet.Common;
-using Intranet.Labor.Bll;
-using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    /// Class representing the labor creator service
+    ///     Class representing the labor creator service
     /// </summary>
     public class LaborCreatorService : ServiceBase, ILaborCreatorService
     {
@@ -44,18 +42,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the labor creator view model</returns>
         public LaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
         {
-            //   TestSheet = LaborCreatorBll.getTestSheetForId( testSheetId )
+            var vm = InstanceCreator
+                .CreateInstanceOptions<LaborCreatorViewModel>()
+                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
+                .For( x => x.IsTypeOf<ICollection<String>>() )
+                .Complete()
+                .CreateInstance();
 
-            var vm = new LaborCreatorViewModel
-            {
-                Producer = "Intigena",
-                Shift =  ShiftType.Morning.ToFriendlyString(),
-                FaNr = "Fa123",
-                ProductName = "Babydream",
-                SizeName = "Maxi-Plus",
-                CreatedDate= "12.12.2015"
-               
-            };
+            //TODO
+            /*    var vm = new LaborCreatorViewModel
+                {
+                    Producer = "Intigena",
+                    Shift =  ShiftType.Morning.ToFriendlyString(),
+                    FaNr = "Fa123",
+                    ProductName = "Babydream",
+                    SizeName = "Maxi-Plus",
+                    CreatedDate= "12.12.2015"
+                   
+                };*/
             return vm;
         }
 

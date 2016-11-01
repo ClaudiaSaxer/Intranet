@@ -10,12 +10,14 @@ html {
     body{
         padding-top: $nav-height;
         background-color: $background-color;
+        padding-bottom:$footer-height;
     }
 }
 
 .body-content{
     padding-left:10px;
     padding-top:5px;
+
 }
 
 .vertical-line {

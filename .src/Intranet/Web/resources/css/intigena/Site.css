@@ -43,7 +43,8 @@ tr.intigena-table-item td:last-child {
 
 html body {
   padding-top: 80px;
-  background-color: #F4F4F4; }
+  background-color: #F4F4F4;
+  padding-bottom: 70px; }
 
 .body-content {
   padding-left: 10px;
