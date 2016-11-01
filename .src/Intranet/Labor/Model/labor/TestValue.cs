@@ -73,13 +73,32 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the ref id of the baby diaper test value
         /// </summary>
         /// <value>the ref id of the baby diaper test value</value>
-        public Int32 BabyDiaperTestValueRefId { get; set; }
+        public Int32? BabyDiaperTestValueRefId { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the incontinence pad test value
         /// </summary>
         /// <value>the ref id of the incontinence pad test value</value>
-        public Int32 IncontinencePadTestValueRefId { get; set; }
+        public Int32? IncontinencePadTestValueRefId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the type of the test value
+        /// </summary>
+        /// <value>the type of the test value</value>
+        public TestValueType TestValueType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test sheet
+        /// </summary>
+        /// <value>the test sheet</value>
+        [ForeignKey( "TestSheetRefId" )]
+        public TestSheet TestSheet { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ref id of the test sheet
+        /// </summary>
+        /// <value>the ref id of the test sheet</value>
+        public Int32 TestSheetRefId { get; set; }
 
         #endregion
     }

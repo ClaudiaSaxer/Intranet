@@ -86,58 +86,6 @@ namespace Intranet.Labor.Model.labor
         /// <value>the values of the test sheet</value>
         public ICollection<TestValue> TestValues { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the average of the baby diapers
-        /// </summary>
-        /// <value>The average of the baby diapers</value>
-        [ForeignKey( "BabyDiaperAverageRefId" )]
-        public virtual BabyDiaperTestValue BabyDiaperAverage { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the standard deviation of the baby diapers
-        /// </summary>
-        /// <value>the standard deviation of the baby diapers</value>
-        [ForeignKey( "BabyDiaperStandardDeviationRefId" )]
-        public virtual BabyDiaperTestValue BabyDiaperStandardDeviation { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the average of the incontinence pads
-        /// </summary>
-        /// <value>The average of the incontinence pads</value>
-        [ForeignKey( "IncontinencePadAverageRefId" )]
-        public virtual IncontinencePadTestValue IncontinencePadAverage { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the standard deviation of the incontinence pads
-        /// </summary>
-        /// <value>the standard deviation of the incontinence pads</value>
-        [ForeignKey( "IncontinencePadStandardDeviationRefId" )]
-        public virtual IncontinencePadTestValue IncontinencePadStandardDeviation { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the rf id of the average of the baby diapers
-        /// </summary>
-        /// <value>The rf id of the average of the baby diapers</value>
-        public Int32 BabyDiaperAverageRefId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets therf id of the standard deviation of the baby diapers
-        /// </summary>
-        /// <value>the rf id of the standard deviation of the baby diapers</value>
-        public Int32 BabyDiaperStandardDeviationRefId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the rf id of the average of the incontinence pads
-        /// </summary>
-        /// <value>The rf id of the average of the incontinence pads</value>
-        public Int32 IncontinencePadAverageRefId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the rf id of the standard deviation of the incontinence pads
-        /// </summary>
-        /// <value>the rf id of the standard deviation of the incontinence pads</value>
-        public Int32 IncontinencePadStandardDeviationRefId { get; set; }
-
         #endregion
     }
 }

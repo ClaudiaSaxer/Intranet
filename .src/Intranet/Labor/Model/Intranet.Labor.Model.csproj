@@ -72,6 +72,7 @@
     <Compile Include="labor\TestTypeBabyDiaper.cs" />
     <Compile Include="labor\TestTypeIncontinencePad.cs" />
     <Compile Include="labor\TestValue.cs" />
+    <Compile Include="labor\TestValueType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UniqueKeyAttribute.cs" />
   </ItemGroup>
