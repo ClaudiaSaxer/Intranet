@@ -41,7 +41,7 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the article for this production order <see cref="Article" />
         /// </summary>
         /// <value>the article for the production order</value>
-        [ForeignKey("ArticleRefId")]
+        [ForeignKey( "ArticleRefId" )]
         public Article Article { get; set; }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the machine for the production order
         /// </summary>
         /// <value>the machine for the production order</value>
-        [ForeignKey("MachineRefId")]
+        [ForeignKey( "MachineRefId" )]
         public Machine Machine { get; set; }
 
         /// <summary>

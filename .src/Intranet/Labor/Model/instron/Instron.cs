@@ -18,26 +18,26 @@ namespace Intranet.Labor.Model
         /// <value>The Id for Instron</value>
         [Key]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        private Int32 IntstronId { get; set; }
+        public Int32 IntstronId { get; set; }
 
         /// <summary>
         ///     Gets or sets the ProductionOrder Number
         /// </summary>
         /// <value>The ProductionOrder Number of Instron.</value>
         [UniqueKey]
-        private String FaNr { get; set; }
+        public String FaNr { get; set; }
 
         /// <summary>
         ///     Gets or sets the DateTime from the Instron Test
         /// </summary>
         /// <value>The Date and Time from the Test</value>
-        private DateTime TestDateTime { get; set; }
+        public DateTime TestDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets a Collection from Instron Values <see cref="InstronValues" />
         /// </summary>
         /// <value>The Values for the Instron</value>
-        public ICollection<InstronValue> InstronValues { get; set; }
+        public virtual ICollection<InstronValue> InstronValues { get; set; }
 
         #endregion
     }

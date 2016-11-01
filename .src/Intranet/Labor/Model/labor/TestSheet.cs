@@ -42,7 +42,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the timestamp of the creation of the test sheet
         /// </summary>
         /// <value>the timestamp of the creation</value>
-        public DateTime Created { get; set; }
+        public DateTime CreatedDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the number of the machine
@@ -86,32 +86,6 @@ namespace Intranet.Labor.Model.labor
         /// <value>the values of the test sheet</value>
         public ICollection<TestValue> TestValues { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the average of the baby diapers
-        /// </summary>
-        /// <value>The average of the baby diapers</value>
-        public BabyDiaperTestValue BabyDiaperAverage { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the standard deviation of the baby diapers
-        /// </summary>
-        /// <value>the standard deviation of the baby diapers</value>
-        public BabyDiaperTestValue BabyDiaperStandardDeviation { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the average of the incontinence pads
-        /// </summary>
-        /// <value>The average of the incontinence pads</value>
-        public IncontinencePadTestValue IncontinencePadAverage { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the standard deviation of the incontinence pads
-        /// </summary>
-        /// <value>the standard deviation of the incontinence pads</value>
-        public IncontinencePadTestValue IncontinencePadStandardDeviation { get; set; }
-
         #endregion
     }
-
-
 }
