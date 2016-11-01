@@ -49,6 +49,10 @@
       <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
       <Name>Intranet.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

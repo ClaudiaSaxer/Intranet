@@ -9,6 +9,7 @@ using Intranet.Dal;
 using Intranet.Definition;
 using Intranet.Labor.Bll;
 using Intranet.Labor.Definition;
+using Intranet.Web.Areas.Labor.Controllers;
 
 #endregion
 
@@ -102,6 +103,16 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<LaborHomeService>()
                    .As<ILaborHomeService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborCreatorBll>()
+                   .As<ILaborCreatorBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborCreatorService>()
+                   .As<ILaborCreatorService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }

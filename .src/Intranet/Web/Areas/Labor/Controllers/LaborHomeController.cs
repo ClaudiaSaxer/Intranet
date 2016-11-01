@@ -5,7 +5,7 @@ using Intranet.Labor.Definition;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    /// 
+    ///     Class representing Labor Home Controller
     /// </summary>
     public class LaborHomeController : BaseController
     {
@@ -27,10 +27,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Initialize a new instance of the <see cref="LaborHomeController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public LaborHomeController(ILoggerFactory loggerFactory)
+        public LaborHomeController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(LaborHomeController) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
@@ -39,6 +39,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Loads the index page of the LaborHomeController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View("Index", LaborHomeService.GetLaborHomeViewModel());
+        public ActionResult Index() => View( "Index", LaborHomeService.GetLaborHomeViewModel() );
     }
 }
