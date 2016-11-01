@@ -64,6 +64,14 @@
     <Compile Include="instron\Instron.cs" />
     <Compile Include="instron\InstronValue.cs" />
     <Compile Include="intigena\ShiftType.cs" />
+    <Compile Include="labor\BabyDiaperTestValue.cs" />
+    <Compile Include="labor\IncontinencePadTestValue.cs" />
+    <Compile Include="labor\RWType.cs" />
+    <Compile Include="labor\TestNote.cs" />
+    <Compile Include="labor\TestSheet.cs" />
+    <Compile Include="labor\TestTypeBabyDiaper.cs" />
+    <Compile Include="labor\TestTypeIncontinencePad.cs" />
+    <Compile Include="labor\TestValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UniqueKeyAttribute.cs" />
   </ItemGroup>
@@ -71,9 +79,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="labor\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

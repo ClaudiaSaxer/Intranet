@@ -65,19 +65,19 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the RW of the revet for 140ml
         /// </summary>
         /// <value>the RW of the revet for 140ml</value>
-        public RWType Revet140Rw { get; set; }
+        public RwType Revet140Rw { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW of the revet for 210ml
         /// </summary>
         /// <value>the RW of the revet for 210ml</value>
-        public RWType Revet210Rw { get; set; }
+        public RwType Revet210Rw { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW of the retention
         /// </summary>
         /// <value>the RW of the retention</value>
-        public RWType RetentionRw { get; set; }
+        public RwType RetentionRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the rentention value after the zentrifuge

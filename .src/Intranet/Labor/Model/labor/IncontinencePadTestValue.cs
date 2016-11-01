@@ -47,7 +47,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the RW for the rewet
         /// </summary>
         /// <value>the RW for the rewet</value>
-        public RWType RewetFreeRw { get; set; }
+        public RwType RewetFreeRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the value for the rewet wet
@@ -95,7 +95,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the RW for the retention
         /// </summary>
         /// <value>the RW for the retention</value>
-        public RWType RetentionRw { get; set; }
+        public RwType RetentionRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the weight of the pad for the acquisition
@@ -125,19 +125,19 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the acquisition RW after the first addition
         /// </summary>
         /// <value>the acquisition RW after the first addition</value>
-        public RWType AcquisitionTimeFirstRw { get; set; }
+        public RwType AcquisitionTimeFirstRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the acquisition RW after the second addition
         /// </summary>
         /// <value>the acquisition  RW after the second addition</value>
-        public RWType AcquisitionTimeSecondRw { get; set; }
+        public RwType AcquisitionTimeSecondRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the acquisition  RW after the third addition
         /// </summary>
         /// <value>the acquisition RW after the third addition</value>
-        public RWType AcquisitionTimeThirdRw { get; set; }
+        public RwType AcquisitionTimeThirdRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the weight of a wet pad for the rewet after the acquisition time
@@ -161,7 +161,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the rw of a pad for the rewet after the acquisition time
         /// </summary>
         /// <value>the rw of a pad for the rewet after the acquisition time</value>
-        public RWType RewetAfterAcquisitionTimeRw { get; set; }
+        public RwType RewetAfterAcquisitionTimeRw { get; set; }
 
         /// <summary>
         ///     Gets or sets the test sheet of the incontinence pad test value
