@@ -40,12 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaborCreatorViewModel.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\PenetrationTimeTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\RetentionTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\RewetTestValue.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\TestInfo.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\LaborCreatorViewModel.cs" />
     <Compile Include="LaborHomeViewModel.cs" />
-    <Compile Include="PenetrationTimeViewModel.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\PenetrationTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RetentionViewModel.cs" />
-    <Compile Include="RewetViewModel.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\Retention.cs" />
+    <Compile Include="LaborCreatorBabyDiapers\Rewet.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Model\Intranet.Model.csproj">

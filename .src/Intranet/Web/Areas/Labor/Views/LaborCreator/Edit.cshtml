@@ -164,19 +164,46 @@
             <th>g/Höwi</th>
         </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <th>Durchschnitt</th>
+                <th></th>
+                <th>@Model.RetentionAverage.RetentionWetWeight</th>
+                <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
+                <th>@Model.RetentionAverage.RetentionAfterZentrifugePercent</th>
+                <th>@Model.RetentionAverage.RetentionRw</th>
+                <th></th>
+                <th></th>
+                <th>@Model.RetentionAverage.SapGHoewiValue</th>
+
+            </tr>
+        </tfoot>
+        <tfoot>
+            <tr>
+                <th>Standard Abweichung</th>
+                <th></th>
+                <th>@Model.RetentionStandardDeviation.RetentionWetWeight</th>
+                <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
+                <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugePercent</th>
+                <th>@Model.RetentionStandardDeviation.RetentionRw</th>
+                <th></th>
+                <th></th>
+                <th>@Model.RetentionStandardDeviation.SapGHoewiValue</th>
+            </tr>
+        </tfoot>
         <tbody>
-        @foreach ( var item in Model.RetentionTestValue )
+        @foreach ( var item in Model.Retentions )
         {
             <tr>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
-                <td>yy</td>
+                <td>@item.TestInfo.ProductionCode</td>
+                <th>@item.TestInfo.WeightyDiaperDry</th>
+                <th>@item.Retention.RetentionWetWeight</th>
+                <th>@item.Retention.RetentionAfterZentrifugeValue</th>
+                <th>@item.Retention.RetentionAfterZentrifugePercent</th>
+                <th>@item.Retention.RetentionRw</th>
+                <th>@item.Retention.SapType</th>
+                <th>@item.Retention.SapNr</th>
+                <th>@item.Retention.SapGHoewiValue</th>
             </tr>
         }
         </tbody>
