@@ -33,5 +33,24 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the SAP g/Höwi value</value>
         public Double SapGHoewiValue { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the weight of the diaper, wet after the retention
+        /// </summary>
+        /// <value>the weight of a wet diaper after retention</value>
+        public Double RetentionWetWeight { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the sap type
+        /// </summary>
+        /// <value>the sap type</value>
+        public String SapType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the sap number
+        /// </summary>
+        /// <value>the sap number</value>
+        public String SapNr { get; set; }
+
     }
 }

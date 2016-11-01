@@ -20,7 +20,7 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the value for revet after 120ml
         /// </summary>
         /// <value>the value for the revet after 120ml</value>
-        public Double Revet120Value { get; set; }
+        public Double Revet210Value { get; set; }
 
         /// <summary>
         ///     Gets or sets the value after the strike trough (with 210ml in g)

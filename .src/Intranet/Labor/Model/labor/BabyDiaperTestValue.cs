@@ -27,7 +27,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the weight the diaper has if it is dry
         /// </summary>
         /// <value>the weight of the dry diaper</value>
-        public Double WeightyDiaperDry { get; set; }
+        public Double WeightDiaperDry { get; set; }
 
         /// <summary>
         ///     Gets or sets the value for the revet after 140ml
@@ -39,7 +39,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the value for revet after 120ml
         /// </summary>
         /// <value>the value for the revet after 120ml</value>
-        public Double Revet120Value { get; set; }
+        public Double Revet210Value { get; set; }
 
         /// <summary>
         ///     Gets or sets the value after the strike trough (with 210ml in g)
@@ -53,12 +53,7 @@ namespace Intranet.Labor.Model.labor
         /// <value>the distribution after the strikte trough</value>
         public Double DistributionOfTheStrikeTrough { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the weight of the diaper, wet after the retention
-        /// </summary>
-        /// <value>the weight of a wet diaper after retention</value>
-        public Double RetentionWetWeight { get; set; }
-
+    
         /// <summary>
         ///     Gets or sets the RW of the revet for 140ml
         /// </summary>
@@ -94,6 +89,18 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the SAP g/Höwi value</value>
         public Double SapGHoewiValue { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the sap type
+        /// </summary>
+        /// <value>the sap type</value>
+        public String SapType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the sap number
+        /// </summary>
+        /// <value>the sap number</value>
+        public String SapNr { get; set; }
 
         /// <summary>
         ///     Gets or sets the test value of the baby diaper test value
