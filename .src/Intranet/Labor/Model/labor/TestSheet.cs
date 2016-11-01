@@ -102,7 +102,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the average of the incontinence pads
         /// </summary>
         /// <value>The average of the incontinence pads</value>
-        private publicIncontinencePadTestValue IncontinencePadAverage { get; set; }
+        public IncontinencePadTestValue IncontinencePadAverage { get; set; }
 
         /// <summary>
         ///     Gets or sets the standard deviation of the incontinence pads
@@ -112,4 +112,6 @@ namespace Intranet.Labor.Model.labor
 
         #endregion
     }
+
+
 }
