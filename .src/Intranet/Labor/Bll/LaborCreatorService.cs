@@ -5,6 +5,9 @@ using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
+    /// <summary>
+    /// Class representing the labor creator service
+    /// </summary>
     public class LaborCreatorService : ServiceBase, ILaborCreatorService
     {
         #region Properties
