@@ -20,8 +20,6 @@ namespace Intranet.ViewModel.Test
         {
             var actual = InstanceCreator
                 .CreateInstanceOptions<SettingsViewModel>()
-                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
-                .For( x => x.IsTypeOf<ICollection<String>>() )
                 .Complete()
                 .CreateInstance();
 

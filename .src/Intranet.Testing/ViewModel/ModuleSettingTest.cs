@@ -19,8 +19,6 @@ namespace Intranet.ViewModel.Test
         {
             var actual = InstanceCreator
                 .CreateInstanceOptions<ModuleSetting>()
-                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
-                .For( x => x.IsTypeOf<ICollection<String>>() )
                 .Complete()
                 .CreateInstance();
 
@@ -96,8 +94,6 @@ namespace Intranet.ViewModel.Test
         {
             var actual = InstanceCreator
                 .CreateInstanceOptions<ModuleSetting>()
-                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
-                .For( x => x.IsTypeOf<ICollection<String>>() )
                 .WithFactory( x => 666 )
                 .For( x => x.IsTypeOf<Int32>() )
                 .WithFactory( x => "the devil is alive" )
