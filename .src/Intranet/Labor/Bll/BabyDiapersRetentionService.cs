@@ -37,7 +37,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
-            throw new NotImplementedException();
+            return new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "New Hans", ProductionCode = "IT/11/16/158/" };
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
         {
-            throw new NotImplementedException();
+            return new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "Edit Hans", ProductionCode = "IT/11/16/158/"};
         }
 
         /// <summary>
@@ -57,7 +57,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The saved or updated BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel Save( BabyDiapersRetentionEditViewModel babyDiapersRetentionEditViewModel )
         {
-            throw new NotImplementedException();
+            return babyDiapersRetentionEditViewModel;
         }
 
         #endregion

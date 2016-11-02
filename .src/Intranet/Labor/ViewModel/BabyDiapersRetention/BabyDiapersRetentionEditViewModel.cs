@@ -43,7 +43,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
-        public String ProductionCodeTime { get; set; }
+        public DateTime ProductionCodeTime { get; set; }
         /// <summary>
         ///     Gets or sets the DiaperWeight value
         /// </summary>

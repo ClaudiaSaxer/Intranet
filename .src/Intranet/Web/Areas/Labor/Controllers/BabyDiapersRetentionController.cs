@@ -49,7 +49,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 return HttpNotFound();
 
             var viewModel = BabyDiapersRetentionService.GetNewBabyDiapersRetentionEditViewModel( testSheetId );
-            //var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/"};
             return View("Edit", viewModel);
         }
 
@@ -64,7 +63,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 return HttpNotFound();
 
             var viewModel = BabyDiapersRetentionService.GetBabyDiapersRetentionEditViewModel(testValueId);
-            //var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/" };
             return View("Edit", viewModel);
         }
 
@@ -76,6 +74,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         [HttpPost]
         public ActionResult Save( BabyDiapersRetentionEditViewModel viewModel )
         {
+            var savedModel = BabyDiapersRetentionService.Save( viewModel );
             return View();
         }
     }

@@ -31,62 +31,20 @@
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
+            @Html.HiddenFor(m => m.ProductionCode);
             <label class="col-sm-2 control-label">Gewicht [g]:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
             </div>
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
             <Label>Retention (g)</Label>
-            <label class="col-sm-2 control-label">nass [g]:</label>
+            <label class="col-sm-2 control-label">Nass [g]:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.WeightRetentionWet, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text", @required = "required" })
             </div>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block">Speichern</button>
     }
-    <!--
-    <form class="form-horizontal">
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Testperson:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" value="Click to focus">
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Produktions Code:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" value="Click to focus">
-            </div>
-        </div>
-        <div class="intigena-line"></div>
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Gewicht [g]:</label>
-            <div class="col-sm-10">
-                <input class="form-control" type="text" value="Click to focus">
-            </div>
-        </div>
-    </form>
-    
-    
-    
-
-    <div class="row">
-        <div class="col-md-4 col-xs-4">Testperson:</div>
-        <div class="col-md-8 col-xs-8">Hans</div>
-    </div>
-    <div class="intigena-line"></div>
-    <div class="row">
-        <div class="col-md-4 col-xs-4">Gewicht [g]:</div>
-        <div class="col-md-8 col-xs-8">Hans</div>
-    </div>
-    <div class="intigena-line"></div>
-    <div class="save-button">
-        <a href="/" class="no-underline-hyperlink">
-            <div>
-                Speichern
-            </div>
-        </a>
-    </div>-->
 </div>
