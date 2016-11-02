@@ -222,18 +222,19 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return penetrationtime;
         }
 
-        private TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry) => new TestInfo
-        {
-            TestPerson = testPerson,
-            ProductionCode = prodCode,
-            WeightyDiaperDry = weightDiaperDry
-        };
+        private TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry )
+            => new TestInfo
+            {
+                TestPerson = testPerson,
+                ProductionCode = prodCode,
+                WeightyDiaperDry = weightDiaperDry
+            };
 
         private RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode )
         {
             var vm = new RewetTestValue
             {
-                TestInfo = toTestInfo( testPerson,prodCode,rewet.WeightDiaperDry ),
+                TestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry ),
                 Rewet = ToRewet( rewet )
             };
             return vm;
@@ -243,7 +244,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var vm = new PenetrationTimeTestValue
             {
-                TestInfo = toTestInfo(testPerson, prodCode, penetrationTime.WeightDiaperDry),
+                TestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry ),
                 PenetrationTime = ToPenetrationTime( penetrationTime )
             };
             return vm;
@@ -253,7 +254,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var vm = new RetentionTestValue
             {
-                TestInfo = toTestInfo(testPerson, prodCode, retention.WeightDiaperDry),
+                TestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry ),
                 Retention = ToRetention( retention )
             };
             return vm;
