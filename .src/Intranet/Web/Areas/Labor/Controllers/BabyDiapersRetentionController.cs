@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -11,6 +12,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class BabyDiapersRetentionController : BaseController
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets a <see cref="IBabyDiapersRetentionService" />
+        /// </summary>
+        /// <value>
+        ///     <see cref="IBabyDiapersRetentionService" />
+        /// </value>
+        public IBabyDiapersRetentionService BabyDiapersRetentionService { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -35,7 +48,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if (testSheetId.IsNull())
                 return HttpNotFound();
 
-            var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/"};
+            var viewModel = BabyDiapersRetentionService.GetNewBabyDiapersRetentionEditViewModel( testSheetId );
+            //var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/"};
             return View("Edit", viewModel);
         }
 
@@ -49,7 +63,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if (testValueId.IsNull())
                 return HttpNotFound();
 
-            var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/" };
+            var viewModel = BabyDiapersRetentionService.GetBabyDiapersRetentionEditViewModel(testValueId);
+            //var viewModel = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "hans", ProductionCode = "IT/11/16/158/" };
             return View("Edit", viewModel);
         }
 
