@@ -236,14 +236,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
 
 
-        private Retention toRetention(BabyDiaperTestValue retention, Double retentionWetWeight)
+        private Retention toRetention(BabyDiaperTestValue retention)
          => new Retention
          {
             SapNr = retention.SapNr,
             RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifugeValue,
             SapType = retention.SapType,
             RetentionRw = retention.RetentionRw,
-            RetentionWetWeight = retentionWetWeight,
+            RetentionWetWeight = retention.RetentionWetWeight,
             RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
             SapGHoewiValue = retention.SapGHoewiValue
          };
@@ -255,6 +255,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
              PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
              PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
              PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird
+             
          };
 
         private String generateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
