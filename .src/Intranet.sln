@@ -55,7 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Integrationtest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.TestEnvironment", "Intranet.Testing\Labor\TestEnvironment\Intranet.Labor.TestEnvironment.csproj", "{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model.Test", "Intranet.Testomg\Labor\Model\Intranet.Labor.Model.Test.csproj", "{A9AD3ACF-4809-41A8-B661-AFEC4C5C2883}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model.Test", "Intranet.Testing\Labor\Model\Intranet.Labor.Model.Test.csproj", "{A9AD3ACF-4809-41A8-B661-AFEC4C5C2883}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.ViewModel.Test", "Intranet.Testing\Labor\ViewModel\Intranet.Labor.ViewModel.Test.csproj", "{0075A2C2-C137-4BD6-B7FB-098DB11AC5C3}"
 EndProject
