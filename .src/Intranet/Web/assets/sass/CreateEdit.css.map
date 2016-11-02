@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,cAAc;EACV,MAAM,EAAC,GAAG;EACV,gBAAgB,ECJI,OAAO;EDK3B,MAAM,EAAE,aAAa",
-"sources": ["CreateEdit.scss","IntigenaVariables.scss"],
-"names": [],
-"file": "CreateEdit.css"
-}
