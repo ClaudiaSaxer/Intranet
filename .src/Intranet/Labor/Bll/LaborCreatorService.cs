@@ -86,20 +86,21 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
         private TestValue TestTestValueOnlyExactlyOneHasToExist( ICollection<TestValue> testValue, String testType, String valueType )
         {
-            if (testValue.Count > 1)
+            if ( testValue.Count > 1 )
             {
-                Logger.Error("Only one Average for "+ testType + " per Testsheet allowed");
-                throw new InvalidDataException("Only one "+ valueType + " for " + testType + " per Testsheet allowed");
+                Logger.Error( "Only one Average for " + testType + " per Testsheet allowed" );
+                throw new InvalidDataException( "Only one " + valueType + " for " + testType + " per Testsheet allowed" );
             }
 
             var item = testValue.FirstOrDefault();
-            if (item == null)
+            if ( item == null )
             {
-                Logger.Error("No  " + valueType +"  for " + testType + " per Testsheet existing");
-                throw new InvalidDataException("No  " + valueType +"  for " + testType + " per Testsheet existing");
+                Logger.Error( "No  " + valueType + "  for " + testType + " per Testsheet existing" );
+                throw new InvalidDataException( "No  " + valueType + "  for " + testType + " per Testsheet existing" );
             }
             return item;
         }
+
         private Rewet ToRewetAverage( IEnumerable<TestValue> testValue )
         {
             var average = testValue.ToList()
@@ -116,7 +117,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                    .Where(
                                        x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
                                    .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist(average, "Retention", "Average");
+            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Retention", "Average" );
 
             return ToRetention( item.BabyDiaperTestValue );
         }
@@ -127,7 +128,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                    .Where(
                                        x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
                                    .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist(average, "Penetration Time", "Average");
+            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Penetration Time", "Average" );
 
             return ToPenetrationTime( item.BabyDiaperTestValue );
         }
@@ -138,7 +139,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              .Where(
                                                  x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) )
                                              .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Rewet", "Standard Deviation");
+            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Rewet", "Standard Deviation" );
 
             return ToRewet( item.BabyDiaperTestValue );
         }
@@ -149,7 +150,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              .Where(
                                                  x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
                                              .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Rewet", "Standard Deviation");
+            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Rewet", "Standard Deviation" );
 
             return ToRetention( item.BabyDiaperTestValue );
         }
@@ -162,7 +163,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                      ( x.TestValueType == TestValueType.StandardDeviation )
                                                      && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
                                              .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Penetration Time", "Standard Deviation");
+            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Penetration Time", "Standard Deviation" );
 
             return ToPenetrationTime( item.BabyDiaperTestValue );
         }
@@ -221,16 +222,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return penetrationtime;
         }
 
+        private TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry) => new TestInfo
+        {
+            TestPerson = testPerson,
+            ProductionCode = prodCode,
+            WeightyDiaperDry = weightDiaperDry
+        };
+
         private RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode )
         {
             var vm = new RewetTestValue
             {
-                TestInfo = new TestInfo
-                {
-                    TestPerson = testPerson,
-                    ProductionCode = prodCode,
-                    WeightyDiaperDry = rewet.WeightDiaperDry
-                },
+                TestInfo = toTestInfo( testPerson,prodCode,rewet.WeightDiaperDry ),
                 Rewet = ToRewet( rewet )
             };
             return vm;
@@ -240,12 +243,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var vm = new PenetrationTimeTestValue
             {
-                TestInfo = new TestInfo
-                {
-                    TestPerson = testPerson,
-                    ProductionCode = prodCode,
-                    WeightyDiaperDry = penetrationTime.WeightDiaperDry
-                },
+                TestInfo = toTestInfo(testPerson, prodCode, penetrationTime.WeightDiaperDry),
                 PenetrationTime = ToPenetrationTime( penetrationTime )
             };
             return vm;
@@ -255,12 +253,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var vm = new RetentionTestValue
             {
-                TestInfo = new TestInfo
-                {
-                    TestPerson = testPerson,
-                    ProductionCode = prodCode,
-                    WeightyDiaperDry = retention.WeightDiaperDry
-                },
+                TestInfo = toTestInfo(testPerson, prodCode, retention.WeightDiaperDry),
                 Retention = ToRetention( retention )
             };
             return vm;
