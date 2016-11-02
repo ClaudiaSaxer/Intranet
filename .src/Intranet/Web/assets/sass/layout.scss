@@ -1,12 +1,33 @@
-@import "IntigenaVariables.scss";
+@import "Variables.scss";
 
+$footer-height: 70px;
+$nav-height: 80px;
+$footer-border-width: 5px;
+$footer-border-heigth: 5px;
+
+
+html { 
+    body{
+        padding-top: $nav-height;
+        background-color: $background-color;
+        padding-bottom:$footer-height;
+    }
+}
+
+.body-content{
+    padding-left:10px;
+    padding-top:5px;
+
+<<<<<<< HEAD
 body { 
     padding-top: 90px;
+=======
+>>>>>>> dev
 }
 
 .vertical-line {
     width: auto;
-    height: 5px;
+    height: $footer-border-heigth;
     background-color: $intigena-blue;
     margin: 0 auto;
 }
@@ -36,14 +57,14 @@ body {
 
 .intigena-navbar{
     border-bottom-style:solid;
-    border-width:5px;
+    border-width:$footer-border-width;
     border-bottom-color: $intigena-blue;
     background-color: $intigena-light-blue;
 }
 
 .nav > li > a:hover{
     color:$intigena-blue;
-    background-color:white;
+    background-color:$background-color;
 }
 
 @media (min-width: 768px){

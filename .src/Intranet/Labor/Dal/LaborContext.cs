@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using Intranet.Labor.Model;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Dal
 {
@@ -47,6 +48,48 @@ namespace Intranet.Labor.Dal
         ///     the machines
         /// </value>
         public DbSet<Machine> Machines { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the instrons
+        /// </summary>
+        /// <value>the instrons</value>
+        public DbSet<Instron> Instrons { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the instron values
+        /// </summary>
+        /// <value>the instron values</value>
+        public DbSet<InstronValue> InstronValues { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the baby diaper test values
+        /// </summary>
+        /// <value>the baby diaper test values</value>
+        public DbSet<BabyDiaperTestValue> BabyDiaperTestValues { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the incontinence pad test values
+        /// </summary>
+        /// <value>the incontinence pad test values</value>
+        public DbSet<IncontinencePadTestValue> IncontinencePadTestValues { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test values
+        /// </summary>
+        /// <value>the test values</value>
+        public DbSet<TestValue> TestValues { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test notes
+        /// </summary>
+        /// <value>the test notes</value>
+        public DbSet<TestValueNote> TestNotes { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test sheets
+        /// </summary>
+        /// <value>the test sheets</value>
+        public DbSet<TestSheet> TestSheets { get; set; }
 
         #endregion
 

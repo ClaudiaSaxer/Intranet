@@ -4,15 +4,16 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/bundles/css")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render( "~/bundles/css" )
+    @Scripts.Render( "~/bundles/jquery" )
+    @Scripts.Render( "~/bundles/bootstrap" )
 </head>
 <body>
 @{ Html.RenderPartial( "_HeaderNavBar" ); }
 
 @RenderBody()
-  
+
+
 <footer class="navbar-fixed-bottom">
     <div class="bg-intigena-footer">
         <span class="text-muted footer-text">&copy; @DateTime.Now.Year - INTIGENA Hygienic Solutions</span>

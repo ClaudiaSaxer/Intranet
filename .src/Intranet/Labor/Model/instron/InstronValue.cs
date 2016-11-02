@@ -41,7 +41,14 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the Instron for the Value.
         /// </summary>
         /// <value>the instron for the value</value>
+        [ForeignKey( "InstronRefId" )]
         public Instron Instron { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the Instron ref id
+        /// </summary>
+        /// <value>the instron ref id </value>
+        public Int32 InstronRefId { get; set; }
 
         #endregion
     }

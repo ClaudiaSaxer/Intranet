@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BabyDiapersRetentionService.cs" />
+    <Compile Include="Extensions\ShiftTypeExtension.cs" />
+    <Compile Include="LaborCreatorBll.cs" />
+    <Compile Include="LaborCreatorService.cs" />
     <Compile Include="LaborHomeBll.cs" />
     <Compile Include="LaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +72,10 @@
     <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
       <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
       <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
       <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
