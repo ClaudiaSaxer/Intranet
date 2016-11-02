@@ -84,25 +84,30 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return vm;
         }
 
+        private TestValue TestTestValueOnlyExactlyOneHasToExist( ICollection<TestValue> testValue, String testType, String valueType )
+        {
+            if (testValue.Count > 1)
+            {
+                Logger.Error("Only one Average for "+ testType + " per Testsheet allowed");
+                throw new InvalidDataException("Only one "+ valueType + " for " + testType + " per Testsheet allowed");
+            }
+
+            var item = testValue.FirstOrDefault();
+            if (item == null)
+            {
+                Logger.Error("No  " + valueType +"  for " + testType + " per Testsheet existing");
+                throw new InvalidDataException("No  " + valueType +"  for " + testType + " per Testsheet existing");
+            }
+            return item;
+        }
         private Rewet ToRewetAverage( IEnumerable<TestValue> testValue )
         {
             var average = testValue.ToList()
                                    .Where(
                                        x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) )
                                    .ToList();
-            if ( average.Count > 1 )
-            {
-                Logger.Error( "Only one Average for Rewet per Testsheet allowed" );
-                throw new InvalidDataException( "Only one Average for Rewet per Testsheet allowed" );
-            }
-
-            var averageItem = average.FirstOrDefault();
-            if ( averageItem == null )
-            {
-                Logger.Error( "No Average for Rewet per Testsheet existing" );
-                throw new InvalidDataException( "No Average for Rewet per Testsheet existing" );
-            }
-            return ToRewet( averageItem.BabyDiaperTestValue );
+            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Rewet", "Average" );
+            return ToRewet( item.BabyDiaperTestValue );
         }
 
         private Retention ToRetentionAverage( IEnumerable<TestValue> testValue )
@@ -111,19 +116,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                    .Where(
                                        x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
                                    .ToList();
-            if ( average.Count > 1 )
-            {
-                Logger.Error( "Only one Average for Retention per Testsheet allowed" );
-                throw new InvalidDataException( "Only one Average for Retention per Testsheet allowed" );
-            }
+            var item = TestTestValueOnlyExactlyOneHasToExist(average, "Retention", "Average");
 
-            var averageItem = average.FirstOrDefault();
-            if ( averageItem == null )
-            {
-                Logger.Error( "No Average for Retention per Testsheet existing" );
-                throw new InvalidDataException( "No Average for Retention per Testsheet existing" );
-            }
-            return ToRetention( averageItem.BabyDiaperTestValue );
+            return ToRetention( item.BabyDiaperTestValue );
         }
 
         private PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValue )
@@ -132,19 +127,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                    .Where(
                                        x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
                                    .ToList();
-            if ( average.Count > 1 )
-            {
-                Logger.Error( "Only one Average for PenetrationTime per Testsheet allowed" );
-                throw new InvalidDataException( "Only one Average for PenetrationTime per Testsheet allowed" );
-            }
+            var item = TestTestValueOnlyExactlyOneHasToExist(average, "Penetration Time", "Average");
 
-            var averageItem = average.FirstOrDefault();
-            if ( averageItem == null )
-            {
-                Logger.Error( "No Average for PenetrationTime per Testsheet existing" );
-                throw new InvalidDataException( "No Average for PenetrationTime per Testsheet existing" );
-            }
-            return ToPenetrationTime( averageItem.BabyDiaperTestValue );
+            return ToPenetrationTime( item.BabyDiaperTestValue );
         }
 
         private Rewet ToRewetStandardDeviation( IEnumerable<TestValue> testValue )
@@ -153,19 +138,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              .Where(
                                                  x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) )
                                              .ToList();
-            if ( standardDeviation.Count > 1 )
-            {
-                Logger.Error( "Only one StandardDeviation for Rewet per Testsheet allowed" );
-                throw new InvalidDataException( "Only one StandardDeviation for Rewet per Testsheet allowed" );
-            }
+            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Rewet", "Standard Deviation");
 
-            var standardDeviationItem = standardDeviation.FirstOrDefault();
-            if ( standardDeviationItem == null )
-            {
-                Logger.Error( "No StandardDeviation for Rewet per Testsheet existing" );
-                throw new InvalidDataException( "No StandardDeviation for Rewet per Testsheet existing" );
-            }
-            return ToRewet( standardDeviationItem.BabyDiaperTestValue );
+            return ToRewet( item.BabyDiaperTestValue );
         }
 
         private Retention ToRetentionStandardDeviation( IEnumerable<TestValue> testValue )
@@ -174,19 +149,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              .Where(
                                                  x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
                                              .ToList();
-            if ( standardDeviation.Count > 1 )
-            {
-                Logger.Error( "Only one StandardDeviation for Retention per Testsheet allowed" );
-                throw new InvalidDataException( "Only one StandardDeviation for Retention per Testsheet allowed" );
-            }
+            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Rewet", "Standard Deviation");
 
-            var standardDeviationItem = standardDeviation.FirstOrDefault();
-            if ( standardDeviationItem == null )
-            {
-                Logger.Error( "No StandardDeviation for Retention per Testsheet existing" );
-                throw new InvalidDataException( "No StandardDeviation for Retention per Testsheet existing" );
-            }
-            return ToRetention( standardDeviationItem.BabyDiaperTestValue );
+            return ToRetention( item.BabyDiaperTestValue );
         }
 
         private PenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValue )
@@ -197,19 +162,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                      ( x.TestValueType == TestValueType.StandardDeviation )
                                                      && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
                                              .ToList();
-            if ( standardDeviation.Count > 1 )
-            {
-                Logger.Error( "Only one StandardDeviation for PenetrationTime per Testsheet allowed" );
-                throw new InvalidDataException( "Only one StandardDeviation for PenetrationTime per Testsheet allowed" );
-            }
+            var item = TestTestValueOnlyExactlyOneHasToExist(standardDeviation, "Penetration Time", "Standard Deviation");
 
-            var standardDeviationItem = standardDeviation.FirstOrDefault();
-            if ( standardDeviationItem == null )
-            {
-                Logger.Error( "No StandardDeviation for PenetrationTime per Testsheet existing" );
-                throw new InvalidDataException( "No StandardDeviation for PenetrationTime per Testsheet existing" );
-            }
-            return ToPenetrationTime( standardDeviationItem.BabyDiaperTestValue );
+            return ToPenetrationTime( item.BabyDiaperTestValue );
         }
 
         private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValue )
