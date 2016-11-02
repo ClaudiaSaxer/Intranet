@@ -55,9 +55,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Integrationtest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.TestEnvironment", "Intranet.Testing\Labor\TestEnvironment\Intranet.Labor.TestEnvironment.csproj", "{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model.Test", "Intranet.Testing\Labor\Model\Intranet.Labor.Model.Test.csproj", "{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model.Test", "Intranet.Labor.Mode.Test\Intranet.Labor.Model.Test.csproj", "{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.ViewModel.Test", "Intranet.Testing\Labor\ViewModel\Intranet.Labor.ViewModel.Test.csproj", "{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.ViewModel.Test", "Intranet.Labor.ViewModel.Test\Intranet.Labor.ViewModel.Test.csproj", "{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

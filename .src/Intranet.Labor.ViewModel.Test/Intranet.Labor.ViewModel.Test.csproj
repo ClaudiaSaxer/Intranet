@@ -4,15 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E569D010-8ACF-406E-8021-6FEC422960AD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intranet.Labor.ViewModel</RootNamespace>
-    <AssemblyName>Intranet.Labor.ViewModel</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>Intranet.Labor.ViewModel.Test</RootNamespace>
+    <AssemblyName>Intranet.Labor.ViewModel.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -20,10 +22,11 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Intranet.Labor.ViewModel.XML</DocumentationFile>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
+    <DocumentationFile>bin\Debug\Intranet.Labor.ViewModel.Test.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,7 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
-    <DocumentationFile>bin\Release\Intranet.Labor.ViewModel.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Intranet.Labor.ViewModel.Test.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,26 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LaborCreatorBabyDiapers\PenetrationTimeTestValue.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\Retention.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\RetentionTestValue.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\Rewet.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\RewetTestValue.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\TestInfo.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\LaborCreatorViewModel.cs" />
-    <Compile Include="LaborHomeViewModel.cs" />
-    <Compile Include="LaborCreatorBabyDiapers\PenetrationTime.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
-      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
-      <Name>Intranet.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
-      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
-      <Name>Intranet.Labor.Model</Name>
-    </ProjectReference>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
