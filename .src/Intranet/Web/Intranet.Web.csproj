@@ -232,9 +232,6 @@
     <Content Include="assets\sass\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
     </Content>
-    <Content Include="assets\sass\CreateEdit.css">
-      <DependentUpon>CreateEdit.scss</DependentUpon>
-    </Content>
     <Content Include="assets\sass\layout.css">
       <DependentUpon>layout.scss</DependentUpon>
     </Content>

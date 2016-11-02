@@ -104,6 +104,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborHomeService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<BabyDiapersRetentionService>()
+                   .As<IBabyDiapersRetentionService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
