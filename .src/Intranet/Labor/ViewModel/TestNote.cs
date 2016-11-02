@@ -11,7 +11,13 @@ namespace Intranet.Labor.ViewModel
     /// </summary>
     public class TestNote
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public Int32 Id { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public String Message { get; set; }
     }
 }

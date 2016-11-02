@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BabyDiapersRetentionBll.cs" />
     <Compile Include="BabyDiapersRetentionService.cs" />
     <Compile Include="Extensions\ShiftTypeExtension.cs" />
     <Compile Include="LaborCreatorBll.cs" />

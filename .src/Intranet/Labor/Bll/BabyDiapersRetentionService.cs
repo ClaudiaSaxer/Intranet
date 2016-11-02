@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Bll
@@ -14,6 +16,15 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class BabyDiapersRetentionService : ServiceBase, IBabyDiapersRetentionService
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets the bll for the baby diapers retention test.
+        /// </summary>
+        public IBabyDiapersRetentionBll BabyDiapersRetentionBll { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -53,7 +64,17 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
         {
-            return new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "New Hans", ProductionCode = "IT/11/16/158/"};
+            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo( testSheetId );
+
+            if ( testSheetInfo.IsNull() )
+            {
+                Logger.Warn( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!");
+                return null;
+            }
+
+            var viewModel = new BabyDiapersRetentionEditViewModel();
+            viewModel.ProductionCode = CreateProductionCode( testSheetInfo );
+            return viewModel;
         }
 
         /// <summary>
@@ -67,5 +88,10 @@ namespace Intranet.Labor.Bll
         }
 
         #endregion
+
+        private String CreateProductionCode( TestSheet testSheetInfo )
+        {
+            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/" + testSheetInfo.DayInYear + "/";
+        }
     }
 }

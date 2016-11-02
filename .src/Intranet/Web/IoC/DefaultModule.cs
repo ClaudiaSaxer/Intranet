@@ -8,6 +8,8 @@ using Intranet.Common;
 using Intranet.Dal;
 using Intranet.Definition;
 using Intranet.Labor.Bll;
+using Intranet.Labor.Dal;
+using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
 using Intranet.Web.Areas.Labor.Controllers;
 
@@ -110,7 +112,12 @@ namespace Intranet.Web.IoC
                    .As<IBabyDiapersRetentionService>()
 				   .PropertiesAutowired()
                    .InstancePerRequest();
-				   
+
+            builder.RegisterType<BabyDiapersRetentionBll>()
+                   .As<IBabyDiapersRetentionBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
             builder.RegisterType<LaborCreatorBll>()
                    .As<ILaborCreatorBll>()
                    .PropertiesAutowired()
@@ -138,6 +145,16 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
+            builder.RegisterType<DbFactory<LaborContext>>()
+                   .As<IDatabaseFactory<LaborContext>>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<DbCommit<LaborContext>>()
+                   .As<IDbCommit<LaborContext>>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
             builder.RegisterAssemblyTypes( typeof(ModuleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
@@ -146,6 +163,12 @@ namespace Intranet.Web.IoC
 
             builder.RegisterAssemblyTypes( typeof(RoleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(TestSheetRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();

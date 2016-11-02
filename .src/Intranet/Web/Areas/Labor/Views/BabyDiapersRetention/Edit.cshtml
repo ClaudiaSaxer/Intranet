@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container body-content">
+<div class="container">
     
     <h2>Höschenwindeln - Retention-Test</h2>
 
@@ -54,7 +54,8 @@
                 {
                     <label class="col-sm-2 control-label">Error Code:</label>
                     <div class="col-sm-10">
-                        @Html.TextAreaFor(m => Model.Notes.ElementAt(i).Message, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text" })
+                        @Html.TextAreaFor( m => Model.Notes.ElementAt( i )
+                                                     .Message, new { @class = "form-control", type = "text" } )
                     </div>
                 }
             }

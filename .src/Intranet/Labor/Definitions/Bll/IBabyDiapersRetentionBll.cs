@@ -1,4 +1,5 @@
 ﻿using System;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Definition
 {
@@ -12,6 +13,13 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="retentionTestId">The ID of the retention Test</param>
         /// <returns>The retentiontest with the given Id</returns>
-        void GetBabyDiapersRetetionTest(Int32 retentionTestId);
+        BabyDiaperTestValue GetBabyDiapersRetetionTest(Int32 retentionTestId);
+
+        /// <summary>
+        ///     Query for the Test sheet info
+        /// </summary>
+        /// <param name="testSheetId">The ID of the test sheet</param>
+        /// <returns>The test sheet</returns>
+        TestSheet GetTestSheetInfo(Int32 testSheetId);
     }
 }
