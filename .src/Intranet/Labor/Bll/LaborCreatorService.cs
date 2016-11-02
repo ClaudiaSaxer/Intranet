@@ -101,7 +101,49 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 Logger.Error( "No Average for Rewet per Testsheet existing" );
                 throw new InvalidDataException( "No Average for Rewet per Testsheet existing" );
             }
-            return toRewet( averageItem.BabyDiaperTestValue );
+            return ToRewet( averageItem.BabyDiaperTestValue );
+        }
+
+        private Retention ToRetentionAverage(IEnumerable<TestValue> testValue)
+        {
+            var average = testValue.ToList()
+                                   .Where(
+                                       x => (x.TestValueType == TestValueType.Average) && (x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention))
+                                   .ToList();
+            if (average.Count > 1)
+            {
+                Logger.Error("Only one Average for Retention per Testsheet allowed");
+                throw new InvalidDataException("Only one Average for Retention per Testsheet allowed");
+            }
+
+            var averageItem = average.FirstOrDefault();
+            if (averageItem == null)
+            {
+                Logger.Error("No Average for Retention per Testsheet existing");
+                throw new InvalidDataException("No Average for Retention per Testsheet existing");
+            }
+            return ToRetention(averageItem.BabyDiaperTestValue);
+        }
+
+        private PenetrationTime ToPenetrationTimeAverage(IEnumerable<TestValue> testValue)
+        {
+            var average = testValue.ToList()
+                                   .Where(
+                                       x => (x.TestValueType == TestValueType.Average) && (x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime))
+                                   .ToList();
+            if (average.Count > 1)
+            {
+                Logger.Error("Only one Average for PenetrationTime per Testsheet allowed");
+                throw new InvalidDataException("Only one Average for PenetrationTime per Testsheet allowed");
+            }
+
+            var averageItem = average.FirstOrDefault();
+            if (averageItem == null)
+            {
+                Logger.Error("No Average for PenetrationTime per Testsheet existing");
+                throw new InvalidDataException("No Average for PenetrationTime per Testsheet existing");
+            }
+            return ToPenetrationTime(averageItem.BabyDiaperTestValue);
         }
 
         private Rewet ToRewetStandardDeviation(IEnumerable<TestValue> testValue)
@@ -122,7 +164,49 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 Logger.Error("No StandardDeviation for Rewet per Testsheet existing");
                 throw new InvalidDataException("No StandardDeviation for Rewet per Testsheet existing");
             }
-            return toRewet(standardDeviationItem.BabyDiaperTestValue);
+            return ToRewet(standardDeviationItem.BabyDiaperTestValue);
+        }
+
+        private Retention ToRetentionStandardDeviation(IEnumerable<TestValue> testValue)
+        {
+            var standardDeviation = testValue.ToList()
+                                   .Where(
+                                       x => (x.TestValueType == TestValueType.StandardDeviation) && (x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention))
+                                   .ToList();
+            if (standardDeviation.Count > 1)
+            {
+                Logger.Error("Only one StandardDeviation for Retention per Testsheet allowed");
+                throw new InvalidDataException("Only one StandardDeviation for Retention per Testsheet allowed");
+            }
+
+            var standardDeviationItem = standardDeviation.FirstOrDefault();
+            if (standardDeviationItem == null)
+            {
+                Logger.Error("No StandardDeviation for Retention per Testsheet existing");
+                throw new InvalidDataException("No StandardDeviation for Retention per Testsheet existing");
+            }
+            return ToRetention(standardDeviationItem.BabyDiaperTestValue);
+        }
+
+        private PenetrationTime ToPenetrationTimeStandardDeviation(IEnumerable<TestValue> testValue)
+        {
+            var standardDeviation = testValue.ToList()
+                                   .Where(
+                                       x => (x.TestValueType == TestValueType.StandardDeviation) && (x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime))
+                                   .ToList();
+            if (standardDeviation.Count > 1)
+            {
+                Logger.Error("Only one StandardDeviation for PenetrationTime per Testsheet allowed");
+                throw new InvalidDataException("Only one StandardDeviation for PenetrationTime per Testsheet allowed");
+            }
+
+            var standardDeviationItem = standardDeviation.FirstOrDefault();
+            if (standardDeviationItem == null)
+            {
+                Logger.Error("No StandardDeviation for PenetrationTime per Testsheet existing");
+                throw new InvalidDataException("No StandardDeviation for PenetrationTime per Testsheet existing");
+            }
+            return ToPenetrationTime(standardDeviationItem.BabyDiaperTestValue);
         }
 
         private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValue )
@@ -138,7 +222,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                       x =>
                                           rewets.Add( ToRewetTestValue( x.BabyDiaperTestValue,
                                                                         x.LastEditedPerson,
-                                                                        generateProdCode( x.TestSheet.MachineNr,
+                                                                        GenerateProdCode( x.TestSheet.MachineNr,
                                                                                           x.TestSheet.CreatedDateTime.Year,
                                                                                           x.DayInYearOfArticleCreation,
                                                                                           x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
@@ -153,9 +237,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                       x =>x.TestValueType == TestValueType.Single && x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention)
                                   .ForEach(
                                       x =>
-                                          retention.Add(ToRententionTestValue(x.BabyDiaperTestValue,
+                                          retention.Add(ToRetentionTestValue(x.BabyDiaperTestValue,
                                                                         x.LastEditedPerson,
-                                                                        generateProdCode(x.TestSheet.MachineNr,
+                                                                        GenerateProdCode(x.TestSheet.MachineNr,
                                                                                           x.TestSheet.CreatedDateTime.Year,
                                                                                           x.DayInYearOfArticleCreation,
                                                                                           x.BabyDiaperTestValue.DiaperCreatedTime))));
@@ -172,7 +256,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                       x =>
                                           penetrationtime.Add(ToPenetrationTimeTestValue(x.BabyDiaperTestValue,
                                                                         x.LastEditedPerson,
-                                                                        generateProdCode(x.TestSheet.MachineNr,
+                                                                        GenerateProdCode(x.TestSheet.MachineNr,
                                                                                           x.TestSheet.CreatedDateTime.Year,
                                                                                           x.DayInYearOfArticleCreation,
                                                                                           x.BabyDiaperTestValue.DiaperCreatedTime))));
@@ -189,7 +273,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                     ProductionCode = prodCode,
                     WeightyDiaperDry = rewet.WeightDiaperDry
                 },
-                Rewet = toRewet( rewet )
+                Rewet = ToRewet( rewet )
             };
             return vm;
         }
@@ -204,7 +288,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                     ProductionCode = prodCode,
                     WeightyDiaperDry = penetrationTime.WeightDiaperDry
                 },
-                PenetrationTime = toPenetrationTime(penetrationTime)
+                PenetrationTime = ToPenetrationTime(penetrationTime)
             };
             return vm;
         }
@@ -219,12 +303,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
                     ProductionCode = prodCode,
                     WeightyDiaperDry = retention.WeightDiaperDry
                 },
-                Retention = toRetention(retention)
+                Retention = ToRetention(retention)
             };
             return vm;
         }
 
-        private Rewet toRewet( BabyDiaperTestValue rewet )
+        private Rewet ToRewet( BabyDiaperTestValue rewet )
             => new Rewet
             {
                 Revet210Rw = rewet.Revet210Rw,
@@ -236,7 +320,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
 
 
-        private Retention toRetention(BabyDiaperTestValue retention)
+        private Retention ToRetention(BabyDiaperTestValue retention)
          => new Retention
          {
             SapNr = retention.SapNr,
@@ -248,7 +332,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             SapGHoewiValue = retention.SapGHoewiValue
          };
 
-        private PenetrationTime toPenetrationTime(BabyDiaperTestValue penetrationTime)
+        private PenetrationTime ToPenetrationTime(BabyDiaperTestValue penetrationTime)
          => new PenetrationTime
          {
              PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
@@ -258,7 +342,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
              
          };
 
-        private String generateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
+        private String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
             => "IT/" + machine + "/" + year + "/" + dayOfyear + "/" + dayOfyear + "/" + time.Minutes + ":" + time.Seconds;
 
         #endregion
