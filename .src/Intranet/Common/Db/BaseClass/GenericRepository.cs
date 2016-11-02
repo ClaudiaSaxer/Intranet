@@ -274,7 +274,7 @@ namespace Intranet.Common
         /// </remarks>
         /// <param name="keyValues">The values of the primary key for the entity to be found.</param>
         /// <returns>A task that represents the asynchronous find operation. The task result contains the entity found, or null.</returns>
-        public virtual IQueryable FindAsync( params Object[] keyValues )
+        public virtual Task<TEntity> FindAsync( params Object[] keyValues )
         {
             Logger.Trace( "Enter - Exit on next line." );
 
