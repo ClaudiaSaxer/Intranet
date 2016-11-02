@@ -13,14 +13,14 @@ namespace Intranet.Labor.Definition
     public interface IBabyDiapersRetentionService
     {
         /// <summary>
-        ///     Gets the BabyDiapersRetentionEditViewModel
+        ///     Gets a new BabyDiapersRetentionEditViewModel
         /// </summary>
         /// <param name="retentionTestId">The Id of the Babydiaper retention test which will be edited</param>
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId );
 
         /// <summary>
-        ///     Gets the BabyDiapersRetentionEditViewModel
+        ///     Gets the BabyDiapersRetentionEditViewModel for edit
         /// </summary>
         /// <param name="testSheetId">The Id of the test sheet where the Babydiaper retention test is for</param>
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
