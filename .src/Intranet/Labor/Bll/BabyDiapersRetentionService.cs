@@ -37,7 +37,13 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
-            return new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "Edit Hans", ProductionCode = "IT/11/16/158/" };
+            var vm = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "Edit Hans", ProductionCode = "IT/11/16/158/" };
+            vm.Notes = new List<TestNote>
+            {
+                new TestNote { Id=1,Message = "Hans was here."},
+                new TestNote { Id=1,Message = "Franz was here, too. :P"}
+            };
+            return vm;
         }
 
         /// <summary>
