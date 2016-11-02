@@ -68,7 +68,6 @@ namespace Intranet.ViewModel.Test
                   .BeFalse( "because is set false" );
         }
 
-
         /// <summary>
         ///     Test Properties 3
         /// </summary>
@@ -82,11 +81,40 @@ namespace Intranet.ViewModel.Test
                 Visible = false
             };
             actual.Id.Should()
-                  .Be(0);
+                  .Be( 0 );
             actual.Name.Should()
                   .BeEmpty( "because set empty" );
             actual.Visible.Should()
-                  .BeFalse("because is set false");
+                  .BeFalse( "because is set false" );
+        }
+
+        /// <summary>
+        /// Test Properties 4
+        /// </summary>
+        [Fact]
+        public void PropertiesTest4()
+        {
+            var actual = InstanceCreator
+                .CreateInstanceOptions<ModuleSetting>()
+                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
+                .For( x => x.IsTypeOf<ICollection<String>>() )
+                .WithFactory( x => 666 )
+                .For( x => x.IsTypeOf<Int32>() )
+                .WithFactory( x => "the devil is alive" )
+                .For( x => x.IsTypeOf<String>() )
+                .WithFactory( x => true )
+                .For( x => x.IsTypeOf<Boolean>() )
+                .Complete()
+                .CreateInstance();
+
+            actual.Should()
+                  .NotBeNull( "is initialized" );
+            actual.Name.Should()
+                  .Be( "the devil is alive" );
+            actual.Id.Should()
+                  .Be( 666 );
+            actual.Visible.Should()
+                  .Be( true );
         }
     }
 }

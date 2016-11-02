@@ -84,6 +84,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Intranet\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Intranet\ViewModel\Intranet.ViewModel.csproj">
       <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
       <Name>Intranet.ViewModel</Name>
