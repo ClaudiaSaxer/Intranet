@@ -18,6 +18,6 @@
         /// <summary>
         ///     A Test representing a penetration time test
         /// </summary>
-        PenetrationTime
+        RewetAndPenetrationTime
     }
 }

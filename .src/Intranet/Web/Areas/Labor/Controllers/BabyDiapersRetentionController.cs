@@ -41,28 +41,28 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <summary>
         ///     Loads the BabywindelnRetetion Edit View with a new Item for the Test-Sheet
         /// </summary>
-        /// /// <param name="testSheetId">The Id of the test-sheet which this Test-Data is for</param>
+        /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Create(Int32 testSheetId = 0)
+        public ActionResult Create(Int32 id = 0)
         {
-            if (testSheetId.IsNull())
+            if (id.IsNull())
                 return HttpNotFound();
 
-            var viewModel = BabyDiapersRetentionService.GetNewBabyDiapersRetentionEditViewModel( testSheetId );
+            var viewModel = BabyDiapersRetentionService.GetNewBabyDiapersRetentionEditViewModel(id);
             return View("Edit", viewModel);
         }
 
         /// <summary>
         ///     Loads the BabywindelnRetetion Edit View with an Item form the Test-Sheet which will be edited 
         /// </summary>
-        /// /// <param name="testValueId">The Id of the test-sheet which this Test-Data is for</param>
+        /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Edit(Int32 testValueId = 0)
+        public ActionResult Edit(Int32 id = 0)
         {
-            if (testValueId.IsNull())
+            if (id.IsNull())
                 return HttpNotFound();
 
-            var viewModel = BabyDiapersRetentionService.GetBabyDiapersRetentionEditViewModel(testValueId);
+            var viewModel = BabyDiapersRetentionService.GetBabyDiapersRetentionEditViewModel(id);
             return View("Edit", viewModel);
         }
 
