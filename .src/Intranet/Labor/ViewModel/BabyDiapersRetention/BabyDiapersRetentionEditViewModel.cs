@@ -65,6 +65,14 @@ namespace Intranet.Labor.ViewModel
         ///     The Collection of Notes
         /// </value>
         public ICollection<TestNote> Notes { get; set; }
+        /// <summary>
+        ///     Gets or sets the Collection of NoteCodes
+        /// </summary>
+        /// <value>
+        ///     The Collection of NoteCodes
+        /// </value>
+        public ICollection<String> NoteCodes { get; set; }
+
 
         #endregion
     }
