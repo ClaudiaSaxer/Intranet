@@ -83,7 +83,12 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the retention percent after the zentrifuge</value>
         public Double RetentionAfterZentrifugePercent { get; set; }
-
+        /// <summary>
+        /// Gets or sets the retention wet weight of the diaper
+        /// </summary>
+        /// <value>the wet weight of the diaper</value>
+        public Double RetentionWetWeight { get; set; }
+        
         /// <summary>
         ///     Gets or sets the value for the SAP g/Höwi
         /// </summary>

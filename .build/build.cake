@@ -46,6 +46,8 @@ Task("Clean")
     CleanDirectory( testDirectory + Directory("Web/bin") );
 	CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
 	CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Model/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/ViewModel/bin") );
     CleanDirectory( outputDirectory );
 });
 
@@ -84,6 +86,8 @@ Task("RunTests")
 		testDirectory.ToString()+"/Dal/bin/Release/Intranet.Dal.Test.dll",
 		testDirectory.ToString()+"/Labor/Bll/bin/Release/Intranet.Labor.Bll.Test.dll",
 		testDirectory.ToString()+"/Labor/Dal/bin/Release/Intranet.Labor.Dal.Test.dll",
+		testDirectory.ToString()+"/Labor/Model/bin/Release/Intranet.Labor.Model.Test.dll",
+		testDirectory.ToString()+"/Labor/ViewModel/bin/Release/Intranet.Labor.ViewModel.Test.dll",
 		testDirectory.ToString()+"/ViewModel/bin/Release/Intranet.ViewModel.Test.dll"
 	}, new XUnit2Settings
 		{ 
