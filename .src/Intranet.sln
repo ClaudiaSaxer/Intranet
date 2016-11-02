@@ -55,6 +55,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Integrationtest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.TestEnvironment", "Intranet.Testing\Labor\TestEnvironment\Intranet.Labor.TestEnvironment.csproj", "{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.Model.Test", "Intranet.Testing\Labor\Model\Intranet.Labor.Model.Test.csproj", "{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intranet.Labor.ViewModel.Test", "Intranet.Testing\Labor\ViewModel\Intranet.Labor.ViewModel.Test.csproj", "{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +157,14 @@ Global
 		{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{950665AB-8F4F-4E9F-B56A-E076F8DAD75D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,5 +187,7 @@ Global
 		{E569D010-8ACF-406E-8021-6FEC422960AD} = {22989D42-464A-41BE-BA0A-4140951AE958}
 		{D0729311-52B7-478F-92E0-BDE08E91798C} = {F6EC038D-E5BE-4E36-A51C-B47A8EB28808}
 		{F7BAC127-5B8B-4C83-938A-33C2E8A8C25C} = {B453FACC-237D-4829-BC66-4241D304FD6A}
+		{4904E48F-E0B0-42BB-8A4F-E5E79CD437EC} = {B453FACC-237D-4829-BC66-4241D304FD6A}
+		{950665AB-8F4F-4E9F-B56A-E076F8DAD75D} = {B453FACC-237D-4829-BC66-4241D304FD6A}
 	EndGlobalSection
 EndGlobal
