@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BabyDiapersRetention\BabyDiapersRetentionEditViewModel.cs" />
+    <Compile Include="TestNote.cs" />
     <Compile Include="LaborHomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

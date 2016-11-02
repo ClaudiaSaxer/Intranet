@@ -216,7 +216,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Labor\Controllers\BabyWindelnRetentionController.cs" />
+    <Compile Include="Areas\Labor\Controllers\BabyDiapersRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -231,6 +231,15 @@
   <ItemGroup>
     <Content Include="assets\sass\bootstrap.css">
       <DependentUpon>bootstrap.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\CreateEdit.css">
+      <DependentUpon>CreateEdit.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\layout.css">
+      <DependentUpon>layout.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
     </Content>
     <Content Include="resources\css\bootstrap-toggle.min.css" />
     <Content Include="resources\css\intigena\bootstrap.css" />
@@ -331,6 +340,8 @@
     <Content Include="assets\sass\Shell.scss" />
     <Content Include="assets\sass\ShellSettings.scss" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
+    <Content Include="Areas\Labor\Views\BabyDiapersRetention\Edit.cshtml" />
+    <Content Include="assets\sass\CreateEdit.scss" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\bootstrap-toggle.min.js" />
     <Content Include="resources\js\bootstrap.js" />
@@ -381,7 +392,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Labor\Views\BabyWindelnRetention\" />
     <Folder Include="Areas\Labor\Views\Shared\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
