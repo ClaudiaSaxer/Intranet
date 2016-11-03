@@ -1,6 +1,7 @@
 ﻿#region Usings
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Extend;
 using Intranet.Common;
@@ -55,12 +56,14 @@ namespace Intranet.Labor.Bll
         public BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
             var testValue = BabyDiapersRetentionBll.GetTestValue( retentionTestId );
-            var babyDiapersTestValue = BabyDiapersRetentionBll.GetBabyDiapersRetetionTest( retentionTestId );
+            var babyDiapersTestValue = testValue.BabyDiaperTestValue;
             var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo( testValue.TestSheetRefId );
-            var notes = BabyDiapersRetentionBll.GetNotes( testValue.TestValueId );
+            var notes = testValue.TestValueNote;
             var errors = BabyDiapersRetentionBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => error.ErrorCode + " - " + error.Value )
                                    .ToList();
+            if (notes.IsNull())
+                notes = new List<TestValueNote>();
             var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
                                  .ToList();
 
@@ -110,14 +113,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The saved or updated BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel Save( BabyDiapersRetentionEditViewModel viewModel )
         {
-            if ( viewModel.TestValueId <= 0 ) // New Test
-            {
-                viewModel = SaveNewTest( viewModel );
-            }
-            else  // update
-            {
-                viewModel = UpdateTest( viewModel );
-            }
+            viewModel = viewModel.TestValueId <= 0 ? SaveNewTest( viewModel ) : UpdateTest( viewModel );
             return viewModel;
         }
 
@@ -164,6 +160,7 @@ namespace Intranet.Labor.Bll
             testValue.SapType = testSheet.SAPType;
             testValue.SapNr = testSheet.SAPNr;
             testValue.SapGHoewiValue = 0.0; // TODO auf db schauen wegen grenzwert
+            // TODO Update Average + Std of TestSheet
             return testValue;
         }
     }

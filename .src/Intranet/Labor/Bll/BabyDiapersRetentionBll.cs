@@ -67,8 +67,8 @@ namespace Intranet.Labor.Bll
         /// <returns>The test value with the given Id</returns>
         public TestValue GetTestValue( Int32 retentionTestId )
         {
-            var testValue = TestValueRepository.Where( tv => tv.TestValueId == retentionTestId )
-                                               .FirstOrDefault();
+            var testValue = TestValueRepository.FindAsync(retentionTestId)
+                                               .Result;
             return testValue;
         }
 
