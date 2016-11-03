@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaborCreaterServiceTest.cs" />
     <Compile Include="LaborCreatorServiceHelperTest.cs" />
     <Compile Include="LaborHomeBllTest.cs" />
     <Compile Include="LaborHomeServiceTest.cs" />

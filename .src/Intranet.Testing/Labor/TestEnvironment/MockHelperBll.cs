@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model.labor;
 using Intranet.Model;
 using Moq;
 
@@ -21,7 +22,7 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for LaborHomeBll
         /// </summary>
         /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
-        /// <returns></returns>
+        /// <returns>a IloaborHomebll moq</returns>
         public static ILaborHomeBll GetLaborHomeBll( IEnumerable<Module> modules )
         {
             var mock = new Mock<ILaborHomeBll>
@@ -40,7 +41,7 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for GenericRepository
         /// </summary>
         /// <param name="roles">Queryable Roles returned by GetAll</param>
-        /// <returns></returns>
+        /// <returns>a generic reposisory for roles</returns>
         public static IGenericRepository<Role> GetAllRoles(IQueryable<Role> roles)
         {
             var mock = new Mock<IGenericRepository<Role>>
@@ -54,5 +55,25 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for LaborCreatorBll
+        /// </summary>
+        /// <param name="testSheet">the testsheet</param>
+        /// <returns>a moq for laborcreatorbll</returns>
+        public static ILaborCreatorBll GetLaborCreatorBll(TestSheet testSheet)
+        {
+            var mock = new Mock<ILaborCreatorBll>
+            {
+                Name = "MockHelper.ILaborCreatorBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.getTestSheetForId(It.IsAny<Int32>()))
+                .Returns(testSheet);
+
+            return mock.Object;
+        }
+
     }
 }
