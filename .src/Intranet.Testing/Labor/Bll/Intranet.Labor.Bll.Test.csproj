@@ -79,6 +79,7 @@
     <Compile Include="LaborHomeBllTest.cs" />
     <Compile Include="LaborHomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShiftTypeExtensionTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
