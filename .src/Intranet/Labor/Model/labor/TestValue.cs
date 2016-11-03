@@ -27,6 +27,12 @@ namespace Intranet.Labor.Model.labor
         public DateTime CreatedDateTime { get; set; }
 
         /// <summary>
+        ///     Gets or sets the day in the year of the article creation
+        /// </summary>
+        /// <value>the day in the year</value>
+        public Int32 DayInYearOfArticleCreation { get; set; }
+
+        /// <summary>
         ///     Gets or sets the person who created the test value
         /// </summary>
         public String CreatedPerson { get; set; }

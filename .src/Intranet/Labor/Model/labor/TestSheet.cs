@@ -32,11 +32,6 @@ namespace Intranet.Labor.Model.labor
         /// <value>the shift of the test sheet</value>
         public ShiftType ShiftType { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the day in the year of the test sheet
-        /// </summary>
-        /// <value>the day in the year</value>
-        public Int32 DayInYear { get; set; }
 
         /// <summary>
         ///     Gets or sets the timestamp of the creation of the test sheet

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Intranet.Labor.Model.labor;
 
 namespace Intranet.Web.Areas.Labor.Controllers
