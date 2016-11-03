@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using Extend;
+using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Bll;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -19,6 +20,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>the labor creator bll</value>
         public ILaborCreatorBll LaborCreatorBll { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the Helper for the Labor Creator Service
+        /// </summary>
+        /// <value>the helper for the Labor creator service</value>
+        public ILaborCreatorServiceHelper Helper { get; set; }
+
         #endregion
 
         #region Ctor
@@ -34,39 +41,46 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
         #endregion
 
-        #region Implementation of ILaborCreatorService
-
         /// <summary>
         ///     Get the labor creator view model for a specific id.
         /// </summary>
         /// <returns>the labor creator view model</returns>
         public LaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
         {
-            var vm = InstanceCreator
-                .CreateInstanceOptions<LaborCreatorViewModel>()
-                .WithFactory( x => new List<String>( RandomValueEx.GetRandomStrings( 10 ) ) )
-                .For( x => x.IsTypeOf<ICollection<String>>() )
-                .Complete()
-                .CreateInstance();
+            var testSheet = LaborCreatorBll.getTestSheetForId( testSheetId );
+            var babydiaper = testSheet.TestValues.ToList()
+                                      .Where( x => x.ArticleTestType == ArticleType.BabyDiaper )
+                                      .ToList();
+            var rewets = Helper.ToRewetTestValuesCollection( babydiaper );
+            var rewetAverage = Helper.ToRewetAverage( babydiaper );
+            var rewetStandardDeviation = Helper.ToRewetStandardDeviation( babydiaper );
 
-            //TODO
-            /*    var vm = new LaborCreatorViewModel
-                {
-                    Producer = "Intigena",
-                    Shift =  ShiftType.Morning.ToFriendlyString(),
-                    FaNr = "Fa123",
-                    ProductName = "Babydream",
-                    SizeName = "Maxi-Plus",
-                    CreatedDate= "12.12.2015"
-                   
-                };*/
+            var retentions = Helper.ToRetentionTestValuesCollection( babydiaper );
+            var retentionAverage = Helper.ToRetentionAverage( babydiaper );
+            var retentionStandardDeviation = Helper.ToRetentionStandardDeviation( babydiaper );
+
+            var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection( babydiaper );
+            var penetrationTimeAverage = Helper.ToPenetrationTimeAverage( babydiaper );
+            var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation( babydiaper );
+            var vm = new LaborCreatorViewModel
+            {
+                Producer = "Intigena",
+                Shift = testSheet.ShiftType.ToFriendlyString(),
+                FaNr = testSheet.FaNr,
+                ProductName = testSheet.ProductName,
+                SizeName = testSheet.SizeName,
+                CreatedDate = testSheet.CreatedDateTime.ToShortDateString(),
+                Rewets = rewets,
+                RewetAverage = rewetAverage,
+                RewetStandardDeviation = rewetStandardDeviation,
+                Retentions = retentions,
+                RetentionAverage = retentionAverage,
+                RetentionStandardDeviation = retentionStandardDeviation,
+                PenetrationTimes = penetrationTimes,
+                PenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
+                PenetrationTimeAverage = penetrationTimeAverage
+            };
             return vm;
         }
-
-        #endregion
-
-        #region Implementation of ILaborCreatorService
-
-        #endregion
     }
 }
