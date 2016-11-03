@@ -207,6 +207,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return vm;
         }
 
+        /// <summary>
+        /// Sets the values for the Rewet View Model out of the BabyDiaperTestValue Model
+        /// </summary>
+        /// <param name="rewet">the Baby Diaper Test value with the rewet data</param>
+        /// <returns>The rewet View Model with the data collected from the model</returns>
         private Rewet ToRewet( BabyDiaperTestValue rewet )
             => new Rewet
             {
@@ -218,6 +223,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 Revet140Value = rewet.Revert140Value
             };
 
+        /// <summary>
+        /// Sets the values for the Retention View Model out of the BabyDiaperTestValue Model
+        /// </summary>
+        /// <param name="retention">the Baby Diaper Test value with the retention data</param>
+        /// <returns>The Retention View Model with the data collected from the model</returns>
         private Retention ToRetention( BabyDiaperTestValue retention )
             => new Retention
             {
@@ -229,7 +239,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
                 SapGHoewiValue = retention.SapGHoewiValue
             };
-
+        /// <summary>
+        /// Sets the values for the Penetration Time View Model out of the BabyDiaperTestValue Model
+        /// </summary>
+        /// <param name="penetrationTime">the Baby Diaper Test value with the penetration time data</param>
+        /// <returns>The Penetration Time View Model with the data collected from the model</returns>
         private PenetrationTime ToPenetrationTime( BabyDiaperTestValue penetrationTime )
             => new PenetrationTime
             {
