@@ -98,7 +98,6 @@ namespace Intranet.Labor.Dal.Migrations
                 TestType = TestTypeBabyDiaper.Rewet
             };
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
-            babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
 
             var babyDiapersRetentionTestValue1 = new TestValue
             {
@@ -127,7 +126,6 @@ namespace Intranet.Labor.Dal.Migrations
                 TestType = TestTypeBabyDiaper.Retention
             };
             babyDiapersRetentionTestValue1.BabyDiaperTestValue = babyDiapersRetentionTest1;
-            babyDiapersRetentionTestValue1.BabyDiaperTestValueRefId = 2;
 
 
             testSheet.TestValues = new List<TestValue>

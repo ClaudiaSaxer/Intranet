@@ -79,8 +79,8 @@ namespace Intranet.Labor.Bll
         /// <returns>The test sheet</returns>
         public TestSheet GetTestSheetInfo( Int32 testSheetId )
         {
-            var testSheet = TestSheetRepository.Where( ts => ts.TestSheetId == testSheetId )
-                                               .FirstOrDefault();
+            var testSheet = TestSheetRepository.FindAsync( testSheetId )
+                                               .Result;
             return testSheet;
         }
 
