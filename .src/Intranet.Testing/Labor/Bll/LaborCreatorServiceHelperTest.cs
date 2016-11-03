@@ -693,7 +693,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            var actual = serviceHelper.ToPenetrationTimeTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+            var actual = serviceHelper.ToRetentionTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
                   .Be( 2 );
@@ -842,6 +842,10 @@ namespace Intranet.Labor.Bll.Test
             actual.Count.Should()
                   .Be( 4 );
         }
+
+
+        
+
 
         /// <summary>
         ///     Testing ToRewetTestValue ok
