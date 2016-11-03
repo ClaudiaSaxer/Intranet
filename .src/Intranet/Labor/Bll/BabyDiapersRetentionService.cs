@@ -108,7 +108,7 @@ namespace Intranet.Labor.Bll
 
         private String CreateProductionCode( TestSheet testSheetInfo )
         {
-            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/TODO/";
+            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/";
         }
     }
 }
