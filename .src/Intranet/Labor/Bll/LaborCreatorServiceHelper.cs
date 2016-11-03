@@ -77,7 +77,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the penetration time with the average</returns>
         public PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValues )
-            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.Average ) );
+            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.RewetAndPenetrationTime, TestValueType.Average ) );
 
         /// <summary>
         ///     Creates a PenetrationTime Standard Deviation with the data from the test values
@@ -85,7 +85,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the penetration time with the standard deviation</returns>
         public PenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValues )
-            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.StandardDeviation ) );
+            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.RewetAndPenetrationTime, TestValueType.StandardDeviation ) );
 
         /// <summary>
         ///     Creates the PenetrationTime TestValue from diffrent input data
@@ -112,7 +112,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ICollection<PenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues )
             => ToTestValuesCollectionByTestType( testValues,
                                                  TestValueType.Single,
-                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.PenetrationTime },
+                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.RewetAndPenetrationTime },
                                                  ToPenetrationTimeTestValue );
 
         /// <summary>
@@ -121,16 +121,35 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="retention">the Baby Diaper Test value with the retention data</param>
         /// <returns>The Retention View Model with the data collected from the model</returns>
         public Retention ToRetention( BabyDiaperTestValue retention )
-            => new Retention
+        {
+           ValidateRequiredItem( retention.RetentionRw,"retention rw" );
+            return new Retention
             {
+
                 SapNr = retention.SapNr,
                 RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifugeValue,
                 SapType = retention.SapType,
-                RetentionRw = retention.RetentionRw,
+                RetentionRw = retention.RetentionRw.GetValueOrDefault(),
                 RetentionWetWeight = retention.RetentionWetWeight,
                 RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
                 SapGHoewiValue = retention.SapGHoewiValue
             };
+
+        }
+
+        /// <summary>
+        /// Validates a required item
+        /// </summary>
+        /// <param name="item">the idtem to be validated</param>
+        /// <param name="name">the name of the item</param>
+        /// <typeparam name="T">the type of the item</typeparam>
+        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
+        public void ValidateRequiredItem<T>( T item, String name )
+        {
+            if(item.IsNull()) 
+                throw new InvalidDataException("Item "+name+"of type"+typeof(T)+"is required and can not be null");
+        }
+
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
@@ -233,7 +252,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues )
             => ToTestValuesCollectionByTestType( testValues,
                                                  TestValueType.Single,
-                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet, TestTypeBabyDiaper.PenetrationTime },
+                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet, TestTypeBabyDiaper.RewetAndPenetrationTime },
                                                  ToRewetTestValue );
 
         /// <summary>
