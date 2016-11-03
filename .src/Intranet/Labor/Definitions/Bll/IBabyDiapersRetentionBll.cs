@@ -43,5 +43,11 @@ namespace Intranet.Labor.Definition
         /// /// <param name="testValueId">The ID of the test value</param>
         /// <returns>Collection of all notes for the testValue</returns>
         IEnumerable<TestValueNote> GetNotes(Int32 testValueId);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="testValue"></param>
+        void SaveNewTestValue( TestValue testValue );
     }
 }

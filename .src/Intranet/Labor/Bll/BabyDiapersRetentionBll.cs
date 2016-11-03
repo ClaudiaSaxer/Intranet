@@ -1,13 +1,14 @@
-﻿using Intranet.Labor.Definition;
+﻿#region Usings
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Common;
-using Intranet.Labor.Dal.Repositories;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
+
+#endregion
 
 namespace Intranet.Labor.Bll
 {
@@ -22,18 +23,22 @@ namespace Intranet.Labor.Bll
         ///     TestSheetRepository
         /// </summary>
         public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
+
         /// <summary>
         ///     ErrorRepository
         /// </summary>
         public IGenericRepository<Error> ErrorRepository { get; set; }
+
         /// <summary>
         ///     BabyDiaperTestValueRepository
         /// </summary>
         public IGenericRepository<TestValue> TestValueRepository { get; set; }
+
         /// <summary>
         ///     BabyDiaperTestValueRepository
         /// </summary>
-        public IGenericRepository<BabyDiaperTestValue>  BabyDiaperTestValueRepository{ get; set; }
+        public IGenericRepository<BabyDiaperTestValue> BabyDiaperTestValueRepository { get; set; }
+
         /// <summary>
         ///     TestValueNoteRepository
         /// </summary>
@@ -75,7 +80,7 @@ namespace Intranet.Labor.Bll
         public TestSheet GetTestSheetInfo( Int32 testSheetId )
         {
             var testSheet = TestSheetRepository.Where( ts => ts.TestSheetId == testSheetId )
-                                      .FirstOrDefault();
+                                               .FirstOrDefault();
             return testSheet;
         }
 
@@ -93,13 +98,23 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Query for all notes for the testValue
         /// </summary>
-        /// /// <param name="testValueId">The ID of the test value</param>
+        /// ///
+        /// <param name="testValueId">The ID of the test value</param>
         /// <returns>Collection of all notes for the testValue</returns>
         public IEnumerable<TestValueNote> GetNotes( Int32 testValueId )
         {
             var notes = TestValueNoteRepository.Where( n => n.TestValueRefId == testValueId )
                                                .ToList();
             return notes;
+        }
+
+        /// <summary>
+        /// </summary>
+        /// <param name="testValue"></param>
+        public void SaveNewTestValue( TestValue testValue )
+        {
+            TestValueRepository.Add( testValue );
+            TestValueRepository.SaveChanges();
         }
 
         #endregion

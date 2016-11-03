@@ -20,7 +20,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ID of the Babydapers test
         /// </value>
-        public Int32 Id { get; set; }
+        public Int32 TestValueId { get; set; }
 
         /// <summary>
         ///     Gets or sets the ID of the Test Sheet
