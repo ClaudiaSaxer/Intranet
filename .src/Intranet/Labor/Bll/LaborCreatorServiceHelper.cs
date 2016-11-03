@@ -201,15 +201,21 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="rewet">the Baby Diaper Test value with the rewet data</param>
         /// <returns>The rewet View Model with the data collected from the model</returns>
         public Rewet ToRewet( BabyDiaperTestValue rewet )
-            => new Rewet
+        {
+            ValidateRequiredItem( rewet.Revet210Rw, "rewet 210 rw" );
+            ValidateRequiredItem(rewet.Revet140Rw, "rewet 140 rw");
+
+            return
+            new Rewet
             {
-                Revet210Rw = rewet.Revet210Rw,
+                Revet210Rw = rewet.Revet210Rw.GetValueOrDefault(),
                 StrikeTroughValue = rewet.StrikeTroughValue,
                 DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
                 Revet210Value = rewet.Revet210Value,
-                Revet140Rw = rewet.Revet140Rw,
+                Revet140Rw = rewet.Revet140Rw.GetValueOrDefault(),
                 Revet140Value = rewet.Revert140Value
             };
+        }
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
