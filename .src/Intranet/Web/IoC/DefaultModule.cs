@@ -115,6 +115,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborCreatorService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<LaborCreatorServiceHelper>()
+                   .As<ILaborCreatorServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
