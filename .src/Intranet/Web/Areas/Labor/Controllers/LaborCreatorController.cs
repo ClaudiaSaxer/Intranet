@@ -42,16 +42,27 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <param name="id">the id of the testsheet</param>
         /// <returns>the actionresult to edit a existing testsheet</returns>
-        public ActionResult Edit( Int32 id = 0)
+        public ActionResult Edit( Int32 id = 0 )
         {
-            if(id.IsNull())
+            if ( id.IsNull() )
                 return HttpNotFound();
 
-            var laborCreatorView = LaborCreatorService.GetLaborCreatorViewModel( id );
+            try
+            {
+                var laborCreatorView = LaborCreatorService.GetLaborCreatorViewModel( id );
 
-            if ( laborCreatorView == null )
+                if ( laborCreatorView == null )
+                    return HttpNotFound();
+
+                return View( laborCreatorView );
+            }
+            catch ( Exception e )
+            {
+                Logger.Error(e.StackTrace);
+
                 return HttpNotFound();
-            return View( laborCreatorView );
+
+            }
         }
     }
 }
