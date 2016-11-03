@@ -37,7 +37,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="time">the time od the production of the diaper</param>
         /// <returns>A Production code for a single diaper</returns>
         public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-            => "IT/" + machine + "/" + year + "/" + dayOfyear + "/" + dayOfyear + "/" + time.Minutes + ":" + time.Seconds;
+            => "IT/" + machine + "/" + year.ToString().SubstringLeft( 2 ) + "/" + dayOfyear + "/" + dayOfyear + "/" + time.Minutes + ":" + time.Seconds;
 
         /// <summary>
         ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
