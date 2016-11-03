@@ -26,6 +26,14 @@ namespace Intranet.Labor.Bll
         ///     ErrorRepository
         /// </summary>
         public IGenericRepository<Error> ErrorRepository { get; set; }
+        /// <summary>
+        ///     BabyDiaperTestValueRepository
+        /// </summary>
+        public IGenericRepository<TestValue> TestValueRepository { get; set; }
+        /// <summary>
+        ///     BabyDiaperTestValueRepository
+        /// </summary>
+        public IGenericRepository<BabyDiaperTestValue>  BabyDiaperTestValueRepository{ get; set; }
 
         #endregion
 
@@ -38,7 +46,9 @@ namespace Intranet.Labor.Bll
         /// <returns>The retentiontest with the given Id</returns>
         public BabyDiaperTestValue GetBabyDiapersRetetionTest( Int32 retentionTestId )
         {
-            return new BabyDiaperTestValue();
+            var babyDiaperTestValue = BabyDiaperTestValueRepository.Where( tv => tv.BabyDiaperTestValueId == retentionTestId )
+                                                                   .FirstOrDefault();
+            return babyDiaperTestValue;
         }
 
         /// <summary>
@@ -48,7 +58,9 @@ namespace Intranet.Labor.Bll
         /// <returns>The test value with the given Id</returns>
         public TestValue GetTestValue( Int32 retentionTestId )
         {
-            return new TestValue();
+            var testValue = TestValueRepository.Where( tv => tv.TestValueId == retentionTestId )
+                                               .FirstOrDefault();
+            return testValue;
         }
 
         /// <summary>
