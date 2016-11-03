@@ -36,6 +36,16 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
+        ///     Query for a testvalue
+        /// </summary>
+        /// <param name="retentionTestId">The ID of the testvalue</param>
+        /// <returns>The test value with the given Id</returns>
+        public TestValue GetTestValue( Int32 retentionTestId )
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         ///     Query for the Test sheet info
         /// </summary>
         /// <param name="testSheetId">The ID of the test sheet</param>

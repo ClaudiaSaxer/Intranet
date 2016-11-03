@@ -16,6 +16,13 @@ namespace Intranet.Labor.Definition
         BabyDiaperTestValue GetBabyDiapersRetetionTest(Int32 retentionTestId);
 
         /// <summary>
+        ///     Query for a testvalue
+        /// </summary>
+        /// <param name="retentionTestId">The ID of the testvalue</param>
+        /// <returns>The test value with the given Id</returns>
+        TestValue GetTestValue(Int32 retentionTestId);
+
+        /// <summary>
         ///     Query for the Test sheet info
         /// </summary>
         /// <param name="testSheetId">The ID of the test sheet</param>

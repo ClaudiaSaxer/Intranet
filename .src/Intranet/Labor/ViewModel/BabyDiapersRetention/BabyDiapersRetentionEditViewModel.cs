@@ -23,6 +23,14 @@ namespace Intranet.Labor.ViewModel
         public Int32 Id { get; set; }
 
         /// <summary>
+        ///     Gets or sets the ID of the Test Sheet
+        /// </summary>
+        /// <value>
+        ///     The ID of the Test Sheet
+        /// </value>
+        public Int32 TestSheetId { get; set; }
+
+        /// <summary>
         ///     Gets or sets the TestPerson
         /// </summary>
         /// <value>
@@ -43,7 +51,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
-        public DateTime ProductionCodeTime { get; set; }
+        public TimeSpan ProductionCodeTime { get; set; }
         /// <summary>
         ///     Gets or sets the DiaperWeight value
         /// </summary>

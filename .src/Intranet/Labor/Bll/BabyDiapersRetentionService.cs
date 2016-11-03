@@ -48,6 +48,21 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiapersRetentionEditViewModel</returns>
         public BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
+            var testValue = BabyDiapersRetentionBll.GetTestValue( retentionTestId );
+            var babyDiapersTestValue = BabyDiapersRetentionBll.GetBabyDiapersRetetionTest( retentionTestId );
+            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo(testValue.TestSheetRefId);
+
+            var viewModel = new BabyDiapersRetentionEditViewModel
+            {
+                Id = retentionTestId,
+                TestSheetId = testValue.TestSheetRefId,
+                TestPerson = testValue.LastEditedPerson,
+                ProductionCode = CreateProductionCode(testSheetInfo),
+                ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
+                DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
+                WeightRetentionWet = babyDiapersTestValue.WeightDiaperDry
+            };
+
             var vm = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "Edit Hans", ProductionCode = "IT/11/16/158/" };
             vm.Notes = new List<TestNote>
             {
@@ -74,6 +89,7 @@ namespace Intranet.Labor.Bll
 
             var viewModel = new BabyDiapersRetentionEditViewModel();
             viewModel.ProductionCode = CreateProductionCode( testSheetInfo );
+
             return viewModel;
         }
 
