@@ -102,12 +102,12 @@ namespace Intranet.Labor.Dal.Migrations
                 BabyDiaperTestValueId = 1,
                 DiaperCreatedTime = new TimeSpan( 1, 38, 0 ),
                 WeightDiaperDry = 32.9,
-                Revert140Value = 0.1,
-                Revet210Value = 0.18,
+                Rewet140Value = 0.1,
+                Rewet210Value = 0.18,
                 StrikeTroughValue = 0.28,
                 DistributionOfTheStrikeTrough = 240,
-                Revet140Rw = RwType.Ok,
-                Revet210Rw = RwType.Ok,
+                Rewet140Rw = RwType.Ok,
+                Rewet210Rw = RwType.Ok,
                 TestType = TestTypeBabyDiaper.Rewet
             };
             babyDiapersRetentionTestValue1.BabyDiaperTestValue = babyDiapersRetentionTest1;

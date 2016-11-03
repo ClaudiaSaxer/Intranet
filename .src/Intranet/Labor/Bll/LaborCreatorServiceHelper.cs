@@ -204,18 +204,18 @@ namespace Intranet.Labor.Bll
         /// <returns>The rewet View Model with the data collected from the model</returns>
         public Rewet ToRewet( BabyDiaperTestValue rewet )
         {
-            ValidateRequiredItem( rewet.Revet210Rw, "rewet 210 rw" );
-            ValidateRequiredItem(rewet.Revet140Rw, "rewet 140 rw");
+            ValidateRequiredItem( rewet.Rewet210Rw, "rewet 210 rw" );
+            ValidateRequiredItem(rewet.Rewet140Rw, "rewet 140 rw");
 
             return
             new Rewet
             {
-                Revet210Rw = rewet.Revet210Rw.GetValueOrDefault(),
+                Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
                 StrikeTroughValue = rewet.StrikeTroughValue,
                 DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
-                Revet210Value = rewet.Revet210Value,
-                Revet140Rw = rewet.Revet140Rw.GetValueOrDefault(),
-                Revet140Value = rewet.Revert140Value
+                Rewet210Value = rewet.Rewet210Value,
+                Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
+                Rewet140Value = rewet.Rewet140Value
             };
         }
 
