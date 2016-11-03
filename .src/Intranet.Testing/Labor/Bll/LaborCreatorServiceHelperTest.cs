@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using FluentAssertions;
 using Intranet.Common;
-using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.Test;
-using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
 
@@ -117,8 +115,6 @@ namespace Intranet.Labor.Bll.Test
             );
         }
 
-
-        
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Empty Retention
         /// </summary>
@@ -148,8 +144,6 @@ namespace Intranet.Labor.Bll.Test
 
             Assert.Equal( "No Single for Retention per Testsheet existing", ex.Message );
         }
-
-       
 
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Empty Rewet 1
@@ -185,8 +179,6 @@ namespace Intranet.Labor.Bll.Test
             Assert.Equal( "No Single for Rewet per Testsheet existing", ex.Message );
         }
 
-        
-
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Many PenetrationTime 1
         /// </summary>
@@ -214,8 +206,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeAverage(),
-                                                         TestTypeBabyDiaper.RewetAndPenetrationTime,
-                                                         TestValueType.Average ) );
+                                                                                                        TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                                                        TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for RewetAndPenetrationTime per Testsheet allowed", ex.Message );
         }
@@ -229,9 +221,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeStandardDeviation(),
-                                                         TestTypeBabyDiaper.RewetAndPenetrationTime,
-                                                         TestValueType.StandardDeviation ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeStandardDeviation(),
+                                                                       TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                       TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for RewetAndPenetrationTime per Testsheet allowed", ex.Message );
         }
@@ -246,8 +239,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRententionSingle(),
-                                                         TestTypeBabyDiaper.Retention,
-                                                         TestValueType.Single ) );
+                                                                                                        TestTypeBabyDiaper.Retention,
+                                                                                                        TestValueType.Single ) );
 
             Assert.Equal( "Only one Single for Retention per Testsheet allowed", ex.Message );
         }
@@ -262,8 +255,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRetentionAverage(),
-                                                         TestTypeBabyDiaper.Retention,
-                                                         TestValueType.Average ) );
+                                                                                                        TestTypeBabyDiaper.Retention,
+                                                                                                        TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for Retention per Testsheet allowed", ex.Message );
         }
@@ -278,8 +271,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation(),
-                                                         TestTypeBabyDiaper.Retention,
-                                                         TestValueType.StandardDeviation ) );
+                                                                                                        TestTypeBabyDiaper.Retention,
+                                                                                                        TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for Retention per Testsheet allowed", ex.Message );
         }
@@ -294,8 +287,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRewetSingle(),
-                                                         TestTypeBabyDiaper.Rewet,
-                                                         TestValueType.Single ) );
+                                                                                                        TestTypeBabyDiaper.Rewet,
+                                                                                                        TestValueType.Single ) );
 
             Assert.Equal( "Only one Single for Rewet per Testsheet allowed", ex.Message );
         }
@@ -310,8 +303,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRewetAverage(),
-                                                         TestTypeBabyDiaper.Rewet,
-                                                         TestValueType.Average ) );
+                                                                                                        TestTypeBabyDiaper.Rewet,
+                                                                                                        TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for Rewet per Testsheet allowed", ex.Message );
         }
@@ -326,8 +319,8 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation(),
-                                                         TestTypeBabyDiaper.Rewet,
-                                                         TestValueType.StandardDeviation ) );
+                                                                                                        TestTypeBabyDiaper.Rewet,
+                                                                                                        TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for Rewet per Testsheet allowed", ex.Message );
         }
@@ -342,8 +335,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkPenetrationTimeSingle( expected ),
-                    TestTypeBabyDiaper.RewetAndPenetrationTime,
-                    TestValueType.Single );
+                                                                      TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                      TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -359,8 +352,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage( expected ),
-                    TestTypeBabyDiaper.RewetAndPenetrationTime,
-                    TestValueType.Average );
+                                                                      TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                      TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -376,8 +369,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected ),
-                    TestTypeBabyDiaper.RewetAndPenetrationTime,
-                    TestValueType.StandardDeviation );
+                                                                      TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                      TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
@@ -393,8 +386,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRetentionTimeSingle( expected ),
-                    TestTypeBabyDiaper.Retention,
-                    TestValueType.Single );
+                                                                      TestTypeBabyDiaper.Retention,
+                                                                      TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -410,8 +403,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRetentionAverage( expected ),
-                    TestTypeBabyDiaper.Retention,
-                    TestValueType.Average );
+                                                                      TestTypeBabyDiaper.Retention,
+                                                                      TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -427,8 +420,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRetentionStandardDeviation( expected ),
-                    TestTypeBabyDiaper.Retention,
-                    TestValueType.StandardDeviation );
+                                                                      TestTypeBabyDiaper.Retention,
+                                                                      TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
@@ -444,8 +437,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRewetSingle( expected ),
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.Single );
+                                                                      TestTypeBabyDiaper.Rewet,
+                                                                      TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -461,8 +454,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRewetAverage( expected ),
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.Average );
+                                                                      TestTypeBabyDiaper.Rewet,
+                                                                      TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -478,84 +471,11 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType( LaborCreatorServiceHelperData.TestValuesOkRewetStandardDeviation( expected ),
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.StandardDeviation );
+                                                                      TestTypeBabyDiaper.Rewet,
+                                                                      TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
-        }
-
-        /// <summary>
-        ///     Testing ToRewetAverage ok
-        /// </summary>
-        [Fact]
-        public void ToRewetAverageTestOk()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet, Rewet210Rw = RwType.Better, Rewet140Rw = RwType.Ok};
-
-            var actual = serviceHelper.ToRewetAverage( LaborCreatorServiceHelperData.TestValuesOkRewetAverage(expected) );
-            actual.Rewet210Rw.Should()
-                  .Be( RwType.Better );
-            actual.Rewet140Rw.Should()
-                  .Be(RwType.Ok);
-        }
-
-        /// <summary>
-        ///     Testing ToReweStandardDeviation ok
-        /// </summary>
-        [Fact]
-        public void ToRewetStandardDeviationTestOk()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet, Rewet210Rw = RwType.Better, Rewet140Rw = RwType.Ok };
-
-            var actual = serviceHelper.ToRewetStandardDeviation(LaborCreatorServiceHelperData.TestValuesOkRewetStandardDeviation(expected));
-            actual.Rewet210Rw.Should()
-                  .Be(RwType.Better);
-            actual.Rewet140Rw.Should()
-                  .Be(RwType.Ok);
-        }
-
-        /// <summary>
-        ///     Testing ToRetentionAverage ok
-        /// </summary>
-        [Fact]
-        public void ToRetentionAverageTestOk()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var input = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention,RetentionRw   = RwType.Ok};
-           
-            var actual = serviceHelper.ToRetentionAverage(LaborCreatorServiceHelperData.TestValuesOkRetentionAverage(input));
-            actual.RetentionRw.Should()
-                  .Be( RwType.Ok );
-
-        }
-        /// <summary>
-        ///     Testing ToRetentionStandardDeviation ok
-        /// </summary>
-        [Fact]
-        public void ToRetentionStandardDeviationTestOk()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var input = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention, RetentionRw = RwType.Ok };
-
-            var actual = serviceHelper.ToRetentionStandardDeviation(LaborCreatorServiceHelperData.TestValuesOkRetentionStandardDeviation(input));
-            actual.RetentionRw.Should()
-                  .Be(RwType.Ok);
-
-        }
-
-        /// <summary>
-        ///     Testing ToPenetrationTimeAverage ok
-        /// </summary>
-        [Fact]
-        public void ToPenetrationTimeAverageTestOk()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
-
-            var actual = serviceHelper.ToPenetrationTimeAverage(LaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage(expected));
         }
 
         /// <summary>
@@ -564,38 +484,38 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToPenetrationTimeAverageTestExceptionMany()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-   
             Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToPenetrationTimeAverage(LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeAverage()));
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToPenetrationTimeAverage( LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeAverage() ) );
 
-            Assert.Equal("Only one Average for RewetAndPenetrationTime per Testsheet allowed", ex.Message);
+            Assert.Equal( "Only one Average for RewetAndPenetrationTime per Testsheet allowed", ex.Message );
         }
+
         /// <summary>
         ///     Testing ToPenetrationTimeAverage none
         /// </summary>
         [Fact]
         public void ToPenetrationTimeAverageTestExceptionNone()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToPenetrationTimeAverage(LaborCreatorServiceHelperData.TestValuesEmptyPenetration2()));
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToPenetrationTimeAverage( LaborCreatorServiceHelperData.TestValuesEmptyPenetration2() ) );
 
-            Assert.Equal("No Average for RewetAndPenetrationTime per Testsheet existing", ex.Message);
+            Assert.Equal( "No Average for RewetAndPenetrationTime per Testsheet existing", ex.Message );
         }
+
         /// <summary>
-        ///     Testing ToPenetrationTimeStandardDeviation ok
+        ///     Testing ToPenetrationTimeAverage ok
         /// </summary>
         [Fact]
-        public void ToPenetrationTimeStandardDeviationTestOk()
+        public void ToPenetrationTimeAverageTestOk()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
 
-            var actual = serviceHelper.ToPenetrationTimeStandardDeviation(LaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected));
+            var actual = serviceHelper.ToPenetrationTimeAverage( LaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage( expected ) );
         }
 
         /// <summary>
@@ -604,155 +524,40 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToPenetrationTimeStandardDeviationExceptionMany()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToPenetrationTimeStandardDeviation(LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeStandardDeviation()));
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ToPenetrationTimeStandardDeviation( LaborCreatorServiceHelperData.TestValuesManyPenetrationTimeStandardDeviation() ) );
 
-            Assert.Equal("Only one StandardDeviation for RewetAndPenetrationTime per Testsheet allowed", ex.Message);
+            Assert.Equal( "Only one StandardDeviation for RewetAndPenetrationTime per Testsheet allowed", ex.Message );
         }
+
         /// <summary>
         ///     Testing ToPenetrationTimeAverage none
         /// </summary>
         [Fact]
         public void ToPenetrationTimeStandardDeviationTestExceptionNone()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToPenetrationTimeStandardDeviation(LaborCreatorServiceHelperData.TestValuesEmptyPenetration2()));
-
-            Assert.Equal("No StandardDeviation for RewetAndPenetrationTime per Testsheet existing", ex.Message);
-        }
-
-
-        /// <summary>
-        ///     Testing ToRetentionAverage many
-        /// </summary>
-        [Fact]
-        public void ToRetentionAverageTestExceptionMany()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRetentionAverage(LaborCreatorServiceHelperData.TestValuesManyRetentionAverage()));
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToPenetrationTimeStandardDeviation( LaborCreatorServiceHelperData.TestValuesEmptyPenetration2() ) );
 
-            Assert.Equal("Only one Average for Retention per Testsheet allowed", ex.Message);
+            Assert.Equal( "No StandardDeviation for RewetAndPenetrationTime per Testsheet existing", ex.Message );
         }
 
         /// <summary>
-        ///     Testing ToRetentionStandardDeviation many
+        ///     Testing ToPenetrationTimeStandardDeviation ok
         /// </summary>
         [Fact]
-        public void ToRetentionStandardDeviationTestExceptionMany()
+        public void ToPenetrationTimeStandardDeviationTestOk()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
 
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRetentionStandardDeviation(LaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation()));
-
-            Assert.Equal("Only one StandardDeviation for Retention per Testsheet allowed", ex.Message);
+            var actual = serviceHelper.ToPenetrationTimeStandardDeviation( LaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected ) );
         }
-
-
-        /// <summary>
-        ///     Testing ToRetentionAverage none
-        /// </summary>
-        [Fact]
-        public void ToRetentionAverageTestExceptionNone()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRetentionAverage(LaborCreatorServiceHelperData.TestValuesEmptyRetention2()));
-
-            Assert.Equal("No Average for Retention per Testsheet existing", ex.Message);
-        }
-
-        /// <summary>
-        ///     Testing ToRetentionStandardDeviation none
-        /// </summary>
-        [Fact]
-        public void ToRetentionStandardDeviationTestExceptionNone()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRetentionStandardDeviation(LaborCreatorServiceHelperData.TestValuesEmptyRetention2()));
-
-            Assert.Equal("No StandardDeviation for Retention per Testsheet existing", ex.Message);
-        }
-
-        /// <summary>
-        ///     Testing ToRewetStandardDeviation many
-        /// </summary>
-        [Fact]
-        public void ToRewetStandardDeviationTestExceptionMany()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRewetStandardDeviation(LaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation()));
-
-            Assert.Equal("Only one StandardDeviation for Rewet per Testsheet allowed", ex.Message);
-        }
-
-        /// <summary>
-        ///     Testing ToRewetAverage many
-        /// </summary>
-        [Fact]
-        public void ToRewetAverageTestExceptionMany()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRewetAverage(LaborCreatorServiceHelperData.TestValuesManyRewetAverage()));
-
-            Assert.Equal("Only one Average for Rewet per Testsheet allowed", ex.Message);
-        }
-
-
-        /// <summary>
-        ///     Testing ToRewetAverage none
-        /// </summary>
-        [Fact]
-        public void ToRewetAverageTestExceptionNone()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRewetAverage(LaborCreatorServiceHelperData.TestValuesEmptyRewet2()));
-
-            Assert.Equal("No Average for Rewet per Testsheet existing", ex.Message);
-        }
-
-        /// <summary>
-        ///     Testing ToRewetStandardDeviation none
-        /// </summary>
-        [Fact]
-        public void ToRewetStandardDeviationTestExceptionNone()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-
-            Exception ex =
-              Assert.Throws<InvalidDataException>(() => serviceHelper.ToRewetStandardDeviation(LaborCreatorServiceHelperData.TestValuesEmptyRewet2()));
-
-            Assert.Equal("No StandardDeviation for Rewet per Testsheet existing", ex.Message);
-        }
-
-
-
-
 
         /// <summary>
         ///     Testing To Penetration Time ok
@@ -778,14 +583,222 @@ namespace Intranet.Labor.Bll.Test
                     PenetrationTimeAdditionFourth = 4.0
                 } );
 
-            actual.PenetrationTimeAdditionFirst.Should()
-                  .Be( expected.PenetrationTimeAdditionFirst );
-            actual.PenetrationTimeAdditionThird.Should()
-                  .Be( expected.PenetrationTimeAdditionThird );
-            actual.PenetrationTimeAdditionFourth.Should()
-                  .Be( expected.PenetrationTimeAdditionFourth );
-            actual.PenetrationTimeAdditionSecond.Should()
-                  .Be( expected.PenetrationTimeAdditionSecond );
+            actual.ShouldBeEquivalentTo(expected);
+
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionAverage many
+        /// </summary>
+        [Fact]
+        public void ToRetentionAverageTestExceptionMany()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRetentionAverage( LaborCreatorServiceHelperData.TestValuesManyRetentionAverage() ) );
+
+            Assert.Equal( "Only one Average for Retention per Testsheet allowed", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionAverage none
+        /// </summary>
+        [Fact]
+        public void ToRetentionAverageTestExceptionNone()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRetentionAverage( LaborCreatorServiceHelperData.TestValuesEmptyRetention2() ) );
+
+            Assert.Equal( "No Average for Retention per Testsheet existing", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionAverage ok
+        /// </summary>
+        [Fact]
+        public void ToRetentionAverageTestOk()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var input = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention, RetentionRw = RwType.Ok };
+
+            var actual = serviceHelper.ToRetentionAverage( LaborCreatorServiceHelperData.TestValuesOkRetentionAverage( input ) );
+            actual.RetentionRw.Should()
+                  .Be( RwType.Ok );
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionStandardDeviation many
+        /// </summary>
+        [Fact]
+        public void ToRetentionStandardDeviationTestExceptionMany()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRetentionStandardDeviation( LaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation() ) );
+
+            Assert.Equal( "Only one StandardDeviation for Retention per Testsheet allowed", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionStandardDeviation none
+        /// </summary>
+        [Fact]
+        public void ToRetentionStandardDeviationTestExceptionNone()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRetentionStandardDeviation( LaborCreatorServiceHelperData.TestValuesEmptyRetention2() ) );
+
+            Assert.Equal( "No StandardDeviation for Retention per Testsheet existing", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionStandardDeviation ok
+        /// </summary>
+        [Fact]
+        public void ToRetentionStandardDeviationTestOk()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var input = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention, RetentionRw = RwType.Ok };
+
+            var actual = serviceHelper.ToRetentionStandardDeviation( LaborCreatorServiceHelperData.TestValuesOkRetentionStandardDeviation( input ) );
+            actual.RetentionRw.Should()
+                  .Be( RwType.Ok );
+        }
+
+        /// <summary>
+        ///     Testing ToRewetAverage many
+        /// </summary>
+        [Fact]
+        public void ToRewetAverageTestExceptionMany()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetAverage( LaborCreatorServiceHelperData.TestValuesManyRewetAverage() ) );
+
+            Assert.Equal( "Only one Average for Rewet per Testsheet allowed", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRewetAverage none
+        /// </summary>
+        [Fact]
+        public void ToRewetAverageTestExceptionNone()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetAverage( LaborCreatorServiceHelperData.TestValuesEmptyRewet2() ) );
+
+            Assert.Equal( "No Average for Rewet per Testsheet existing", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRewetAverage ok
+        /// </summary>
+        [Fact]
+        public void ToRewetAverageTestOk()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet, Rewet210Rw = RwType.Better, Rewet140Rw = RwType.Ok };
+
+            var actual = serviceHelper.ToRewetAverage( LaborCreatorServiceHelperData.TestValuesOkRewetAverage( expected ) );
+            actual.Rewet210Rw.Should()
+                  .Be( RwType.Better );
+            actual.Rewet140Rw.Should()
+                  .Be( RwType.Ok );
+        }
+
+        /// <summary>
+        ///     Testing ToRewetStandardDeviation many
+        /// </summary>
+        [Fact]
+        public void ToRewetStandardDeviationTestExceptionMany()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetStandardDeviation( LaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation() ) );
+
+            Assert.Equal( "Only one StandardDeviation for Rewet per Testsheet allowed", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToRewetStandardDeviation none
+        /// </summary>
+        [Fact]
+        public void ToRewetStandardDeviationTestExceptionNone()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetStandardDeviation( LaborCreatorServiceHelperData.TestValuesEmptyRewet2() ) );
+
+            Assert.Equal( "No StandardDeviation for Rewet per Testsheet existing", ex.Message );
+        }
+
+        /// <summary>
+        ///     Testing ToReweStandardDeviation ok
+        /// </summary>
+        [Fact]
+        public void ToRewetStandardDeviationTestOk()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet, Rewet210Rw = RwType.Better, Rewet140Rw = RwType.Ok };
+
+            var actual = serviceHelper.ToRewetStandardDeviation( LaborCreatorServiceHelperData.TestValuesOkRewetStandardDeviation( expected ) );
+            actual.Rewet210Rw.Should()
+                  .Be( RwType.Better );
+            actual.Rewet140Rw.Should()
+                  .Be( RwType.Ok );
+        }
+
+        /// <summary>
+        ///     Testing to Rewet ok
+        /// </summary>
+        [Fact]
+        public void toRewetTestOk()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new Rewet
+            {
+                Rewet140Rw = RwType.Ok,
+                Rewet210Rw = RwType.Ok,
+                Rewet140Value = 1.0,
+                Rewet210Value = 2.0,
+                DistributionOfTheStrikeTrough = 3.0,
+                StrikeTroughValue = 4.0
+            };
+            var actual = serviceHelper.ToRewet(
+                new BabyDiaperTestValue
+                {
+                    Rewet210Rw = RwType.Ok,
+                    Rewet140Rw = RwType.Ok,
+                    Rewet140Value = 1.0,
+                    Rewet210Value = 2.0,
+                    DistributionOfTheStrikeTrough = 3.0,
+                    StrikeTroughValue = 4.0
+                } );
+
+            actual.DistributionOfTheStrikeTrough.Should()
+                  .Be( expected.DistributionOfTheStrikeTrough );
+            actual.Rewet140Rw.Should()
+                  .Be( expected.Rewet140Rw );
+            actual.Rewet140Value.Should()
+                  .Be( expected.Rewet140Value );
+            actual.Rewet210Value.Should()
+                  .Be( expected.Rewet210Value );
+            actual.Rewet210Rw.Should()
+                  .Be( expected.Rewet210Rw );
+            actual.StrikeTroughValue.Should()
+                  .Be( expected.StrikeTroughValue );
+             actual.ShouldBeEquivalentTo( expected );
         }
     }
 }
