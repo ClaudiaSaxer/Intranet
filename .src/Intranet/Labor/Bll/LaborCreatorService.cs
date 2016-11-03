@@ -2,10 +2,11 @@
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing the labor creator service
