@@ -72,6 +72,10 @@
       <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
       <Name>Intranet.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dal\Intranet.Labor.Dal.csproj">
+      <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
+      <Name>Intranet.Labor.Dal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
       <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
       <Name>Intranet.Labor.Definition</Name>

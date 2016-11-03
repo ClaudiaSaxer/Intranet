@@ -74,7 +74,6 @@ namespace Intranet.Labor.Dal.Migrations
                 FaNr = "FA123456",
                 CreatedDateTime = new DateTime(2016,11,2,1,50,0),
                 ShiftType = ShiftType.Night,
-                DayInYear = 307,
                 MachineNr = "11",
                 SAPType = "EKX",
                 SAPNr = "EN67",

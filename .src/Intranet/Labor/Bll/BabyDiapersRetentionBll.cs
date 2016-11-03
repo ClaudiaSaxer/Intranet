@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Intranet.Common;
+using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 
@@ -21,6 +22,10 @@ namespace Intranet.Labor.Bll
         ///     TestSheetRepository
         /// </summary>
         public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
+        /// <summary>
+        ///     ErrorRepository
+        /// </summary>
+        public IGenericRepository<Error> ErrorRepository { get; set; }
 
         #endregion
 
@@ -33,7 +38,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The retentiontest with the given Id</returns>
         public BabyDiaperTestValue GetBabyDiapersRetetionTest( Int32 retentionTestId )
         {
-            throw new NotImplementedException();
+            return new BabyDiaperTestValue();
         }
 
         /// <summary>
@@ -43,7 +48,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The test value with the given Id</returns>
         public TestValue GetTestValue( Int32 retentionTestId )
         {
-            throw new NotImplementedException();
+            return new TestValue();
         }
 
         /// <summary>
@@ -64,7 +69,9 @@ namespace Intranet.Labor.Bll
         /// <returns>Collection of all Error Codes</returns>
         public IEnumerable<Error> GetAllNoteCodes()
         {
-            throw new NotImplementedException();
+            var errors = ErrorRepository.GetAll()
+                                        .ToList();
+            return errors;
         }
 
         /// <summary>
@@ -74,7 +81,7 @@ namespace Intranet.Labor.Bll
         /// <returns>Collection of all notes for the testValue</returns>
         public IEnumerable<TestValueNote> GetNotes( Int32 testValueId )
         {
-            throw new NotImplementedException();
+            return new List<TestValueNote>();
         }
 
         #endregion
