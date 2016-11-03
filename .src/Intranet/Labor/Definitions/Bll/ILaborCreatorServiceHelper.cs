@@ -5,10 +5,10 @@ using System.IO;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Class representing a interface for <see cref="LaborCreatorServiceHelper" />
+    ///     Class representing a interface for LaborCreatorServiceHelper
     /// </summary>
     public interface ILaborCreatorServiceHelper
     {
@@ -186,5 +186,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="valueType">the valuetype that is validated</param>
         /// <returns></returns>
         TestValue ValidateTestValueOnlyExactlyOneHasToExist( ICollection<TestValue> testValue, String testType, String valueType );
+
+        /// <summary>
+        /// Validates a required item
+        /// </summary>
+        /// <param name="item">the idtem to be validated</param>
+        /// <param name="name">the name of the item</param>
+        /// <typeparam name="T">the type of the item</typeparam>
+        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
+        void ValidateRequiredItem<T>( T item, String name );
     }
 }

@@ -39,6 +39,9 @@
       <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Intranet.Labor.Bll">
+      <HintPath>..\..\Web\Bin\Intranet.Labor.Bll.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +56,7 @@
     <Compile Include="Bll\IBabyDiapersRetentionService.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />
     <Compile Include="Bll\ILaborCreatorService.cs" />
+    <Compile Include="Bll\ILaborCreatorServiceHelper.cs" />
     <Compile Include="Bll\ILaborHomeBll.cs" />
     <Compile Include="Bll\ILaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
