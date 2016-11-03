@@ -34,6 +34,10 @@ namespace Intranet.Labor.Bll
         ///     BabyDiaperTestValueRepository
         /// </summary>
         public IGenericRepository<BabyDiaperTestValue>  BabyDiaperTestValueRepository{ get; set; }
+        /// <summary>
+        ///     TestValueNoteRepository
+        /// </summary>
+        public IGenericRepository<TestValueNote> TestValueNoteRepository { get; set; }
 
         #endregion
 
@@ -93,7 +97,9 @@ namespace Intranet.Labor.Bll
         /// <returns>Collection of all notes for the testValue</returns>
         public IEnumerable<TestValueNote> GetNotes( Int32 testValueId )
         {
-            return new List<TestValueNote>();
+            var notes = TestValueNoteRepository.Where( n => n.TestValueRefId == testValueId )
+                                               .ToList();
+            return notes;
         }
 
         #endregion
