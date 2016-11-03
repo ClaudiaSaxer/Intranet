@@ -151,45 +151,23 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return tests;
         }
 
-        private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValue )
-            => ToTestValuesCollectionByTestType( testValue,
+        private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues )
+            => ToTestValuesCollectionByTestType( testValues,
                                                  TestValueType.Single,
                                                  new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet, TestTypeBabyDiaper.PenetrationTime },
-                                                 ( rewet, testperson, prodcode ) => ToRewetTestValue( rewet, testperson, prodcode ) );
+                                                 ToRewetTestValue );
 
-        private ICollection<RetentionTestValue> ToRetentionTestValuesCollection( IEnumerable<TestValue> testValue )
-        {
-            var retention = new Collection<RetentionTestValue>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x => ( x.TestValueType == TestValueType.Single ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
-                                  .ForEach(
-                                      x =>
-                                          retention.Add( ToRetentionTestValue( x.BabyDiaperTestValue,
-                                                                               x.LastEditedPerson,
-                                                                               GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                 x.TestSheet.CreatedDateTime.Year,
-                                                                                                 x.DayInYearOfArticleCreation,
-                                                                                                 x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
-            return retention;
-        }
+        private ICollection<RetentionTestValue> ToRetentionTestValuesCollection( IEnumerable<TestValue> testValues )
+            => ToTestValuesCollectionByTestType( testValues,
+                                                 TestValueType.Single,
+                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
+                                                 ToRetentionTestValue );
 
-        private ICollection<PenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValue )
-        {
-            var penetrationtime = new Collection<PenetrationTimeTestValue>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x => ( x.TestValueType == TestValueType.Single ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
-                                  .ForEach(
-                                      x =>
-                                          penetrationtime.Add( ToPenetrationTimeTestValue( x.BabyDiaperTestValue,
-                                                                                           x.LastEditedPerson,
-                                                                                           GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                             x.TestSheet.CreatedDateTime.Year,
-                                                                                                             x.DayInYearOfArticleCreation,
-                                                                                                             x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
-            return penetrationtime;
-        }
+        private ICollection<PenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues )
+            => ToTestValuesCollectionByTestType( testValues,
+                                                 TestValueType.Single,
+                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.PenetrationTime },
+                                                 ToPenetrationTimeTestValue );
 
         private TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry )
             => new TestInfo
@@ -261,6 +239,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird
             };
 
+        /// <summary>
+        /// Generates the Production Code for the Diaper
+        /// </summary>
+        /// <param name="machine">The machine Nr</param>
+        /// <param name="year">the year of the production of the diaper</param>
+        /// <param name="dayOfyear">the day of the year of the production of the diaper</param>
+        /// <param name="time">the time od the production of the diaper</param>
+        /// <returns>A Production code for a single diaper</returns>
         private String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
             => "IT/" + machine + "/" + year + "/" + dayOfyear + "/" + dayOfyear + "/" + time.Minutes + ":" + time.Seconds;
 
