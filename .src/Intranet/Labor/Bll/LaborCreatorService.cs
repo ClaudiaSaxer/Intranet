@@ -85,8 +85,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        /// Validates the test value where only one item is allowed to exists for the given input parameter. Throws a <see cref="InvalidDataException"/> if more than one or none is found.
-        /// Used for example as average or standard deviation.
+        ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a
+        ///     <see cref="InvalidDataException" /> if more than one or none is found.
+        ///     Used for example as average or standard deviation.
         /// </summary>
         /// <param name="testValue">the testvalue collection to validate.</param>
         /// <param name="testType">the testtype that is validate</param>
@@ -110,11 +111,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        /// Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper"/> and <see cref="TestValueType"/>
+        ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
+        ///     <see cref="TestValueType" />
         /// </summary>
         /// <param name="testValues">the test values containing the wanted item</param>
-        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper"/></param>
-        /// <param name="testValueType">the value type of the baby diaper. <see cref="TestValueType"/></param>
+        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
+        /// <param name="testValueType">the value type of the baby diaper. <see cref="TestValueType" /></param>
         /// <returns></returns>
         private BabyDiaperTestValue GetBabyDiaperTestValueForType( IEnumerable<TestValue> testValues, TestTypeBabyDiaper testTypeBabyDiaper, TestValueType testValueType )
         {
@@ -125,15 +127,17 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var item = ValidateTestValueOnlyExactlyOneHasToExist( values, testTypeBabyDiaper.ToString(), testValueType.ToString() );
             return item.BabyDiaperTestValue;
         }
+
         /// <summary>
-        /// Creates a retention Average with the data from the test values
+        ///     Creates a retention Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the retention with the average</returns>
         private Rewet ToRewetAverage( IEnumerable<TestValue> testValues )
             => ToRewet( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Rewet, TestValueType.Average ) );
+
         /// <summary>
-        /// Creates a retention Average with the data from the test values
+        ///     Creates a retention Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the retention with the average</returns>
@@ -141,21 +145,23 @@ namespace Intranet.Web.Areas.Labor.Controllers
             => ToRetention( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Retention, TestValueType.Average ) );
 
         /// <summary>
-        /// Creates a PenetrationTime Average with the data from the test values
+        ///     Creates a PenetrationTime Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the penetration time with the average</returns>
         private PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValues )
             => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.Average ) );
+
         /// <summary>
-        /// Creates a Rewet Standard Deviation with the data from the test values
+        ///     Creates a Rewet Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the rewet with the standard deviation</returns>
         private Rewet ToRewetStandardDeviation( IEnumerable<TestValue> testValues )
             => ToRewet( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Rewet, TestValueType.StandardDeviation ) );
+
         /// <summary>
-        /// Creates a Retention Standard Deviation with the data from the test values
+        ///     Creates a Retention Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the retention with the standard deviation</returns>
@@ -163,7 +169,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             => ToRetention( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Retention, TestValueType.StandardDeviation ) );
 
         /// <summary>
-        /// Creates a PenetrationTime Standard Deviation with the data from the test values
+        ///     Creates a PenetrationTime Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the penetration time with the standard deviation</returns>
@@ -171,14 +177,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
             => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.StandardDeviation ) );
 
         /// <summary>
-        /// Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input parameter
+        ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
+        ///     parameter
         /// </summary>
-        /// <typeparam name="T">the collection type. For example: <see cref="RewetTestValue"/>, <see cref="PenetrationTimeTestValue"/>,<see cref="RetentionTestValue"/></typeparam>
+        /// <typeparam name="T">
+        ///     the collection type. For example: <see cref="RewetTestValue" />,
+        ///     <see cref="PenetrationTimeTestValue" />,<see cref="RetentionTestValue" />
+        /// </typeparam>
         /// <param name="testValue">the testvalues that contain the data</param>
-        /// <param name="testValueType">the value type of the test. <see cref="TestValueType"/></param>
-        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper"/></param>
-        /// <param name="toTestTypeTestValueAction">the action the get the correct data for a collection item. For example: <see cref="ToRewetTestValue"/>, <see cref="ToRetentionTestValue"/>, <see cref="ToPenetrationTimeTestValue"/></param>
-        /// <returns>A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction"/> given as a input action </returns>
+        /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
+        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
+        /// <param name="toTestTypeTestValueAction">
+        ///     the action the get the correct data for a collection item. For example:
+        ///     <see cref="ToRewetTestValue" />, <see cref="ToRetentionTestValue" />, <see cref="ToPenetrationTimeTestValue" />
+        /// </param>
+        /// <returns>
+        ///     A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction" /> given as a
+        ///     input action
+        /// </returns>
         private Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
                                                                    TestValueType testValueType,
                                                                    ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
@@ -202,7 +218,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        /// Creates the rewet test value collection for all singe tests
+        ///     Creates the rewet test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the rewet tests</param>
         /// <returns>a collection for all rewet tests</returns>
@@ -213,7 +229,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                  ToRewetTestValue );
 
         /// <summary>
-        /// Creates the retention  test value collection for all singe tests
+        ///     Creates the retention  test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the retention tests</param>
         /// <returns>a collection for all retention tests</returns>
@@ -222,8 +238,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                  TestValueType.Single,
                                                  new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
                                                  ToRetentionTestValue );
+
         /// <summary>
-        /// Creates the penetration time test value collection for all singe tests
+        ///     Creates the penetration time test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the penetration time tests</param>
         /// <returns>a collection for all penetration time tests</returns>
@@ -234,7 +251,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                  ToPenetrationTimeTestValue );
 
         /// <summary>
-        /// Creates to TestInfo from diffrent input data
+        ///     Creates to TestInfo from diffrent input data
         /// </summary>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the prodcution code from the diaper</param>
@@ -249,7 +266,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
 
         /// <summary>
-        /// Creates the Rewet TestValue from diffrent input data
+        ///     Creates the Rewet TestValue from diffrent input data
         /// </summary>
         /// <param name="rewet">the baby diaper test value containing the rewet data</param>
         /// <param name="testPerson">the person who did the test</param>
@@ -264,8 +281,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
             return vm;
         }
+
         /// <summary>
-        /// Creates the PenetrationTime TestValue from diffrent input data
+        ///     Creates the PenetrationTime TestValue from diffrent input data
         /// </summary>
         /// <param name="penetrationTime">the baby diaper test value containing the penetration time data</param>
         /// <param name="testPerson">the person who did the test</param>
@@ -282,7 +300,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        /// Creates the RetentionTestValues from diffrent input data
+        ///     Creates the RetentionTestValues from diffrent input data
         /// </summary>
         /// <param name="retention">the baby diaper test value containing the retention data</param>
         /// <param name="testPerson">the person who did the test</param>
@@ -299,7 +317,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        /// Sets the values for the Rewet View Model out of the BabyDiaperTestValue Model
+        ///     Sets the values for the Rewet View Model out of the BabyDiaperTestValue Model
         /// </summary>
         /// <param name="rewet">the Baby Diaper Test value with the rewet data</param>
         /// <returns>The rewet View Model with the data collected from the model</returns>
@@ -315,7 +333,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
 
         /// <summary>
-        /// Sets the values for the Retention View Model out of the BabyDiaperTestValue Model
+        ///     Sets the values for the Retention View Model out of the BabyDiaperTestValue Model
         /// </summary>
         /// <param name="retention">the Baby Diaper Test value with the retention data</param>
         /// <returns>The Retention View Model with the data collected from the model</returns>
@@ -330,8 +348,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
                 SapGHoewiValue = retention.SapGHoewiValue
             };
+
         /// <summary>
-        /// Sets the values for the Penetration Time View Model out of the BabyDiaperTestValue Model
+        ///     Sets the values for the Penetration Time View Model out of the BabyDiaperTestValue Model
         /// </summary>
         /// <param name="penetrationTime">the Baby Diaper Test value with the penetration time data</param>
         /// <returns>The Penetration Time View Model with the data collected from the model</returns>
@@ -345,7 +364,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             };
 
         /// <summary>
-        /// Generates the Production Code for the Diaper
+        ///     Generates the Production Code for the Diaper
         /// </summary>
         /// <param name="machine">The machine Nr</param>
         /// <param name="year">the year of the production of the diaper</param>
