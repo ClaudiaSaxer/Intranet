@@ -10,7 +10,7 @@ namespace Intranet.Labor.Dal.Repositories
     /// <summary>
     ///     The Repository for the TestValue
     /// </summary>
-    public class TestValueRepository : GenericRepository<LaborContext, TestValue>
+    public class BabyDiaperTestValueRepository : GenericRepository<LaborContext, BabyDiaperTestValue>
     {
         #region Ctor
 
@@ -19,8 +19,8 @@ namespace Intranet.Labor.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public TestValueRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
-            : base( databaseFactory, loggerFactory )
+        public BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory)
+            : base(databaseFactory, loggerFactory)
         {
         }
 

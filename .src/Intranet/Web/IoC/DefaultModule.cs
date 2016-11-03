@@ -189,6 +189,12 @@ namespace Intranet.Web.IoC
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(BabyDiaperTestValueRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
