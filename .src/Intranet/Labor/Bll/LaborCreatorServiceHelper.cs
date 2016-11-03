@@ -149,7 +149,7 @@ namespace Intranet.Labor.Bll
         public void ValidateRequiredItem<T>( T item, String name )
         {
             if(item.IsNull()) 
-                throw new InvalidDataException("Item "+name+"of type"+typeof(T)+"is required and can not be null");
+                throw new InvalidDataException("Item "+name+" of type "+typeof(T)+" is required and can not be null");
         }
 
 
