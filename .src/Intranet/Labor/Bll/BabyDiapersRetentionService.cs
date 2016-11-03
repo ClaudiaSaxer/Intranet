@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region Usings
+
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    /// 
     /// </summary>
     public class BabyDiapersRetentionService : ServiceBase, IBabyDiapersRetentionService
     {
@@ -31,13 +31,18 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiapersRetentionService(ILoggerFactory loggerFactory)
+        public BabyDiapersRetentionService( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(BabyDiapersRetentionService) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
+
+        private String CreateProductionCode( TestSheet testSheetInfo )
+        {
+            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/";
+        }
 
         #region Implementation of IBabyDiapersRetentionService
 
@@ -50,20 +55,21 @@ namespace Intranet.Labor.Bll
         {
             var testValue = BabyDiapersRetentionBll.GetTestValue( retentionTestId );
             var babyDiapersTestValue = BabyDiapersRetentionBll.GetBabyDiapersRetetionTest( retentionTestId );
-            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo(testValue.TestSheetRefId);
+            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo( testValue.TestSheetRefId );
             var notes = BabyDiapersRetentionBll.GetNotes( testValue.TestValueId );
             var errors = BabyDiapersRetentionBll.GetAllNoteCodes();
-            var errorCodes = errors.Select( error => error.ErrorId + " - " + error.Value )
-                                            .ToList();
+            var errorCodes = errors.Select( error => error.ErrorCode + " - " + error.Value )
+                                   .ToList();
             var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
-                                            .ToList();
+                                 .ToList();
 
             var viewModel = new BabyDiapersRetentionEditViewModel
             {
                 Id = retentionTestId,
                 TestSheetId = testValue.TestSheetRefId,
                 TestPerson = testValue.LastEditedPerson,
-                ProductionCode = CreateProductionCode(testSheetInfo),
+                ProductionCode = CreateProductionCode( testSheetInfo ),
+                ProductionCodeDay = testValue.DayInYearOfArticleCreation,
                 ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
                 DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
                 WeightRetentionWet = babyDiapersTestValue.RetentionWetWeight,
@@ -84,7 +90,7 @@ namespace Intranet.Labor.Bll
 
             if ( testSheetInfo.IsNull() )
             {
-                Logger.Warn( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!");
+                Logger.Warn( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
             }
 
@@ -105,10 +111,5 @@ namespace Intranet.Labor.Bll
         }
 
         #endregion
-
-        private String CreateProductionCode( TestSheet testSheetInfo )
-        {
-            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/";
-        }
     }
 }

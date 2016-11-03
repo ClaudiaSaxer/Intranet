@@ -46,6 +46,13 @@ namespace Intranet.Labor.ViewModel
         /// </value>
         public String ProductionCode { get; set; }
         /// <summary>
+        ///     Gets or sets the ProductionCodeDay
+        /// </summary>
+        /// <value>
+        ///     The ProductionCodeDay
+        /// </value>
+        public Int32 ProductionCodeDay { get; set; }
+        /// <summary>
         ///     Gets or sets the ProductionCodeTime
         /// </summary>
         /// <value>
