@@ -595,7 +595,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            var actual = serviceHelper.ToRewetTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+            var actual = serviceHelper.ToPenetrationTimeTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
                   .Be( 2 );
@@ -693,7 +693,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            var actual = serviceHelper.ToRewetTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+            var actual = serviceHelper.ToPenetrationTimeTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
                   .Be( 2 );
