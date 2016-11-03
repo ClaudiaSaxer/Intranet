@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
