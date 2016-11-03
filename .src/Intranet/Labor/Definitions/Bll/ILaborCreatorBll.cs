@@ -2,7 +2,7 @@
 using System.Linq;
 using Intranet.Labor.Model.labor;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interface representing the labor creator bll
