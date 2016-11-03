@@ -9,7 +9,7 @@ using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing the labor creator service

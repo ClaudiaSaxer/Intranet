@@ -1,7 +1,6 @@
 ﻿using System;
 using FluentAssertions;
 using Intranet.Common;
-using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test

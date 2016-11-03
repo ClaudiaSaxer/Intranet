@@ -2,7 +2,6 @@
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
-using Intranet.Web.Areas.Labor.Controllers;
 
 namespace Intranet.Labor.Bll
 {
@@ -23,7 +22,8 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="id">the unique identifier for the test sheet</param>
         /// <returns>a testsheet with the given data, or null if not found</returns>
-        public TestSheet getTestSheetForId( Int32 id ) => TestSheets.FindAsync( id ).Result;
+        public TestSheet getTestSheetForId( Int32 id ) => TestSheets.FindAsync( id )
+                                                                    .Result;
 
         #endregion
     }
