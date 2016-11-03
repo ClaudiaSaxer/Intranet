@@ -35,22 +35,22 @@ namespace Intranet.Labor.Dal.Migrations
 
             var error1 = new Error
             {
-                ErrorId = 80,
+                ErrorCode = "080",
                 Value = "Fixtape fehlt"
             };
             var error2 = new Error
             {
-                ErrorId = 411,
+                ErrorCode = "411",
                 Value = "Saugkissen hinten zu kurz"
             };
             var error3 = new Error
             {
-                ErrorId = 23,
+                ErrorCode = "023",
                 Value = "Zu wenig Inhalt"
             };
             var error4 = new Error
             {
-                ErrorId = 802,
+                ErrorCode = "802",
                 Value = "Linke Seite reisst auf"
             };
             context.Errors.AddOrUpdate(e => e.ErrorId,error1,error2,error3,error4);
