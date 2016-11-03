@@ -101,92 +101,61 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return item;
         }
 
-        private Rewet ToRewetAverage( IEnumerable<TestValue> testValue )
+        private BabyDiaperTestValue GetBabyDiaperTestValueForType( IEnumerable<TestValue> testValues, TestTypeBabyDiaper testTypeBabyDiaper, TestValueType testValueType )
         {
-            var average = testValue.ToList()
+            var values = testValues.ToList()
                                    .Where(
-                                       x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) )
+                                       x => ( x.TestValueType == testValueType ) && ( x.BabyDiaperTestValue.TestType == testTypeBabyDiaper ) )
                                    .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Rewet", "Average" );
-            return ToRewet( item.BabyDiaperTestValue );
+            var item = TestTestValueOnlyExactlyOneHasToExist( values, testTypeBabyDiaper.ToString(), testValueType.ToString() );
+            return item.BabyDiaperTestValue;
         }
 
-        private Retention ToRetentionAverage( IEnumerable<TestValue> testValue )
+        private Rewet ToRewetAverage( IEnumerable<TestValue> testValues )
+            => ToRewet( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Rewet, TestValueType.Average ) );
+
+        private Retention ToRetentionAverage( IEnumerable<TestValue> testValues )
+            => ToRetention( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Retention, TestValueType.Average ) );
+
+        private PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValues )
+            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.Average ) );
+
+        private Rewet ToRewetStandardDeviation( IEnumerable<TestValue> testValues )
+            => ToRewet( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Rewet, TestValueType.StandardDeviation ) );
+
+        private Retention ToRetentionStandardDeviation( IEnumerable<TestValue> testValues )
+            => ToRetention( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.Retention, TestValueType.StandardDeviation ) );
+
+        private PenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValues )
+            => ToPenetrationTime( GetBabyDiaperTestValueForType( testValues, TestTypeBabyDiaper.PenetrationTime, TestValueType.StandardDeviation ) );
+
+        private Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
+                                                                   TestValueType testValueType,
+                                                                   ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
+                                                                   Func<BabyDiaperTestValue, String, String, T> toTestTypeTestValueAction )
         {
-            var average = testValue.ToList()
-                                   .Where(
-                                       x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
-                                   .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Retention", "Average" );
-
-            return ToRetention( item.BabyDiaperTestValue );
-        }
-
-        private PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValue )
-        {
-            var average = testValue.ToList()
-                                   .Where(
-                                       x => ( x.TestValueType == TestValueType.Average ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
-                                   .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( average, "Penetration Time", "Average" );
-
-            return ToPenetrationTime( item.BabyDiaperTestValue );
-        }
-
-        private Rewet ToRewetStandardDeviation( IEnumerable<TestValue> testValue )
-        {
-            var standardDeviation = testValue.ToList()
-                                             .Where(
-                                                 x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) )
-                                             .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Rewet", "Standard Deviation" );
-
-            return ToRewet( item.BabyDiaperTestValue );
-        }
-
-        private Retention ToRetentionStandardDeviation( IEnumerable<TestValue> testValue )
-        {
-            var standardDeviation = testValue.ToList()
-                                             .Where(
-                                                 x => ( x.TestValueType == TestValueType.StandardDeviation ) && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
-                                             .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Rewet", "Standard Deviation" );
-
-            return ToRetention( item.BabyDiaperTestValue );
-        }
-
-        private PenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValue )
-        {
-            var standardDeviation = testValue.ToList()
-                                             .Where(
-                                                 x =>
-                                                     ( x.TestValueType == TestValueType.StandardDeviation )
-                                                     && ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) )
-                                             .ToList();
-            var item = TestTestValueOnlyExactlyOneHasToExist( standardDeviation, "Penetration Time", "Standard Deviation" );
-
-            return ToPenetrationTime( item.BabyDiaperTestValue );
-        }
-
-        private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValue )
-        {
-            var rewets = new Collection<RewetTestValue>();
+            var tests = new Collection<T>();
             var values = testValue.ToList()
                                   .Where(
                                       x =>
-                                          ( x.TestValueType == TestValueType.Single )
-                                          && ( ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet )
-                                               || ( x.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.PenetrationTime ) ) )
+                                          ( x.TestValueType == testValueType )
+                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
                                   .ForEach(
                                       x =>
-                                          rewets.Add( ToRewetTestValue( x.BabyDiaperTestValue,
-                                                                        x.LastEditedPerson,
-                                                                        GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                          x.TestSheet.CreatedDateTime.Year,
-                                                                                          x.DayInYearOfArticleCreation,
-                                                                                          x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
-            return rewets;
+                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
+                                                                                x.LastEditedPerson,
+                                                                                GenerateProdCode( x.TestSheet.MachineNr,
+                                                                                                  x.TestSheet.CreatedDateTime.Year,
+                                                                                                  x.DayInYearOfArticleCreation,
+                                                                                                  x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
+            return tests;
         }
+
+        private ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValue )
+            => ToTestValuesCollectionByTestType( testValue,
+                                                 TestValueType.Single,
+                                                 new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet, TestTypeBabyDiaper.PenetrationTime },
+                                                 ( rewet, testperson, prodcode ) => ToRewetTestValue( rewet, testperson, prodcode ) );
 
         private ICollection<RetentionTestValue> ToRetentionTestValuesCollection( IEnumerable<TestValue> testValue )
         {
