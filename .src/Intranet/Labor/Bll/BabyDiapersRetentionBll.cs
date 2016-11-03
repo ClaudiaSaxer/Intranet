@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Intranet.Common;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Bll
@@ -55,6 +56,25 @@ namespace Intranet.Labor.Bll
             var testSheet = TestSheetRepository.Where( ts => ts.TestSheetId == testSheetId )
                                       .FirstOrDefault();
             return testSheet;
+        }
+
+        /// <summary>
+        ///     Query for all Error Codes
+        /// </summary>
+        /// <returns>Collection of all Error Codes</returns>
+        public IEnumerable<Error> GetAllNoteCodes()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        ///     Query for all notes for the testValue
+        /// </summary>
+        /// /// <param name="testValueId">The ID of the test value</param>
+        /// <returns>Collection of all notes for the testValue</returns>
+        public IEnumerable<TestValueNote> GetNotes( Int32 testValueId )
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

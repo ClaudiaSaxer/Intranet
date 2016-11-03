@@ -51,7 +51,12 @@ namespace Intranet.Labor.Bll
             var testValue = BabyDiapersRetentionBll.GetTestValue( retentionTestId );
             var babyDiapersTestValue = BabyDiapersRetentionBll.GetBabyDiapersRetetionTest( retentionTestId );
             var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo(testValue.TestSheetRefId);
-            var notesCode = 0;
+            var notes = BabyDiapersRetentionBll.GetNotes( testValue.TestValueId );
+            var errors = BabyDiapersRetentionBll.GetAllNoteCodes();
+            var errorCodes = errors.Select( error => error.ErrorId + " - " + error.Value )
+                                            .ToList();
+            var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
+                                            .ToList();
 
             var viewModel = new BabyDiapersRetentionEditViewModel
             {
@@ -61,16 +66,10 @@ namespace Intranet.Labor.Bll
                 ProductionCode = CreateProductionCode(testSheetInfo),
                 ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
                 DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
-                WeightRetentionWet = 0 // TODO
-
+                WeightRetentionWet = babyDiapersTestValue.RetentionWetWeight,
+                Notes = testNotes,
+                NoteCodes = errorCodes
             };
-
-            /*var vm = new BabyDiapersRetentionEditViewModel { Id = 5, TestPerson = "Edit Hans", ProductionCode = "IT/11/16/158/" };
-            vm.Notes = new List<TestNote>
-            {
-                new TestNote { Id=1,Message = "Hans was here."},
-                new TestNote { Id=1,Message = "Franz was here, too. :P"}
-            };*/
             return viewModel;
         }
 

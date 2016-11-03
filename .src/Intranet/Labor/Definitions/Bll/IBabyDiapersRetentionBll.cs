@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using Intranet.Labor.Model.labor;
+using Error = Intranet.Labor.Model.Error; 
 
 namespace Intranet.Labor.Definition
 {
@@ -28,5 +30,18 @@ namespace Intranet.Labor.Definition
         /// <param name="testSheetId">The ID of the test sheet</param>
         /// <returns>The test sheet</returns>
         TestSheet GetTestSheetInfo(Int32 testSheetId);
+
+        /// <summary>
+        ///     Query for all Error Codes
+        /// </summary>
+        /// <returns>Collection of all Error Codes</returns>
+        IEnumerable<Error> GetAllNoteCodes();
+
+        /// <summary>
+        ///     Query for all notes for the testValue
+        /// </summary>
+        /// /// <param name="testValueId">The ID of the test value</param>
+        /// <returns>Collection of all notes for the testValue</returns>
+        IEnumerable<TestValueNote> GetNotes(Int32 testValueId);
     }
 }
