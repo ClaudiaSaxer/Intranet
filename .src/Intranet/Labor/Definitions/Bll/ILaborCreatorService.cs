@@ -1,7 +1,7 @@
 ﻿using System;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interface representing the labor creator service

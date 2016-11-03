@@ -81,6 +81,12 @@ namespace Intranet.Labor.Model.labor
         /// <value>the values of the test sheet</value>
         public ICollection<TestValue> TestValues { get; set; }
 
+        /// <summary>
+        /// Gets or sets the day in year of the test sheet
+        /// </summary>
+        /// <value>the day in the year</value>
+        public Int32 DayInYear { get; set; }
+
         #endregion
     }
 }
