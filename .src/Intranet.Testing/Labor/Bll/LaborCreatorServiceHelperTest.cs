@@ -982,5 +982,39 @@ namespace Intranet.Labor.Bll.Test
                   .Be(1);
 
         }
+
+        /// <summary>
+        /// Testing ValidateTestValueOnlyExactlyOneHasToExist1
+        /// </summary>
+        [Fact]
+        public void ValidateTestValueOnlyExactlyOneHasToExistTest1()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            const String valueType = "type";
+            const String testType = "test";
+
+    Exception ex =
+                Assert.Throws<InvalidDataException>( () => serviceHelper.ValidateTestValueOnlyExactlyOneHasToExist( new List<TestValue>(), testType, valueType ) );
+
+            Assert.Equal( "No " + valueType + " for " + testType + " per Testsheet existing", ex.Message );
+
+        }
+
+        /// <summary>
+        /// Testing ValidateTestValueOnlyExactlyOneHasToExist2
+        /// </summary>
+        [Fact]
+        public void ValidateTestValueOnlyExactlyOneHasToExistTest2()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            const String valueType = "type";
+            const String testType = "test";
+
+            Exception ex =
+             Assert.Throws<InvalidDataException>(() => serviceHelper.ValidateTestValueOnlyExactlyOneHasToExist(new List<TestValue> { new TestValue(), new TestValue() }, testType, valueType));
+
+            Assert.Equal("Only one " + valueType + " for " + testType + " per Testsheet allowed", ex.Message);
+
+        }
     }
 }
