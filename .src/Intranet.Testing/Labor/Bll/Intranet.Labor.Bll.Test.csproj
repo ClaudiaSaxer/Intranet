@@ -66,6 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaborCreatorServiceHelperTest.cs" />
     <Compile Include="LaborHomeBllTest.cs" />
     <Compile Include="LaborHomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

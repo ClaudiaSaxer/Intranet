@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\ShiftTypeExtension.cs" />
+    <Compile Include="ILaborCreatorServiceHelper.cs" />
     <Compile Include="LaborCreatorBll.cs" />
+    <Compile Include="LaborCreatorServiceHelper.cs" />
     <Compile Include="LaborCreatorService.cs" />
     <Compile Include="LaborHomeBll.cs" />
     <Compile Include="LaborHomeService.cs" />
