@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -216,6 +216,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Labor\Controllers\BabyDiapersRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
@@ -229,8 +230,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\sass\bootstrap.css">
-      <DependentUpon>bootstrap.scss</DependentUpon>
+    <Content Include="assets\sass\CreateEdit.css">
+      <DependentUpon>CreateEdit.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\layout.css">
+      <DependentUpon>layout.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\Site.css">
+      <DependentUpon>Site.scss</DependentUpon>
     </Content>
     <Content Include="resources\css\bootstrap-sortable.css" />
     <Content Include="resources\css\bootstrap-theme.min.css" />
@@ -333,6 +340,8 @@
     <Content Include="assets\sass\Shell.scss" />
     <Content Include="assets\sass\ShellSettings.scss" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
+    <Content Include="Areas\Labor\Views\BabyDiapersRetention\Edit.cshtml" />
+    <Content Include="assets\sass\CreateEdit.scss" />
     <Content Include="Areas\Labor\Views\LaborCreator\Edit.cshtml" />
     <Content Include="assets\sass\Labor.scss" />
     <Content Include="resources\img\logo-intigena.png" />

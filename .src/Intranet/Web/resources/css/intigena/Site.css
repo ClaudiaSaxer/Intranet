@@ -46,9 +46,8 @@ html body {
   background-color: #F4F4F4;
   padding-bottom: 70px; }
 
-.body-content {
-  padding-left: 10px;
-  padding-top: 5px; }
+body {
+  padding-top: 90px; }
 
 .vertical-line {
   width: auto;
@@ -87,6 +86,11 @@ html body {
   .navbar-nav > li > a {
     padding-top: 40px;
     padding-bottom: 10px; } }
+
+.intigena-line {
+  height: 3px;
+  background-color: #539ad8;
+  margin: 10px 0 10px 0; }
 
 .body-content {
   margin-left: 20px;

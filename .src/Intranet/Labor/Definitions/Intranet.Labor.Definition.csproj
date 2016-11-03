@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\IBabyDiapersRetentionBll.cs" />
+    <Compile Include="Bll\IBabyDiapersRetentionService.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />
     <Compile Include="Bll\ILaborCreatorService.cs" />
     <Compile Include="Bll\ILaborHomeBll.cs" />

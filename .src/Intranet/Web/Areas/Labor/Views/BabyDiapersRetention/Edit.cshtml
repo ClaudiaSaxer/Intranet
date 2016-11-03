@@ -1,0 +1,65 @@
+﻿@model Intranet.Labor.ViewModel.BabyDiapersRetentionEditViewModel
+
+@{
+    ViewBag.Title = "Babywindeln Retention - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    
+    <h2>Höschenwindeln - Retention-Test</h2>
+
+    <div class="intigena-line"></div>
+
+    @using (Html.BeginForm("Save", "BabyDiapersRetention", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.HiddenFor(m => m.Id);
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Testperson:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Produktions Code:</label>
+            <label class="col-sm-2 control-label">
+                @Model.ProductionCode
+            </label>
+            <div class="col-sm-8">
+                @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
+            </div>
+        </div>
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            @Html.HiddenFor(m => m.ProductionCode)
+            <label class="col-sm-2 control-label">Gewicht [g]:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
+            </div>
+        </div>
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            <h4>Retention (g)</h4>
+            <label class="col-sm-2 control-label">Nass [g]:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.WeightRetentionWet, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text", @required = "required" })
+            </div>
+        </div>
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            <h4>Notizen:</h4>
+            @if ( Model.Notes != null )
+            {
+                for (var i = 0; i < Model.Notes.Count; i++)
+                {
+                    <label class="col-sm-2 control-label">Error Code:</label>
+                    <div class="col-sm-10">
+                        @Html.TextAreaFor( m => Model.Notes.ElementAt( i )
+                                                     .Message, new { @class = "form-control", type = "text" } )
+                    </div>
+                }
+            }
+        </div>
+        <button type="submit" value="Save" class="btn btn-primary btn-block">Speichern</button>
+    }
+</div>

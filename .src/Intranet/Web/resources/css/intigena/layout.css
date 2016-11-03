@@ -3,9 +3,8 @@ html body {
   background-color: #F4F4F4;
   padding-bottom: 70px; }
 
-.body-content {
-  padding-left: 10px;
-  padding-top: 5px; }
+body {
+  padding-top: 90px; }
 
 .vertical-line {
   width: auto;

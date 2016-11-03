@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BabyDiapersRetention\BabyDiapersRetentionEditViewModel.cs" />
+    <Compile Include="TestNote.cs" />
     <Compile Include="LaborCreatorBabyDiapers\PenetrationTimeTestValue.cs" />
     <Compile Include="LaborCreatorBabyDiapers\Retention.cs" />
     <Compile Include="LaborCreatorBabyDiapers\RetentionTestValue.cs" />
