@@ -1,7 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using FluentAssertions;
 using Intranet.Common;
+using Intranet.Labor.Model.labor;
+using IntranetTestEnvironment;
 using Xunit;
+using Xunit.Sdk;
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -11,7 +16,7 @@ namespace Intranet.Labor.Bll.Test
     public class LaborCreatorServiceHelperTest
     {
         /// <summary>
-        ///     Testing GenerateProdCode1
+        ///     Testing GenerateProdCode 1
         /// </summary>
         [Fact]
         public void GenerateProdCodeTest1()
@@ -25,7 +30,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GenerateProdCode2
+        ///     Testing GenerateProdCode 2
         /// </summary>
         [Fact]
         public void GenerateProdCodeTest2()
@@ -39,7 +44,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GenerateProdCode3
+        ///     Testing GenerateProdCode 3
         /// </summary>
         [Fact]
         public void GenerateProdCodeTest3()
@@ -53,7 +58,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GenerateProdCode4
+        ///     Testing GenerateProdCode 4
         /// </summary>
         [Fact]
         public void GenerateProdCodeTest4()
@@ -65,5 +70,24 @@ namespace Intranet.Labor.Bll.Test
             actual.Should()
                   .Be(expected);
         }
+
+        /// <summary>
+        /// Testing GetBabyDiaperTestValueForType Empty
+        /// </summary>
+        [Fact]
+     
+        public void GetBabyDiaperTestValueForTypeTestEmpty()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+         
+
+                 Exception ex = Assert.Throws<InvalidDataException>(() => serviceHelper.GetBabyDiaperTestValueForType(new List<TestValue>(), TestTypeBabyDiaper.Retention, TestValueType.Single));
+
+                 Assert.Equal("No Single for Retention per Testsheet existing", ex.Message);
+
+
+        }
     }
+
+   
 }

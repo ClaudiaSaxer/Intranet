@@ -95,6 +95,10 @@
       <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
       <Name>Intranet.Labor.Definition</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Intranet\Labor\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
       <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
       <Name>Intranet.Labor.ViewModel</Name>

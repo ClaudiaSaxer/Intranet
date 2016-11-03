@@ -43,6 +43,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
         ///     <see cref="TestValueType" />
+        ///     One must exists and only one.
         /// </summary>
         /// <param name="testValues">the test values containing the wanted item</param>
         /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
@@ -338,8 +339,8 @@ namespace Intranet.Labor.Bll
             var item = testValue.FirstOrDefault();
             if ( item == null )
             {
-                Logger.Error( "No  " + valueType + "  for " + testType + " per Testsheet existing" );
-                throw new InvalidDataException( "No  " + valueType + "  for " + testType + " per Testsheet existing" );
+                Logger.Error( "No " + valueType + " for " + testType + " per Testsheet existing" );
+                throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
             }
             return item;
         }
