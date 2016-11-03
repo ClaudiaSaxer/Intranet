@@ -5,6 +5,7 @@ using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
+using Intranet.Labor.ViewModel;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -598,81 +599,6 @@ namespace Intranet.Labor.Bll.Test
             actual.Should()
                   .Be( expected );
         }
-        /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
-        /// </summary>
-        [Fact]
-        public void GetBabyDiaperTestValueForTypeOkRewetTest1()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
-            var
-                actual = serviceHelper.GetBabyDiaperTestValueForType(
-                    new List<TestValue>
-                    {
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = expected
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
-                        }
-                    },
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.Single);
-
-            actual.Should()
-                  .Be(expected);
-        }
-        /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Retention 1
-        /// </summary>
-        [Fact]
-        public void GetBabyDiaperTestValueForTypeOkRetentionTest1()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
-            var
-                actual = serviceHelper.GetBabyDiaperTestValueForType(
-                    new List<TestValue>
-                    {
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = expected
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Single,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet }
-                        }
-                    },
-                    TestTypeBabyDiaper.Retention,
-                    TestValueType.Single);
-
-            actual.Should()
-                  .Be(expected);
-        }
-
 
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Ok PenetrationTime 2
@@ -680,7 +606,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkPenetrationTimeTest2()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType(
@@ -706,86 +632,11 @@ namespace Intranet.Labor.Bll.Test
                         }
                     },
                     TestTypeBabyDiaper.RewetAndPenetrationTime,
-                    TestValueType.Average);
+                    TestValueType.Average );
 
             actual.Should()
-                  .Be(expected);
+                  .Be( expected );
         }
-        /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 2
-        /// </summary>
-        [Fact]
-        public void GetBabyDiaperTestValueForTypeOkRewetTest2()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
-            var
-                actual = serviceHelper.GetBabyDiaperTestValueForType(
-                    new List<TestValue>
-                    {
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = expected
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
-                        }
-                    },
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.Average);
-
-            actual.Should()
-                  .Be(expected);
-        }
-        /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Retention 2
-        /// </summary>
-        [Fact]
-        public void GetBabyDiaperTestValueForTypeOkRetentionTest2()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
-            var
-                actual = serviceHelper.GetBabyDiaperTestValueForType(
-                    new List<TestValue>
-                    {
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = expected
-                        },
-                        new TestValue
-                        {
-                            TestValueType = TestValueType.Average,
-                            ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet }
-                        }
-                    },
-                    TestTypeBabyDiaper.Retention,
-                    TestValueType.Average);
-
-            actual.Should()
-                  .Be(expected);
-        }
-
 
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Ok PenetrationTime 3
@@ -793,7 +644,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkPenetrationTimeTest3()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType(
@@ -819,55 +670,95 @@ namespace Intranet.Labor.Bll.Test
                         }
                     },
                     TestTypeBabyDiaper.RewetAndPenetrationTime,
-                    TestValueType.StandardDeviation);
+                    TestValueType.StandardDeviation );
 
             actual.Should()
-                  .Be(expected);
+                  .Be( expected );
         }
+
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
+        ///     Testing GetBabyDiaperTestValueForType Ok Retention 1
         /// </summary>
         [Fact]
-        public void GetBabyDiaperTestValueForTypeOkRewetTest3()
+        public void GetBabyDiaperTestValueForTypeOkRetentionTest1()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType(
                     new List<TestValue>
                     {
                         new TestValue
                         {
-                            TestValueType = TestValueType.StandardDeviation,
+                            TestValueType = TestValueType.Single,
                             ArticleTestType = ArticleType.BabyDiaper,
                             BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
                         },
                         new TestValue
                         {
-                            TestValueType = TestValueType.StandardDeviation,
+                            TestValueType = TestValueType.Single,
                             ArticleTestType = ArticleType.BabyDiaper,
                             BabyDiaperTestValue = expected
                         },
                         new TestValue
                         {
-                            TestValueType = TestValueType.StandardDeviation,
+                            TestValueType = TestValueType.Single,
                             ArticleTestType = ArticleType.BabyDiaper,
-                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet }
                         }
                     },
-                    TestTypeBabyDiaper.Rewet,
-                    TestValueType.StandardDeviation);
+                    TestTypeBabyDiaper.Retention,
+                    TestValueType.Single );
 
             actual.Should()
-                  .Be(expected);
+                  .Be( expected );
         }
+
+        /// <summary>
+        ///     Testing GetBabyDiaperTestValueForType Ok Retention 2
+        /// </summary>
+        [Fact]
+        public void GetBabyDiaperTestValueForTypeOkRetentionTest2()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
+            var
+                actual = serviceHelper.GetBabyDiaperTestValueForType(
+                    new List<TestValue>
+                    {
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = expected
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet }
+                        }
+                    },
+                    TestTypeBabyDiaper.Retention,
+                    TestValueType.Average );
+
+            actual.Should()
+                  .Be( expected );
+        }
+
         /// <summary>
         ///     Testing GetBabyDiaperTestValueForType Ok Retention 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRetentionTest3()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention };
             var
                 actual = serviceHelper.GetBabyDiaperTestValueForType(
@@ -893,12 +784,149 @@ namespace Intranet.Labor.Bll.Test
                         }
                     },
                     TestTypeBabyDiaper.Retention,
-                    TestValueType.StandardDeviation);
+                    TestValueType.StandardDeviation );
 
             actual.Should()
-                  .Be(expected);
+                  .Be( expected );
         }
 
+        /// <summary>
+        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
+        /// </summary>
+        [Fact]
+        public void GetBabyDiaperTestValueForTypeOkRewetTest1()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
+            var
+                actual = serviceHelper.GetBabyDiaperTestValueForType(
+                    new List<TestValue>
+                    {
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Single,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Single,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = expected
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Single,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
+                        }
+                    },
+                    TestTypeBabyDiaper.Rewet,
+                    TestValueType.Single );
 
+            actual.Should()
+                  .Be( expected );
+        }
+
+        /// <summary>
+        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 2
+        /// </summary>
+        [Fact]
+        public void GetBabyDiaperTestValueForTypeOkRewetTest2()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
+            var
+                actual = serviceHelper.GetBabyDiaperTestValueForType(
+                    new List<TestValue>
+                    {
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = expected
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.Average,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
+                        }
+                    },
+                    TestTypeBabyDiaper.Rewet,
+                    TestValueType.Average );
+
+            actual.Should()
+                  .Be( expected );
+        }
+
+        /// <summary>
+        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
+        /// </summary>
+        [Fact]
+        public void GetBabyDiaperTestValueForTypeOkRewetTest3()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet };
+            var
+                actual = serviceHelper.GetBabyDiaperTestValueForType(
+                    new List<TestValue>
+                    {
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.StandardDeviation,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime }
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.StandardDeviation,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = expected
+                        },
+                        new TestValue
+                        {
+                            TestValueType = TestValueType.StandardDeviation,
+                            ArticleTestType = ArticleType.BabyDiaper,
+                            BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention }
+                        }
+                    },
+                    TestTypeBabyDiaper.Rewet,
+                    TestValueType.StandardDeviation );
+
+            actual.Should()
+                  .Be( expected );
+        }
+
+        /// <summary>
+        ///     Testing To Penetration Time
+        /// </summary>
+        [Fact]
+        public void ToPenetrationTimeTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            var expected = new PenetrationTime
+            {
+                PenetrationTimeAdditionFirst = 1,
+                PenetrationTimeAdditionSecond = 2,
+                PenetrationTimeAdditionThird = 3,
+                PenetrationTimeAdditionFourth = 4
+            };
+            var actual = serviceHelper.ToPenetrationTime(
+                new BabyDiaperTestValue
+                {
+                    PenetrationTimeAdditionFirst = 1,
+                    PenetrationTimeAdditionSecond = 2,
+                    PenetrationTimeAdditionThird = 3,
+                    PenetrationTimeAdditionFourth = 4
+                } );
+        }
     }
 }
