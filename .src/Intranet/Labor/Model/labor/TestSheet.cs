@@ -79,7 +79,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the values of the test sheet
         /// </summary>
         /// <value>the values of the test sheet</value>
-        public ICollection<TestValue> TestValues { get; set; }
+        public virtual ICollection<TestValue> TestValues { get; set; }
 
         /// <summary>
         /// Gets or sets the day in year of the test sheet
