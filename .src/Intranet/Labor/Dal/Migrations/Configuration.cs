@@ -55,19 +55,6 @@ namespace Intranet.Labor.Dal.Migrations
             };
             context.Errors.AddOrUpdate(e => e.ErrorId,error1,error2,error3,error4);
 
-            /*var babyDiapersRetentionTest1 = new BabyDiaperTestValue
-            {
-                WeightDiaperDry = 32.9,
-                Revert140Value = 0.1,
-                Revet210Value = 0.18,
-                StrikeTroughValue = 0.28,
-                DistributionOfTheStrikeTrough = 240,
-                Revet140Rw = RwType.Ok,
-                Revet210Rw = RwType.Ok,
-                TestType = TestTypeBabyDiaper.Rewet
-            }*/
-            
-
             var testSheet = new TestSheet
             {
                 TestSheetId = 1,
@@ -85,7 +72,7 @@ namespace Intranet.Labor.Dal.Migrations
                     babyDiapersRetentionTestValue1
                 }*/
             };
-            var babyDiapersRetentionTestValue1 = new TestValue
+            var babyDiapersRewetTestValue1 = new TestValue
             {
                 TestValueId = 1,
                 CreatedDateTime = new DateTime(2016, 11, 2,1,50,0),
@@ -96,7 +83,7 @@ namespace Intranet.Labor.Dal.Migrations
                 TestValueType = TestValueType.Single,
                 TestSheetRefId = 1
             };
-            var babyDiapersRetentionTest1 = new BabyDiaperTestValue
+            var babyDiapersRewetTest1 = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 1,
                 DiaperCreatedTime = new TimeSpan( 1, 38, 0 ),
@@ -109,10 +96,41 @@ namespace Intranet.Labor.Dal.Migrations
                 Revet210Rw = RwType.Ok,
                 TestType = TestTypeBabyDiaper.Rewet
             };
+            babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
+            babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
+
+            var babyDiapersRetentionTestValue1 = new TestValue
+            {
+                TestValueId = 2,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.BabyDiaper,
+                TestValueType = TestValueType.Single,
+                TestSheetRefId = 1
+            };
+            var babyDiapersRetentionTest1 = new BabyDiaperTestValue
+            {
+                BabyDiaperTestValueId = 2,
+                DiaperCreatedTime = new TimeSpan(1, 38, 0),
+                WeightDiaperDry = 33.0,
+                RetentionWetWeight = 414.0,
+                RetentionAfterZentrifugeValue = 381.0,
+                RetentionAfterZentrifugePercent = 1155,
+                RetentionRw = RwType.Better,
+                SapType = "EKX",
+                SapNr = "EN67",
+                SapGHoewiValue = 10.70,
+                TestType = TestTypeBabyDiaper.Retention
+            };
             babyDiapersRetentionTestValue1.BabyDiaperTestValue = babyDiapersRetentionTest1;
-            babyDiapersRetentionTestValue1.BabyDiaperTestValueRefId = 1;
+            babyDiapersRetentionTestValue1.BabyDiaperTestValueRefId = 2;
+
+
             testSheet.TestValues = new List<TestValue>
             {
+                babyDiapersRewetTestValue1,
                 babyDiapersRetentionTestValue1
             };
             //babyDiapersRetentionTestValue1.TestSheet = testSheet;*/
@@ -120,8 +138,8 @@ namespace Intranet.Labor.Dal.Migrations
             //context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTest1);
             //context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRetentionTestValue1);
             context.TestSheets.AddOrUpdate(m => m.FaNr, testSheet);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRetentionTestValue1);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTest1);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRewetTestValue1, babyDiapersRetentionTestValue1);
+            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRewetTest1, babyDiapersRetentionTest1);
         }
     }
 }
