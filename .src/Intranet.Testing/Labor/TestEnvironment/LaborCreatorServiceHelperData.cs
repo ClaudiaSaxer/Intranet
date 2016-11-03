@@ -9,6 +9,87 @@ namespace Intranet.Labor.Test
     /// </summary>
     public class LaborCreatorServiceHelperData
     {
+
+        /// <summary>
+        /// Testdata
+        /// </summary>
+        /// <returns>TestValues</returns>
+        public static List<TestValue> TwoTestValuePerType()
+            => new List<TestValue>
+            {
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention,  RetentionRw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention,RetentionRw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Single,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Average,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention,RetentionRw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.StandardDeviation,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Retention,RetentionRw = RwType.Better},TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Average,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.StandardDeviation,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.Rewet,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.Average,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet()
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.StandardDeviation,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet()
+                }
+            };
         /// <summary>
         /// Testdata
         /// </summary>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model.labor;
@@ -583,7 +584,7 @@ namespace Intranet.Labor.Bll.Test
                     PenetrationTimeAdditionFourth = 4.0
                 } );
 
-            actual.ShouldBeEquivalentTo(expected);
+            actual.ShouldBeEquivalentTo( expected );
 
         }
 
@@ -716,15 +717,15 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing ToRewetAverage ok
+        ///     Testing ToRewetTestValue ok
         /// </summary>
         [Fact]
-        public void ToRewetTestValue()
+        public void ToRewetTestValueTest()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new RewetTestValue
             {
-                Rewet = new Rewet {Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},
+                Rewet = new Rewet { Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
                 TestInfo = new TestInfo
                 {
                     TestPerson = "test person",
@@ -734,10 +735,60 @@ namespace Intranet.Labor.Bll.Test
 
             };
 
-            var actual = serviceHelper.ToRewetTestValue(new BabyDiaperTestValue {WeightDiaperDry = 666,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better}, "test person","theprodcode");
+            var actual = serviceHelper.ToRewetTestValue( new BabyDiaperTestValue { WeightDiaperDry = 666, Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
+                                                         "test person",
+                                                         "theprodcode" );
 
-           actual.ShouldBeEquivalentTo( expected );
-        
+            actual.ShouldBeEquivalentTo( expected );
+
+        }
+
+        /// <summary>
+        ///     Testing ToRewetTestValueCollection ok
+        /// </summary>
+        [Fact]
+        public void ToRewetTestValueCollectionTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            var actual = serviceHelper.ToRewetTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+
+            actual.Count.Should()
+                  .Be( 4 );
+
+
+        }
+
+        /// <summary>
+        ///     Testing ToRetentionTestValueCollection ok
+        /// </summary>
+        [Fact]
+        public void ToRetentionTestValueCollectionTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+
+            var actual = serviceHelper.ToRewetTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+
+            actual.Count.Should()
+                  .Be( 2 );
+
+        }
+
+        /// <summary>
+        ///     Testing ToPenetrationTimeTestValueCollection ok
+        /// </summary>
+        [Fact]
+        public void ToPenetrationTimeTestValueCollectionTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+
+            var actual = serviceHelper.ToRewetTestValuesCollection( LaborCreatorServiceHelperData.TwoTestValuePerType() );
+
+            actual.Count.Should()
+                  .Be( 2 );
+
         }
 
 
@@ -789,7 +840,7 @@ namespace Intranet.Labor.Bll.Test
         ///     Testing to Rewet ok
         /// </summary>
         [Fact]
-        public void toRewetTestOk()
+        public void ToRewetTestOk()
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new Rewet
@@ -824,7 +875,112 @@ namespace Intranet.Labor.Bll.Test
                   .Be( expected.Rewet210Rw );
             actual.StrikeTroughValue.Should()
                   .Be( expected.StrikeTroughValue );
-             actual.ShouldBeEquivalentTo( expected );
+            actual.ShouldBeEquivalentTo( expected );
+        }
+
+        /// <summary>
+        ///     Testing toTestInfo
+        /// </summary>
+        [Fact]
+        public void ToTestInfoTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            var expected = new TestInfo
+            {
+                TestPerson = "gandalf",
+                ProductionCode = "you shall not pass",
+                WeightyDiaperDry = 666
+            };
+
+            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666 );
+
+            actual.ShouldBeEquivalentTo( expected );
+        }
+
+        /// <summary>
+        /// Testing ToTestValuesCollectionByTestType  1
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest1()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType( LaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                            TestValueType.Single,
+                                                            new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
+                                                            serviceHelper.ToRetentionTestValue ).ToList();
+            actual.Count.Should()
+                  .Be( 2 );
+
+        }
+
+        /// <summary>
+        /// Testing ToTestValuesCollectionByTestType  1
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest2()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(LaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                            TestValueType.Single,
+                                                            new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet },
+                                                            serviceHelper.ToRewetTestValue).ToList();
+            actual.Count.Should()
+                  .Be(2);
+
+        }
+
+        /// <summary>
+        /// Testing ToTestValuesCollectionByTestType  1
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest3()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(LaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                            TestValueType.Single,
+                                                            new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.RewetAndPenetrationTime },
+                                                            serviceHelper.ToPenetrationTimeTestValue).ToList();
+            actual.Count.Should()
+                  .Be(2);
+
+        }
+
+        /// <summary>
+        /// Testing ToTestValuesCollectionByTestType  4
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest4()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(LaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                            TestValueType.Average,
+                                                            new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
+                                                            serviceHelper.ToRetentionTestValue).ToList();
+            actual.Count.Should()
+                  .Be(1);
+
+        }
+
+        /// <summary>
+        /// Testing ToTestValuesCollectionByTestType  5
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest5()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(LaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                            TestValueType.StandardDeviation,
+                                                            new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
+                                                            serviceHelper.ToRetentionTestValue).ToList();
+            actual.Count.Should()
+                  .Be(1);
+
         }
     }
 }
