@@ -716,6 +716,32 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
+        ///     Testing ToRewetAverage ok
+        /// </summary>
+        [Fact]
+        public void ToRewetTestValue()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var expected = new RewetTestValue
+            {
+                Rewet = new Rewet {Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},
+                TestInfo = new TestInfo
+                {
+                    TestPerson = "test person",
+                    ProductionCode = "theprodcode",
+                    WeightyDiaperDry = 666
+                }
+
+            };
+
+            var actual = serviceHelper.ToRewetTestValue(new BabyDiaperTestValue {WeightDiaperDry = 666,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better}, "test person","theprodcode");
+
+           actual.ShouldBeEquivalentTo( expected );
+        
+        }
+
+
+        /// <summary>
         ///     Testing ToRewetStandardDeviation many
         /// </summary>
         [Fact]
