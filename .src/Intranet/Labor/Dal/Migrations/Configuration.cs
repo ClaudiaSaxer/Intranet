@@ -54,6 +54,52 @@ namespace Intranet.Labor.Dal.Migrations
             };
             context.Errors.AddOrUpdate( e => e.ErrorId, error1, error2, error3, error4 );
 
+            var machine1 = new Machine
+            {
+                MachineNr = "M10"
+            };
+            var machine2 = new Machine
+            {
+                MachineNr = "M11"
+            };
+            var machine3 = new Machine
+            {
+                MachineNr = "M49"
+            };
+            context.Machines.AddOrUpdate( m => m.MachineId, machine1, machine2, machine3);
+
+            var article1 = new Article
+            {
+                ArticleNr = "10401",
+                Name = "Babydream Maxi-Plus",
+                ArticleType = ArticleType.BabyDiaper
+            };
+            context.Articles.AddOrUpdate( a => a.ArticleId, article1 );
+
+            var productionOrderComponent1 = new ProductionOrderComponent
+            {
+                SAP = 32.7,
+                WithoutSAP = 31.2,
+                ComponentType = "EKX",
+                ComponentNr = "EN67"
+            };
+
+            var productionOrder1 = new ProductionOrder
+            {
+                FaNr = "FA123456",
+                StartDateTime = new DateTime(2016,1,1),
+                EndDateTime = new DateTime(2018,1,1),
+                Machine = machine2,
+                Component = productionOrderComponent1,
+                Article = article1
+            };
+            productionOrderComponent1.ProductionOrder = productionOrder1;
+
+            context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
+            context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
+
+            ////////////////////////////////////////////////////
+
             var testSheet = new TestSheet
             {
                 TestSheetId = 1,
