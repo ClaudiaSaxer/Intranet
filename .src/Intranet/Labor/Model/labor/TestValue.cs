@@ -59,7 +59,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the notes to the testvalues
         /// </summary>
         /// <value>notes for the testvalue</value>
-        public ICollection<TestValueNote> TestValueNote { get; set; }
+        public virtual ICollection<TestValueNote> TestValueNote { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper test value
@@ -77,7 +77,7 @@ namespace Intranet.Labor.Model.labor
         ///     Gets or sets the type of the test value
         /// </summary>
         /// <value>the type of the test value</value>
-        public TestValueType TestValueType { get; set; }
+        public virtual TestValueType TestValueType { get; set; }
 
         /// <summary>
         ///     Gets or sets the test sheet
