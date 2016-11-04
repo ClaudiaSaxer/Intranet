@@ -270,28 +270,28 @@ namespace Intranet.Labor.Dal.Migrations
             };
 
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
-            babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
+            //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
 
-            babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
+            //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
             babyDiapersRewetTestValueAverage.BabyDiaperTestValue = babyDiapersRewetTestAverage;
-            babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
+            //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
             babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRewetTestStandardDeviation;
 
-            babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
+            //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
             babyDiapersRetentionTestValueAverage.BabyDiaperTestValue = babyDiapersRetentionTestAverage;
-            babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
+            //babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
             babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRetentionTestStandardDeviation;
 
-            babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
+            //babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
             babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValue = babyDiapersPenetrationTimeTestAverage;
-            babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
+            //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersPenetrationTimeTestStandardDeviation;
 
 
             testSheet.TestValues = new List<TestValue>
             {
                 babyDiapersRewetTestValue1,
-                babyDiapersRetentionTestValue1
+                babyDiapersRetentionTestValue1,
                 babyDiapersRetentionTestValueAverage,
                 babyDiapersRetentionTestValueStandardDeviation,
                 babyDiapersRewetTestValueAverage,

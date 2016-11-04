@@ -147,7 +147,17 @@ namespace Intranet.Labor.Bll
 
         private BabyDiapersRetentionEditViewModel UpdateTest(BabyDiapersRetentionEditViewModel viewModel)
         {
-            throw new NotImplementedException();
+            var testValue = BabyDiapersRetentionBll.GetTestValue( viewModel.TestValueId );
+            testValue.LastEditedDateTime = DateTime.Now;
+            testValue.LastEditedPerson = viewModel.TestPerson;
+            testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
+            testValue.BabyDiaperTestValue.DiaperCreatedTime = viewModel.ProductionCodeTime;
+            testValue.BabyDiaperTestValue.WeightDiaperDry = viewModel.DiaperWeight;
+            testValue.BabyDiaperTestValue.RetentionWetWeight = viewModel.WeightRetentionWet;
+            testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue, viewModel.TestSheetId );
+
+            BabyDiapersRetentionBll.UpdateTestValue( testValue );
+            return viewModel;
         }
 
         private BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue testValue, Int32 testSheetId )

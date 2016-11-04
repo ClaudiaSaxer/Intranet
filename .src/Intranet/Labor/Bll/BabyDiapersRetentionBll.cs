@@ -109,13 +109,20 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
+        ///     Saves a new testvalue in the db
         /// </summary>
-        /// <param name="testValue"></param>
+        /// <param name="testValue">the test value which will be saved</param>
         public void SaveNewTestValue( TestValue testValue )
         {
             TestValueRepository.Add( testValue );
             TestValueRepository.SaveChanges();
         }
+
+        /// <summary>
+        ///     update an testvalue
+        /// </summary>
+        /// <param name="testValue">the testvalue which will be updated</param>
+        public void UpdateTestValue( TestValue testValue ) => TestSheetRepository.SaveChanges();
 
         #endregion
     }

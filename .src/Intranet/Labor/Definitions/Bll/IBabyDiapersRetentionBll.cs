@@ -45,9 +45,15 @@ namespace Intranet.Labor.Definition
         IEnumerable<TestValueNote> GetNotes(Int32 testValueId);
 
         /// <summary>
-        /// 
+        ///     Saves a new testvalue in the db
         /// </summary>
-        /// <param name="testValue"></param>
+        /// <param name="testValue">the test value which will be saved</param>
         void SaveNewTestValue( TestValue testValue );
+
+        /// <summary>
+        ///     update an testvalue
+        /// </summary>
+        /// <param name="testValue">the testvalue which will be updated</param>
+        void UpdateTestValue(TestValue testValue);
     }
 }
