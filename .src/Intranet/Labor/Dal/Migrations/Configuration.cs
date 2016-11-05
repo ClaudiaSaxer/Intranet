@@ -79,7 +79,9 @@ namespace Intranet.Labor.Dal.Migrations
             var productionOrderComponent1 = new ProductionOrderComponent
             {
                 SAP = 32.7,
-                WithoutSAP = 31.2,
+                PillowRetentWithoutSAP = 31.2,
+                PillowWeightWithoutSAP = 26.0,
+                CelluloseRetention = 1.2,
                 ComponentType = "EKX",
                 ComponentNr = "EN67"
             };

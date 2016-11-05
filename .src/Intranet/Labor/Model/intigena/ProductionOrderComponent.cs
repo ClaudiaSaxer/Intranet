@@ -23,10 +23,22 @@ namespace Intranet.Labor.Model
         public Double SAP { get; set; }
 
         /// <summary>
-        ///     Gets or sets the value without SAP of the component
+        ///     Gets or sets the value of Pillow Retent without SAP of the component
         /// </summary>
         /// <value>the value without SAP of the component</value>
-        public Double WithoutSAP { get; set; }
+        public Double PillowRetentWithoutSAP { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the value of Pillow Weight without SAP of the component
+        /// </summary>
+        /// <value>the value without SAP of the component</value>
+        public Double PillowWeightWithoutSAP { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the value of Cellulose Retention of the component
+        /// </summary>
+        /// <value>the value Cellulose Retention of the component</value>
+        public Double CelluloseRetention { get; set; }
 
         /// <summary>
         ///     Gets or sets the type of the component
