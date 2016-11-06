@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
@@ -112,17 +113,22 @@ namespace Intranet.Labor.Bll
         ///     Saves a new testvalue in the db
         /// </summary>
         /// <param name="testValue">the test value which will be saved</param>
-        public void SaveNewTestValue( TestValue testValue )
+        public TestValue SaveNewTestValue( TestValue testValue )
         {
             TestValueRepository.Add( testValue );
             TestValueRepository.SaveChanges();
+            return testValue;
         }
 
         /// <summary>
         ///     update an testvalue
         /// </summary>
         /// <param name="testValue">the testvalue which will be updated</param>
-        public void UpdateTestValue( TestValue testValue ) => TestSheetRepository.SaveChanges();
+        public TestValue UpdateTestValue(TestValue testValue)
+        {
+            TestSheetRepository.SaveChanges();
+            return testValue;
+        }
 
         #endregion
     }

@@ -48,12 +48,12 @@ namespace Intranet.Labor.Definition
         ///     Saves a new testvalue in the db
         /// </summary>
         /// <param name="testValue">the test value which will be saved</param>
-        void SaveNewTestValue( TestValue testValue );
+        TestValue SaveNewTestValue( TestValue testValue );
 
         /// <summary>
         ///     update an testvalue
         /// </summary>
         /// <param name="testValue">the testvalue which will be updated</param>
-        void UpdateTestValue(TestValue testValue);
+        TestValue UpdateTestValue(TestValue testValue);
     }
 }
