@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Intranet.Common;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
+using Intranet.Labor.ViewModel;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -213,6 +214,27 @@ namespace Intranet.Labor.Bll.Test
             Assert.Equal(32.2, actual.DiaperWeight);
             Assert.Equal(398.1, actual.WeightRetentionWet);
             Assert.Equal(2,actual.NoteCodes.Count);
+        }
+
+        /// <summary>
+        ///     Test the success of saving
+        /// </summary>
+        public void SaveSuccessTest()
+        {
+            var testValue = new TestValue();
+
+            var babyDiaperServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper(
+                    testValue
+                );
+
+            var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
+            {
+                BabyDiaperServiceHelper = babyDiaperServiceHelper
+            };
+
+            var actual = target.Save(new BabyDiaperRetentionEditViewModel());
+            Assert.Equal(testValue,actual);
         }
     }
 }

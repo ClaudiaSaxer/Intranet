@@ -117,7 +117,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="testSheetId">id of the test sheet</param>
         /// <returns>the updated test sheet</returns>
-        public TestSheet UpdateAverageAndStv(int testSheetId)
+        public TestSheet UpdateAverageAndStv(Int32 testSheetId)
         {
             // TODO
             return null;
