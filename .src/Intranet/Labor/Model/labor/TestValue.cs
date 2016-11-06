@@ -84,7 +84,7 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the test sheet</value>
         [ForeignKey( "TestSheetRefId" )]
-        public TestSheet TestSheet { get; set; }
+        public virtual TestSheet TestSheet { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the test sheet

@@ -61,8 +61,23 @@ namespace Intranet.Labor.Bll
         public BabyDiaperRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
             var testValue = BabyDiaperRetentionBll.GetTestValue( retentionTestId );
+            if (testValue.IsNull())
+            {
+                Logger.Error("TestValue mit id " + retentionTestId + "existiert nicht in DB!");
+                return null;
+            }
             var babyDiapersTestValue = testValue.BabyDiaperTestValue;
-            var testSheetInfo = BabyDiaperRetentionBll.GetTestSheetInfo( testValue.TestSheetRefId );
+            if (babyDiapersTestValue.IsNull())
+            {
+                Logger.Error("BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!");
+                return null;
+            }
+            var testSheetInfo = testValue.TestSheet;
+            if (testSheetInfo.IsNull())
+            {
+                Logger.Error("TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!");
+                return null;
+            }
             var notes = testValue.TestValueNote;
             var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => error.ErrorCode + " - " + error.Value )
@@ -99,14 +114,16 @@ namespace Intranet.Labor.Bll
 
             if ( testSheetInfo.IsNull() )
             {
-                Logger.Warn( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
+                Logger.Error( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
             }
 
-            var viewModel = new BabyDiaperRetentionEditViewModel();
-            viewModel.TestSheetId = testSheetId;
-            viewModel.TestValueId = -1;
-            viewModel.ProductionCode = CreateProductionCode( testSheetInfo );
+            var viewModel = new BabyDiaperRetentionEditViewModel
+            {
+                TestSheetId = testSheetId,
+                TestValueId = -1,
+                ProductionCode = CreateProductionCode(testSheetInfo)
+            };
 
             return viewModel;
         }
