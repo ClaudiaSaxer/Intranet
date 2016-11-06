@@ -132,6 +132,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<BabyDiaperServiceHelper>()
+                   .As<IBabyDiaperServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>

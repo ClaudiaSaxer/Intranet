@@ -1,6 +1,7 @@
 ﻿#region Usings
 
 using System;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -31,6 +32,6 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="babyDiapersRetentionEditViewModel">The viewmodel which will be saved or updated</param>
         /// <returns>The saved or updated BabyDiapersRetentionEditViewModel</returns>
-        BabyDiapersRetentionEditViewModel Save( BabyDiapersRetentionEditViewModel babyDiapersRetentionEditViewModel );
+        TestValue Save( BabyDiapersRetentionEditViewModel babyDiapersRetentionEditViewModel );
     }
 }

@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\IBabyDiaperServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiapersRetentionBll.cs" />
     <Compile Include="Bll\IBabyDiapersRetentionService.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />

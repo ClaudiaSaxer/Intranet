@@ -25,6 +25,11 @@ namespace Intranet.Labor.Bll
         /// </summary>
         public IBabyDiapersRetentionBll BabyDiapersRetentionBll { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the baby diaper service helper.
+        /// </summary>
+        public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
+
         #endregion
 
         #region Ctor
@@ -111,67 +116,23 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="viewModel">The viewmodel which will be saved or updated</param>
         /// <returns>The saved or updated BabyDiapersRetentionEditViewModel</returns>
-        public BabyDiapersRetentionEditViewModel Save( BabyDiapersRetentionEditViewModel viewModel )
+        public TestValue Save( BabyDiapersRetentionEditViewModel viewModel )
         {
-            viewModel = viewModel.TestValueId <= 0 ? SaveNewTest( viewModel ) : UpdateTest( viewModel );
-            return viewModel;
+            TestValue testValue = null;
+            try
+            {
+                testValue = viewModel.TestValueId <= 0
+                    ? BabyDiaperServiceHelper.SaveNewRetentionTest(viewModel)
+                    : BabyDiaperServiceHelper.UpdateRetentionTest(viewModel);
+                var testSheet = BabyDiaperServiceHelper.UpdateAverageAndStv(viewModel.TestSheetId);
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Update oder Create new Test Value ist fehlgeschlagen: " + e.Message);
+            }
+            return testValue;
         }
 
         #endregion
-
-        private BabyDiapersRetentionEditViewModel SaveNewTest(BabyDiapersRetentionEditViewModel viewModel)
-        {
-            var testValue = new TestValue
-            {
-                TestSheetRefId = viewModel.TestSheetId,
-                CreatedDateTime = DateTime.Now,
-                LastEditedDateTime = DateTime.Now,
-                CreatedPerson = viewModel.TestPerson,
-                LastEditedPerson = viewModel.TestPerson,
-                DayInYearOfArticleCreation = viewModel.ProductionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper
-            };
-            var babyDiaperTestValue = new BabyDiaperTestValue
-            {
-                DiaperCreatedTime = viewModel.ProductionCodeTime,
-                WeightDiaperDry = viewModel.DiaperWeight,
-                RetentionWetWeight = viewModel.WeightRetentionWet,
-                TestType = TestTypeBabyDiaper.Retention
-            };
-            babyDiaperTestValue = CalculateBabyDiaperRetentionValues(babyDiaperTestValue, viewModel.TestSheetId );
-            testValue.BabyDiaperTestValue = babyDiaperTestValue;
-
-            BabyDiapersRetentionBll.SaveNewTestValue(testValue);
-            return viewModel;
-        }
-
-        private BabyDiapersRetentionEditViewModel UpdateTest(BabyDiapersRetentionEditViewModel viewModel)
-        {
-            var testValue = BabyDiapersRetentionBll.GetTestValue( viewModel.TestValueId );
-            testValue.LastEditedDateTime = DateTime.Now;
-            testValue.LastEditedPerson = viewModel.TestPerson;
-            testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
-            testValue.BabyDiaperTestValue.DiaperCreatedTime = viewModel.ProductionCodeTime;
-            testValue.BabyDiaperTestValue.WeightDiaperDry = viewModel.DiaperWeight;
-            testValue.BabyDiaperTestValue.RetentionWetWeight = viewModel.WeightRetentionWet;
-            testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue, viewModel.TestSheetId );
-
-            BabyDiapersRetentionBll.UpdateTestValue( testValue );
-            return viewModel;
-        }
-
-        private BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue testValue, Int32 testSheetId )
-        {
-            var testSheet = BabyDiapersRetentionBll.GetTestSheetInfo( testSheetId );
-            testValue.RetentionAfterZentrifugeValue = testValue.RetentionWetWeight - testValue.WeightDiaperDry;
-            if ( Math.Abs( testValue.WeightDiaperDry ) > 0.1 )
-                testValue.RetentionAfterZentrifugePercent = (testValue.RetentionWetWeight - testValue.WeightDiaperDry) * 100.0 / testValue.WeightDiaperDry;
-            testValue.RetentionRw = RwType.Ok; // TODO auf db schauen wegen grenzwert
-            testValue.SapType = testSheet.SAPType;
-            testValue.SapNr = testSheet.SAPNr;
-            testValue.SapGHoewiValue = 0.0; // TODO auf db schauen wegen grenzwert
-            // TODO Update Average + Std of TestSheet
-            return testValue;
-        }
     }
 }
