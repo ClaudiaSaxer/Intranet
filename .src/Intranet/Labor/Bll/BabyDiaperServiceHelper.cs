@@ -44,18 +44,32 @@ namespace Intranet.Labor.Bll
             int testSheetId)
         {
             var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo(testSheetId);
+            var productionOrder = BabyDiaperRetentionBll.GetProductionOrder(testSheet.FaNr);
+
             babyDiaperTestValue.RetentionAfterZentrifugeValue = babyDiaperTestValue.RetentionWetWeight -
                                                                 babyDiaperTestValue.WeightDiaperDry;
             if (Math.Abs(babyDiaperTestValue.WeightDiaperDry) > 0.1)
                 babyDiaperTestValue.RetentionAfterZentrifugePercent = (babyDiaperTestValue.RetentionWetWeight -
                                                                        babyDiaperTestValue.WeightDiaperDry)*100.0/
                                                                       babyDiaperTestValue.WeightDiaperDry;
-            babyDiaperTestValue.RetentionRw = RwType.Ok; // TODO auf db schauen wegen grenzwert
+            babyDiaperTestValue.RetentionRw = GetRetentionRwType( babyDiaperTestValue.RetentionAfterZentrifugeValue, productionOrder);
             babyDiaperTestValue.SapType = testSheet.SAPType;
             babyDiaperTestValue.SapNr = testSheet.SAPNr;
-            babyDiaperTestValue.SapGHoewiValue = 0.0; // TODO auf db schauen wegen grenzwert
-            // TODO Update Average + Std of TestSheet
+            babyDiaperTestValue.SapGHoewiValue = ( babyDiaperTestValue.RetentionWetWeight - babyDiaperTestValue.WeightDiaperDry - productionOrder.Component.PillowRetentWithoutSAP )
+                                                 / productionOrder.Component.SAP;
             return babyDiaperTestValue;
+        }
+
+        /// <summary>
+        ///     returns the RwType for the Retention test
+        /// </summary>
+        /// <param name="value">the tested Value</param>
+        /// <param name="productOrder">the Production order</param>
+        /// <returns></returns>
+        public RwType GetRetentionRwType( Double value, ProductionOrder productOrder)
+        {
+            if(value <= productOrder.Article.MinRetention) return RwType.Worse;
+            return value >= productOrder.Article.MaxRetention ? RwType.Better : RwType.Ok;
         }
 
         #region Implementation of IBabyDiaperRetentionBll

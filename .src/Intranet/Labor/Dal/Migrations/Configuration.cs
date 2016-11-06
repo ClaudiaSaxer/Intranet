@@ -72,7 +72,12 @@ namespace Intranet.Labor.Dal.Migrations
             {
                 ArticleNr = "10401",
                 Name = "Babydream Maxi-Plus",
-                ArticleType = ArticleType.BabyDiaper
+                ArticleType = ArticleType.BabyDiaper,
+                Rewet140Max = 0.4,
+                Rewet210Max = 0.5,
+                MinRetention = 350,
+                MaxRetention = 380,
+                MaxPenetrationAfter4Time = 250
             };
             context.Articles.AddOrUpdate( a => a.ArticleId, article1 );
 

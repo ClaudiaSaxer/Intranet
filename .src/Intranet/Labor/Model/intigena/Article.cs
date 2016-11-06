@@ -45,6 +45,31 @@ namespace Intranet.Labor.Model
         /// <value>the production orders of the article </value>
         public ICollection<ProductionOrder> ProductionOrders { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the max value of the rewet 140ml test for the article
+        /// </summary>
+        public Double Rewet140Max { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the max value of the rewet 210ml test for the article
+        /// </summary>
+        public Double Rewet210Max { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the min value of the retention test for the article
+        /// </summary>
+        public Double MinRetention { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the max value of the retention test for the article
+        /// </summary>
+        public Double MaxRetention { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the max time of the 4th penetration test for the article
+        /// </summary>
+        public Double MaxPenetrationAfter4Time { get; set; }
+
         #endregion
     }
 }

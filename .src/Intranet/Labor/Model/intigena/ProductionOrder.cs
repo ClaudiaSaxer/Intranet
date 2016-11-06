@@ -42,7 +42,7 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the article for the production order</value>
         [ForeignKey( "ArticleRefId" )]
-        public Article Article { get; set; }
+        public virtual Article Article { get; set; }
 
         /// <summary>
         ///     Gets or sets the component for the production order
@@ -55,7 +55,7 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the machine for the production order</value>
         [ForeignKey( "MachineRefId" )]
-        public Machine Machine { get; set; }
+        public virtual Machine Machine { get; set; }
 
         /// <summary>
         ///     Gets or sets the article ref id

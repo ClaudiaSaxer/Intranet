@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Error = Intranet.Labor.Model.Error; 
 
@@ -10,12 +11,6 @@ namespace Intranet.Labor.Definition
     /// </summary>
     public interface IBabyDiaperRetentionBll
     {
-        /// <summary>
-        ///     Query for an babydiapers retention test
-        /// </summary>
-        /// <param name="retentionTestId">The ID of the retention Test</param>
-        /// <returns>The retentiontest with the given Id</returns>
-        BabyDiaperTestValue GetBabyDiapersRetetionTest(Int32 retentionTestId);
 
         /// <summary>
         ///     Query for a testvalue
@@ -38,13 +33,6 @@ namespace Intranet.Labor.Definition
         IEnumerable<Error> GetAllNoteCodes();
 
         /// <summary>
-        ///     Query for all notes for the testValue
-        /// </summary>
-        /// /// <param name="testValueId">The ID of the test value</param>
-        /// <returns>Collection of all notes for the testValue</returns>
-        IEnumerable<TestValueNote> GetNotes(Int32 testValueId);
-
-        /// <summary>
         ///     Saves a new testvalue in the db
         /// </summary>
         /// <param name="testValue">the test value which will be saved</param>
@@ -55,5 +43,11 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="testValue">the testvalue which will be updated</param>
         TestValue UpdateTestValue(TestValue testValue);
+
+        /// <summary>
+        ///     Query for the ProductionOrder
+        /// </summary>
+        /// <param name="productionOrderFa">the Id of the Production order</param>
+        ProductionOrder GetProductionOrder(String productionOrderFa);
     }
 }

@@ -11,7 +11,7 @@
 
     <div class="intigena-line"></div>
 
-    @using (Html.BeginForm("Save", "BabyDiapersRetention", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("Save", "BabyDiaperRetention", FormMethod.Post, new { @class = "form-horizontal" }))
     {
         @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
         @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);

@@ -63,6 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BabyDiaperTestValueRepository.cs" />
     <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\ProductionOrderRepository.cs" />
     <Compile Include="Repositories\TestSheetRepository.cs" />
     <Compile Include="Repositories\TestValueNoteRepository.cs" />
     <Compile Include="Repositories\TestValueRepository.cs" />

@@ -36,30 +36,13 @@ namespace Intranet.Labor.Bll
         public IGenericRepository<TestValue> TestValueRepository { get; set; }
 
         /// <summary>
-        ///     BabyDiaperTestValueRepository
+        ///     ProductionOrderRepository
         /// </summary>
-        public IGenericRepository<BabyDiaperTestValue> BabyDiaperTestValueRepository { get; set; }
-
-        /// <summary>
-        ///     TestValueNoteRepository
-        /// </summary>
-        public IGenericRepository<TestValueNote> TestValueNoteRepository { get; set; }
+        public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
 
         #endregion
 
         #region Implementation of IBabyDiaperRetentionBll
-
-        /// <summary>
-        ///     Query for an babydiapers retention test
-        /// </summary>
-        /// <param name="retentionTestId">The ID of the retention Test</param>
-        /// <returns>The retentiontest with the given Id</returns>
-        public BabyDiaperTestValue GetBabyDiapersRetetionTest( Int32 retentionTestId )
-        {
-            var babyDiaperTestValue = BabyDiaperTestValueRepository.Where( tv => tv.BabyDiaperTestValueId == retentionTestId )
-                                                                   .FirstOrDefault();
-            return babyDiaperTestValue;
-        }
 
         /// <summary>
         ///     Query for a testvalue
@@ -97,19 +80,6 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     Query for all notes for the testValue
-        /// </summary>
-        /// ///
-        /// <param name="testValueId">The ID of the test value</param>
-        /// <returns>Collection of all notes for the testValue</returns>
-        public IEnumerable<TestValueNote> GetNotes( Int32 testValueId )
-        {
-            var notes = TestValueNoteRepository.Where( n => n.TestValueRefId == testValueId )
-                                               .ToList();
-            return notes;
-        }
-
-        /// <summary>
         ///     Saves a new testvalue in the db
         /// </summary>
         /// <param name="testValue">the test value which will be saved</param>
@@ -130,6 +100,19 @@ namespace Intranet.Labor.Bll
             return testValue;
         }
 
+        /// <summary>
+        ///     Query for the ProductionOrder
+        /// </summary>
+        /// <param name="productionOrderFa">the Id of the Production order</param>
+        public ProductionOrder GetProductionOrder( String productionOrderFa )
+        {
+            var pO = ProductionOrderRepository.Where( p => p.FaNr == productionOrderFa )
+                                     .FirstOrDefault();
+            if ( pO != null )
+                return ProductionOrderRepository.FindAsync( pO.FaId )
+                                                .Result;
+            return null;
+        }
         #endregion
     }
 }
