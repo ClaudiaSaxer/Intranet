@@ -53,8 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bll\IBabyDiaperServiceHelper.cs" />
-    <Compile Include="Bll\IBabyDiapersRetentionBll.cs" />
-    <Compile Include="Bll\IBabyDiapersRetentionService.cs" />
+    <Compile Include="Bll\IBabyDiaperRetentionBll.cs" />
+    <Compile Include="Bll\IBabyDiaperRetentionService.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />
     <Compile Include="Bll\ILaborCreatorService.cs" />
     <Compile Include="Bll\ILaborCreatorServiceHelper.cs" />

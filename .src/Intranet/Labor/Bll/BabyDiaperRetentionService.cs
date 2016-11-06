@@ -16,14 +16,14 @@ namespace Intranet.Labor.Bll
 {
     /// <summary>
     /// </summary>
-    public class BabyDiapersRetentionService : ServiceBase, IBabyDiapersRetentionService
+    public class BabyDiaperRetentionService : ServiceBase, IBabyDiaperRetentionService
     {
         #region Properties
 
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiapersRetentionBll BabyDiapersRetentionBll { get; set; }
+        public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
@@ -38,8 +38,8 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiapersRetentionService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(BabyDiapersRetentionService) ) )
+        public BabyDiaperRetentionService( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(BabyDiaperRetentionService) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -51,20 +51,20 @@ namespace Intranet.Labor.Bll
             return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/";
         }
 
-        #region Implementation of IBabyDiapersRetentionService
+        #region Implementation of IBabyDiaperRetentionService
 
         /// <summary>
-        ///     Gets a new BabyDiapersRetentionEditViewModel
+        ///     Gets a new BabyDiaperRetentionEditViewModel
         /// </summary>
         /// <param name="retentionTestId">The Id of the Babydiaper retention test which will be edited</param>
-        /// <returns>The BabyDiapersRetentionEditViewModel</returns>
-        public BabyDiapersRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
+        /// <returns>The BabyDiaperRetentionEditViewModel</returns>
+        public BabyDiaperRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
-            var testValue = BabyDiapersRetentionBll.GetTestValue( retentionTestId );
+            var testValue = BabyDiaperRetentionBll.GetTestValue( retentionTestId );
             var babyDiapersTestValue = testValue.BabyDiaperTestValue;
-            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo( testValue.TestSheetRefId );
+            var testSheetInfo = BabyDiaperRetentionBll.GetTestSheetInfo( testValue.TestSheetRefId );
             var notes = testValue.TestValueNote;
-            var errors = BabyDiapersRetentionBll.GetAllNoteCodes();
+            var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => error.ErrorCode + " - " + error.Value )
                                    .ToList();
             if (notes.IsNull())
@@ -72,7 +72,7 @@ namespace Intranet.Labor.Bll
             var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
                                  .ToList();
 
-            var viewModel = new BabyDiapersRetentionEditViewModel
+            var viewModel = new BabyDiaperRetentionEditViewModel
             {
                 TestValueId = retentionTestId,
                 TestSheetId = testValue.TestSheetRefId,
@@ -89,13 +89,13 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     Gets the BabyDiapersRetentionEditViewModel for edit
+        ///     Gets the BabyDiaperRetentionEditViewModel for edit
         /// </summary>
         /// <param name="testSheetId">The Id of the test sheet where the Babydiaper retention test is for</param>
-        /// <returns>The BabyDiapersRetentionEditViewModel</returns>
-        public BabyDiapersRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
+        /// <returns>The BabyDiaperRetentionEditViewModel</returns>
+        public BabyDiaperRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
         {
-            var testSheetInfo = BabyDiapersRetentionBll.GetTestSheetInfo( testSheetId );
+            var testSheetInfo = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
 
             if ( testSheetInfo.IsNull() )
             {
@@ -103,7 +103,7 @@ namespace Intranet.Labor.Bll
                 return null;
             }
 
-            var viewModel = new BabyDiapersRetentionEditViewModel();
+            var viewModel = new BabyDiaperRetentionEditViewModel();
             viewModel.TestSheetId = testSheetId;
             viewModel.TestValueId = -1;
             viewModel.ProductionCode = CreateProductionCode( testSheetInfo );
@@ -112,11 +112,11 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     Saves or updates the BabyDiapersRetentionEditViewModel
+        ///     Saves or updates the BabyDiaperRetentionEditViewModel
         /// </summary>
         /// <param name="viewModel">The viewmodel which will be saved or updated</param>
-        /// <returns>The saved or updated BabyDiapersRetentionEditViewModel</returns>
-        public TestValue Save( BabyDiapersRetentionEditViewModel viewModel )
+        /// <returns>The saved or updated BabyDiaperRetentionEditViewModel</returns>
+        public TestValue Save( BabyDiaperRetentionEditViewModel viewModel )
         {
             TestValue testValue = null;
             try

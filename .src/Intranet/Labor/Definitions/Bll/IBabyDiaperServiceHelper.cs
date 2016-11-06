@@ -18,14 +18,14 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="viewModel">the data from the view</param>
         /// <returns>The created test value</returns>
-        TestValue SaveNewRetentionTest(BabyDiapersRetentionEditViewModel viewModel);
+        TestValue SaveNewRetentionTest(BabyDiaperRetentionEditViewModel viewModel);
 
         /// <summary>
         ///     Updates an given Testvalue from the view model
         /// </summary>
         /// <param name="viewModel">the data from the view</param>
         /// <returns>the updated test value</returns>
-        TestValue UpdateRetentionTest(BabyDiapersRetentionEditViewModel viewModel);
+        TestValue UpdateRetentionTest(BabyDiaperRetentionEditViewModel viewModel);
 
         /// <summary>
         ///     Updates the Average and standard deviation values of the testsheet

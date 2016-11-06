@@ -10,28 +10,28 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the BabyWindelnRetentionController
     /// </summary>
-    public class BabyDiapersRetentionController : BaseController
+    public class BabyDiaperRetentionController : BaseController
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets a <see cref="IBabyDiapersRetentionService" />
+        ///     Gets or sets a <see cref="IBabyDiaperRetentionService" />
         /// </summary>
         /// <value>
-        ///     <see cref="IBabyDiapersRetentionService" />
+        ///     <see cref="IBabyDiaperRetentionService" />
         /// </value>
-        public IBabyDiapersRetentionService BabyDiapersRetentionService { get; set; }
+        public IBabyDiaperRetentionService BabyDiaperRetentionService { get; set; }
 
         #endregion
 
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="BabyDiapersRetentionController" /> class.
+        ///     Initialize a new instance of the <see cref="BabyDiaperRetentionController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiapersRetentionController(ILoggerFactory loggerFactory)
-            : base( loggerFactory.CreateLogger( typeof(BabyDiapersRetentionController) ) )
+        public BabyDiaperRetentionController(ILoggerFactory loggerFactory)
+            : base( loggerFactory.CreateLogger( typeof(BabyDiaperRetentionController) ) )
         {
             Logger.Trace("Enter Ctor - Exit.");
         }
@@ -48,7 +48,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if (id.IsNull())
                 return HttpNotFound();
 
-            var viewModel = BabyDiapersRetentionService.GetNewBabyDiapersRetentionEditViewModel(id);
+            var viewModel = BabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(id);
             return View("Edit", viewModel);
         }
 
@@ -62,7 +62,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if (id.IsNull())
                 return HttpNotFound();
 
-            var viewModel = BabyDiapersRetentionService.GetBabyDiapersRetentionEditViewModel(id);
+            var viewModel = BabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(id);
             return View("Edit", viewModel);
         }
 
@@ -72,9 +72,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="viewModel"></param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Save( BabyDiapersRetentionEditViewModel viewModel )
+        public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
         {
-            var savedModel = BabyDiapersRetentionService.Save( viewModel );
+            var savedModel = BabyDiaperRetentionService.Save( viewModel );
             return View();
         }
     }

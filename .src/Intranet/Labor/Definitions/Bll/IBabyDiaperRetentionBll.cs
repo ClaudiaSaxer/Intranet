@@ -8,7 +8,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     Interface representing the bll for the babydiapers retention value edit/create
     /// </summary>
-    public interface IBabyDiapersRetentionBll
+    public interface IBabyDiaperRetentionBll
     {
         /// <summary>
         ///     Query for an babydiapers retention test

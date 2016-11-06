@@ -108,13 +108,13 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiapersRetentionService>()
-                   .As<IBabyDiapersRetentionService>()
+            builder.RegisterType<BabyDiaperRetentionService>()
+                   .As<IBabyDiaperRetentionService>()
 				   .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiapersRetentionBll>()
-                   .As<IBabyDiapersRetentionBll>()
+            builder.RegisterType<BabyDiaperRetentionBll>()
+                   .As<IBabyDiaperRetentionBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 

@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BabyDiaperServiceHelper.cs" />
-    <Compile Include="BabyDiapersRetentionBll.cs" />
-    <Compile Include="BabyDiapersRetentionService.cs" />
+    <Compile Include="BabyDiaperRetentionBll.cs" />
+    <Compile Include="BabyDiaperRetentionService.cs" />
     <Compile Include="Extensions\ShiftTypeExtension.cs" />
     <Compile Include="LaborCreatorBll.cs" />
     <Compile Include="LaborCreatorServiceHelper.cs" />
