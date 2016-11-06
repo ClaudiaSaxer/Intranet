@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Model;
 using Intranet.TestEnvironment;
@@ -41,10 +42,9 @@ namespace Intranet.Web.Test.Controllers
                 HomeService = homeService
             };
 
-            /*var result = homeController.Index() as ViewResult;
+            var result = homeController.Index() as ViewResult;
             var homeViewModel = (HomeViewModel) result?.ViewData.Model;
-            Assert.Equal(expectedHomeViewModel,homeViewModel);*/
-            Assert.Equal( 1, 1 );
+            Assert.Equal(expectedHomeViewModel,homeViewModel);
         }
 
         /// <summary>
@@ -59,9 +59,8 @@ namespace Intranet.Web.Test.Controllers
                 HomeService = homeService
             };
 
-            /*var result = homeController.Index() as ViewResult;
-            Assert.Equal("Index", result?.ViewName);*/
-            Assert.Equal( 1, 1 );
+            var result = homeController.Index() as ViewResult;
+            Assert.Equal("Index", result?.ViewName);
         }
     }
 }
