@@ -48,7 +48,7 @@ namespace Intranet.Labor.Bll
 
         private String CreateProductionCode( TestSheet testSheetInfo )
         {
-            return "IT/" + testSheetInfo.MachineNr + "/" + testSheetInfo.CreatedDateTime.Year + "/";
+            return "IT/" + testSheetInfo.MachineNr.Substring(1) + "/" + testSheetInfo.CreatedDateTime.Year.ToString().Substring(2) + "/";
         }
 
         #region Implementation of IBabyDiaperRetentionService

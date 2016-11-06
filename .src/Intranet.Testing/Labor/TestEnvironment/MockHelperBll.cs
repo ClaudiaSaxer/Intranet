@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
@@ -71,6 +72,27 @@ namespace Intranet.Labor.TestEnvironment
 
             mock.Setup(x => x.getTestSheetForId(It.IsAny<Int32>()))
                 .Returns(testSheet);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionBll
+        /// </summary>
+        /// <param name="testSheet">testSheet data which would be in the db</param>
+        /// <returns>a IBabyDiaperRetentionBll moq</returns>
+        public static IBabyDiaperRetentionBll GetBabyDiaperRetentionBll(TestSheet testSheet)
+        {
+            var mock = new Mock<IBabyDiaperRetentionBll>
+            {
+                Name = "MockHelper.GetBabyDiaperRetentionBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetTestSheetInfo(testSheet.TestSheetId))
+                .Returns(testSheet);
+            mock.Setup(x => x.GetTestSheetInfo(It.IsNotIn(testSheet.TestSheetId)))
+                .Returns((TestSheet) null);
 
             return mock.Object;
         }
