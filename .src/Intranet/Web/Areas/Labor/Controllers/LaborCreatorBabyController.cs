@@ -68,7 +68,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             {
                 Logger.Error( e.StackTrace );
 
-                return View()
+                return View();
             }
         }
     }
