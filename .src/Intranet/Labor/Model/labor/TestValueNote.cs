@@ -30,7 +30,7 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the error of the test note</value>
         [ForeignKey( "ErrorRefId" )]
-        public Error Error { get; set; }
+        public virtual Error Error { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the error
@@ -43,7 +43,7 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the test value</value>
         [ForeignKey( "TestValueRefId" )]
-        public TestValue TestValue { get; set; }
+        public virtual TestValue TestValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the test value

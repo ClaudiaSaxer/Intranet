@@ -63,6 +63,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 return HttpNotFound();
 
             var viewModel = BabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(id);
+            if (viewModel.IsNull())
+                return new HttpNotFoundResult("Der Angeforderte Test existiert entweder nicht oder war kein Retention Test.");
             return View("Edit", viewModel);
         }
 

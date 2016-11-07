@@ -124,6 +124,7 @@ namespace Intranet.Labor.Dal.Migrations
                     babyDiapersRetentionTestValue1
                 }*/
             };
+
             var babyDiapersRewetTestValue1 = new TestValue
             {
 				TestValueId = 1,
@@ -247,6 +248,11 @@ namespace Intranet.Labor.Dal.Migrations
 			
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
 
+            var testNote = new TestValueNote
+            {
+                Error = error2,
+                Message = "Testnotiz"
+            };
             var babyDiapersRetentionTestValue1 = new TestValue
             {
                 TestValueId = 2,
@@ -257,8 +263,10 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1
+                TestSheetRefId = 1,
+                TestValueNote = new List<TestValueNote> { testNote }
             };
+            testNote.TestValue = babyDiapersRetentionTestValue1;
             var babyDiapersRetentionTest1 = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 2,
