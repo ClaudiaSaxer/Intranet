@@ -11,6 +11,7 @@ using Intranet.Labor.Bll;
 using Intranet.Labor.Dal;
 using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Web.Areas.Labor.Controllers;
 
 #endregion
@@ -186,7 +187,14 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes(typeof(TestSheetRepository).Assembly)
+            builder.RegisterAssemblyTypes( typeof(TestSheetRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+
+            builder.RegisterAssemblyTypes(typeof(ShiftSchedule).Assembly)
                    .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()

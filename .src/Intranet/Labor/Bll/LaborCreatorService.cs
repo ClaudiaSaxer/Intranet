@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
+using Extend;
 using Intranet.Common;
+using Intranet.Labor.Model;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 using Intranet.Labor.ViewModel.LaborCreator;
 
@@ -11,11 +13,16 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class LaborCreatorService : ServiceBase, ILaborCreatorService
     {
+        #region Properties
+
         /// <summary>
-        /// Gets or sets the bll for the labor creator service
+        ///     Gets or sets the bll for the labor creator service
         /// </summary>
         /// <value>the bll</value>
         public ILaborCreatorBll LaborCreatorBll { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -35,10 +42,30 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the LaborCreatorViewModel</returns>
         public LaborCreatorViewModel GetLaborCreatorViewModel()
         {
+            var productionOrders = new List<RunningProductionOrder>();
+
+            var runningTestSheets = LaborCreatorBll.RunningTestSheets();
+
+            if ( runningTestSheets != null )
+                LaborCreatorBll.RunningTestSheets()
+                               .ForEach( sheet => productionOrders.Add(
+                                             new RunningProductionOrder
+                                             {
+                                                 PoId = sheet.TestSheetId,
+                                                 PoName = sheet.FaNr,
+                                                 Description = sheet.ArticleType.ToString(),
+                                                 AreaName = "Labor",
+                                                 ControllerName =
+                                                     sheet.ArticleType == ArticleType.BabyDiaper
+                                                         ? "LaborCreatorBaby"
+                                                         : "LaborCreatorInko",
+                                                 ActionName = "Edit"
+                                             } ) );
+            else
+                runningTestSheets = new List<TestSheet>();
             return new LaborCreatorViewModel
             {
-                ProductionOrders = LaborCreatorBll.RunningProductionOrders()
-                
+                ProductionOrders = productionOrders
             };
         }
     }

@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Intranet.Labor.Model;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 using Intranet.Labor.ViewModel.LaborCreator;
 
@@ -13,6 +16,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// The Production Orders which are running at the moment
         /// </summary>
         /// <returns>the running production orders</returns>
-        ICollection<RunningProductionOrder> RunningProductionOrders();
+        ICollection<TestSheet> RunningTestSheets();
+
+
     }
 }

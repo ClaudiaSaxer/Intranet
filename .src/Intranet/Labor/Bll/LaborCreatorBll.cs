@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Model;
-using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborCreator;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -11,13 +14,21 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class LaborCreatorBll : ServiceBase, ILaborCreatorBll
     {
+        #region Properties
 
         /// <summary>
-        /// Gets or sets the repository for the production order
+        ///     Gets or sets the repository for the production order
         /// </summary>
         /// <value>the production order repository</value>
-        public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
+        public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
 
+        /// <summary>
+        /// Gets or sets the repository for the shift schuedule
+        /// </summary>
+        /// <value>the shift shedule repository</value>
+        public IGenericRepository<ShiftSchedule> ShiftTypeRepository { get; set; }
+
+        #endregion
 
         #region Ctor
 
@@ -35,14 +46,43 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #region Implementation of ILaborCreatorBll
 
         /// <summary>
-        /// The Production Orders which are running at the moment
+        ///     The TestSheets which are running at the moment
         /// </summary>
         /// <returns>the running production orders</returns>
-        public ICollection<RunningProductionOrder> RunningProductionOrders()
+        public ICollection<TestSheet> RunningTestSheets()
         {
-
-            throw new System.NotImplementedException();
+            var today = DateTime.Today;
+            var shift = GetCurrentShift();
+            if ( shift == null )
+                return null;
+            return TestSheetRepository.Where(sheet => sheet.DayInYear.Equals( today.DayOfYear ) && sheet.ShiftType == shift                                                 )
+                                            .ToList();
         }
+
+        /// <summary>
+        /// Gets the current shift
+        /// </summary>
+        /// <returns>the current shift</returns>
+        public ShiftType? GetCurrentShift()
+        {
+            var now = DateTime.Now;
+            var dayInWeekNow = now.DayOfWeek;
+            var shift = ShiftTypeRepository.Where(
+                                               schedule =>
+                                                   ( schedule.StartDay == dayInWeekNow || schedule.EndDay == dayInWeekNow ) && schedule.StartTime.Hours <= now.Hour
+                                                   && schedule.StartTime.Minutes <= now.Minute && schedule.EndTime.Hours >= now.Hour && schedule.EndTime.Minutes >= now.Minute )
+                                           ?.ToList();
+            if ( shift == null || shift.Count == 0 )
+                Logger.Error( "No Shift found for: " + now );
+            
+            if(shift?.Count > 1)
+                Logger.Error( "More than one shift found for "+now );
+
+            return shift?[0].ShiftType;
+        }
+        #endregion
+
+        #region Implementation of ILaborCreatorBll
 
         #endregion
     }
