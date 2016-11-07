@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
@@ -82,6 +83,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRetentionTest(BabyDiaperRetentionEditViewModel viewModel)
         {
+            
             var testValue = new TestValue
             {
                 TestSheetRefId = viewModel.TestSheetId,
@@ -90,8 +92,10 @@ namespace Intranet.Labor.Bll
                 CreatedPerson = viewModel.TestPerson,
                 LastEditedPerson = viewModel.TestPerson,
                 DayInYearOfArticleCreation = viewModel.ProductionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper
+                ArticleTestType = ArticleType.BabyDiaper,
             };
+            testValue.TestValueNote = viewModel.Notes.Select( error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue} )
+                     .ToList();
             var babyDiaperTestValue = new BabyDiaperTestValue
             {
                 DiaperCreatedTime = viewModel.ProductionCodeTime,
@@ -120,6 +124,22 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue.DiaperCreatedTime = viewModel.ProductionCodeTime;
             testValue.BabyDiaperTestValue.WeightDiaperDry = viewModel.DiaperWeight;
             testValue.BabyDiaperTestValue.RetentionWetWeight = viewModel.WeightRetentionWet;
+
+            /*var result = testValue.TestValueNote.Where(p => viewModel.Notes.All( p2 => p2.ErrorCodeId != p.ErrorRefId ) );
+            foreach ( var n in result )
+                testValue.TestValueNote.Remove( n );*///remove if not exist anymore
+            foreach ( var note in testValue.TestValueNote )
+            {
+                foreach ( var vmNote in viewModel.Notes.Where( vmNote => note.TestValueNoteId == vmNote.Id ) )
+                {
+                    note.Message = vmNote.Message;
+                    note.ErrorRefId = vmNote.ErrorCodeId;
+                }
+                viewModel.Notes.RemoveAll( x => x.ErrorCodeId == note.ErrorRefId );
+            }
+            foreach ( var vmNote in viewModel.Notes )
+                testValue.TestValueNote.Add( new TestValueNote {ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue} );
+
             testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues(testValue.BabyDiaperTestValue,
                 viewModel.TestSheetId);
 

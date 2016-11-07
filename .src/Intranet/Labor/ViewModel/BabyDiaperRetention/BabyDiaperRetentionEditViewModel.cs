@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using Intranet.Labor.ViewModel;
 
 #endregion
 
@@ -86,7 +87,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Collection of NoteCodes
         /// </value>
-        public ICollection<String> NoteCodes { get; set; }
+        public IEnumerable<ErrorCode> NoteCodes { get; set; }
 
 
         #endregion

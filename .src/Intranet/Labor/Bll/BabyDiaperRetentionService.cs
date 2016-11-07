@@ -82,7 +82,7 @@ namespace Intranet.Labor.Bll
             }
             var notes = testValue.TestValueNote;
             var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
-            var errorCodes = errors.Select( error => error.ErrorCode + " - " + error.Value )
+            var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
             if (notes.IsNull())
                 notes = new List<TestValueNote>();
