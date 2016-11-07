@@ -44,8 +44,8 @@ namespace Intranet.Dal
             var creator = new Module
             {
                 Description = "Labor QS Creator",
-                Name = "LaborCreator",
-                ControllerName = "LaborCreatorHome",
+                Name = "Creator",
+                ControllerName = "LaborCreator",
                 ActionName = "Index",
                 AreaName = "Labor",
                 Type = ModuleType.Sub,
@@ -56,8 +56,8 @@ namespace Intranet.Dal
             var dashboard = new Module
             {
                 Description = "Labor QS Dashboard",
-                Name = "LaborDashboard",
-                ControllerName = "LaborDashboardHome",
+                Name = "Dashboard",
+                ControllerName = "LaborDashboard",
                 ActionName = "Index",
                 AreaName = "Labor",
                 Type = ModuleType.Sub,
