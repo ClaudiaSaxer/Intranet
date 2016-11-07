@@ -86,7 +86,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Collection of NoteCodes
         /// </value>
-        public IEnumerable<String> NoteCodes { get; set; }
+        public ICollection<String> NoteCodes { get; set; }
 
 
         #endregion
