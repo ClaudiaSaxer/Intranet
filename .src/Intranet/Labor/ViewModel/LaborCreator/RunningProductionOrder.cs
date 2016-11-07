@@ -1,27 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using Intranet.Model;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Intranet.ViewModel
+namespace Intranet.Labor.ViewModel.LaborCreator
 {
+
     /// <summary>
-    ///     Class representing the ViewModel of the navigation
+    /// Class representing the running Production Orders
     /// </summary>
-    public class NavigationViewModel
+    public class RunningProductionOrder
     {
-        #region Properties
 
         /// <summary>
-        ///     Gets or sets the main modules
+        /// Gets or sets the production id
         /// </summary>
-        /// <value>the main modules from the shell</value>
-        public IEnumerable<Module> MainModules { get; set; }
+        /// <value>the production order id</value>
+        public Int32 PoId { get; set; }
 
         /// <summary>
-        ///     Gets or sets the setting modules
+        /// Gets or sets the production order name
         /// </summary>
-        /// <value>the setting modules from the shell</value>
-        public IEnumerable<Module> SettingModules { get; set; }
+        public String PoName { get; set; }
 
         /// <summary>
         ///     Gets or sets the path to the module start page
@@ -40,7 +41,5 @@ namespace Intranet.ViewModel
         /// </summary>
         /// <value>The are of the module.</value>
         public String AreaName { get; set; }
-
-        #endregion
     }
 }

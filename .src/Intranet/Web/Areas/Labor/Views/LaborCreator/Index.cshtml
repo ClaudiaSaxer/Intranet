@@ -1,7 +1,30 @@
-﻿
+﻿@model Intranet.Labor.ViewModel.LaborCreatorViewModel
+
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="jumbotron">
+    <div class="container">
+        <p>Fertigungsnummer: </p>
+        @Html.TextBoxFor(m => m.ChosenPo);
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model.ProductionOrders)
+        {<div class="col-md-6">
+             <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = item.AreaName, id=item.PoId })" class="no-underline-hyperlink">
+                 <div class="modul-item">
+                     <div class="modul-item-title">
+                         @item.PoName
+                     </div>
+                 </div>
+             </a>
+         </div>
+        }
+    </div>
+</div>
 

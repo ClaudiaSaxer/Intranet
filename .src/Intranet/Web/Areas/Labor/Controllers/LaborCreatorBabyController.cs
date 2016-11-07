@@ -21,6 +21,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </value>
         public IBabyDiaperLaborCreatorService BabyDiaperLaborCreatorService { get; set; }
 
+        /// <summary>
+        ///     Gets or sets a <see cref="ILaborHomeService" />
+        /// </summary>
+        /// <value>
+        ///     <see cref="ILaborHomeService" />
+        /// </value>
+        public ILaborCreatorService LaborCreatorService { get; set; }
+
         #endregion
 
         #region Ctor
@@ -58,12 +66,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
             }
             catch ( Exception e )
             {
-                Logger.Error(e.StackTrace);
+                Logger.Error( e.StackTrace );
 
-                return HttpNotFound();
-
+                return View()
             }
         }
-  
     }
 }

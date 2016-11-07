@@ -1,36 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Intranet.Common;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    /// Class representing Labor Creator
+    ///     Class representing Labor Creator
     /// </summary>
     public class LaborCreatorController : BaseController
     {
+        #region Properties
 
         /// <summary>
-        /// GET: Labor/LaborCreator
+        ///     Gets or sets a <see cref="ILaborCreatorService" />
         /// </summary>
-        /// <returns>Action result with index</returns>
-        public ActionResult Index()
-        {
-            return View();
-        }
+        /// <value>
+        ///     <see cref="ILaborCreatorService" />
+        /// </value>
+        public ILaborCreatorService LaborHomeService { get; set; }
+
+        #endregion
+
+        #region Ctor
 
         /// <summary>
         ///     Initialize a new instance of the <see cref="BaseController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
         public LaborCreatorController( ILoggerFactory loggerFactory )
-              : base(loggerFactory.CreateLogger(typeof(LaborCreatorController)))
+            : base( loggerFactory.CreateLogger( typeof(LaborCreatorController) ) )
         {
-
-
         }
+
+        #endregion
+
+        /// <summary>
+        ///     Loads the index page of the LaborCreatorController
+        /// </summary>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public ActionResult Index() => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
     }
 }

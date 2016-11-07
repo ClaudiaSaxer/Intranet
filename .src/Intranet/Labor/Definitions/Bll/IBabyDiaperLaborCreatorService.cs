@@ -12,6 +12,6 @@ namespace Intranet.Labor.Definition
         ///     Get the labor creator view model for a specific id.
         /// </summary>
         /// <returns>the labor creator view model</returns>
-        LaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId );
+        BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId );
     }
 }
