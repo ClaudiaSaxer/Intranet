@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
@@ -74,10 +75,25 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="viewModel"></param>
         /// <returns></returns>
         [HttpPost]
+        [ValidateAntiForgeryToken()]
         public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
         {
             var savedModel = BabyDiaperRetentionService.Save( viewModel );
-            return View();
+            return RedirectToAction("Edit", "LaborCreator", new { area = "Labor", id=savedModel.TestSheetRefId }); ;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult AddNote(BabyDiaperRetentionEditViewModel viewModel)
+        {
+            if(viewModel.Notes.IsNull())
+                viewModel.Notes = new List<TestNote>();
+            viewModel.Notes.Add( new TestNote() );
+            return View("Edit", viewModel);
         }
     }
 }

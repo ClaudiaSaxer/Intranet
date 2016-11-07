@@ -45,6 +45,11 @@ namespace Intranet.Labor.Definition
         TestValue UpdateTestValue(TestValue testValue);
 
         /// <summary>
+        ///     Updates the TestSheet
+        /// </summary>
+        Int32 UpdateTestSheet();
+
+        /// <summary>
         ///     Query for the ProductionOrder
         /// </summary>
         /// <param name="productionOrderFa">the Id of the Production order</param>

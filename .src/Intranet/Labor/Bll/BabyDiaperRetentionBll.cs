@@ -101,6 +101,11 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
+        ///     Updates the TestSheet
+        /// </summary>
+        public Int32 UpdateTestSheet() => TestSheetRepository.SaveChanges();
+
+        /// <summary>
         ///     Query for the ProductionOrder
         /// </summary>
         /// <param name="productionOrderFa">the Id of the Production order</param>

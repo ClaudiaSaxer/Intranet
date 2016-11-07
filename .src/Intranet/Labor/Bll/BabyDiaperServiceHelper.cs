@@ -1,11 +1,15 @@
-﻿using System;
-using System.CodeDom;
+﻿#region Usings
+
+using System;
 using System.Linq;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Bll
 {
@@ -13,20 +17,6 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class BabyDiaperServiceHelper : ServiceBase, IBabyDiaperServiceHelper
     {
-        #region Ctor
-
-        /// <summary>
-        ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
-        /// </summary>
-        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperServiceHelper(ILoggerFactory loggerFactory)
-            : base(loggerFactory.CreateLogger(typeof(BabyDiaperServiceHelper)))
-        {
-            Logger.Trace("Enter Ctor - Exit.");
-        }
-
-        #endregion
-
         #region Properties
 
         /// <summary>
@@ -36,25 +26,39 @@ namespace Intranet.Labor.Bll
 
         #endregion
 
+        #region Ctor
+
+        /// <summary>
+        ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
+        /// </summary>
+        /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
+        public BabyDiaperServiceHelper( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(BabyDiaperServiceHelper) ) )
+        {
+            Logger.Trace( "Enter Ctor - Exit." );
+        }
+
+        #endregion
+
         /// <summary>
         ///     Calculates all values for the baby diaper retention test
         /// </summary>
         /// <param name="babyDiaperTestValue">the test value</param>
         /// <param name="testSheetId">the test sheet id</param>
         /// <returns></returns>
-        public BabyDiaperTestValue CalculateBabyDiaperRetentionValues(BabyDiaperTestValue babyDiaperTestValue,
-            int testSheetId)
+        public BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue babyDiaperTestValue,
+                                                                       int testSheetId )
         {
-            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo(testSheetId);
-            var productionOrder = BabyDiaperRetentionBll.GetProductionOrder(testSheet.FaNr);
+            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = BabyDiaperRetentionBll.GetProductionOrder( testSheet.FaNr );
 
             babyDiaperTestValue.RetentionAfterZentrifugeValue = babyDiaperTestValue.RetentionWetWeight -
                                                                 babyDiaperTestValue.WeightDiaperDry;
-            if (Math.Abs(babyDiaperTestValue.WeightDiaperDry) > 0.1)
-                babyDiaperTestValue.RetentionAfterZentrifugePercent = (babyDiaperTestValue.RetentionWetWeight -
-                                                                       babyDiaperTestValue.WeightDiaperDry)*100.0/
+            if ( Math.Abs( babyDiaperTestValue.WeightDiaperDry ) > 0.1 )
+                babyDiaperTestValue.RetentionAfterZentrifugePercent = ( babyDiaperTestValue.RetentionWetWeight -
+                                                                        babyDiaperTestValue.WeightDiaperDry ) * 100.0 /
                                                                       babyDiaperTestValue.WeightDiaperDry;
-            babyDiaperTestValue.RetentionRw = GetRetentionRwType( babyDiaperTestValue.RetentionAfterZentrifugeValue, productionOrder);
+            babyDiaperTestValue.RetentionRw = GetRetentionRwType( babyDiaperTestValue.RetentionAfterZentrifugeValue, productionOrder );
             babyDiaperTestValue.SapType = testSheet.SAPType;
             babyDiaperTestValue.SapNr = testSheet.SAPNr;
             babyDiaperTestValue.SapGHoewiValue = ( babyDiaperTestValue.RetentionWetWeight - babyDiaperTestValue.WeightDiaperDry - productionOrder.Component.PillowRetentWithoutSAP )
@@ -68,9 +72,10 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns></returns>
-        public RwType GetRetentionRwType( Double value, ProductionOrder productOrder)
+        public RwType GetRetentionRwType( Double value, ProductionOrder productOrder )
         {
-            if(value <= productOrder.Article.MinRetention) return RwType.Worse;
+            if ( value <= productOrder.Article.MinRetention )
+                return RwType.Worse;
             return value >= productOrder.Article.MaxRetention ? RwType.Better : RwType.Ok;
         }
 
@@ -81,9 +86,8 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="viewModel">the data from the view</param>
         /// <returns>The created test value</returns>
-        public TestValue SaveNewRetentionTest(BabyDiaperRetentionEditViewModel viewModel)
+        public TestValue SaveNewRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
-            
             var testValue = new TestValue
             {
                 TestSheetRefId = viewModel.TestSheetId,
@@ -92,10 +96,11 @@ namespace Intranet.Labor.Bll
                 CreatedPerson = viewModel.TestPerson,
                 LastEditedPerson = viewModel.TestPerson,
                 DayInYearOfArticleCreation = viewModel.ProductionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper,
+                ArticleTestType = ArticleType.BabyDiaper
             };
-            testValue.TestValueNote = viewModel.Notes.Select( error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue} )
-                     .ToList();
+            if ( viewModel.Notes.IsNotNull() )
+                testValue.TestValueNote = viewModel.Notes.Select( error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue } )
+                                                   .ToList();
             var babyDiaperTestValue = new BabyDiaperTestValue
             {
                 DiaperCreatedTime = viewModel.ProductionCodeTime,
@@ -103,10 +108,10 @@ namespace Intranet.Labor.Bll
                 RetentionWetWeight = viewModel.WeightRetentionWet,
                 TestType = TestTypeBabyDiaper.Retention
             };
-            babyDiaperTestValue = CalculateBabyDiaperRetentionValues(babyDiaperTestValue, viewModel.TestSheetId);
+            babyDiaperTestValue = CalculateBabyDiaperRetentionValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
-            BabyDiaperRetentionBll.SaveNewTestValue(testValue);
+            BabyDiaperRetentionBll.SaveNewTestValue( testValue );
             return testValue;
         }
 
@@ -115,9 +120,9 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="viewModel">the data from the view</param>
         /// <returns>the updated test value</returns>
-        public TestValue UpdateRetentionTest(BabyDiaperRetentionEditViewModel viewModel)
+        public TestValue UpdateRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
-            var testValue = BabyDiaperRetentionBll.GetTestValue(viewModel.TestValueId);
+            var testValue = BabyDiaperRetentionBll.GetTestValue( viewModel.TestValueId );
             testValue.LastEditedDateTime = DateTime.Now;
             testValue.LastEditedPerson = viewModel.TestPerson;
             testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
@@ -127,23 +132,20 @@ namespace Intranet.Labor.Bll
 
             /*var result = testValue.TestValueNote.Where(p => viewModel.Notes.All( p2 => p2.ErrorCodeId != p.ErrorRefId ) );
             foreach ( var n in result )
-                testValue.TestValueNote.Remove( n );*///remove if not exist anymore
+                testValue.TestValueNote.Remove( n );*/ //remove if not exist anymore
             foreach ( var note in testValue.TestValueNote )
-            {
                 foreach ( var vmNote in viewModel.Notes.Where( vmNote => note.TestValueNoteId == vmNote.Id ) )
                 {
                     note.Message = vmNote.Message;
                     note.ErrorRefId = vmNote.ErrorCodeId;
                 }
-                viewModel.Notes.RemoveAll( x => x.ErrorCodeId == note.ErrorRefId );
-            }
-            foreach ( var vmNote in viewModel.Notes )
-                testValue.TestValueNote.Add( new TestValueNote {ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue} );
+            foreach ( var vmNote in viewModel.Notes.Where( n => n.Id == 0 ) )
+                testValue.TestValueNote.Add( new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue } );
 
-            testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues(testValue.BabyDiaperTestValue,
-                viewModel.TestSheetId);
+            testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue,
+                                                                                viewModel.TestSheetId );
 
-            BabyDiaperRetentionBll.UpdateTestValue(testValue);
+            BabyDiaperRetentionBll.UpdateTestValue( testValue );
             return testValue;
         }
 
@@ -152,7 +154,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="testSheetId">id of the test sheet</param>
         /// <returns>the updated test sheet</returns>
-        public TestSheet UpdateAverageAndStv(Int32 testSheetId)
+        public TestSheet UpdateAverageAndStv( Int32 testSheetId )
         {
             var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
             var retentionTestAvg =
@@ -164,9 +166,9 @@ namespace Intranet.Labor.Bll
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention
-                                 && tv.TestValueType == TestValueType.StandardDeviation);
-            UpdateRetentionAvg(testSheet, retentionTestAvg);
-            UpdateRetentionStDev(testSheet, retentionTestAvg, retentionTestStDev);
+                                 && tv.TestValueType == TestValueType.StandardDeviation );
+            UpdateRetentionAvg( testSheet, retentionTestAvg );
+            UpdateRetentionStDev( testSheet, retentionTestAvg, retentionTestStDev );
 
             /*
             var rewetAndPenetrationTestAvg = 
@@ -180,15 +182,18 @@ namespace Intranet.Labor.Bll
                                  tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet
                                  && tv.TestValueType == TestValueType.Average);
             */
+            BabyDiaperRetentionBll.UpdateTestSheet();
             return testSheet;
         }
-
 
         private static TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
             var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
             var counter = 0;
-            foreach ( var testValue in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
+            )
             {
                 tempBabyDiaper.WeightDiaperDry += testValue.BabyDiaperTestValue.WeightDiaperDry;
                 tempBabyDiaper.RetentionWetWeight += testValue.BabyDiaperTestValue.RetentionWetWeight;
@@ -208,28 +213,33 @@ namespace Intranet.Labor.Bll
             return retentionTestAvg;
         }
 
-        private static TestValue UpdateRetentionStDev(TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev)
+        private static TestValue UpdateRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
         {
             var tempBabyDiaper = new BabyDiaperTestValue();
             var counter = 0;
-            foreach ( var testValue in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
+            )
             {
-                tempBabyDiaper.WeightDiaperDry += Math.Pow(testValue.BabyDiaperTestValue.WeightDiaperDry- retentionTestAvg.BabyDiaperTestValue.WeightDiaperDry,2);
-                tempBabyDiaper.RetentionWetWeight += Math.Pow(testValue.BabyDiaperTestValue.RetentionWetWeight - retentionTestAvg.BabyDiaperTestValue.RetentionWetWeight, 2);
-                tempBabyDiaper.RetentionAfterZentrifugeValue += Math.Pow(testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugeValue, 2);
-                tempBabyDiaper.RetentionAfterZentrifugePercent += Math.Pow(testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugePercent, 2);
-                tempBabyDiaper.SapGHoewiValue += Math.Pow(testValue.BabyDiaperTestValue.SapGHoewiValue - retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue, 2); ;
+                tempBabyDiaper.WeightDiaperDry += Math.Pow( testValue.BabyDiaperTestValue.WeightDiaperDry - retentionTestAvg.BabyDiaperTestValue.WeightDiaperDry, 2 );
+                tempBabyDiaper.RetentionWetWeight += Math.Pow( testValue.BabyDiaperTestValue.RetentionWetWeight - retentionTestAvg.BabyDiaperTestValue.RetentionWetWeight, 2 );
+                tempBabyDiaper.RetentionAfterZentrifugeValue +=
+                    Math.Pow( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugeValue, 2 );
+                tempBabyDiaper.RetentionAfterZentrifugePercent +=
+                    Math.Pow( testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugePercent, 2 );
+                tempBabyDiaper.SapGHoewiValue += Math.Pow( testValue.BabyDiaperTestValue.SapGHoewiValue - retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue, 2 );
+                ;
                 counter++;
             }
-            retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
-            retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = Math.Sqrt(tempBabyDiaper.RetentionWetWeight / counter);
-            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugeValue / counter);
-            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugePercent / counter);
-            retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt(tempBabyDiaper.SapGHoewiValue / counter);
+            retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt( tempBabyDiaper.WeightDiaperDry / counter );
+            retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = Math.Sqrt( tempBabyDiaper.RetentionWetWeight / counter );
+            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugeValue / counter );
+            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugePercent / counter );
+            retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt( tempBabyDiaper.SapGHoewiValue / counter );
             return retentionTestStDev;
         }
 
         #endregion
     }
 }
- 

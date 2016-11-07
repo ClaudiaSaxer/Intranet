@@ -120,11 +120,15 @@ namespace Intranet.Labor.Bll
                 return null;
             }
 
+            var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
+            var errorCodes = errors.Select(error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value })
+                                   .ToList();
             var viewModel = new BabyDiaperRetentionEditViewModel
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
                 ProductionCode = CreateProductionCode(testSheetInfo),
+                NoteCodes = errorCodes,
                 Notes = new List<TestNote>()
             };
 
