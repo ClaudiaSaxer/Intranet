@@ -6,6 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -38,7 +39,8 @@ namespace Intranet.Labor.Bll
         /// <param name="time">the time od the production of the diaper</param>
         /// <returns>A Production code for a single diaper</returns>
         public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-            => "IT/" + machine + "/" + year.ToString("0000").SubstringRight( 2 ) + "/" + dayOfyear + "/" + time.Hours.ToString("00") + ":" + time.Minutes.ToString("00");
+            => "IT/" + machine + "/" + year.ToString( "0000" )
+                                           .SubstringRight( 2 ) + "/" + dayOfyear + "/" + time.Hours.ToString( "00" ) + ":" + time.Minutes.ToString( "00" );
 
         /// <summary>
         ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
@@ -124,10 +126,9 @@ namespace Intranet.Labor.Bll
         /// <returns>The Retention View Model with the data collected from the model</returns>
         public Retention ToRetention( BabyDiaperTestValue retention )
         {
-           ValidateRequiredItem( retention.RetentionRw,"retention rw" );
+            ValidateRequiredItem( retention.RetentionRw, "retention rw" );
             return new Retention
             {
-
                 SapNr = retention.SapNr,
                 RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifugeValue,
                 SapType = retention.SapType,
@@ -136,22 +137,7 @@ namespace Intranet.Labor.Bll
                 RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
                 SapGHoewiValue = retention.SapGHoewiValue
             };
-
         }
-
-        /// <summary>
-        /// Validates a required item
-        /// </summary>
-        /// <param name="item">the idtem to be validated</param>
-        /// <param name="name">the name of the item</param>
-        /// <typeparam name="T">the type of the item</typeparam>
-        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
-        public void ValidateRequiredItem<T>( T item, String name )
-        {
-            if(item.IsNull()) 
-                throw new InvalidDataException("Item "+name+" of type "+typeof(T)+" is required and can not be null");
-        }
-
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
@@ -205,18 +191,18 @@ namespace Intranet.Labor.Bll
         public Rewet ToRewet( BabyDiaperTestValue rewet )
         {
             ValidateRequiredItem( rewet.Rewet210Rw, "rewet 210 rw" );
-            ValidateRequiredItem(rewet.Rewet140Rw, "rewet 140 rw");
+            ValidateRequiredItem( rewet.Rewet140Rw, "rewet 140 rw" );
 
             return
-            new Rewet
-            {
-                Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
-                StrikeTroughValue = rewet.StrikeTroughValue,
-                DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
-                Rewet210Value = rewet.Rewet210Value,
-                Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
-                Rewet140Value = rewet.Rewet140Value
-            };
+                new Rewet
+                {
+                    Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
+                    StrikeTroughValue = rewet.StrikeTroughValue,
+                    DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
+                    Rewet210Value = rewet.Rewet210Value,
+                    Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
+                    Rewet140Value = rewet.Rewet140Value
+                };
         }
 
         /// <summary>
@@ -320,6 +306,21 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
+        ///     Validates a required item
+        /// </summary>
+        /// <param name="item">the idtem to be validated</param>
+        /// <param name="name">the name of the item</param>
+        /// <typeparam name="T">the type of the item</typeparam>
+        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
+        public void ValidateRequiredItem<T>( T item, String name )
+        {
+            if ( item.IsNull() )
+                throw new InvalidDataException( "Item " + name + " of type " + typeof(T) + " is required and can not be null" );
+        }
+
+
+
+        /// <summary>
         ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a
         ///     <see cref="InvalidDataException" /> if more than one or none is found.
         ///     Used for example as average or standard deviation.
@@ -343,6 +344,49 @@ namespace Intranet.Labor.Bll
                 throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
             }
             return item;
+        }
+
+        /// <summary>
+        ///     gets the average weight for all tests
+        /// </summary>
+        public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
+        {
+            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
+            return weights.Average();
+        }
+
+
+        /// <summary>
+        /// All weight for the article type
+        /// </summary>
+        /// <param name="testValues">the test values</param>
+        /// <param name="articleType">the type of the article</param>
+        /// <returns>a collection of all types</returns>
+        public Collection<Double> AllWeightsOfArticleType( IEnumerable<TestValue> testValues, ArticleType  articleType )
+        {
+            var weights = new Collection<Double>();
+
+            testValues.ForEach(value =>
+            {
+                if (value.ArticleTestType == articleType)
+                    weights.Add(value.BabyDiaperTestValue.WeightDiaperDry);
+            }
+            );
+            return weights;
+        }
+        /// <summary>
+        ///     gets the weight for the standard deviation for all tests
+        /// </summary>
+        public Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValues )
+        {
+            var weights = AllWeightsOfArticleType(testValues, ArticleType.BabyDiaper);
+            var average = weights.Average();
+
+            var sumOfSquaresOfDifferences = weights.Sum(val => (val - average) * (val - average));
+            var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / (weights.Count - 1) );
+
+
+            return standardDeviation;
         }
     }
 }

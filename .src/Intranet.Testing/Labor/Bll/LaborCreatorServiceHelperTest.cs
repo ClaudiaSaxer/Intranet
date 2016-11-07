@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.Test;
 using Intranet.Labor.ViewModel;
@@ -1050,6 +1051,81 @@ namespace Intranet.Labor.Bll.Test
                     () => serviceHelper.ValidateRequiredItem(something, "something"));
 
             Assert.Equal("Item something of type "+typeof(String)+" is required and can not be null", ex.Message);
+
+        }
+
+        /// <summary>
+        /// Test Average
+        /// </summary>
+        [Fact]
+        public void ComputeWeightAverageAllTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var actual = serviceHelper.ComputeWeightAverageAll( new List<TestValue>
+                                                   {
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                                                       }
+                                                   } );
+            const Double expected = 3.5;
+            actual.Should()
+                  .Be( expected );
+
+
+        }
+
+        /// <summary>
+        /// Test Average
+        /// </summary>
+        [Fact]
+        public void ComputeWeightStandardDeviationAllTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var actual = serviceHelper.ComputeWeightStandardDeviationAll( new List<TestValue>
+                                                   {
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
+                                                       },
+                                                       new TestValue
+                                                       {
+                                                           ArticleTestType = ArticleType.BabyDiaper,
+                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                                                       }
+                                                   });
+            const Double expected = 3.1091;
+            var actualRounded = Math.Round( actual, 4 );
+            actualRounded.Should()
+                  .Be(expected);
+
 
         }
     }
