@@ -170,7 +170,7 @@ namespace Intranet.Labor.Bll.Test
         /// <summary>
         ///     Tests if it get a correct viewModel if everything for the testvalue exists in the db
         /// </summary>
-        [Fact(Skip = "Mock Not Working")]
+        [Fact]
         public void GetBabyDiapersRetentionEditViewModelTest()
         {
             var listOfTestValues = new List<TestValue>
@@ -181,7 +181,7 @@ namespace Intranet.Labor.Bll.Test
                     TestSheetRefId = 1,
                     LastEditedPerson = "Hans",
                     DayInYearOfArticleCreation = 123,
-                    BabyDiaperTestValue = new BabyDiaperTestValue {DiaperCreatedTime = new TimeSpan(5,10,0), WeightDiaperDry = 32.2,RetentionWetWeight = 398.1}
+                    BabyDiaperTestValue = new BabyDiaperTestValue {DiaperCreatedTime = new TimeSpan(5,10,0), WeightDiaperDry = 32.2,RetentionWetWeight = 398.1, TestType = TestTypeBabyDiaper.Retention}
                 }
             };
             var testSheetInDb = new TestSheet
