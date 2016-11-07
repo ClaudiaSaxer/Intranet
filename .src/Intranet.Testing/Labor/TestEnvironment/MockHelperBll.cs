@@ -26,9 +26,9 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
         /// <returns>a IloaborHomebll moq</returns>
-        public static ILaborHomeBll GetLaborHomeBll( IEnumerable<Module> modules )
+        public static ILaborHome GetLaborHomeBll( IEnumerable<Module> modules )
         {
-            var mock = new Mock<ILaborHomeBll>
+            var mock = new Mock<ILaborHome>
             {
                 Name = "MockHelper.GetLaborHomeBll",
                 DefaultValue = DefaultValue.Mock
@@ -64,11 +64,11 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="testSheet">the testsheet</param>
         /// <returns>a moq for laborcreatorbll</returns>
-        public static ILaborCreatorBll GetLaborCreatorBll(TestSheet testSheet)
+        public static IBabyDiaperLaborCreatorBll GetLaborCreatorBll(TestSheet testSheet)
         {
-            var mock = new Mock<ILaborCreatorBll>
+            var mock = new Mock<IBabyDiaperLaborCreatorBll>
             {
-                Name = "MockHelper.ILaborCreatorBll",
+                Name = "MockHelper.IBabyDiaperLaborCreatorBll",
                 DefaultValue = DefaultValue.Mock
             };
 

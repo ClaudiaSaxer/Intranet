@@ -7,7 +7,7 @@ namespace Intranet.Labor.Test
     /// <summary>
     /// Test Data Helper Class for Labor Creator Service Test
     /// </summary>
-    public class LaborCreatorServiceHelperData
+    public class BabyDiaperLaborCreatorServiceHelperData
     {
 
         /// <summary>

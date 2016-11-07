@@ -19,7 +19,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>
         ///     <see cref="ILaborHomeService" />
         /// </value>
-        public ILaborCreatorService LaborCreatorService { get; set; }
+        public IBabyDiaperLaborCreatorService BabyDiaperLaborCreatorService { get; set; }
 
         #endregion
 
@@ -49,7 +49,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
             try
             {
-                var laborCreatorView = LaborCreatorService.GetLaborCreatorViewModel( id );
+                var laborCreatorView = BabyDiaperLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
                     return HttpNotFound();

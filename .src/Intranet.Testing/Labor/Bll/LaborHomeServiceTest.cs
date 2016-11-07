@@ -34,7 +34,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new LaborHomeService( new NLogLoggerFactory() )
             {
-                LaborHomeBll = laborhomebllmock,
+                LaborHome = laborhomebllmock,
                 Roles = rolesMock
             };
 
@@ -65,7 +65,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new LaborHomeService(new NLogLoggerFactory())
             {
-                LaborHomeBll = laborhomebllmock,
+                LaborHome = laborhomebllmock,
                 Roles = rolesMock
             };
 

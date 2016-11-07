@@ -15,7 +15,7 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing the labor creator service
     /// </summary>
-    public class LaborCreatorServiceHelper : ServiceBase, ILaborCreatorServiceHelper
+    public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper
     {
         #region Ctor
 
@@ -23,8 +23,8 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public LaborCreatorServiceHelper( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(LaborCreatorServiceHelper) ) )
+        public BabyDiaperLaborCreatorServiceHelper( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(BabyDiaperLaborCreatorServiceHelper) ) )
         {
         }
 
