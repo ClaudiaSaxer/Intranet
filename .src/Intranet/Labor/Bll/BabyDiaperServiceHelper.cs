@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
@@ -133,10 +134,107 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateAverageAndStv(Int32 testSheetId)
         {
-            // TODO
-            return null;
+            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
+            var retentionTestAvg =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention
+                                 && tv.TestValueType == TestValueType.Average );
+            var rewetAndPenetrationTestAvg = 
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime
+                                 && tv.TestValueType == TestValueType.Average);
+            var rewetTestAvg =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet
+                                 && tv.TestValueType == TestValueType.Average);
+
+            var retentionTestStDev =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention
+                                 && tv.TestValueType == TestValueType.StandardDeviation);
+
+            UpdateRetentionAvg( testSheet, retentionTestAvg );
+            UpdateRetentionStDev(testSheet, retentionTestAvg, retentionTestStDev);
+
+            return testSheet;
         }
 
+
+        private static TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
+            var counter = 0;
+            foreach ( var testValue in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
+            {
+                tempBabyDiaper.WeightDiaperDry += testValue.BabyDiaperTestValue.WeightDiaperDry;
+                tempBabyDiaper.RetentionWetWeight += testValue.BabyDiaperTestValue.RetentionWetWeight;
+                tempBabyDiaper.RetentionAfterZentrifugeValue += testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue;
+                tempBabyDiaper.RetentionAfterZentrifugePercent += testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent;
+                if ( testValue.BabyDiaperTestValue.RetentionRw == RwType.Worse )
+                    tempBabyDiaper.RetentionRw = RwType.Worse;
+                tempBabyDiaper.SapGHoewiValue += testValue.BabyDiaperTestValue.SapGHoewiValue;
+                counter++;
+            }
+            retentionTestAvg.BabyDiaperTestValue.WeightDiaperDry = tempBabyDiaper.WeightDiaperDry / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionWetWeight = tempBabyDiaper.RetentionWetWeight / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugeValue = tempBabyDiaper.RetentionAfterZentrifugeValue / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugePercent = tempBabyDiaper.RetentionAfterZentrifugePercent / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionRw = tempBabyDiaper.RetentionRw;
+            retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue = tempBabyDiaper.SapGHoewiValue / counter;
+            return retentionTestAvg;
+        }
+
+        private static TestValue UpdateRetentionStDev(TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev)
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue();
+            var counter = 0;
+            foreach ( var testValue in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention ) )
+            {
+                tempBabyDiaper.WeightDiaperDry += Math.Pow(testValue.BabyDiaperTestValue.WeightDiaperDry- retentionTestAvg.BabyDiaperTestValue.WeightDiaperDry,2);
+                tempBabyDiaper.RetentionWetWeight += Math.Pow(testValue.BabyDiaperTestValue.RetentionWetWeight - retentionTestAvg.BabyDiaperTestValue.RetentionWetWeight, 2);
+                tempBabyDiaper.RetentionAfterZentrifugeValue += Math.Pow(testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugeValue, 2);
+                tempBabyDiaper.RetentionAfterZentrifugePercent += Math.Pow(testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent - retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugePercent, 2);
+                tempBabyDiaper.SapGHoewiValue += Math.Pow(testValue.BabyDiaperTestValue.SapGHoewiValue - retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue, 2); ;
+                counter++;
+            }
+            retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+            retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = Math.Sqrt(tempBabyDiaper.RetentionWetWeight / counter);
+            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugeValue / counter);
+            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugePercent / counter);
+            retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt(tempBabyDiaper.SapGHoewiValue / counter);
+            return retentionTestStDev;
+        }
+
+        /*
+        private static TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
+            var counter = 0;
+            foreach ( var testValue in testSheet.TestValues )
+                if ( testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
+                {
+                    tempBabyDiaper.WeightDiaperDry += testValue.BabyDiaperTestValue.WeightDiaperDry;
+                    tempBabyDiaper.RetentionWetWeight += testValue.BabyDiaperTestValue.RetentionWetWeight;
+                    tempBabyDiaper.RetentionAfterZentrifugeValue += testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue;
+                    tempBabyDiaper.RetentionAfterZentrifugePercent += testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent;
+                    if ( testValue.BabyDiaperTestValue.RetentionRw == RwType.Worse )
+                        tempBabyDiaper.RetentionRw = RwType.Worse;
+                    tempBabyDiaper.SapGHoewiValue += testValue.BabyDiaperTestValue.SapGHoewiValue;
+                    counter++;
+                }
+            retentionTestAvg.BabyDiaperTestValue.WeightDiaperDry = tempBabyDiaper.WeightDiaperDry / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionWetWeight = tempBabyDiaper.RetentionWetWeight / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugeValue = tempBabyDiaper.RetentionAfterZentrifugeValue / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionAfterZentrifugePercent = tempBabyDiaper.RetentionAfterZentrifugePercent / counter;
+            retentionTestAvg.BabyDiaperTestValue.RetentionRw = tempBabyDiaper.RetentionRw;
+            retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue = tempBabyDiaper.SapGHoewiValue / counter;
+            return retentionTestAvg;
+        }*/
         #endregion
     }
 }
+ 
