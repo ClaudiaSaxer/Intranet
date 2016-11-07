@@ -6,7 +6,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     Interface representing the labor creator service
     /// </summary>
-    public interface ILaborCreatorService
+    public interface IBabyDiaperLaborCreatorService
     {
         /// <summary>
         ///     Get the labor creator view model for a specific id.

@@ -11,7 +11,7 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing the labor creator service
     /// </summary>
-    public class LaborCreatorService : ServiceBase, ILaborCreatorService
+    public class BabyDiaperLaborCreatorService : ServiceBase, IBabyDiaperLaborCreatorService
     {
         #region Properties
 
@@ -19,13 +19,13 @@ namespace Intranet.Labor.Bll
         ///     Gets or sets the Labor creator bll
         /// </summary>
         /// <value>the labor creator bll</value>
-        public ILaborCreatorBll LaborCreatorBll { get; set; }
+        public IBabyDiaperLaborCreatorBll BabyDiaperLaborCreatorBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the Helper for the Labor Creator Service
         /// </summary>
         /// <value>the helper for the Labor creator service</value>
-        public ILaborCreatorServiceHelper Helper { get; set; }
+        public IBabyDiaperLaborCreatorServiceHelper Helper { get; set; }
 
         #endregion
 
@@ -35,8 +35,8 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public LaborCreatorService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(LaborCreatorService) ) )
+        public BabyDiaperLaborCreatorService( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(BabyDiaperLaborCreatorService) ) )
         {
         }
 
@@ -48,7 +48,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the labor creator view model</returns>
         public LaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
         {
-            var testSheet = LaborCreatorBll.getTestSheetForId( testSheetId );
+            var testSheet = BabyDiaperLaborCreatorBll.getTestSheetForId( testSheetId );
             var babydiaper = testSheet.TestValues.ToList()
                                       .Where( x => x.ArticleTestType == ArticleType.BabyDiaper )
                                       .ToList();

@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -217,6 +217,7 @@
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
+    <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
@@ -342,7 +343,7 @@
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
     <Content Include="Areas\Labor\Views\BabyDiaperRetention\Edit.cshtml" />
     <Content Include="assets\sass\CreateEdit.scss" />
-    <Content Include="Areas\Labor\Views\LaborCreator\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\LaborCreatorBaby\Edit.cshtml" />
     <Content Include="assets\sass\Labor.scss" />
     <Content Include="resources\img\logo-intigena.png" />
     <Content Include="resources\js\bootstrap-sortable.js" />
@@ -362,7 +363,7 @@
     <Content Include="resources\js\bootstrap\tooltip.js" />
     <Content Include="resources\js\bootstrap\transition.js" />
     <Content Include="resources\js\intigena\shell-settings.js" />
-    <Content Include="Areas\Labor\Views\Shared\NoteEdit.cshtml" />
+    <Content Include="Areas\Labor\Views\LaborCreator\Index.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
     <None Include="resources\js\jquery-3.1.1-vsdoc.js" />

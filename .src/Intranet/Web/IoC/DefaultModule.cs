@@ -98,8 +98,8 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<LaborHomeBll>()
-                   .As<ILaborHomeBll>()
+            builder.RegisterType<LaborHome>()
+                   .As<ILaborHome>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
@@ -118,18 +118,18 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<LaborCreatorBll>()
-                   .As<ILaborCreatorBll>()
+            builder.RegisterType<BabyDiaperLaborCreatorBll>()
+                   .As<IBabyDiaperLaborCreatorBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<LaborCreatorService>()
-                   .As<ILaborCreatorService>()
+            builder.RegisterType<BabyDiaperLaborCreatorService>()
+                   .As<IBabyDiaperLaborCreatorService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<LaborCreatorServiceHelper>()
-                   .As<ILaborCreatorServiceHelper>()
+            builder.RegisterType<BabyDiaperLaborCreatorServiceHelper>()
+                   .As<IBabyDiaperLaborCreatorServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
