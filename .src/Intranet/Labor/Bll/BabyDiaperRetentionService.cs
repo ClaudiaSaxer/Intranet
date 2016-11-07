@@ -124,7 +124,8 @@ namespace Intranet.Labor.Bll
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
-                ProductionCode = CreateProductionCode(testSheetInfo)
+                ProductionCode = CreateProductionCode(testSheetInfo),
+                Notes = new List<TestNote>()
             };
 
             return viewModel;
