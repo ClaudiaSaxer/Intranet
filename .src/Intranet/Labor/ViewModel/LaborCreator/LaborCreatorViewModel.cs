@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
 using Intranet.Labor.ViewModel.LaborCreator;
+using System.ComponentModel.DataAnnotations;
+using Microsoft.JScript;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -22,6 +22,12 @@ namespace Intranet.Labor.ViewModel
         /// Gets or sets the chosen Production Order
         /// </summary>
         /// <value>the chosen production order</value>
+        [DisplayName("Fertigungsnummer")]
+        [Required(ErrorMessage = "Die Fertigungsnummer ist zwingend.")]
+        [DataType(DataType.Text)]
+        [StringLength(1024)]
+        [MinLength(3)]
+        [RegularExpression(@"Fa[0-9]*")]
         public String ChosenPo { get; set; }
       
     }

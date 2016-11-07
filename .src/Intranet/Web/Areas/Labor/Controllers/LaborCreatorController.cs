@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
+using System.Web.Routing;
 using Intranet.Common;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -32,6 +34,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         #endregion
+
+        /// <summary>
+        ///     Edit Creator with given Production order Number
+        /// </summary>
+        /// <param name="PoNr">Number of production</param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Edit( String PoNr )
+        {
+            return RedirectToAction( "Edit",
+                                     new RouteValueDictionary(
+                                         new
+                                         {
+                                             controller = "LaborCreatorBabyController",
+                                             action = "Edit",
+                                             id = PoNr
+                                         } ) );
+        }
 
         /// <summary>
         ///     Loads the index page of the LaborCreatorController

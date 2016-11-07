@@ -1,5 +1,8 @@
-﻿using Intranet.Common;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using Intranet.Common;
 using Intranet.Labor.ViewModel;
+using Intranet.Labor.ViewModel.LaborCreator;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -27,7 +30,17 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the LaborCreatorViewModel</returns>
         public LaborCreatorViewModel GetLaborCreatorViewModel()
         {
-            return new LaborCreatorViewModel();
+            return new LaborCreatorViewModel
+            {
+                ProductionOrders = new List<RunningProductionOrder>
+                {
+                    new RunningProductionOrder
+                    {
+                        ControllerName = "asdf",ActionName = "asf",PoId = 123,AreaName = "asf",PoName = "asgsyf"
+                    }
+                }
+                
+            };
         }
     }
 }

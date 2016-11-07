@@ -4,27 +4,38 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+{
 
 <div class="jumbotron">
     <div class="container">
-        <p>Fertigungsnummer: </p>
-        @Html.TextBoxFor(m => m.ChosenPo);
+        @using ( Html.BeginForm() )
+        {
+            <p>
+                Fertigungsnummer
+            </p>
+
+            @Html.TextBoxFor( m => m.ChosenPo )
+            @Html.ValidationMessageFor( m => m.ChosenPo )
+
+            <input class="btn btn-primary btn-lg" type="submit" name="Edit" value="Bearbeiten"/>
+        }
+
     </div>
 </div>
 
 <div class="container">
     <div class="row">
-        @foreach (var item in Model.ProductionOrders)
-        {<div class="col-md-6">
-             <a href="@Url.Action(item.ActionName, item.ControllerName,  new { area = item.AreaName, id=item.PoId })" class="no-underline-hyperlink">
-                 <div class="modul-item">
-                     <div class="modul-item-title">
-                         @item.PoName
-                     </div>
-                 </div>
-             </a>
-         </div>
+        @foreach ( var item in Model.ProductionOrders )
+        {
+            <div class="col-md-6">
+                <a href="@Url.Action( item.ActionName, item.ControllerName, new { area = item.AreaName, id = item.PoId } )" class="no-underline-hyperlink">
+                    <div class="modul-item">
+                        <div class="modul-item-title">
+                            @item.PoName
+                        </div>
+                    </div>
+                </a>
+            </div>
         }
     </div>
 </div>
-
