@@ -70,7 +70,7 @@ namespace Intranet.Labor.Bll
                 FaNr = testSheet.FaNr,
                 ProductName = testSheet.ProductName,
                 SizeName = testSheet.SizeName,
-                CreatedDate = testSheet.CreatedDateTime.ToShortDateString(),
+                CreatedDate = testSheet.CreatedDateTime.ToString("dd.MM.yyyy"),
                 Rewets = rewets,
                 RewetAverage = rewetAverage,
                 RewetStandardDeviation = rewetStandardDeviation,
