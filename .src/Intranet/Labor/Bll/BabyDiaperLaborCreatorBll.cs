@@ -8,9 +8,9 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing Labro creator bll
     /// </summary>
-    public class LaborCreatorBll : ILaborCreatorBll
+    public class BabyDiaperLaborCreatorBll : IBabyDiaperLaborCreatorBll
     {
-        #region Implementation of ILaborCreatorBll
+        #region Implementation of IBabyDiaperLaborCreatorBll
 
         /// <summary>
         ///     Repository fpr TestSheets

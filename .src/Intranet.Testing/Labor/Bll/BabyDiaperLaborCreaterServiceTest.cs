@@ -10,15 +10,15 @@ using Xunit;
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    ///     Class representing Tests for LaborCreatorService
+    ///     Class representing Tests for BabyDiaperLaborCreatorService
     /// </summary>
-    public class LaborCreaterServiceTest
+    public class BabyDiaperLaborCreaterServiceTest
     {
         /// <summary>
         ///     Test GetLaborCreatorViewModel
         /// </summary>
         [Fact]
-        public void GetLaborCreatorViewModelTest()
+        public void GetBabyDiaperLaborCreatorViewModelTest()
         {
             var serviceHelperMoq = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper();
 
@@ -40,10 +40,10 @@ namespace Intranet.Labor.Bll.Test
                     
                 } );
 
-            var target = new LaborCreatorService( new NLogLoggerFactory() )
+            var target = new BabyDiaperLaborCreatorService( new NLogLoggerFactory() )
             {
                 Helper = serviceHelperMoq,
-                LaborCreatorBll = laborCreatorBllMoq
+                BabyDiaperLaborCreatorBll = laborCreatorBllMoq
             };
 
             var actual = target.GetLaborCreatorViewModel( 1 );

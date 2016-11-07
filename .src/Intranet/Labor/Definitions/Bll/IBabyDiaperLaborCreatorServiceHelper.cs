@@ -8,9 +8,9 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Class representing a interface for LaborCreatorServiceHelper
+    ///     Class representing a interface for BabyDiaperLaborCreatorServiceHelper
     /// </summary>
-    public interface ILaborCreatorServiceHelper
+    public interface IBabyDiaperLaborCreatorServiceHelper
     {
         /// <summary>
         ///     Generates the Production Code for the Diaper

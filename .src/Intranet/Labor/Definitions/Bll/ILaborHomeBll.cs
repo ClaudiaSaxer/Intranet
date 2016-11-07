@@ -7,7 +7,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     Interface representing the bll for the labor home
     /// </summary>
-    public interface ILaborHomeBll
+    public interface ILaborHome
     {
         /// <summary>
         ///     Query for all labor modules for a given roles.

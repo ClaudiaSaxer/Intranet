@@ -10,7 +10,7 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing the bll of the labor home.
     /// </summary>
-    public class LaborHomeBll : ILaborHomeBll
+    public class LaborHome : ILaborHome
     {
         #region Properties
 
@@ -21,7 +21,7 @@ namespace Intranet.Labor.Bll
 
         #endregion
 
-        #region Implementation of ILaborHomeBll
+        #region Implementation of ILaborHome
 
         /// <summary>
         ///     Query for all labor modules for a given roles.
