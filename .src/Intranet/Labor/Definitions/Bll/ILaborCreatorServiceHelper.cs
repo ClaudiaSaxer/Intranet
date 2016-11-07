@@ -195,5 +195,15 @@ namespace Intranet.Labor.Definition
         /// <typeparam name="T">the type of the item</typeparam>
         /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
         void ValidateRequiredItem<T>( T item, String name );
+
+       /// <summary>
+       /// gets the weight for the standard deviation for all tests
+       /// </summary>
+        Double ComputeWeightStandardDeviationAll(IEnumerable<TestValue> testValue);
+
+        /// <summary>
+        /// gets the average weight for all tests
+        /// </summary>
+        Double ComputeWeightAverageAll(IEnumerable<TestValue> testValue);
     }
 }

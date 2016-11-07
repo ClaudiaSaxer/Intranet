@@ -100,6 +100,17 @@ namespace Intranet.Labor.ViewModel
         /// <value>the standard deviation of the penetration time</value>
         public PenetrationTime PenetrationTimeStandardDeviation { get; set; }
 
+        /// <summary>
+        /// Gets or sets the average of all tests
+        /// </summary>
+        /// <value>the average of all tests</value>
+        public Double WeigthAverageAll { get; set; }        
+        
+        /// <summary>
+        /// Gets or sets the standard Deviation of all tests
+        /// </summary>
+        /// <value>the standard deviation of all tests</value>
+        public Double WeightStandardDeviationAll { get; set; }
         #endregion
     }
 }
