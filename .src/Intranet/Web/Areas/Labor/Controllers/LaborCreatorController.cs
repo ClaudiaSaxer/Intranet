@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
+using Intranet.Labor.Model;
+using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -38,18 +40,27 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <summary>
         ///     Edit Creator with given Production order Number
         /// </summary>
-        /// <param name="PoNr">Number of production</param>
-        /// <returns></returns>
+        /// <param name="vm">the viewmodel with the chodsen production number</param>
+        /// <returns>the action result for edit</returns>
         [HttpPost]
-        public ActionResult Edit( String PoNr )
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit( [Bind( Include = "ChosenPo" )] LaborCreatorViewModel vm )
         {
+            var testSheet = LaborCreatorService.GetTestSheetId( vm.ChosenPo );
+            if ( testSheet == null )
+                return Index();
+
+            var controllerForType = testSheet.ArticleType == ArticleType.BabyDiaper
+                ? "LaborCreatorBaby"
+                : "LaborCreatorInko";
+
             return RedirectToAction( "Edit",
                                      new RouteValueDictionary(
                                          new
                                          {
-                                             controller = "LaborCreatorBabyController",
+                                             controller = controllerForType,
                                              action = "Edit",
-                                             id = PoNr
+                                             id = testSheet.TestSheetId
                                          } ) );
         }
 
@@ -57,6 +68,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Loads the index page of the LaborCreatorController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
+        public
+            ActionResult Index()
+            => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
     }
 }

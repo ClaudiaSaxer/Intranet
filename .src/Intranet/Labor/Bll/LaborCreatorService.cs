@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Model;
@@ -67,6 +68,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
             {
                 ProductionOrders = productionOrders
             };
+        }
+
+        /// <summary>
+        ///     Gets the test sheet id for the fa nr
+        /// </summary>
+        /// <param name="faNr">the production order number</param>
+        /// <returns>the id of the testsheet or null if no exists</returns>
+        public TestSheet GetTestSheetId( String faNr )
+        {
+            var testsheet = LaborCreatorBll.GetTestSheetForFaNr( faNr ) ?? LaborCreatorBll.InitTestSheetForFaNr( faNr );
+
+            return testsheet;
         }
     }
 }
