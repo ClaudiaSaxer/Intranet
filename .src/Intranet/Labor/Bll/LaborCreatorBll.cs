@@ -1,5 +1,8 @@
-﻿using Intranet.Common;
+﻿using System.Collections.Generic;
+using Intranet.Common;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+using Intranet.Labor.ViewModel.LaborCreator;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -8,6 +11,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class LaborCreatorBll : ServiceBase, ILaborCreatorBll
     {
+
+        /// <summary>
+        /// Gets or sets the repository for the production order
+        /// </summary>
+        /// <value>the production order repository</value>
+        public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
+
+
         #region Ctor
 
         /// <summary>
@@ -17,6 +28,20 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public LaborCreatorBll( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(LaborCreatorBll) ) )
         {
+        }
+
+        #endregion
+
+        #region Implementation of ILaborCreatorBll
+
+        /// <summary>
+        /// The Production Orders which are running at the moment
+        /// </summary>
+        /// <returns>the running production orders</returns>
+        public ICollection<RunningProductionOrder> RunningProductionOrders()
+        {
+
+            throw new System.NotImplementedException();
         }
 
         #endregion

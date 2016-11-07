@@ -11,6 +11,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class LaborCreatorService : ServiceBase, ILaborCreatorService
     {
+        /// <summary>
+        /// Gets or sets the bll for the labor creator service
+        /// </summary>
+        /// <value>the bll</value>
+        public ILaborCreatorBll LaborCreatorBll { get; set; }
         #region Ctor
 
         /// <summary>
@@ -32,13 +37,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             return new LaborCreatorViewModel
             {
-                ProductionOrders = new List<RunningProductionOrder>
-                {
-                    new RunningProductionOrder
-                    {
-                        ControllerName = "asdf",ActionName = "asf",PoId = 123,AreaName = "asf",PoName = "asgsyf"
-                    }
-                }
+                ProductionOrders = LaborCreatorBll.RunningProductionOrders()
                 
             };
         }

@@ -37,9 +37,14 @@ namespace Intranet.Labor.ViewModel.LaborCreator
         public String ControllerName { get; set; }
 
         /// <summary>
-        ///     Gets or sets the are to the module
+        ///     Gets or sets the area to the module
         /// </summary>
-        /// <value>The are of the module.</value>
+        /// <value>The area of the module.</value>
         public String AreaName { get; set; }
+        /// <summary>
+        ///     Gets or sets the description to the module
+        /// </summary>
+        /// <value>The description of the module.</value>
+        public String Description { get; set; }
     }
 }
