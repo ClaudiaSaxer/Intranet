@@ -164,7 +164,9 @@ namespace Intranet.Labor.Bll
         /// <returns>The deleted testvalue</returns>
         public TestValue Delete( Int32 testValueId )
         {
-            return BabyDiaperRetentionBll.DeleteTestValue( testValueId );
+            var result = BabyDiaperRetentionBll.DeleteTestValue( testValueId );
+            BabyDiaperServiceHelper.UpdateAverageAndStv( result.TestSheetRefId );
+            return result;
         }
 
         #endregion
