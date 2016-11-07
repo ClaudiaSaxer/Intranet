@@ -72,18 +72,29 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="viewModel"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        [HttpPost]
-        [ValidateAntiForgeryToken()]
-        public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
+        public ActionResult Delete( Int32 id )
         {
-            var savedModel = BabyDiaperRetentionService.Save( viewModel );
-            return RedirectToAction("Edit", "LaborCreator", new { area = "Labor", id=savedModel.TestSheetRefId }); ;
+            var deletedTest = BabyDiaperRetentionService.Delete( id );
+            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId });
         }
 
         /// <summary>
-        /// 
+        ///     Saves the new test or update it
+        /// </summary>
+        /// <param name="viewModel">the testdata whicht will be saved</param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
+        {
+            var savedModel = BabyDiaperRetentionService.Save( viewModel );
+            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id=savedModel.TestSheetRefId });
+        }
+
+        /// <summary>
+        ///     adds a new note to the test
         /// </summary>
         /// <param name="viewModel"></param>
         /// <returns></returns>

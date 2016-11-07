@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
@@ -39,6 +40,11 @@ namespace Intranet.Labor.Bll
         ///     ProductionOrderRepository
         /// </summary>
         public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
+
+        /// <summary>
+        ///     ProductionOrderRepository
+        /// </summary>
+        public IGenericRepository<BabyDiaperTestValue> BabyDiaperTestValueRepository { get; set; }
 
         #endregion
 
@@ -118,6 +124,30 @@ namespace Intranet.Labor.Bll
                                                 .Result;
             return null;
         }
+
+        /// <summary>
+        ///     Delete Testvalue from DB
+        /// </summary>
+        /// <param name="testValueId">the Id of the Test value</param>
+        public TestValue DeleteTestValue( Int32 testValueId )
+        {
+            var testValue = TestValueRepository.FindAsync( testValueId )
+                               .Result;
+            if ( testValue.IsNull() || testValue.TestValueType != TestValueType.Single )
+                return null;
+            /*var testSheet = TestSheetRepository.FindAsync( testValue.TestSheetRefId )
+                                               .Result;*/
+            //testSheet.TestValues.Remove( testValue );
+            //TestSheetRepository.SaveChanges();
+            BabyDiaperTestValueRepository.Attach( testValue.BabyDiaperTestValue );
+            BabyDiaperTestValueRepository.Remove( testValue.BabyDiaperTestValue );
+            BabyDiaperTestValueRepository.SaveChanges();
+            TestValueRepository.Attach(testValue);
+            var result = TestValueRepository.Remove( testValue );
+            TestValueRepository.SaveChanges();
+            return result;
+        }
+
         #endregion
     }
 }

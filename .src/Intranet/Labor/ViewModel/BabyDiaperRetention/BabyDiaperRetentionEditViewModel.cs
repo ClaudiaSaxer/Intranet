@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using Intranet.Labor.ViewModel;
+using System.ComponentModel.DataAnnotations;
 
 #endregion
 
@@ -59,6 +59,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
+        ///         [DisplayName( "Tag im Jahr" )]
+        [Required(ErrorMessage = "Der Tag muss angegeben werden")]
+        [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
         public TimeSpan ProductionCodeTime { get; set; }
         /// <summary>
         ///     Gets or sets the DiaperWeight value

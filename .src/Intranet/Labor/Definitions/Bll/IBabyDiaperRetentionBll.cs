@@ -54,5 +54,11 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="productionOrderFa">the Id of the Production order</param>
         ProductionOrder GetProductionOrder(String productionOrderFa);
+
+        /// <summary>
+        ///     Delete Testvalue from DB
+        /// </summary>
+        /// <param name="testValueId">the Id of the Test value</param>
+        TestValue DeleteTestValue(Int32 testValueId);
     }
 }

@@ -157,6 +157,16 @@ namespace Intranet.Labor.Bll
             return testValue;
         }
 
+        /// <summary>
+        ///     deletes the testvalue
+        /// </summary>
+        /// <param name="testValueId">id of the testvalue</param>
+        /// <returns>The deleted testvalue</returns>
+        public TestValue Delete( Int32 testValueId )
+        {
+            return BabyDiaperRetentionBll.DeleteTestValue( testValueId );
+        }
+
         #endregion
     }
 }

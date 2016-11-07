@@ -31,6 +31,10 @@
             </label>
             <div class="col-sm-1">
                 @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", type = "text", @required = "required" })
+                <p>
+                    @Html.ValidationMessageFor(m => m.ProductionCodeDay)
+                </p>
+
             </div>
             <label class="col-sm-1 control-label">
                 /
