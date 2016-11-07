@@ -10,7 +10,7 @@ namespace Intranet.Labor.ViewModel
     /// <summary>
     ///     Class representing the ViewModel for the BabyDiapersRetentionController
     /// </summary>
-    public class BabyDiapersRetentionEditViewModel
+    public class BabyDiaperRetentionEditViewModel
     {
         #region Properties
 
@@ -20,7 +20,15 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ID of the Babydapers test
         /// </value>
-        public Int32 Id { get; set; }
+        public Int32 TestValueId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ID of the Test Sheet
+        /// </summary>
+        /// <value>
+        ///     The ID of the Test Sheet
+        /// </value>
+        public Int32 TestSheetId { get; set; }
 
         /// <summary>
         ///     Gets or sets the TestPerson
@@ -38,12 +46,19 @@ namespace Intranet.Labor.ViewModel
         /// </value>
         public String ProductionCode { get; set; }
         /// <summary>
+        ///     Gets or sets the ProductionCodeDay
+        /// </summary>
+        /// <value>
+        ///     The ProductionCodeDay
+        /// </value>
+        public Int32 ProductionCodeDay { get; set; }
+        /// <summary>
         ///     Gets or sets the ProductionCodeTime
         /// </summary>
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
-        public DateTime ProductionCodeTime { get; set; }
+        public TimeSpan ProductionCodeTime { get; set; }
         /// <summary>
         ///     Gets or sets the DiaperWeight value
         /// </summary>
@@ -64,7 +79,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Collection of Notes
         /// </value>
-        public ICollection<TestNote> Notes { get; set; }
+        public List<TestNote> Notes { get; set; }
         /// <summary>
         ///     Gets or sets the Collection of NoteCodes
         /// </summary>

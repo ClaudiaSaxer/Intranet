@@ -15,6 +15,11 @@ namespace Intranet.Labor.ViewModel
         /// 
         /// </summary>
         public Int32 Id { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public Int32 ErrorCodeId { get; set; }
         /// <summary>
         /// 
         /// </summary>

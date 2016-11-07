@@ -216,7 +216,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Labor\Controllers\BabyDiapersRetentionController.cs" />
+    <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
@@ -340,7 +340,7 @@
     <Content Include="assets\sass\Shell.scss" />
     <Content Include="assets\sass\ShellSettings.scss" />
     <Content Include="Areas\Labor\Views\LaborHome\Index.cshtml" />
-    <Content Include="Areas\Labor\Views\BabyDiapersRetention\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\BabyDiaperRetention\Edit.cshtml" />
     <Content Include="assets\sass\CreateEdit.scss" />
     <Content Include="Areas\Labor\Views\LaborCreator\Edit.cshtml" />
     <Content Include="assets\sass\Labor.scss" />

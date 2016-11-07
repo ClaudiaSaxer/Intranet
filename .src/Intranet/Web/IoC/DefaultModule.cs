@@ -108,13 +108,13 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiapersRetentionService>()
-                   .As<IBabyDiapersRetentionService>()
+            builder.RegisterType<BabyDiaperRetentionService>()
+                   .As<IBabyDiaperRetentionService>()
 				   .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiapersRetentionBll>()
-                   .As<IBabyDiapersRetentionBll>()
+            builder.RegisterType<BabyDiaperRetentionBll>()
+                   .As<IBabyDiaperRetentionBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
@@ -130,6 +130,11 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<LaborCreatorServiceHelper>()
                    .As<ILaborCreatorServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<BabyDiaperServiceHelper>()
+                   .As<IBabyDiaperServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }
@@ -173,6 +178,36 @@ namespace Intranet.Web.IoC
                    .InstancePerRequest();
 
             builder.RegisterAssemblyTypes(typeof(TestSheetRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(ErrorRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(TestValueRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(BabyDiaperTestValueRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(TestValueNoteRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(ProductionOrderRepository).Assembly)
                    .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()

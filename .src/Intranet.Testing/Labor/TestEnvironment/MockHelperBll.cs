@@ -3,8 +3,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using Castle.Core.Internal;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Model;
 using Moq;
@@ -71,6 +74,43 @@ namespace Intranet.Labor.TestEnvironment
 
             mock.Setup(x => x.getTestSheetForId(It.IsAny<Int32>()))
                 .Returns(testSheet);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionBll
+        /// </summary>
+        /// <param name="testSheet">testSheet data which would be in the db</param>
+        /// <returns>a IBabyDiaperRetentionBll moq</returns>
+        public static IBabyDiaperRetentionBll GetBabyDiaperRetentionBll(TestSheet testSheet)
+        {
+            var mock = new Mock<IBabyDiaperRetentionBll>
+            {
+                Name = "MockHelper.GetBabyDiaperRetentionBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            var noteCodes = new List<Error>
+            {
+                new Error {ErrorId = 1, ErrorCode = "404", Value = "Error Not Found"},
+                new Error {ErrorId = 2, ErrorCode = "500", Value = "Error not authorized"}
+            };
+
+            mock.Setup(x => x.GetAllNoteCodes()).Returns(noteCodes);
+
+            mock.Setup(x => x.GetTestSheetInfo(testSheet.TestSheetId))
+                .Returns(testSheet);
+            mock.Setup(x => x.GetTestSheetInfo(It.IsNotIn(testSheet.TestSheetId)))
+                .Returns((TestSheet) null);
+
+            if (testSheet.TestValues.IsNullOrEmpty()) testSheet.TestValues = new List<TestValue>();
+            var testValuesId = testSheet.TestValues.Select( tv => tv.TestValueId )
+                                        .ToArray();
+            mock.Setup(x => x.GetTestValue(It.IsIn(testValuesId)))
+                .Returns((Int32 testValueId) => testSheet.TestValues.FirstOrDefault(tv => tv.TestValueId == testValueId));
+            mock.Setup(x => x.GetTestValue(It.IsNotIn(testValuesId)))
+                .Returns((TestValue) null);
 
             return mock.Object;
         }

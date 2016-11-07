@@ -1,16 +1,16 @@
 ﻿#region Usings
 
 using Intranet.Common;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 #endregion
 
 namespace Intranet.Labor.Dal.Repositories
 {
     /// <summary>
-    ///     The Repository for the TestSheet
+    ///     The Repository for the ProductionOrders
     /// </summary>
-    public class TestSheetRepository : GenericRepository<LaborContext, TestSheet>
+    public class ProductionOrderRepository : GenericRepository<LaborContext, ProductionOrder>
     {
         #region Ctor
 
@@ -19,7 +19,7 @@ namespace Intranet.Labor.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public TestSheetRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
+        public ProductionOrderRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
             : base( databaseFactory, loggerFactory )
         {
         }

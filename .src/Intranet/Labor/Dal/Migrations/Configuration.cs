@@ -34,37 +34,78 @@ namespace Intranet.Labor.Dal.Migrations
 
             var error1 = new Error
             {
-                ErrorId = 80,
+                ErrorCode = "080",
                 Value = "Fixtape fehlt"
             };
             var error2 = new Error
             {
-                ErrorId = 411,
+                ErrorCode = "411",
                 Value = "Saugkissen hinten zu kurz"
             };
             var error3 = new Error
             {
-                ErrorId = 23,
+                ErrorCode = "023",
                 Value = "Zu wenig Inhalt"
             };
             var error4 = new Error
             {
-                ErrorId = 802,
+                ErrorCode = "802",
                 Value = "Linke Seite reisst auf"
             };
             context.Errors.AddOrUpdate( e => e.ErrorId, error1, error2, error3, error4 );
 
-            /*var babyDiapersRetentionTest1 = new BabyDiaperTestValue
+            var machine1 = new Machine
             {
-                WeightDiaperDry = 32.9,
-                Revert140Value = 0.1,
-                Revet210Value = 0.18,
-                StrikeTroughValue = 0.28,
-                DistributionOfTheStrikeTrough = 240,
-                Revet140Rw = RwType.Ok,
-                Revet210Rw = RwType.Ok,
-                TestType = TestTypeBabyDiaper.Rewet
-            }*/
+                MachineNr = "M10"
+            };
+            var machine2 = new Machine
+            {
+                MachineNr = "M11"
+            };
+            var machine3 = new Machine
+            {
+                MachineNr = "M49"
+            };
+            context.Machines.AddOrUpdate( m => m.MachineId, machine1, machine2, machine3);
+
+            var article1 = new Article
+            {
+                ArticleNr = "10401",
+                Name = "Babydream Maxi-Plus",
+                ArticleType = ArticleType.BabyDiaper,
+                Rewet140Max = 0.4,
+                Rewet210Max = 0.5,
+                MinRetention = 350,
+                MaxRetention = 380,
+                MaxPenetrationAfter4Time = 250
+            };
+            context.Articles.AddOrUpdate( a => a.ArticleId, article1 );
+
+            var productionOrderComponent1 = new ProductionOrderComponent
+            {
+                SAP = 32.7,
+                PillowRetentWithoutSAP = 31.2,
+                PillowWeightWithoutSAP = 26.0,
+                CelluloseRetention = 1.2,
+                ComponentType = "EKX",
+                ComponentNr = "EN67"
+            };
+
+            var productionOrder1 = new ProductionOrder
+            {
+                FaNr = "FA123456",
+                StartDateTime = new DateTime(2016,1,1),
+                EndDateTime = new DateTime(2018,1,1),
+                Machine = machine2,
+                Component = productionOrderComponent1,
+                Article = article1
+            };
+            productionOrderComponent1.ProductionOrder = productionOrder1;
+
+            context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
+            context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
+
+            ////////////////////////////////////////////////////
 
             var testSheet = new TestSheet
             {
@@ -72,8 +113,7 @@ namespace Intranet.Labor.Dal.Migrations
                 FaNr = "FA123456",
                 CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 ShiftType = ShiftType.Night,
-                DayInYear = 307,
-                MachineNr = "11",
+                MachineNr = "M11",
                 SAPType = "EKX",
                 SAPNr = "EN67",
                 ProductName = "Babydream",
@@ -84,11 +124,13 @@ namespace Intranet.Labor.Dal.Migrations
                     babyDiapersRetentionTestValue1
                 }*/
             };
+
             var babyDiapersRewetTestValue1 = new TestValue
             {
-                TestValueId = 1,
-                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
-                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+				TestValueId = 1,
+                CreatedDateTime = new DateTime(2016, 11, 2,1,50,0),
+                LastEditedDateTime = new DateTime(2016, 11, 2,1,50,0),
+                DayInYearOfArticleCreation = 307,
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
@@ -161,6 +203,7 @@ namespace Intranet.Labor.Dal.Migrations
                 TestValueType = TestValueType.StandardDeviation,
                 TestSheetRefId = 1
             };
+			
             var babyDiapersRewetTest1 = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 1,
@@ -200,6 +243,46 @@ namespace Intranet.Labor.Dal.Migrations
                 Rewet210Rw = RwType.Ok,
                 TestType = TestTypeBabyDiaper.Rewet
             };
+
+			
+			
+            babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
+
+            var testNote = new TestValueNote
+            {
+                Error = error2,
+                Message = "Testnotiz"
+            };
+            var babyDiapersRetentionTestValue1 = new TestValue
+            {
+                TestValueId = 2,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                DayInYearOfArticleCreation = 307,
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.BabyDiaper,
+                TestValueType = TestValueType.Single,
+                TestSheetRefId = 1,
+                TestValueNote = new List<TestValueNote> { testNote }
+            };
+            testNote.TestValue = babyDiapersRetentionTestValue1;
+            var babyDiapersRetentionTest1 = new BabyDiaperTestValue
+            {
+                BabyDiaperTestValueId = 2,
+                DiaperCreatedTime = new TimeSpan(1, 38, 0),
+                WeightDiaperDry = 33.0,
+                RetentionWetWeight = 414.0,
+                RetentionAfterZentrifugeValue = 381.0,
+                RetentionAfterZentrifugePercent = 1155,
+                RetentionRw = RwType.Better,
+                SapType = "EKX",
+                SapNr = "EN67",
+                SapGHoewiValue = 10.70,
+                TestType = TestTypeBabyDiaper.Retention
+            };
+            babyDiapersRetentionTestValue1.BabyDiaperTestValue = babyDiapersRetentionTest1;
+
             var babyDiapersRetentionTestAverage = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 4,
@@ -248,26 +331,28 @@ namespace Intranet.Labor.Dal.Migrations
             };
 
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
-            babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
+            //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
 
-            babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
+            //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
             babyDiapersRewetTestValueAverage.BabyDiaperTestValue = babyDiapersRewetTestAverage;
-            babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
+            //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
             babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRewetTestStandardDeviation;
 
-            babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
+            //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
             babyDiapersRetentionTestValueAverage.BabyDiaperTestValue = babyDiapersRetentionTestAverage;
-            babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
+            //babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
             babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRetentionTestStandardDeviation;
 
-            babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
+            //babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
             babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValue = babyDiapersPenetrationTimeTestAverage;
-            babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
+            //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersPenetrationTimeTestStandardDeviation;
+
 
             testSheet.TestValues = new List<TestValue>
             {
                 babyDiapersRewetTestValue1,
+                babyDiapersRetentionTestValue1,
                 babyDiapersRetentionTestValueAverage,
                 babyDiapersRetentionTestValueStandardDeviation,
                 babyDiapersRewetTestValueAverage,
@@ -275,10 +360,6 @@ namespace Intranet.Labor.Dal.Migrations
                 babyDiapersPenetrationTimeTestValueAverage,
                 babyDiapersPenetrationTimeTestValueStandardDeviation
             };
-            //babyDiapersRetentionTestValue1.TestSheet = testSheet;*/
-
-            //context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTest1);
-            //context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRetentionTestValue1);
             context.TestSheets.AddOrUpdate( m => m.FaNr, testSheet );
             context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRewetTestValue1 );
             context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRewetTestValueAverage );
@@ -297,7 +378,6 @@ namespace Intranet.Labor.Dal.Migrations
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTestAverage);
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestStandardDeviation);
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestAverage);
-
         }
     }
 }
