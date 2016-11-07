@@ -53,9 +53,7 @@
             <th>Prod Code</th>
             <th>Gewicht trocken</th>
             <th>nach 140 ml</th>
-            <th>RW</th>
             <th>nach 210 ml</th>
-            <th>RW</th>
             <th>Stricke Trough</th>
             <th>Verteilung</th>
             <th>Testperson</th>
@@ -71,9 +69,7 @@
                 <td>@item.TestInfo.ProductionCode</td>
                 <td>@item.TestInfo.WeightyDiaperDry</td>
                 <td>@item.Rewet.Rewet140Value</td>
-                <td>@item.Rewet.Rewet140Rw</td>
                 <td>@item.Rewet.Rewet210Value</td>
-                <td>@item.Rewet.Rewet210Rw</td>
                 <td>@item.Rewet.StrikeTroughValue</td>
                 <td>@item.Rewet.DistributionOfTheStrikeTrough</td>
                 <td>@item.TestInfo.TestPerson</td>
@@ -95,9 +91,7 @@
             <th>Durchschnitt</th>
             <th></th>
             <th>@Model.RewetAverage.Rewet140Value</th>
-            <th>@Model.RewetAverage.Rewet140Rw</th>
             <th>@Model.RewetAverage.Rewet210Value</th>
-            <th>@Model.RewetAverage.Rewet210Rw</th>
             <th>@Model.RewetAverage.StrikeTroughValue</th>
             <th>@Model.RewetAverage.DistributionOfTheStrikeTrough</th>
             <th></th>
@@ -110,9 +104,7 @@
             <th>Standard Abweichung</th>
             <th></th>
             <th>@Model.RewetStandardDeviation.Rewet140Value</th>
-            <th>@Model.RewetStandardDeviation.Rewet140Rw</th>
             <th>@Model.RewetStandardDeviation.Rewet210Value</th>
-            <th>@Model.RewetStandardDeviation.Rewet210Rw</th>
             <th>@Model.RewetStandardDeviation.StrikeTroughValue </th>
             <th>@Model.RewetStandardDeviation.DistributionOfTheStrikeTrough</th>
             <th></th>
@@ -201,7 +193,6 @@
             <th>Gewicht nass</th>
             <th>Nach Zentrifuge (g)</th>
             <th>Nach Zentrifuge (%)</th>
-            <th>RW</th>
             <th>SAP Typ</th>
             <th>SAP Nr.</th>
             <th>g/Höwi</th>
@@ -219,7 +210,6 @@
                 <td>@item.Retention.RetentionWetWeight</td>
                 <td>@item.Retention.RetentionAfterZentrifugeValue</td>
                 <td>@item.Retention.RetentionAfterZentrifugePercent</td>
-                <td>@item.Retention.RetentionRw</td>
                 <td>@item.Retention.SapType</td>
                 <td>@item.Retention.SapNr</td>
                 <td>@item.Retention.SapGHoewiValue</td>
@@ -244,7 +234,6 @@
             <th>@Model.RetentionAverage.RetentionWetWeight</th>
             <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
             <th>@Model.RetentionAverage.RetentionAfterZentrifugePercent</th>
-            <th>@Model.RetentionAverage.RetentionRw</th>
             <th></th>
             <th></th>
             <th>@Model.RetentionAverage.SapGHoewiValue</th>
@@ -260,7 +249,6 @@
             <th>@Model.RetentionStandardDeviation.RetentionWetWeight</th>
             <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
             <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugePercent</th>
-            <th>@Model.RetentionStandardDeviation.RetentionRw</th>
             <th></th>
             <th></th>
             <th>@Model.RetentionStandardDeviation.SapGHoewiValue</th>
@@ -270,4 +258,26 @@
         </tr>
         </tfoot>
     </table>
+    
+
+    <div class="body-highlight" >
+        
+        <h3>Allgemeine Werte</h3>
+        <div class="row">
+
+
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Gewicht trocken - Durchschnitt: @Model.WeigthAverageAll</p>
+
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Gewicht trocken - Standardabweichung: @Model.WeightStandardDeviationAll</p>
+
+            </div>
+        
+
+        </div>
+        </div>
+
 </div>

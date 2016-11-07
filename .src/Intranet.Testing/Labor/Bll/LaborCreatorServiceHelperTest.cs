@@ -18,6 +18,77 @@ namespace Intranet.Labor.Bll.Test
     public class LaborCreatorServiceHelperTest
     {
         /// <summary>
+        ///     Test Average
+        /// </summary>
+        [Fact]
+        public void ComputeWeightAverageAllTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var actual = serviceHelper.ComputeWeightAverageAll( new List<TestValue>
+                                                                {
+                                                                    new TestValue
+                                                                    {
+                                                                        ArticleTestType = ArticleType.BabyDiaper,
+                                                                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
+                                                                    },
+                                                                    new TestValue
+                                                                    {
+                                                                        ArticleTestType = ArticleType.BabyDiaper,
+                                                                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
+                                                                    },
+                                                                    new TestValue
+                                                                    {
+                                                                        ArticleTestType = ArticleType.BabyDiaper,
+                                                                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
+                                                                    },
+                                                                    new TestValue
+                                                                    {
+                                                                        ArticleTestType = ArticleType.BabyDiaper,
+                                                                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                                                                    }
+                                                                } );
+            const Double expected = 3.5;
+            actual.Should()
+                  .Be( expected );
+        }
+
+        /// <summary>
+        ///     Test Average
+        /// </summary>
+        [Fact]
+        public void ComputeWeightStandardDeviationAllTest()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var actual = serviceHelper.ComputeWeightStandardDeviationAll( new List<TestValue>
+                                                                          {
+                                                                              new TestValue
+                                                                              {
+                                                                                  ArticleTestType = ArticleType.BabyDiaper,
+                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
+                                                                              },
+                                                                              new TestValue
+                                                                              {
+                                                                                  ArticleTestType = ArticleType.BabyDiaper,
+                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
+                                                                              },
+                                                                              new TestValue
+                                                                              {
+                                                                                  ArticleTestType = ArticleType.BabyDiaper,
+                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
+                                                                              },
+                                                                              new TestValue
+                                                                              {
+                                                                                  ArticleTestType = ArticleType.BabyDiaper,
+                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                                                                              }
+                                                                          } );
+            const Double expected = 3.1091;
+            var actualRounded = Math.Round( actual, 4 );
+            actualRounded.Should()
+                         .Be( expected );
+        }
+
+        /// <summary>
         ///     Testing GenerateProdCode 1
         /// </summary>
         [Fact]
@@ -844,10 +915,6 @@ namespace Intranet.Labor.Bll.Test
                   .Be( 4 );
         }
 
-
-        
-
-
         /// <summary>
         ///     Testing ToRewetTestValue ok
         /// </summary>
@@ -979,6 +1046,34 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
+        ///     Testing ValidateRequiredItem 1
+        /// </summary>
+        [Fact]
+        public void ValidateRequiredItemTest1()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            serviceHelper.ValidateRequiredItem( "something", "something" );
+        }
+
+        /// <summary>
+        ///     Testing ValidateRequiredItem 2
+        /// </summary>
+        [Fact]
+        public void ValidateRequiredItemTest2()
+        {
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
+
+            String something = null;
+
+            Exception ex =
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ValidateRequiredItem( something, "something" ) );
+
+            Assert.Equal( "Item something of type " + typeof(String) + " is required and can not be null", ex.Message );
+        }
+
+        /// <summary>
         ///     Testing ValidateTestValueOnlyExactlyOneHasToExist1
         /// </summary>
         [Fact]
@@ -1017,116 +1112,11 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ValidateTestValueOnlyExactlyOneHasToExistTest3()
         {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             const String valueType = "type";
             const String testType = "test";
 
-           serviceHelper.ValidateTestValueOnlyExactlyOneHasToExist(new List<TestValue> { new TestValue() }, testType, valueType);
-
-        }
-
-        /// <summary>
-        /// Testing ValidateRequiredItem 1
-        /// </summary>
-        [Fact]
-        public void ValidateRequiredItemTest1()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-            serviceHelper.ValidateRequiredItem("something","something" );
-
-        }
-        /// <summary>
-        /// Testing ValidateRequiredItem 2
-        /// </summary>
-        [Fact]
-        public void ValidateRequiredItemTest2()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-
-            String something = null;
-
-            Exception ex =
-                Assert.Throws<InvalidDataException>(
-                    () => serviceHelper.ValidateRequiredItem(something, "something"));
-
-            Assert.Equal("Item something of type "+typeof(String)+" is required and can not be null", ex.Message);
-
-        }
-
-        /// <summary>
-        /// Test Average
-        /// </summary>
-        [Fact]
-        public void ComputeWeightAverageAllTest()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var actual = serviceHelper.ComputeWeightAverageAll( new List<TestValue>
-                                                   {
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
-                                                       }
-                                                   } );
-            const Double expected = 3.5;
-            actual.Should()
-                  .Be( expected );
-
-
-        }
-
-        /// <summary>
-        /// Test Average
-        /// </summary>
-        [Fact]
-        public void ComputeWeightStandardDeviationAllTest()
-        {
-            var serviceHelper = new LaborCreatorServiceHelper(new NLogLoggerFactory());
-            var actual = serviceHelper.ComputeWeightStandardDeviationAll( new List<TestValue>
-                                                   {
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
-                                                       },
-                                                       new TestValue
-                                                       {
-                                                           ArticleTestType = ArticleType.BabyDiaper,
-                                                           BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
-                                                       }
-                                                   });
-            const Double expected = 3.1091;
-            var actualRounded = Math.Round( actual, 4 );
-            actualRounded.Should()
-                  .Be(expected);
-
-
+            serviceHelper.ValidateTestValueOnlyExactlyOneHasToExist( new List<TestValue> { new TestValue() }, testType, valueType );
         }
     }
 }
