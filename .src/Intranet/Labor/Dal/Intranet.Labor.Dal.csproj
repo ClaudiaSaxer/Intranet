@@ -66,6 +66,7 @@
     <Compile Include="Repositories\ProductionOrderRepository.cs" />
     <Compile Include="Repositories\TestSheetRepository.cs" />
     <Compile Include="Repositories\TestValueNoteRepository.cs" />
+    <Compile Include="Repositories\ShiftScheduleRepository.cs" />
     <Compile Include="Repositories\TestValueRepository.cs" />
   </ItemGroup>
   <ItemGroup>

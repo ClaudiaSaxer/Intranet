@@ -106,6 +106,168 @@ namespace Intranet.Labor.Dal.Migrations
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
 
             ////////////////////////////////////////////////////
+            var shift1 = new ShiftSchedule
+            {
+                Name = "Mo Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Sunday,
+                EndDay = DayOfWeek.Monday,
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
+            };
+            var shift2 = new ShiftSchedule
+            {
+                Name = "Mo Morgen",
+                ShiftType = ShiftType.Morning,
+                StartDay = DayOfWeek.Monday,
+                EndDay = DayOfWeek.Monday,
+                StartTime = new TimeSpan(05, 00, 00),
+                EndTime = new TimeSpan(13, 59, 59)
+            };
+            var shift3 = new ShiftSchedule
+            {
+                Name = "Mo Spät",
+                ShiftType = ShiftType.Late,
+                StartDay = DayOfWeek.Monday,
+                EndDay = DayOfWeek.Monday,
+                StartTime = new TimeSpan(14, 00, 00),
+                EndTime = new TimeSpan(22, 59, 59)
+            };
+            var shift4 = new ShiftSchedule
+            {
+                Name = "Di Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Monday,
+                EndDay = DayOfWeek.Tuesday,
+                StartTime = new TimeSpan(22, 00, 00),
+                EndTime = new TimeSpan(04, 59, 59)
+            };
+            var shift5 = new ShiftSchedule
+            {
+                Name = "Di Morgen",
+                ShiftType = ShiftType.Morning,
+                StartDay = DayOfWeek.Tuesday,
+                EndDay = DayOfWeek.Tuesday,
+                StartTime = new TimeSpan(05, 00, 00),
+                EndTime = new TimeSpan(13, 59, 59)
+            };
+            var shift6 = new ShiftSchedule
+            {
+                Name = "Di Spät",
+                ShiftType = ShiftType.Late,
+                StartDay = DayOfWeek.Tuesday,
+                EndDay = DayOfWeek.Tuesday,
+                StartTime = new TimeSpan(14, 00, 00),
+                EndTime = new TimeSpan(22, 59, 59)
+            };
+            var shift7 = new ShiftSchedule
+            {
+                Name = "Mi Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Tuesday,
+                EndDay = DayOfWeek.Wednesday,
+                StartTime = new TimeSpan(22, 00, 00),
+                EndTime = new TimeSpan(04, 59, 59)
+            };
+            var shift8 = new ShiftSchedule
+            {
+                Name = "Mi Morgen",
+                ShiftType = ShiftType.Morning,
+                StartDay = DayOfWeek.Wednesday,
+                EndDay = DayOfWeek.Wednesday,
+                StartTime = new TimeSpan(05, 00, 00),
+                EndTime = new TimeSpan(13, 59, 59)
+            };
+            var shift9 = new ShiftSchedule
+            {
+                Name = "Mi Spät",
+                ShiftType = ShiftType.Late,
+                StartDay = DayOfWeek.Wednesday,
+                EndDay = DayOfWeek.Wednesday,
+                StartTime = new TimeSpan(14, 00, 00),
+                EndTime = new TimeSpan(22, 59, 59)
+            };
+            var shift10 = new ShiftSchedule
+            {
+                Name = "Do Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Wednesday,
+                EndDay = DayOfWeek.Thursday,
+                StartTime = new TimeSpan(22, 00, 00),
+                EndTime = new TimeSpan(04, 59, 59)
+            };
+            var shift11 = new ShiftSchedule
+            {
+                Name = "Do Morgen",
+                ShiftType = ShiftType.Morning,
+                StartDay = DayOfWeek.Thursday,
+                EndDay = DayOfWeek.Thursday,
+                StartTime = new TimeSpan(05, 00, 00),
+                EndTime = new TimeSpan(13, 59, 59)
+            };
+            var shift12 = new ShiftSchedule
+            {
+                Name = "Do Spät",
+                ShiftType = ShiftType.Late,
+                StartDay = DayOfWeek.Thursday,
+                EndDay = DayOfWeek.Thursday,
+                StartTime = new TimeSpan(14, 00, 00),
+                EndTime = new TimeSpan(22, 59, 59)
+            };
+            var shift13 = new ShiftSchedule
+            {
+                Name = "Fr Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Thursday,
+                EndDay = DayOfWeek.Friday,
+                StartTime = new TimeSpan(22, 00, 00),
+                EndTime = new TimeSpan(04, 59, 59)
+            };
+            var shift14 = new ShiftSchedule
+            {
+                Name = "Fr Morgen",
+                ShiftType = ShiftType.Morning,
+                StartDay = DayOfWeek.Friday,
+                EndDay = DayOfWeek.Friday,
+                StartTime = new TimeSpan(05, 00, 00),
+                EndTime = new TimeSpan(13, 59, 59)
+            };
+            var shift15 = new ShiftSchedule
+            {
+                Name = "Fr Spät",
+                ShiftType = ShiftType.Late,
+                StartDay = DayOfWeek.Friday,
+                EndDay = DayOfWeek.Friday,
+                StartTime = new TimeSpan(14, 00, 00),
+                EndTime = new TimeSpan(22, 59, 59)
+            };
+            var shift16 = new ShiftSchedule
+            {
+                Name = "Sa Nacht",
+                ShiftType = ShiftType.Night,
+                StartDay = DayOfWeek.Friday,
+                EndDay = DayOfWeek.Saturday,
+                StartTime = new TimeSpan(22, 00, 00),
+                EndTime = new TimeSpan(04, 59, 59)
+            };
+
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift1);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift2);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift3);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift4);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift5);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift6);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift7);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift8);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift9);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift10);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift11);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift12);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift13);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift14);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift15);
+            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift16);
+            ////////////////////////////////////////////////////
 
             var testSheet = new TestSheet
             {

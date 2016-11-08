@@ -31,6 +31,29 @@ namespace Intranet.Labor.Bll
         #endregion
 
         /// <summary>
+        ///     gets the average weight for all tests
+        /// </summary>
+        public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
+        {
+            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
+            return weights.Average();
+        }
+
+        /// <summary>
+        ///     gets the weight for the standard deviation for all tests
+        /// </summary>
+        public Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValues )
+        {
+            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
+            var average = weights.Average();
+
+            var sumOfSquaresOfDifferences = weights.Sum( val => ( val - average ) * ( val - average ) );
+            var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / ( weights.Count - 1 ) );
+
+            return standardDeviation;
+        }
+
+        /// <summary>
         ///     Generates the Production Code for the Diaper
         /// </summary>
         /// <param name="machine">The machine Nr</param>
@@ -97,12 +120,13 @@ namespace Intranet.Labor.Bll
         /// <param name="penetrationTime">the baby diaper test value containing the penetration time data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
+        /// <param name="testValueId">the id of the test value</param>
         /// <returns></returns>
-        public PenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode )
+        public PenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode, Int32 testValueId )
         {
             var vm = new PenetrationTimeTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry ),
+                TestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry, testValueId ),
                 PenetrationTime = ToPenetrationTime( penetrationTime )
             };
             return vm;
@@ -161,12 +185,13 @@ namespace Intranet.Labor.Bll
         /// <param name="retention">the baby diaper test value containing the retention data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
+        /// <param name="testValueId">the id of the testvalue</param>
         /// <returns></returns>
-        public RetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode )
+        public RetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode, Int32 testValueId )
         {
             var vm = new RetentionTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry ),
+                TestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry, testValueId ),
                 Retention = ToRetention( retention )
             };
             return vm;
@@ -227,12 +252,13 @@ namespace Intranet.Labor.Bll
         /// <param name="rewet">the baby diaper test value containing the rewet data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
+        /// <param name="testValueId">the id of the testvalue</param>
         /// <returns></returns>
-        public RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode )
+        public RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId )
         {
             var vm = new RewetTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry ),
+                TestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry, testValueId ),
                 Rewet = ToRewet( rewet )
             };
             return vm;
@@ -255,55 +281,16 @@ namespace Intranet.Labor.Bll
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the prodcution code from the diaper</param>
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
+        /// <param name="testValueId">the id of the testvalue</param>
         /// <returns></returns>
-        public TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry )
+        public TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId )
             => new TestInfo
             {
                 TestPerson = testPerson,
                 ProductionCode = prodCode,
-                WeightyDiaperDry = weightDiaperDry
+                WeightyDiaperDry = weightDiaperDry,
+                TestValueId = testValueId
             };
-
-        /// <summary>
-        ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
-        ///     parameter
-        /// </summary>
-        /// <typeparam name="T">
-        ///     the collection type. For example: <see cref="RewetTestValue" />,
-        ///     <see cref="PenetrationTimeTestValue" />,<see cref="RetentionTestValue" />
-        /// </typeparam>
-        /// <param name="testValue">the testvalues that contain the data</param>
-        /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
-        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
-        /// <param name="toTestTypeTestValueAction">
-        ///     the action the get the correct data for a collection item. For example:
-        ///     <see cref="ToRewetTestValue" />, <see cref="ToRetentionTestValue" />, <see cref="ToPenetrationTimeTestValue" />
-        /// </param>
-        /// <returns>
-        ///     A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction" /> given as a
-        ///     input action
-        /// </returns>
-        public Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
-                                                                  TestValueType testValueType,
-                                                                  ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
-                                                                  Func<BabyDiaperTestValue, String, String, T> toTestTypeTestValueAction )
-        {
-            var tests = new Collection<T>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x =>
-                                          ( x.TestValueType == testValueType )
-                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
-                                  .ForEach(
-                                      x =>
-                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
-                                                                                x.LastEditedPerson,
-                                                                                GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                  x.TestSheet.CreatedDateTime.Year,
-                                                                                                  x.DayInYearOfArticleCreation,
-                                                                                                  x.BabyDiaperTestValue.DiaperCreatedTime ) ) ) );
-            return tests;
-        }
 
         /// <summary>
         ///     Validates a required item
@@ -317,8 +304,6 @@ namespace Intranet.Labor.Bll
             if ( item.IsNull() )
                 throw new InvalidDataException( "Item " + name + " of type " + typeof(T) + " is required and can not be null" );
         }
-
-
 
         /// <summary>
         ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a
@@ -347,46 +332,65 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     gets the average weight for all tests
-        /// </summary>
-        public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
-        {
-            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
-            return weights.Average();
-        }
-
-
-        /// <summary>
-        /// All weight for the article type
+        ///     All weight for the article type
         /// </summary>
         /// <param name="testValues">the test values</param>
         /// <param name="articleType">the type of the article</param>
         /// <returns>a collection of all types</returns>
-        public Collection<Double> AllWeightsOfArticleType( IEnumerable<TestValue> testValues, ArticleType  articleType )
+        public Collection<Double> AllWeightsOfArticleType( IEnumerable<TestValue> testValues, ArticleType articleType )
         {
             var weights = new Collection<Double>();
 
-            testValues.ForEach(value =>
-            {
-                if (value.ArticleTestType == articleType)
-                    weights.Add(value.BabyDiaperTestValue.WeightDiaperDry);
-            }
+            testValues.ForEach( value =>
+                                {
+                                    if ( value.ArticleTestType == articleType )
+                                        weights.Add( value.BabyDiaperTestValue.WeightDiaperDry );
+                                }
             );
             return weights;
         }
+
         /// <summary>
-        ///     gets the weight for the standard deviation for all tests
+        ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
+        ///     parameter
         /// </summary>
-        public Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValues )
+        /// <typeparam name="T">
+        ///     the collection type. For example: <see cref="RewetTestValue" />,
+        ///     <see cref="PenetrationTimeTestValue" />,<see cref="RetentionTestValue" />
+        /// </typeparam>
+        /// <param name="testValue">the testvalues that contain the data</param>
+        /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
+        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
+        /// <param name="toTestTypeTestValueAction">
+        ///     the action the get the correct data for a collection item. For example:
+        ///     <see cref="ToRewetTestValue" />, <see cref="ToRetentionTestValue" />, <see cref="ToPenetrationTimeTestValue" />
+        /// </param>
+        /// <returns>
+        ///     A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction" /> given as a
+        ///     input action
+        /// </returns>
+        public Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
+                                                                  TestValueType testValueType,
+                                                                  ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
+                                                                  Func<BabyDiaperTestValue, String, String, Int32, T> toTestTypeTestValueAction )
         {
-            var weights = AllWeightsOfArticleType(testValues, ArticleType.BabyDiaper);
-            var average = weights.Average();
-
-            var sumOfSquaresOfDifferences = weights.Sum(val => (val - average) * (val - average));
-            var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / (weights.Count - 1) );
-
-
-            return standardDeviation;
+            var tests = new Collection<T>();
+            var values = testValue.ToList()
+                                  .Where(
+                                      x =>
+                                          ( x.TestValueType == testValueType )
+                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
+                                  .ForEach(
+                                      x =>
+                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
+                                                                                x.LastEditedPerson,
+                                                                                GenerateProdCode( x.TestSheet.MachineNr,
+                                                                                                  x.TestSheet.CreatedDateTime.Year,
+                                                                                                  x.DayInYearOfArticleCreation,
+                                                                                                  x.BabyDiaperTestValue.DiaperCreatedTime )
+                                                                                ,
+                                                                                x.TestValueId ) ) );
+            return tests;
         }
     }
 }

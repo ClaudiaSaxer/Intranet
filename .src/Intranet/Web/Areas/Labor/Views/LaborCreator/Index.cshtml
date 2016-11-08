@@ -1,7 +1,50 @@
-﻿
+﻿@model Intranet.Labor.ViewModel.LaborCreatorViewModel
+
+
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
 
+<div class="jumbotron">
+    <div class="container">
+
+        @using ( Html.BeginForm( "Edit", "LaborCreator", FormMethod.Post ) )
+        {
+        
+            @Html.AntiForgeryToken()
+
+            <p>
+                <label for="Productionnumber">Fertigungsnummer:</label>
+                @Html.EditorFor(m => m.ChosenPo)
+            </p>
+                <p>
+                    @Html.ValidationMessageFor(m => m.ChosenPo)
+                </p>
+
+            <input class="btn btn-primary btn-lg" type="submit" name="Edit" value="Bearbeiten" />
+        }
+
+    </div>
+
+
+    </div>
+<div class="container">
+    <div class="row">
+        @foreach ( var item in Model.ProductionOrders )
+        {
+            <div class="col-md-6">
+                <a href="@Url.Action( item.ActionName, item.ControllerName, new { area = item.AreaName, id = item.PoId } )" class="no-underline-hyperlink">
+                    <div class="modul-item">
+                        <div class="modul-item-title">
+                            @item.PoName
+                        </div>
+                        <div class="modul-item-description">
+                            @item.Description
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</div>
