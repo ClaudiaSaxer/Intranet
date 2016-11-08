@@ -36,7 +36,8 @@ namespace Intranet.Labor.Bll.Test
                     ProductName =productName ,
                     SizeName = sizeName,
                     CreatedDateTime = createdDateTime,
-                    TestValues = new List<TestValue>()
+                    TestValues = new List<TestValue>(),
+                    TestSheetId = 1
                     
                 } );
 
@@ -47,7 +48,8 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var actual = target.GetLaborCreatorViewModel( 1 );
-
+            actual.TestSheetId.Should()
+                  .Be( 1 );
             actual.Producer.Should()
                   .Be( "Intigena" );
             actual.Shift.Should()

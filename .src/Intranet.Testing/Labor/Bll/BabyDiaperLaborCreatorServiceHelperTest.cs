@@ -929,13 +929,14 @@ namespace Intranet.Labor.Bll.Test
                 {
                     TestPerson = "test person",
                     ProductionCode = "theprodcode",
-                    WeightyDiaperDry = 666
+                    WeightyDiaperDry = 666,
+                    TestValueId = 1
                 }
             };
 
             var actual = serviceHelper.ToRewetTestValue( new BabyDiaperTestValue { WeightDiaperDry = 666, Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
                                                          "test person",
-                                                         "theprodcode" );
+                                                         "theprodcode",1 );
 
             actual.ShouldBeEquivalentTo( expected );
         }
@@ -952,10 +953,11 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestPerson = "gandalf",
                 ProductionCode = "you shall not pass",
-                WeightyDiaperDry = 666
+                WeightyDiaperDry = 666,
+                TestValueId = 1
             };
 
-            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666 );
+            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666,1 );
 
             actual.ShouldBeEquivalentTo( expected );
         }
