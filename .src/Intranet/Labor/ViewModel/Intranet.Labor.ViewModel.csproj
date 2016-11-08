@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BabyDiaperRetention\BabyDiaperRetentionEditViewModel.cs" />
     <Compile Include="BabyDiaperRetention\ErrorCode.cs" />
+    <Compile Include="BabyDiaperRewet\BabyDiaperRewetEditViewModel.cs" />
     <Compile Include="TestNote.cs" />
     <Compile Include="LaborCreatorBabyDiapers\PenetrationTimeTestValue.cs" />
     <Compile Include="LaborCreatorBabyDiapers\Retention.cs" />
