@@ -24,7 +24,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
+        public IBabyDiaperBll BabyDiaperBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
@@ -79,7 +79,7 @@ namespace Intranet.Labor.Bll
             babyDiaperTestValue = CalculateBabyDiaperRetentionValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
-            BabyDiaperRetentionBll.SaveNewTestValue( testValue );
+            BabyDiaperBll.SaveNewTestValue( testValue );
             return testValue;
         }
 
@@ -90,7 +90,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test value</returns>
         public TestValue UpdateRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
-            var testValue = BabyDiaperRetentionBll.GetTestValue( viewModel.TestValueId );
+            var testValue = BabyDiaperBll.GetTestValue( viewModel.TestValueId );
             testValue.LastEditedDateTime = DateTime.Now;
             testValue.LastEditedPerson = viewModel.TestPerson;
             testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
@@ -115,7 +115,7 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue,
                                                                                 viewModel.TestSheetId );
 
-            BabyDiaperRetentionBll.UpdateTestValue( testValue );
+            BabyDiaperBll.UpdateTestValue( testValue );
             return testValue;
         }
 
@@ -126,7 +126,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateRetentionAverageAndStv( Int32 testSheetId )
         {
-            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
+            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
             var retentionTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
@@ -139,7 +139,7 @@ namespace Intranet.Labor.Bll
                                  && tv.TestValueType == TestValueType.StandardDeviation );
             UpdateRetentionAvg( testSheet, retentionTestAvg );
             UpdateRetentionStDev( testSheet, retentionTestAvg, retentionTestStDev );
-            BabyDiaperRetentionBll.UpdateTestSheet();
+            BabyDiaperBll.UpdateTestSheet();
             return testSheet;
         }
 
@@ -156,8 +156,8 @@ namespace Intranet.Labor.Bll
         private BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue babyDiaperTestValue,
                                                                         Int32 testSheetId )
         {
-            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
-            var productionOrder = BabyDiaperRetentionBll.GetProductionOrder( testSheet.FaNr );
+            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = BabyDiaperBll.GetProductionOrder( testSheet.FaNr );
 
             babyDiaperTestValue.RetentionAfterZentrifugeValue = babyDiaperTestValue.RetentionWetWeight -
                                                                 babyDiaperTestValue.WeightDiaperDry;

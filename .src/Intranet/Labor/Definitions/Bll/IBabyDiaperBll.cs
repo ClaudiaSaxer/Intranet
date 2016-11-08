@@ -7,9 +7,9 @@ using Error = Intranet.Labor.Model.Error;
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the bll for the babydiapers retention value edit/create
+    ///     Interface representing the bll for the babydiapers value edit/create
     /// </summary>
-    public interface IBabyDiaperRetentionBll
+    public interface IBabyDiaperBll
     {
 
         /// <summary>

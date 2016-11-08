@@ -35,7 +35,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll,
+                BabyDiaperBll = babyDiaperRetentionBll,
                 BabyDiaperServiceHelper = babyDiaperServiceHelper
             };
 
@@ -59,7 +59,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetNewBabyDiapersRetentionEditViewModel(2);
@@ -94,7 +94,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel( 2 );
@@ -127,7 +127,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
@@ -162,7 +162,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
@@ -206,7 +206,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll,
+                BabyDiaperBll = babyDiaperRetentionBll,
                 BabyDiaperServiceHelper = babyDiaperServiceHelper
             };
 

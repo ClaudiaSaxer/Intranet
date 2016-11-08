@@ -23,7 +23,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
+        public IBabyDiaperBll BabyDiaperBll { get; set; }
 
         #endregion
 
@@ -41,7 +41,7 @@ namespace Intranet.Labor.Bll
 
         #endregion
 
-        #region Implementation of IBabyDiaperRetentionBll
+        #region Implementation of IBabyDiaperBll
 
         /// <summary>
         ///     Creates the Production code string from the testsheet

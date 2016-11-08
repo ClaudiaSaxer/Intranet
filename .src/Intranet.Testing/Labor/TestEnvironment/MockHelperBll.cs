@@ -82,10 +82,10 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for BabyDiaperRetentionBll
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
-        /// <returns>a IBabyDiaperRetentionBll moq</returns>
-        public static IBabyDiaperRetentionBll GetBabyDiaperRetentionBll(TestSheet testSheet)
+        /// <returns>a IBabyDiaperBll moq</returns>
+        public static IBabyDiaperBll GetBabyDiaperRetentionBll(TestSheet testSheet)
         {
-            var mock = new Mock<IBabyDiaperRetentionBll>
+            var mock = new Mock<IBabyDiaperBll>
             {
                 Name = "MockHelper.GetBabyDiaperRetentionBll",
                 DefaultValue = DefaultValue.Mock

@@ -24,7 +24,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
+        public IBabyDiaperBll BabyDiaperBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper retention service helper.
@@ -63,7 +63,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiaperRetentionEditViewModel</returns>
         public BabyDiaperRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
-            var testValue = BabyDiaperRetentionBll.GetTestValue( retentionTestId );
+            var testValue = BabyDiaperBll.GetTestValue( retentionTestId );
             if (testValue.IsNull())
             {
                 Logger.Error("TestValue mit id " + retentionTestId + "existiert nicht in DB!");
@@ -87,7 +87,7 @@ namespace Intranet.Labor.Bll
                 return null;
             }
             var notes = testValue.TestValueNote;
-            var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
+            var errors = BabyDiaperBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
             if (notes.IsNull())
@@ -118,7 +118,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiaperRetentionEditViewModel</returns>
         public BabyDiaperRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
         {
-            var testSheetInfo = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
+            var testSheetInfo = BabyDiaperBll.GetTestSheetInfo( testSheetId );
 
             if ( testSheetInfo.IsNull() )
             {
@@ -126,7 +126,7 @@ namespace Intranet.Labor.Bll
                 return null;
             }
 
-            var errors = BabyDiaperRetentionBll.GetAllNoteCodes();
+            var errors = BabyDiaperBll.GetAllNoteCodes();
             var errorCodes = errors.Select(error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value })
                                    .ToList();
             var viewModel = new BabyDiaperRetentionEditViewModel
@@ -170,7 +170,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The deleted testvalue</returns>
         public TestValue Delete( Int32 testValueId )
         {
-            var result = BabyDiaperRetentionBll.DeleteTestValue( testValueId );
+            var result = BabyDiaperBll.DeleteTestValue( testValueId );
             BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( result.TestSheetRefId );
             return result;
         }
