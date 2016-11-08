@@ -148,6 +148,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborCreatorBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<BabyDiaperRewetService>()
+                   .As<IBabyDiaperRewetService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>

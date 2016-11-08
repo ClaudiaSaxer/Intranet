@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Intranet.Labor.Model.labor;
 
@@ -54,6 +55,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeDay
         /// </value>
+        [DisplayName("Tag im Jahr")]
+        [Required(ErrorMessage = "Der Tag muss angegeben werden")]
+        [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
         public Int32 ProductionCodeDay { get; set; }
 
         /// <summary>
@@ -62,9 +66,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
-        /// [DisplayName( "Tag im Jahr" )]
-        [Required( ErrorMessage = "Der Tag muss angegeben werden" )]
-        [Range( 0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten" )]
         public TimeSpan ProductionCodeTime { get; set; }
 
         /// <summary>

@@ -36,10 +36,10 @@
 
 <div class="body-content">
 
-    <a href="#" class="btn btn-primary btn-lg">
+    <a href="@Url.Action("Create", "BabyDiaperRewet",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
     </a>
-    <a href="#" class="btn btn-primary btn-lg">
+    <a href="@Url.Action("Create", "BabyDiaperRetention",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
     </a>
 
@@ -74,12 +74,12 @@
                 <td>@item.Rewet.DistributionOfTheStrikeTrough</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
-                    <a href="#" class="btn btn-info btn-lg">
+                    <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action("Delete", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span> 
                     </a>
                 </td>
@@ -142,12 +142,12 @@
                 <td>@item.PenetrationTime.PenetrationTimeAdditionFourth</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
-                    <a href="#" class="btn btn-info btn-lg">
+                    <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action("Delete", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
                 </td>
@@ -215,12 +215,12 @@
                 <td>@item.Retention.SapGHoewiValue</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
-                    <a href="#" class="btn btn-info btn-lg">
+                    <a href="@Url.Action("Edit", "BabyDiaperRetention",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="#" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action("Delete", "BabyDiaperRetention",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
                 </td>
