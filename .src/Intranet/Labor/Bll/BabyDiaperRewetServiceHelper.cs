@@ -54,19 +54,8 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
-            var testValue = new TestValue
-            {
-                TestSheetRefId = viewModel.TestSheetId,
-                CreatedDateTime = DateTime.Now,
-                LastEditedDateTime = DateTime.Now,
-                CreatedPerson = viewModel.TestPerson,
-                LastEditedPerson = viewModel.TestPerson,
-                DayInYearOfArticleCreation = viewModel.ProductionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper
-            };
-            if (viewModel.Notes.IsNotNull())
-                testValue.TestValueNote = viewModel.Notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })
-                                                   .ToList();
+            var testValue = BabyDiaperServiceHelper.CreateNewTestValue(viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes);
+
             var babyDiaperTestValue = new BabyDiaperTestValue
             {
                 DiaperCreatedTime = viewModel.ProductionCodeTime,
