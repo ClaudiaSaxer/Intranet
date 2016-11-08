@@ -103,7 +103,7 @@
       <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
-      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Project>{e569d010-8acf-406e-8021-6fec422960ad}</Project>
       <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Intranet\Model\Intranet.Model.csproj">
