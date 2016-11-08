@@ -59,8 +59,9 @@ namespace Intranet.Labor.Definition
         /// <param name="penetrationTime">the baby diaper test value containing the penetration time data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
-        /// <returns></returns>
-        PenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode );
+        /// <param name="testValueId">the id of the testvalue</param>
+        /// <returns>a Penetration Time test value</returns>
+        PenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode,Int32 testValueId );
 
         /// <summary>
         ///     Creates the penetration time test value collection for all singe tests
@@ -96,8 +97,9 @@ namespace Intranet.Labor.Definition
         /// <param name="retention">the baby diaper test value containing the retention data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
-        /// <returns></returns>
-        RetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode );
+        /// <param name="testValueId">the id of the test value</param>
+        /// <returns>a test value for the retention test</returns>
+        RetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the retention  test value collection for all singe tests
@@ -133,8 +135,9 @@ namespace Intranet.Labor.Definition
         /// <param name="rewet">the baby diaper test value containing the rewet data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
-        /// <returns></returns>
-        RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode );
+        /// <param name="testValueId">the id of the test value</param>
+        /// <returns>the test value for the rewet test</returns>
+        RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId);
 
         /// <summary>
         ///     Creates the rewet test value collection for all singe tests
@@ -149,8 +152,9 @@ namespace Intranet.Labor.Definition
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the prodcution code from the diaper</param>
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
-        /// <returns></returns>
-        TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry );
+        /// <param name="testValueId">the id of the testvalue</param>
+        /// <returns>a TestInfo</returns>
+        TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId);
 
         /// <summary>
         ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
@@ -174,7 +178,7 @@ namespace Intranet.Labor.Definition
         Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
                                                            TestValueType testValueType,
                                                            ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
-                                                           Func<BabyDiaperTestValue, String, String, T> toTestTypeTestValueAction );
+                                                           Func<BabyDiaperTestValue, String, String,Int32, T> toTestTypeTestValueAction );
 
         /// <summary>
         ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a

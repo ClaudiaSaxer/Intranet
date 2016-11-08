@@ -25,5 +25,11 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the weight of the dry diaper</value>
         public Double WeightyDiaperDry { get; set; }
+
+        /// <summary>
+        /// Gets or setst the testvalue id
+        /// </summary>
+        /// <value>the testvalue id</value>
+        public Int32 TestValueId { get; set; }
     }
 }

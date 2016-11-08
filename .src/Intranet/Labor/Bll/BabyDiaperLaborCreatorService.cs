@@ -81,7 +81,8 @@ namespace Intranet.Labor.Bll
                 PenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
                 PenetrationTimeAverage = penetrationTimeAverage,
                 WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
-                WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper)
+                WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
+                TestSheetId = testSheetId
             };
             return vm;
         }
