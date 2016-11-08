@@ -1,10 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Labor.Model.labor;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel
 {
@@ -61,9 +62,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ProductionCodeTime
         /// </value>
-        ///         [DisplayName( "Tag im Jahr" )]
-        [Required(ErrorMessage = "Der Tag muss angegeben werden")]
-        [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
+        /// [DisplayName( "Tag im Jahr" )]
+        [Required( ErrorMessage = "Der Tag muss angegeben werden" )]
+        [Range( 0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten" )]
         public TimeSpan ProductionCodeTime { get; set; }
 
         /// <summary>
@@ -152,14 +153,15 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Collection of Notes
         /// </value>
-        public List<TestNote> Notes { get; set; }
+        public IList<TestNote> Notes { get; set; }
+
         /// <summary>
         ///     Gets or sets the Collection of NoteCodes
         /// </summary>
         /// <value>
         ///     The Collection of NoteCodes
         /// </value>
-        public List<ErrorCode> NoteCodes { get; set; }
+        public IList<ErrorCode> NoteCodes { get; set; }
 
         #endregion
     }

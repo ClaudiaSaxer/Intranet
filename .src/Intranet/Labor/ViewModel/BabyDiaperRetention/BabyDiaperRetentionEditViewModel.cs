@@ -83,14 +83,14 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Collection of Notes
         /// </value>
-        public List<TestNote> Notes { get; set; }
+        public IList<TestNote> Notes { get; set; }
         /// <summary>
         ///     Gets or sets the Collection of NoteCodes
         /// </summary>
         /// <value>
         ///     The Collection of NoteCodes
         /// </value>
-        public List<ErrorCode> NoteCodes { get; set; }
+        public IList<ErrorCode> NoteCodes { get; set; }
 
 
         #endregion
