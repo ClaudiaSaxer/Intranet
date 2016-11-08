@@ -9,6 +9,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
+    ///     Class representing the labor home service
     /// </summary>
     public class LaborHomeService : ServiceBase, ILaborHomeService
     {

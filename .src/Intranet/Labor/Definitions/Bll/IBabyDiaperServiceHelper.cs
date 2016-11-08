@@ -33,5 +33,26 @@ namespace Intranet.Labor.Definition
         /// <param name="testSheetId">id of the test sheet</param>
         /// <returns>the updated test sheet</returns>
         TestSheet UpdateAverageAndStv(Int32 testSheetId);
+
+        /// <summary>
+        ///     Creates the Production code string from the testsheet
+        /// </summary>
+        /// <param name="testSheet">the testSheet</param>
+        /// <returns>the production code</returns>
+        String CreateProductionCode( TestSheet testSheet );
+
+        /// <summary>
+        ///     Creates an new TestValue from the view model
+        /// </summary>
+        /// <param name="viewModel">the data from the view</param>
+        /// <returns>The created test value</returns>
+        TestValue SaveNewRewetTest(BabyDiaperRewetEditViewModel viewModel);
+
+        /// <summary>
+        ///     Updates an given Testvalue from the view model
+        /// </summary>
+        /// <param name="viewModel">the data from the view</param>
+        /// <returns>the updated test value</returns>
+        TestValue UpdateRewetTest(BabyDiaperRewetEditViewModel viewModel);
     }
 }

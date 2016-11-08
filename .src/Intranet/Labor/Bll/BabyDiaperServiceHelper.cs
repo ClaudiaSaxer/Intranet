@@ -67,14 +67,48 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
+        ///     Calculates all values for the baby diaper rewet test
+        /// </summary>
+        /// <param name="babyDiaperTestValue">the test value</param>
+        /// <param name="testSheetId">the test sheet id</param>
+        /// <returns></returns>
+        public BabyDiaperTestValue CalculateBabyDiaperRewetValues(BabyDiaperTestValue babyDiaperTestValue,
+                                                                       Int32 testSheetId)
+        {
+            var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo(testSheetId);
+            var productionOrder = BabyDiaperRetentionBll.GetProductionOrder(testSheet.FaNr);
+
+            babyDiaperTestValue.Rewet140Rw = GetRewet140RwType( babyDiaperTestValue.Rewet140Value, productionOrder );
+            babyDiaperTestValue.Rewet210Rw = GetRewet210RwType(babyDiaperTestValue.Rewet210Value, productionOrder);
+            //TODO PENETRATION
+            return babyDiaperTestValue;
+        }
+
+        /// <summary>
+        ///     returns the RwType for the Rewet140 test
+        /// </summary>
+        /// <param name="value">the tested Value</param>
+        /// <param name="productOrder">the Production order</param>
+        /// <returns>The RwType</returns>
+        private static RwType GetRewet140RwType( Double value, ProductionOrder productOrder ) => productOrder.Article.Rewet140Max >= value ? RwType.Worse : RwType.Ok;
+
+        /// <summary>
+        ///     returns the RwType for the Rewet210 test
+        /// </summary>
+        /// <param name="value">the tested Value</param>
+        /// <param name="productOrder">the Production order</param>
+        /// <returns>The RwType</returns>
+        private static RwType GetRewet210RwType(Double value, ProductionOrder productOrder) => productOrder.Article.Rewet210Max >= value ? RwType.Worse : RwType.Ok;
+
+        /// <summary>
         ///     returns the RwType for the Retention test
         /// </summary>
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns></returns>
-        public RwType GetRetentionRwType( Double value, ProductionOrder productOrder )
+        public RwType GetRetentionRwType(Double value, ProductionOrder productOrder)
         {
-            if ( value <= productOrder.Article.MinRetention )
+            if (value <= productOrder.Article.MinRetention)
                 return RwType.Worse;
             return value >= productOrder.Article.MaxRetention ? RwType.Better : RwType.Ok;
         }
@@ -185,6 +219,96 @@ namespace Intranet.Labor.Bll
             BabyDiaperRetentionBll.UpdateTestSheet();
             return testSheet;
         }
+
+        /// <summary>
+        ///     Creates the Production code string from the testsheet
+        /// </summary>
+        /// <param name="testSheet">the testSheet</param>
+        /// <returns>the production code</returns>
+        public String CreateProductionCode( TestSheet testSheet ) => "IT/" + testSheet.MachineNr.Substring(1) + "/" + testSheet.CreatedDateTime.Year.ToString().Substring(2) + "/";
+
+        /// <summary>
+        ///     Creates an new TestValue from the view model
+        /// </summary>
+        /// <param name="viewModel">the data from the view</param>
+        /// <returns>The created test value</returns>
+        public TestValue SaveNewRewetTest( BabyDiaperRewetEditViewModel viewModel )
+        {
+            var testValue = new TestValue
+            {
+                TestSheetRefId = viewModel.TestSheetId,
+                CreatedDateTime = DateTime.Now,
+                LastEditedDateTime = DateTime.Now,
+                CreatedPerson = viewModel.TestPerson,
+                LastEditedPerson = viewModel.TestPerson,
+                DayInYearOfArticleCreation = viewModel.ProductionCodeDay,
+                ArticleTestType = ArticleType.BabyDiaper
+            };
+            if (viewModel.Notes.IsNotNull())
+                testValue.TestValueNote = viewModel.Notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })
+                                                   .ToList();
+            var babyDiaperTestValue = new BabyDiaperTestValue
+            {
+                DiaperCreatedTime = viewModel.ProductionCodeTime,
+                WeightDiaperDry = viewModel.DiaperWeight,
+                Rewet140Value = viewModel.RewetAfter140,
+                Rewet210Value = viewModel.RewetAfter210,
+                StrikeTroughValue = viewModel.StrikeThrough,
+                DistributionOfTheStrikeTrough = viewModel.Distribution,
+                PenetrationTimeAdditionFirst = viewModel.PenetrationTime1,
+                PenetrationTimeAdditionSecond = viewModel.PenetrationTime2,
+                PenetrationTimeAdditionThird = viewModel.PenetrationTime3,
+                PenetrationTimeAdditionFourth = viewModel.PenetrationTime4,
+                TestType = viewModel.TestType
+            };
+            babyDiaperTestValue = CalculateBabyDiaperRewetValues(babyDiaperTestValue, viewModel.TestSheetId);
+            testValue.BabyDiaperTestValue = babyDiaperTestValue;
+
+            BabyDiaperRetentionBll.SaveNewTestValue(testValue);
+            return testValue;
+        }
+
+        /// <summary>
+        ///     Updates an given Testvalue from the view model
+        /// </summary>
+        /// <param name="viewModel">the data from the view</param>
+        /// <returns>the updated test value</returns>
+        public TestValue UpdateRewetTest( BabyDiaperRewetEditViewModel viewModel )
+        {
+            var testValue = BabyDiaperRetentionBll.GetTestValue(viewModel.TestValueId);
+            testValue.LastEditedDateTime = DateTime.Now;
+            testValue.LastEditedPerson = viewModel.TestPerson;
+            testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
+            testValue.BabyDiaperTestValue.DiaperCreatedTime = viewModel.ProductionCodeTime;
+            testValue.BabyDiaperTestValue.WeightDiaperDry = viewModel.DiaperWeight;
+            testValue.BabyDiaperTestValue.Rewet140Value = viewModel.RewetAfter140;
+            testValue.BabyDiaperTestValue.Rewet210Value = viewModel.RewetAfter210;
+            testValue.BabyDiaperTestValue.StrikeTroughValue = viewModel.StrikeThrough;
+            testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough = viewModel.Distribution;
+            testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst = viewModel.PenetrationTime1;
+            testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond = viewModel.PenetrationTime2;
+            testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird = viewModel.PenetrationTime3;
+            testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth = viewModel.PenetrationTime4;
+            testValue.BabyDiaperTestValue.TestType = viewModel.TestType;
+
+
+            foreach (var note in testValue.TestValueNote)
+                foreach (var vmNote in viewModel.Notes.Where(vmNote => note.TestValueNoteId == vmNote.Id))
+                {
+                    note.Message = vmNote.Message;
+                    note.ErrorRefId = vmNote.ErrorCodeId;
+                }
+            foreach (var vmNote in viewModel.Notes.Where(n => n.Id == 0))
+                testValue.TestValueNote.Add(new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue });
+
+            testValue.BabyDiaperTestValue = CalculateBabyDiaperRewetValues(testValue.BabyDiaperTestValue,
+                                                                                viewModel.TestSheetId);
+
+            BabyDiaperRetentionBll.UpdateTestValue(testValue);
+            return testValue;
+        }
+
+
 
         private static TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
