@@ -18,6 +18,11 @@
         /// <summary>
         ///     the value is worse than expected
         /// </summary>
-        Worse
+        Worse,
+
+        /// <summary>
+        ///     some value correlationg with the endvalue is worse
+        /// </summary>
+        SomethingWorse
     }
 }
