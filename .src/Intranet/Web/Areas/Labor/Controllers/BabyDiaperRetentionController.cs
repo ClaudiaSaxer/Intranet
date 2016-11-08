@@ -43,13 +43,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Loads the BabywindelnRetetion Edit View with a new Item for the Test-Sheet
         /// </summary>
         /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
-        /// <returns>The Index View filled with the viewModel</returns>
+        /// <returns>The Edit View filled with the viewModel</returns>
         public ActionResult Create(Int32 id = 0)
         {
             if (id.IsNull())
                 return HttpNotFound();
 
             var viewModel = BabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(id);
+            if(viewModel.IsNull()) return new HttpNotFoundResult("Das TestSheet ist entwerder kein Baby Windel Testsheet oder existiert nicht.");
             return View("Edit", viewModel);
         }
 
