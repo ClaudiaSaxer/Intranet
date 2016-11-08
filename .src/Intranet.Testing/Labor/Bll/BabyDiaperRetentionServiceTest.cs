@@ -31,9 +31,12 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
+            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper( "IT/11/16/" );
+
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperRetentionBll = babyDiaperRetentionBll,
+                BabyDiaperServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetNewBabyDiapersRetentionEditViewModel(1);
@@ -199,9 +202,12 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
+            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperRetentionBll = babyDiaperRetentionBll
+                BabyDiaperRetentionBll = babyDiaperRetentionBll,
+                BabyDiaperServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
@@ -224,14 +230,14 @@ namespace Intranet.Labor.Bll.Test
         {
             var testValue = new TestValue();
 
-            var babyDiaperServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper(
+            var babyDiaperRetentionServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
                     testValue
                 );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                BabyDiaperRetentionServiceHelper = babyDiaperRetentionServiceHelper
             };
 
             var actual = target.Save(new BabyDiaperRetentionEditViewModel());

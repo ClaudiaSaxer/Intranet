@@ -24,6 +24,11 @@ namespace Intranet.Labor.Bll
         public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
 
         /// <summary>
+        ///     Gets or sets the baby diaper rewet service helper.
+        /// </summary>
+        public IBabyDiaperRewetServiceHelper BabyDiaperRewetServiceHelper { get; set; }
+
+        /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
         public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
@@ -54,7 +59,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = BabyDiaperRetentionBll.DeleteTestValue(testValueId);
-            BabyDiaperServiceHelper.UpdateAverageAndStv(result.TestSheetRefId);
+            BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(result.TestSheetRefId);
             return result;
         }
 
@@ -161,9 +166,9 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? BabyDiaperServiceHelper.SaveNewRewetTest(viewModel)
-                    : BabyDiaperServiceHelper.UpdateRewetTest(viewModel);
-                var testSheet = BabyDiaperServiceHelper.UpdateAverageAndStv(viewModel.TestSheetId);
+                    ? BabyDiaperRewetServiceHelper.SaveNewRewetTest(viewModel)
+                    : BabyDiaperRewetServiceHelper.UpdateRewetTest(viewModel);
+                var testSheet = BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(viewModel.TestSheetId);
             }
             catch (Exception e)
             {

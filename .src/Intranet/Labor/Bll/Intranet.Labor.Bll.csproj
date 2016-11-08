@@ -49,7 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="BabyDiaperRewetService.cs" />
+    <Compile Include="BabyDiaperRewetServiceHelper.cs" />
     <Compile Include="BabyDiaperServiceHelper.cs" />
     <Compile Include="BabyDiaperRetentionBll.cs" />
     <Compile Include="BabyDiaperRetentionService.cs" />

@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\IBabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiaperRewetService.cs" />
+    <Compile Include="Bll\IBabyDiaperRewetServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiaperServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiaperRetentionBll.cs" />
     <Compile Include="Bll\IBabyDiaperRetentionService.cs" />

@@ -15,13 +15,31 @@ namespace Intranet.Labor.TestEnvironment
         /// <summary>
         ///     A mock for BabyDiaperServiceHelper
         /// </summary>
-        /// <param name="testValue">testValue returned by update or save new</param>
+        /// <param name="productionCode">productionCode returned by CreateProductionCode</param>
         /// <returns>a IBabyDiaperServiceHelper moq</returns>
-        public static IBabyDiaperServiceHelper GetBabyDiaperServiceHelper(TestValue testValue)
+        public static IBabyDiaperServiceHelper GetBabyDiaperServiceHelper(String productionCode)
         {
             var mock = new Mock<IBabyDiaperServiceHelper>
             {
                 Name = "MockHelper.GetBabyDiaperServiceHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.CreateProductionCode( It.IsAny<TestSheet>() ) )
+                .Returns(productionCode);
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionServiceHelper
+        /// </summary>
+        /// <param name="testValue">testValue returned by update or save new</param>
+        /// <returns>a IBabyDiaperRetentionServiceHelper moq</returns>
+        public static IBabyDiaperRetentionServiceHelper GetBabyDiaperRetentionServiceHelper(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperRetentionServiceHelper>
+            {
+                Name = "MockHelper.GetBabyDiaperRetentionServiceHelper",
                 DefaultValue = DefaultValue.Mock
             };
 
@@ -30,8 +48,8 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup(x => x.SaveNewRetentionTest(It.IsAny<BabyDiaperRetentionEditViewModel>()))
                 .Returns(testValue);
 
-            mock.Setup( x => x.UpdateAverageAndStv( It.IsAny<Int32>() ) )
-                .Returns( new TestSheet() );
+            mock.Setup(x => x.UpdateRetentionAverageAndStv(It.IsAny<Int32>()))
+                .Returns(new TestSheet());
 
             return mock.Object;
         }

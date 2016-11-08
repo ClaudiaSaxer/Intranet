@@ -153,6 +153,16 @@ namespace Intranet.Web.IoC
                    .As<IBabyDiaperRewetService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<BabyDiaperRetentionServiceHelper>()
+                   .As<IBabyDiaperRetentionServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<BabyDiaperRewetServiceHelper>()
+                   .As<IBabyDiaperRewetServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>

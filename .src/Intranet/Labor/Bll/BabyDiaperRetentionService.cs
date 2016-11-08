@@ -27,6 +27,11 @@ namespace Intranet.Labor.Bll
         public IBabyDiaperRetentionBll BabyDiaperRetentionBll { get; set; }
 
         /// <summary>
+        ///     Gets or sets the baby diaper retention service helper.
+        /// </summary>
+        public IBabyDiaperRetentionServiceHelper BabyDiaperRetentionServiceHelper { get; set; }
+
+        /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
         public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
@@ -95,7 +100,7 @@ namespace Intranet.Labor.Bll
                 TestValueId = retentionTestId,
                 TestSheetId = testValue.TestSheetRefId,
                 TestPerson = testValue.LastEditedPerson,
-                ProductionCode = CreateProductionCode( testSheetInfo ),
+                ProductionCode = BabyDiaperServiceHelper.CreateProductionCode( testSheetInfo ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
                 ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
                 DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
@@ -128,7 +133,7 @@ namespace Intranet.Labor.Bll
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
-                ProductionCode = CreateProductionCode(testSheetInfo),
+                ProductionCode = BabyDiaperServiceHelper.CreateProductionCode(testSheetInfo),
                 NoteCodes = errorCodes,
                 Notes = new List<TestNote>()
             };
@@ -147,9 +152,9 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? BabyDiaperServiceHelper.SaveNewRetentionTest(viewModel)
-                    : BabyDiaperServiceHelper.UpdateRetentionTest(viewModel);
-                var testSheet = BabyDiaperServiceHelper.UpdateAverageAndStv(viewModel.TestSheetId);
+                    ? BabyDiaperRetentionServiceHelper.SaveNewRetentionTest(viewModel)
+                    : BabyDiaperRetentionServiceHelper.UpdateRetentionTest(viewModel);
+                var testSheet = BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(viewModel.TestSheetId);
             }
             catch (Exception e)
             {
@@ -166,7 +171,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = BabyDiaperRetentionBll.DeleteTestValue( testValueId );
-            BabyDiaperServiceHelper.UpdateAverageAndStv( result.TestSheetRefId );
+            BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( result.TestSheetRefId );
             return result;
         }
 
