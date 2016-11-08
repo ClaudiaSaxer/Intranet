@@ -63,7 +63,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 DayInYearOfArticleCreation = DateTime.Now.DayOfYear,
                 BabyDiaperTestValue = new BabyDiaperTestValue
                 {
-                    TestType = testTypeBabyDiaper
+                    TestType = testTypeBabyDiaper,
+                    RetentionRw = RwType.Ok,
+                    Rewet140Rw = RwType.Ok,
+                    Rewet210Rw = RwType.Ok
                 }
             };
 
@@ -83,7 +86,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 DayInYearOfArticleCreation = DateTime.Now.DayOfYear,
                 IncontinencePadTestValue = new IncontinencePadTestValue
                 {
-                    TestType = testTypeIncontinencePad
+                    TestType = testTypeIncontinencePad,
+                    AcquisitionTimeFirstRw = RwType.Ok,
+                    AcquisitionTimeSecondRw = RwType.Ok,
+                    AcquisitionTimeThirdRw = RwType.Ok,
+                    RetentionRw = RwType.Ok,
+                    RewetFreeRw = RwType.Ok
                 }
             };
 
@@ -115,7 +123,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if ( shift == null )
                 return null;
             var testsheet = TestSheetRepository.Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
-                                      .ToList();
+                                               .ToList();
             return testsheet.ToList()
                             .Count == 1
                 ? testsheet[0]
