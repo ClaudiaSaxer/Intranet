@@ -47,8 +47,8 @@ namespace Intranet.Labor.Bll
         /// <param name="babyDiaperTestValue">the test value</param>
         /// <param name="testSheetId">the test sheet id</param>
         /// <returns></returns>
-        public BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue babyDiaperTestValue,
-                                                                       int testSheetId )
+        private BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue babyDiaperTestValue,
+                                                                       Int32 testSheetId )
         {
             var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
             var productionOrder = BabyDiaperRetentionBll.GetProductionOrder( testSheet.FaNr );
@@ -73,7 +73,7 @@ namespace Intranet.Labor.Bll
         /// <param name="babyDiaperTestValue">the test value</param>
         /// <param name="testSheetId">the test sheet id</param>
         /// <returns></returns>
-        public BabyDiaperTestValue CalculateBabyDiaperRewetValues(BabyDiaperTestValue babyDiaperTestValue,
+        private BabyDiaperTestValue CalculateBabyDiaperRewetValues(BabyDiaperTestValue babyDiaperTestValue,
                                                                        Int32 testSheetId)
         {
             var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo(testSheetId);
@@ -81,7 +81,7 @@ namespace Intranet.Labor.Bll
 
             babyDiaperTestValue.Rewet140Rw = GetRewet140RwType( babyDiaperTestValue.Rewet140Value, productionOrder );
             babyDiaperTestValue.Rewet210Rw = GetRewet210RwType(babyDiaperTestValue.Rewet210Value, productionOrder);
-            //TODO PENETRATION
+            babyDiaperTestValue.PenetrationRwType = GetPenetrationRwType( babyDiaperTestValue.PenetrationTimeAdditionFourth, productionOrder );
             return babyDiaperTestValue;
         }
 
@@ -91,7 +91,7 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns>The RwType</returns>
-        private static RwType GetRewet140RwType( Double value, ProductionOrder productOrder ) => productOrder.Article.Rewet140Max >= value ? RwType.Worse : RwType.Ok;
+        private static RwType GetRewet140RwType( Double value, ProductionOrder productOrder ) => productOrder.Article.Rewet140Max >= value ? RwType.Ok : RwType.Worse;
 
         /// <summary>
         ///     returns the RwType for the Rewet210 test
@@ -99,7 +99,15 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns>The RwType</returns>
-        private static RwType GetRewet210RwType(Double value, ProductionOrder productOrder) => productOrder.Article.Rewet210Max >= value ? RwType.Worse : RwType.Ok;
+        private static RwType GetRewet210RwType(Double value, ProductionOrder productOrder) => productOrder.Article.Rewet210Max >= value ? RwType.Ok : RwType.Worse;
+
+        /// <summary>
+        ///     returns the RwType for the penetration test
+        /// </summary>
+        /// <param name="value">the tested Value</param>
+        /// <param name="productOrder">the Production order</param>
+        /// <returns>The RwType</returns>
+        private static RwType GetPenetrationRwType(Double value, ProductionOrder productOrder) => productOrder.Article.MaxPenetrationAfter4Time >= value ? RwType.Ok : RwType.Worse;
 
         /// <summary>
         ///     returns the RwType for the Retention test
@@ -107,7 +115,7 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns></returns>
-        public RwType GetRetentionRwType(Double value, ProductionOrder productOrder)
+        private static RwType GetRetentionRwType(Double value, ProductionOrder productOrder)
         {
             if (value <= productOrder.Article.MinRetention)
                 return RwType.Worse;
@@ -193,6 +201,7 @@ namespace Intranet.Labor.Bll
         public TestSheet UpdateAverageAndStv( Int32 testSheetId )
         {
             var testSheet = BabyDiaperRetentionBll.GetTestSheetInfo( testSheetId );
+            // Retention
             var retentionTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
@@ -206,18 +215,34 @@ namespace Intranet.Labor.Bll
             UpdateRetentionAvg( testSheet, retentionTestAvg );
             UpdateRetentionStDev( testSheet, retentionTestAvg, retentionTestStDev );
 
-            /*
-            var rewetAndPenetrationTestAvg = 
+            // REWET
+            var rewetTestAvg =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && (tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime)
+                                 && tv.TestValueType == TestValueType.Average);
+            var rewetTestStDev =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && (tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime)
+                                 && tv.TestValueType == TestValueType.StandardDeviation);
+            UpdateRewetAvg(testSheet, rewetTestAvg);
+            UpdateRewetStDev(testSheet, rewetTestAvg, rewetTestStDev);
+
+            // Penetration
+            var penetrationTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime
                                  && tv.TestValueType == TestValueType.Average);
-            var rewetTestAvg =
+            var penetrationStDev =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
-                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet
-                                 && tv.TestValueType == TestValueType.Average);
-            */
+                                 tv.ArticleTestType == ArticleType.BabyDiaper && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime
+                                 && tv.TestValueType == TestValueType.StandardDeviation);
+            UpdatePenetrationAvg(testSheet, penetrationTestAvg);
+            UpdatePenetrationStDev(testSheet, penetrationTestAvg, penetrationStDev);
+
             BabyDiaperRetentionBll.UpdateTestSheet();
             return testSheet;
         }
@@ -326,8 +351,9 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.RetentionWetWeight += testValue.BabyDiaperTestValue.RetentionWetWeight;
                 tempBabyDiaper.RetentionAfterZentrifugeValue += testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue;
                 tempBabyDiaper.RetentionAfterZentrifugePercent += testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent;
+                //TODO IF AVG IS WORSE
                 if ( testValue.BabyDiaperTestValue.RetentionRw == RwType.Worse )
-                    tempBabyDiaper.RetentionRw = RwType.Worse;
+                    tempBabyDiaper.RetentionRw = RwType.SomethingWorse;
                 tempBabyDiaper.SapGHoewiValue += testValue.BabyDiaperTestValue.SapGHoewiValue;
                 counter++;
             }
@@ -368,6 +394,124 @@ namespace Intranet.Labor.Bll
             retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugePercent / counter );
             retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt( tempBabyDiaper.SapGHoewiValue / counter );
             return retentionTestStDev;
+        }
+
+        private static TestValue UpdateRewetAvg(TestSheet testSheet, TestValue rewetTestAvg)
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue { Rewet140Rw = RwType.Ok, Rewet210Rw = RwType.Ok};
+            var counter = 0;
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Single && (testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime))
+            )
+            {
+                tempBabyDiaper.WeightDiaperDry += testValue.BabyDiaperTestValue.WeightDiaperDry;
+                tempBabyDiaper.Rewet140Value += testValue.BabyDiaperTestValue.Rewet140Value;
+                tempBabyDiaper.Rewet210Value += testValue.BabyDiaperTestValue.Rewet210Value;
+                tempBabyDiaper.StrikeTroughValue += testValue.BabyDiaperTestValue.StrikeTroughValue;
+                tempBabyDiaper.DistributionOfTheStrikeTrough += testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough;
+                //TODO IF AVG IS WORSE
+                if (testValue.BabyDiaperTestValue.Rewet140Rw == RwType.Worse)
+                    tempBabyDiaper.Rewet140Rw = RwType.SomethingWorse;
+                if (testValue.BabyDiaperTestValue.Rewet210Rw == RwType.Worse)
+                    tempBabyDiaper.Rewet210Rw = RwType.SomethingWorse;
+                if (testValue.BabyDiaperTestValue.PenetrationRwType == RwType.Worse)
+                    tempBabyDiaper.PenetrationRwType = RwType.SomethingWorse;
+                counter++;
+            }
+            if (counter == 0)
+                counter = 1;
+            rewetTestAvg.BabyDiaperTestValue.WeightDiaperDry = tempBabyDiaper.WeightDiaperDry / counter;
+            rewetTestAvg.BabyDiaperTestValue.Rewet140Value = tempBabyDiaper.Rewet140Value / counter;
+            rewetTestAvg.BabyDiaperTestValue.Rewet210Value = tempBabyDiaper.Rewet210Value / counter;
+            rewetTestAvg.BabyDiaperTestValue.StrikeTroughValue = tempBabyDiaper.StrikeTroughValue / counter;
+            rewetTestAvg.BabyDiaperTestValue.DistributionOfTheStrikeTrough = tempBabyDiaper.DistributionOfTheStrikeTrough / counter;
+            rewetTestAvg.BabyDiaperTestValue.Rewet140Rw = tempBabyDiaper.Rewet140Rw;
+            rewetTestAvg.BabyDiaperTestValue.Rewet210Rw = tempBabyDiaper.Rewet210Rw;
+            rewetTestAvg.BabyDiaperTestValue.PenetrationRwType = tempBabyDiaper.PenetrationRwType;
+            return rewetTestAvg;
+        }
+
+        private static TestValue UpdateRewetStDev(TestSheet testSheet, TestValue rewetTestAvg, TestValue rewetTestStDev)
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue();
+            var counter = 0;
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Single && (testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime))
+            )
+            {
+                tempBabyDiaper.WeightDiaperDry += Math.Pow(testValue.BabyDiaperTestValue.WeightDiaperDry - rewetTestAvg.BabyDiaperTestValue.WeightDiaperDry, 2);
+                tempBabyDiaper.Rewet140Value += Math.Pow(testValue.BabyDiaperTestValue.Rewet140Value - rewetTestAvg.BabyDiaperTestValue.Rewet140Value, 2);
+                tempBabyDiaper.Rewet210Value += Math.Pow(testValue.BabyDiaperTestValue.Rewet210Value - rewetTestAvg.BabyDiaperTestValue.Rewet210Value, 2);
+                tempBabyDiaper.StrikeTroughValue += Math.Pow(testValue.BabyDiaperTestValue.StrikeTroughValue - rewetTestAvg.BabyDiaperTestValue.StrikeTroughValue, 2);
+                tempBabyDiaper.DistributionOfTheStrikeTrough += Math.Pow(testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough - rewetTestAvg.BabyDiaperTestValue.DistributionOfTheStrikeTrough, 2);
+                counter++;
+            }
+            if (counter == 0)
+                counter = 1;
+            rewetTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+            rewetTestStDev.BabyDiaperTestValue.Rewet140Value = Math.Sqrt(tempBabyDiaper.Rewet140Value / counter);
+            rewetTestStDev.BabyDiaperTestValue.Rewet210Value = Math.Sqrt(tempBabyDiaper.Rewet210Value / counter);
+            rewetTestStDev.BabyDiaperTestValue.StrikeTroughValue = Math.Sqrt(tempBabyDiaper.StrikeTroughValue / counter);
+            rewetTestStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough = Math.Sqrt(tempBabyDiaper.DistributionOfTheStrikeTrough / counter);
+            return rewetTestStDev;
+        }
+
+        private static TestValue UpdatePenetrationAvg(TestSheet testSheet, TestValue penetrationTestAvg)
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue { PenetrationRwType = RwType.Ok };
+            var counter = 0;
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime)
+            )
+            {
+                tempBabyDiaper.WeightDiaperDry += testValue.BabyDiaperTestValue.WeightDiaperDry;
+                tempBabyDiaper.PenetrationTimeAdditionFirst += testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst;
+                tempBabyDiaper.PenetrationTimeAdditionSecond += testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond;
+                tempBabyDiaper.PenetrationTimeAdditionThird += testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird;
+                tempBabyDiaper.PenetrationTimeAdditionFourth += testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth;
+                //TODO IF AVG IS WORSE
+                if (testValue.BabyDiaperTestValue.PenetrationRwType == RwType.Worse)
+                    tempBabyDiaper.PenetrationRwType = RwType.SomethingWorse;
+                counter++;
+            }
+            if (counter == 0)
+                counter = 1;
+            penetrationTestAvg.BabyDiaperTestValue.WeightDiaperDry = tempBabyDiaper.WeightDiaperDry / counter;
+            penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionFirst = tempBabyDiaper.PenetrationTimeAdditionFirst / counter;
+            penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionSecond = tempBabyDiaper.PenetrationTimeAdditionSecond / counter;
+            penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionThird = tempBabyDiaper.PenetrationTimeAdditionThird / counter;
+            penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionFourth = tempBabyDiaper.PenetrationTimeAdditionFourth / counter;
+            penetrationTestAvg.BabyDiaperTestValue.PenetrationRwType = tempBabyDiaper.PenetrationRwType;
+            return penetrationTestAvg;
+        }
+
+        private static TestValue UpdatePenetrationStDev(TestSheet testSheet, TestValue penetrationTestAvg, TestValue penetrationTestStDev)
+        {
+            var tempBabyDiaper = new BabyDiaperTestValue();
+            var counter = 0;
+            foreach (
+                var testValue in
+                testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention)
+            )
+            {
+                tempBabyDiaper.WeightDiaperDry += Math.Pow(testValue.BabyDiaperTestValue.WeightDiaperDry - penetrationTestAvg.BabyDiaperTestValue.WeightDiaperDry, 2);
+                tempBabyDiaper.PenetrationTimeAdditionFirst += Math.Pow(testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst - penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionFirst, 2);
+                tempBabyDiaper.PenetrationTimeAdditionSecond += Math.Pow(testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond - penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionSecond, 2);
+                tempBabyDiaper.PenetrationTimeAdditionThird += Math.Pow(testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird - penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionThird, 2);
+                tempBabyDiaper.PenetrationTimeAdditionFourth += Math.Pow(testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth - penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionFourth, 2);
+                counter++;
+            }
+            if (counter == 0)
+                counter = 1;
+            penetrationTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionFirst / counter);
+            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionSecond / counter);
+            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionThird / counter);
+            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionFourth / counter);
+            return penetrationTestStDev;
         }
 
         #endregion

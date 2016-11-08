@@ -96,7 +96,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Save( BabyDiaperRewetEditViewModel viewModel )
         {
-            var savedModel = new TestValue { TestSheetRefId = 1 }; //BabyDiaperRetentionService.Save(viewModel);
+            var savedModel = BabyDiaperRewetService.Save(viewModel);
             return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
         }
 
