@@ -138,6 +138,12 @@ namespace Intranet.Labor.Model.labor
         public Double PenetrationTimeAdditionFourth { get; set; }
 
         /// <summary>
+        ///     Gets or sets the RW of the Penetration test
+        /// </summary>
+        /// <value>the rw type of the penetration test</value>
+        public RwType? PenetrationRwType { get; set; }
+
+        /// <summary>
         ///     Gets or sets the test type of the baby diaper test value
         /// </summary>
         /// <value>the test type of the baby diaper test value</value>
