@@ -70,6 +70,16 @@ namespace Intranet.Labor.Model
         /// </summary>
         public Double MaxPenetrationAfter4Time { get; set; }
 
+        /// <summary>
+        /// Gets or sets the product name
+        /// </summary>
+        public String ProductName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the size name
+        /// </summary>
+        public String SizeName { get; set; }
+
         #endregion
     }
 }

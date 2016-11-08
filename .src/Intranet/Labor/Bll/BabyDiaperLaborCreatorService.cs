@@ -46,7 +46,7 @@ namespace Intranet.Labor.Bll
         ///     Get the labor creator view model for a specific id.
         /// </summary>
         /// <returns>the labor creator view model</returns>
-        public LaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
+        public BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
         {
             var testSheet = BabyDiaperLaborCreatorBll.getTestSheetForId( testSheetId );
             var babydiaper = testSheet.TestValues.ToList()
@@ -63,7 +63,7 @@ namespace Intranet.Labor.Bll
             var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection( babydiaper );
             var penetrationTimeAverage = Helper.ToPenetrationTimeAverage( babydiaper );
             var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation( babydiaper );
-            var vm = new LaborCreatorViewModel
+            var vm = new BabyDiaperLaborCreatorViewModel
             {
                 Producer = "Intigena",
                 Shift = testSheet.ShiftType.ToFriendlyString(),
@@ -81,7 +81,8 @@ namespace Intranet.Labor.Bll
                 PenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
                 PenetrationTimeAverage = penetrationTimeAverage,
                 WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
-                WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper)
+                WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
+                TestSheetId = testSheetId
             };
             return vm;
         }

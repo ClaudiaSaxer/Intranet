@@ -6,7 +6,7 @@ namespace Intranet.Labor.ViewModel
     /// <summary>
     ///     Class representing the view model for the labor creator
     /// </summary>
-    public class LaborCreatorViewModel
+    public class BabyDiaperLaborCreatorViewModel
     {
         #region Properties
 
@@ -111,6 +111,12 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the standard deviation of all tests</value>
         public Double WeightStandardDeviationAll { get; set; }
+
+        /// <summary>
+        /// Gets or sets the id for the test sheet
+        /// </summary>
+        /// <value>the testsheet id</value>
+        public Int32 TestSheetId { get; set; }
         #endregion
     }
 }
