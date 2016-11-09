@@ -86,6 +86,26 @@ namespace Intranet.Web.Test.Areas.Labor.Controllers
         }
 
         /// <summary>
+        ///     Tests if the returned view is the right view
+        /// </summary>
+        [Fact]
+        public void CreateReturnsCorrectViewTest()
+        {
+            var viewModel = new BabyDiaperRetentionEditViewModel
+            {
+                TestValueId = -1,
+                TestSheetId = 5,
+            };
+            var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionService(viewModel);
+            var controller = new BabyDiaperRetentionController(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionService = babyDiaperRetentionService
+            };
+            var result = controller.Create(5) as ViewResult;
+            Assert.Equal("Edit", result?.ViewName);
+        }
+
+        /// <summary>
         ///     Tests if an call for Edit with no Id (or id = 0) retunrs an HttpNotFoundResult
         /// </summary>
         [Fact]
@@ -119,6 +139,26 @@ namespace Intranet.Web.Test.Areas.Labor.Controllers
             var result = controller.Edit(5) as ViewResult;
             var newViewModel = (BabyDiaperRetentionEditViewModel)result?.ViewData.Model;
             Assert.Equal(viewModel, newViewModel);
+        }
+
+        /// <summary>
+        ///     Tests if the returned view is the right view
+        /// </summary>
+        [Fact]
+        public void EditReturnsCorrectViewTest()
+        {
+            var viewModel = new BabyDiaperRetentionEditViewModel
+            {
+                TestValueId = -1,
+                TestSheetId = 5,
+            };
+            var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionService(viewModel);
+            var controller = new BabyDiaperRetentionController(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionService = babyDiaperRetentionService
+            };
+            var result = controller.Edit(5) as ViewResult;
+            Assert.Equal("Edit", result?.ViewName);
         }
     }
 }
