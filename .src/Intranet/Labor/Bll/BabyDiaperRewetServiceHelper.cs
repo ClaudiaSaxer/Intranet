@@ -210,8 +210,9 @@ namespace Intranet.Labor.Bll
         private static RwType GetPenetrationRwType( Double value, ProductionOrder productOrder )
             => productOrder.Article.MaxPenetrationAfter4Time >= value ? RwType.Ok : RwType.Worse;
 
-        private static TestValue UpdateRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
+        private TestValue UpdateRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
         {
+            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { Rewet140Rw = RwType.Ok, Rewet210Rw = RwType.Ok };
             var counter = 0;
             foreach (
@@ -228,13 +229,18 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.Rewet210Value += testValue.BabyDiaperTestValue.Rewet210Value;
                 tempBabyDiaper.StrikeTroughValue += testValue.BabyDiaperTestValue.StrikeTroughValue;
                 tempBabyDiaper.DistributionOfTheStrikeTrough += testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough;
-                //TODO IF AVG IS WORSE
                 if ( testValue.BabyDiaperTestValue.Rewet140Rw == RwType.Worse )
                     tempBabyDiaper.Rewet140Rw = RwType.SomethingWorse;
+                if (GetRewet140RwType(tempBabyDiaper.Rewet140Value, productionOrder) == RwType.Worse)
+                    tempBabyDiaper.Rewet140Rw = RwType.Worse;
                 if ( testValue.BabyDiaperTestValue.Rewet210Rw == RwType.Worse )
                     tempBabyDiaper.Rewet210Rw = RwType.SomethingWorse;
+                if (GetRewet210RwType(tempBabyDiaper.Rewet210Value, productionOrder) == RwType.Worse)
+                    tempBabyDiaper.Rewet210Rw = RwType.Worse;
                 if ( testValue.BabyDiaperTestValue.PenetrationRwType == RwType.Worse )
                     tempBabyDiaper.PenetrationRwType = RwType.SomethingWorse;
+                if (GetPenetrationRwType(tempBabyDiaper.PenetrationTimeAdditionFourth, productionOrder) == RwType.Worse)
+                    tempBabyDiaper.PenetrationRwType = RwType.Worse;
                 counter++;
             }
             if ( counter == 0 )
@@ -281,8 +287,9 @@ namespace Intranet.Labor.Bll
             return rewetTestStDev;
         }
 
-        private static TestValue UpdatePenetrationAvg( TestSheet testSheet, TestValue penetrationTestAvg )
+        private TestValue UpdatePenetrationAvg( TestSheet testSheet, TestValue penetrationTestAvg )
         {
+            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { PenetrationRwType = RwType.Ok };
             var counter = 0;
             foreach (
@@ -296,9 +303,10 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.PenetrationTimeAdditionSecond += testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond;
                 tempBabyDiaper.PenetrationTimeAdditionThird += testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird;
                 tempBabyDiaper.PenetrationTimeAdditionFourth += testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth;
-                //TODO IF AVG IS WORSE
                 if ( testValue.BabyDiaperTestValue.PenetrationRwType == RwType.Worse )
                     tempBabyDiaper.PenetrationRwType = RwType.SomethingWorse;
+                if(GetPenetrationRwType(tempBabyDiaper.PenetrationTimeAdditionFourth,productionOrder) == RwType.Worse)
+                    tempBabyDiaper.PenetrationRwType = RwType.Worse;
                 counter++;
             }
             if ( counter == 0 )

@@ -175,8 +175,9 @@ namespace Intranet.Labor.Bll
             return value >= productOrder.Article.MaxRetention ? RwType.Better : RwType.Ok;
         }
 
-        private static TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
+        private TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
+            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
             var counter = 0;
             foreach (
@@ -188,9 +189,10 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.RetentionWetWeight += testValue.BabyDiaperTestValue.RetentionWetWeight;
                 tempBabyDiaper.RetentionAfterZentrifugeValue += testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue;
                 tempBabyDiaper.RetentionAfterZentrifugePercent += testValue.BabyDiaperTestValue.RetentionAfterZentrifugePercent;
-                //TODO IF AVG IS WORSE
                 if ( testValue.BabyDiaperTestValue.RetentionRw == RwType.Worse )
                     tempBabyDiaper.RetentionRw = RwType.SomethingWorse;
+                if (GetRetentionRwType(tempBabyDiaper.RetentionAfterZentrifugeValue, productionOrder) == RwType.Worse)
+                    tempBabyDiaper.RetentionRw = RwType.Worse;
                 tempBabyDiaper.SapGHoewiValue += testValue.BabyDiaperTestValue.SapGHoewiValue;
                 counter++;
             }
