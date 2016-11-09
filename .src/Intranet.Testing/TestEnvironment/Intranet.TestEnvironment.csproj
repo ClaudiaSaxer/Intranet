@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockHelperLaborControllerService.cs" />
     <Compile Include="MockHelperService.cs" />
     <Compile Include="MockHelperRoles.cs" />
     <Compile Include="MockHelperBll.cs" />
@@ -79,6 +80,14 @@
     <ProjectReference Include="..\..\Intranet\Definitions\Intranet.Definition.csproj">
       <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
       <Name>Intranet.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Labor\Definitions\Intranet.Labor.Definition.csproj">
+      <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
+      <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Intranet\ViewModel\Intranet.ViewModel.csproj">
       <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
