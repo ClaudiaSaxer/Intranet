@@ -287,5 +287,76 @@ namespace Intranet.Labor.Bll.Test
             Assert.Equal(4, actual.PenetrationTime4);
             Assert.Equal(2, actual.NoteCodes.ToList().Count);
         }
+
+        /// <summary>
+        ///     Test the success of saving
+        /// </summary>
+        [Fact]
+        public void SaveSuccessTest()
+        {
+            var testValue = new TestValue();
+
+            var babyDiaperRewetServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                    testValue
+                );
+
+            var target = new BabyDiaperRewetService(new NLogLoggerFactory())
+            {
+                BabyDiaperRewetServiceHelper = babyDiaperRewetServiceHelper
+            };
+
+            var actual = target.Save(new BabyDiaperRewetEditViewModel());
+            Assert.Equal(testValue, actual);
+        }
+
+        /// <summary>
+        ///     Test the failure of saving
+        /// </summary>
+        [Fact]
+        public void SaveFailTest()
+        {
+            var testValue = new TestValue();
+
+            var babyDiaperRewetServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                    testValue
+                );
+
+            var target = new BabyDiaperRewetService(new NLogLoggerFactory())
+            {
+                BabyDiaperRewetServiceHelper = babyDiaperRewetServiceHelper
+            };
+
+            var actual = target.Save(null);
+            Assert.Equal(null, actual);
+        }
+
+        /// <summary>
+        ///     Test Delete
+        /// </summary>
+        [Fact]
+        public void DeleteTest()
+        {
+            var deletedTestValue = new TestValue { TestValueId = 1 };
+
+            var babyDiaperRewetServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                    null
+                );
+            var babyDiaperBll =
+                MockHelperBll.GetBabyDiaperBllForDelete(
+                    deletedTestValue
+                );
+
+            var target = new BabyDiaperRewetService(new NLogLoggerFactory())
+            {
+                BabyDiaperRewetServiceHelper = babyDiaperRewetServiceHelper,
+                BabyDiaperBll = babyDiaperBll
+            };
+
+            var actual = target.Delete(1);
+            Assert.Equal(1, actual.TestValueId);
+        }
     }
 }
