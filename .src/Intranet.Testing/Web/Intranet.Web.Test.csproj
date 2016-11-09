@@ -97,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionControllerTest.cs" />
+    <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetControllerTest.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeControllerTest.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="Controllers\SettingsControllerTest.cs" />

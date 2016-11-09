@@ -15,7 +15,7 @@ using Xunit;
 namespace Intranet.Web.Test.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     A test class for the labor home controller
+    ///     A test class for the babydiaper retention controller
     /// </summary>
     public class BabyDiaperRetentionControllerTest
     {
