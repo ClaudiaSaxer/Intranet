@@ -84,7 +84,7 @@ namespace Intranet.Labor.Bll
                 Logger.Error( "BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!" );
                 return null;
             }
-            if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Rewet )
+            if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Rewet && babyDiapersTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime)
             {
                 Logger.Error( "Requestet test was not an Retention Test. Id " + testValue.TestValueId );
                 return null;
@@ -175,6 +175,7 @@ namespace Intranet.Labor.Bll
             catch ( Exception e )
             {
                 Logger.Error( "Update oder Create new Test Value ist fehlgeschlagen: " + e.Message );
+                testValue = null;
             }
             return testValue;
         }
