@@ -53,5 +53,29 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRewetServiceHelper
+        /// </summary>
+        /// <param name="testValue">testValue returned by update or save new</param>
+        /// <returns>a IBabyDiaperRewetServiceHelper moq</returns>
+        public static IBabyDiaperRewetServiceHelper GetBabyDiaperRewetServiceHelper(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperRewetServiceHelper>
+            {
+                Name = "MockHelper.GetBabyDiaperRewetServiceHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.UpdateRewetTest(It.IsAny<BabyDiaperRewetEditViewModel>()))
+                .Returns(testValue);
+            mock.Setup(x => x.SaveNewRewetTest(It.IsAny<BabyDiaperRewetEditViewModel>()))
+                .Returns(testValue);
+
+            mock.Setup(x => x.UpdateRewetAverageAndStv(It.IsAny<Int32>()))
+                .Returns(new TestSheet());
+
+            return mock.Object;
+        }
     }
 }

@@ -54,7 +54,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             if ( id.IsNull() )
                 return HttpNotFound();
-            var viewModel = BabyDiaperRewetService.GetNewBabyDiapersRetentionEditViewModel( id );
+            var viewModel = BabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel( id );
             if ( viewModel.IsNull() )
                 return new HttpNotFoundResult( "Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht." );
             return View( "Edit", viewModel );
@@ -70,7 +70,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if (id.IsNull())
                 return HttpNotFound();
 
-            var viewModel = BabyDiaperRewetService.GetBabyDiapersRetentionEditViewModel(id);
+            var viewModel = BabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(id);
             if (viewModel.IsNull())
                 return new HttpNotFoundResult("Der Angeforderte Test existiert entweder nicht oder war kein Retention Test.");
             return View("Edit", viewModel);

@@ -25,14 +25,14 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="rewetTestId">The Id of the Babydiaper rewet test which will be edited</param>
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        BabyDiaperRewetEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 rewetTestId );
+        BabyDiaperRewetEditViewModel GetBabyDiaperRewetEditViewModel( Int32 rewetTestId );
 
         /// <summary>
         ///     Gets the BabyDiaperRewetEditViewModel for edit
         /// </summary>
         /// <param name="testSheetId">The Id of the test sheet where the Babydiaper rewet test is for</param>
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        BabyDiaperRewetEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId );
+        BabyDiaperRewetEditViewModel GetNewBabyDiaperRewetEditViewModel( Int32 testSheetId );
 
         /// <summary>
         ///     Saves or updates the BabyDiaperRewetEditViewModel

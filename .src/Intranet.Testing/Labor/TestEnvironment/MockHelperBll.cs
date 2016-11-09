@@ -124,7 +124,7 @@ namespace Intranet.Labor.TestEnvironment
         {
             var mock = new Mock<IBabyDiaperBll>
             {
-                Name = "MockHelper.GetBabyDiaperBll",
+                Name = "MockHelper.GetBabyDiaperBllForDelete",
                 DefaultValue = DefaultValue.Mock
             };
 

@@ -70,7 +70,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="rewetTestId">The Id of the Babydiaper rewet test which will be edited</param>
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        public BabyDiaperRewetEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 rewetTestId )
+        public BabyDiaperRewetEditViewModel GetBabyDiaperRewetEditViewModel( Int32 rewetTestId )
         {
             var testValue = BabyDiaperBll.GetTestValue( rewetTestId );
             if ( testValue.IsNull() )
@@ -121,6 +121,7 @@ namespace Intranet.Labor.Bll
                 PenetrationTime2 = babyDiapersTestValue.PenetrationTimeAdditionSecond,
                 PenetrationTime3 = babyDiapersTestValue.PenetrationTimeAdditionThird,
                 PenetrationTime4 = babyDiapersTestValue.PenetrationTimeAdditionFourth,
+                TestType = babyDiapersTestValue.TestType,
                 Notes = testNotes,
                 NoteCodes = errorCodes
             };
@@ -132,7 +133,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="testSheetId">The Id of the test sheet where the Babydiaper rewet test is for</param>
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        public BabyDiaperRewetEditViewModel GetNewBabyDiapersRetentionEditViewModel( Int32 testSheetId )
+        public BabyDiaperRewetEditViewModel GetNewBabyDiaperRewetEditViewModel( Int32 testSheetId )
         {
             var testSheetInfo = BabyDiaperBll.GetTestSheetInfo( testSheetId );
 
