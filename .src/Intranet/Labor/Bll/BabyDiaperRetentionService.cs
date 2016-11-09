@@ -157,6 +157,7 @@ namespace Intranet.Labor.Bll
             catch (Exception e)
             {
                 Logger.Error("Update oder Create new Test Value ist fehlgeschlagen: " + e.Message);
+                testValue = null;
             }
             return testValue;
         }

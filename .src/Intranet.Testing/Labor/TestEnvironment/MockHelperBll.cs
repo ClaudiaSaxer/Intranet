@@ -83,11 +83,11 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <returns>a IBabyDiaperBll moq</returns>
-        public static IBabyDiaperBll GetBabyDiaperRetentionBll(TestSheet testSheet)
+        public static IBabyDiaperBll GetBabyDiaperBll(TestSheet testSheet)
         {
             var mock = new Mock<IBabyDiaperBll>
             {
-                Name = "MockHelper.GetBabyDiaperRetentionBll",
+                Name = "MockHelper.GetBabyDiaperBll",
                 DefaultValue = DefaultValue.Mock
             };
 
@@ -111,6 +111,25 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns((Int32 testValueId) => testSheet.TestValues.FirstOrDefault(tv => tv.TestValueId == testValueId));
             mock.Setup(x => x.GetTestValue(It.IsNotIn(testValuesId)))
                 .Returns((TestValue) null);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionBll for delete methods
+        /// </summary>
+        /// <param name="testValue">testValue data which would be in the db</param>
+        /// <returns>a IBabyDiaperBll moq</returns>
+        public static IBabyDiaperBll GetBabyDiaperBllForDelete(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperBll>
+            {
+                Name = "MockHelper.GetBabyDiaperBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.DeleteTestValue(It.IsAny<Int32>()))
+                .Returns( testValue );
 
             return mock.Object;
         }

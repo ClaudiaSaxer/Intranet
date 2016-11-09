@@ -27,7 +27,7 @@ namespace Intranet.Labor.Bll.Test
                 CreatedDateTime = new DateTime(2016,5,5)
             };
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     testSheetInDb
                 );
 
@@ -53,7 +53,7 @@ namespace Intranet.Labor.Bll.Test
         public void GetNewBabyDiapersRetentionEditViewModelFromNotExistingTestSheetTest()
         {
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     new TestSheet { TestSheetId = 1}
                 );
 
@@ -88,7 +88,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     testSheetInDb
                 );
 
@@ -121,7 +121,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     testSheetInDb
                 );
 
@@ -156,7 +156,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     testSheetInDb
                 );
 
@@ -198,7 +198,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperRetentionBll(
+                MockHelperBll.GetBabyDiaperBll(
                     testSheetInDb
                 );
 
@@ -226,6 +226,7 @@ namespace Intranet.Labor.Bll.Test
         /// <summary>
         ///     Test the success of saving
         /// </summary>
+        [Fact]
         public void SaveSuccessTest()
         {
             var testValue = new TestValue();
@@ -242,6 +243,55 @@ namespace Intranet.Labor.Bll.Test
 
             var actual = target.Save(new BabyDiaperRetentionEditViewModel());
             Assert.Equal(testValue,actual);
+        }
+
+        /// <summary>
+        ///     Test the failure of saving
+        /// </summary>
+        [Fact]
+        public void SaveFailTest()
+        {
+            var testValue = new TestValue();
+
+            var babyDiaperRetentionServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
+                    testValue
+                );
+
+            var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionServiceHelper = babyDiaperRetentionServiceHelper
+            };
+
+            var actual = target.Save(null);
+            Assert.Equal(null, actual);
+        }
+
+        /// <summary>
+        ///     Test Delete
+        /// </summary>
+        [Fact]
+        public void DeleteTest()
+        {
+            var deletedTestValue = new TestValue {TestValueId = 1};
+
+            var babyDiaperRetentionServiceHelper =
+                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
+                    null
+                );
+            var babyDiaperBll =
+                MockHelperBll.GetBabyDiaperBllForDelete(
+                    deletedTestValue
+                );
+
+            var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionServiceHelper = babyDiaperRetentionServiceHelper,
+                BabyDiaperBll = babyDiaperBll
+            };
+
+            var actual = target.Delete(1);
+            Assert.Equal(1, actual.TestValueId);
         }
     }
 }
