@@ -6147,7 +6147,7 @@
                 output = (~~ (number % 100 / 10) === 1) ? 'e' :
                 (b === 1) ? 'a' :
                 (b === 2) ? 'a' :
-                (b === 3) ? 'e' : 'e';
+                'e';
             return number + output;
         },
         week : {
