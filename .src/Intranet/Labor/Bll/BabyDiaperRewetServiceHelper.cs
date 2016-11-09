@@ -318,7 +318,7 @@ namespace Intranet.Labor.Bll
             var counter = 0;
             foreach (
                 var testValue in
-                testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
+                testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Single && testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime)
             )
             {
                 tempBabyDiaper.WeightDiaperDry += Math.Pow( testValue.BabyDiaperTestValue.WeightDiaperDry - penetrationTestAvg.BabyDiaperTestValue.WeightDiaperDry, 2 );
