@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 using Intranet.TestEnvironment;
 using Intranet.Web.Areas.Labor.Controllers;
@@ -159,6 +160,57 @@ namespace Intranet.Web.Test.Areas.Labor.Controllers
             };
             var result = controller.Edit(5) as ViewResult;
             Assert.Equal("Edit", result?.ViewName);
+        }
+
+
+        /// <summary>
+        ///     Tests of Deleting an Test returns you to the correct view
+        /// </summary>
+        [Fact]
+        public void DeleteTest()
+        {
+            var testVaule = new TestValue
+            {
+                TestValueId = 4,
+                TestSheetRefId = 5
+            };
+            var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionServiceForDeleteAndSave(testVaule);
+            var controller = new BabyDiaperRetentionController(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionService = babyDiaperRetentionService
+            };
+
+            var result = controller.Delete( 4 ) as RedirectToRouteResult;
+            Assert.NotNull( result );
+            Assert.Equal("Edit",result.RouteValues["action"]);
+            Assert.Equal("LaborCreatorBaby", result.RouteValues["controller"]);
+            Assert.Equal("Labor", result.RouteValues["area"]);
+            Assert.Equal(5, result.RouteValues["id"]);
+        }
+
+        /// <summary>
+        ///     Tests of Saving an Test returns you to the correct view
+        /// </summary>
+        [Fact]
+        public void SaveTest()
+        {
+            var testVaule = new TestValue
+            {
+                TestValueId = 4,
+                TestSheetRefId = 5
+            };
+            var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionServiceForDeleteAndSave(testVaule);
+            var controller = new BabyDiaperRetentionController(new NLogLoggerFactory())
+            {
+                BabyDiaperRetentionService = babyDiaperRetentionService
+            };
+
+            var result = controller.Save(new BabyDiaperRetentionEditViewModel()) as RedirectToRouteResult;
+            Assert.NotNull(result);
+            Assert.Equal("Edit", result.RouteValues["action"]);
+            Assert.Equal("LaborCreatorBaby", result.RouteValues["controller"]);
+            Assert.Equal("Labor", result.RouteValues["area"]);
+            Assert.Equal(5, result.RouteValues["id"]);
         }
     }
 }

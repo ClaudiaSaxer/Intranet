@@ -2,6 +2,7 @@
 
 using System;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 using Moq;
 
@@ -51,6 +52,26 @@ namespace Intranet.TestEnvironment
                 .Returns((BabyDiaperRetentionEditViewModel)null);
             mock.Setup(s => s.GetBabyDiapersRetentionEditViewModel(It.Is<Int32>(x => x > 0)))
                 .Returns(viewModel);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     The Mock for the IBabyDiaperRetentionService for delete and Save
+        /// </summary>
+        public static IBabyDiaperRetentionService GetBabyDiaperRetentionServiceForDeleteAndSave(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperRetentionService>
+            {
+                Name = "MockHelperService.GetBabyDiaperRetentionServiceForDeleteAndSave",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(s => s.Delete(It.IsAny<Int32>()))
+                .Returns(testValue);
+
+            mock.Setup(s => s.Save(It.IsAny<BabyDiaperRetentionEditViewModel>()))
+                .Returns(testValue);
 
             return mock.Object;
         }

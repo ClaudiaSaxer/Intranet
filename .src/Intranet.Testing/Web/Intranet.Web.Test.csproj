@@ -47,6 +47,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
@@ -117,6 +118,10 @@
     <ProjectReference Include="..\..\Intranet\Labor\Definitions\Intranet.Labor.Definition.csproj">
       <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
       <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Labor\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
       <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
