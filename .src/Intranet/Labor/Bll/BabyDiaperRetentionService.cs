@@ -52,8 +52,6 @@ namespace Intranet.Labor.Bll
 
         #endregion
 
-        private static String CreateProductionCode( TestSheet testSheetInfo ) => "IT/" + testSheetInfo.MachineNr.Substring(1) + "/" + testSheetInfo.CreatedDateTime.Year.ToString().Substring(2) + "/";
-
         #region Implementation of IBabyDiaperRetentionService
 
         /// <summary>
