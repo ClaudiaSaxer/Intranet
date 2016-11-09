@@ -1,5 +1,6 @@
 ﻿#region Usings
 
+using System;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Moq;
@@ -26,6 +27,30 @@ namespace Intranet.TestEnvironment
 
             mock.Setup( laborHomeService => laborHomeService.GetLaborHomeViewModel() )
                 .Returns( viewModel );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     The Mock for the IBabyDiaperRetentionService
+        /// </summary>
+        public static IBabyDiaperRetentionService GetBabyDiaperRetentionService(BabyDiaperRetentionEditViewModel viewModel)
+        {
+            var mock = new Mock<IBabyDiaperRetentionService>
+            {
+                Name = "MockHelperService.GetBabyDiaperRetentionService",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(s => s.GetNewBabyDiapersRetentionEditViewModel(0))
+                .Returns((BabyDiaperRetentionEditViewModel)null);
+            mock.Setup(s => s.GetNewBabyDiapersRetentionEditViewModel(It.Is<Int32>(x => x > 0)))
+                .Returns(viewModel);
+
+            mock.Setup(s => s.GetBabyDiapersRetentionEditViewModel(0))
+                .Returns((BabyDiaperRetentionEditViewModel)null);
+            mock.Setup(s => s.GetBabyDiapersRetentionEditViewModel(It.Is<Int32>(x => x > 0)))
+                .Returns(viewModel);
 
             return mock.Object;
         }
