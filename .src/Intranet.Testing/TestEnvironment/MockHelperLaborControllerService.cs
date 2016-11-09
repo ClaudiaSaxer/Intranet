@@ -75,5 +75,49 @@ namespace Intranet.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     The Mock for the IBabyDiaperRetentionService
+        /// </summary>
+        public static IBabyDiaperRewetService GetBabyDiaperRewetService(BabyDiaperRewetEditViewModel viewModel)
+        {
+            var mock = new Mock<IBabyDiaperRewetService>
+            {
+                Name = "MockHelperService.GetBabyDiaperRewetService",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(s => s.GetNewBabyDiaperRewetEditViewModel(0))
+                .Returns((BabyDiaperRewetEditViewModel)null);
+            mock.Setup(s => s.GetNewBabyDiaperRewetEditViewModel(It.Is<Int32>(x => x > 0)))
+                .Returns(viewModel);
+
+            mock.Setup(s => s.GetBabyDiaperRewetEditViewModel(0))
+                .Returns((BabyDiaperRewetEditViewModel)null);
+            mock.Setup(s => s.GetBabyDiaperRewetEditViewModel(It.Is<Int32>(x => x > 0)))
+                .Returns(viewModel);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     The Mock for the IBabyDiaperRewetService for delete and Save
+        /// </summary>
+        public static IBabyDiaperRewetService GetBabyDiaperRewetServiceForDeleteAndSave(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperRewetService>
+            {
+                Name = "MockHelperService.GetBabyDiaperRewetServiceForDeleteAndSave",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(s => s.Delete(It.IsAny<Int32>()))
+                .Returns(testValue);
+
+            mock.Setup(s => s.Save(It.IsAny<BabyDiaperRewetEditViewModel>()))
+                .Returns(testValue);
+
+            return mock.Object;
+        }
     }
 }
