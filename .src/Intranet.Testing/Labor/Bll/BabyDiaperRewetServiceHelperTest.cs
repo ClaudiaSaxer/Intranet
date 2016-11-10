@@ -332,7 +332,176 @@ namespace Intranet.Labor.Bll.Test
 
         #region UpdateRewetAverageAndStv Tests
 
+        /// <summary>
+        ///     Tests when there are no tests, the avg and dev values are default
+        /// </summary>
+        [Fact]
+        public void UpdateRewetAverageAndStvNoTestsTest()
+        {
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
 
+            var babyDiaperBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+
+            var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
+            {
+                BabyDiaperBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateRewetAverageAndStv(1);
+
+            var actualRewetAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet);
+            Assert.NotNull(actualRewetAvg);
+            Assert.Equal(0, actualRewetAvg.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetAvg.BabyDiaperTestValue.Rewet140Value);
+            Assert.Equal(0, actualRewetAvg.BabyDiaperTestValue.Rewet210Value);
+            Assert.Equal(0, actualRewetAvg.BabyDiaperTestValue.StrikeTroughValue);
+            Assert.Equal(0, actualRewetAvg.BabyDiaperTestValue.DistributionOfTheStrikeTrough);
+            Assert.Equal(RwType.Ok, actualRewetAvg.BabyDiaperTestValue.Rewet140Rw);
+            Assert.Equal(RwType.Ok, actualRewetAvg.BabyDiaperTestValue.Rewet210Rw);
+
+            var actualRewetStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet);
+            Assert.NotNull(actualRewetStDev);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.Rewet140Value);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.Rewet210Value);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.StrikeTroughValue);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough);
+
+            var actualRewetAndPenetrationAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime);
+            Assert.NotNull(actualRewetAndPenetrationAvg);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionFirst);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionSecond);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionThird);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionFourth);
+            Assert.Equal(RwType.Ok, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationRwType);
+
+            var actualRewetAndPenetrationStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime);
+            Assert.NotNull(actualRewetAndPenetrationStDev);
+            Assert.Equal(0, actualRewetAndPenetrationStDev.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst);
+            Assert.Equal(0, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond);
+            Assert.Equal(0, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird);
+            Assert.Equal(0, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth);
+        }
+
+        /// <summary>
+        ///     Tests when there is only one test, the avg values are equal the test values
+        /// </summary>
+        [Fact]
+        public void UpdateRewetAverageAndStvOneTestAvgTest()
+        {
+            var onlyTestValue = new TestValue
+            {
+                TestValueType = TestValueType.Single,
+                ArticleTestType = ArticleType.BabyDiaper,
+                BabyDiaperTestValue = new BabyDiaperTestValue
+                {
+                    TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,
+                    WeightDiaperDry = 30.1,
+                    Rewet140Value = 0,
+                    Rewet210Value = 0.1,
+                    StrikeTroughValue = 0.3,
+                    DistributionOfTheStrikeTrough = 250,
+                    PenetrationTimeAdditionFirst = 1,
+                    PenetrationTimeAdditionSecond = 2,
+                    PenetrationTimeAdditionThird = 3,
+                    PenetrationTimeAdditionFourth = 4,
+                    Rewet140Rw = RwType.Ok,
+                    Rewet210Rw = RwType.Ok,
+                    PenetrationRwType = RwType.Ok
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            testSheetDataFromDb.TestValues.Add(onlyTestValue);
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var babyDiaperBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+
+            var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
+            {
+                BabyDiaperBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateRewetAverageAndStv(1);
+
+            var actualRewetAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet);
+            Assert.NotNull(actualRewetAvg);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.WeightDiaperDry, actualRewetAvg.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.Rewet140Value, actualRewetAvg.BabyDiaperTestValue.Rewet140Value);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.Rewet210Value, actualRewetAvg.BabyDiaperTestValue.Rewet210Value);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.StrikeTroughValue, actualRewetAvg.BabyDiaperTestValue.StrikeTroughValue);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough, actualRewetAvg.BabyDiaperTestValue.DistributionOfTheStrikeTrough);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.Rewet140Rw, actualRewetAvg.BabyDiaperTestValue.Rewet140Rw);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.Rewet210Rw, actualRewetAvg.BabyDiaperTestValue.Rewet210Rw);
+
+            var actualRewetAndPenetrationStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime);
+            Assert.NotNull(actualRewetAndPenetrationStDev);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.WeightDiaperDry, actualRewetAndPenetrationStDev.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.PenetrationTimeAdditionThird, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth);
+            Assert.Equal(onlyTestValue.BabyDiaperTestValue.PenetrationRwType, actualRewetAndPenetrationStDev.BabyDiaperTestValue.PenetrationRwType);
+        }
+
+        /// <summary>
+        ///     Tests when there is only one test, the stdev values are the default values
+        /// </summary>
+        [Fact]
+        public void UpdateRewetAverageAndStvOneTestStDevTest()
+        {
+            var onlyTestValue = new TestValue
+            {
+                TestValueType = TestValueType.Single,
+                ArticleTestType = ArticleType.BabyDiaper,
+                BabyDiaperTestValue = new BabyDiaperTestValue
+                {
+                    TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,
+                    WeightDiaperDry = 30.1,
+                    Rewet140Value = 0,
+                    Rewet210Value = 0.1,
+                    StrikeTroughValue = 0.3,
+                    DistributionOfTheStrikeTrough = 250,
+                    PenetrationTimeAdditionFirst = 1,
+                    PenetrationTimeAdditionSecond = 2,
+                    PenetrationTimeAdditionThird = 3,
+                    PenetrationTimeAdditionFourth = 4,
+                    Rewet140Rw = RwType.Ok,
+                    Rewet210Rw = RwType.Ok,
+                    PenetrationRwType = RwType.Ok
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            testSheetDataFromDb.TestValues.Add(onlyTestValue);
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var babyDiaperBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+
+            var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
+            {
+                BabyDiaperBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateRewetAverageAndStv(1);
+
+            var actualRewetStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet);
+            Assert.NotNull(actualRewetStDev);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.Rewet140Value);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.Rewet210Value);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.StrikeTroughValue);
+            Assert.Equal(0, actualRewetStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough);
+
+            var actualRewetAndPenetrationAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime);
+            Assert.NotNull(actualRewetAndPenetrationAvg);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionFirst);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionSecond);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionThird);
+            Assert.Equal(0, actualRewetAndPenetrationAvg.BabyDiaperTestValue.PenetrationTimeAdditionFourth);
+        }
 
         #endregion
     }
