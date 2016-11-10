@@ -81,6 +81,8 @@
     <Compile Include="BabyDiaperRewetServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRewetServiceTest.cs" />
     <Compile Include="BabyDiaperServiceHelperTest.cs" />
+    <Compile Include="LaborCreatorBllTest.cs" />
+    <Compile Include="LaborCreatorServiceTest.cs" />
     <Compile Include="LaborHomeBllTest.cs" />
     <Compile Include="LaborHomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,6 +115,10 @@
     <ProjectReference Include="..\..\..\Intranet\Model\Intranet.Model.csproj">
       <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
       <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Intranet\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
+      <Name>Intranet.ViewModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\TestEnvironment\Intranet.TestEnvironment.csproj">
       <Project>{FD9CEB16-DA47-4DAD-B1AB-7EAA27C3BE13}</Project>

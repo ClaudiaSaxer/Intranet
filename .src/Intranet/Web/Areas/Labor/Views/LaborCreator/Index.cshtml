@@ -11,6 +11,7 @@
 
         @using ( Html.BeginForm( "Edit", "LaborCreator", FormMethod.Post ) )
         {
+            <p>@Model.Message</p>
         
             @Html.AntiForgeryToken()
 

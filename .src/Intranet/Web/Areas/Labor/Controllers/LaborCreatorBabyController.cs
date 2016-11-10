@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
@@ -53,22 +54,25 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Edit( Int32 id = 0 )
         {
             if ( id.IsNull() )
-                return HttpNotFound();
+                return RedirectToAction( "Index",
+                                         new RouteValueDictionary(
+                                             new { controller = "LaborCreator", action = "Index" } ) );
 
             try
             {
                 var laborCreatorView = BabyDiaperLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
-                    return HttpNotFound();
-
+                    return RedirectToAction( "Index",
+                                             new RouteValueDictionary(
+                                                 new { controller = "LaborCreator", action = "Index" } ) );
                 return View( laborCreatorView );
             }
             catch ( Exception e )
             {
                 Logger.Error( e.StackTrace );
 
-                return HttpNotFound();
+                return new HttpNotFoundResult( "Bitte wenden Sie sich an den Administrator." );
             }
         }
     }

@@ -48,7 +48,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var testSheet = LaborCreatorService.GetTestSheetId( vm.ChosenPo );
             if ( testSheet == null )
-                return Index();
+                return Home( "Fertigungsnummer wurde nicht gefunden." );
 
             var controllerForType = testSheet.ArticleType == ArticleType.BabyDiaper
                 ? "LaborCreatorBaby"
@@ -63,7 +63,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              id = testSheet.TestSheetId
                                          } ) );
         }
-
         /// <summary>
         ///     Loads the index page of the LaborCreatorController
         /// </summary>
@@ -71,5 +70,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public
             ActionResult Index()
             => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
+
+        /// <summary>
+        ///     Loads the index page of the LaborCreatorController
+        ///     with a user message
+        /// </summary>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public
+          ActionResult Home( String message  = "")
+        {
+            var vm = LaborCreatorService.GetLaborCreatorViewModel();
+            vm.Message = message;
+            return View( "Index", vm );
+        }
     }
 }
