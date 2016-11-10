@@ -82,7 +82,7 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSaving(testSheetDataFromDb, productionOrderDataFromDb);
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
             var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
             var target = new BabyDiaperRetentionServiceHelper( new NLogLoggerFactory() )
@@ -127,7 +127,7 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSaving(testSheetDataFromDb, productionOrderDataFromDb);
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
             var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
@@ -176,7 +176,7 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSaving(testSheetDataFromDb, productionOrderDataFromDb);
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
             var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
@@ -221,7 +221,7 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSaving(testSheetDataFromDb, productionOrderDataFromDb);
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
             var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
@@ -266,7 +266,7 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSaving(testSheetDataFromDb, productionOrderDataFromDb);
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
             var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
@@ -282,6 +282,81 @@ namespace Intranet.Labor.Bll.Test
 
         #endregion
 
+        #region UpdateRetentionTest Tests
 
+        /// <summary>
+        ///     Tests if Updating an Test returns null if old test not exist
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionTestFailTest()
+        {
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(null, null, null);
+            var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                BabyDiaperBll = babyDiaperRetentionBll,
+            };
+
+            var actual = target.UpdateRetentionTest(new BabyDiaperRetentionEditViewModel());
+
+            Assert.Equal(null, actual);
+        }
+
+        /// <summary>
+        ///     Tests if Updating an existing Retention Test works
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionTestBaseTest()
+        {
+            var viewModel = new BabyDiaperRetentionEditViewModel
+            {
+                TestPerson = "Hans",
+                TestValueId = 2,
+                TestSheetId = 1,
+                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeDay = 123,
+                DiaperWeight = 30.1,
+                WeightRetentionWet = 399.8,
+                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
+            };
+            var testValueReturnedFromDb = new TestValue
+            {
+                TestSheetRefId = 1,
+                TestValueId = 2,
+                CreatedDateTime = new DateTime(2016, 1, 2),
+                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedPerson = "Fritz",
+                LastEditedPerson = "Fritz",
+                DayInYearOfArticleCreation = 123,
+                ArticleTestType = ArticleType.BabyDiaper,
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } },
+                BabyDiaperTestValue = new BabyDiaperTestValue
+                {
+                    DiaperCreatedTime = new TimeSpan(11,11,0),
+                    WeightDiaperDry = 15,
+                    RetentionWetWeight = 2,
+                    TestType = TestTypeBabyDiaper.Retention
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+
+            var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                BabyDiaperBll = babyDiaperRetentionBll,
+            };
+
+            var actual = target.UpdateRetentionTest(viewModel);
+
+            Assert.Equal(testValueReturnedFromDb, actual);
+            Assert.Equal(30.1,actual.BabyDiaperTestValue.WeightDiaperDry);
+            Assert.Equal(399.8, actual.BabyDiaperTestValue.RetentionWetWeight);
+            Assert.Equal("Hans",actual.LastEditedPerson);
+            Assert.Equal("Fritz", actual.CreatedPerson);
+            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+        }
+
+        #endregion
     }
 }

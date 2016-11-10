@@ -80,6 +80,11 @@ namespace Intranet.Labor.Bll
         public TestValue UpdateRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
             var testValue = BabyDiaperBll.GetTestValue( viewModel.TestValueId );
+            if ( testValue.IsNull() || testValue.ArticleTestType != ArticleType.BabyDiaper || testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.Retention)
+            {
+                Logger.Error("Old Test not found in DB");
+                return null;
+            }
             testValue.LastEditedDateTime = DateTime.Now;
             testValue.LastEditedPerson = viewModel.TestPerson;
             testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;

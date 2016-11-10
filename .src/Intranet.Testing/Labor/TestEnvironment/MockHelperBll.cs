@@ -139,21 +139,26 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <param name="productionOrder">testSheet data which would be in the db</param>
+        /// <param name="testValue">testValue data which would be in the db</param>
         /// <returns>a IBabyDiaperBll moq</returns>
-        public static IBabyDiaperBll GetBabyDiaperBllForSaving(TestSheet testSheet, ProductionOrder productionOrder)
+        public static IBabyDiaperBll GetBabyDiaperBllForSavingAndUpdating(TestSheet testSheet, ProductionOrder productionOrder, TestValue testValue)
         {
             var mock = new Mock<IBabyDiaperBll>
             {
-                Name = "MockHelper.GetBabyDiaperBllForSaving",
+                Name = "MockHelper.GetBabyDiaperBllForSavingAndUpdating",
                 DefaultValue = DefaultValue.Mock
             };
 
             mock.Setup(x => x.SaveNewTestValue(It.IsAny<TestValue>()))
-                .Returns((TestValue testValue) => testValue );
+                .Returns((TestValue tValue) => tValue);
+            mock.Setup(x => x.UpdateTestValue(It.IsAny<TestValue>()))
+                .Returns((TestValue tValue) => tValue);
             mock.Setup( x => x.GetTestSheetInfo( It.IsAny<Int32>() ) )
                 .Returns( testSheet );
             mock.Setup(x => x.GetProductionOrder(It.IsAny<String>()))
                 .Returns(productionOrder);
+            mock.Setup(x => x.GetTestValue(It.IsAny<Int32>()))
+                .Returns(testValue);
 
             return mock.Object;
         }
