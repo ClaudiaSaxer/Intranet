@@ -248,7 +248,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
             const String expected = "IT/11/16/158/03:01";
-            var actual = serviceHelper.GenerateProdCode("M11", 2016, 158, new TimeSpan( 3, 1, 0 ) );
+            var actual = serviceHelper.GenerateProdCode( "M11", 2016, 158, new TimeSpan( 3, 1, 0 ) );
 
             actual.Should()
                   .Be( expected );
