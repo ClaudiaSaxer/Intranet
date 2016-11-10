@@ -159,6 +159,8 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns(productionOrder);
             mock.Setup(x => x.GetTestValue(It.IsAny<Int32>()))
                 .Returns(testValue);
+            mock.Setup( x => x.UpdateTestSheet() )
+                .Returns( 0 );
 
             return mock.Object;
         }
