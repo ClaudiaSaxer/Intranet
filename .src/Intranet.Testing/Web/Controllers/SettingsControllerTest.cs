@@ -85,9 +85,7 @@ namespace Intranet.Web.Test.Controllers
                 SettingsService = settingsService
             };
             var result = settingsController.Update( null );
-            Assert.Equal( "ViewResult",
-                          result.GetType()
-                                .Name );
+            Assert.IsType(typeof(HttpNotFoundResult), result);
         }
     }
 }

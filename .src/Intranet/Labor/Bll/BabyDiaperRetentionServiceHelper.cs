@@ -68,7 +68,7 @@ namespace Intranet.Labor.Bll
             babyDiaperTestValue = CalculateBabyDiaperRetentionValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
-            BabyDiaperBll.SaveNewTestValue( testValue );
+            testValue = BabyDiaperBll.SaveNewTestValue( testValue );
             return testValue;
         }
 

@@ -134,5 +134,29 @@ namespace Intranet.Labor.TestEnvironment
             return mock.Object;
         }
 
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionBll for Save methods
+        /// </summary>
+        /// <param name="testSheet">testSheet data which would be in the db</param>
+        /// <param name="productionOrder">testSheet data which would be in the db</param>
+        /// <returns>a IBabyDiaperBll moq</returns>
+        public static IBabyDiaperBll GetBabyDiaperBllForSaving(TestSheet testSheet, ProductionOrder productionOrder)
+        {
+            var mock = new Mock<IBabyDiaperBll>
+            {
+                Name = "MockHelper.GetBabyDiaperBllForSaving",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.SaveNewTestValue(It.IsAny<TestValue>()))
+                .Returns((TestValue testValue) => testValue );
+            mock.Setup( x => x.GetTestSheetInfo( It.IsAny<Int32>() ) )
+                .Returns( testSheet );
+            mock.Setup(x => x.GetProductionOrder(It.IsAny<String>()))
+                .Returns(productionOrder);
+
+            return mock.Object;
+        }
+
     }
 }

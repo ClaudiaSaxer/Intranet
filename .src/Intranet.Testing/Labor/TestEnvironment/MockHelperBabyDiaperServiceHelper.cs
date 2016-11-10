@@ -31,6 +31,24 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
+        ///     A mock for BabyDiaperServiceHelper
+        /// </summary>
+        /// <param name="testValue">testValue returned by CreateNewTestValue</param>
+        /// <returns>a IBabyDiaperServiceHelper moq</returns>
+        public static IBabyDiaperServiceHelper GetBabyDiaperServiceHelperCreateNewTestValue(TestValue testValue)
+        {
+            var mock = new Mock<IBabyDiaperServiceHelper>
+            {
+                Name = "MockHelper.GetBabyDiaperServiceHelperCreateNewTestValue",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.CreateNewTestValue(It.IsAny<Int32>(),It.IsAny<String>(),It.IsAny<Int32>(),It.IsAny<IList<TestNote>>()))
+                .Returns(testValue);
+            return mock.Object;
+        }
+
+        /// <summary>
         ///     A mock for BabyDiaperRetentionServiceHelper
         /// </summary>
         /// <param name="testValue">testValue returned by update or save new</param>
