@@ -28,7 +28,7 @@ namespace Intranet.Labor.Bll.Test
             const String sizeName = "Huge";
             var createdDateTime = new DateTime( 2016, 1, 1 );
 
-            var laborCreatorBllMoq = MockHelperBll.GetLaborCreatorBll(
+            var laborCreatorBllMoq = MockHelperBll.GetBabyDiaperLaborCreatorBll(
                 new TestSheet
                 {
                     ShiftType = shiftType,

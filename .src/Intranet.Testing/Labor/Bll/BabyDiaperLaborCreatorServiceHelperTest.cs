@@ -18,10 +18,10 @@ namespace Intranet.Labor.Bll.Test
     public class BabyDiaperLaborCreatorServiceHelperTest
     {
         /// <summary>
-        ///     Test Average
+        ///     Test Average 1
         /// </summary>
         [Fact]
-        public void ComputeWeightAverageAllTest()
+        public void ComputeWeightAverageAllTest1()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var actual = serviceHelper.ComputeWeightAverageAll( new List<TestValue>
@@ -53,35 +53,145 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Test Average
+        ///     Test Average with average and standard deviation
         /// </summary>
         [Fact]
-        public void ComputeWeightStandardDeviationAllTest()
+        public void ComputeWeightAverageAllTest2()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var actual = serviceHelper.ComputeWeightStandardDeviationAll( new List<TestValue>
-                                                                          {
-                                                                              new TestValue
-                                                                              {
-                                                                                  ArticleTestType = ArticleType.BabyDiaper,
-                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 }
-                                                                              },
-                                                                              new TestValue
-                                                                              {
-                                                                                  ArticleTestType = ArticleType.BabyDiaper,
-                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 }
-                                                                              },
-                                                                              new TestValue
-                                                                              {
-                                                                                  ArticleTestType = ArticleType.BabyDiaper,
-                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 }
-                                                                              },
-                                                                              new TestValue
-                                                                              {
-                                                                                  ArticleTestType = ArticleType.BabyDiaper,
-                                                                                  BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
-                                                                              }
-                                                                          } );
+            var actual = serviceHelper.ComputeWeightAverageAll(
+                new List<TestValue>
+                {
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        TestValueType = TestValueType.Average,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        TestValueType = TestValueType.StandardDeviation,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 }
+                    }
+                } );
+            const Double expected = 3.5;
+            actual.Should()
+                  .Be( expected );
+        }
+
+        /// <summary>
+        ///     Test Standard Deviation
+        /// </summary>
+        [Fact]
+        public void ComputeWeightStandardDeviationAllTest1()
+        {
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var actual = serviceHelper.ComputeWeightStandardDeviationAll(
+                new List<TestValue>
+                {
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
+                        TestValueType = TestValueType.Single
+                    }
+                } );
+            const Double expected = 3.1091;
+            var actualRounded = Math.Round( actual, 4 );
+            actualRounded.Should()
+                         .Be( expected );
+        }
+
+        /// <summary>
+        ///     Test Standard Deviation with average and standard deviation test values
+        /// </summary>
+        [Fact]
+        public void ComputeWeightStandardDeviationAllTest2()
+        {
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var actual = serviceHelper.ComputeWeightStandardDeviationAll(
+                new List<TestValue>
+                {
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 3.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 2.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 1.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
+                        TestValueType = TestValueType.Single
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
+                        TestValueType = TestValueType.StandardDeviation
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
+                        TestValueType = TestValueType.Average
+                    }
+                } );
             const Double expected = 3.1091;
             var actualRounded = Math.Round( actual, 4 );
             actualRounded.Should()
@@ -278,9 +388,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyPenetrationTimeAverage(),
-                                                                                                        TestTypeBabyDiaper.RewetAndPenetrationTime,
-                                                                                                        TestValueType.Average ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyPenetrationTimeAverage(),
+                                                                       TestTypeBabyDiaper.RewetAndPenetrationTime,
+                                                                       TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for RewetAndPenetrationTime per Testsheet allowed", ex.Message );
         }
@@ -343,9 +454,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation(),
-                                                                                                        TestTypeBabyDiaper.Retention,
-                                                                                                        TestValueType.StandardDeviation ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation(),
+                                                                       TestTypeBabyDiaper.Retention,
+                                                                       TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for Retention per Testsheet allowed", ex.Message );
         }
@@ -391,9 +503,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation(),
-                                                                                                        TestTypeBabyDiaper.Rewet,
-                                                                                                        TestValueType.StandardDeviation ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetBabyDiaperTestValueForType( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation(),
+                                                                       TestTypeBabyDiaper.Rewet,
+                                                                       TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for Rewet per Testsheet allowed", ex.Message );
         }
@@ -724,7 +837,8 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRetentionStandardDeviation( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation() ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ToRetentionStandardDeviation( BabyDiaperLaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation() ) );
 
             Assert.Equal( "Only one StandardDeviation for Retention per Testsheet allowed", ex.Message );
         }
@@ -936,7 +1050,8 @@ namespace Intranet.Labor.Bll.Test
 
             var actual = serviceHelper.ToRewetTestValue( new BabyDiaperTestValue { WeightDiaperDry = 666, Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
                                                          "test person",
-                                                         "theprodcode",1 );
+                                                         "theprodcode",
+                                                         1 );
 
             actual.ShouldBeEquivalentTo( expected );
         }
@@ -957,7 +1072,7 @@ namespace Intranet.Labor.Bll.Test
                 TestValueId = 1
             };
 
-            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666,1 );
+            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666, 1 );
 
             actual.ShouldBeEquivalentTo( expected );
         }

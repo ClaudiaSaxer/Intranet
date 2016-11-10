@@ -9,7 +9,7 @@ using MockHelperBll = Intranet.Labor.TestEnvironment.MockHelperBll;
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    ///     Test Class for LaborHome
+    ///     Test Class for BabyDiaperLaborHomeBll
     /// </summary>
     public class LaborHomeBllTest
     {
@@ -34,7 +34,7 @@ namespace Intranet.Labor.Bll.Test
                     rolesListQuery.AsQueryable()
                 );
 
-            var target = new LaborHome
+            var target = new BabyDiaperLaborHomeBll
             {
                 RoleRepository = genericRepo
             };
@@ -72,7 +72,7 @@ namespace Intranet.Labor.Bll.Test
                     rolesListQuery.AsQueryable()
                 );
 
-            var target = new LaborHome
+            var target = new BabyDiaperLaborHomeBll
             {
                 RoleRepository = genericRepo
             };
@@ -101,7 +101,7 @@ namespace Intranet.Labor.Bll.Test
                     rolesListQuery.AsQueryable()
                 );
 
-            var target = new LaborHome
+            var target = new BabyDiaperLaborHomeBll
             {
                 RoleRepository = genericRepo
             };
@@ -139,7 +139,7 @@ namespace Intranet.Labor.Bll.Test
                     rolesListQuery.AsQueryable()
                 );
 
-            var target = new LaborHome
+            var target = new BabyDiaperLaborHomeBll
             {
                 RoleRepository = genericRepo
             };

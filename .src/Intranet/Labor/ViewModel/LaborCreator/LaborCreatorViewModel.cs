@@ -31,6 +31,10 @@ namespace Intranet.Labor.ViewModel
         [RegularExpression( @"FA[0-9]*", ErrorMessage = "Fertigungsnummer muss mit FA beginnen und mit Nummern Enden." )]
         public String ChosenPo { get; set; }
 
+        /// <summary>
+        /// Message for User Help Information, Empty if no message available
+        /// </summary>
+        public String Message { get; set; }
 
         #endregion
     }
