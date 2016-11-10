@@ -7,7 +7,6 @@ using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
-using Xunit.Sdk;
 
 namespace Intranet.Labor.Bll.Test
 {
