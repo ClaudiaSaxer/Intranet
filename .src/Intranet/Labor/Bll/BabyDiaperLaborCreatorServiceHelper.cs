@@ -36,7 +36,7 @@ namespace Intranet.Labor.Bll
         public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
         {
             var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
-            return weights.Average();
+            return weights.Count == 0 ? 0 : weights.Average();
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Intranet.Labor.Bll
         public Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValues )
         {
             var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
-            var average = weights.Average();
+            var average = weights.Count == 0 ? 0 : weights.Average();
 
             var sumOfSquaresOfDifferences = weights.Sum( val => ( val - average ) * ( val - average ) );
             var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / ( weights.Count - 1 ) );

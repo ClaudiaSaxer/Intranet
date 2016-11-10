@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
 using Intranet.Labor.Model;
@@ -43,15 +44,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the action result for edit</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( [Bind( Include = "ChosenPo")] LaborCreatorViewModel vm )
+        public ActionResult Edit( [Bind( Include = "ChosenPo" )] LaborCreatorViewModel vm )
         {
             var testSheet = LaborCreatorService.GetTestSheetId( vm.ChosenPo );
             if ( testSheet == null )
-            {
-                var vmnew = LaborCreatorService.GetLaborCreatorViewModel();
-                vmnew.Message = "Fa Nummer nicht gefunden. Bitte eingabe überprüfen und nochmals versuchen.";
-                return View( "Index", vmnew);
-            }
+                return Home( "Fa Nummer nicht gefunden. Bitte eingabe überprüfen und nochmals versuchen." );
 
             var controllerForType = testSheet.ArticleType == ArticleType.BabyDiaper
                 ? "LaborCreatorBaby"
@@ -66,7 +63,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              id = testSheet.TestSheetId
                                          } ) );
         }
-
         /// <summary>
         ///     Loads the index page of the LaborCreatorController
         /// </summary>
@@ -74,5 +70,19 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public
             ActionResult Index()
             => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
+
+        /// <summary>
+        ///     Loads the index page of the LaborCreatorController
+        ///     with a user message
+        /// </summary>
+        /// <returns>The Index View filled with the viewModel</returns>
+        [ChildActionOnly]
+        public
+          ActionResult Home( String message  = "")
+        {
+            var vm = LaborCreatorService.GetLaborCreatorViewModel();
+            vm.Message = message;
+            return View( "Index", vm );
+        }
     }
 }
