@@ -107,7 +107,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var shift = GetCurrentShift();
             if ( shift == null )
                 return null;
-            return TestSheetRepository.Where( sheet => sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
+            return TestSheetRepository.GetAll().Where( sheet => sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
                                       .ToList();
         }
 
@@ -122,7 +122,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var shift = GetCurrentShift();
             if ( shift == null )
                 return null;
-            var testsheet = TestSheetRepository.Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
+            var testsheet = TestSheetRepository.GetAll().Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
                                                .ToList();
             return testsheet.ToList()
                             .Count == 1
@@ -137,14 +137,15 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the initialized testsheet</returns>
         public TestSheet InitTestSheetForFaNr( String faNr )
         {
-            var productionOrder = ProductionOrderRepository.Where( order => order.FaNr == faNr )
-                                                           .FirstOrDefault();
-            var shift = GetCurrentShift();
+            var productionOrder = ProductionOrderRepository.GetAll(  ).FirstOrDefault(order => order.FaNr == faNr);
+
             if ( productionOrder == null )
             {
                 Logger.Error( "Fanr " + faNr + " not found in Production Order" );
                 return null;
             }
+            var shift = GetCurrentShift();
+
             if ( shift == null )
                 return null;
 

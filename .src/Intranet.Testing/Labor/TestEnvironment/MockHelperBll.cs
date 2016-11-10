@@ -21,6 +21,39 @@ namespace Intranet.Labor.TestEnvironment
     /// </summary>
     public static class MockHelperBll
     {
+        /// <summary>
+        ///     A mock that adds test for test sheets Repository
+        /// </summary>
+        /// <param name="testSheet">Test sheet to be added</param>
+        /// <returns>a generic repository for test sheets</returns>
+        public static IGenericRepository<TestSheet> AddTestSheets( TestSheet testSheet )
+        {
+            var mock = new Mock<IGenericRepository<TestSheet>>
+            {
+                Name = "MockHelper.TestSheetRepository",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for production order Repository
+        /// </summary>
+        /// <param name="productionOrders">Queryable production order returned by GetAll</param>
+        /// <returns>a generic repository for production orders</returns>
+        public static IGenericRepository<ProductionOrder> GetAllProductionOrders( IQueryable<ProductionOrder> productionOrders )
+        {
+            var mock = new Mock<IGenericRepository<ProductionOrder>>
+            {
+                Name = "MockHelper.GetAllProductionOrders",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup( x => x.GetAll() )
+                .Returns( productionOrders );
+
+            return mock.Object;
+        }
 
         /// <summary>
         ///     A mock for GenericRepository
@@ -40,25 +73,9 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
-        /// <summary>
-        /// A mock for production order Repository
-        /// </summary>
-        /// <param name="productionOrders">Queryable production order returned by GetAll</param>
-        /// <returns>a generic repository for production orders</returns>
-        public static IGenericRepository<ProductionOrder> GetAllProductionOrders(IQueryable<ProductionOrder> productionOrders)
-        {
-            var mock = new Mock<IGenericRepository<ProductionOrder>>
-            {
-                Name = "MockHelper.GetAllProductionOrders",
-                DefaultValue = DefaultValue.Mock
-            };
-            mock.Setup(x => x.GetAll())
-                .Returns(productionOrders);
 
-            return mock.Object;
-        }
         /// <summary>
-        /// A mock for Shift Shedule Repository
+        ///     A mock for Shift Shedule Repository
         /// </summary>
         /// <param name="shiftSchedules">Queryable Shift Schedules returned by GetAll</param>
         /// <returns>a generic repository for shift schedules</returns>
@@ -72,22 +89,6 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup( x => x.GetAll() )
                 .Returns( shiftSchedules );
 
-            return mock.Object;
-        }
-        /// <summary>
-        /// A mock for test sheets Repository
-        /// </summary>
-        /// <param name="testSheets">Queryable test sheets returned by GetAll</param>
-        /// <returns>a generic repository for test sheets</returns>
-        public static IGenericRepository<TestSheet> GetAllTestSheets( IQueryable<TestSheet> testSheets )
-        {
-            var mock = new Mock<IGenericRepository<TestSheet>>
-            {
-                Name = "MockHelper.GetAllTestSheets",
-                DefaultValue = DefaultValue.Mock
-            };
-            mock.Setup( x => x.GetAll() )
-                .Returns( testSheets );
 
             return mock.Object;
         }
@@ -192,6 +193,27 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
                 .Returns( modules );
 
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for test sheets Repository
+        /// </summary>
+        /// <param name="testSheets">Queryable test sheets returned by GetAll, Or first testsheet returned for Add</param>
+        /// <returns>a generic repository for test sheets</returns>
+        public static IGenericRepository<TestSheet> TestSheetRepository( IQueryable<TestSheet> testSheets )
+        {
+            var mock = new Mock<IGenericRepository<TestSheet>>
+            {
+                Name = "MockHelper.TestSheetRepository",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup( x => x.GetAll() )
+                .Returns( testSheets );
+            mock.Setup( x => x.Add( testSheets.First() ) )
+                .Returns( testSheets.First() );
+            mock.Setup( x => x.SaveChanges() )
+                .Returns( 1 );
             return mock.Object;
         }
     }
