@@ -129,6 +129,11 @@ namespace Intranet.Labor.Bll
         public TestValue UpdateRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
             var testValue = BabyDiaperBll.GetTestValue( viewModel.TestValueId );
+            if (testValue.IsNull() || testValue.ArticleTestType != ArticleType.BabyDiaper || (testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.Rewet && testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime))
+            {
+                Logger.Error("Old Test not found in DB");
+                return null;
+            }
             testValue.LastEditedDateTime = DateTime.Now;
             testValue.LastEditedPerson = viewModel.TestPerson;
             testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;

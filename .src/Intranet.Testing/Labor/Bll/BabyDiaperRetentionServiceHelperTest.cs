@@ -17,63 +17,55 @@ namespace Intranet.Labor.Bll.Test
     {
         #region BaseTestData
 
-        private TestSheet GetTestSheetTestData()
+        private TestSheet GetTestSheetTestData() => new TestSheet
         {
-            return new TestSheet
-            {
-                FaNr = "FA123456",
-                SAPType = "EKX",
-                SAPNr = "EN67"
-            };
-        }
-        private ProductionOrder GetProductionOrderTestData()
-        {
-            return new ProductionOrder
-            {
-                Component = new ProductionOrderComponent
-                {
-                    SAP = 32.7,
-                    PillowRetentWithoutSAP = 31.2,
-                    PillowWeightWithoutSAP = 26.0,
-                    CelluloseRetention = 1.2,
-                    ComponentType = "EKX",
-                    ComponentNr = "EN67"
-                },
-                Article = new Article
-                {
-                    MinRetention = 350,
-                    MaxRetention = 380
-                }
-            };
-        }
+            FaNr = "FA123456",
+            SAPType = "EKX",
+            SAPNr = "EN67"
+        };
 
-        private TestSheet GetTestSheetTestDataWithAvgAndStDev()
+        private ProductionOrder GetProductionOrderTestData() => new ProductionOrder
         {
-            return new TestSheet
+            Component = new ProductionOrderComponent
             {
-                TestValues = new List<TestValue>
+                SAP = 32.7,
+                PillowRetentWithoutSAP = 31.2,
+                PillowWeightWithoutSAP = 26.0,
+                CelluloseRetention = 1.2,
+                ComponentType = "EKX",
+                ComponentNr = "EN67"
+            },
+            Article = new Article
+            {
+                MinRetention = 350,
+                MaxRetention = 380
+            }
+        };
+
+        private TestSheet GetTestSheetTestDataWithAvgAndStDev() => new TestSheet
+        {
+            TestValues = new List<TestValue>
+            {
+                new TestValue
                 {
-                    new TestValue
+                    TestValueType = TestValueType.Average,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue
                     {
-                        TestValueType = TestValueType.Average,
-                        ArticleTestType = ArticleType.BabyDiaper,
-                        BabyDiaperTestValue = new BabyDiaperTestValue
-                        {
-                            TestType = TestTypeBabyDiaper.Retention
-                        }
-                    },
-                    new TestValue
+                        TestType = TestTypeBabyDiaper.Retention
+                    }
+                },
+                new TestValue
+                {
+                    TestValueType = TestValueType.StandardDeviation,
+                    ArticleTestType = ArticleType.BabyDiaper,
+                    BabyDiaperTestValue = new BabyDiaperTestValue
                     {
-                        TestValueType = TestValueType.StandardDeviation,
-                        ArticleTestType = ArticleType.BabyDiaper,
-                        BabyDiaperTestValue = new BabyDiaperTestValue
-                        {
-                            TestType = TestTypeBabyDiaper.Retention
-                        }
-                    },
-                }
-            };
-        }
+                        TestType = TestTypeBabyDiaper.Retention
+                    }
+                },
+            }
+        };
 
         #endregion
 
