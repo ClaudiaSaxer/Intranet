@@ -168,10 +168,10 @@ namespace Intranet.Labor.Bll.Test
             var actual = target.SaveNewRetentionTest(viewModel);
 
             Assert.Equal(369.7, actual.BabyDiaperTestValue.RetentionAfterZentrifugeValue);
-            Assert.Equal(Math.Round(1228.2392026578073, 2), Math.Round(actual.BabyDiaperTestValue.RetentionAfterZentrifugePercent, 2));
+            Assert.Equal(1228.2392026578073, actual.BabyDiaperTestValue.RetentionAfterZentrifugePercent, 2);
             Assert.Equal("EKX", actual.BabyDiaperTestValue.SapType);
             Assert.Equal("EN67", actual.BabyDiaperTestValue.SapNr);
-            Assert.Equal(Math.Round(10.351681957186543, 2), Math.Round(actual.BabyDiaperTestValue.SapGHoewiValue,2));
+            Assert.Equal(10.351681957186543, actual.BabyDiaperTestValue.SapGHoewiValue,2);
         }
 
         /// <summary>
