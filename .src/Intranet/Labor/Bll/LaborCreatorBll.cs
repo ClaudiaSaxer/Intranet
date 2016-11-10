@@ -201,7 +201,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var now = DateTime.Now;
             var dayInWeekNow = now.DayOfWeek;
-            var shift = ShiftScheduleRepository.Where(
+            var shift = ShiftScheduleRepository.GetAll().Where(
                                                    schedule =>
                                                        ( ( schedule.StartDay == dayInWeekNow ) || ( schedule.EndDay == dayInWeekNow ) ) && ( schedule.StartTime.Hours <= now.Hour )
                                                        && ( schedule.StartTime.Minutes <= now.Minute ) && ( schedule.EndTime.Hours >= now.Hour )

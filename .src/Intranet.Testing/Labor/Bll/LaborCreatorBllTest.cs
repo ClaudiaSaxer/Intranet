@@ -5,11 +5,9 @@ using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
-using Intranet.Model;
-using Intranet.TestEnvironment;
+using Intranet.Labor.TestEnvironment;
 using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
-using MockHelperBll = Intranet.Labor.TestEnvironment.MockHelperBll;
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -18,32 +16,124 @@ namespace Intranet.Labor.Bll.Test
     /// </summary>
     public class LaborCreatorBllTest
     {
+        /// <summary>
+        ///     Normal Passing Test for GetCurrentShift 
+        /// </summary>
+        [Fact]
+        public void GetCurrentShiftNormal()
+        {
+            var now = DateTime.Now;
 
-            /// <summary>
-            ///     Normal Passing Test with Matching role but no Matching Submodule
-            /// </summary>
-            [Fact]
-            public void xx()
+            var shift = new ShiftSchedule
             {
-            var productionOrderListQuery = new List<ProductionOrder>();
+                Name = "The One",
+                ShiftType = ShiftType.Morning,
+                EndTime = new TimeSpan( now.Hour + 2, now.Minute, now.Second ),
+                StartTime = new TimeSpan( now.Hour-2, now.Minute, now.Second ),
+                StartDay = now.DayOfWeek,
+                EndDay = now.DayOfWeek
 
-            var productionOrderRepository = MockHelperBll.GetAllProductionOrders(productionOrderListQuery.AsQueryable());
-
-
-            var target = new LaborCreatorBll(new NLogLoggerFactory()  )
+            };
+          
+            var shiftSheduleListQuery = new List<ShiftSchedule>
             {
-ProductionOrderRepository = null,
-                ShiftScheduleRepository = null,
+                shift
+            };
+
+         
+            var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules( shiftSheduleListQuery.AsQueryable() );
+        
+
+            var target = new LaborCreatorBll( new NLogLoggerFactory() )
+            {
+                ProductionOrderRepository = null,
+                ShiftScheduleRepository = shiftSheduleRepository,
                 TestSheetRepository = null
+            };
+
+            var actual = target.GetCurrentShift()
+                               .Should()
+                               .Be( ShiftType.Morning );
+
+        }
+        /// <summary>
+        ///    Test for GetCurrentShift To Many Found
+        /// </summary>
+        [Fact]
+        public void GetCurrentShiftToMany()
+        {
+            var now = DateTime.Now;
+
+            var shift = new ShiftSchedule
+            {
+                Name = "The One",
+                ShiftType = ShiftType.Late,
+                EndTime = new TimeSpan(now.Hour + 2, now.Minute, now.Second),
+                StartTime = new TimeSpan(now.Hour - 2, now.Minute, now.Second),
+                StartDay = now.DayOfWeek,
+                EndDay = now.DayOfWeek
 
             };
 
-          
-           
-       
+            var shiftSheduleListQuery = new List<ShiftSchedule>
+            {
+                shift,shift
+            };
 
-        
+
+            var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules(shiftSheduleListQuery.AsQueryable());
+
+
+            var target = new LaborCreatorBll(new NLogLoggerFactory())
+            {
+                ProductionOrderRepository = null,
+                ShiftScheduleRepository = shiftSheduleRepository,
+                TestSheetRepository = null
+            };
+
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because more than one existing" );
         }
+        /// <summary>
+        ///     Not Found Test for GetCurrentShift
+        /// </summary>
+        [Fact]
+        public void GetCurrentShiftNotFound()
+        {
+            var now = DateTime.Now;
+
+            var shift = new ShiftSchedule
+            {
+                Name = "The One",
+                ShiftType = ShiftType.Late,
+                EndTime = new TimeSpan(now.Hour  -1, now.Minute, now.Second),
+                StartTime = new TimeSpan(now.Hour +2, now.Minute, now.Second),
+                StartDay = now.DayOfWeek,
+                EndDay = now.AddDays(1).DayOfWeek,
+
+            };
+
+            var shiftSheduleListQuery = new List<ShiftSchedule>
+            {
+                shift
+            };
 
 
+            var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules(shiftSheduleListQuery.AsQueryable());
+
+
+            var target = new LaborCreatorBll(new NLogLoggerFactory())
+            {
+                ProductionOrderRepository = null,
+                ShiftScheduleRepository = shiftSheduleRepository,
+                TestSheetRepository = null
+            };
+
+            var actual = target.GetCurrentShift()
+                               .Should()
+                               .BeNull( "because not existing" );
+
+        }
     }
+}
