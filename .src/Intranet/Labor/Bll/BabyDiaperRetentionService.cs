@@ -136,6 +136,15 @@ namespace Intranet.Labor.Bll
                 Notes = new List<TestNote>()
             };
 
+            var oldTestValue = testSheetInfo.TestValues.Where(t => t.TestValueType == TestValueType.Single)
+                                          .ToList().LastOrDefault();
+            if ( oldTestValue != null )
+            {
+                viewModel.TestPerson = oldTestValue.LastEditedPerson;
+                viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
+                viewModel.ProductionCodeTime = oldTestValue.BabyDiaperTestValue.DiaperCreatedTime;
+            }
+
             return viewModel;
         }
 
