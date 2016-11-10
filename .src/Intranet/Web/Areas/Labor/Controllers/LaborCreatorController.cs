@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
 using Intranet.Labor.Model;
@@ -44,11 +43,15 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the action result for edit</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit( [Bind( Include = "ChosenPo" )] LaborCreatorViewModel vm )
+        public ActionResult Edit( [Bind( Include = "ChosenPo")] LaborCreatorViewModel vm )
         {
             var testSheet = LaborCreatorService.GetTestSheetId( vm.ChosenPo );
             if ( testSheet == null )
-                return Index();
+            {
+                var vmnew = LaborCreatorService.GetLaborCreatorViewModel();
+                vmnew.Message = "Fa Nummer nicht gefunden. Bitte eingabe überprüfen und nochmals versuchen.";
+                return View( "Index", vmnew);
+            }
 
             var controllerForType = testSheet.ArticleType == ArticleType.BabyDiaper
                 ? "LaborCreatorBaby"

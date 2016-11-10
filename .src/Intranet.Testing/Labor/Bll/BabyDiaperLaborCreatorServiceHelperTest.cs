@@ -144,13 +144,14 @@ namespace Intranet.Labor.Bll.Test
             actualRounded.Should()
                          .Be( expected );
         }
+
         /// <summary>
         ///     Test Standard Deviation with average and standard deviation test values
         /// </summary>
         [Fact]
         public void ComputeWeightStandardDeviationAllTest2()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper(new NLogLoggerFactory());
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var actual = serviceHelper.ComputeWeightStandardDeviationAll(
                 new List<TestValue>
                 {
@@ -190,11 +191,11 @@ namespace Intranet.Labor.Bll.Test
                         BabyDiaperTestValue = new BabyDiaperTestValue { WeightDiaperDry = 8.0 },
                         TestValueType = TestValueType.Average
                     }
-                });
+                } );
             const Double expected = 3.1091;
-            var actualRounded = Math.Round(actual, 4);
+            var actualRounded = Math.Round( actual, 4 );
             actualRounded.Should()
-                         .Be(expected);
+                         .Be( expected );
         }
 
         /// <summary>
