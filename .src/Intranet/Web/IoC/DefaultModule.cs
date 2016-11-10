@@ -99,7 +99,7 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<LaborHome>()
+            builder.RegisterType<BabyDiaperLaborHomeBll>()
                    .As<ILaborHome>()
                    .PropertiesAutowired()
                    .InstancePerRequest();

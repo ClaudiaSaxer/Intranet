@@ -77,6 +77,7 @@
     <Compile Include="BabyDiaperRetentionServiceTest.cs" />
     <Compile Include="BabyDiaperLaborCreaterServiceTest.cs" />
     <Compile Include="BabyDiaperLaborCreatorServiceHelperTest.cs" />
+    <Compile Include="LaborCreatorServiceTest.cs" />
     <Compile Include="LaborHomeBllTest.cs" />
     <Compile Include="LaborHomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

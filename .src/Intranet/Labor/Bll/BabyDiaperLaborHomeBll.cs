@@ -10,7 +10,7 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing the bll of the labor home.
     /// </summary>
-    public class LaborHome : ILaborHome
+    public class BabyDiaperLaborHomeBll : ILaborHome
     {
         #region Properties
 
