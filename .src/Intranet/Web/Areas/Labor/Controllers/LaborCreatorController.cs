@@ -48,7 +48,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var testSheet = LaborCreatorService.GetTestSheetId( vm.ChosenPo );
             if ( testSheet == null )
-                return Home( "Fa Nummer nicht gefunden. Bitte eingabe überprüfen und nochmals versuchen." );
+                return Home( "Fertigungsnummer wurde nicht gefunden." );
 
             var controllerForType = testSheet.ArticleType == ArticleType.BabyDiaper
                 ? "LaborCreatorBaby"
@@ -76,7 +76,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     with a user message
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        [ChildActionOnly]
         public
           ActionResult Home( String message  = "")
         {

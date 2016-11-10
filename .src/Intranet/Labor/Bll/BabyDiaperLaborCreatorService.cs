@@ -48,43 +48,53 @@ namespace Intranet.Labor.Bll
         /// <returns>the labor creator view model</returns>
         public BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )
         {
-            var testSheet = BabyDiaperLaborCreatorBll.getTestSheetForId( testSheetId );
-            var babydiaper = testSheet.TestValues.ToList()
-                                      .Where( x => x.ArticleTestType == ArticleType.BabyDiaper )
-                                      .ToList();
-            var rewets = Helper.ToRewetTestValuesCollection( babydiaper );
-            var rewetAverage = Helper.ToRewetAverage( babydiaper );
-            var rewetStandardDeviation = Helper.ToRewetStandardDeviation( babydiaper );
-
-            var retentions = Helper.ToRetentionTestValuesCollection( babydiaper );
-            var retentionAverage = Helper.ToRetentionAverage( babydiaper );
-            var retentionStandardDeviation = Helper.ToRetentionStandardDeviation( babydiaper );
-
-            var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection( babydiaper );
-            var penetrationTimeAverage = Helper.ToPenetrationTimeAverage( babydiaper );
-            var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation( babydiaper );
-            var vm = new BabyDiaperLaborCreatorViewModel
+            try
             {
-                Producer = "Intigena",
-                Shift = testSheet.ShiftType.ToFriendlyString(),
-                FaNr = testSheet.FaNr,
-                ProductName = testSheet.ProductName,
-                SizeName = testSheet.SizeName,
-                CreatedDate = testSheet.CreatedDateTime.ToString("dd.MM.yyyy"),
-                Rewets = rewets,
-                RewetAverage = rewetAverage,
-                RewetStandardDeviation = rewetStandardDeviation,
-                Retentions = retentions,
-                RetentionAverage = retentionAverage,
-                RetentionStandardDeviation = retentionStandardDeviation,
-                PenetrationTimes = penetrationTimes,
-                PenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
-                PenetrationTimeAverage = penetrationTimeAverage,
-                WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
-                WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
-                TestSheetId = testSheetId
-            };
-            return vm;
+                var testSheet = BabyDiaperLaborCreatorBll.getTestSheetForId(testSheetId);
+                var babydiaper = testSheet.TestValues.ToList()
+                                          .Where(x => x.ArticleTestType == ArticleType.BabyDiaper)
+                                          .ToList();
+                var rewets = Helper.ToRewetTestValuesCollection(babydiaper);
+                var rewetAverage = Helper.ToRewetAverage(babydiaper);
+                var rewetStandardDeviation = Helper.ToRewetStandardDeviation(babydiaper);
+
+                var retentions = Helper.ToRetentionTestValuesCollection(babydiaper);
+                var retentionAverage = Helper.ToRetentionAverage(babydiaper);
+                var retentionStandardDeviation = Helper.ToRetentionStandardDeviation(babydiaper);
+
+                var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection(babydiaper);
+                var penetrationTimeAverage = Helper.ToPenetrationTimeAverage(babydiaper);
+                var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation(babydiaper);
+                var vm = new BabyDiaperLaborCreatorViewModel
+                {
+                    Producer = "Intigena",
+                    Shift = testSheet.ShiftType.ToFriendlyString(),
+                    FaNr = testSheet.FaNr,
+                    ProductName = testSheet.ProductName,
+                    SizeName = testSheet.SizeName,
+                    CreatedDate = testSheet.CreatedDateTime.ToString("dd.MM.yyyy"),
+                    Rewets = rewets,
+                    RewetAverage = rewetAverage,
+                    RewetStandardDeviation = rewetStandardDeviation,
+                    Retentions = retentions,
+                    RetentionAverage = retentionAverage,
+                    RetentionStandardDeviation = retentionStandardDeviation,
+                    PenetrationTimes = penetrationTimes,
+                    PenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
+                    PenetrationTimeAverage = penetrationTimeAverage,
+                    WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
+                    WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
+                    TestSheetId = testSheetId
+                };
+                return vm;
+            }
+            catch ( Exception exception)
+            {
+
+                Logger.Error( "a exception acured: "+exception.Message );
+                return null;
+            }
+          
         }
     }
 }

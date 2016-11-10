@@ -51,28 +51,28 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <param name="id">the id of the testsheet</param>
         /// <returns>the actionresult to edit a existing testsheet</returns>
-        [ChildActionOnly]
         public ActionResult Edit( Int32 id = 0 )
         {
             if ( id.IsNull() )
                 return RedirectToAction( "Index",
                                          new RouteValueDictionary(
-                                             new { controller = "LaborCreatorController", action = "Edit" } ) );
+                                             new { controller = "LaborCreator", action = "Index" } ) );
 
             try
             {
                 var laborCreatorView = BabyDiaperLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
-                    return new HttpNotFoundResult( "Fehler. Bitte wenden Sie sich an den Administrator." );
-
+                    return RedirectToAction( "Index",
+                                             new RouteValueDictionary(
+                                                 new { controller = "LaborCreator", action = "Index" } ) );
                 return View( laborCreatorView );
             }
             catch ( Exception e )
             {
                 Logger.Error( e.StackTrace );
 
-                return new HttpNotFoundResult( "Fehler. Bitte wenden Sie sich an den Administrator." );
+                return new HttpNotFoundResult( "Bitte wenden Sie sich an den Administrator." );
             }
         }
     }
