@@ -35,7 +35,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
         {
-            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
+            var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
             return weights.Average();
         }
 
@@ -44,7 +44,7 @@ namespace Intranet.Labor.Bll
         /// </summary>
         public Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValues )
         {
-            var weights = AllWeightsOfArticleType( testValues, ArticleType.BabyDiaper );
+            var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
             var average = weights.Average();
 
             var sumOfSquaresOfDifferences = weights.Sum( val => ( val - average ) * ( val - average ) );
@@ -337,13 +337,13 @@ namespace Intranet.Labor.Bll
         /// <param name="testValues">the test values</param>
         /// <param name="articleType">the type of the article</param>
         /// <returns>a collection of all types</returns>
-        public Collection<Double> AllWeightsOfArticleType( IEnumerable<TestValue> testValues, ArticleType articleType )
+        public Collection<Double> AllWeightsOfArticleTypeForSingle( IEnumerable<TestValue> testValues, ArticleType articleType )
         {
             var weights = new Collection<Double>();
-
+            
             testValues.ForEach( value =>
                                 {
-                                    if ( value.ArticleTestType == articleType )
+                                    if ( value.ArticleTestType == articleType && value.TestValueType == TestValueType.Single)
                                         weights.Add( value.BabyDiaperTestValue.WeightDiaperDry );
                                 }
             );
