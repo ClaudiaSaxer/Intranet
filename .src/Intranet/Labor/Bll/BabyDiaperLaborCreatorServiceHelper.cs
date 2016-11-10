@@ -62,7 +62,7 @@ namespace Intranet.Labor.Bll
         /// <param name="time">the time od the production of the diaper</param>
         /// <returns>A Production code for a single diaper</returns>
         public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-            => "IT/" + machine + "/" + year.ToString( "0000" )
+            => "IT/" + machine.Substring( 1 ) + "/" + year.ToString( "0000" )
                                            .SubstringRight( 2 ) + "/" + dayOfyear + "/" + time.Hours.ToString( "00" ) + ":" + time.Minutes.ToString( "00" );
 
         /// <summary>

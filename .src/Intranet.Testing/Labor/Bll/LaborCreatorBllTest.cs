@@ -533,7 +533,10 @@ namespace Intranet.Labor.Bll.Test
             {
                 FaNr = "666",
                 Article = new Article(),
-                Machine = new Machine(),
+                Machine = new Machine
+                {
+                    MachineNr = "M12"
+                },
                 Component = new ProductionOrderComponent(),
                 EndDateTime = now,
                 StartDateTime = now,
@@ -583,7 +586,7 @@ namespace Intranet.Labor.Bll.Test
             actual.DayInYear.Should()
                   .Be( now.DayOfYear );
             actual.MachineNr.Should()
-                  .Be( productionorder.Machine.MachineNr );
+                  .Be( productionorder.Machine.MachineNr);
             actual.TestValues.Count.Should()
                   .Be( 6 );
             actual.TestValues.Should()
