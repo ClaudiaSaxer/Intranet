@@ -60,6 +60,7 @@
     <Compile Include="BabyDiaperLaborCreatorServiceHelper.cs" />
     <Compile Include="BabyDiaperLaborCreatorService.cs" />
     <Compile Include="BabyDiaperLaborHomeBll.cs" />
+    <Compile Include="InkoRewetService.cs" />
     <Compile Include="LaborCreatorBll.cs" />
     <Compile Include="LaborCreatorService.cs" />
     <Compile Include="LaborHomeService.cs" />

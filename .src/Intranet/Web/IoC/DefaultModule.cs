@@ -163,6 +163,11 @@ namespace Intranet.Web.IoC
                    .As<IBabyDiaperRewetServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<InkoRewetService>()
+                   .As<IInkoRewetService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
