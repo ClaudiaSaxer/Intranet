@@ -62,6 +62,7 @@
     <Compile Include="Bll\IBabyDiaperLaborCreatorService.cs" />
     <Compile Include="Bll\IBabyDiaperLaborCreatorServiceHelper.cs" />
     <Compile Include="Bll\IInkoRewetService.cs" />
+    <Compile Include="Bll\IInkoRewetServiceHelper.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />
     <Compile Include="Bll\ILaborCreatorService.cs" />
     <Compile Include="Bll\ILaborHomeBll.cs" />
