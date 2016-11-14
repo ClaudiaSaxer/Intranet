@@ -1,4 +1,4 @@
-﻿@model Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+﻿@model Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
 
 @{
     ViewBag.Title = "Intigena Intranet - Labor Module";
@@ -7,7 +7,7 @@
 
 <div class="jumbotron">
     <div class="container">
-        <h1>Testresultate Höschenwindeln - @Model.FaNr </h1>
+        <h1>Testresultate Inko - @Model.FaNr </h1>
         <div class="row">
 
 
@@ -36,10 +36,13 @@
 
 <div class="body-content">
 
-    <a href="@Url.Action("Create", "BabyDiaperRewet",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
+    <a href="@Url.Action("Create", "IncontinencePadRewetFree",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
     </a>
-    <a href="@Url.Action("Create", "BabyDiaperRetention",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
+    <a href="@Url.Action("Create", "IncontinencePadAcquisitionTime",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Aquisitionszeit
+    </a>
+    <a href="@Url.Action("Create", "IncontinencePadRetention",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
     </a>
 

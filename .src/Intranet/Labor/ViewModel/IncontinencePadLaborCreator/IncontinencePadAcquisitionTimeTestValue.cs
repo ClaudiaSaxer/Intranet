@@ -18,6 +18,13 @@
         /// <value>the acquisition time data</value>
         public IncontinencePadAcquisitionTime AcquisitionTime { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the rewet after acquisition time data
+        /// </summary>
+        /// <value>the rewet afteracquisition time data</value>
+        public IncontinencePadRewet RewetAfterAcquisitionTime { get; set; }
+
+
         #endregion
     }
 }

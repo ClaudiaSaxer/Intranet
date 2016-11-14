@@ -47,41 +47,22 @@ namespace Intranet.Labor.ViewModel
         public String SizeName { get; set; }
 
         /// <summary>
-        ///     Gets or sets the free rewets
+        ///     Gets or sets the rewets
         /// </summary>
-        /// <value>collection of free rewet</value>
-        public ICollection<IncontinencePadRewetTestValue> FreeRewets { get; set; }
+        /// <value>collection of rewet</value>
+        public ICollection<IncontinencePadRewetTestValue> Rewets { get; set; }
 
         /// <summary>
-        ///     Gets or sets the average of the free rewets
+        ///     Gets or sets the average of the rewets
         /// </summary>
-        /// <value>the average of the free rewet</value>
-        public IncontinencePadRewet IncontinencePadFreeRewetAverage { get; set; }
+        /// <value>the average of the rewet</value>
+        public IncontinencePadRewet IncontinencePadRewetAverage { get; set; }
 
         /// <summary>
-        ///     Gets or sets the standard deviaion of the free rewets
+        ///     Gets or sets the standard deviaion of the rewets
         /// </summary>
-        /// <value>the standard deviation of the free rewets</value>
-        public IncontinencePadRewet IncontinencePadFreeRewetStandardDeviation { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the AcquisitionTime rewets
-        /// </summary>
-        /// <value>collection of AcquisitionTime rewet</value>
-        public ICollection<IncontinencePadRewetTestValue> AfterAcquisitionTimeRewets { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the average of the AcquisitionTime rewets
-        /// </summary>
-        /// <value>the average of the AcquisitionTime rewet</value>
-        public IncontinencePadRewet IncontinencePadAcquisitionTimeRewetAverage { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the standard deviaion of the AcquisitionTime rewets
-        /// </summary>
-        /// <value>the standard deviation of the AcquisitionTime rewets</value>
-        public IncontinencePadRewet IncontinencePadAcquisitionTimeRewetStandardDeviation { get; set; }
-
+        /// <value>the standard deviation of the rewets</value>
+        public IncontinencePadRewet IncontinencePadRewetStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the retentions
@@ -102,7 +83,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the standard deviation of the retention</value>
         public IncontinencePadRetention IncontinencePadRetentionStandardDeviation { get; set; }
 
-
         /// <summary>
         ///     Gets or sets the aquisation time
         /// </summary>
@@ -122,22 +102,23 @@ namespace Intranet.Labor.ViewModel
         public IncontinencePadAcquisitionTime AcquisitionTimeStandardDeviation { get; set; }
 
         /// <summary>
-        /// Gets or sets the average of all tests
+        ///     Gets or sets the average of all tests
         /// </summary>
         /// <value>the average of all tests</value>
-        public Double WeigthAverageAll { get; set; }        
-        
+        public Double WeigthAverageAll { get; set; }
+
         /// <summary>
-        /// Gets or sets the standard Deviation of all tests
+        ///     Gets or sets the standard Deviation of all tests
         /// </summary>
         /// <value>the standard deviation of all tests</value>
         public Double WeightStandardDeviationAll { get; set; }
 
         /// <summary>
-        /// Gets or sets the id for the test sheet
+        ///     Gets or sets the id for the test sheet
         /// </summary>
         /// <value>the testsheet id</value>
         public Int32 TestSheetId { get; set; }
+
         #endregion
     }
 }

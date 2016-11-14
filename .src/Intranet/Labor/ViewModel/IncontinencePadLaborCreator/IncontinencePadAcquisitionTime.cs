@@ -27,5 +27,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>acquisition time value for the third addition</value>
         public Double AcquisitionTimeAdditionThird { get; set; }
 
+
     }
 }
