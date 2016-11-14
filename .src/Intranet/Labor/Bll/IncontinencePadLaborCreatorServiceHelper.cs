@@ -172,11 +172,12 @@ namespace Intranet.Labor.Bll
         {
             var vm = new IncontinencePadRetentionTestValue
             {
-                IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, retention.TestValue.TestValueId ),
+                IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, testValueId ),
                 IncontinencePadRetention = ToRetention( retention )
             };
             return vm;
         }
+       
 
         /// <summary>
         ///     Creates the retention  test value collection for all singe tests
@@ -188,6 +189,8 @@ namespace Intranet.Labor.Bll
                                                  TestValueType.Single,
                                                  new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
                                                  ToRetentionTestValue );
+
+
 
         /// <summary>
         ///     Sets the values for the rewet View Model out of the incontinence pad TestValue Model
@@ -266,7 +269,7 @@ namespace Intranet.Labor.Bll
         public ICollection<IncontinencePadRewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues )
             => ToTestValuesCollectionByTestType( testValues,
                                                  TestValueType.Single,
-                                                 new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree, TestTypeIncontinencePad.RewetFree },
+                                                 new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
                                                  ToRewetTestValue );
 
         /// <summary>
@@ -316,14 +319,15 @@ namespace Intranet.Labor.Bll
                                           && x.IncontinencePadTestValue.TestType.IsIn( testTypeIncontinencePad ) )
                                   .ForEach(
                                       x =>
-                                          tests.Add( toTestTypeTestValueAction( x.IncontinencePadTestValue,
-                                                                                x.LastEditedPerson,
-                                                                                GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                  x.TestSheet.CreatedDateTime.Year,
-                                                                                                  x.DayInYearOfArticleCreation,
-                                                                                                  x.IncontinencePadTestValue.IncontinencePadTime )
-                                                                                ,
-                                                                                x.TestValueId ) ) );
+                                          tests.Add( toTestTypeTestValueAction(
+                                                         x.IncontinencePadTestValue,
+                                                         x.LastEditedPerson,
+                                                         GenerateProdCode( x.TestSheet.MachineNr,
+                                                                           x.TestSheet.CreatedDateTime.Year,
+                                                                           x.DayInYearOfArticleCreation,
+                                                                           x.IncontinencePadTestValue.IncontinencePadTime )
+                                                         ,
+                                                         x.TestValueId ) ) );
             return tests;
         }
 

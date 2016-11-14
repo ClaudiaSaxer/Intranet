@@ -164,7 +164,7 @@ namespace Intranet.Labor.Bll.Test
                                                          TestTypeIncontinencePad.RewetFree,
                                                          TestValueType.Single ) );
 
-            Assert.Equal( "No Single for Rewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No Single for RewetFree per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -181,7 +181,7 @@ namespace Intranet.Labor.Bll.Test
                                                          TestTypeIncontinencePad.RewetFree,
                                                          TestValueType.Single ) );
 
-            Assert.Equal( "No Single for Rewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No Single for RewetFree per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -711,6 +711,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
                   .Be( 2 );
         }
 
+
         /// <summary>
         ///     Testing ToRewetAverage many
         /// </summary>
@@ -722,7 +723,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetAverage() ) );
 
-            Assert.Equal( "Only one Average for Rewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one Average for RewetFree per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -736,7 +737,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyRewet2() ) );
 
-            Assert.Equal( "No Average for Rewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No Average for RewetFree per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -764,7 +765,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation() ) );
 
-            Assert.Equal( "Only one StandardDeviation for Rewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one StandardDeviation for RewetFree per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -778,7 +779,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyRewet2() ) );
 
-            Assert.Equal( "No StandardDeviation for Rewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No StandardDeviation for RewetFree per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -840,7 +841,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             var actual = serviceHelper.ToRewetTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
-                  .Be( 4 );
+                  .Be( 2 );
         }
 
         /// <summary>
@@ -907,7 +908,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         }
 
         /// <summary>
-        ///     Testing ToTestValuesCollectionByTestType  1
+        ///     Testing ToTestValuesCollectionByTestType  2
         /// </summary>
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest2()
@@ -924,7 +925,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         }
 
         /// <summary>
-        ///     Testing ToTestValuesCollectionByTestType  1
+        ///     Testing ToTestValuesCollectionByTestType  3
         /// </summary>
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest3()
@@ -972,6 +973,40 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
                                       .ToList();
             actual.Count.Should()
                   .Be( 1 );
+        }
+
+        /// <summary>
+        ///     Testing ToTestValuesCollectionByTestType  6
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest6()
+        {
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                                         TestValueType.Average,
+                                                                         new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
+                                                                         serviceHelper.ToRewetTestValue)
+                                      .ToList();
+            actual.Count.Should()
+                  .Be(1);
+        }
+
+        /// <summary>
+        ///     Testing ToTestValuesCollectionByTestType  7
+        /// </summary>
+        [Fact]
+        public void ToTestValuesCollectionByTestTypeTest7()
+        {
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
+
+            var actual = serviceHelper.ToTestValuesCollectionByTestType(IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
+                                                                         TestValueType.StandardDeviation,
+                                                                         new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
+                                                                         serviceHelper.ToRewetTestValue)
+                                      .ToList();
+            actual.Count.Should()
+                  .Be(1);
         }
 
         /// <summary>

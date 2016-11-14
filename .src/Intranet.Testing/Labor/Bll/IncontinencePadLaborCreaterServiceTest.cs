@@ -27,19 +27,21 @@ namespace Intranet.Labor.Bll.Test
             const String productName = "Beast";
             const String sizeName = "Huge";
             var createdDateTime = new DateTime( 2016, 1, 1 );
+            var testSheet = new TestSheet
+            {
+                ShiftType = shiftType,
+                FaNr = faNr,
+                ProductName = productName,
+                SizeName = sizeName,
+                CreatedDateTime = createdDateTime,
+                TestValues = new List<TestValue>(),
+                TestSheetId = 1,
+                ArticleType = ArticleType.IncontinencePad
 
+            };
             var laborCreatorBllMoq = MockHelperBll.GetIncontinencePadLaborCreatorBll(
-                new TestSheet
-                {
-                    ShiftType = shiftType,
-                    FaNr = faNr,
-                    ProductName =productName ,
-                    SizeName = sizeName,
-                    CreatedDateTime = createdDateTime,
-                    TestValues = new List<TestValue>(),
-                    TestSheetId = 1
-                    
-                } );
+                testSheet
+              );
 
             var target = new IncontinencePadLaborCreatorService( new NLogLoggerFactory() )
             {

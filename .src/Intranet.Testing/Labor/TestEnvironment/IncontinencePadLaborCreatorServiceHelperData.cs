@@ -53,7 +53,12 @@ namespace Intranet.Labor.Test
                     ArticleTestType = ArticleType.IncontinencePad,
                    IncontinencePadTestValue = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet ,RewetAfterAcquisitionTimeRw = RwType.Better,AcquisitionTimeFirstRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better,AcquisitionTimeThirdRw = RwType.Better,RewetFreeRw = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
                 },
-           
+                   new TestValue
+                {
+                    TestValueType = TestValueType.Average,
+                    ArticleTestType = ArticleType.IncontinencePad,
+                    IncontinencePadTestValue = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.Retention,RewetFreeRw = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
+                },
                 new TestValue
                 {
                     TestValueType = TestValueType.StandardDeviation,
@@ -99,7 +104,7 @@ namespace Intranet.Labor.Test
                 IncontinencePadTestValue =
                     new IncontinencePadTestValue
                     {
-                        TestType = TestTypeIncontinencePad.RewetFree
+                        TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
                     }
             },
             new TestValue
@@ -109,7 +114,7 @@ namespace Intranet.Labor.Test
                IncontinencePadTestValue =
                     new IncontinencePadTestValue
                     {
-                        TestType = TestTypeIncontinencePad.RewetFree
+                        TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
                     }
             }
         };

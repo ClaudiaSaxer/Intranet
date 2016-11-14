@@ -86,7 +86,8 @@ namespace Intranet.Labor.Bll
                     AcquisitionTimeStandardDeviation = acquisitionTimeStandardDeviation,
                     AcquisitionTimeAverage = acquisitionTimeAverage,
                     RewetAfterAcquisitionTimeAverage = rewetAfterAcquisitionTimeAverage,
-                    RewetAfterAcquisitionTimeStandardDeviation = rewetAfterAcquisitionTimeStandardDeviation
+                    RewetAfterAcquisitionTimeStandardDeviation = rewetAfterAcquisitionTimeStandardDeviation,
+                    TestSheetId = testSheetId
                 };
                 return vm;
             }
