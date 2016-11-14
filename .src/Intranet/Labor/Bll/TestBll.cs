@@ -17,7 +17,7 @@ namespace Intranet.Labor.Bll
     /// <summary>
     ///     Class representing the bll of the Baby diapers retention
     /// </summary>
-    public class BabyDiaperBll : IBabyDiaperBll
+    public class TestBll : ITestBll
     {
         #region Properties
 
@@ -53,7 +53,7 @@ namespace Intranet.Labor.Bll
 
         #endregion
 
-        #region Implementation of IBabyDiaperBll
+        #region Implementation of ITestBll
 
         /// <summary>
         ///     Query for a testvalue

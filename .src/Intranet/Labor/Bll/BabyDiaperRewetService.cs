@@ -23,7 +23,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperBll BabyDiaperBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper rewet service helper.
@@ -60,7 +60,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The deleted testvalue</returns>
         public TestValue Delete( Int32 testValueId )
         {
-            var result = BabyDiaperBll.DeleteTestValue( testValueId );
+            var result = TestBll.DeleteTestValue( testValueId );
             BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv( result.TestSheetRefId );
             return result;
         }
@@ -72,7 +72,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
         public BabyDiaperRewetEditViewModel GetBabyDiaperRewetEditViewModel( Int32 rewetTestId )
         {
-            var testValue = BabyDiaperBll.GetTestValue( rewetTestId );
+            var testValue = TestBll.GetTestValue( rewetTestId );
             if ( testValue.IsNull() )
             {
                 Logger.Error( "TestValue mit id " + rewetTestId + "existiert nicht in DB!" );
@@ -96,7 +96,7 @@ namespace Intranet.Labor.Bll
                 return null;
             }
             var notes = testValue.TestValueNote;
-            var errors = BabyDiaperBll.GetAllNoteCodes();
+            var errors = TestBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
             if ( notes.IsNull() )
@@ -135,7 +135,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The BabyDiaperRewetEditViewModel</returns>
         public BabyDiaperRewetEditViewModel GetNewBabyDiaperRewetEditViewModel( Int32 testSheetId )
         {
-            var testSheetInfo = BabyDiaperBll.GetTestSheetInfo( testSheetId );
+            var testSheetInfo = TestBll.GetTestSheetInfo( testSheetId );
 
             if ( testSheetInfo.IsNull() )
             {
@@ -143,7 +143,7 @@ namespace Intranet.Labor.Bll
                 return null;
             }
 
-            var errors = BabyDiaperBll.GetAllNoteCodes();
+            var errors = TestBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
             var viewModel = new BabyDiaperRewetEditViewModel

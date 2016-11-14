@@ -29,7 +29,7 @@ namespace Intranet.Labor.Bll.Test
                 CreatedDateTime = new DateTime(2016, 5, 5)
             };
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -55,7 +55,7 @@ namespace Intranet.Labor.Bll.Test
         public void GetNewInkoRewetEditViewModelFromNotExistingTestSheetTest()
         {
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     new TestSheet { TestSheetId = 1 }
                 );
 
@@ -90,7 +90,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -123,7 +123,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -158,7 +158,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -200,7 +200,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 

@@ -24,7 +24,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the all testvalues.
         /// </summary>
-        public IBabyDiaperBll TestBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the test service helper.
@@ -166,7 +166,7 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns>The RwType</returns>
-        private static RwType GetRewetFreeRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MaxInkoRewet >= value ? RwType.Ok : RwType.Worse;
+        private static RwType GetRewetFreeRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MaxInkoRewet > value ? RwType.Ok : RwType.Worse;
 
         private TestValue UpdateInkoRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
         {

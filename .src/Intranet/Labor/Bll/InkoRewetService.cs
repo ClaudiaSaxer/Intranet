@@ -23,7 +23,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the incontinence rewet test.
         /// </summary>
-        public IBabyDiaperBll TestBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the incontinence rewet service helper.

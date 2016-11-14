@@ -53,7 +53,7 @@
     <Compile Include="BabyDiaperRewetService.cs" />
     <Compile Include="BabyDiaperRewetServiceHelper.cs" />
     <Compile Include="TestServiceHelper.cs" />
-    <Compile Include="BabyDiaperBll.cs" />
+    <Compile Include="TestBll.cs" />
     <Compile Include="BabyDiaperRetentionService.cs" />
     <Compile Include="Extensions\ShiftTypeExtension.cs" />
     <Compile Include="BabyDiaperLaborCreatorBll.cs" />

@@ -9,7 +9,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     Interface representing the bll for the babydiapers value edit/create
     /// </summary>
-    public interface IBabyDiaperBll
+    public interface ITestBll
     {
 
         /// <summary>

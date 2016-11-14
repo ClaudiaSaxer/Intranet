@@ -27,7 +27,7 @@ namespace Intranet.Labor.Bll.Test
                 CreatedDateTime = new DateTime(2016,5,5)
             };
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -35,7 +35,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
+                TestBll = babyDiaperRetentionBll,
                 TestServiceHelper = babyDiaperServiceHelper
             };
 
@@ -53,13 +53,13 @@ namespace Intranet.Labor.Bll.Test
         public void GetNewBabyDiaperRetentionEditViewModelFromNotExistingTestSheetTest()
         {
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     new TestSheet { TestSheetId = 1}
                 );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetNewBabyDiapersRetentionEditViewModel(2);
@@ -88,13 +88,13 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel( 2 );
@@ -121,13 +121,13 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
@@ -156,13 +156,13 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
@@ -198,7 +198,7 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
@@ -206,7 +206,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
+                TestBll = babyDiaperRetentionBll,
                 TestServiceHelper = babyDiaperServiceHelper
             };
 
@@ -287,7 +287,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
                 BabyDiaperRetentionServiceHelper = babyDiaperRetentionServiceHelper,
-                BabyDiaperBll = babyDiaperBll
+                TestBll = babyDiaperBll
             };
 
             var actual = target.Delete(1);
