@@ -57,6 +57,7 @@ namespace Intranet.Labor.Bll
         public TestValue SaveNewRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
             var testValue = BabyDiaperServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            testValue.ArticleTestType = ArticleType.BabyDiaper;
 
             var babyDiaperTestValue = new BabyDiaperTestValue
             {

@@ -67,8 +67,7 @@ namespace Intranet.Labor.Bll
                 LastEditedDateTime = DateTime.Now,
                 CreatedPerson = testPerson,
                 LastEditedPerson = testPerson,
-                DayInYearOfArticleCreation = productionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper
+                DayInYearOfArticleCreation = productionCodeDay
             };
             if (notes.IsNotNull())
                 testValue.TestValueNote = notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })
