@@ -1,14 +1,16 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -40,7 +42,7 @@ namespace Intranet.Labor.Bll.Test
                 {
                     TestValueType = TestValueType.Average,
                     ArticleTestType = ArticleType.IncontinencePad,
-                    IncontinencePadTestValue = new IncontinencePadTestValue()
+                    IncontinencePadTestValue = new IncontinencePadTestValue
                     {
                         TestType = TestTypeIncontinencePad.RewetFree
                     }
@@ -67,12 +69,12 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void SaveNewRewetTestBaseTest()
         {
-            var viewModel = new InkoRewetEditViewModel()
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestPerson = "Hans",
                 TestValueId = -1,
                 TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
                 ProductionCodeDay = 123,
                 FPDry = 20.0,
                 FPWet = 20.2,
@@ -81,8 +83,8 @@ namespace Intranet.Labor.Bll.Test
             var testValueReturnedFromHelper = new TestValue
             {
                 TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedDateTime = new DateTime( 2016, 1, 2 ),
+                LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
@@ -92,20 +94,19 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRewetTest(viewModel);
+            var actual = target.SaveNewRewetTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromHelper, actual);
+            Assert.Equal( testValueReturnedFromHelper, actual );
         }
-
 
         /// <summary>
         ///     Tests if while saving the correct RwValue choosen
@@ -113,12 +114,12 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void SaveNewRewetTestCalculationRwOkTest()
         {
-            var viewModel = new InkoRewetEditViewModel()
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestPerson = "Hans",
                 TestValueId = -1,
                 TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
                 ProductionCodeDay = 123,
                 FPDry = 20.0,
                 FPWet = 20.2,
@@ -127,8 +128,8 @@ namespace Intranet.Labor.Bll.Test
             var testValueReturnedFromHelper = new TestValue
             {
                 TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedDateTime = new DateTime( 2016, 1, 2 ),
+                LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
@@ -138,18 +139,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRewetTest(viewModel);
+            var actual = target.SaveNewRewetTest( viewModel );
 
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RewetFreeRw);
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.RewetFreeRw );
         }
 
         /// <summary>
@@ -158,12 +159,12 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void SaveNewRewetTestCalculationRwWorseTest()
         {
-            var viewModel = new InkoRewetEditViewModel()
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestPerson = "Hans",
                 TestValueId = -1,
                 TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
                 ProductionCodeDay = 123,
                 FPDry = 20.0,
                 FPWet = 21.0,
@@ -172,8 +173,8 @@ namespace Intranet.Labor.Bll.Test
             var testValueReturnedFromHelper = new TestValue
             {
                 TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedDateTime = new DateTime( 2016, 1, 2 ),
+                LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
@@ -183,18 +184,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRewetTest(viewModel);
+            var actual = target.SaveNewRewetTest( viewModel );
 
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.RewetFreeRw);
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.RewetFreeRw );
         }
 
         #endregion
@@ -207,15 +208,15 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void UpdateRewetTestFailTest()
         {
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(null, null, null);
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( null, null, null );
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
-                TestBll = testBll,
+                TestBll = testBll
             };
 
-            var actual = target.UpdateRewetTest(new InkoRewetEditViewModel());
+            var actual = target.UpdateRewetTest( new InkoRewetEditViewModel() );
 
-            Assert.Equal(null, actual);
+            Assert.Equal( null, actual );
         }
 
         /// <summary>
@@ -224,12 +225,12 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void UpdateRewetTestBaseTest()
         {
-            var viewModel = new InkoRewetEditViewModel()
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestPerson = "Hans",
                 TestValueId = -1,
                 TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
                 ProductionCodeDay = 123,
                 FPDry = 20.0,
                 FPWet = 20.2,
@@ -238,8 +239,8 @@ namespace Intranet.Labor.Bll.Test
             var testValueReturnedFromDb = new TestValue
             {
                 TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedDateTime = new DateTime( 2016, 1, 2 ),
+                LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Fritz",
                 LastEditedPerson = "Fritz",
                 DayInYearOfArticleCreation = 123,
@@ -247,29 +248,29 @@ namespace Intranet.Labor.Bll.Test
                 TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } },
                 IncontinencePadTestValue = new IncontinencePadTestValue
                 {
-                    IncontinencePadTime = new TimeSpan(11, 11, 0),
+                    IncontinencePadTime = new TimeSpan( 11, 11, 0 ),
                     TestType = TestTypeIncontinencePad.RewetFree
                 }
             };
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
-                TestBll = babyDiaperBll,
+                TestBll = babyDiaperBll
             };
 
-            var actual = target.UpdateRewetTest(viewModel);
+            var actual = target.UpdateRewetTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromDb, actual);
-            Assert.Equal(20, actual.IncontinencePadTestValue.RewetFreeDryValue);
-            Assert.Equal(20.2, actual.IncontinencePadTestValue.RewetFreeWetValue);
-            Assert.Equal(0.2, actual.IncontinencePadTestValue.RewetFreeDifference,2);
-            Assert.Equal("Hans", actual.LastEditedPerson);
-            Assert.Equal("Fritz", actual.CreatedPerson);
-            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+            Assert.Equal( testValueReturnedFromDb, actual );
+            Assert.Equal( 20, actual.IncontinencePadTestValue.RewetFreeDryValue );
+            Assert.Equal( 20.2, actual.IncontinencePadTestValue.RewetFreeWetValue );
+            Assert.Equal( 0.2, actual.IncontinencePadTestValue.RewetFreeDifference, 2 );
+            Assert.Equal( "Hans", actual.LastEditedPerson );
+            Assert.Equal( "Fritz", actual.CreatedPerson );
+            Assert.NotEqual( new DateTime( 2016, 1, 2 ), actual.LastEditedDateTime );
         }
 
         #endregion
@@ -285,29 +286,31 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = babyDiaperBll
             };
 
-            var actual = target.UpdateRewetAverageAndStv(1);
+            var actual = target.UpdateRewetAverageAndStv( 1 );
 
-            var actualRewetAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree);
-            Assert.NotNull(actualRewetAvg);
-            Assert.Equal(0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue);
-            Assert.Equal(0, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue);
-            Assert.Equal(0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDifference);
-            Assert.Equal(RwType.Ok, actualRewetAvg.IncontinencePadTestValue.RewetFreeRw);
+            var actualRewetAvg =
+                actual.TestValues.FirstOrDefault( tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+            Assert.NotNull( actualRewetAvg );
+            Assert.Equal( 0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue );
+            Assert.Equal( 0, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue );
+            Assert.Equal( 0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDifference );
+            Assert.Equal( RwType.Ok, actualRewetAvg.IncontinencePadTestValue.RewetFreeRw );
 
-            var actualRewetStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree);
-            Assert.NotNull(actualRewetStDev);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDifference);
+            var actualRewetStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+            Assert.NotNull( actualRewetStDev );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDifference );
         }
-
 
         /// <summary>
         ///     Tests when there is only one test, the avg values are equal the test values
@@ -319,7 +322,7 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestValueType = TestValueType.Single,
                 ArticleTestType = ArticleType.BabyDiaper,
-                IncontinencePadTestValue = new IncontinencePadTestValue()
+                IncontinencePadTestValue = new IncontinencePadTestValue
                 {
                     TestType = TestTypeIncontinencePad.RewetFree,
                     RewetFreeDryValue = 20,
@@ -329,33 +332,35 @@ namespace Intranet.Labor.Bll.Test
                 }
             };
             var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
-            testSheetDataFromDb.TestValues.Add(onlyTestValue);
+            testSheetDataFromDb.TestValues.Add( onlyTestValue );
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
 
-            var target = new InkoRewetServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRewetServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll
             };
 
-            var actual = target.UpdateRewetAverageAndStv(1);
+            var actual = target.UpdateRewetAverageAndStv( 1 );
 
-            var actualRewetAvg = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree);
-            Assert.NotNull(actualRewetAvg);
-            Assert.Equal(20.0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue);
-            Assert.Equal(20.2, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue);
-            Assert.Equal(0.2, actualRewetAvg.IncontinencePadTestValue.RewetFreeDifference,2);
-            Assert.Equal(RwType.Ok, actualRewetAvg.IncontinencePadTestValue.RewetFreeRw);
+            var actualRewetAvg =
+                actual.TestValues.FirstOrDefault( tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+            Assert.NotNull( actualRewetAvg );
+            Assert.Equal( 20.0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue );
+            Assert.Equal( 20.2, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue );
+            Assert.Equal( 0.2, actualRewetAvg.IncontinencePadTestValue.RewetFreeDifference, 2 );
+            Assert.Equal( RwType.Ok, actualRewetAvg.IncontinencePadTestValue.RewetFreeRw );
 
-            var actualRewetStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree);
-            Assert.NotNull(actualRewetStDev);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue);
-            Assert.Equal(0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDifference);
+            var actualRewetStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+            Assert.NotNull( actualRewetStDev );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue );
+            Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDifference );
         }
 
         #endregion
-
     }
 }
