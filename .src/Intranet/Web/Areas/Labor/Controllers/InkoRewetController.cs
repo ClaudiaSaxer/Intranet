@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -14,6 +16,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class InkoRewetController : BaseController
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets a <see cref="IInkoRewetService" />
+        /// </summary>
+        /// <value>
+        ///     <see cref="IInkoRewetService" />
+        /// </value>
+        public IInkoRewetService InkoRewetService { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -38,10 +52,50 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             if (id.IsNull())
                 return HttpNotFound();
-            var viewModel = new InkoRewetEditViewModel {NoteCodes = new List<ErrorCode>()};
+            var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel( id );
             if (viewModel.IsNull())
                 return new HttpNotFoundResult("Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht.");
             return View("Edit",viewModel);
+        }
+
+        /// <summary>
+        ///     Loads the InkoRewet Edit View with an Item form the Test-Sheet which will be edited 
+        /// </summary>
+        /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public ActionResult Edit(Int32 id = 0)
+        {
+            if (id.IsNull())
+                return HttpNotFound();
+
+            var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel(id);
+            if (viewModel.IsNull())
+                return new HttpNotFoundResult("Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test.");
+            return View("Edit", viewModel);
+        }
+
+        /// <summary>
+        ///     Deletes the Testvalue
+        /// </summary>
+        /// <param name="id">The Id of the TestValue</param>
+        /// <returns></returns>
+        public ActionResult Delete(Int32 id)
+        {
+            var deletedTest = InkoRewetService.Delete(id);
+            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId });
+        }
+
+        /// <summary>
+        ///     Saves the new test or update it
+        /// </summary>
+        /// <param name="viewModel">the testdata whicht will be saved</param>
+        /// <returns></returns>
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Save(InkoRewetEditViewModel viewModel)
+        {
+            var savedModel = InkoRewetService.Save(viewModel);
+            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId });
         }
 
         /// <summary>
