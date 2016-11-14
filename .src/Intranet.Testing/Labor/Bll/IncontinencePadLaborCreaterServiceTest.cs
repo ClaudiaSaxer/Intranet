@@ -10,41 +10,43 @@ using Xunit;
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    ///     Class representing Tests for BabyDiaperLaborCreatorService
+    ///     Class representing Tests for IncontinencePadLaborCreatorService
     /// </summary>
-    public class BabyDiaperLaborCreaterServiceTest
+    public class IncontinencePadLaborCreaterServiceTest
     {
         /// <summary>
         ///     Test GetLaborCreatorViewModel
         /// </summary>
         [Fact]
-        public void GetBabyDiaperLaborCreatorViewModelTest()
+        public void GetIncontinencePadLaborCreatorViewModelTest()
         {
-            var serviceHelperMoq = MockHelperBabyDiaperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper();
+            var serviceHelperMoq = MockHelperIncontinencePadLaborCreatorServiceHelper.GetLaborCreatorServiceHelper();
 
             const ShiftType shiftType = ShiftType.Late;
             const String faNr = "Fa666";
             const String productName = "Beast";
             const String sizeName = "Huge";
             var createdDateTime = new DateTime( 2016, 1, 1 );
+            var testSheet = new TestSheet
+            {
+                ShiftType = shiftType,
+                FaNr = faNr,
+                ProductName = productName,
+                SizeName = sizeName,
+                CreatedDateTime = createdDateTime,
+                TestValues = new List<TestValue>(),
+                TestSheetId = 1,
+                ArticleType = ArticleType.IncontinencePad
 
-            var laborCreatorBllMoq = MockHelperBll.GetBabyDiaperLaborCreatorBll(
-                new TestSheet
-                {
-                    ShiftType = shiftType,
-                    FaNr = faNr,
-                    ProductName =productName ,
-                    SizeName = sizeName,
-                    CreatedDateTime = createdDateTime,
-                    TestValues = new List<TestValue>(),
-                    TestSheetId = 1
-                    
-                } );
+            };
+            var laborCreatorBllMoq = MockHelperBll.GetIncontinencePadLaborCreatorBll(
+                testSheet
+              );
 
-            var target = new BabyDiaperLaborCreatorService( new NLogLoggerFactory() )
+            var target = new IncontinencePadLaborCreatorService( new NLogLoggerFactory() )
             {
                 Helper = serviceHelperMoq,
-                BabyDiaperLaborCreatorBll = laborCreatorBllMoq
+                IncontinencePadLaborCreatorBll = laborCreatorBllMoq
             };
 
             var actual = target.GetLaborCreatorViewModel( 1 );
@@ -64,21 +66,25 @@ namespace Intranet.Labor.Bll.Test
                   .Be( "01.01.2016" );
             actual.Rewets.Should()
                   .NotBeNull( "because it is initialized" );
-            actual.BabyDiaperRewetAverage.Should()
+            actual.RewetAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.BabyDiaperRewetStandardDeviation.Should()
+            actual.RewetStandardDeviation.Should()
+                 .NotBeNull("because it is initialized");
+            actual.RewetAfterAcquisitionTimeAverage.Should()
+                .NotBeNull("because it is initialized");
+            actual.RewetAfterAcquisitionTimeStandardDeviation.Should()
                  .NotBeNull("because it is initialized");
             actual.Retentions.Should()
                  .NotBeNull("because it is initialized");
-            actual.BabyDiaperRewetAverage.Should()
+            actual.RewetAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.BabyDiaperRetentionStandardDeviation.Should()
+            actual.RetentionStandardDeviation.Should()
                  .NotBeNull("because it is initialized");
-            actual.PenetrationTimes.Should()
+            actual.AcquisitionTimes.Should()
                  .NotBeNull("because it is initialized");
-            actual.BabyDiaperPenetrationTimeAverage.Should()
+            actual.AcquisitionTimeAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.BabyDiaperPenetrationTimeStandardDeviation.Should()
+            actual.AcquisitionTimeAverage.Should()
                  .NotBeNull("because it is initialized");
 
         }

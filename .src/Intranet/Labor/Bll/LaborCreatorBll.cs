@@ -164,13 +164,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
                 testvalues = new List<TestValue>
                 {
-                    CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.AcquisitionTime ),
+                    CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.AcquisitionTimeAndRewet ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.Retention ),
-                    CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.RewetAfterAcquisitionTime ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.RewetFree ),
-                    CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.AcquisitionTime ),
+                    CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.AcquisitionTimeAndRewet ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.Retention ),
-                    CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.RewetAfterAcquisitionTime ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.RewetFree )
                 };
 
@@ -185,8 +183,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 ProductName = productionOrder.Article.ProductName,
                 DayInYear = DateTime.Now.DayOfYear,
                 MachineNr = productionOrder.Machine.MachineNr,
-                SAPNr = productionOrder.Component.ComponentNr,
-                SAPType = productionOrder.Component.ComponentType
+                SAPNr = productionOrder.Component?.ComponentNr,
+                SAPType = productionOrder.Component?.ComponentType
             };
             TestSheetRepository.Add( testSheet );
             TestSheetRepository.SaveChanges();

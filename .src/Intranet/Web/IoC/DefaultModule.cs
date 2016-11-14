@@ -163,6 +163,19 @@ namespace Intranet.Web.IoC
                    .As<IBabyDiaperRewetServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<IncontinencePadLaborCreatorBll>()
+                   .As<IIncontinencePadLaborCreatorBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+            builder.RegisterType<IncontinencePadLaborCreatorService>()
+                  .As<IIncontinencePadLaborCreatorService>()
+                  .PropertiesAutowired()
+                  .InstancePerRequest();
+            builder.RegisterType<IncontinencePadLaborCreatorServiceHelper>()
+                  .As<IIncontinencePadLaborCreatorServiceHelper>()
+                  .PropertiesAutowired()
+                  .InstancePerRequest();
         }
 
         /// <summary>

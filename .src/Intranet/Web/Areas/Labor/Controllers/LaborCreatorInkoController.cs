@@ -10,17 +10,17 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the controller for the labor creator
     /// </summary>
-    public class LaborCreatorBabyController : BaseController
+    public class LaborCreatorInkoController : BaseController
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets a <see cref="IBabyDiaperLaborCreatorService" />
+        ///     Gets or sets a <see cref="IIncontinencePadLaborCreatorService" />
         /// </summary>
         /// <value>
-        ///     <see cref="IBabyDiaperLaborCreatorService" />
+        ///     <see cref="IIncontinencePadLaborCreatorService" />
         /// </value>
-        public IBabyDiaperLaborCreatorService BabyDiaperLaborCreatorService { get; set; }
+        public IIncontinencePadLaborCreatorService IncontinencePadLaborCreatorService { get; set; }
 
         /// <summary>
         ///     Gets or sets a <see cref="ILaborHomeService" />
@@ -35,11 +35,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="LaborCreatorBabyController" /> class.
+        ///     Initialize a new instance of the <see cref="LaborCreatorInkoController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public LaborCreatorBabyController( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(LaborCreatorBabyController) ) )
+        public LaborCreatorInkoController( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(LaborCreatorInkoController) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -60,7 +60,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
             try
             {
-                var laborCreatorView = BabyDiaperLaborCreatorService.GetLaborCreatorViewModel( id );
+                var laborCreatorView = IncontinencePadLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
                     return RedirectToAction( "Index",

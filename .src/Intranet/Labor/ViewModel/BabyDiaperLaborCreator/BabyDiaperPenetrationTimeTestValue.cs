@@ -11,7 +11,7 @@
         ///     Gets or sets the test info
         /// </summary>
         /// <value>the test info</value>
-        public TestInfo TestInfo { get; set; }
+        public BabyDiaperTestInfo BabyDiaperTestInfo { get; set; }
 
         /// <summary>
         ///     Gets or sets the penetration time data

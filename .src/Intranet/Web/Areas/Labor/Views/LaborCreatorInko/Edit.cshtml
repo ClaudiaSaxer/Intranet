@@ -1,0 +1,259 @@
+﻿@model Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+
+@{
+    ViewBag.Title = "Intigena Intranet - Labor Module";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1>Testresultate Inko - @Model.FaNr </h1>
+        <div class="row">
+
+
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Produkt: @Model.ProductName</p>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Grösse: @Model.SizeName</p>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Datum: @Model.CreatedDate</p>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <p>Schicht: @Model.Shift</p>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="body-content">
+
+    <a href="@Url.Action( "Create", "IncontinencePadRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
+    </a>
+    <a href="@Url.Action( "Create", "IncontinencePadAcquisitionTime", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Aquisitionszeit
+    </a>
+    <a href="@Url.Action( "Create", "IncontinencePadRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
+    </a>
+
+</div>
+
+<div class="body-content">
+    <h2>Rewet</h2>
+    <table id="rewet" class="table table-striped table-bordered sortable" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Prod Code</th>
+            <th>FP trocken</th>
+            <th>FP feucht</th>
+            <th>Rewet</th>
+            <th>Testperson</th>
+            <td>Editieren</td>
+            <td>Löschen</td>
+
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ( var item in Model.Rewets )
+        {
+            <tr>
+                <td>@item.IncontinencePadTestInfo.ProductionCode</td>
+                <td>@item.IncontinencePadRewet.WeightDry</td>
+                <td>@item.IncontinencePadRewet.WeightWet</td>
+                <td>@item.IncontinencePadRewet.WeightDiff</td>
+                <td>@item.IncontinencePadTestInfo.TestPerson</td>
+                <td>
+                    <a href="@Url.Action( "Edit", "IncontinencePadRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action( "Delete", "IncontinencePadRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash"></span> 
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Durchschnitt</th>
+            <th></th>
+            <th>@Model.RewetAverage.WeightDry</th>
+            <th>@Model.RewetAverage.WeightWet</th>
+            <th>@Model.RewetAverage.WeightDiff</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+        <tfoot>
+        <tr>
+            <th>Standard Abweichung</th>
+            <th></th>
+            <th>@Model.RewetStandardDeviation.WeightDry</th>
+            <th>@Model.RewetStandardDeviation.WeightWet</th>
+            <th>@Model.RewetStandardDeviation.WeightDiff</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="body-content">
+    <h2>Retention Hytec</h2>
+    <table id="retention" class="table table-striped table-bordered sortable" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Prod Code</th>
+            <th>Prüflingsgewicht</th>
+            <th>Prüfling nass</th>
+            <th>Nach Zentrifuge (g)</th>
+            <th>Absorption (g)</th>
+            <th>Retention (g)</th>
+            <th>Testperson</th>
+            <td>Editieren</td>
+            <td>Löschen</td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ( var item in Model.Retentions )
+        {
+            <tr>
+                <td>@item.IncontinencePadTestInfo.ProductionCode</td>
+                <td>@item.IncontinencePadRetention.RetentionDryWeight</td>
+                <td>@item.IncontinencePadRetention.RetentionWetWeight</td>
+                <td>@item.IncontinencePadRetention.RetentionAfterZentrifugeValue</td>
+                <td>@item.IncontinencePadRetention.AbsorptionDiff</td>
+                <td>@item.IncontinencePadRetention.RetentionDiff</td>
+                <td>@item.IncontinencePadTestInfo.TestPerson</td>
+                <td>
+                    <a href="@Url.Action( "Edit", "IncontinencePadRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action( "Delete", "IncontinencePadRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Durchschnitt</th>
+            <th></th>
+            <th>@Model.RetentionAverage.RetentionDryWeight</th>
+            <th>@Model.RetentionAverage.RetentionWetWeight</th>
+            <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
+            <td>@Model.RetentionAverage.AbsorptionDiff</td>
+            <td>@Model.RetentionAverage.RetentionDiff</td>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+        <tfoot>
+        <tr>
+            <th>Standard Abweichung</th>
+            <th></th>
+            <th>@Model.RetentionStandardDeviation.RetentionDryWeight</th>
+            <th>@Model.RetentionStandardDeviation.RetentionWetWeight</th>
+            <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
+            <td>@Model.RetentionStandardDeviation.AbsorptionDiff</td>
+            <td>@Model.RetentionStandardDeviation.RetentionDiff</td>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="body-content">
+    <h2>Aquisitionszeit</h2>
+    <table id="acquisitiontime" class="table table-striped table-bordered sortable" cellspacing="0" width="100%">
+        <thead>
+        <tr>
+            <th>Prod Code</th>
+            <th>Gewicht trocken</th>
+            <th>Zugabe 1</th>
+            <th>Zugabe 2</th>
+            <th>Zugabe 3</th>
+            <th>Rewet FP trocken</th>
+            <th>Rewet FP feucht</th>
+            <th>Rewet</th>
+            <th>Testperson</th>
+            <td>Editieren</td>
+            <td>Löschen</td>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach ( var item in Model.AcquisitionTimes )
+        {
+            <tr>
+                <td>@item.IncontinencePadTestInfo.ProductionCode</td>
+                <td>@item.AcquisitionTime.Weight</td>
+                <td>@item.AcquisitionTime.AcquisitionTimeAdditionFirst</td>
+                <td>@item.AcquisitionTime.AcquisitionTimeAdditionSecond</td>
+                <td>@item.AcquisitionTime.AcquisitionTimeAdditionThird</td>
+                <td>@item.RewetAfterAcquisitionTime.WeightDry</td>
+                <td>@item.RewetAfterAcquisitionTime.WeightWet</td>
+                <td>@item.RewetAfterAcquisitionTime.WeightDiff</td>
+                <td>@item.IncontinencePadTestInfo.TestPerson</td>
+                <td>
+                    <a href="@Url.Action( "Edit", "IncontinencePadAquisitionTime", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a href="@Url.Action( "Delete", "IncontinencePadAquisitionTime", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+        <tfoot>
+        <tr>
+            <th>Durchschnitt</th>
+            <th></th>
+            <td>@Model.AcquisitionTimeAverage.Weight</td>
+            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionFirst</td>
+            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionSecond</td>
+            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionThird</td>
+            <td>@Model.RewetAfterAcquisitionTimeAverage.WeightDry</td>
+            <td>@Model.RewetAfterAcquisitionTimeAverage.WeightWet</td>
+            <td>@Model.RewetAfterAcquisitionTimeAverage.WeightDiff</td>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+        <tfoot>
+        <tr>
+            <th>Standard Abweichung</th>
+            <th></th>
+            <td>@Model.AcquisitionTimeStandardDeviation.Weight</td>
+            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionFirst</td>
+            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionSecond</td>
+            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionThird</td>
+            <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDry</td>
+            <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightWet</td>
+            <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDiff</td>
+            <th></th>
+            <th></th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+
+
+
+</div>

@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncontinencePadLaborCreatorBll.cs" />
+    <Compile Include="IncontinencePadLaborCreatorService.cs" />
+    <Compile Include="IncontinencePadLaborCreatorServiceHelper.cs" />
     <Compile Include="BabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="BabyDiaperRewetService.cs" />
     <Compile Include="BabyDiaperRewetServiceHelper.cs" />

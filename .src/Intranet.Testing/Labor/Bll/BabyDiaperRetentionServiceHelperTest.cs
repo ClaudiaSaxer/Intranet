@@ -152,7 +152,7 @@ namespace Intranet.Labor.Bll.Test
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
+                BabyDiaperBll = babyDiaperRetentionBll, 
                 BabyDiaperServiceHelper = babyDiaperServiceHelper
             };
 

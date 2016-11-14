@@ -1039,7 +1039,7 @@ namespace Intranet.Labor.Bll.Test
             var expected = new BabyDiaperRewetTestValue
             {
                 BabyDiaperRewet = new BabyDiaperRewet { Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
-                TestInfo = new TestInfo
+                BabyDiaperTestInfo = new BabyDiaperTestInfo
                 {
                     TestPerson = "test person",
                     ProductionCode = "theprodcode",
@@ -1057,14 +1057,14 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing toTestInfo
+        ///     Testing ToTestInfo
         /// </summary>
         [Fact]
         public void ToTestInfoTest()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            var expected = new TestInfo
+            var expected = new BabyDiaperTestInfo
             {
                 TestPerson = "gandalf",
                 ProductionCode = "you shall not pass",

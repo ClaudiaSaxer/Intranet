@@ -126,7 +126,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperPenetrationTimeTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry, testValueId ),
                 BabyDiaperPenetrationTime = ToPenetrationTime( penetrationTime )
             };
             return vm;
@@ -191,7 +191,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperRetentionTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry, testValueId ),
                 BabyDiaperRetention = ToRetention( retention )
             };
             return vm;
@@ -258,7 +258,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperRewetTestValue
             {
-                TestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry, testValueId ),
                 BabyDiaperRewet = ToRewet( rewet )
             };
             return vm;
@@ -276,15 +276,15 @@ namespace Intranet.Labor.Bll
                                                  ToRewetTestValue );
 
         /// <summary>
-        ///     Creates to TestInfo from diffrent input data
+        ///     Creates to BabyDiaperTestInfo from diffrent input data
         /// </summary>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the prodcution code from the diaper</param>
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns></returns>
-        public TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId )
-            => new TestInfo
+        public BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId )
+            => new BabyDiaperTestInfo
             {
                 TestPerson = testPerson,
                 ProductionCode = prodCode,

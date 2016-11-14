@@ -13,7 +13,7 @@ namespace Intranet.Labor.TestEnvironment
     /// <summary>
     ///     A mock helper class for LaborCreatorServiceHelper
     /// </summary>
-    public static class MockHelperLaborCreatorServiceHelper
+    public static class MockHelperBabyDiaperLaborCreatorServiceHelper
     {
         /// <summary>
         ///     A mock for LaborCreatorServiceHelper
@@ -22,7 +22,7 @@ namespace Intranet.Labor.TestEnvironment
         {
             var mock = new Mock<IBabyDiaperLaborCreatorServiceHelper>
             {
-                Name = "MockHelper.GetLaborCreatorServiceHelper",
+                Name = "MockHelper.GetBabyDiaperLaborCreatorServiceHelper",
                 DefaultValue = DefaultValue.Mock
             };
 

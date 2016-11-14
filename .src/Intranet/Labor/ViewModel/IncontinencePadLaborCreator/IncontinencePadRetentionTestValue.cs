@@ -3,7 +3,7 @@
     /// <summary>
     ///     Class representing the view model for the retention test value
     /// </summary>
-    public class BabyDiaperRetentionTestValue
+    public class IncontinencePadRetentionTestValue
     {
         #region Properties
 
@@ -11,13 +11,13 @@
         ///     Gets or sets the retention data
         /// </summary>
         /// <value>the retention data</value>
-        public BabyDiaperRetention BabyDiaperRetention { get; set; }
+        public IncontinencePadRetention IncontinencePadRetention { get; set; }
 
         /// <summary>
         ///     Gets or sets the test info
         /// </summary>
         /// <value>the test info</value>
-        public BabyDiaperTestInfo BabyDiaperTestInfo { get; set; }
+        public IncontinencePadTestInfo IncontinencePadTestInfo { get; set; }
 
         #endregion
     }
