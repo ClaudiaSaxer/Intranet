@@ -31,7 +31,7 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
@@ -202,7 +202,7 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
@@ -259,7 +259,7 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
@@ -297,7 +297,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     testValue
                 );
 
@@ -319,7 +319,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     testValue
                 );
 
@@ -341,7 +341,7 @@ namespace Intranet.Labor.Bll.Test
             var deletedTestValue = new TestValue { TestValueId = 1 };
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     null
                 );
             var babyDiaperBll =
