@@ -106,6 +106,31 @@ namespace Intranet.Labor.Dal.Migrations
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
 
             ////////////////////////////////////////////////////
+
+            var inkoArticle1 = new Article
+            {
+                ArticleNr = "10501",
+                Name = "Cresta Extra Inko Extra",
+                ArticleType = ArticleType.IncontinencePad,
+                MaxInkoRewet = 0.5,
+                MinInkoRetention = 180,
+                MaxHyTec1 = 20,
+                MaxHyTec2 = 60,
+                MaxHyTec3 = 85,
+                MaxInkoRewetAfterAquisition = 2
+            };
+            var productionOrder2 = new ProductionOrder
+            {
+                FaNr = "FA654321",
+                StartDateTime = new DateTime(2016, 1, 1),
+                EndDateTime = new DateTime(2018, 1, 1),
+                Machine = machine3,
+                Article = inkoArticle1
+            };
+            context.Articles.AddOrUpdate(a => a.ArticleId, inkoArticle1);
+            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder2);
+
+            ////////////////////////////////////////////////////
             var shift1 = new ShiftSchedule
             {
                 Name = "Mo Nacht",
