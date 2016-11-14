@@ -27,12 +27,13 @@
             <label class="col-sm-2 control-label">Produktions Code:</label>
             <div class="col-sm-10 form-inline">
                 <label class="control-label">
-                    @Html.HiddenFor(m => m.ProductionCode)
+                    @Html.HiddenFor( m => m.ProductionCode )
                     @Model.ProductionCode
                 </label>
                 @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 50px;", type = "text", @required = "required" } )
                 <label class="control-label">/</label>
                 @Html.TextBoxFor( m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" } )
+                <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
             </div>
 
         </div>
