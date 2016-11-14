@@ -30,7 +30,7 @@
                     @Html.HiddenFor( m => m.ProductionCode )
                     @Model.ProductionCode
                 </label>
-                @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 50px;", type = "text", @required = "required" } )
+                @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" } )
                 <label class="control-label">/</label>
                 @Html.TextBoxFor( m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" } )
                 <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
