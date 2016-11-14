@@ -236,11 +236,23 @@
     <Content Include="assets\sass\CreateEdit.css">
       <DependentUpon>CreateEdit.scss</DependentUpon>
     </Content>
+    <Content Include="assets\sass\Labor.css">
+      <DependentUpon>Labor.scss</DependentUpon>
+    </Content>
     <Content Include="assets\sass\layout.css">
       <DependentUpon>layout.scss</DependentUpon>
     </Content>
+    <Content Include="assets\sass\Shell.css">
+      <DependentUpon>Shell.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\ShellSettings.css">
+      <DependentUpon>ShellSettings.scss</DependentUpon>
+    </Content>
     <Content Include="assets\sass\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\Variables.css">
+      <DependentUpon>Variables.scss</DependentUpon>
     </Content>
     <Content Include="resources\css\bootstrap-sortable.css" />
     <Content Include="resources\css\bootstrap-theme.min.css" />

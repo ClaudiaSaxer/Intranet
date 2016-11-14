@@ -73,6 +73,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The FPDry
         /// </value>
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double FPDry { get; set; }
 
         /// <summary>
@@ -81,6 +82,7 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The FPWet
         /// </value>
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double FPWet { get; set; }
 
         /// <summary>

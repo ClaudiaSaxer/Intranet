@@ -6,6 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -129,7 +130,7 @@ namespace Intranet.Labor.Bll
         {
             var testSheet = TestBll.GetTestSheetInfo( testSheetId );
 
-            if ( testSheet.IsNull() )
+            if ( testSheet.IsNull() || testSheet.ArticleType != ArticleType.IncontinencePad)
             {
                 Logger.Error( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
