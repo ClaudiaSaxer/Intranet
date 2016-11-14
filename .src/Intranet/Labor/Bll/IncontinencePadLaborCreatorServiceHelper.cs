@@ -237,7 +237,7 @@ namespace Intranet.Labor.Bll
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the rewet after acquisition with the average</returns>
         public IncontinencePadRewet ToRewetAfterAcquisitionTimeAverage( IEnumerable<TestValue> testValues )
-            => ToRewet( GetIncontinencePadTestValueForType( testValues, TestTypeIncontinencePad.AcquisitionTimeAndRewet, TestValueType.Average ) );
+            => ToRewetAfterAcquisitionTime( GetIncontinencePadTestValueForType( testValues, TestTypeIncontinencePad.AcquisitionTimeAndRewet, TestValueType.Average ) );
 
         /// <summary>
         ///     Creates a rewet after acquisition Standard Deviation with the data from the test values
@@ -245,7 +245,7 @@ namespace Intranet.Labor.Bll
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the rewet after acquisition with the standard deviation</returns>
         public IncontinencePadRewet ToRewetAfterAcquisitionTimeStandardDeviation( IEnumerable<TestValue> testValues )
-            => ToRewet( GetIncontinencePadTestValueForType( testValues, TestTypeIncontinencePad.AcquisitionTimeAndRewet, TestValueType.StandardDeviation ) );
+            => ToRewetAfterAcquisitionTime( GetIncontinencePadTestValueForType( testValues, TestTypeIncontinencePad.AcquisitionTimeAndRewet, TestValueType.StandardDeviation ) );
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
