@@ -103,7 +103,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
             var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
             var target = new BabyDiaperRetentionServiceHelper( new NLogLoggerFactory() )
             {
@@ -148,7 +148,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
             var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
@@ -197,7 +197,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
             var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
@@ -242,7 +242,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
             var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
@@ -287,7 +287,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
             var babyDiaperRetentionBll = MockHelperBll.GetBabyDiaperBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb,null);
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {

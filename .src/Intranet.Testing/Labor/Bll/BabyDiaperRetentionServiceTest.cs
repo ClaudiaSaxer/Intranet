@@ -31,7 +31,7 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper( "IT/11/16/" );
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelper( "IT/11/16/" );
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
@@ -202,7 +202,7 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperIncontinencePadServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
@@ -232,7 +232,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRetentionServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
+                MockHelperIncontinencePadServiceHelper.GetBabyDiaperRetentionServiceHelper(
                     testValue
                 );
 
@@ -254,7 +254,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRetentionServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
+                MockHelperIncontinencePadServiceHelper.GetBabyDiaperRetentionServiceHelper(
                     testValue
                 );
 
@@ -276,7 +276,7 @@ namespace Intranet.Labor.Bll.Test
             var deletedTestValue = new TestValue {TestValueId = 1};
 
             var babyDiaperRetentionServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRetentionServiceHelper(
+                MockHelperIncontinencePadServiceHelper.GetBabyDiaperRetentionServiceHelper(
                     null
                 );
             var babyDiaperBll =

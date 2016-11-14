@@ -11,17 +11,12 @@
         RewetFree,
 
         /// <summary>
-        ///     A Test representing a rewet after acquisation time
-        /// </summary>
-        RewetAfterAcquisitionTime,
-
-        /// <summary>
         ///     A Test representing a retention test
         /// </summary>
         Retention,
 
         /// <summary>
-        ///     A Test representing acquisition time test
+        ///     A Test representing acquisition time test and a rewet after acquisition time test
         /// </summary>
         AcquisitionTimeAndRewet
     }

@@ -166,11 +166,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 {
                     CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.AcquisitionTimeAndRewet ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.Retention ),
-                    CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.RewetAfterAcquisitionTime ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.StandardDeviation, TestTypeIncontinencePad.RewetFree ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.AcquisitionTimeAndRewet ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.Retention ),
-                    CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.RewetAfterAcquisitionTime ),
                     CreateDefaultTestValueIncontinencePad( TestValueType.Average, TestTypeIncontinencePad.RewetFree )
                 };
 

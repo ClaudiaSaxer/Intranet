@@ -113,6 +113,26 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
+        ///     A mock for LaborCreatorBll
+        /// </summary>
+        /// <param name="testSheet">the testsheet</param>
+        /// <returns>a moq for laborcreatorbll</returns>
+        public static IIncontinencePadLaborCreatorBll GetIncontinencePadLaborCreatorBll(TestSheet testSheet)
+        {
+            var mock = new Mock<IIncontinencePadLaborCreatorBll>
+            {
+                Name = "MockHelper.IIncontinencePadLaborCreatorBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetTestSheetForId(It.IsAny<Int32>()))
+                .Returns(testSheet);
+
+            return mock.Object;
+        }
+
+
+        /// <summary>
         ///     A mock for BabyDiaperRetentionBll
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>

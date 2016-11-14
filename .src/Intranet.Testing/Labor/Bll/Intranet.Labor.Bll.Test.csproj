@@ -74,6 +74,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncontinencePadLaborCreaterServiceTest.cs" />
+    <Compile Include="IncontinencePadLaborCreatorServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRetentionServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRetentionServiceTest.cs" />
     <Compile Include="BabyDiaperLaborCreaterServiceTest.cs" />
