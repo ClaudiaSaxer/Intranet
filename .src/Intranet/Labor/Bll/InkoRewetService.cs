@@ -15,6 +15,17 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class InkoRewetService : ServiceBase, IInkoRewetService
     {
+        #region Properties
+
+        /// <summary>
+        ///     Gets or sets the bll for the incontinence rewet test.
+        /// </summary>
+        public IBabyDiaperBll TestBll { get; set; }
+
+
+        #endregion
+
+
         #region Ctor
 
         /// <summary>
