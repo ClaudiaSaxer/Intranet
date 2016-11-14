@@ -16,10 +16,10 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for BabyDiaperServiceHelper
         /// </summary>
         /// <param name="productionCode">productionCode returned by CreateProductionCode</param>
-        /// <returns>a IBabyDiaperServiceHelper moq</returns>
-        public static IBabyDiaperServiceHelper GetBabyDiaperServiceHelper(String productionCode)
+        /// <returns>a ITestServiceHelper moq</returns>
+        public static ITestServiceHelper GetBabyDiaperServiceHelper(String productionCode)
         {
-            var mock = new Mock<IBabyDiaperServiceHelper>
+            var mock = new Mock<ITestServiceHelper>
             {
                 Name = "MockHelper.GetBabyDiaperServiceHelper",
                 DefaultValue = DefaultValue.Mock
@@ -34,10 +34,10 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for BabyDiaperServiceHelper
         /// </summary>
         /// <param name="testValue">testValue returned by CreateNewTestValue</param>
-        /// <returns>a IBabyDiaperServiceHelper moq</returns>
-        public static IBabyDiaperServiceHelper GetBabyDiaperServiceHelperCreateNewTestValue(TestValue testValue)
+        /// <returns>a ITestServiceHelper moq</returns>
+        public static ITestServiceHelper GetBabyDiaperServiceHelperCreateNewTestValue(TestValue testValue)
         {
-            var mock = new Mock<IBabyDiaperServiceHelper>
+            var mock = new Mock<ITestServiceHelper>
             {
                 Name = "MockHelper.GetBabyDiaperServiceHelperCreateNewTestValue",
                 DefaultValue = DefaultValue.Mock

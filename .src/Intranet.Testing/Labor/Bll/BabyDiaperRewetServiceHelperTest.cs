@@ -126,7 +126,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRewetTest(viewModel);
@@ -179,7 +179,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRewetTest(viewModel);
@@ -234,7 +234,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRewetTest(viewModel);

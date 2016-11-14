@@ -29,7 +29,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
-        public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
+        public ITestServiceHelper TestServiceHelper { get; set; }
 
         #endregion
 
@@ -56,7 +56,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
-            var testValue = BabyDiaperServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            var testValue = TestServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
             testValue.ArticleTestType = ArticleType.BabyDiaper;
 
             var babyDiaperTestValue = new BabyDiaperTestValue

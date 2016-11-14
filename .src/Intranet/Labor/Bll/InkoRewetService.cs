@@ -33,7 +33,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the test service helper.
         /// </summary>
-        public IBabyDiaperServiceHelper TestServiceHelper { get; set; }
+        public ITestServiceHelper TestServiceHelper { get; set; }
 
         #endregion
 

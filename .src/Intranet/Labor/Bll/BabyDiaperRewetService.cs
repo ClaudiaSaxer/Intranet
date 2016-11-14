@@ -33,7 +33,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
-        public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
+        public ITestServiceHelper TestServiceHelper { get; set; }
 
         #endregion
 
@@ -109,7 +109,7 @@ namespace Intranet.Labor.Bll
                 TestValueId = rewetTestId,
                 TestSheetId = testValue.TestSheetRefId,
                 TestPerson = testValue.LastEditedPerson,
-                ProductionCode = BabyDiaperServiceHelper.CreateProductionCode( testSheetInfo ),
+                ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
                 ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
                 DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
@@ -150,7 +150,7 @@ namespace Intranet.Labor.Bll
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
-                ProductionCode = BabyDiaperServiceHelper.CreateProductionCode( testSheetInfo ),
+                ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
                 NoteCodes = errorCodes,
                 Notes = new List<TestNote>()
             };

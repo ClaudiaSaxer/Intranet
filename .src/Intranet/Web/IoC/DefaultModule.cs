@@ -134,8 +134,8 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiaperServiceHelper>()
-                   .As<IBabyDiaperServiceHelper>()
+            builder.RegisterType<TestServiceHelper>()
+                   .As<ITestServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 

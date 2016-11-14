@@ -12,7 +12,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     The Interface for the baby diaper service helper
     /// </summary>
-    public interface IBabyDiaperServiceHelper
+    public interface ITestServiceHelper
     {
         /// <summary>
         ///     Creates a new testvalue initialized with following values

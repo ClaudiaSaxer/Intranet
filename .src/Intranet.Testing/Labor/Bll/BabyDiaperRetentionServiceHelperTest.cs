@@ -108,7 +108,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRetentionTest( viewModel );
@@ -153,7 +153,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRetentionTest(viewModel);
@@ -202,7 +202,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRetentionTest(viewModel);
@@ -247,7 +247,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRetentionTest(viewModel);
@@ -292,7 +292,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.SaveNewRetentionTest(viewModel);

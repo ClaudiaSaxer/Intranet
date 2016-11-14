@@ -36,7 +36,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetNewBabyDiapersRetentionEditViewModel(1);
@@ -207,7 +207,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRetentionService(new NLogLoggerFactory())
             {
                 BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetBabyDiapersRetentionEditViewModel(1);
