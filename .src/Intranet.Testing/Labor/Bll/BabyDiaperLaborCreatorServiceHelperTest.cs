@@ -1057,7 +1057,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing toTestInfo
+        ///     Testing ToTestInfo
         /// </summary>
         [Fact]
         public void ToTestInfoTest()

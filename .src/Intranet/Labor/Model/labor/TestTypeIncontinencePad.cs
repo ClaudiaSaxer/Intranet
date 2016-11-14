@@ -23,6 +23,6 @@
         /// <summary>
         ///     A Test representing acquisition time test
         /// </summary>
-        AcquisitionTime
+        AcquisitionTimeAndRewet
     }
 }

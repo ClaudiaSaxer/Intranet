@@ -7,7 +7,7 @@ namespace Intranet.Labor.Definition
     /// <summary>
     ///     Interface representing the labor creator bll
     /// </summary>
-    public interface IBabyDiaperLaborCreatorBll
+    public interface IIncontinencePadLaborCreatorBll
     {
         /// <summary>
         ///     Gets the testsheet for the given id from the database

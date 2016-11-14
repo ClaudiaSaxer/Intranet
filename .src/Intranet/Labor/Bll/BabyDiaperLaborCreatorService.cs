@@ -50,7 +50,7 @@ namespace Intranet.Labor.Bll
         {
             try
             {
-                var testSheet = BabyDiaperLaborCreatorBll.getTestSheetForId(testSheetId);
+                var testSheet = BabyDiaperLaborCreatorBll.GetTestSheetForId(testSheetId);
                 var babydiaper = testSheet.TestValues.ToList()
                                           .Where(x => x.ArticleTestType == ArticleType.BabyDiaper)
                                           .ToList();

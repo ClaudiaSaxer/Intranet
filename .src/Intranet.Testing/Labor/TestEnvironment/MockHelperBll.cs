@@ -106,7 +106,7 @@ namespace Intranet.Labor.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup( x => x.getTestSheetForId( It.IsAny<Int32>() ) )
+            mock.Setup( x => x.GetTestSheetForId( It.IsAny<Int32>() ) )
                 .Returns( testSheet );
 
             return mock.Object;

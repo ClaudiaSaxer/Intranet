@@ -218,6 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
+    <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
