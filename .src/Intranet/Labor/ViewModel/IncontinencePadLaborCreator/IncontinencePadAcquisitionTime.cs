@@ -1,4 +1,5 @@
 ﻿using System;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -27,6 +28,20 @@ namespace Intranet.Labor.ViewModel
         /// <value>acquisition time value for the third addition</value>
         public Double AcquisitionTimeAdditionThird { get; set; }
 
-
+        /// <summary>
+        ///     Gets or sets the RW type
+        /// </summary>
+        /// <value>the RW type</value>
+        public RwType AcquisitionTimeAdditionFirstRW { get; set; }
+        /// <summary>
+        ///     Gets or sets the RW type
+        /// </summary>
+        /// <value>the RW type</value>
+        public RwType AcquisitionTimeAdditionSecondRW { get; set; }
+        /// <summary>
+        ///     Gets or sets the RW type
+        /// </summary>
+        /// <value>the RW type</value>
+        public RwType AcquisitionTimeAdditionThirdRW { get; set; }
     }
 }
