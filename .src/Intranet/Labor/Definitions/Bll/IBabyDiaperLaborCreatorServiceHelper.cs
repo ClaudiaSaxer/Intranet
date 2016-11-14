@@ -147,14 +147,14 @@ namespace Intranet.Labor.Definition
         ICollection<BabyDiaperRewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates to TestInfo from diffrent input data
+        ///     Creates to BabyDiaperTestInfo from diffrent input data
         /// </summary>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the prodcution code from the diaper</param>
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
-        /// <returns>a TestInfo</returns>
-        TestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId);
+        /// <returns>a BabyDiaperTestInfo</returns>
+        BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId);
 
         /// <summary>
         ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input

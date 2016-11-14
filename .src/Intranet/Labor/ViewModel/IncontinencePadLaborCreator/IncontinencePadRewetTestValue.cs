@@ -3,7 +3,7 @@
     /// <summary>
     ///     Class representing the view model of the rewet test value
     /// </summary>
-    public class BabyDiaperRewetTestValue
+    public class IncontinencePadRewetTestValue
     {
         #region Properties
 
@@ -11,13 +11,13 @@
         ///     Gets or sets the rewet data
         /// </summary>
         /// <value>the rewet data</value>
-        public BabyDiaperRewet BabyDiaperRewet { get; set; }
+        public IncontinencePadRewet IncontinencePadRewet { get; set; }
 
         /// <summary>
         ///     Gets or sets the test info
         /// </summary>
         /// <value>the test info</value>
-        public BabyDiaperTestInfo BabyDiaperTestInfo { get; set; }
+        public IncontinencePadTestInfo IncontinencePadTestInfo { get; set; }
 
         #endregion
     }

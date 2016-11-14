@@ -3,21 +3,20 @@
     /// <summary>
     ///     Class representing the view model of the penetration time test value
     /// </summary>
-    public class BabyDiaperPenetrationTimeTestValue
+    public class IncontinencePadAcquisitionTimeTestValue
     {
         #region Properties
-
         /// <summary>
         ///     Gets or sets the test info
         /// </summary>
         /// <value>the test info</value>
-        public BabyDiaperTestInfo BabyDiaperTestInfo { get; set; }
+        public IncontinencePadTestInfo IncontinencePadTestInfo { get; set; }
 
         /// <summary>
-        ///     Gets or sets the penetration time data
+        ///     Gets or sets the acquisition time data
         /// </summary>
-        /// <value>the penetration time data</value>
-        public BabyDiaperPenetrationTime BabyDiaperPenetrationTime { get; set; }
+        /// <value>the acquisition time data</value>
+        public IncontinencePadAcquisitionTime AcquisitionTime { get; set; }
 
         #endregion
     }

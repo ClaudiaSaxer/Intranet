@@ -1,0 +1,34 @@
+﻿using System;
+using Intranet.Labor.Model.labor;
+
+namespace Intranet.Labor.ViewModel
+{
+    /// <summary>
+    ///     Class representing the view model of the rewet
+    /// </summary>
+    public class IncontinencePadRewet
+    {
+        #region Properties
+
+      
+        /// <summary>
+        ///     Gets or sets the wet weight value
+        /// </summary>
+        /// <value>the wet weight value </value>
+        public Double WeightWet { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the weight diff value
+        /// </summary>
+        /// <value>the weight diff value </value>
+        public Double WeightDiff { get; set; }
+
+
+        /// <summary>
+        ///     Gets or sets the RW type
+        /// </summary>
+        /// <value>the RW type</value>
+        public RwType RewetRW { get; set; }
+        #endregion
+    }
+}

@@ -47,6 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadTestInfo.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTime.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTimeTestValue.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadLaborCreatorViewModel.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRetention.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRetentionTestValue.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewet.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewetTestValue.cs" />
     <Compile Include="BabyDiaperRetention\BabyDiaperRetentionEditViewModel.cs" />
     <Compile Include="BabyDiaperRetention\ErrorCode.cs" />
     <Compile Include="BabyDiaperRewet\BabyDiaperRewetEditViewModel.cs" />
@@ -58,7 +66,7 @@
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetentionTestValue.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewet.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewetTestValue.cs" />
-    <Compile Include="BabyDiaperLaborCreator\TestInfo.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperTestInfo.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperLaborCreatorViewModel.cs" />
     <Compile Include="LaborHomeViewModel.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTime.cs" />
@@ -73,6 +81,9 @@
       <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
       <Name>Intranet.Labor.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestTypeLaborCreator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
