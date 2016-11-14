@@ -540,6 +540,278 @@ namespace Intranet.Labor.Dal.Migrations
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTestAverage);
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestStandardDeviation);
             context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestAverage);
+
+
+
+            //------------------Incontinence Pad -----------------
+            var testSheet2 = new TestSheet
+            {
+                TestSheetId = 22,
+                FaNr = "FA666",
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                ShiftType = ShiftType.Night,
+                MachineNr = "M11",
+                ProductName = "Cresta Extra",
+                SizeName = "Inko Extra",
+                ArticleType = ArticleType.IncontinencePad
+             
+            };
+
+            var incontinencePadRewetTestValue1 = new TestValue
+            {
+                TestValueId = 21,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                DayInYearOfArticleCreation = 307,
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Single,
+                TestSheetRefId = 1
+            };
+            var incontinencePadRetentionTestValueAverage = new TestValue
+            {
+                TestValueId = 22,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Average,
+                TestSheetRefId = 1
+            };
+            var incontinencePadRetentionTestValueStandardDeviation = new TestValue
+            {
+                TestValueId = 23,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.StandardDeviation,
+                TestSheetRefId = 1
+            };
+            var incontinencePadRewetTestValueAverage = new TestValue
+            {
+                TestValueId = 24,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Average,
+                TestSheetRefId = 1
+            };
+            var incontinencePadRewetTestValueStandardDeviation = new TestValue
+            {
+                TestValueId = 25,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.StandardDeviation,
+                TestSheetRefId = 1
+            };
+            var incontinencePadAcquisitionTimeTestValueAverage = new TestValue
+            {
+                TestValueId = 26,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Average,
+                TestSheetRefId = 1
+            };
+            var incontinencePadAcquisitionTimeTestValueStandardDeviation = new TestValue
+            {
+                TestValueId = 27,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.StandardDeviation,
+                TestSheetRefId = 1
+            };
+
+            var incontinencePadRewetTest1 = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 21,
+               IncontinencePadTime = new TimeSpan(1, 38, 0),
+                RewetFreeRw = RwType.Better,
+                RewetFreeDifference = 1.0,
+                RewetFreeDryValue = 2.0,RewetFreeWetValue = 45.0,
+                TestType = TestTypeIncontinencePad.RewetFree
+                
+            };
+            var incontinencePadRewetTestAverage = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 22,
+                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                RewetFreeRw = RwType.Better,
+                RewetFreeDifference = 1.0,
+                RewetFreeDryValue = 2.0,
+                RewetFreeWetValue = 45.0,
+                TestType = TestTypeIncontinencePad.RewetFree
+            };
+            var incontinencePadRewetTestStandardDeviation = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 23,
+                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                RewetFreeRw = RwType.Better,
+                RewetFreeDifference = 1.0,
+                RewetFreeDryValue = 2.0,
+                RewetFreeWetValue = 45.0,
+                TestType = TestTypeIncontinencePad.RewetFree
+            };
+
+
+
+            incontinencePadRewetTestValue1.IncontinencePadTestValue = incontinencePadRewetTest1;
+
+            var testNote2 = new TestValueNote
+            {
+                Error = error2,
+                Message = "Testnotiz"
+            };
+            var incontinencePadRetentionTestValue1 = new TestValue
+            {
+                TestValueId = 22,
+                CreatedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                DayInYearOfArticleCreation = 307,
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Single,
+                TestSheetRefId = 1,
+                TestValueNote = new List<TestValueNote> { testNote2 }
+            };
+            testNote.TestValue = incontinencePadRetentionTestValue1;
+            var incontinencePadRetentionTest1 = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 23,
+                IncontinencePadTime =  new TimeSpan(1, 38, 0),
+                RetentionRw = RwType.Better,RetentionWeight = 2.0,
+                RetentionEndValue = 4.0,
+                RetentionAbsorbtion = 2.0,
+                RetentionWetValue = 12.0,
+                RetentionAfterZentrifuge = 2.0,
+                TestType = TestTypeIncontinencePad.Retention
+            };
+            incontinencePadRetentionTestValue1.IncontinencePadTestValue = incontinencePadRetentionTest1;
+
+            var incontinencePadRetentionTestAverage = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 24,
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
+                RetentionRw = RwType.Better,
+                RetentionWeight = 2.0,
+                RetentionEndValue = 4.0,
+                RetentionAbsorbtion = 2.0,
+                RetentionWetValue = 12.0,
+                RetentionAfterZentrifuge = 2.0,
+                TestType = TestTypeIncontinencePad.Retention
+            };
+
+            var incontinencePadRetentionTestStandardDeviation = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 25,
+                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                RetentionRw = RwType.Better,
+                RetentionWeight = 2.0,
+                RetentionEndValue = 4.0,
+                RetentionAbsorbtion = 2.0,
+                RetentionWetValue = 12.0,
+                RetentionAfterZentrifuge = 2.0,
+                TestType = TestTypeIncontinencePad.Retention
+            };
+            var incontinencePadAcquisitionTimeTestAverage = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 26,
+                AcquisitionTimeThirdRw = RwType.Better,
+                AcquisitionTimeSecondRw = RwType.Better,
+                AcquisitionTimeFirstRw = RwType.Better,
+                AcquisitionTimeThird =  12,
+                AcquisitionTimeFirst = 1,
+                AcquisitionWeight = 12,
+                AcquisitionTimeSecond = 12,
+                RewetAfterAcquisitionTimeRw = RwType.Better,
+                RewetAfterAcquisitionTimeDryWeight = 12,
+                RewetAfterAcquisitionTimeWeightDifference = 12,
+                RewetAfterAcquisitionTimeWetWeight = 14,
+                IncontinencePadTime = new TimeSpan(0, 0, 0),
+               
+                TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
+            };
+            var incontinencePadAcquisitionTimeTestStandardDeviation = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 27,
+                AcquisitionTimeThirdRw = RwType.Better,
+                AcquisitionTimeSecondRw = RwType.Better,
+                AcquisitionTimeFirstRw = RwType.Better,
+                AcquisitionTimeThird = 12,
+                AcquisitionTimeFirst = 1,
+                AcquisitionWeight = 12,
+                AcquisitionTimeSecond = 12,
+                RewetAfterAcquisitionTimeRw = RwType.Better,
+                RewetAfterAcquisitionTimeDryWeight = 12,
+                RewetAfterAcquisitionTimeWeightDifference = 12,
+                RewetAfterAcquisitionTimeWetWeight = 14,
+                IncontinencePadTime = new TimeSpan(0, 0, 0),
+                TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
+            };
+
+            incontinencePadRewetTestValue1.IncontinencePadTestValue = incontinencePadRewetTest1;
+            //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
+
+            //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
+            incontinencePadRewetTestValueAverage.IncontinencePadTestValue = incontinencePadRewetTestAverage;
+            //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
+           incontinencePadRewetTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRewetTestStandardDeviation;
+
+            //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
+            incontinencePadRetentionTestValueAverage.IncontinencePadTestValue = incontinencePadRetentionTestAverage;
+            //babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
+            incontinencePadRetentionTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRetentionTestStandardDeviation;
+
+            //babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
+            babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValue = babyDiapersPenetrationTimeTestAverage;
+            //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
+            incontinencePadAcquisitionTimeTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadAcquisitionTimeTestStandardDeviation;
+
+
+            testSheet2.TestValues = new List<TestValue>
+            {
+               incontinencePadRewetTestValue1,
+                incontinencePadRetentionTestValue1,
+               incontinencePadRetentionTestValueAverage,
+                incontinencePadRetentionTestValueStandardDeviation,
+              incontinencePadRewetTestValueAverage,
+              incontinencePadRewetTestValueStandardDeviation,
+              incontinencePadAcquisitionTimeTestValueAverage,
+          incontinencePadAcquisitionTimeTestValueStandardDeviation
+            };
+            context.TestSheets.AddOrUpdate(m => m.FaNr, testSheet2);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValue1);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValueAverage);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValueStandardDeviation);
+
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRetentionTestValueAverage);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRetentionTestValueStandardDeviation);
+
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadAcquisitionTimeTestValueAverage);
+            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadAcquisitionTimeTestValueStandardDeviation);
+
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTest1);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTestStandardDeviation);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTestAverage);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRetentionTestStandardDeviation);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRetentionTestAverage);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestStandardDeviation);
+            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestAverage);
         }
     }
 }
