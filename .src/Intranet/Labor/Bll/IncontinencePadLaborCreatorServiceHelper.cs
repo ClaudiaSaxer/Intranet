@@ -110,7 +110,7 @@ namespace Intranet.Labor.Bll
             {
                 IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, testValueId ),
                 AcquisitionTime = ToAcquisitionTime( acquisitionTime ),
-                RewetAfterAcquisitionTime = ToRewet( acquisitionTime )
+                RewetAfterAcquisitionTime = ToRewetAfterAcquisitionTime( acquisitionTime )
             };
             return vm;
         }
@@ -205,14 +205,32 @@ namespace Intranet.Labor.Bll
 
             return
                 new IncontinencePadRewet
-                {
-                    WeightDry = rewet.RewetFreeDryValue,
+                { 
+                    WeightDry = rewet.RewetFreeDryValue, 
                     WeightWet = rewet.RewetFreeWetValue,
                     WeightDiff = rewet.RewetFreeDifference,
                     RewetRW = rewet.RewetFreeRw
                 };
         }
 
+        /// <summary>
+        ///     Sets the values for the rewet View Model out of the incontinence pad TestValue Model
+        /// </summary>
+        /// <param name="rewet">the incontinence pad Test value with the rewet after acquisition data</param>
+        /// <returns>The rewet after acquisition View Model with the data collected from the model</returns>
+        public IncontinencePadRewet ToRewetAfterAcquisitionTime(IncontinencePadTestValue rewet)
+        {
+            ValidateRequiredItem(rewet.RewetAfterAcquisitionTimeRw, "rewet after acquisition rw");
+
+            return
+                new IncontinencePadRewet
+                {
+                    WeightDry = rewet.RewetAfterAcquisitionTimeDryWeight,
+                    WeightWet = rewet.RewetAfterAcquisitionTimeWetWeight,
+                    WeightDiff = rewet.RewetAfterAcquisitionTimeWeightDifference,
+                    RewetRW = rewet.RewetAfterAcquisitionTimeRw
+                };
+        }
         /// <summary>
         ///     Creates a rewet after acquisition  Average with the data from the test values
         /// </summary>

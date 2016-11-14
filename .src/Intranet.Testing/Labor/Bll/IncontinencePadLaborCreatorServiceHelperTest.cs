@@ -831,6 +831,41 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         }
 
         /// <summary>
+        ///     Testing to ToRewetAfterAcquisition ok
+        /// </summary>
+        [Fact]
+        public void ToRewetAfterAcquisitionTestOk()
+        {
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
+            var expected = new IncontinencePadRewet
+            {
+                RewetRW = RwType.Ok,
+                WeightDry = 1.0,
+                WeightWet = 2.0,
+                WeightDiff = 1.0
+            };
+            var actual = serviceHelper.ToRewetAfterAcquisitionTime(
+                new IncontinencePadTestValue
+                {
+                    RewetAfterAcquisitionTimeRw = RwType.Ok,
+                    RewetAfterAcquisitionTimeDryWeight = 1.0,
+                    RewetAfterAcquisitionTimeWetWeight = 2.0,
+                    RewetAfterAcquisitionTimeWeightDifference = 1.0
+                });
+
+
+            actual.RewetRW.Should()
+                  .Be(expected.RewetRW);
+            actual.WeightDiff.Should()
+                  .Be(expected.WeightDiff);
+            actual.WeightDry.Should()
+                  .Be(expected.WeightDry);
+            actual.WeightWet.Should()
+                  .Be(expected.WeightWet);
+
+            actual.ShouldBeEquivalentTo(expected);
+        }
+        /// <summary>
         ///     Testing ToRewetTestValueCollection ok
         /// </summary>
         [Fact]
