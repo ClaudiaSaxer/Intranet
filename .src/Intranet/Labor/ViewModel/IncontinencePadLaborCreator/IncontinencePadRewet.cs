@@ -18,6 +18,12 @@ namespace Intranet.Labor.ViewModel
         public Double WeightWet { get; set; }
 
         /// <summary>
+        ///     Gets or sets the weight the diaper has if it is dry
+        /// </summary>
+        /// <value>the weight of the dry diaper</value>
+        public Double WeightDry { get; set; }
+
+        /// <summary>
         ///     Gets or sets the weight diff value
         /// </summary>
         /// <value>the weight diff value </value>

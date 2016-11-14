@@ -20,11 +20,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the production code from the diaper</value>
         public String ProductionCode { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the weight the diaper has if it is dry
-        /// </summary>
-        /// <value>the weight of the dry diaper</value>
-        public Double WeightyIncontinencePadDry { get; set; }
 
         /// <summary>
         /// Gets or setst the testvalue id

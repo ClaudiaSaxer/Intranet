@@ -56,13 +56,13 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the average of the rewets
         /// </summary>
         /// <value>the average of the rewet</value>
-        public IncontinencePadRewet IncontinencePadRewetAverage { get; set; }
+        public IncontinencePadRewet RewetAverage { get; set; }
 
         /// <summary>
         ///     Gets or sets the standard deviaion of the rewets
         /// </summary>
         /// <value>the standard deviation of the rewets</value>
-        public IncontinencePadRewet IncontinencePadRewetStandardDeviation { get; set; }
+        public IncontinencePadRewet RewetStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the retentions
@@ -75,19 +75,19 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the average of the retention</value>
         public
-            IncontinencePadRetention IncontinencePadRetentionAverage { get; set; }
+            IncontinencePadRetention RetentionAverage { get; set; }
 
         /// <summary>
         ///     Gets or sets the standard deviaion of the retention
         /// </summary>
         /// <value>the standard deviation of the retention</value>
-        public IncontinencePadRetention IncontinencePadRetentionStandardDeviation { get; set; }
+        public IncontinencePadRetention RetentionStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the aquisation time
         /// </summary>
         /// <value>collection of aquisation time</value>
-        public ICollection<IncontinencePadAcquisitionTime> AcquisitionTimes { get; set; }
+        public ICollection<IncontinencePadAcquisitionTimeTestValue> AcquisitionTimes { get; set; }
 
         /// <summary>
         ///     Gets or sets the average of the aquisation time
@@ -96,10 +96,23 @@ namespace Intranet.Labor.ViewModel
         public IncontinencePadAcquisitionTime AcquisitionTimeAverage { get; set; }
 
         /// <summary>
-        ///     Gets or sets the standard deviaion of the penetration time
+        ///     Gets or sets the standard deviaion of the  aquisition  time
         /// </summary>
-        /// <value>the standard deviation of the penetration time</value>
+        /// <value>the standard deviation of the  aquisition  time</value>
         public IncontinencePadAcquisitionTime AcquisitionTimeStandardDeviation { get; set; }
+
+
+        /// <summary>
+        ///     Gets or sets the average of the aquisation time
+        /// </summary>
+        /// <value>the average of the aquisation time</value>
+        public IncontinencePadRewet RewetAfterAcquisitionTimeAverage { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the standard deviaion of the rewet adter aquisition  time
+        /// </summary>
+        /// <value>the standard deviation of the  aquisition  time</value>
+        public IncontinencePadRewet RewetAfterAcquisitionTimeStandardDeviation { get; set; }
 
         /// <summary>
         ///     Gets or sets the average of all tests

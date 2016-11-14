@@ -40,6 +40,12 @@ namespace Intranet.Labor.ViewModel
         /// <value>the weight of a wet diaper after retention</value>
         public Double RetentionWetWeight { get; set; }
 
+        /// <summary>
+        ///     Gets or sets the weight the diaper has if it is dry
+        /// </summary>
+        /// <value>the weight of the dry diaper</value>
+        public Double RetentionDryWeight { get; set; }
+
         #endregion
     }
 }
