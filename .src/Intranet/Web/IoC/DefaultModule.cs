@@ -250,6 +250,12 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
+            builder.RegisterAssemblyTypes(typeof(IncontinencePadTestValueRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
 
         }
 

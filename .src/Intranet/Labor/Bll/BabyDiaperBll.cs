@@ -32,7 +32,7 @@ namespace Intranet.Labor.Bll
         public IGenericRepository<Error> ErrorRepository { get; set; }
 
         /// <summary>
-        ///     BabyDiaperTestValueRepository
+        ///     TestValueRepository
         /// </summary>
         public IGenericRepository<TestValue> TestValueRepository { get; set; }
 
@@ -42,9 +42,14 @@ namespace Intranet.Labor.Bll
         public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
 
         /// <summary>
-        ///     ProductionOrderRepository
+        ///     BabyDiaperTestValueRepository
         /// </summary>
         public IGenericRepository<BabyDiaperTestValue> BabyDiaperTestValueRepository { get; set; }
+
+        /// <summary>
+        ///     IncontinencePadTestValueRepository
+        /// </summary>
+        public IGenericRepository<IncontinencePadTestValue> IncontinencePadTestValueRepository { get; set; }
 
         #endregion
 
@@ -139,9 +144,18 @@ namespace Intranet.Labor.Bll
                                                .Result;*/
             //testSheet.TestValues.Remove( testValue );
             //TestSheetRepository.SaveChanges();
-            BabyDiaperTestValueRepository.Attach( testValue.BabyDiaperTestValue );
-            BabyDiaperTestValueRepository.Remove( testValue.BabyDiaperTestValue );
-            BabyDiaperTestValueRepository.SaveChanges();
+            if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
+            {
+                BabyDiaperTestValueRepository.Attach( testValue.BabyDiaperTestValue );
+                BabyDiaperTestValueRepository.Remove( testValue.BabyDiaperTestValue );
+                BabyDiaperTestValueRepository.SaveChanges();
+            }
+            else
+            {
+                IncontinencePadTestValueRepository.Attach(testValue.IncontinencePadTestValue);
+                IncontinencePadTestValueRepository.Remove(testValue.IncontinencePadTestValue);
+                IncontinencePadTestValueRepository.SaveChanges();
+            }
             TestValueRepository.Attach(testValue);
             var result = TestValueRepository.Remove( testValue );
             TestValueRepository.SaveChanges();
