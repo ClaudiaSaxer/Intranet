@@ -1,10 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel.InkoEdit
 {
@@ -13,6 +14,8 @@ namespace Intranet.Labor.ViewModel.InkoEdit
     /// </summary>
     public class InkoRewetEditViewModel
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the ID of the Inko test
         /// </summary>
@@ -51,9 +54,9 @@ namespace Intranet.Labor.ViewModel.InkoEdit
         /// <value>
         ///     The ProductionCodeDay
         /// </value>
-        [DisplayName("Tag im Jahr")]
-        [Required(ErrorMessage = "Der Tag muss angegeben werden")]
-        [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
+        [DisplayName( "Tag im Jahr" )]
+        [Required( ErrorMessage = "Der Tag muss angegeben werden" )]
+        [Range( 0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten" )]
         public Int32 ProductionCodeDay { get; set; }
 
         /// <summary>
@@ -87,6 +90,7 @@ namespace Intranet.Labor.ViewModel.InkoEdit
         ///     The Collection of Notes
         /// </value>
         public IList<TestNote> Notes { get; set; }
+
         /// <summary>
         ///     Gets or sets the Collection of NoteCodes
         /// </summary>
@@ -94,5 +98,7 @@ namespace Intranet.Labor.ViewModel.InkoEdit
         ///     The Collection of NoteCodes
         /// </value>
         public IList<ErrorCode> NoteCodes { get; set; }
+
+        #endregion
     }
 }
