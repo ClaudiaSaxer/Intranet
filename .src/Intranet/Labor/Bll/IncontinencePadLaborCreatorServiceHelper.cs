@@ -109,7 +109,8 @@ namespace Intranet.Labor.Bll
             var vm = new IncontinencePadAcquisitionTimeTestValue
             {
                 IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, testValueId ),
-                AcquisitionTime = ToAcquisitionTime( acquisitionTime )
+                AcquisitionTime = ToAcquisitionTime( acquisitionTime ),
+                RewetAfterAcquisitionTime = ToRewet( acquisitionTime )
             };
             return vm;
         }
@@ -174,6 +175,7 @@ namespace Intranet.Labor.Bll
             {
                 IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, testValueId ),
                 IncontinencePadRetention = ToRetention( retention )
+                
             };
             return vm;
         }

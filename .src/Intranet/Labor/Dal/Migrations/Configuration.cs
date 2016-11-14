@@ -66,7 +66,7 @@ namespace Intranet.Labor.Dal.Migrations
             {
                 MachineNr = "M49"
             };
-            context.Machines.AddOrUpdate( m => m.MachineId, machine1, machine2, machine3);
+            context.Machines.AddOrUpdate( m => m.MachineId, machine1, machine2, machine3 );
 
             var article1 = new Article
             {
@@ -94,8 +94,8 @@ namespace Intranet.Labor.Dal.Migrations
             var productionOrder1 = new ProductionOrder
             {
                 FaNr = "FA123456",
-                StartDateTime = new DateTime(2016,1,1),
-                EndDateTime = new DateTime(2018,1,1),
+                StartDateTime = new DateTime( 2016, 1, 1 ),
+                EndDateTime = new DateTime( 2018, 1, 1 ),
                 Machine = machine2,
                 Component = productionOrderComponent1,
                 Article = article1
@@ -121,8 +121,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Morning,
                 StartDay = DayOfWeek.Monday,
                 EndDay = DayOfWeek.Monday,
-                StartTime = new TimeSpan(05, 00, 00),
-                EndTime = new TimeSpan(13, 59, 59)
+                StartTime = new TimeSpan( 05, 00, 00 ),
+                EndTime = new TimeSpan( 13, 59, 59 )
             };
             var shift3 = new ShiftSchedule
             {
@@ -130,8 +130,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Late,
                 StartDay = DayOfWeek.Monday,
                 EndDay = DayOfWeek.Monday,
-                StartTime = new TimeSpan(14, 00, 00),
-                EndTime = new TimeSpan(22, 59, 59)
+                StartTime = new TimeSpan( 14, 00, 00 ),
+                EndTime = new TimeSpan( 22, 59, 59 )
             };
             var shift4 = new ShiftSchedule
             {
@@ -139,8 +139,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Night,
                 StartDay = DayOfWeek.Monday,
                 EndDay = DayOfWeek.Tuesday,
-                StartTime = new TimeSpan(22, 00, 00),
-                EndTime = new TimeSpan(04, 59, 59)
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
             };
             var shift5 = new ShiftSchedule
             {
@@ -148,8 +148,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Morning,
                 StartDay = DayOfWeek.Tuesday,
                 EndDay = DayOfWeek.Tuesday,
-                StartTime = new TimeSpan(05, 00, 00),
-                EndTime = new TimeSpan(13, 59, 59)
+                StartTime = new TimeSpan( 05, 00, 00 ),
+                EndTime = new TimeSpan( 13, 59, 59 )
             };
             var shift6 = new ShiftSchedule
             {
@@ -157,8 +157,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Late,
                 StartDay = DayOfWeek.Tuesday,
                 EndDay = DayOfWeek.Tuesday,
-                StartTime = new TimeSpan(14, 00, 00),
-                EndTime = new TimeSpan(22, 59, 59)
+                StartTime = new TimeSpan( 14, 00, 00 ),
+                EndTime = new TimeSpan( 22, 59, 59 )
             };
             var shift7 = new ShiftSchedule
             {
@@ -166,8 +166,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Night,
                 StartDay = DayOfWeek.Tuesday,
                 EndDay = DayOfWeek.Wednesday,
-                StartTime = new TimeSpan(22, 00, 00),
-                EndTime = new TimeSpan(04, 59, 59)
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
             };
             var shift8 = new ShiftSchedule
             {
@@ -175,8 +175,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Morning,
                 StartDay = DayOfWeek.Wednesday,
                 EndDay = DayOfWeek.Wednesday,
-                StartTime = new TimeSpan(05, 00, 00),
-                EndTime = new TimeSpan(13, 59, 59)
+                StartTime = new TimeSpan( 05, 00, 00 ),
+                EndTime = new TimeSpan( 13, 59, 59 )
             };
             var shift9 = new ShiftSchedule
             {
@@ -184,8 +184,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Late,
                 StartDay = DayOfWeek.Wednesday,
                 EndDay = DayOfWeek.Wednesday,
-                StartTime = new TimeSpan(14, 00, 00),
-                EndTime = new TimeSpan(22, 59, 59)
+                StartTime = new TimeSpan( 14, 00, 00 ),
+                EndTime = new TimeSpan( 22, 59, 59 )
             };
             var shift10 = new ShiftSchedule
             {
@@ -193,8 +193,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Night,
                 StartDay = DayOfWeek.Wednesday,
                 EndDay = DayOfWeek.Thursday,
-                StartTime = new TimeSpan(22, 00, 00),
-                EndTime = new TimeSpan(04, 59, 59)
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
             };
             var shift11 = new ShiftSchedule
             {
@@ -202,8 +202,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Morning,
                 StartDay = DayOfWeek.Thursday,
                 EndDay = DayOfWeek.Thursday,
-                StartTime = new TimeSpan(05, 00, 00),
-                EndTime = new TimeSpan(13, 59, 59)
+                StartTime = new TimeSpan( 05, 00, 00 ),
+                EndTime = new TimeSpan( 13, 59, 59 )
             };
             var shift12 = new ShiftSchedule
             {
@@ -211,8 +211,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Late,
                 StartDay = DayOfWeek.Thursday,
                 EndDay = DayOfWeek.Thursday,
-                StartTime = new TimeSpan(14, 00, 00),
-                EndTime = new TimeSpan(22, 59, 59)
+                StartTime = new TimeSpan( 14, 00, 00 ),
+                EndTime = new TimeSpan( 22, 59, 59 )
             };
             var shift13 = new ShiftSchedule
             {
@@ -220,8 +220,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Night,
                 StartDay = DayOfWeek.Thursday,
                 EndDay = DayOfWeek.Friday,
-                StartTime = new TimeSpan(22, 00, 00),
-                EndTime = new TimeSpan(04, 59, 59)
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
             };
             var shift14 = new ShiftSchedule
             {
@@ -229,8 +229,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Morning,
                 StartDay = DayOfWeek.Friday,
                 EndDay = DayOfWeek.Friday,
-                StartTime = new TimeSpan(05, 00, 00),
-                EndTime = new TimeSpan(13, 59, 59)
+                StartTime = new TimeSpan( 05, 00, 00 ),
+                EndTime = new TimeSpan( 13, 59, 59 )
             };
             var shift15 = new ShiftSchedule
             {
@@ -238,8 +238,8 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Late,
                 StartDay = DayOfWeek.Friday,
                 EndDay = DayOfWeek.Friday,
-                StartTime = new TimeSpan(14, 00, 00),
-                EndTime = new TimeSpan(22, 59, 59)
+                StartTime = new TimeSpan( 14, 00, 00 ),
+                EndTime = new TimeSpan( 22, 59, 59 )
             };
             var shift16 = new ShiftSchedule
             {
@@ -247,26 +247,26 @@ namespace Intranet.Labor.Dal.Migrations
                 ShiftType = ShiftType.Night,
                 StartDay = DayOfWeek.Friday,
                 EndDay = DayOfWeek.Saturday,
-                StartTime = new TimeSpan(22, 00, 00),
-                EndTime = new TimeSpan(04, 59, 59)
+                StartTime = new TimeSpan( 22, 00, 00 ),
+                EndTime = new TimeSpan( 04, 59, 59 )
             };
 
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift1);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift2);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift3);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift4);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift5);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift6);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift7);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift8);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift9);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift10);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift11);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift12);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift13);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift14);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift15);
-            context.ShiftSchedules.AddOrUpdate(s => s.Name, shift16);
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift1 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift2 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift3 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift4 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift5 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift6 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift7 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift8 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift9 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift10 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift11 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift12 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift13 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift14 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift15 );
+            context.ShiftSchedules.AddOrUpdate( s => s.Name, shift16 );
             ////////////////////////////////////////////////////
 
             var testSheet = new TestSheet
@@ -289,9 +289,9 @@ namespace Intranet.Labor.Dal.Migrations
 
             var babyDiapersRewetTestValue1 = new TestValue
             {
-				TestValueId = 1,
-                CreatedDateTime = new DateTime(2016, 11, 2,1,50,0),
-                LastEditedDateTime = new DateTime(2016, 11, 2,1,50,0),
+                TestValueId = 1,
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 DayInYearOfArticleCreation = 307,
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
@@ -324,8 +324,8 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRewetTestValueAverage = new TestValue
             {
                 TestValueId = 4,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
@@ -335,8 +335,8 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRewetTestValueStandardDeviation = new TestValue
             {
                 TestValueId = 5,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
@@ -346,8 +346,8 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersPenetrationTimeTestValueAverage = new TestValue
             {
                 TestValueId = 6,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
@@ -357,15 +357,15 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersPenetrationTimeTestValueStandardDeviation = new TestValue
             {
                 TestValueId = 7,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.StandardDeviation,
                 TestSheetRefId = 1
             };
-			
+
             var babyDiapersRewetTest1 = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 1,
@@ -382,7 +382,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRewetTestAverage = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 2,
-                DiaperCreatedTime = new TimeSpan(1, 38, 0),
+                DiaperCreatedTime = new TimeSpan( 1, 38, 0 ),
                 WeightDiaperDry = 32.9,
                 Rewet140Value = 0.1,
                 Rewet210Value = 0.18,
@@ -395,7 +395,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRewetTestStandardDeviation = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 3,
-                DiaperCreatedTime = new TimeSpan(1, 38, 0),
+                DiaperCreatedTime = new TimeSpan( 1, 38, 0 ),
                 WeightDiaperDry = 32.9,
                 Rewet140Value = 0.1,
                 Rewet210Value = 0.18,
@@ -406,8 +406,6 @@ namespace Intranet.Labor.Dal.Migrations
                 TestType = TestTypeBabyDiaper.Rewet
             };
 
-			
-			
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
 
             var testNote = new TestValueNote
@@ -418,8 +416,8 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRetentionTestValue1 = new TestValue
             {
                 TestValueId = 2,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
                 DayInYearOfArticleCreation = 307,
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
@@ -432,7 +430,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRetentionTest1 = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 2,
-                DiaperCreatedTime = new TimeSpan(1, 38, 0),
+                DiaperCreatedTime = new TimeSpan( 1, 38, 0 ),
                 WeightDiaperDry = 33.0,
                 RetentionWetWeight = 414.0,
                 RetentionAfterZentrifugeValue = 381.0,
@@ -448,7 +446,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRetentionTestAverage = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 4,
-                DiaperCreatedTime = new TimeSpan(0, 0, 0),
+                DiaperCreatedTime = new TimeSpan( 0, 0, 0 ),
                 WeightDiaperDry = 0,
                 RetentionRw = RwType.Ok,
                 RetentionAfterZentrifugeValue = 0,
@@ -459,7 +457,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersRetentionTestStandardDeviation = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 5,
-                DiaperCreatedTime = new TimeSpan(0, 0, 0),
+                DiaperCreatedTime = new TimeSpan( 0, 0, 0 ),
                 WeightDiaperDry = 0,
                 RetentionRw = RwType.Ok,
                 RetentionAfterZentrifugeValue = 0,
@@ -469,8 +467,8 @@ namespace Intranet.Labor.Dal.Migrations
             };
             var babyDiapersPenetrationTimeTestAverage = new BabyDiaperTestValue
             {
-                BabyDiaperTestValueId =6,
-                DiaperCreatedTime = new TimeSpan(0, 0, 0),
+                BabyDiaperTestValueId = 6,
+                DiaperCreatedTime = new TimeSpan( 0, 0, 0 ),
                 WeightDiaperDry = 0,
                 PenetrationTimeAdditionThird = 0,
                 PenetrationTimeAdditionSecond = 0,
@@ -482,7 +480,7 @@ namespace Intranet.Labor.Dal.Migrations
             var babyDiapersPenetrationTimeTestStandardDeviation = new BabyDiaperTestValue
             {
                 BabyDiaperTestValueId = 7,
-                DiaperCreatedTime = new TimeSpan(0, 0, 0),
+                DiaperCreatedTime = new TimeSpan( 0, 0, 0 ),
                 PenetrationTimeAdditionThird = 0,
                 PenetrationTimeAdditionSecond = 0,
                 PenetrationTimeAdditionFourth = 0,
@@ -510,7 +508,6 @@ namespace Intranet.Labor.Dal.Migrations
             //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersPenetrationTimeTestStandardDeviation;
 
-
             testSheet.TestValues = new List<TestValue>
             {
                 babyDiapersRewetTestValue1,
@@ -527,41 +524,38 @@ namespace Intranet.Labor.Dal.Migrations
             context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRewetTestValueAverage );
             context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRewetTestValueStandardDeviation );
 
-            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRetentionTestValueAverage);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersRetentionTestValueStandardDeviation);
+            context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRetentionTestValueAverage );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersRetentionTestValueStandardDeviation );
 
-            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersPenetrationTimeTestValueAverage);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, babyDiapersPenetrationTimeTestValueStandardDeviation);
+            context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersPenetrationTimeTestValueAverage );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, babyDiapersPenetrationTimeTestValueStandardDeviation );
 
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRewetTest1 );
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRewetTestStandardDeviation);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRewetTestAverage);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTestStandardDeviation);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersRetentionTestAverage);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestStandardDeviation);
-            context.BabyDiaperTestValues.AddOrUpdate(m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestAverage);
-
-
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersRewetTest1 );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersRewetTestStandardDeviation );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersRewetTestAverage );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersRetentionTestStandardDeviation );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersRetentionTestAverage );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestStandardDeviation );
+            context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestAverage );
 
             //------------------Incontinence Pad -----------------
             var testSheet2 = new TestSheet
             {
                 TestSheetId = 22,
                 FaNr = "FA666",
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 ShiftType = ShiftType.Night,
                 MachineNr = "M11",
                 ProductName = "Cresta Extra",
                 SizeName = "Inko Extra",
                 ArticleType = ArticleType.IncontinencePad
-             
             };
 
             var incontinencePadRewetTestValue1 = new TestValue
             {
                 TestValueId = 21,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 DayInYearOfArticleCreation = 307,
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
@@ -572,8 +566,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRetentionTestValueAverage = new TestValue
             {
                 TestValueId = 22,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -583,8 +577,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRetentionTestValueStandardDeviation = new TestValue
             {
                 TestValueId = 23,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -594,8 +588,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRewetTestValueAverage = new TestValue
             {
                 TestValueId = 24,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -605,8 +599,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRewetTestValueStandardDeviation = new TestValue
             {
                 TestValueId = 25,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -616,8 +610,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadAcquisitionTimeTestValueAverage = new TestValue
             {
                 TestValueId = 26,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -627,8 +621,8 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadAcquisitionTimeTestValueStandardDeviation = new TestValue
             {
                 TestValueId = 27,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 50, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
@@ -639,17 +633,17 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRewetTest1 = new IncontinencePadTestValue
             {
                 IncontinencePadTestValueId = 21,
-               IncontinencePadTime = new TimeSpan(1, 38, 0),
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
                 RewetFreeRw = RwType.Better,
                 RewetFreeDifference = 1.0,
-                RewetFreeDryValue = 2.0,RewetFreeWetValue = 45.0,
+                RewetFreeDryValue = 2.0,
+                RewetFreeWetValue = 45.0,
                 TestType = TestTypeIncontinencePad.RewetFree
-                
             };
             var incontinencePadRewetTestAverage = new IncontinencePadTestValue
             {
                 IncontinencePadTestValueId = 22,
-                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
                 RewetFreeRw = RwType.Better,
                 RewetFreeDifference = 1.0,
                 RewetFreeDryValue = 2.0,
@@ -659,15 +653,13 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRewetTestStandardDeviation = new IncontinencePadTestValue
             {
                 IncontinencePadTestValueId = 23,
-                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
                 RewetFreeRw = RwType.Better,
                 RewetFreeDifference = 1.0,
                 RewetFreeDryValue = 2.0,
                 RewetFreeWetValue = 45.0,
                 TestType = TestTypeIncontinencePad.RewetFree
             };
-
-
 
             incontinencePadRewetTestValue1.IncontinencePadTestValue = incontinencePadRewetTest1;
 
@@ -679,8 +671,21 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRetentionTestValue1 = new TestValue
             {
                 TestValueId = 22,
-                CreatedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
-                LastEditedDateTime = new DateTime(2016, 11, 2, 1, 51, 0),
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
+                DayInYearOfArticleCreation = 307,
+                CreatedPerson = "Hans",
+                LastEditedPerson = "Hans",
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueType = TestValueType.Single,
+                TestSheetRefId = 1,
+                TestValueNote = new List<TestValueNote> { testNote2 }
+            };
+            var incontinencePadAcquisitionTimeTestValue1 = new TestValue
+            {
+                TestValueId = 32,
+                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
+                LastEditedDateTime = new DateTime( 2016, 11, 2, 1, 51, 0 ),
                 DayInYearOfArticleCreation = 307,
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
@@ -693,8 +698,9 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRetentionTest1 = new IncontinencePadTestValue
             {
                 IncontinencePadTestValueId = 23,
-                IncontinencePadTime =  new TimeSpan(1, 38, 0),
-                RetentionRw = RwType.Better,RetentionWeight = 2.0,
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
+                RetentionRw = RwType.Better,
+                RetentionWeight = 2.0,
                 RetentionEndValue = 4.0,
                 RetentionAbsorbtion = 2.0,
                 RetentionWetValue = 12.0,
@@ -719,7 +725,7 @@ namespace Intranet.Labor.Dal.Migrations
             var incontinencePadRetentionTestStandardDeviation = new IncontinencePadTestValue
             {
                 IncontinencePadTestValueId = 25,
-                IncontinencePadTime = new TimeSpan(1, 38, 0),
+                IncontinencePadTime = new TimeSpan( 1, 38, 0 ),
                 RetentionRw = RwType.Better,
                 RetentionWeight = 2.0,
                 RetentionEndValue = 4.0,
@@ -734,7 +740,7 @@ namespace Intranet.Labor.Dal.Migrations
                 AcquisitionTimeThirdRw = RwType.Better,
                 AcquisitionTimeSecondRw = RwType.Better,
                 AcquisitionTimeFirstRw = RwType.Better,
-                AcquisitionTimeThird =  12,
+                AcquisitionTimeThird = 12,
                 AcquisitionTimeFirst = 1,
                 AcquisitionWeight = 12,
                 AcquisitionTimeSecond = 12,
@@ -742,8 +748,7 @@ namespace Intranet.Labor.Dal.Migrations
                 RewetAfterAcquisitionTimeDryWeight = 12,
                 RewetAfterAcquisitionTimeWeightDifference = 12,
                 RewetAfterAcquisitionTimeWetWeight = 14,
-                IncontinencePadTime = new TimeSpan(0, 0, 0),
-               
+                IncontinencePadTime = new TimeSpan( 0, 0, 0 ),
                 TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
             };
             var incontinencePadAcquisitionTimeTestStandardDeviation = new IncontinencePadTestValue
@@ -760,9 +765,28 @@ namespace Intranet.Labor.Dal.Migrations
                 RewetAfterAcquisitionTimeDryWeight = 12,
                 RewetAfterAcquisitionTimeWeightDifference = 12,
                 RewetAfterAcquisitionTimeWetWeight = 14,
-                IncontinencePadTime = new TimeSpan(0, 0, 0),
+                IncontinencePadTime = new TimeSpan( 0, 0, 0 ),
                 TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
             };
+            var incontinencePadAcquisitionTimeTest1 = new IncontinencePadTestValue
+            {
+                IncontinencePadTestValueId = 28,
+                AcquisitionTimeThirdRw = RwType.Better,
+                AcquisitionTimeSecondRw = RwType.Better,
+                AcquisitionTimeFirstRw = RwType.Better,
+                AcquisitionTimeThird = 12,
+                AcquisitionTimeFirst = 1,
+                AcquisitionWeight = 12,
+                AcquisitionTimeSecond = 12,
+                RewetAfterAcquisitionTimeRw = RwType.Better,
+                RewetAfterAcquisitionTimeDryWeight = 12,
+                RewetAfterAcquisitionTimeWeightDifference = 12,
+                RewetAfterAcquisitionTimeWetWeight = 14,
+                IncontinencePadTime = new TimeSpan( 0, 0, 0 ),
+                TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
+            };
+
+            incontinencePadAcquisitionTimeTestValue1.IncontinencePadTestValue = incontinencePadAcquisitionTimeTest1;
 
             incontinencePadRewetTestValue1.IncontinencePadTestValue = incontinencePadRewetTest1;
             //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
@@ -770,7 +794,7 @@ namespace Intranet.Labor.Dal.Migrations
             //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
             incontinencePadRewetTestValueAverage.IncontinencePadTestValue = incontinencePadRewetTestAverage;
             //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
-           incontinencePadRewetTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRewetTestStandardDeviation;
+            incontinencePadRewetTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRewetTestStandardDeviation;
 
             //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
             incontinencePadRetentionTestValueAverage.IncontinencePadTestValue = incontinencePadRetentionTestAverage;
@@ -782,36 +806,36 @@ namespace Intranet.Labor.Dal.Migrations
             //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             incontinencePadAcquisitionTimeTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadAcquisitionTimeTestStandardDeviation;
 
-
             testSheet2.TestValues = new List<TestValue>
             {
-               incontinencePadRewetTestValue1,
+                incontinencePadRewetTestValue1,
                 incontinencePadRetentionTestValue1,
-               incontinencePadRetentionTestValueAverage,
+                incontinencePadAcquisitionTimeTestValue1,
+                incontinencePadRetentionTestValueAverage,
                 incontinencePadRetentionTestValueStandardDeviation,
-              incontinencePadRewetTestValueAverage,
-              incontinencePadRewetTestValueStandardDeviation,
-              incontinencePadAcquisitionTimeTestValueAverage,
-          incontinencePadAcquisitionTimeTestValueStandardDeviation
+                incontinencePadRewetTestValueAverage,
+                incontinencePadRewetTestValueStandardDeviation,
+                incontinencePadAcquisitionTimeTestValueAverage,
+                incontinencePadAcquisitionTimeTestValueStandardDeviation
             };
-            context.TestSheets.AddOrUpdate(m => m.FaNr, testSheet2);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValue1);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValueAverage);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRewetTestValueStandardDeviation);
+            context.TestSheets.AddOrUpdate( m => m.FaNr, testSheet2 );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadRewetTestValue1 );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadRewetTestValueAverage );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadRewetTestValueStandardDeviation );
 
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRetentionTestValueAverage);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadRetentionTestValueStandardDeviation);
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadRetentionTestValueAverage );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadRetentionTestValueStandardDeviation );
 
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadAcquisitionTimeTestValueAverage);
-            context.TestValues.AddOrUpdate(m => m.TestValueId, incontinencePadAcquisitionTimeTestValueStandardDeviation);
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadAcquisitionTimeTestValueAverage );
+            context.TestValues.AddOrUpdate( m => m.TestValueId, incontinencePadAcquisitionTimeTestValueStandardDeviation );
 
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTest1);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTestStandardDeviation);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRewetTestAverage);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRetentionTestStandardDeviation);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadRetentionTestAverage);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestStandardDeviation);
-            context.IncontinencePadTestValues.AddOrUpdate(m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestAverage);
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadRewetTest1 );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadRewetTestStandardDeviation );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadRewetTestAverage );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadRetentionTestStandardDeviation );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadRetentionTestAverage );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestStandardDeviation );
+            context.IncontinencePadTestValues.AddOrUpdate( m => m.IncontinencePadTestValueId, incontinencePadAcquisitionTimeTestAverage );
         }
     }
 }
