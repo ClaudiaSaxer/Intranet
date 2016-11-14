@@ -27,34 +27,34 @@ namespace Intranet.Labor.TestEnvironment
             };
 
             mock.Setup( x => x.ToRewetTestValuesCollection( It.IsAny<List<TestValue>>() ) )
-                .Returns( new List<RewetTestValue>() );
+                .Returns( new List<BabyDiaperRewetTestValue>() );
 
             mock.Setup( x => x.ToRewetTestValuesCollection( It.IsAny<List<TestValue>>() ) )
-                .Returns( new List<RewetTestValue>() );
+                .Returns( new List<BabyDiaperRewetTestValue>() );
 
             mock.Setup( x => x.ToRewetAverage( It.IsAny<List<TestValue>>() ) )
-                .Returns( new Rewet() );
+                .Returns( new BabyDiaperRewet() );
 
             mock.Setup( x => x.ToRewetStandardDeviation( It.IsAny<List<TestValue>>() ) )
-                .Returns( new Rewet() );
+                .Returns( new BabyDiaperRewet() );
 
             mock.Setup( x => x.ToRetentionTestValuesCollection( It.IsAny<List<TestValue>>() ) )
-                .Returns( new List<RetentionTestValue>() );
+                .Returns( new List<BabyDiaperRetentionTestValue>() );
 
             mock.Setup( x => x.ToRetentionAverage( It.IsAny<List<TestValue>>() ) )
-                .Returns( new Retention() );
+                .Returns( new BabyDiaperRetention() );
 
             mock.Setup( x => x.ToRetentionStandardDeviation( It.IsAny<List<TestValue>>() ) )
-                .Returns( new Retention() );
+                .Returns( new BabyDiaperRetention() );
 
             mock.Setup(x => x.ToPenetrationTimeTestValuesCollection(It.IsAny<List<TestValue>>()))
-         .Returns(new List<PenetrationTimeTestValue>());
+         .Returns(new List<BabyDiaperPenetrationTimeTestValue>());
 
             mock.Setup(x => x.ToPenetrationTimeAverage(It.IsAny<List<TestValue>>()))
-                .Returns(new PenetrationTime());
+                .Returns(new BabyDiaperPenetrationTime());
 
             mock.Setup(x => x.ToPenetrationTimeStandardDeviation(It.IsAny<List<TestValue>>()))
-                .Returns(new PenetrationTime());
+                .Returns(new BabyDiaperPenetrationTime());
 
             return mock.Object;
         }

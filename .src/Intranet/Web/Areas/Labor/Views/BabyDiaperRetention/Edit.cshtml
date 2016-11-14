@@ -1,13 +1,13 @@
 ﻿@model Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
 
 @{
-    ViewBag.Title = "Babywindeln Retention - Edit";
+    ViewBag.Title = "Babywindeln BabyDiaperRetention - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
     
-    <h2>Höschenwindeln - Retention-Test</h2>
+    <h2>Höschenwindeln - BabyDiaperRetention-Test</h2>
 
     <div class="intigena-line"></div>
 
@@ -52,7 +52,7 @@
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
-            <h4>Retention (g)</h4>
+            <h4>BabyDiaperRetention (g)</h4>
             <label class="col-sm-2 control-label">Nass [g]:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.WeightRetentionWet, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text", @required = "required" })
@@ -101,7 +101,7 @@
             function addNote() {
                 console.log("test");
                 console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRetention/AddNote';
+                document.getElementById('submitForm').action = '/Labor/BabyDiaperBabyDiaperRetention/AddNote';
                 console.log(document.getElementById('submitForm').action);
                 document.getElementById('submitForm').submit();
             }

@@ -37,10 +37,10 @@
 <div class="body-content">
 
     <a href="@Url.Action("Create", "BabyDiaperRewet",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> BabyDiaperRewet
     </a>
     <a href="@Url.Action("Create", "BabyDiaperRetention",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> BabyDiaperRetention
     </a>
 
 </div>
@@ -68,10 +68,10 @@
             <tr>
                 <td>@item.TestInfo.ProductionCode</td>
                 <td>@item.TestInfo.WeightyDiaperDry</td>
-                <td>@item.Rewet.Rewet140Value</td>
-                <td>@item.Rewet.Rewet210Value</td>
-                <td>@item.Rewet.StrikeTroughValue</td>
-                <td>@item.Rewet.DistributionOfTheStrikeTrough</td>
+                <td>@item.BabyDiaperRewet.Rewet140Value</td>
+                <td>@item.BabyDiaperRewet.Rewet210Value</td>
+                <td>@item.BabyDiaperRewet.StrikeTroughValue</td>
+                <td>@item.BabyDiaperRewet.DistributionOfTheStrikeTrough</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
@@ -90,10 +90,10 @@
         <tr>
             <th>Durchschnitt</th>
             <th></th>
-            <th>@Model.RewetAverage.Rewet140Value</th>
-            <th>@Model.RewetAverage.Rewet210Value</th>
-            <th>@Model.RewetAverage.StrikeTroughValue</th>
-            <th>@Model.RewetAverage.DistributionOfTheStrikeTrough</th>
+            <th>@Model.BabyDiaperRewetAverage.Rewet140Value</th>
+            <th>@Model.BabyDiaperRewetAverage.Rewet210Value</th>
+            <th>@Model.BabyDiaperRewetAverage.StrikeTroughValue</th>
+            <th>@Model.BabyDiaperRewetAverage.DistributionOfTheStrikeTrough</th>
             <th></th>
             <th></th>
             <th></th>
@@ -103,10 +103,10 @@
         <tr>
             <th>Standard Abweichung</th>
             <th></th>
-            <th>@Model.RewetStandardDeviation.Rewet140Value</th>
-            <th>@Model.RewetStandardDeviation.Rewet210Value</th>
-            <th>@Model.RewetStandardDeviation.StrikeTroughValue </th>
-            <th>@Model.RewetStandardDeviation.DistributionOfTheStrikeTrough</th>
+            <th>@Model.BabyDiaperRewetStandardDeviation.Rewet140Value</th>
+            <th>@Model.BabyDiaperRewetStandardDeviation.Rewet210Value</th>
+            <th>@Model.BabyDiaperRewetStandardDeviation.StrikeTroughValue </th>
+            <th>@Model.BabyDiaperRewetStandardDeviation.DistributionOfTheStrikeTrough</th>
             <th></th>
             <th></th>
             <th></th>
@@ -136,10 +136,10 @@
             <tr>
                 <td>@item.TestInfo.ProductionCode</td>
                 <td>@item.TestInfo.WeightyDiaperDry</td>
-                <td>@item.PenetrationTime.PenetrationTimeAdditionFirst</td>
-                <td>@item.PenetrationTime.PenetrationTimeAdditionSecond</td>
-                <td>@item.PenetrationTime.PenetrationTimeAdditionThird</td>
-                <td>@item.PenetrationTime.PenetrationTimeAdditionFourth</td>
+                <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst</td>
+                <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond</td>
+                <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird</td>
+                <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
@@ -158,10 +158,10 @@
         <tr>
             <th>Durchschnitt</th>
             <th></th>
-            <th>@Model.PenetrationTimeAverage.PenetrationTimeAdditionFirst</th>
-            <th>@Model.PenetrationTimeAverage.PenetrationTimeAdditionSecond</th>
-            <th>@Model.PenetrationTimeAverage.PenetrationTimeAdditionThird</th>
-            <th>@Model.PenetrationTimeAverage.PenetrationTimeAdditionFourth</th>
+            <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionFirst</th>
+            <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionSecond</th>
+            <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionThird</th>
+            <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionFourth</th>
             <th></th>
             <th></th>
             <th></th>
@@ -171,10 +171,10 @@
         <tr>
             <th>Standard Abweichung</th>
             <th></th>
-            <th>@Model.PenetrationTimeStandardDeviation.PenetrationTimeAdditionFirst</th>
-            <th>@Model.PenetrationTimeStandardDeviation.PenetrationTimeAdditionSecond</th>
-            <th>@Model.PenetrationTimeStandardDeviation.PenetrationTimeAdditionThird</th>
-            <th>@Model.PenetrationTimeStandardDeviation.PenetrationTimeAdditionFourth</th>
+            <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionFirst</th>
+            <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionSecond</th>
+            <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionThird</th>
+            <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionFourth</th>
             <th></th>
             <th></th>
             <th></th>
@@ -184,7 +184,7 @@
 </div>
 
 <div class="body-content">
-    <h2>Retention</h2>
+    <h2>BabyDiaperRetention</h2>
     <table id="retention" class="table table-striped table-bordered sortable" cellspacing="0" width="100%">
         <thead>
         <tr>
@@ -207,12 +207,12 @@
             <tr>
                 <td>@item.TestInfo.ProductionCode</td>
                 <td>@item.TestInfo.WeightyDiaperDry</td>
-                <td>@item.Retention.RetentionWetWeight</td>
-                <td>@item.Retention.RetentionAfterZentrifugeValue</td>
-                <td>@item.Retention.RetentionAfterZentrifugePercent</td>
-                <td>@item.Retention.SapType</td>
-                <td>@item.Retention.SapNr</td>
-                <td>@item.Retention.SapGHoewiValue</td>
+                <td>@item.BabyDiaperRetention.RetentionWetWeight</td>
+                <td>@item.BabyDiaperRetention.RetentionAfterZentrifugeValue</td>
+                <td>@item.BabyDiaperRetention.RetentionAfterZentrifugePercent</td>
+                <td>@item.BabyDiaperRetention.SapType</td>
+                <td>@item.BabyDiaperRetention.SapNr</td>
+                <td>@item.BabyDiaperRetention.SapGHoewiValue</td>
                 <td>@item.TestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action("Edit", "BabyDiaperRetention",  new { area = "Labor", id = item.TestInfo.TestValueId })" class="btn btn-info btn-lg">
@@ -231,12 +231,12 @@
         <tr>
             <th>Durchschnitt</th>
             <th></th>
-            <th>@Model.RetentionAverage.RetentionWetWeight</th>
-            <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
-            <th>@Model.RetentionAverage.RetentionAfterZentrifugePercent</th>
+            <th>@Model.BabyDiaperRetentionAverage.RetentionWetWeight</th>
+            <th>@Model.BabyDiaperRetentionAverage.RetentionAfterZentrifugeValue</th>
+            <th>@Model.BabyDiaperRetentionAverage.RetentionAfterZentrifugePercent</th>
             <th></th>
             <th></th>
-            <th>@Model.RetentionAverage.SapGHoewiValue</th>
+            <th>@Model.BabyDiaperRetentionAverage.SapGHoewiValue</th>
             <th></th>
             <th></th>
             <th></th>
@@ -246,12 +246,12 @@
         <tr>
             <th>Standard Abweichung</th>
             <th></th>
-            <th>@Model.RetentionStandardDeviation.RetentionWetWeight</th>
-            <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
-            <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugePercent</th>
+            <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionWetWeight</th>
+            <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
+            <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionAfterZentrifugePercent</th>
             <th></th>
             <th></th>
-            <th>@Model.RetentionStandardDeviation.SapGHoewiValue</th>
+            <th>@Model.BabyDiaperRetentionStandardDeviation.SapGHoewiValue</th>
             <th></th>
             <th></th>
             <th></th>

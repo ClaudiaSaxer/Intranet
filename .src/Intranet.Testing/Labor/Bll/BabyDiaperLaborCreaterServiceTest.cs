@@ -64,21 +64,21 @@ namespace Intranet.Labor.Bll.Test
                   .Be( "01.01.2016" );
             actual.Rewets.Should()
                   .NotBeNull( "because it is initialized" );
-            actual.RewetAverage.Should()
+            actual.BabyDiaperRewetAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.RetentionStandardDeviation.Should()
+            actual.BabyDiaperRetentionStandardDeviation.Should()
                  .NotBeNull("because it is initialized");
             actual.Retentions.Should()
                  .NotBeNull("because it is initialized");
-            actual.RewetAverage.Should()
+            actual.BabyDiaperRewetAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.RetentionStandardDeviation.Should()
+            actual.BabyDiaperRetentionStandardDeviation.Should()
                  .NotBeNull("because it is initialized");
             actual.PenetrationTimes.Should()
                  .NotBeNull("because it is initialized");
-            actual.PenetrationTimeAverage.Should()
+            actual.BabyDiaperPenetrationTimeAverage.Should()
                  .NotBeNull("because it is initialized");
-            actual.PenetrationTimeStandardDeviation.Should()
+            actual.BabyDiaperPenetrationTimeStandardDeviation.Should()
                  .NotBeNull("because it is initialized");
 
         }

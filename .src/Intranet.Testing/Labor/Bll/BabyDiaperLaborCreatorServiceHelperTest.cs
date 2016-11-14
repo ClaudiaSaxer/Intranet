@@ -299,7 +299,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Empty Retention
+        ///     Testing GetBabyDiaperTestValueForType Empty BabyDiaperRetention
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeEmptyRetentionTest1()
@@ -313,7 +313,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Empty Retention
+        ///     Testing GetBabyDiaperTestValueForType Empty BabyDiaperRetention
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeEmptyRetentionTest2()
@@ -329,7 +329,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Empty Rewet 1
+        ///     Testing GetBabyDiaperTestValueForType Empty BabyDiaperRewet 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeEmptyRewetTest1()
@@ -346,7 +346,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Empty Rewet 2
+        ///     Testing GetBabyDiaperTestValueForType Empty BabyDiaperRewet 2
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeEmptyRewetTest2()
@@ -363,7 +363,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many PenetrationTime 1
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperPenetrationTime 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyPenetrationTimeTest1()
@@ -397,7 +397,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many PenetrationTime 3
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperPenetrationTime 3
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyPenetrationTimeTest3()
@@ -414,7 +414,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many Retention 1
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperRetention 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyRetentionTest1()
@@ -446,7 +446,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many Rewet 3
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperRewet 3
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyRetentionTest3()
@@ -463,7 +463,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many Rewet 1
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperRewet 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyRewetTest1()
@@ -479,7 +479,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many Rewet 2
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperRewet 2
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyRewetTest2()
@@ -495,7 +495,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Many Rewet 3
+        ///     Testing GetBabyDiaperTestValueForType Many BabyDiaperRewet 3
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeManyRewetTest3()
@@ -512,7 +512,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok PenetrationTime 1
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperPenetrationTime 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkPenetrationTimeTest1()
@@ -529,7 +529,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok PenetrationTime 2
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperPenetrationTime 2
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkPenetrationTimeTest2()
@@ -546,7 +546,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok PenetrationTime 3
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperPenetrationTime 3
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkPenetrationTimeTest3()
@@ -563,7 +563,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Retention 1
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRetention 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRetentionTest1()
@@ -580,7 +580,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Retention 2
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRetention 2
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRetentionTest2()
@@ -597,7 +597,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Retention 1
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRetention 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRetentionTest3()
@@ -614,7 +614,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRewet 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRewetTest1()
@@ -631,7 +631,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 2
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRewet 2
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRewetTest2()
@@ -648,7 +648,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing GetBabyDiaperTestValueForType Ok Rewet 1
+        ///     Testing GetBabyDiaperTestValueForType Ok BabyDiaperRewet 1
         /// </summary>
         [Fact]
         public void GetBabyDiaperTestValueForTypeOkRewetTest3()
@@ -753,7 +753,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            var expected = new PenetrationTime
+            var expected = new BabyDiaperPenetrationTime
             {
                 PenetrationTimeAdditionFirst = 1.0,
                 PenetrationTimeAdditionSecond = 2.0,
@@ -974,13 +974,13 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Testing to Rewet ok
+        ///     Testing to BabyDiaperRewet ok
         /// </summary>
         [Fact]
         public void ToRewetTestOk()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new Rewet
+            var expected = new BabyDiaperRewet
             {
                 Rewet140Rw = RwType.Ok,
                 Rewet210Rw = RwType.Ok,
@@ -1036,9 +1036,9 @@ namespace Intranet.Labor.Bll.Test
         public void ToRewetTestValueTest()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new RewetTestValue
+            var expected = new BabyDiaperRewetTestValue
             {
-                Rewet = new Rewet { Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
+                BabyDiaperRewet = new BabyDiaperRewet { Rewet140Rw = RwType.Better, Rewet210Rw = RwType.Better },
                 TestInfo = new TestInfo
                 {
                     TestPerson = "test person",

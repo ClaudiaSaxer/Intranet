@@ -3,7 +3,7 @@
     /// <summary>
     ///     Class representing the view model of the penetration time test value
     /// </summary>
-    public class PenetrationTimeTestValue
+    public class BabyDiaperPenetrationTimeTestValue
     {
         #region Properties
 
@@ -17,7 +17,7 @@
         ///     Gets or sets the penetration time data
         /// </summary>
         /// <value>the penetration time data</value>
-        public PenetrationTime PenetrationTime { get; set; }
+        public BabyDiaperPenetrationTime BabyDiaperPenetrationTime { get; set; }
 
         #endregion
     }

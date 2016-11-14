@@ -53,15 +53,15 @@
     <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
     <Compile Include="LaborCreator\RunningProductionOrder.cs" />
     <Compile Include="TestNote.cs" />
-    <Compile Include="BabyDiaperLaborCreator\PenetrationTimeTestValue.cs" />
-    <Compile Include="BabyDiaperLaborCreator\Retention.cs" />
-    <Compile Include="BabyDiaperLaborCreator\RetentionTestValue.cs" />
-    <Compile Include="BabyDiaperLaborCreator\Rewet.cs" />
-    <Compile Include="BabyDiaperLaborCreator\RewetTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTimeTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetention.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetentionTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewet.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewetTestValue.cs" />
     <Compile Include="BabyDiaperLaborCreator\TestInfo.cs" />
-    <Compile Include="BabyDiaperLaborCreator\LaborCreatorViewModel.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperLaborCreatorViewModel.cs" />
     <Compile Include="LaborHomeViewModel.cs" />
-    <Compile Include="BabyDiaperLaborCreator\PenetrationTime.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

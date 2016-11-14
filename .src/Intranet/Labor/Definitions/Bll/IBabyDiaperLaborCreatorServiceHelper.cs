@@ -37,59 +37,59 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="penetrationTime">the Baby Diaper Test value with the penetration time data</param>
         /// <returns>The Penetration Time View Model with the data collected from the model</returns>
-        PenetrationTime ToPenetrationTime( BabyDiaperTestValue penetrationTime );
+        BabyDiaperPenetrationTime ToPenetrationTime( BabyDiaperTestValue penetrationTime );
 
         /// <summary>
-        ///     Creates a PenetrationTime Average with the data from the test values
+        ///     Creates a BabyDiaperPenetrationTime Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the penetration time with the average</returns>
-        PenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValues );
+        BabyDiaperPenetrationTime ToPenetrationTimeAverage( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates a PenetrationTime Standard Deviation with the data from the test values
+        ///     Creates a BabyDiaperPenetrationTime Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the penetration time with the standard deviation</returns>
-        PenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValues );
+        BabyDiaperPenetrationTime ToPenetrationTimeStandardDeviation( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates the PenetrationTime TestValue from diffrent input data
+        ///     Creates the BabyDiaperPenetrationTime TestValue from diffrent input data
         /// </summary>
         /// <param name="penetrationTime">the baby diaper test value containing the penetration time data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a Penetration Time test value</returns>
-        PenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode,Int32 testValueId );
+        BabyDiaperPenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode,Int32 testValueId );
 
         /// <summary>
         ///     Creates the penetration time test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the penetration time tests</param>
         /// <returns>a collection for all penetration time tests</returns>
-        ICollection<PenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues );
+        ICollection<BabyDiaperPenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Sets the values for the Retention View Model out of the BabyDiaperTestValue Model
+        ///     Sets the values for the BabyDiaperRetention View Model out of the BabyDiaperTestValue Model
         /// </summary>
         /// <param name="retention">the Baby Diaper Test value with the retention data</param>
-        /// <returns>The Retention View Model with the data collected from the model</returns>
-        Retention ToRetention( BabyDiaperTestValue retention );
+        /// <returns>The BabyDiaperRetention View Model with the data collected from the model</returns>
+        BabyDiaperRetention ToRetention( BabyDiaperTestValue retention );
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the retention with the average</returns>
-        Retention ToRetentionAverage( IEnumerable<TestValue> testValues );
+        BabyDiaperRetention ToRetentionAverage( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates a Retention Standard Deviation with the data from the test values
+        ///     Creates a BabyDiaperRetention Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the retention with the standard deviation</returns>
-        Retention ToRetentionStandardDeviation( IEnumerable<TestValue> testValues );
+        BabyDiaperRetention ToRetentionStandardDeviation( IEnumerable<TestValue> testValues );
 
         /// <summary>
         ///     Creates the RetentionTestValues from diffrent input data
@@ -99,52 +99,52 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the test value</param>
         /// <returns>a test value for the retention test</returns>
-        RetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode, Int32 testValueId );
+        BabyDiaperRetentionTestValue ToRetentionTestValue( BabyDiaperTestValue retention, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the retention  test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the retention tests</param>
         /// <returns>a collection for all retention tests</returns>
-        ICollection<RetentionTestValue> ToRetentionTestValuesCollection( IEnumerable<TestValue> testValues );
+        ICollection<BabyDiaperRetentionTestValue> ToRetentionTestValuesCollection( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Sets the values for the Rewet View Model out of the BabyDiaperTestValue Model
+        ///     Sets the values for the BabyDiaperRewet View Model out of the BabyDiaperTestValue Model
         /// </summary>
         /// <param name="rewet">the Baby Diaper Test value with the rewet data</param>
         /// <returns>The rewet View Model with the data collected from the model</returns>
-        Rewet ToRewet( BabyDiaperTestValue rewet );
+        BabyDiaperRewet ToRewet( BabyDiaperTestValue rewet );
 
         /// <summary>
         ///     Creates a retention Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
         /// <returns>a class representing the retention with the average</returns>
-        Rewet ToRewetAverage( IEnumerable<TestValue> testValues );
+        BabyDiaperRewet ToRewetAverage( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates a Rewet Standard Deviation with the data from the test values
+        ///     Creates a BabyDiaperRewet Standard Deviation with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
         /// <returns>a class representing the rewet with the standard deviation</returns>
-        Rewet ToRewetStandardDeviation( IEnumerable<TestValue> testValues );
+        BabyDiaperRewet ToRewetStandardDeviation( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates the Rewet TestValue from diffrent input data
+        ///     Creates the BabyDiaperRewet TestValue from diffrent input data
         /// </summary>
         /// <param name="rewet">the baby diaper test value containing the rewet data</param>
         /// <param name="testPerson">the person who did the test</param>
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the test value</param>
         /// <returns>the test value for the rewet test</returns>
-        RewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId);
+        BabyDiaperRewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId);
 
         /// <summary>
         ///     Creates the rewet test value collection for all singe tests
         /// </summary>
         /// <param name="testValues">the testvalues containing the rewet tests</param>
         /// <returns>a collection for all rewet tests</returns>
-        ICollection<RewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues );
+        ICollection<BabyDiaperRewetTestValue> ToRewetTestValuesCollection( IEnumerable<TestValue> testValues );
 
         /// <summary>
         ///     Creates to TestInfo from diffrent input data
@@ -161,8 +161,8 @@ namespace Intranet.Labor.Definition
         ///     parameter
         /// </summary>
         /// <typeparam name="T">
-        ///     the collection type. For example: <see cref="RewetTestValue" />,
-        ///     <see cref="PenetrationTimeTestValue" />,<see cref="RetentionTestValue" />
+        ///     the collection type. For example: <see cref="BabyDiaperRewetTestValue" />,
+        ///     <see cref="BabyDiaperPenetrationTimeTestValue" />,<see cref="BabyDiaperRetentionTestValue" />
         /// </typeparam>
         /// <param name="testValue">the testvalues that contain the data</param>
         /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
