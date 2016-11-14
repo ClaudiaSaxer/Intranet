@@ -185,8 +185,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 ProductName = productionOrder.Article.ProductName,
                 DayInYear = DateTime.Now.DayOfYear,
                 MachineNr = productionOrder.Machine.MachineNr,
-                SAPNr = productionOrder.Component.ComponentNr,
-                SAPType = productionOrder.Component.ComponentType
+                SAPNr = productionOrder.Component?.ComponentNr,
+                SAPType = productionOrder.Component?.ComponentType
             };
             TestSheetRepository.Add( testSheet );
             TestSheetRepository.SaveChanges();

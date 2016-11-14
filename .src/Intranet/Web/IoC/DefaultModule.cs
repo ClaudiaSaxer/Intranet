@@ -168,6 +168,11 @@ namespace Intranet.Web.IoC
                    .As<IInkoRewetService>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<InkoRewetServiceHelper>()
+                   .As<IInkoRewetServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>

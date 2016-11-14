@@ -26,6 +26,11 @@ namespace Intranet.Labor.Bll
         public IBabyDiaperBll TestBll { get; set; }
 
         /// <summary>
+        ///     Gets or sets the incontinence rewet service helper.
+        /// </summary>
+        public IInkoRewetServiceHelper InkoRewetServiceHelper { get; set; }
+
+        /// <summary>
         ///     Gets or sets the test service helper.
         /// </summary>
         public IBabyDiaperServiceHelper TestServiceHelper { get; set; }
@@ -56,7 +61,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue( testValueId );
-            //BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(result.TestSheetRefId);
+            InkoRewetServiceHelper.UpdateRewetAverageAndStv(result.TestSheetRefId);
             return result;
         }
 
@@ -166,10 +171,10 @@ namespace Intranet.Labor.Bll
             TestValue testValue = null;
             try
             {
-                /*testValue = viewModel.TestValueId <= 0
-                    ? BabyDiaperRewetServiceHelper.SaveNewRewetTest(viewModel)
-                    : BabyDiaperRewetServiceHelper.UpdateRewetTest(viewModel);
-                var testSheet = BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(viewModel.TestSheetId);*/
+                testValue = viewModel.TestValueId <= 0
+                    ? InkoRewetServiceHelper.SaveNewRewetTest(viewModel)
+                    : InkoRewetServiceHelper.UpdateRewetTest(viewModel);
+                var testSheet = InkoRewetServiceHelper.UpdateRewetAverageAndStv(viewModel.TestSheetId);
             }
             catch ( Exception e )
             {

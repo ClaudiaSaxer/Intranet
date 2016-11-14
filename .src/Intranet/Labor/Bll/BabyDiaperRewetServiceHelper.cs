@@ -92,13 +92,13 @@ namespace Intranet.Labor.Bll
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper
-                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
+                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet)
                                  && tv.TestValueType == TestValueType.Average );
             var rewetTestStDev =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper
-                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
+                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet)
                                  && tv.TestValueType == TestValueType.StandardDeviation );
             UpdateRewetAvg( testSheet, rewetTestAvg );
             UpdateRewetStDev( testSheet, rewetTestAvg, rewetTestStDev );
