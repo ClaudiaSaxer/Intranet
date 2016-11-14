@@ -1,13 +1,13 @@
 ﻿@using Intranet.Labor.Model.labor
 @model Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
 @{
-    ViewBag.Title = "Babywindeln Rewet - Edit";
+    ViewBag.Title = "Babywindeln BabyDiaperRewet - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
 
-    <h2>Höschenwindeln - Retention-Test</h2>
+    <h2>Höschenwindeln - BabyDiaperRetention-Test</h2>
 
     <div class="intigena-line"></div>
 
@@ -53,7 +53,7 @@
         <div class="intigena-line"></div>
 
         <div class="form-group">
-            <h4>Rewet (g)</h4>
+            <h4>BabyDiaperRewet (g)</h4>
             <label class="col-sm-2 control-label">140 ml:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.RewetAfter140, new { placeholder = @Model.RewetAfter140, @class = "form-control", type = "text", @required = "required" })
@@ -77,14 +77,14 @@
         <div class="form-group">
             @Html.HiddenFor(model => model.TestType)
             <h4>Penetration:
-                <a class="btn btn-primary btn-lg" id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                <a class="btn btn-primary btn-lg" id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.BabyDiaperRewetAndPenetrationTime ? "display:block" : "display:none")">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
-                <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" >
+                <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.BabyDiaperRewetAndPenetrationTime ? "display:block" : "display:none")" >
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
             </h4>
-            <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
+            <div style="@(Model.TestType == TestTypeBabyDiaper.BabyDiaperRewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
                 <label class="col-sm-2 control-label">Zugabe 1 [s]:</label>
                 <div class="col-sm-10">
                     @Html.TextBoxFor( m => m.PenetrationTime1, new { placeholder = @Model.PenetrationTime1, @class = "form-control", type = "text", @required = "required" } )
@@ -146,20 +146,20 @@
 
         <script>
             function addNote() {
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRewet/AddNote';
+                document.getElementById('submitForm').action = '/Labor/BabyDiaperBabyDiaperRewet/AddNote';
                 document.getElementById('submitForm').submit();
             }
             function addPenetration() {
                 document.getElementById('addPenetration').style.display = 'none';
                 document.getElementById('removePenetration').style.display = 'block';
                 document.getElementById('penetration-test').style.display = 'block';
-                document.getElementById('TestType').value = 'RewetAndPenetrationTime';
+                document.getElementById('TestType').value = 'BabyDiaperRewetAndPenetrationTime';
             }
             function removePenetration() {
                 document.getElementById('addPenetration').style.display = 'block';
                 document.getElementById('removePenetration').style.display = 'none';
                 document.getElementById('penetration-test').style.display = 'none';
-                document.getElementById('TestType').value = 'Rewet';
+                document.getElementById('TestType').value = 'BabyDiaperRewet';
             }
                 $("#addNote").click(function () {
                     addNote();

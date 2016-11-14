@@ -72,7 +72,7 @@ namespace Intranet.Labor.Bll.Test
         #region SaveNewRetentionTest Tests
 
         /// <summary>
-        ///     Tests if Saving a new Retention Test works
+        ///     Tests if Saving a new BabyDiaperRetention Test works
         /// </summary>
         [Fact]
         public void SaveNewRetentionTestBaseTest()
@@ -322,7 +322,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Tests if Updating an existing Retention Test works
+        ///     Tests if Updating an existing BabyDiaperRetention Test works
         /// </summary>
         [Fact]
         public void UpdateRetentionTestBaseTest()

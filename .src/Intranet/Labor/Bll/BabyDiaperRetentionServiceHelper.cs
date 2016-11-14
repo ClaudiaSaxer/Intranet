@@ -168,7 +168,7 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     returns the RwType for the Retention test
+        ///     returns the RwType for the BabyDiaperRetention test
         /// </summary>
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>

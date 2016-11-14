@@ -75,7 +75,7 @@ namespace Intranet.Labor.Bll
             }
             if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Retention )
             {
-                Logger.Error("Requestet test was not an Retention Test. Id " + testValue.TestValueId);
+                Logger.Error("Requestet test was not an BabyDiaperRetention Test. Id " + testValue.TestValueId);
                 return null;
             }
             var testSheetInfo = testValue.TestSheet;

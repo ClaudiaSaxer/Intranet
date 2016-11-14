@@ -1,17 +1,17 @@
 ﻿namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    ///     Class representing the view model for the retention test value
+    ///     Class representing the view model of the rewet test value
     /// </summary>
-    public class RetentionTestValue
+    public class BabyDiaperRewetTestValue
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets the retention data
+        ///     Gets or sets the rewet data
         /// </summary>
-        /// <value>the retention data</value>
-        public Retention Retention { get; set; }
+        /// <value>the rewet data</value>
+        public BabyDiaperRewet BabyDiaperRewet { get; set; }
 
         /// <summary>
         ///     Gets or sets the test info

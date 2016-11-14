@@ -6,7 +6,7 @@ namespace Intranet.Labor.ViewModel
     /// <summary>
     ///     Class representing the view model for the retention
     /// </summary>
-    public class Retention
+    public class BabyDiaperRetention
     {
         #region Properties
 
