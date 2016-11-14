@@ -79,7 +79,16 @@ namespace Intranet.Labor.Dal.Migrations
                 MaxRetention = 380,
                 MaxPenetrationAfter4Time = 250
             };
+            var article2 = new Article
+            {
+                ArticleNr = "10401",
+                Name = "Inko Extra",
+                ArticleType = ArticleType.IncontinencePad,
+                SizeName = "Inko  Extra"
+            };
+
             context.Articles.AddOrUpdate( a => a.ArticleId, article1 );
+            context.Articles.AddOrUpdate(a => a.ArticleId, article2);
 
             var productionOrderComponent1 = new ProductionOrderComponent
             {
@@ -100,10 +109,21 @@ namespace Intranet.Labor.Dal.Migrations
                 Component = productionOrderComponent1,
                 Article = article1
             };
+
+            var productionOrder2 = new ProductionOrder
+            {
+                FaNr = "FA666",
+                StartDateTime = new DateTime(2016, 2, 2),
+                EndDateTime = new DateTime(2018, 2, 2),
+                Machine = machine2,
+                Article = article2
+            };
             productionOrderComponent1.ProductionOrder = productionOrder1;
+  
 
             context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
+            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder2);
 
             ////////////////////////////////////////////////////
             var shift1 = new ShiftSchedule
@@ -541,7 +561,7 @@ namespace Intranet.Labor.Dal.Migrations
             //------------------Incontinence Pad -----------------
             var testSheet2 = new TestSheet
             {
-                TestSheetId = 22,
+                TestSheetId = 2,
                 FaNr = "FA666",
                 CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
                 ShiftType = ShiftType.Night,
@@ -561,7 +581,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1
+                TestSheetRefId = 2
             };
             var incontinencePadRetentionTestValueAverage = new TestValue
             {
@@ -572,7 +592,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetRefId = 2
             };
             var incontinencePadRetentionTestValueStandardDeviation = new TestValue
             {
@@ -583,7 +603,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetRefId = 2
             };
             var incontinencePadRewetTestValueAverage = new TestValue
             {
@@ -594,7 +614,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetRefId = 2
             };
             var incontinencePadRewetTestValueStandardDeviation = new TestValue
             {
@@ -605,7 +625,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetRefId = 2
             };
             var incontinencePadAcquisitionTimeTestValueAverage = new TestValue
             {
@@ -616,7 +636,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetRefId =2
             };
             var incontinencePadAcquisitionTimeTestValueStandardDeviation = new TestValue
             {
@@ -627,7 +647,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetRefId =2
             };
 
             var incontinencePadRewetTest1 = new IncontinencePadTestValue
@@ -678,7 +698,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1,
+                TestSheetRefId = 2,
                 TestValueNote = new List<TestValueNote> { testNote2 }
             };
             var incontinencePadAcquisitionTimeTestValue1 = new TestValue
@@ -691,7 +711,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1,
+                TestSheetRefId = 2,
                 TestValueNote = new List<TestValueNote> { testNote2 }
             };
             testNote.TestValue = incontinencePadRetentionTestValue1;
@@ -779,9 +799,9 @@ namespace Intranet.Labor.Dal.Migrations
                 AcquisitionWeight = 12,
                 AcquisitionTimeSecond = 12,
                 RewetAfterAcquisitionTimeRw = RwType.Better,
-                RewetAfterAcquisitionTimeDryWeight = 12,
-                RewetAfterAcquisitionTimeWeightDifference = 12,
-                RewetAfterAcquisitionTimeWetWeight = 14,
+                RewetAfterAcquisitionTimeDryWeight = 122,
+                RewetAfterAcquisitionTimeWeightDifference = 122,
+                RewetAfterAcquisitionTimeWetWeight = 314,
                 IncontinencePadTime = new TimeSpan( 0, 0, 0 ),
                 TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
             };
