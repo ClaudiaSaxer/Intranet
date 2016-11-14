@@ -26,7 +26,8 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestSheetId = 2,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime(2016, 5, 5)
+                CreatedDateTime = new DateTime(2016, 5, 5),
+                ArticleType = ArticleType.IncontinencePad
             };
             var testBll =
                 MockHelperBll.GetTestBll(
