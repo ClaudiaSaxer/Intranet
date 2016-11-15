@@ -1,8 +1,12 @@
 ﻿#region Usings
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -79,7 +83,38 @@ namespace Intranet.Labor.Bll
         /// <returns>The InkoRewetEditViewModel</returns>
         public InkoRetentionEditViewModel GetNewInkoRetentionEditViewModel( Int32 testSheetId )
         {
-            throw new NotImplementedException();
+            var testSheet = TestBll.GetTestSheetInfo(testSheetId);
+
+            if (testSheet.IsNull() || testSheet.ArticleType != ArticleType.IncontinencePad)
+            {
+                Logger.Error("TestBlatt mit id " + testSheetId + "existiert nicht in DB!");
+                return null;
+            }
+
+            var errors = TestBll.GetAllNoteCodes();
+            var errorCodes = errors.Select(error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value })
+                                   .ToList();
+
+            var viewModel = new InkoRetentionEditViewModel
+            {
+                TestSheetId = testSheetId,
+                TestValueId = -1,
+                ProductionCode = TestServiceHelper.CreateProductionCode(testSheet),
+                NoteCodes = errorCodes,
+                Notes = new List<TestNote>()
+            };
+
+            var oldTestValue = testSheet.TestValues.Where(t => t.TestValueType == TestValueType.Single)
+                                        .ToList()
+                                        .LastOrDefault();
+            if (oldTestValue != null)
+            {
+                viewModel.TestPerson = oldTestValue.LastEditedPerson;
+                viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
+                viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
+            }
+
+            return viewModel;
         }
 
         /// <summary>
