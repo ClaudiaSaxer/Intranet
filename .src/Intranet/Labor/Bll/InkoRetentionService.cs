@@ -73,7 +73,53 @@ namespace Intranet.Labor.Bll
         /// <returns>The InkoRewetEditViewModel</returns>
         public InkoRetentionEditViewModel GetInkoRetentionEditViewModel( Int32 rewetTestId )
         {
-            throw new NotImplementedException();
+            var testValue = TestBll.GetTestValue(rewetTestId);
+            if (testValue.IsNull())
+            {
+                Logger.Error("TestValue mit id " + rewetTestId + "existiert nicht in DB!");
+                return null;
+            }
+            var incontinencePadTestValue = testValue.IncontinencePadTestValue;
+            if (incontinencePadTestValue.IsNull())
+            {
+                Logger.Error("IncontinencePadTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!");
+                return null;
+            }
+            if (incontinencePadTestValue.TestType != TestTypeIncontinencePad.Retention)
+            {
+                Logger.Error("Requestet test was not an InkoRewet Test. Id " + testValue.TestValueId);
+                return null;
+            }
+            var testSheet = testValue.TestSheet;
+            if (testSheet.IsNull())
+            {
+                Logger.Error("TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!");
+                return null;
+            }
+            var notes = testValue.TestValueNote;
+            var errors = TestBll.GetAllNoteCodes();
+            var errorCodes = errors.Select(error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value })
+                                   .ToList();
+            if (notes.IsNull())
+                notes = new List<TestValueNote>();
+            var testNotes = notes.Select(note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message })
+                                 .ToList();
+
+            var viewModel = new InkoRetentionEditViewModel
+            {
+                TestValueId = rewetTestId,
+                TestSheetId = testValue.TestSheetRefId,
+                TestPerson = testValue.LastEditedPerson,
+                ProductionCode = TestServiceHelper.CreateProductionCode(testSheet),
+                ProductionCodeDay = testValue.DayInYearOfArticleCreation,
+                ProductionCodeTime = incontinencePadTestValue.IncontinencePadTime,
+                InkoWeight = incontinencePadTestValue.RetentionWeight,
+                InkoWeightWet = incontinencePadTestValue.RetentionWetValue,
+                InkoWeightAfterZentrifuge = incontinencePadTestValue.RetentionAfterZentrifuge,
+                Notes = testNotes,
+                NoteCodes = errorCodes
+            };
+            return viewModel;
         }
 
         /// <summary>
