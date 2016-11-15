@@ -1,7 +1,9 @@
 ﻿#region Usings
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
@@ -89,7 +91,37 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test value</returns>
         public TestValue UpdateRetentionTest( InkoRetentionEditViewModel viewModel )
         {
-            throw new NotImplementedException();
+            var testValue = TestBll.GetTestValue(viewModel.TestValueId);
+            if (testValue.IsNull() || testValue.ArticleTestType != ArticleType.IncontinencePad || testValue.IncontinencePadTestValue.TestType != TestTypeIncontinencePad.Retention)
+            {
+                Logger.Error("Old Test not found in DB");
+                return null;
+            }
+            testValue.LastEditedDateTime = DateTime.Now;
+            testValue.LastEditedPerson = viewModel.TestPerson;
+            testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
+            testValue.IncontinencePadTestValue.IncontinencePadTime = viewModel.ProductionCodeTime;
+            testValue.IncontinencePadTestValue.RetentionWeight = viewModel.InkoWeight;
+            testValue.IncontinencePadTestValue.RetentionWetValue = viewModel.InkoWeightWet;
+            testValue.IncontinencePadTestValue.RetentionAfterZentrifuge = viewModel.InkoWeightAfterZentrifuge;
+            testValue.IncontinencePadTestValue.TestType = TestTypeIncontinencePad.Retention;
+
+            if (viewModel.Notes.IsNull())
+                viewModel.Notes = new List<TestNote>();
+
+            foreach (var note in testValue.TestValueNote)
+                foreach (var vmNote in viewModel.Notes.Where(vmNote => note.TestValueNoteId == vmNote.Id))
+                {
+                    note.Message = vmNote.Message;
+                    note.ErrorRefId = vmNote.ErrorCodeId;
+                }
+            foreach (var vmNote in viewModel.Notes.Where(n => n.Id == 0))
+                testValue.TestValueNote.Add(new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue });
+
+            testValue.IncontinencePadTestValue = CalculateInkoRetentionValues(testValue.IncontinencePadTestValue, viewModel.TestSheetId);
+
+            TestBll.UpdateTestValue(testValue);
+            return testValue;
         }
 
         #endregion
