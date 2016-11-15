@@ -87,7 +87,20 @@ namespace Intranet.Labor.Bll
         /// <returns>The saved or updated TestValue</returns>
         public TestValue Save( InkoRetentionEditViewModel viewModel )
         {
-            throw new NotImplementedException();
+            TestValue testValue = null;
+            try
+            {
+                testValue = viewModel.TestValueId <= 0
+                    ? InkoRewetServiceHelper.SaveNewRetentionTest(viewModel)
+                    : InkoRewetServiceHelper.UpdateRetentionTest(viewModel);
+                var testSheet = InkoRewetServiceHelper.UpdateRetentionAverageAndStv(viewModel.TestSheetId);
+            }
+            catch (Exception e)
+            {
+                Logger.Error("Update oder Create new Test Value ist fehlgeschlagen: " + e.Message);
+                testValue = null;
+            }
+            return testValue;
         }
 
         #endregion
