@@ -29,7 +29,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the incontinence retention service helper.
         /// </summary>
-        public IInkoRetentionServiceHelper InkoRewetServiceHelper { get; set; }
+        public IInkoRetentionServiceHelper InkoRetentionServiceHelper { get; set; }
 
         /// <summary>
         ///     Gets or sets the test service helper.
@@ -62,7 +62,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue(testValueId);
-            InkoRewetServiceHelper.UpdateRetentionAverageAndStv(result.TestSheetRefId);
+            InkoRetentionServiceHelper.UpdateRetentionAverageAndStv(result.TestSheetRefId);
             return result;
         }
 
@@ -174,9 +174,9 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? InkoRewetServiceHelper.SaveNewRetentionTest(viewModel)
-                    : InkoRewetServiceHelper.UpdateRetentionTest(viewModel);
-                var testSheet = InkoRewetServiceHelper.UpdateRetentionAverageAndStv(viewModel.TestSheetId);
+                    ? InkoRetentionServiceHelper.SaveNewRetentionTest(viewModel)
+                    : InkoRetentionServiceHelper.UpdateRetentionTest(viewModel);
+                var testSheet = InkoRetentionServiceHelper.UpdateRetentionAverageAndStv(viewModel.TestSheetId);
             }
             catch (Exception e)
             {

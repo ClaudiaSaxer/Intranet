@@ -119,5 +119,29 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for InkoRewetServiceHelper
+        /// </summary>
+        /// <param name="testValue">testValue returned by update or save new</param>
+        /// <returns>a IBabyDiaperRewetServiceHelper moq</returns>
+        public static IInkoRetentionServiceHelper GetInkoRetentionServiceHelper(TestValue testValue)
+        {
+            var mock = new Mock<IInkoRetentionServiceHelper>
+            {
+                Name = "MockHelper.GetInkoRetentionServiceHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.UpdateRetentionTest(It.IsAny<InkoRetentionEditViewModel>()))
+                .Returns(testValue);
+            mock.Setup(x => x.SaveNewRetentionTest(It.IsAny<InkoRetentionEditViewModel>()))
+                .Returns(testValue);
+
+            mock.Setup(x => x.UpdateRetentionAverageAndStv(It.IsAny<Int32>()))
+                .Returns(new TestSheet());
+
+            return mock.Object;
+        }
     }
 }
