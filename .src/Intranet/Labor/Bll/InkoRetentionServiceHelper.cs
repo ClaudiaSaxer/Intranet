@@ -87,15 +87,15 @@ namespace Intranet.Labor.Bll
         /// <param name="incontinencePadTestValue">the test value</param>
         /// <param name="testSheetId">the test sheet id</param>
         /// <returns></returns>
-        private IncontinencePadTestValue CalculateInkoRetentionValues(IncontinencePadTestValue incontinencePadTestValue,
-                                                                   Int32 testSheetId)
+        private IncontinencePadTestValue CalculateInkoRetentionValues( IncontinencePadTestValue incontinencePadTestValue,
+                                                                       Int32 testSheetId )
         {
-            var testSheet = TestBll.GetTestSheetInfo(testSheetId);
-            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
 
             incontinencePadTestValue.RetentionAbsorbtion = incontinencePadTestValue.RetentionWetValue - incontinencePadTestValue.RetentionWeight;
             incontinencePadTestValue.RetentionEndValue = incontinencePadTestValue.RetentionAfterZentrifuge - incontinencePadTestValue.RetentionWeight;
-            incontinencePadTestValue.RetentionRw = GetRetentionRwType(incontinencePadTestValue.RetentionEndValue, productionOrder);
+            incontinencePadTestValue.RetentionRw = GetRetentionRwType( incontinencePadTestValue.RetentionEndValue, productionOrder );
             return incontinencePadTestValue;
         }
 
@@ -105,11 +105,11 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns>The RwType</returns>
-        private static RwType GetRetentionRwType(Double value, ProductionOrder productOrder) => productOrder.Article.MinRetention < value ? RwType.Ok : RwType.Worse;
+        private static RwType GetRetentionRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MinRetention < value ? RwType.Ok : RwType.Worse;
 
-        private TestValue UpdateInkoRetentionAvg(TestSheet testSheet, TestValue retentionTestAvg)
+        private TestValue UpdateInkoRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
-            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempInko = new IncontinencePadTestValue { RetentionRw = RwType.Ok };
             var counter = 0;
             foreach (
@@ -117,7 +117,7 @@ namespace Intranet.Labor.Bll
                 testSheet.TestValues.Where(
                              testValue =>
                                  testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention)
+                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention )
             )
             {
                 tempInko.RetentionWeight += testValue.IncontinencePadTestValue.RetentionWeight;
@@ -125,13 +125,13 @@ namespace Intranet.Labor.Bll
                 tempInko.RetentionAfterZentrifuge += testValue.IncontinencePadTestValue.RetentionAfterZentrifuge;
                 tempInko.RetentionAbsorbtion += testValue.IncontinencePadTestValue.RetentionAbsorbtion;
                 tempInko.RetentionEndValue += testValue.IncontinencePadTestValue.RetentionEndValue;
-                if (testValue.IncontinencePadTestValue.RetentionRw == RwType.Worse)
+                if ( testValue.IncontinencePadTestValue.RetentionRw == RwType.Worse )
                     tempInko.RetentionRw = RwType.SomethingWorse;
                 counter++;
             }
-            if (counter == 0)
+            if ( counter == 0 )
                 counter = 1;
-            else if (GetRetentionRwType(tempInko.RetentionEndValue, productionOrder) == RwType.Worse)
+            else if ( GetRetentionRwType( tempInko.RetentionEndValue, productionOrder ) == RwType.Worse )
                 tempInko.RetentionRw = RwType.Worse;
             retentionTestAvg.IncontinencePadTestValue.RetentionWeight = tempInko.RetentionWeight / counter;
             retentionTestAvg.IncontinencePadTestValue.RetentionWetValue = tempInko.RetentionWetValue / counter;
@@ -142,7 +142,7 @@ namespace Intranet.Labor.Bll
             return retentionTestAvg;
         }
 
-        private static TestValue UpdateInkoRetentionStDev(TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev)
+        private static TestValue UpdateInkoRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
         {
             var tempInko = new IncontinencePadTestValue();
             var counter = 0;
@@ -151,25 +151,27 @@ namespace Intranet.Labor.Bll
                 testSheet.TestValues.Where(
                              testValue =>
                                  testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention)
+                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention )
             )
             {
-                tempInko.RetentionWeight += Math.Pow(testValue.IncontinencePadTestValue.RetentionWeight - retentionTestAvg.IncontinencePadTestValue.RetentionWeight, 2);
-                tempInko.RetentionWetValue += Math.Pow(testValue.IncontinencePadTestValue.RetentionWetValue - retentionTestAvg.IncontinencePadTestValue.RetentionWetValue, 2);
-                tempInko.RetentionAfterZentrifuge += Math.Pow(testValue.IncontinencePadTestValue.RetentionAfterZentrifuge - retentionTestAvg.IncontinencePadTestValue.RetentionAfterZentrifuge, 2);
-                tempInko.RetentionAbsorbtion += Math.Pow(testValue.IncontinencePadTestValue.RetentionAbsorbtion - retentionTestAvg.IncontinencePadTestValue.RetentionAbsorbtion, 2);
-                tempInko.RetentionEndValue += Math.Pow(testValue.IncontinencePadTestValue.RetentionEndValue - retentionTestAvg.IncontinencePadTestValue.RetentionEndValue, 2);
+                tempInko.RetentionWeight += Math.Pow( testValue.IncontinencePadTestValue.RetentionWeight - retentionTestAvg.IncontinencePadTestValue.RetentionWeight, 2 );
+                tempInko.RetentionWetValue += Math.Pow( testValue.IncontinencePadTestValue.RetentionWetValue - retentionTestAvg.IncontinencePadTestValue.RetentionWetValue, 2 );
+                tempInko.RetentionAfterZentrifuge +=
+                    Math.Pow( testValue.IncontinencePadTestValue.RetentionAfterZentrifuge - retentionTestAvg.IncontinencePadTestValue.RetentionAfterZentrifuge, 2 );
+                tempInko.RetentionAbsorbtion += Math.Pow( testValue.IncontinencePadTestValue.RetentionAbsorbtion - retentionTestAvg.IncontinencePadTestValue.RetentionAbsorbtion, 2 );
+                tempInko.RetentionEndValue += Math.Pow( testValue.IncontinencePadTestValue.RetentionEndValue - retentionTestAvg.IncontinencePadTestValue.RetentionEndValue, 2 );
                 counter++;
             }
-            if (counter == 0)
+            if ( counter == 0 )
                 counter = 1;
-            retentionTestStDev.IncontinencePadTestValue.RetentionWeight = Math.Sqrt(tempInko.RetentionWeight / counter);
-            retentionTestStDev.IncontinencePadTestValue.RetentionWetValue = Math.Sqrt(tempInko.RetentionWetValue / counter);
-            retentionTestStDev.IncontinencePadTestValue.RetentionAfterZentrifuge = Math.Sqrt(tempInko.RetentionAfterZentrifuge / counter);
-            retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = Math.Sqrt(tempInko.RetentionAbsorbtion / counter);
-            retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = Math.Sqrt(tempInko.RetentionEndValue / counter);
+            retentionTestStDev.IncontinencePadTestValue.RetentionWeight = Math.Sqrt( tempInko.RetentionWeight / counter );
+            retentionTestStDev.IncontinencePadTestValue.RetentionWetValue = Math.Sqrt( tempInko.RetentionWetValue / counter );
+            retentionTestStDev.IncontinencePadTestValue.RetentionAfterZentrifuge = Math.Sqrt( tempInko.RetentionAfterZentrifuge / counter );
+            retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = Math.Sqrt( tempInko.RetentionAbsorbtion / counter );
+            retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = Math.Sqrt( tempInko.RetentionEndValue / counter );
             return retentionTestStDev;
 
             #endregion
         }
+    }
 }
