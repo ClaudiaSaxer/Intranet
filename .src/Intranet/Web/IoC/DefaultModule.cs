@@ -188,6 +188,11 @@ namespace Intranet.Web.IoC
                    .As<IInkoRewetServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<InkoRetentionService>()
+                   .As<IInkoRetentionService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
