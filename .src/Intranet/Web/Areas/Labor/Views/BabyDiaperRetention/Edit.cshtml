@@ -1,7 +1,7 @@
 ﻿@model Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
 
 @{
-    ViewBag.Title = "Babywindeln BabyDiaperRetention - Edit";
+    ViewBag.Title = "Babywindeln Retention - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -95,7 +95,7 @@
             function addNote() {
                 console.log("test");
                 console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperBabyDiaperRetention/AddNote';
+                document.getElementById('submitForm').action = '/Labor/BabyDiaperRetention/AddNote';
                 console.log(document.getElementById('submitForm').action);
                 document.getElementById('submitForm').submit();
             }
