@@ -81,7 +81,7 @@ namespace Intranet.Labor.Dal.Migrations
             };
             var article2 = new Article
             {
-                ArticleNr = "10401",
+                ArticleNr = "10412",
                 Name = "Inko Extra",
                 ArticleType = ArticleType.IncontinencePad,
                 SizeName = "Inko  Extra"
@@ -110,7 +110,7 @@ namespace Intranet.Labor.Dal.Migrations
                 Article = article1
             };
 
-            var productionOrder2 = new ProductionOrder
+            var productionOrder3 = new ProductionOrder
             {
                 FaNr = "FA666",
                 StartDateTime = new DateTime(2016, 2, 2),
@@ -123,7 +123,7 @@ namespace Intranet.Labor.Dal.Migrations
 
             context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
-            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder2);
+            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder3);
 
             ////////////////////////////////////////////////////
 
