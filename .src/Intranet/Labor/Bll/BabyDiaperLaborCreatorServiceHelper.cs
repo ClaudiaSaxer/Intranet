@@ -17,6 +17,8 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper
     {
+        private  ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; };
+
         #region Ctor
 
         /// <summary>
@@ -62,8 +64,9 @@ namespace Intranet.Labor.Bll
         /// <param name="time">the time od the production of the diaper</param>
         /// <returns>A Production code for a single diaper</returns>
         public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-            => "IT/" + machine.Substring( 1 ) + "/" + year.ToString( "0000" )
-                                           .SubstringRight( 2 ) + "/" + dayOfyear + "/" + time.Hours.ToString( "00" ) + ":" + time.Minutes.ToString( "00" );
+        {
+            return LaborCreatorServiceHelper.GenerateProdCode( machine, year, dayOfyear, time );
+        }
 
         /// <summary>
         ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
@@ -393,4 +396,6 @@ namespace Intranet.Labor.Bll
             return tests;
         }
     }
+
+
 }
