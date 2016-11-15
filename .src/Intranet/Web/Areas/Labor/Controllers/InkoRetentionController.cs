@@ -81,7 +81,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = InkoRetentionService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetRefId } );
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( InkoRetentionEditViewModel viewModel )
         {
             var savedModel = InkoRetentionService.Save( viewModel );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = savedModel.TestSheetRefId } );
         }
     }
 }
