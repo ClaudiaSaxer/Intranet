@@ -57,7 +57,9 @@ namespace Intranet.Labor.Bll
         /// <returns>The deleted testvalue</returns>
         public TestValue Delete( Int32 testValueId )
         {
-            throw new NotImplementedException();
+            var result = TestBll.DeleteTestValue(testValueId);
+            InkoRewetServiceHelper.UpdateRetentionAverageAndStv(result.TestSheetRefId);
+            return result;
         }
 
         /// <summary>
