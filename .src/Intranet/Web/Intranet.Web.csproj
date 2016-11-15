@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -218,6 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
+    <Compile Include="Areas\Labor\Controllers\InkoRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
@@ -414,6 +415,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Labor\Views\InkoRetention\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>

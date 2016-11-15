@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -13,30 +13,30 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     Class representing the InkoRewetController
+    ///     Class representing the InkoRetentionController
     /// </summary>
-    public class InkoRewetController : BaseController
+    public class InkoRetentionController : BaseController
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets a <see cref="IInkoRewetService" />
+        ///     Gets or sets a <see cref="IInkoRetentionService" />
         /// </summary>
         /// <value>
-        ///     <see cref="IInkoRewetService" />
+        ///     <see cref="IInkoRetentionService" />
         /// </value>
-        public IInkoRewetService InkoRewetService { get; set; }
+        public IInkoRetentionService InkoRetentionService { get; set; }
 
         #endregion
 
         #region Ctor
 
         /// <summary>
-        ///     Initialize a new instance of the <see cref="InkoRewetController" /> class.
+        ///     Initialize a new instance of the <see cref="InkoRetentionController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public InkoRewetController( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(InkoRewetController) ) )
+        public InkoRetentionController( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(InkoRetentionController) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
@@ -44,7 +44,21 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #endregion
 
         /// <summary>
-        ///     Loads the InkoRewet Edit View with a new Item for the Test-Sheet
+        ///     adds a new note to the test
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <returns>The Edit View</returns>
+        [HttpPost]
+        public ActionResult AddNote( InkoRetentionEditViewModel viewModel )
+        {
+            if ( viewModel.Notes.IsNull() )
+                viewModel.Notes = new List<TestNote>();
+            viewModel.Notes.Add( new TestNote() );
+            return View( "Edit", viewModel );
+        }
+
+        /// <summary>
+        ///     Loads the InkoRetension Edit View with a new Item for the Test-Sheet
         /// </summary>
         /// ///
         /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
@@ -53,26 +67,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             if ( id.IsNull() )
                 return HttpNotFound();
-            var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel( id );
+            var viewModel = InkoRetentionService.GetNewInkoRetentionEditViewModel( id );
             if ( viewModel.IsNull() )
                 return new HttpNotFoundResult( "Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht." );
-            return View( "Edit", viewModel );
-        }
-
-        /// <summary>
-        ///     Loads the InkoRewet Edit View with an Item form the Test-Sheet which will be edited
-        /// </summary>
-        /// ///
-        /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
-        /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Edit( Int32 id = 0 )
-        {
-            if ( id.IsNull() )
-                return HttpNotFound();
-
-            var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel( id );
-            if ( viewModel.IsNull() )
-                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test." );
             return View( "Edit", viewModel );
         }
 
@@ -83,8 +80,25 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns></returns>
         public ActionResult Delete( Int32 id )
         {
-            var deletedTest = InkoRewetService.Delete( id );
+            var deletedTest = InkoRetentionService.Delete( id );
             return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+        }
+
+        /// <summary>
+        ///     Loads the InkoRetension Edit View with an Item form the Test-Sheet which will be edited
+        /// </summary>
+        /// ///
+        /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public ActionResult Edit( Int32 id = 0 )
+        {
+            if ( id.IsNull() )
+                return HttpNotFound();
+
+            var viewModel = InkoRetentionService.GetInkoRetentionEditViewModel( id );
+            if ( viewModel.IsNull() )
+                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test." );
+            return View( "Edit", viewModel );
         }
 
         /// <summary>
@@ -94,24 +108,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns></returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save( InkoRewetEditViewModel viewModel )
+        public ActionResult Save( InkoRetentionEditViewModel viewModel )
         {
-            var savedModel = InkoRewetService.Save( viewModel );
+            var savedModel = InkoRetentionService.Save( viewModel );
             return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
-        }
-
-        /// <summary>
-        ///     adds a new note to the test
-        /// </summary>
-        /// <param name="viewModel"></param>
-        /// <returns>The Edit View</returns>
-        [HttpPost]
-        public ActionResult AddNote( InkoRewetEditViewModel viewModel )
-        {
-            if ( viewModel.Notes.IsNull() )
-                viewModel.Notes = new List<TestNote>();
-            viewModel.Notes.Add( new TestNote() );
-            return View( "Edit", viewModel );
         }
     }
 }
