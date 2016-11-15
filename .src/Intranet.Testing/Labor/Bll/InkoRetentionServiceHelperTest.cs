@@ -279,7 +279,99 @@ namespace Intranet.Labor.Bll.Test
 
         #region UpdateRetentionAverageAndStv Tests
 
+        /// <summary>
+        ///     Tests when there are no tests, the avg and dev values are default
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionAverageAndStvNoTestsTest()
+        {
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
 
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+
+            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateRetentionAverageAndStv(1);
+
+            var actualRetentionAvg =
+                actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
+            Assert.NotNull(actualRetentionAvg);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+            Assert.Equal(RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw);
+
+            var actualRetentionStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
+            Assert.NotNull(actualRetentionStDev);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+        }
+
+        /// <summary>
+        ///     Tests when there is only one test, the avg values are equal the test values
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionAverageAndStvOneTestAvgTest()
+        {
+            var onlyTestValue = new TestValue
+            {
+                TestValueType = TestValueType.Single,
+                ArticleTestType = ArticleType.BabyDiaper,
+                IncontinencePadTestValue = new IncontinencePadTestValue
+                {
+                    TestType = TestTypeIncontinencePad.Retention,
+                    RetentionWeight = 30.21,
+                    RetentionWetValue = 430.15,
+                    RetentionAfterZentrifuge = 212.11,
+                    RetentionAbsorbtion = 399.94,
+                    RetentionEndValue = 181.9,
+                    RetentionRw = RwType.Ok
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            testSheetDataFromDb.TestValues.Add(onlyTestValue);
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+
+            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll
+            };
+
+            var actual = target.UpdateRetentionAverageAndStv(1);
+
+            var actualRetentionAvg =
+                actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
+            Assert.NotNull(actualRetentionAvg);
+            Assert.Equal(30.21, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight);
+            Assert.Equal(430.15, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue);
+            Assert.Equal(212.11, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge);
+            Assert.Equal(399.94, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(181.9, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+            Assert.Equal(RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw);
+
+            var actualRetentionStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
+            Assert.NotNull(actualRetentionStDev);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+        }
 
         #endregion
     }
