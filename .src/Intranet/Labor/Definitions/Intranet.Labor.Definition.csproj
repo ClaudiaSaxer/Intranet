@@ -58,12 +58,14 @@
     <Compile Include="Bll\IBabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiaperRewetService.cs" />
     <Compile Include="Bll\IBabyDiaperRewetServiceHelper.cs" />
-    <Compile Include="Bll\IBabyDiaperServiceHelper.cs" />
-    <Compile Include="Bll\IBabyDiaperBll.cs" />
+    <Compile Include="Bll\ITestServiceHelper.cs" />
+    <Compile Include="Bll\ITestBll.cs" />
     <Compile Include="Bll\IBabyDiaperRetentionService.cs" />
     <Compile Include="Bll\IBabyDiaperLaborCreatorBll.cs" />
     <Compile Include="Bll\IBabyDiaperLaborCreatorService.cs" />
     <Compile Include="Bll\IBabyDiaperLaborCreatorServiceHelper.cs" />
+    <Compile Include="Bll\IInkoRewetService.cs" />
+    <Compile Include="Bll\IInkoRewetServiceHelper.cs" />
     <Compile Include="Bll\ILaborCreatorBll.cs" />
     <Compile Include="Bll\ILaborCreatorService.cs" />
     <Compile Include="Bll\ILaborHomeBll.cs" />

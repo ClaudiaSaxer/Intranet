@@ -24,12 +24,12 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperBll BabyDiaperBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
-        public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
+        public ITestServiceHelper TestServiceHelper { get; set; }
 
         #endregion
 
@@ -56,7 +56,8 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
-            var testValue = BabyDiaperServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            var testValue = TestServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            testValue.ArticleTestType = ArticleType.BabyDiaper;
 
             var babyDiaperTestValue = new BabyDiaperTestValue
             {
@@ -68,7 +69,7 @@ namespace Intranet.Labor.Bll
             babyDiaperTestValue = CalculateBabyDiaperRetentionValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
-            testValue = BabyDiaperBll.SaveNewTestValue( testValue );
+            testValue = TestBll.SaveNewTestValue( testValue );
             return testValue;
         }
 
@@ -79,7 +80,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test value</returns>
         public TestValue UpdateRetentionTest( BabyDiaperRetentionEditViewModel viewModel )
         {
-            var testValue = BabyDiaperBll.GetTestValue( viewModel.TestValueId );
+            var testValue = TestBll.GetTestValue( viewModel.TestValueId );
             if ( testValue.IsNull() || testValue.ArticleTestType != ArticleType.BabyDiaper || testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.Retention)
             {
                 Logger.Error("Old Test not found in DB");
@@ -109,7 +110,7 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue,
                                                                                 viewModel.TestSheetId );
 
-            BabyDiaperBll.UpdateTestValue( testValue );
+            TestBll.UpdateTestValue( testValue );
             return testValue;
         }
 
@@ -120,7 +121,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateRetentionAverageAndStv( Int32 testSheetId )
         {
-            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
             var retentionTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
@@ -133,7 +134,7 @@ namespace Intranet.Labor.Bll
                                  && tv.TestValueType == TestValueType.StandardDeviation );
             UpdateRetentionAvg( testSheet, retentionTestAvg );
             UpdateRetentionStDev( testSheet, retentionTestAvg, retentionTestStDev );
-            BabyDiaperBll.UpdateTestSheet();
+            TestBll.UpdateTestSheet();
             return testSheet;
         }
 
@@ -150,8 +151,8 @@ namespace Intranet.Labor.Bll
         private BabyDiaperTestValue CalculateBabyDiaperRetentionValues( BabyDiaperTestValue babyDiaperTestValue,
                                                                         Int32 testSheetId )
         {
-            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
-            var productionOrder = BabyDiaperBll.GetProductionOrder( testSheet.FaNr );
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
 
             babyDiaperTestValue.RetentionAfterZentrifugeValue = babyDiaperTestValue.RetentionWetWeight -
                                                                 babyDiaperTestValue.WeightDiaperDry;
@@ -182,7 +183,7 @@ namespace Intranet.Labor.Bll
 
         private TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
-            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
+            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
             var counter = 0;
             foreach (

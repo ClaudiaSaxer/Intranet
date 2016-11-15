@@ -27,16 +27,16 @@ namespace Intranet.Labor.Bll.Test
                 CreatedDateTime = new DateTime(2016, 5, 5)
             };
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestBll = babyDiaperRetentionBll,
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetNewBabyDiaperRewetEditViewModel(1);
@@ -53,13 +53,13 @@ namespace Intranet.Labor.Bll.Test
         public void GetNewBabyDiaperRewetEditViewModelFromNotExistingTestSheetTest()
         {
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     new TestSheet { TestSheetId = 1 }
                 );
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetNewBabyDiaperRewetEditViewModel(2);
@@ -88,13 +88,13 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiaperRewetEditViewModel(2);
@@ -121,13 +121,13 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiaperRewetEditViewModel(1);
@@ -156,13 +156,13 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll
+                TestBll = babyDiaperRetentionBll
             };
 
             var actual = target.GetBabyDiaperRewetEditViewModel(1);
@@ -198,16 +198,16 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestBll = babyDiaperRetentionBll,
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetBabyDiaperRewetEditViewModel(1);
@@ -255,16 +255,16 @@ namespace Intranet.Labor.Bll.Test
                 testValue.TestSheet = testSheetInDb;
 
             var babyDiaperRetentionBll =
-                MockHelperBll.GetBabyDiaperBll(
+                MockHelperBll.GetTestBll(
                     testSheetInDb
                 );
 
-            var babyDiaperServiceHelper = MockHelperBabyDiaperServiceHelper.GetBabyDiaperServiceHelper("IT/11/16/");
+            var babyDiaperServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/11/16/");
 
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
-                BabyDiaperBll = babyDiaperRetentionBll,
-                BabyDiaperServiceHelper = babyDiaperServiceHelper
+                TestBll = babyDiaperRetentionBll,
+                TestServiceHelper = babyDiaperServiceHelper
             };
 
             var actual = target.GetBabyDiaperRewetEditViewModel(1);
@@ -297,7 +297,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     testValue
                 );
 
@@ -319,7 +319,7 @@ namespace Intranet.Labor.Bll.Test
             var testValue = new TestValue();
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     testValue
                 );
 
@@ -341,7 +341,7 @@ namespace Intranet.Labor.Bll.Test
             var deletedTestValue = new TestValue { TestValueId = 1 };
 
             var babyDiaperRewetServiceHelper =
-                MockHelperBabyDiaperServiceHelper.GetBabyDiaperRewetServiceHelper(
+                MockHelperTestServiceHelper.GetBabyDiaperRewetServiceHelper(
                     null
                 );
             var babyDiaperBll =
@@ -352,7 +352,7 @@ namespace Intranet.Labor.Bll.Test
             var target = new BabyDiaperRewetService(new NLogLoggerFactory())
             {
                 BabyDiaperRewetServiceHelper = babyDiaperRewetServiceHelper,
-                BabyDiaperBll = babyDiaperBll
+                TestBll = babyDiaperBll
             };
 
             var actual = target.Delete(1);

@@ -56,8 +56,9 @@
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewet.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewetTestValue.cs" />
     <Compile Include="BabyDiaperRetention\BabyDiaperRetentionEditViewModel.cs" />
-    <Compile Include="BabyDiaperRetention\ErrorCode.cs" />
+    <Compile Include="ErrorCode.cs" />
     <Compile Include="BabyDiaperRewet\BabyDiaperRewetEditViewModel.cs" />
+    <Compile Include="InkoEdit\InkoRewetEditViewModel.cs" />
     <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
     <Compile Include="LaborCreator\RunningProductionOrder.cs" />
     <Compile Include="TestNote.cs" />

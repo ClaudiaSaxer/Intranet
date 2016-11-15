@@ -7,9 +7,9 @@ using Xunit;
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    ///     Class representing Tests for BabyDiaperServiceHelper
+    ///     Class representing Tests for TestServiceHelper
     /// </summary>
-    public class BabyDiaperServiceHelperTest
+    public class TestServiceHelperTest
     {
         /// <summary>
         ///     Tests if CreateProductionCode returns the right string
@@ -23,9 +23,9 @@ namespace Intranet.Labor.Bll.Test
                 MachineNr = "M11",
                 CreatedDateTime = new DateTime(2016,1,1)
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper( new NLogLoggerFactory() );
+            var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = babyDiaperServiceHelper.CreateProductionCode( testSheet );
+            var actual = testServiceHelper.CreateProductionCode( testSheet );
 
             Assert.Equal( expectedResult, actual);
         }
@@ -42,9 +42,9 @@ namespace Intranet.Labor.Bll.Test
                 MachineNr = "M10",
                 CreatedDateTime = new DateTime(2017, 1, 7)
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateProductionCode(testSheet);
+            var actual = testServiceHelper.CreateProductionCode(testSheet);
 
             Assert.Equal(expectedResult, actual);
         }
@@ -62,9 +62,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId,expectedTestValue.CreatedPerson,expectedTestValue.DayInYearOfArticleCreation,null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId,expectedTestValue.CreatedPerson,expectedTestValue.DayInYearOfArticleCreation,null );
 
             Assert.Equal(expectedTestValue.TestSheetRefId, actual.TestSheetRefId);
         }
@@ -81,9 +81,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(expectedTestValue.CreatedPerson, actual.CreatedPerson);
         }
@@ -100,9 +100,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(expectedTestValue.CreatedPerson, actual.LastEditedPerson);
         }
@@ -119,9 +119,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(expectedTestValue.DayInYearOfArticleCreation, actual.DayInYearOfArticleCreation);
         }
@@ -138,9 +138,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(ArticleType.BabyDiaper, actual.ArticleTestType);
         }
@@ -157,9 +157,9 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(actual.CreatedPerson, actual.LastEditedPerson);
         }
@@ -176,13 +176,11 @@ namespace Intranet.Labor.Bll.Test
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
-            var babyDiaperServiceHelper = new BabyDiaperServiceHelper(new NLogLoggerFactory());
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
 
-            var actual = babyDiaperServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
+            var actual = testServiceHelper.CreateNewTestValue(expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null);
 
             Assert.Equal(null, actual.TestValueNote);
         }
-
-        //TODO, TEST TESTVALUENOTES
     }
 }

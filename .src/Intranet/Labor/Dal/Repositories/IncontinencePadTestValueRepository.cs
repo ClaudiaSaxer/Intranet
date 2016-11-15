@@ -8,9 +8,9 @@ using Intranet.Labor.Model.labor;
 namespace Intranet.Labor.Dal.Repositories
 {
     /// <summary>
-    ///     The Repository for the BabyDiaperTestValueRepository
+    ///     The Repository for the IncontinencePadTestValueRepository
     /// </summary>
-    public class BabyDiaperTestValueRepository : GenericRepository<LaborContext, BabyDiaperTestValue>
+    public class IncontinencePadTestValueRepository : GenericRepository<LaborContext, IncontinencePadTestValue>
     {
         #region Ctor
 
@@ -19,8 +19,8 @@ namespace Intranet.Labor.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory)
-            : base(databaseFactory, loggerFactory)
+        public IncontinencePadTestValueRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
+            : base( databaseFactory, loggerFactory )
         {
         }
 

@@ -6,6 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -14,24 +15,24 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the babydiaper rewet service
+    ///     Class representing the inko rewet service
     /// </summary>
-    public class BabyDiaperRewetService : ServiceBase, IBabyDiaperRewetService
+    public class InkoRewetService : ServiceBase, IInkoRewetService
     {
         #region Properties
 
         /// <summary>
-        ///     Gets or sets the bll for the baby diapers retention test.
+        ///     Gets or sets the bll for the incontinence rewet test.
         /// </summary>
         public ITestBll TestBll { get; set; }
 
         /// <summary>
-        ///     Gets or sets the baby diaper rewet service helper.
+        ///     Gets or sets the incontinence rewet service helper.
         /// </summary>
-        public IBabyDiaperRewetServiceHelper BabyDiaperRewetServiceHelper { get; set; }
+        public IInkoRewetServiceHelper InkoRewetServiceHelper { get; set; }
 
         /// <summary>
-        ///     Gets or sets the baby diaper service helper.
+        ///     Gets or sets the test service helper.
         /// </summary>
         public ITestServiceHelper TestServiceHelper { get; set; }
 
@@ -43,15 +44,15 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperRewetService( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(BabyDiaperRewetService) ) )
+        public InkoRewetService( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(InkoRewetService) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
 
-        #region Implementation of IBabyDiaperRewetService
+        #region Implementation of IInkoRewetService
 
         /// <summary>
         ///     deletes the testvalue
@@ -61,16 +62,16 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue( testValueId );
-            BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv( result.TestSheetRefId );
+            InkoRewetServiceHelper.UpdateRewetAverageAndStv(result.TestSheetRefId);
             return result;
         }
 
         /// <summary>
-        ///     Gets a new BabyDiaperRewetEditViewModel or returns null if something is wrong
+        ///     Gets a new InkoRewetEditViewModel
         /// </summary>
-        /// <param name="rewetTestId">The Id of the Babydiaper rewet test which will be edited</param>
-        /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        public BabyDiaperRewetEditViewModel GetBabyDiaperRewetEditViewModel( Int32 rewetTestId )
+        /// <param name="rewetTestId">The Id of the Inko rewet test which will be edited</param>
+        /// <returns>The InkoRewetEditViewModel</returns>
+        public InkoRewetEditViewModel GetInkoRewetEditViewModel( Int32 rewetTestId )
         {
             var testValue = TestBll.GetTestValue( rewetTestId );
             if ( testValue.IsNull() )
@@ -78,19 +79,19 @@ namespace Intranet.Labor.Bll
                 Logger.Error( "TestValue mit id " + rewetTestId + "existiert nicht in DB!" );
                 return null;
             }
-            var babyDiapersTestValue = testValue.BabyDiaperTestValue;
-            if ( babyDiapersTestValue.IsNull() )
+            var incontinencePadTestValue = testValue.IncontinencePadTestValue;
+            if ( incontinencePadTestValue.IsNull() )
             {
-                Logger.Error( "BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!" );
+                Logger.Error( "IncontinencePadTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!" );
                 return null;
             }
-            if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Rewet && babyDiapersTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime)
+            if ( incontinencePadTestValue.TestType != TestTypeIncontinencePad.RewetFree )
             {
-                Logger.Error( "Requestet test was not an BabyDiaperRetention Test. Id " + testValue.TestValueId );
+                Logger.Error( "Requestet test was not an InkoRewet Test. Id " + testValue.TestValueId );
                 return null;
             }
-            var testSheetInfo = testValue.TestSheet;
-            if ( testSheetInfo.IsNull() )
+            var testSheet = testValue.TestSheet;
+            if ( testSheet.IsNull() )
             {
                 Logger.Error( "TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!" );
                 return null;
@@ -104,24 +105,16 @@ namespace Intranet.Labor.Bll
             var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
                                  .ToList();
 
-            var viewModel = new BabyDiaperRewetEditViewModel
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestValueId = rewetTestId,
                 TestSheetId = testValue.TestSheetRefId,
                 TestPerson = testValue.LastEditedPerson,
-                ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
+                ProductionCode = TestServiceHelper.CreateProductionCode( testSheet ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
-                ProductionCodeTime = babyDiapersTestValue.DiaperCreatedTime,
-                DiaperWeight = babyDiapersTestValue.WeightDiaperDry,
-                RewetAfter140 = babyDiapersTestValue.Rewet140Value,
-                RewetAfter210 = babyDiapersTestValue.Rewet210Value,
-                StrikeThrough = babyDiapersTestValue.StrikeTroughValue,
-                Distribution = babyDiapersTestValue.DistributionOfTheStrikeTrough,
-                PenetrationTime1 = babyDiapersTestValue.PenetrationTimeAdditionFirst,
-                PenetrationTime2 = babyDiapersTestValue.PenetrationTimeAdditionSecond,
-                PenetrationTime3 = babyDiapersTestValue.PenetrationTimeAdditionThird,
-                PenetrationTime4 = babyDiapersTestValue.PenetrationTimeAdditionFourth,
-                TestType = babyDiapersTestValue.TestType,
+                ProductionCodeTime = incontinencePadTestValue.IncontinencePadTime,
+                FPDry = incontinencePadTestValue.RewetFreeDryValue,
+                FPWet = incontinencePadTestValue.RewetFreeWetValue,
                 Notes = testNotes,
                 NoteCodes = errorCodes
             };
@@ -129,15 +122,15 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        ///     Gets the BabyDiaperRewetEditViewModel for edit
+        ///     Gets the InkoRewetEditViewModel for edit
         /// </summary>
-        /// <param name="testSheetId">The Id of the test sheet where the Babydiaper rewet test is for</param>
-        /// <returns>The BabyDiaperRewetEditViewModel</returns>
-        public BabyDiaperRewetEditViewModel GetNewBabyDiaperRewetEditViewModel( Int32 testSheetId )
+        /// <param name="testSheetId">The Id of the test sheet where the Inko rewet test is for</param>
+        /// <returns>The InkoRewetEditViewModel</returns>
+        public InkoRewetEditViewModel GetNewInkoRewetEditViewModel( Int32 testSheetId )
         {
-            var testSheetInfo = TestBll.GetTestSheetInfo( testSheetId );
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
 
-            if ( testSheetInfo.IsNull() )
+            if ( testSheet.IsNull() || testSheet.ArticleType != ArticleType.IncontinencePad)
             {
                 Logger.Error( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
@@ -146,41 +139,43 @@ namespace Intranet.Labor.Bll
             var errors = TestBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
-            var viewModel = new BabyDiaperRewetEditViewModel
+
+            var viewModel = new InkoRewetEditViewModel
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
-                ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
+                ProductionCode = TestServiceHelper.CreateProductionCode( testSheet ),
                 NoteCodes = errorCodes,
                 Notes = new List<TestNote>()
             };
 
-            var oldTestValue = testSheetInfo.TestValues.Where(t => t.TestValueType == TestValueType.Single)
-                                          .ToList().LastOrDefault();
-            if (oldTestValue != null)
+            var oldTestValue = testSheet.TestValues.Where( t => t.TestValueType == TestValueType.Single )
+                                        .ToList()
+                                        .LastOrDefault();
+            if ( oldTestValue != null )
             {
                 viewModel.TestPerson = oldTestValue.LastEditedPerson;
                 viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
-                viewModel.ProductionCodeTime = oldTestValue.BabyDiaperTestValue.DiaperCreatedTime;
+                viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
             }
 
             return viewModel;
         }
 
         /// <summary>
-        ///     Saves or updates the BabyDiaperRewetEditViewModel
+        ///     Saves or updates the InkoRewetEditViewModel
         /// </summary>
         /// <param name="viewModel">The viewmodel which will be saved or updated</param>
         /// <returns>The saved or updated TestValue</returns>
-        public TestValue Save( BabyDiaperRewetEditViewModel viewModel )
+        public TestValue Save( InkoRewetEditViewModel viewModel )
         {
             TestValue testValue = null;
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? BabyDiaperRewetServiceHelper.SaveNewRewetTest( viewModel )
-                    : BabyDiaperRewetServiceHelper.UpdateRewetTest( viewModel );
-                var testSheet = BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv( viewModel.TestSheetId );
+                    ? InkoRewetServiceHelper.SaveNewRewetTest(viewModel)
+                    : InkoRewetServiceHelper.UpdateRewetTest(viewModel);
+                var testSheet = InkoRewetServiceHelper.UpdateRewetAverageAndStv(viewModel.TestSheetId);
             }
             catch ( Exception e )
             {

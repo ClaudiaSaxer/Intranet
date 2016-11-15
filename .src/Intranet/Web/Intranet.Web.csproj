@@ -219,6 +219,7 @@
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
+    <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
@@ -236,11 +237,23 @@
     <Content Include="assets\sass\CreateEdit.css">
       <DependentUpon>CreateEdit.scss</DependentUpon>
     </Content>
+    <Content Include="assets\sass\Labor.css">
+      <DependentUpon>Labor.scss</DependentUpon>
+    </Content>
     <Content Include="assets\sass\layout.css">
       <DependentUpon>layout.scss</DependentUpon>
     </Content>
+    <Content Include="assets\sass\Shell.css">
+      <DependentUpon>Shell.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\ShellSettings.css">
+      <DependentUpon>ShellSettings.scss</DependentUpon>
+    </Content>
     <Content Include="assets\sass\Site.css">
       <DependentUpon>Site.scss</DependentUpon>
+    </Content>
+    <Content Include="assets\sass\Variables.css">
+      <DependentUpon>Variables.scss</DependentUpon>
     </Content>
     <Content Include="resources\css\bootstrap-sortable.css" />
     <Content Include="resources\css\bootstrap-theme.min.css" />
@@ -368,6 +381,7 @@
     <Content Include="Areas\Labor\Views\LaborCreator\Index.cshtml" />
     <Content Include="Areas\Labor\Views\BabyDiaperRewet\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\LaborCreatorInko\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\InkoRewet\Edit.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
     <None Include="resources\js\jquery-3.1.1-vsdoc.js" />

@@ -137,11 +137,11 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <returns>a IBabyDiaperRetentionBll moq</returns>
-        public static IBabyDiaperBll GetBabyDiaperBll(TestSheet testSheet)
+        public static ITestBll GetTestBll(TestSheet testSheet)
         {
-            var mock = new Mock<IBabyDiaperBll>
+            var mock = new Mock<ITestBll>
             {
-                Name = "MockHelper.GetBabyDiaperBll",
+                Name = "MockHelper.GetTestBll",
                 DefaultValue = DefaultValue.Mock
             };
 
@@ -175,10 +175,10 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for BabyDiaperRetentionBll for delete methods
         /// </summary>
         /// <param name="testValue">testValue data which would be in the db</param>
-        /// <returns>a IBabyDiaperBll moq</returns>
-        public static IBabyDiaperBll GetBabyDiaperBllForDelete(TestValue testValue)
+        /// <returns>a ITestBll moq</returns>
+        public static ITestBll GetBabyDiaperBllForDelete(TestValue testValue)
         {
-            var mock = new Mock<IBabyDiaperBll>
+            var mock = new Mock<ITestBll>
             {
                 Name = "MockHelper.GetBabyDiaperBllForDelete",
                 DefaultValue = DefaultValue.Mock
@@ -222,12 +222,12 @@ namespace Intranet.Labor.TestEnvironment
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <param name="productionOrder">testSheet data which would be in the db</param>
         /// <param name="testValue">testValue data which would be in the db</param>
-        /// <returns>a IBabyDiaperBll moq</returns>
-        public static IBabyDiaperBll GetBabyDiaperBllForSavingAndUpdating(TestSheet testSheet, ProductionOrder productionOrder, TestValue testValue)
+        /// <returns>a ITestBll moq</returns>
+        public static ITestBll GetTestBllForSavingAndUpdating(TestSheet testSheet, ProductionOrder productionOrder, TestValue testValue)
         {
-            var mock = new Mock<IBabyDiaperBll>
+            var mock = new Mock<ITestBll>
             {
-                Name = "MockHelper.GetBabyDiaperBllForSavingAndUpdating",
+                Name = "MockHelper.GetTestBllForSavingAndUpdating",
                 DefaultValue = DefaultValue.Mock
             };
 

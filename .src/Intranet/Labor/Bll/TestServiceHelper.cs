@@ -16,14 +16,14 @@ namespace Intranet.Labor.Bll
 {
     /// <summary>
     /// </summary>
-    public class BabyDiaperServiceHelper : ServiceBase, IBabyDiaperServiceHelper
+    public class TestServiceHelper : ServiceBase, ITestServiceHelper
     {
         #region Properties
 
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperBll BabyDiaperBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         #endregion
 
@@ -33,15 +33,15 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperServiceHelper( ILoggerFactory loggerFactory )
-            : base( loggerFactory.CreateLogger( typeof(BabyDiaperServiceHelper) ) )
+        public TestServiceHelper( ILoggerFactory loggerFactory )
+            : base( loggerFactory.CreateLogger( typeof(TestServiceHelper) ) )
         {
             Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
 
-        #region Implementation of IBabyDiaperServiceHelper
+        #region Implementation of ITestServiceHelper
 
         /// <summary>
         ///     Creates the Production code string from the testsheet
@@ -67,8 +67,7 @@ namespace Intranet.Labor.Bll
                 LastEditedDateTime = DateTime.Now,
                 CreatedPerson = testPerson,
                 LastEditedPerson = testPerson,
-                DayInYearOfArticleCreation = productionCodeDay,
-                ArticleTestType = ArticleType.BabyDiaper
+                DayInYearOfArticleCreation = productionCodeDay
             };
             if (notes.IsNotNull())
                 testValue.TestValueNote = notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })

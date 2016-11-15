@@ -24,12 +24,12 @@ namespace Intranet.Labor.Bll
         /// <summary>
         ///     Gets or sets the bll for the baby diapers retention test.
         /// </summary>
-        public IBabyDiaperBll BabyDiaperBll { get; set; }
+        public ITestBll TestBll { get; set; }
 
         /// <summary>
         ///     Gets or sets the baby diaper service helper.
         /// </summary>
-        public IBabyDiaperServiceHelper BabyDiaperServiceHelper { get; set; }
+        public ITestServiceHelper TestServiceHelper { get; set; }
 
         #endregion
 
@@ -56,7 +56,8 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
-            var testValue = BabyDiaperServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            var testValue = TestServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
+            testValue.ArticleTestType = ArticleType.BabyDiaper;
 
             var babyDiaperTestValue = new BabyDiaperTestValue
             {
@@ -75,7 +76,7 @@ namespace Intranet.Labor.Bll
             babyDiaperTestValue = CalculateBabyDiaperRewetValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
-            BabyDiaperBll.SaveNewTestValue( testValue );
+            TestBll.SaveNewTestValue( testValue );
             return testValue;
         }
 
@@ -86,19 +87,19 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateRewetAverageAndStv( Int32 testSheetId )
         {
-            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
             // REWET
             var rewetTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper
-                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
+                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet)
                                  && tv.TestValueType == TestValueType.Average );
             var rewetTestStDev =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
                                  tv.ArticleTestType == ArticleType.BabyDiaper
-                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet || tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
+                                 && ( tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet)
                                  && tv.TestValueType == TestValueType.StandardDeviation );
             UpdateRewetAvg( testSheet, rewetTestAvg );
             UpdateRewetStDev( testSheet, rewetTestAvg, rewetTestStDev );
@@ -117,7 +118,7 @@ namespace Intranet.Labor.Bll
             UpdatePenetrationAvg( testSheet, penetrationTestAvg );
             UpdatePenetrationStDev( testSheet, penetrationTestAvg, penetrationStDev );
 
-            BabyDiaperBll.UpdateTestSheet();
+            TestBll.UpdateTestSheet();
             return testSheet;
         }
 
@@ -128,7 +129,7 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test value</returns>
         public TestValue UpdateRewetTest( BabyDiaperRewetEditViewModel viewModel )
         {
-            var testValue = BabyDiaperBll.GetTestValue( viewModel.TestValueId );
+            var testValue = TestBll.GetTestValue( viewModel.TestValueId );
             if (testValue.IsNull() || testValue.ArticleTestType != ArticleType.BabyDiaper || (testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.Rewet && testValue.BabyDiaperTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime))
             {
                 Logger.Error("Old Test not found in DB");
@@ -164,7 +165,7 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue = CalculateBabyDiaperRewetValues( testValue.BabyDiaperTestValue,
                                                                             viewModel.TestSheetId );
 
-            BabyDiaperBll.UpdateTestValue( testValue );
+            TestBll.UpdateTestValue( testValue );
             return testValue;
         }
 
@@ -181,8 +182,8 @@ namespace Intranet.Labor.Bll
         private BabyDiaperTestValue CalculateBabyDiaperRewetValues( BabyDiaperTestValue babyDiaperTestValue,
                                                                     Int32 testSheetId )
         {
-            var testSheet = BabyDiaperBll.GetTestSheetInfo( testSheetId );
-            var productionOrder = BabyDiaperBll.GetProductionOrder( testSheet.FaNr );
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
 
             babyDiaperTestValue.Rewet140Rw = GetRewet140RwType( babyDiaperTestValue.Rewet140Value, productionOrder );
             babyDiaperTestValue.Rewet210Rw = GetRewet210RwType( babyDiaperTestValue.Rewet210Value, productionOrder );
@@ -217,7 +218,7 @@ namespace Intranet.Labor.Bll
 
         private TestValue UpdateRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
         {
-            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
+            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { Rewet140Rw = RwType.Ok, Rewet210Rw = RwType.Ok };
             var counter = 0;
             foreach (
@@ -294,7 +295,7 @@ namespace Intranet.Labor.Bll
 
         private TestValue UpdatePenetrationAvg( TestSheet testSheet, TestValue penetrationTestAvg )
         {
-            var productionOrder = BabyDiaperBll.GetProductionOrder(testSheet.FaNr);
+            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
             var tempBabyDiaper = new BabyDiaperTestValue { PenetrationRwType = RwType.Ok };
             var counter = 0;
             foreach (

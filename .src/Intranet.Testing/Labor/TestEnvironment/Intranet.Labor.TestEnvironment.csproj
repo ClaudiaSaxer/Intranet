@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MockHelperTestServiceHelper.cs" />
     <Compile Include="BabyDiaperLaborCreatorServiceHelperData.cs" />
     <Compile Include="MockHelperIncontinencePadLaborCreatorServiceHelper.cs" />
     <Compile Include="MockHelperBabyDiaperServiceHelper.cs" />
