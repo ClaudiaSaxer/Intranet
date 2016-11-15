@@ -114,8 +114,8 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiaperBll>()
-                   .As<IBabyDiaperBll>()
+            builder.RegisterType<TestBll>()
+                   .As<ITestBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
@@ -134,8 +134,8 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterType<BabyDiaperServiceHelper>()
-                   .As<IBabyDiaperServiceHelper>()
+            builder.RegisterType<TestServiceHelper>()
+                   .As<ITestServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
@@ -168,14 +168,26 @@ namespace Intranet.Web.IoC
                    .As<IIncontinencePadLaborCreatorBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+				   
             builder.RegisterType<IncontinencePadLaborCreatorService>()
                   .As<IIncontinencePadLaborCreatorService>()
                   .PropertiesAutowired()
                   .InstancePerRequest();
+				  
             builder.RegisterType<IncontinencePadLaborCreatorServiceHelper>()
                   .As<IIncontinencePadLaborCreatorServiceHelper>()
                   .PropertiesAutowired()
                   .InstancePerRequest();
+				  
+            builder.RegisterType<InkoRewetService>()
+                   .As<IInkoRewetService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<InkoRewetServiceHelper>()
+                   .As<IInkoRewetServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
@@ -254,6 +266,12 @@ namespace Intranet.Web.IoC
 
             builder.RegisterAssemblyTypes( typeof(ShiftScheduleRepository).Assembly )
                    .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
+                   .AsImplementedInterfaces()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterAssemblyTypes(typeof(IncontinencePadTestValueRepository).Assembly)
+                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();

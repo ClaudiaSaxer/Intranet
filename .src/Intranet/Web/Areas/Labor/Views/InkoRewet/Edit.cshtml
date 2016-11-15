@@ -1,17 +1,17 @@
-﻿@model Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
-
+﻿@using Intranet.Labor.Model.labor
+@model Intranet.Labor.ViewModel.InkoRewetEditViewModel
 @{
-    ViewBag.Title = "Babywindeln Retention - Edit";
+    ViewBag.Title = "Inkonsistenz Rewet Frei - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
-    
-    <h2>Höschenwindeln - BabyDiaperRetention-Test</h2>
+
+    <h2>Inko - Rewet frei 70ml Hytec -Test</h2>
 
     <div class="intigena-line"></div>
 
-    @using (Html.BeginForm("Save", "BabyDiaperRetention", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    @using (Html.BeginForm("Save", "InkoRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
     {
         @Html.ValidationSummary(true)
         @Html.AntiForgeryToken()
@@ -27,32 +27,36 @@
             <label class="col-sm-2 control-label">Produktions Code:</label>
             <div class="col-sm-10 form-inline">
                 <label class="control-label">
-                    @Html.HiddenFor(m => m.ProductionCode)
+                    @Html.HiddenFor( m => m.ProductionCode )
                     @Model.ProductionCode
                 </label>
-                @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" } )
                 <label class="control-label">/</label>
-                @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
+                @Html.TextBoxFor( m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" } )
                 <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
             </div>
+
 
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
-            <label class="col-sm-2 control-label">Gewicht [g]:</label>
+            <h4>Rewet frei  70ml Hytec (g):</h4>
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.FPDry)
+                @Html.ValidationMessageFor(m => m.FPWet)
+            </p>
+            <label class="col-sm-2 control-label">FP Trocken:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
+                @Html.TextBoxFor( m => m.FPDry, new { placeholder = @Model.FPDry, @class = "form-control", type = "text", @required = "required" } )
             </div>
+            <label class="col-sm-2 control-label">FP Feucht:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.FPWet, new { placeholder = @Model.FPWet, @class = "form-control", type = "text", @required = "required" })
+            </div>
+
         </div>
         <div class="intigena-line"></div>
-        <div class="form-group">
-            <h4>BabyDiaperRetention (g)</h4>
-            <label class="col-sm-2 control-label">Nass [g]:</label>
-            <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.WeightRetentionWet, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text", @required = "required" })
-            </div>
-        </div>
-        <div class="intigena-line"></div>
+
         <div class="form-group" id="notes">
             <h4>Notizen:</h4>
             @for (var i = 0; i < Model.NoteCodes.Count(); i++)
@@ -64,13 +68,13 @@
             @if (Model.Notes != null)
             {
                 for (var i = 0; i < Model.Notes.Count; i++)
-                {   
+                {
                     <div>
                         <label class="col-sm-2 control-label">Error Code:</label>
                         <div class="col-sm-10">
                             @Html.DropDownListFor(
                                 m => m.Notes[i].ErrorCodeId,
-                                new SelectList(Model.NoteCodes,"ErrorID","Name",Model.Notes[i].ErrorCodeId),
+                                new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
                                 "Error Code auswählen",
                                 new { @class = "form-control" }
                             )
@@ -79,8 +83,8 @@
                         <div class="col-sm-10">
                             @Html.HiddenFor(m => m.Notes[i].Id)
                             @Html.HiddenFor(m => m.Notes[i].ErrorCodeId)
-                            @Html.TextAreaFor( m => m.Notes[i]
-                                                   .Message, new { @class = "form-control", type = "text" } )
+                            @Html.TextAreaFor(m => m.Notes[i]
+                                                  .Message, new { @class = "form-control", type = "text" })
                         </div>
                     </div>
                 }
@@ -93,10 +97,7 @@
 
         <script>
             function addNote() {
-                console.log("test");
-                console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRetention/AddNote';
-                console.log(document.getElementById('submitForm').action);
+                document.getElementById('submitForm').action = '/Labor/InkoRewet/AddNote';
                 document.getElementById('submitForm').submit();
             }
                 $("#addNote").click(function () {
@@ -108,3 +109,4 @@
         </script>
     }
 </div>
+
