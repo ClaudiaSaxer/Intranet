@@ -82,6 +82,7 @@
     <Compile Include="BabyDiaperLaborCreatorServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRewetServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRewetServiceTest.cs" />
+    <Compile Include="InkoRetentionServiceHelperTest.cs" />
     <Compile Include="InkoRetentionServiceTest.cs" />
     <Compile Include="InkoRewetServiceHelperTest.cs" />
     <Compile Include="InkoRewetServiceTest.cs" />
