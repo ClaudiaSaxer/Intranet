@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 
 #endregion

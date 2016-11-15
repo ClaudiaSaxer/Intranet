@@ -6,7 +6,7 @@ using Intranet.Labor.ViewModel;
 
 #endregion
 
-namespace Intranet.Labor.Definition.Bll
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     The Interface for the InkoRetentionService
