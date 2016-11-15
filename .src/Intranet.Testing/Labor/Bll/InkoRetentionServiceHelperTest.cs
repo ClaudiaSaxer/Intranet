@@ -201,7 +201,79 @@ namespace Intranet.Labor.Bll.Test
 
         #region UpdateRetentionTest Tests
 
+        /// <summary>
+        ///     Tests if Updating an Test returns null if old test not exist
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionTestFailTest()
+        {
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(null, null, null);
+            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll
+            };
 
+            var actual = target.UpdateRetentionTest(new InkoRetentionEditViewModel());
+
+            Assert.Equal(null, actual);
+        }
+
+        /// <summary>
+        ///     Tests if Updating an existing Inko Retention Test works
+        /// </summary>
+        [Fact]
+        public void UpdateRetentionTestBaseTest()
+        {
+            var viewModel = new InkoRetentionEditViewModel
+            {
+                TestPerson = "Hans",
+                TestValueId = -1,
+                TestSheetId = 1,
+                ProductionCodeTime = new TimeSpan(12, 34, 0),
+                ProductionCodeDay = 123,
+                InkoWeight = 30.21,
+                InkoWeightWet = 430.15,
+                InkoWeightAfterZentrifuge = 212.11,
+                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
+            };
+            var testValueReturnedFromDb = new TestValue
+            {
+                TestSheetRefId = 1,
+                CreatedDateTime = new DateTime(2016, 1, 2),
+                LastEditedDateTime = new DateTime(2016, 1, 2),
+                CreatedPerson = "Fritz",
+                LastEditedPerson = "Fritz",
+                DayInYearOfArticleCreation = 123,
+                ArticleTestType = ArticleType.IncontinencePad,
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } },
+                IncontinencePadTestValue = new IncontinencePadTestValue
+                {
+                    IncontinencePadTime = new TimeSpan(11, 11, 0),
+                    TestType = TestTypeIncontinencePad.Retention
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+
+            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateRetentionTest(viewModel);
+
+            Assert.Equal(testValueReturnedFromDb, actual);
+            Assert.Equal(30.21, actual.IncontinencePadTestValue.RetentionWeight);
+            Assert.Equal(430.15, actual.IncontinencePadTestValue.RetentionWetValue);
+            Assert.Equal(212.11, actual.IncontinencePadTestValue.RetentionAfterZentrifuge);
+            Assert.Equal(399.94, actual.IncontinencePadTestValue.RetentionAbsorbtion, 2);
+            Assert.Equal(181.9, actual.IncontinencePadTestValue.RetentionEndValue, 2);
+            Assert.Equal("Hans", actual.LastEditedPerson);
+            Assert.Equal("Fritz", actual.CreatedPerson);
+            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+        }
 
         #endregion
 
