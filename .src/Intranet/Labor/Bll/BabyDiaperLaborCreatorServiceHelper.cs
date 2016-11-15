@@ -6,6 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
@@ -17,7 +18,10 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper
     {
-        private  ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; };
+        /// <summary>
+        /// Labor Creator Service Helper for Common 
+        /// </summary>
+        public  ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
 
         #region Ctor
 
@@ -53,19 +57,6 @@ namespace Intranet.Labor.Bll
             var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / ( weights.Count - 1 ) );
 
             return standardDeviation;
-        }
-
-        /// <summary>
-        ///     Generates the Production Code for the Diaper
-        /// </summary>
-        /// <param name="machine">The machine Nr</param>
-        /// <param name="year">the year of the production of the diaper</param>
-        /// <param name="dayOfyear">the day of the year of the production of the diaper</param>
-        /// <param name="time">the time od the production of the diaper</param>
-        /// <returns>A Production code for a single diaper</returns>
-        public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-        {
-            return LaborCreatorServiceHelper.GenerateProdCode( machine, year, dayOfyear, time );
         }
 
         /// <summary>
@@ -142,7 +133,7 @@ namespace Intranet.Labor.Bll
         /// <returns>a collection for all penetration time tests</returns>
         public ICollection<BabyDiaperPenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues )
             => ToTestValuesCollectionByTestType( testValues,
-                                                 TestValueType.Single,
+                                                 TestValueType.Single, 
                                                  new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.RewetAndPenetrationTime },
                                                  ToPenetrationTimeTestValue );
 
@@ -387,7 +378,7 @@ namespace Intranet.Labor.Bll
                                       x =>
                                           tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
                                                                                 x.LastEditedPerson,
-                                                                                GenerateProdCode( x.TestSheet.MachineNr,
+                                                              LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
                                                                                                   x.TestSheet.CreatedDateTime.Year,
                                                                                                   x.DayInYearOfArticleCreation,
                                                                                                   x.BabyDiaperTestValue.DiaperCreatedTime )
