@@ -81,7 +81,24 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateRetentionAverageAndStv( Int32 testSheetId )
         {
-            throw new NotImplementedException();
+            var testSheet = TestBll.GetTestSheetInfo(testSheetId);
+            var inkoRetentionTestAvg =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.IncontinencePad
+                                 && (tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention)
+                                 && tv.TestValueType == TestValueType.Average);
+            var inkoRetentionTestStDev =
+                testSheet.TestValues.FirstOrDefault(
+                             tv =>
+                                 tv.ArticleTestType == ArticleType.IncontinencePad
+                                 && (tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention)
+                                 && tv.TestValueType == TestValueType.StandardDeviation);
+            UpdateInkoRetentionAvg(testSheet, inkoRetentionTestAvg);
+            UpdateInkoRetentionStDev(testSheet, inkoRetentionTestAvg, inkoRetentionTestStDev);
+
+            TestBll.UpdateTestSheet();
+            return testSheet;
         }
 
         /// <summary>
