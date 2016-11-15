@@ -314,8 +314,8 @@ namespace Intranet.Labor.Bll.Test
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue);
         }
 
         /// <summary>
@@ -369,8 +369,8 @@ namespace Intranet.Labor.Bll.Test
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
             Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion);
+            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue);
         }
 
         #endregion
