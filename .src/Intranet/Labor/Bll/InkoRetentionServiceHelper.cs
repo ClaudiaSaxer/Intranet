@@ -54,7 +54,22 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewRetentionTest( InkoRetentionEditViewModel viewModel )
         {
-            throw new NotImplementedException();
+            var testValue = TestServiceHelper.CreateNewTestValue(viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes);
+            testValue.ArticleTestType = ArticleType.IncontinencePad;
+
+            var incontinencePadTestValue = new IncontinencePadTestValue
+            {
+                IncontinencePadTime = viewModel.ProductionCodeTime,
+                RetentionWeight = viewModel.InkoWeight,
+                RetentionWetValue = viewModel.InkoWeightWet,
+                RetentionAfterZentrifuge = viewModel.InkoWeightAfterZentrifuge,
+                TestType = TestTypeIncontinencePad.Retention
+            };
+            incontinencePadTestValue = CalculateInkoRetentionValues(incontinencePadTestValue, viewModel.TestSheetId);
+            testValue.IncontinencePadTestValue = incontinencePadTestValue;
+
+            TestBll.SaveNewTestValue(testValue);
+            return testValue;
         }
 
         /// <summary>
