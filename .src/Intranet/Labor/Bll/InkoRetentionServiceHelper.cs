@@ -169,7 +169,7 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="productOrder">the Production order</param>
         /// <returns>The RwType</returns>
-        private static RwType GetRetentionRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MinRetention < value ? RwType.Ok : RwType.Worse;
+        private static RwType GetRetentionRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MinInkoRetention < value ? RwType.Ok : RwType.Worse;
 
         private TestValue UpdateInkoRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
