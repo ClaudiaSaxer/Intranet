@@ -378,6 +378,7 @@
     <Content Include="resources\js\bootstrap\tab.js" />
     <Content Include="resources\js\bootstrap\tooltip.js" />
     <Content Include="resources\js\bootstrap\transition.js" />
+    <Content Include="resources\js\intigena\BabyDiaperRewetPenetration.js" />
     <Content Include="resources\js\intigena\shell-settings.js" />
     <Content Include="Areas\Labor\Views\LaborCreator\Index.cshtml" />
     <Content Include="Areas\Labor\Views\BabyDiaperRewet\Edit.cshtml" />
@@ -385,6 +386,7 @@
     <Content Include="Areas\Labor\Views\InkoRewet\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\InkoRetention\Edit.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
     <None Include="resources\js\jquery-3.1.1-vsdoc.js" />
     <Content Include="resources\js\jquery-3.1.1.js" />
@@ -471,6 +473,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="assets\ts\BabyDiaperRewetPenetration.ts" />
     <TypeScriptCompile Include="assets\ts\jquery.d.ts" />
     <TypeScriptCompile Include="assets\ts\shell-settings.ts" />
     <TypeScriptCompile Include="assets\ts\TestEditCreate.ts" />

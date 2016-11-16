@@ -6,6 +6,7 @@
 }
 
 <script src="/resources/js/intigena/TestEditCreate.js"></script>
+<script src="/resources/js/intigena/BabyDiaperRewetPenetration.js"></script>
 <div class="container">
 
     <h2>Höschenwindeln - Retention-Test</h2>
@@ -144,27 +145,6 @@
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addPenetration() {
-                document.getElementById('addPenetration').style.display = 'none';
-                document.getElementById('removePenetration').style.display = 'block';
-                document.getElementById('penetration-test').style.display = 'block';
-                document.getElementById('TestType').value = 'RewetAndPenetrationTime';
-            }
-            function removePenetration() {
-                document.getElementById('addPenetration').style.display = 'block';
-                document.getElementById('removePenetration').style.display = 'none';
-                document.getElementById('penetration-test').style.display = 'none';
-                document.getElementById('TestType').value = 'Rewet';
-            }
-            $("#addPenetration").click(function () {
-                addPenetration();
-            });
-            $("#removePenetration").click(function () {
-                removePenetration();
-            });
-        </script>
     }
 </div>
 
