@@ -6,6 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -26,21 +27,14 @@ namespace Intranet.Labor.Bll
             : base( loggerFactory.CreateLogger( typeof(IncontinencePadLaborCreatorServiceHelper) ) )
         {
         }
+        /// <summary>
+        /// Labor Creator Service Helper for Common 
+        /// </summary>
+        public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
 
         #endregion
 
-        /// <summary>
-        ///     Generates the Production Code for the Diaper
-        /// </summary>
-        /// <param name="machine">The machine Nr</param>
-        /// <param name="year">the year of the production of the diaper</param>
-        /// <param name="dayOfyear">the day of the year of the production of the diaper</param>
-        /// <param name="time">the time od the production of the diaper</param>
-        /// <returns>A Production code for a single diaper</returns>
-        public String GenerateProdCode( String machine, Int32 year, Int32 dayOfyear, TimeSpan time )
-            => "IT/" + machine.Substring( 1 ) + "/" + year.ToString( "0000" )
-                                                          .SubstringRight( 2 ) + "/" + dayOfyear + "/" + time.Hours.ToString( "00" ) + ":" + time.Minutes.ToString( "00" );
-
+      
         /// <summary>
         ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct
         ///     <see cref="TestTypeIncontinencePad" /> and
@@ -342,7 +336,7 @@ namespace Intranet.Labor.Bll
                                           tests.Add( toTestTypeTestValueAction(
                                                          x.IncontinencePadTestValue,
                                                          x.LastEditedPerson,
-                                                         GenerateProdCode( x.TestSheet.MachineNr,
+                                                         LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
                                                                            x.TestSheet.CreatedDateTime.Year,
                                                                            x.DayInYearOfArticleCreation,
                                                                            x.IncontinencePadTestValue.IncontinencePadTime )
