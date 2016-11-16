@@ -234,7 +234,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Areas\Labor\Views\LaborDashboard\Index.cshtml" />
     <Content Include="assets\sass\CreateEdit.css">
       <DependentUpon>CreateEdit.scss</DependentUpon>
     </Content>

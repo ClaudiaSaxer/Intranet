@@ -61,6 +61,10 @@
     <Compile Include="InkoEdit\InkoRewetEditViewModel.cs" />
     <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
     <Compile Include="LaborCreator\RunningProductionOrder.cs" />
+    <Compile Include="LaborDashboard\DashboardItem.cs" />
+    <Compile Include="LaborDashboard\LaborDashboardViewModel.cs" />
+    <Compile Include="LaborDashboard\ProductionOrderItem.cs" />
+    <Compile Include="LaborDashboard\SheduleItem.cs" />
     <Compile Include="TestNote.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTimeTestValue.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetention.cs" />
