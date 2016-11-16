@@ -68,20 +68,17 @@ namespace Intranet.Labor.Bll.Test
             Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
         };
 
-        private TestValue GetTestValueTestData()
+        private TestValue GetTestValueTestData() => new TestValue
         {
-            return new TestValue
-            {
-                TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
-                CreatedPerson = "Hans",
-                LastEditedPerson = "Hans",
-                DayInYearOfArticleCreation = 123,
-                ArticleTestType = ArticleType.IncontinencePad,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
-            };
-        }
+            TestSheetRefId = 1,
+            CreatedDateTime = new DateTime(2016, 1, 2),
+            LastEditedDateTime = new DateTime(2016, 1, 2),
+            CreatedPerson = "Hans",
+            LastEditedPerson = "Hans",
+            DayInYearOfArticleCreation = 123,
+            ArticleTestType = ArticleType.IncontinencePad,
+            TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
+        };
 
         #endregion
 
