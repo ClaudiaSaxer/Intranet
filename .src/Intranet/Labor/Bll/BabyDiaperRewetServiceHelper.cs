@@ -73,6 +73,13 @@ namespace Intranet.Labor.Bll
                 PenetrationTimeAdditionFourth = viewModel.PenetrationTime4,
                 TestType = viewModel.TestType
             };
+            if ( babyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet )
+            {
+                babyDiaperTestValue.PenetrationTimeAdditionFirst = 0;
+                babyDiaperTestValue.PenetrationTimeAdditionSecond = 0;
+                babyDiaperTestValue.PenetrationTimeAdditionThird = 0;
+                babyDiaperTestValue.PenetrationTimeAdditionFourth = 0;
+            }
             babyDiaperTestValue = CalculateBabyDiaperRewetValues( babyDiaperTestValue, viewModel.TestSheetId );
             testValue.BabyDiaperTestValue = babyDiaperTestValue;
 
@@ -144,10 +151,20 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue.Rewet210Value = viewModel.RewetAfter210;
             testValue.BabyDiaperTestValue.StrikeTroughValue = viewModel.StrikeThrough;
             testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough = viewModel.Distribution;
-            testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst = viewModel.PenetrationTime1;
-            testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond = viewModel.PenetrationTime2;
-            testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird = viewModel.PenetrationTime3;
-            testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth = viewModel.PenetrationTime4;
+            if ( viewModel.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
+            {
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst = viewModel.PenetrationTime1;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond = viewModel.PenetrationTime2;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird = viewModel.PenetrationTime3;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth = viewModel.PenetrationTime4;
+            }
+            else
+            {
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionFirst = 0;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionSecond = 0;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionThird = 0;
+                testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth = 0;
+            }
             testValue.BabyDiaperTestValue.TestType = viewModel.TestType;
 
             if ( viewModel.Notes.IsNull() )
