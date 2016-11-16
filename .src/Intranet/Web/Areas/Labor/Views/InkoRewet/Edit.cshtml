@@ -99,12 +99,16 @@
                 document.getElementById('submitForm').action = '/Labor/InkoRewet/AddNote';
                 document.getElementById('submitForm').submit();
             }
-                $("#addNote").click(function () {
+            $("#addNote").click(function () {
+                if ($('#submitForm').valid()) {
                     addNote();
-                });
-                $('#submitForm').submit(function () {
+                }
+            });
+            $('#submitForm').submit(function () {
+                if ($(this).valid()) {
                     $(this).find(':submit').attr('disabled', 'disabled');
-                });
+                }
+            });
         </script>
     }
 </div>
