@@ -1,4 +1,5 @@
-﻿@model Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+﻿@using Intranet.Labor.Model.labor
+@model Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
 
 @{
     ViewBag.Title = "Intigena Intranet - Labor Module";
@@ -9,7 +10,6 @@
     <div class="container">
         <h1>Testresultate Höschenwindeln - @Model.FaNr </h1>
         <div class="row">
-
 
             <div class="col-xs-12 col-sm-6 col-lg-3">
                 <p>Produkt: @Model.ProductName</p>
@@ -36,10 +36,10 @@
 
 <div class="body-content">
 
-    <a href="@Url.Action("Create", "BabyDiaperRewet",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
+    <a href="@Url.Action( "Create", "BabyDiaperRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
     </a>
-    <a href="@Url.Action("Create", "BabyDiaperRetention",  new { area = "Labor", id = Model.TestSheetId })" class="btn btn-primary btn-lg">
+    <a href="@Url.Action( "Create", "BabyDiaperRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
     </a>
 
@@ -68,18 +68,18 @@
             <tr>
                 <td>@item.BabyDiaperTestInfo.ProductionCode</td>
                 <td>@item.BabyDiaperTestInfo.WeightyDiaperDry</td>
-                <td>@item.BabyDiaperRewet.Rewet140Value</td>
-                <td>@item.BabyDiaperRewet.Rewet210Value</td>
+                <td class="laborcreatorcolor-@item.BabyDiaperRewet.Rewet140Rw">@item.BabyDiaperRewet.Rewet140Value</td>
+                <td class="laborcreatorcolor-@item.BabyDiaperRewet.Rewet210Rw">@item.BabyDiaperRewet.Rewet210Value</td>
                 <td>@item.BabyDiaperRewet.StrikeTroughValue</td>
                 <td>@item.BabyDiaperRewet.DistributionOfTheStrikeTrough</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
                 <td>
-                    <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-info btn-lg">
+                    <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="@Url.Action("Delete", "BabyDiaperRewet",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span> 
                     </a>
                 </td>
@@ -90,8 +90,8 @@
         <tr>
             <th>Durchschnitt</th>
             <th></th>
-            <th>@Model.BabyDiaperRewetAverage.Rewet140Value</th>
-            <th>@Model.BabyDiaperRewetAverage.Rewet210Value</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRewetAverage.Rewet140Rw">@Model.BabyDiaperRewetAverage.Rewet140Value</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRewetAverage.Rewet210Rw">@Model.BabyDiaperRewetAverage.Rewet210Value</th>
             <th>@Model.BabyDiaperRewetAverage.StrikeTroughValue</th>
             <th>@Model.BabyDiaperRewetAverage.DistributionOfTheStrikeTrough</th>
             <th></th>
@@ -103,8 +103,8 @@
         <tr>
             <th>Standard Abweichung</th>
             <th></th>
-            <th>@Model.BabyDiaperRewetStandardDeviation.Rewet140Value</th>
-            <th>@Model.BabyDiaperRewetStandardDeviation.Rewet210Value</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRewetStandardDeviation.Rewet140Rw">@Model.BabyDiaperRewetStandardDeviation.Rewet140Value</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRewetStandardDeviation.Rewet210Rw">@Model.BabyDiaperRewetStandardDeviation.Rewet210Value</th>
             <th>@Model.BabyDiaperRewetStandardDeviation.StrikeTroughValue </th>
             <th>@Model.BabyDiaperRewetStandardDeviation.DistributionOfTheStrikeTrough</th>
             <th></th>
@@ -142,12 +142,12 @@
                 <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
                 <td>
-                    <a href="@Url.Action("Edit", "BabyDiaperRewet",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-info btn-lg">
+                    <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="@Url.Action("Delete", "BabyDiaperRewet",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
                 </td>
@@ -208,19 +208,19 @@
                 <td>@item.BabyDiaperTestInfo.ProductionCode</td>
                 <td>@item.BabyDiaperTestInfo.WeightyDiaperDry</td>
                 <td>@item.BabyDiaperRetention.RetentionWetWeight</td>
-                <td>@item.BabyDiaperRetention.RetentionAfterZentrifugeValue</td>
+                <td class="laborcreatorcolor-@item.BabyDiaperRetention.RetentionRw">@item.BabyDiaperRetention.RetentionAfterZentrifugeValue</td>
                 <td>@item.BabyDiaperRetention.RetentionAfterZentrifugePercent</td>
                 <td>@item.BabyDiaperRetention.SapType</td>
                 <td>@item.BabyDiaperRetention.SapNr</td>
                 <td>@item.BabyDiaperRetention.SapGHoewiValue</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
                 <td>
-                    <a href="@Url.Action("Edit", "BabyDiaperRetention",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-info btn-lg">
+                    <a href="@Url.Action( "Edit", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
                         <span class="glyphicon glyphicon-pencil"></span>
                     </a>
                 </td>
                 <td>
-                    <a href="@Url.Action("Delete", "BabyDiaperRetention",  new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId })" class="btn btn-danger btn-lg">
+                    <a href="@Url.Action( "Delete", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
                         <span class="glyphicon glyphicon-trash"></span>
                     </a>
                 </td>
@@ -232,7 +232,7 @@
             <th>Durchschnitt</th>
             <th></th>
             <th>@Model.BabyDiaperRetentionAverage.RetentionWetWeight</th>
-            <th>@Model.BabyDiaperRetentionAverage.RetentionAfterZentrifugeValue</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRetentionAverage.RetentionRw">@Model.BabyDiaperRetentionAverage.RetentionAfterZentrifugeValue</th>
             <th>@Model.BabyDiaperRetentionAverage.RetentionAfterZentrifugePercent</th>
             <th></th>
             <th></th>
@@ -247,7 +247,7 @@
             <th>Standard Abweichung</th>
             <th></th>
             <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionWetWeight</th>
-            <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
+            <th class="laborcreatorcolor-@Model.BabyDiaperRetentionStandardDeviation.RetentionRw">@Model.BabyDiaperRetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
             <th>@Model.BabyDiaperRetentionStandardDeviation.RetentionAfterZentrifugePercent</th>
             <th></th>
             <th></th>
@@ -258,10 +258,10 @@
         </tr>
         </tfoot>
     </table>
-    
 
-    <div class="body-highlight" >
-        
+
+    <div class="body-highlight">
+
         <h3>Allgemeine Werte</h3>
         <div class="row">
 
@@ -275,9 +275,9 @@
                 <p>Gewicht trocken - Standardabweichung: @Model.WeightStandardDeviationAll</p>
 
             </div>
-        
+
 
         </div>
-        </div>
+    </div>
 
 </div>
