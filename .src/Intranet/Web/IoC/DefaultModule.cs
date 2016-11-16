@@ -11,6 +11,7 @@ using Intranet.Labor.Bll;
 using Intranet.Labor.Dal;
 using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Web.Areas.Labor.Controllers;
 
@@ -186,6 +187,11 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<InkoRewetServiceHelper>()
                    .As<IInkoRewetServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborCreatorServiceHelper>()
+                   .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }
