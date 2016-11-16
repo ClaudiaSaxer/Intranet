@@ -1,5 +1,5 @@
 ﻿using Intranet.Common;
-using Intranet.Labor.ViewModel.LaborDashboard;
+using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {

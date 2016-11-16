@@ -1,7 +1,4 @@
-﻿using System;
-using Intranet.Labor.Model.labor;
-using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborDashboard;
+﻿using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -15,7 +12,5 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <returns>the LaborDashboardViewModel</returns>
         LaborDashboardViewModel GetLaborDashboardViewModel();
-
-     
     }
 }
