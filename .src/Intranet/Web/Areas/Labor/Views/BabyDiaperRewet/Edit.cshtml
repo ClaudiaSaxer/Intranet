@@ -5,6 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
 <div class="container">
 
     <h2>Höschenwindeln - Retention-Test</h2>
@@ -138,17 +139,13 @@
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/BabyDiaperRewet/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
 
         <script>
-            function addNote() {
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRewet/AddNote';
-                document.getElementById('submitForm').submit();
-            }
             function addPenetration() {
                 document.getElementById('addPenetration').style.display = 'none';
                 document.getElementById('removePenetration').style.display = 'block';
@@ -161,16 +158,6 @@
                 document.getElementById('penetration-test').style.display = 'none';
                 document.getElementById('TestType').value = 'Rewet';
             }
-            $("#addNote").click(function () {
-                if ($('#submitForm').valid()) {
-                    addNote();
-                }
-            });
-            $('#submitForm').submit(function () {
-                if ($(this).valid()) {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                }
-            });
             $("#addPenetration").click(function () {
                 addPenetration();
             });

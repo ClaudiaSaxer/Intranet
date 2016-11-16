@@ -3,7 +3,7 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
 <div class="container">
 
     <h2>Inko - Retention Hytec - Test</h2>
@@ -92,28 +92,11 @@
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/InkoRetention/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addNote() {
-                document.getElementById('submitForm').action = '/Labor/InkoRetention/AddNote';
-                document.getElementById('submitForm').submit();
-            }
-            $("#addNote").click(function () {
-                if ($('#submitForm').valid()) {
-                    addNote();
-                }
-            });
-            $('#submitForm').submit(function () {
-                if ($(this).valid()) {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                }
-            });
-        </script>
     }
 </div>
 
