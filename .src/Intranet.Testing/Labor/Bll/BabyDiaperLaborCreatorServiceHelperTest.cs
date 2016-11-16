@@ -645,7 +645,7 @@ namespace Intranet.Labor.Bll.Test
         public void ToPenetrationTimeAverageTestOk()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime, PenetrationRwType = RwType.Ok};
 
             var actual = serviceHelper.ToPenetrationTimeAverage( BabyDiaperLaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage( expected ) );
         }
@@ -686,7 +686,7 @@ namespace Intranet.Labor.Bll.Test
         public void ToPenetrationTimeStandardDeviationTestOk()
         {
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime };
+            var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime , PenetrationRwType = RwType.Ok};
 
             var actual = serviceHelper.ToPenetrationTimeStandardDeviation( BabyDiaperLaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected ) );
         }
@@ -704,7 +704,8 @@ namespace Intranet.Labor.Bll.Test
                 PenetrationTimeAdditionFirst = 1.0,
                 PenetrationTimeAdditionSecond = 2.0,
                 PenetrationTimeAdditionThird = 3.0,
-                PenetrationTimeAdditionFourth = 4.0
+                PenetrationTimeAdditionFourth = 4.0,
+                PenetrationTimeAdditionFourthRwType = RwType.Ok
             };
             var actual = serviceHelper.ToPenetrationTime(
                 new BabyDiaperTestValue
@@ -712,7 +713,8 @@ namespace Intranet.Labor.Bll.Test
                     PenetrationTimeAdditionFirst = 1.0,
                     PenetrationTimeAdditionSecond = 2.0,
                     PenetrationTimeAdditionThird = 3.0,
-                    PenetrationTimeAdditionFourth = 4.0
+                    PenetrationTimeAdditionFourth = 4.0,
+                    PenetrationRwType = RwType.Ok
                 } );
 
             actual.ShouldBeEquivalentTo( expected );

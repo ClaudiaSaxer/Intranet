@@ -45,13 +45,13 @@ namespace Intranet.Labor.Test
                 {
                     TestValueType = TestValueType.Single,
                     ArticleTestType = ArticleType.BabyDiaper,
-                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet{MachineNr = "M12"}
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better,PenetrationRwType = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
                 },
                 new TestValue
                 {
                     TestValueType = TestValueType.Single,
                     ArticleTestType = ArticleType.BabyDiaper,
-                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better,PenetrationRwType = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
                 },
                 new TestValue
                 {
@@ -81,13 +81,13 @@ namespace Intranet.Labor.Test
                 {
                     TestValueType = TestValueType.Average,
                     ArticleTestType = ArticleType.BabyDiaper,
-                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better },TestSheet = new TestSheet{MachineNr = "M12"}
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better,PenetrationRwType = RwType.Better },TestSheet = new TestSheet{MachineNr = "M12"}
                 },
                 new TestValue
                 {
                     TestValueType = TestValueType.StandardDeviation,
                     ArticleTestType = ArticleType.BabyDiaper,
-                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
+                    BabyDiaperTestValue = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime ,Rewet140Rw = RwType.Better,Rewet210Rw = RwType.Better,PenetrationRwType = RwType.Better},TestSheet = new TestSheet{MachineNr = "M12"}
                 }
             };
         /// <summary>
