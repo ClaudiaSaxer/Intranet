@@ -934,7 +934,7 @@ namespace Intranet.Labor.Bll.Test
                 Rewet140Value = 1.0,
                 Rewet210Value = 2.0,
                 DistributionOfTheStrikeTrough = 3.0,
-                StrikeTroughValue = 4.0
+                StrikeThroughValue = 4.0
             };
             var actual = serviceHelper.ToRewet(
                 new BabyDiaperTestValue
@@ -957,8 +957,8 @@ namespace Intranet.Labor.Bll.Test
                   .Be( expected.Rewet210Value );
             actual.Rewet210Rw.Should()
                   .Be( expected.Rewet210Rw );
-            actual.StrikeTroughValue.Should()
-                  .Be( expected.StrikeTroughValue );
+            actual.StrikeThroughValue.Should()
+                  .Be( expected.StrikeThroughValue );
             actual.ShouldBeEquivalentTo( expected );
         }
 

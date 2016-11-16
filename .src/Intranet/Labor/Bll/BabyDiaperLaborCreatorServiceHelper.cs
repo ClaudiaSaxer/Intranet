@@ -21,7 +21,7 @@ namespace Intranet.Labor.Bll
         /// <summary>
         /// Labor Creator Service Helper for Common 
         /// </summary>
-        public  ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
+        public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
 
         #region Ctor
 
@@ -84,15 +84,22 @@ namespace Intranet.Labor.Bll
         /// <param name="penetrationTime">the Baby Diaper Test value with the penetration time data</param>
         /// <returns>The Penetration Time View Model with the data collected from the model</returns>
         public BabyDiaperPenetrationTime ToPenetrationTime( BabyDiaperTestValue penetrationTime )
-            => new BabyDiaperPenetrationTime
-            {
-                PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
-                PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
-                PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
-                PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird
-            };
+        {
+            ValidateRequiredItem(penetrationTime.PenetrationRwType, "penetration rw");
 
-        /// <summary>
+            return new BabyDiaperPenetrationTime
+        {
+            PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
+            PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
+            PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
+            PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird,
+            PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
+        }
+
+        ;
+    }
+
+    /// <summary>
         ///     Creates a BabyDiaperPenetrationTime Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
@@ -216,7 +223,7 @@ namespace Intranet.Labor.Bll
                 new BabyDiaperRewet
                 {
                     Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
-                    StrikeTroughValue = rewet.StrikeTroughValue,
+                    StrikeThroughValue = rewet.StrikeTroughValue,
                     DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
                     Rewet210Value = rewet.Rewet210Value,
                     Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
