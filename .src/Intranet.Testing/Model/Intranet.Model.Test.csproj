@@ -38,8 +38,16 @@
     <DocumentationFile>bin\Release\Intranet.Model.Test.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -68,10 +76,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModuleTest.cs" />
+    <Compile Include="ModuleTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Intranet\Labor\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\Model\Intranet.Model.csproj">
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

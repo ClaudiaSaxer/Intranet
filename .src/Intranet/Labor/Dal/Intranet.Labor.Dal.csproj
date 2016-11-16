@@ -43,8 +43,8 @@
       <HintPath>..\..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -61,6 +61,14 @@
     <Compile Include="LaborContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BabyDiaperTestValueRepository.cs" />
+    <Compile Include="Repositories\ErrorRepository.cs" />
+    <Compile Include="Repositories\IncontinencePadTestValueRepository.cs" />
+    <Compile Include="Repositories\ProductionOrderRepository.cs" />
+    <Compile Include="Repositories\TestSheetRepository.cs" />
+    <Compile Include="Repositories\TestValueNoteRepository.cs" />
+    <Compile Include="Repositories\ShiftScheduleRepository.cs" />
+    <Compile Include="Repositories\TestValueRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -80,9 +88,7 @@
       <Name>Intranet.Definition</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

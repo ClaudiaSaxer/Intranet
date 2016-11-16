@@ -35,8 +35,8 @@
     <DocumentationFile>bin\Release\Intranet.Labor.Definition.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,10 +49,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\IIncontinencePadLaborCreatorBll.cs" />
+    <Compile Include="Bll\IIncontinencePadLaborCreatorService.cs" />
+    <Compile Include="Bll\IIncontinencePadLaborCreatorServiceHelper.cs" />
+    <Compile Include="Bll\IBabyDiaperRetentionServiceHelper.cs" />
+    <Compile Include="Bll\IBabyDiaperRewetService.cs" />
+    <Compile Include="Bll\IBabyDiaperRewetServiceHelper.cs" />
+    <Compile Include="Bll\ILaborCreatorServiceHelper.cs" />
+    <Compile Include="Bll\ITestServiceHelper.cs" />
+    <Compile Include="Bll\ITestBll.cs" />
+    <Compile Include="Bll\IBabyDiaperRetentionService.cs" />
+    <Compile Include="Bll\IBabyDiaperLaborCreatorBll.cs" />
+    <Compile Include="Bll\IBabyDiaperLaborCreatorService.cs" />
+    <Compile Include="Bll\IBabyDiaperLaborCreatorServiceHelper.cs" />
+    <Compile Include="Bll\IInkoRewetService.cs" />
+    <Compile Include="Bll\IInkoRewetServiceHelper.cs" />
+    <Compile Include="Bll\ILaborCreatorBll.cs" />
+    <Compile Include="Bll\ILaborCreatorService.cs" />
+    <Compile Include="Bll\ILaborHomeBll.cs" />
+    <Compile Include="Bll\ILaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

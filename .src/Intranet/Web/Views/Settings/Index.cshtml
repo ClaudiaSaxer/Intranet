@@ -5,23 +5,25 @@
 
 <link href="/resources/css/bootstrap-toggle.min.css" rel="stylesheet">
 <script src="/resources/js/bootstrap-toggle.min.js"></script>
-<script src="/resources/js/shell-settings.js"></script>
-<table class="table intigena-settings-table">
-    <thead>
-        <tr class="intigena-table-header">
-            <th>Modul</th>
-            <th>Sichtbar</th>
-        </tr>
-    </thead>
-    <tbody>
-    @foreach (var item in Model.ModuleSettings)
-    {
-        <tr class="intigena-table-item">
-            <td>@item.Name</td>
-            <td>
-                <input type="checkbox" checked="@item.Visible" data-toggle="toggle" name="@item.Name" id="@item.Id" data-on="Aktiviert" data-off="Deaktiviert" class="visible-toggle">
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+<script src="/resources/js/intigena/shell-settings.js"></script>
+<div class="container">
+    <table class="table intigena-settings-table">
+        <thead>
+            <tr class="intigena-table-header">
+                <th>Modul</th>
+                <th>Sichtbar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ModuleSettings)
+            {
+                <tr class="intigena-table-item">
+                    <td>@item.Name</td>
+                    <td>
+                        <input type="checkbox" checked="@item.Visible" data-toggle="toggle" name="@item.Name" id="@item.Id" data-on="Aktiviert" data-off="Deaktiviert" class="visible-toggle">
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

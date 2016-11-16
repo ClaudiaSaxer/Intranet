@@ -1,7 +1,7 @@
 ﻿using Intranet.Common;
 using Intranet.Model;
 
-namespace Intranet.Dal.Repositories
+namespace Intranet.Dal
 {
     /// <summary>
     ///     Repository for the Roles

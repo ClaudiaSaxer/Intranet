@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Intranet.Labor.ViewModel.XML</DocumentationFile>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,9 +30,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
+    <DocumentationFile>bin\Release\Intranet.Labor.ViewModel.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.JScript" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,7 +47,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadTestInfo.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTime.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTimeTestValue.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadLaborCreatorViewModel.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRetention.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRetentionTestValue.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewet.cs" />
+    <Compile Include="IncontinencePadLaborCreator\IncontinencePadRewetTestValue.cs" />
+    <Compile Include="BabyDiaperRetention\BabyDiaperRetentionEditViewModel.cs" />
+    <Compile Include="ErrorCode.cs" />
+    <Compile Include="BabyDiaperRewet\BabyDiaperRewetEditViewModel.cs" />
+    <Compile Include="InkoEdit\InkoRewetEditViewModel.cs" />
+    <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
+    <Compile Include="LaborCreator\RunningProductionOrder.cs" />
+    <Compile Include="TestNote.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTimeTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetention.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRetentionTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewet.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperRewetTestValue.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperTestInfo.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperLaborCreatorViewModel.cs" />
+    <Compile Include="LaborHomeViewModel.cs" />
+    <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTime.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestTypeLaborCreator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

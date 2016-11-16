@@ -7,8 +7,8 @@
     <ProjectGuid>{51428790-ED54-48A4-9EEC-C25E99936E65}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Intranet.Bll</RootNamespace>
-    <AssemblyName>Intranet.Bll</AssemblyName>
+    <RootNamespace>Intranet.Labor.Bll</RootNamespace>
+    <AssemblyName>Intranet.Labor.Bll</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Intranet.Bll.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\Intranet.Labor.Bll.xml</DocumentationFile>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,11 +32,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
-    <DocumentationFile>bin\Release\Intranet.Bll.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\Intranet.Labor.Bll.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,10 +49,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncontinencePadLaborCreatorBll.cs" />
+    <Compile Include="IncontinencePadLaborCreatorService.cs" />
+    <Compile Include="IncontinencePadLaborCreatorServiceHelper.cs" />
+    <Compile Include="BabyDiaperRetentionServiceHelper.cs" />
+    <Compile Include="BabyDiaperRewetService.cs" />
+    <Compile Include="BabyDiaperRewetServiceHelper.cs" />
+    <Compile Include="LaborCreatorServiceHelper.cs" />
+    <Compile Include="TestServiceHelper.cs" />
+    <Compile Include="TestBll.cs" />
+    <Compile Include="BabyDiaperRetentionService.cs" />
+    <Compile Include="Extensions\ShiftTypeExtension.cs" />
+    <Compile Include="BabyDiaperLaborCreatorBll.cs" />
+    <Compile Include="BabyDiaperLaborCreatorServiceHelper.cs" />
+    <Compile Include="BabyDiaperLaborCreatorService.cs" />
+    <Compile Include="BabyDiaperLaborHomeBll.cs" />
+    <Compile Include="InkoRewetService.cs" />
+    <Compile Include="InkoRewetServiceHelper.cs" />
+    <Compile Include="LaborCreatorBll.cs" />
+    <Compile Include="LaborCreatorService.cs" />
+    <Compile Include="LaborHomeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Intranet.Common.csproj">
+      <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
+      <Name>Intranet.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Model\Intranet.Model.csproj">
+      <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dal\Intranet.Labor.Dal.csproj">
+      <Project>{FA137C05-185F-4036-86FD-D8A09998A250}</Project>
+      <Name>Intranet.Labor.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Definitions\Intranet.Labor.Definition.csproj">
+      <Project>{B9F53677-B67F-4AA7-9300-B90E7B2F706B}</Project>
+      <Name>Intranet.Labor.Definition</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Intranet.Labor.Model.csproj">
+      <Project>{CE4CAF79-B268-4FA9-9D1A-B6C3F3DB4801}</Project>
+      <Name>Intranet.Labor.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModel\Intranet.Labor.ViewModel.csproj">
+      <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
+      <Name>Intranet.Labor.ViewModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

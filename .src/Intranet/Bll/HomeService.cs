@@ -1,5 +1,4 @@
-﻿using System.Web.Security;
-using Intranet.Common;
+﻿using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
@@ -8,7 +7,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class Representing the Service for Home
     /// </summary>
-    public class HomeService : LoggingBase, IHomeService
+    public class HomeService : ServiceBase, IHomeService
     {
         #region Properties
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Intranet.Common
 {
     /// <summary>
-    ///     Creates a <see cref="ILogger" /> Object which can be used to log some messages.
+    ///     Creates a <see cref="ILogger" /> Roles.GetRolesForUser()
     /// </summary>
     public interface ILoggerFactory
     {

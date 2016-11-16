@@ -1,0 +1,17 @@
+.body-content {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding: 0px; }
+
+.body-highlight {
+  background: #E9E9E9; }
+
+.laborcreatorcolor-Better {
+  background: #90EE90; }
+
+.laborcreatorcolor-Worse {
+  background: #fa8072; }
+
+.laborcreatorcolor-SomethingWorse {
+  background: #ffc878; }

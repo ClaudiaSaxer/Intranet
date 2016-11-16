@@ -36,8 +36,16 @@
     <WarningsAsErrors>1591 1570 1571 1572 1573 1574</WarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.11, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Extend.1.1.9.11\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentAssertions.Core, Version=4.14.0.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -66,10 +74,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HomeViewModelTest.cs" />
+    <Compile Include="ModuleSettingTest.cs" />
+    <Compile Include="NavigationViewModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingsViewModelTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Intranet\Model\Intranet.Model.csproj">
+      <Project>{0bf2d570-e789-4d08-9a98-8f019bb03da5}</Project>
+      <Name>Intranet.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Intranet\ViewModel\Intranet.ViewModel.csproj">
+      <Project>{64406F0C-12EE-4385-B6DE-6F54519BD086}</Project>
+      <Name>Intranet.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -23,24 +23,31 @@ var xUnit = toolDirectory + File("XUnit/xunit.console.exe");
 Task("Clean")
     .Does(() =>
 {	
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Bll/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Common/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Dal/bin") );
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Dal/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Definitions/bin") );
-    CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Model/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("ViewModel/bin") );
     CleanDirectory( sourcecodeDirectory + Directory("Web/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/Bll/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/Definitions/bin") );
+    CleanDirectory( sourcecodeDirectory + Directory("Labor/Model/bin") );
+	CleanDirectory( sourcecodeDirectory + Directory("Labor/ViewModel/bin") );
     CleanDirectory( testDirectory + Directory("Bll/bin") );    
-    CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
     CleanDirectory( testDirectory + Directory("Common/bin") );
     CleanDirectory( testDirectory + Directory("Dal/bin") );
-    CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( testDirectory + Directory("Integrationtest/bin") );
     CleanDirectory( testDirectory + Directory("Model/bin") );
     CleanDirectory( testDirectory + Directory("ViewModel/bin") );
+    CleanDirectory( testDirectory + Directory("TestEnvironment/bin") );
     CleanDirectory( testDirectory + Directory("Web/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Bll/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Dal/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/Model/bin") );
+	CleanDirectory( testDirectory + Directory("Labor/ViewModel/bin") );
     CleanDirectory( outputDirectory );
 });
 
@@ -65,19 +72,30 @@ Task("Build")
             .SetVerbosity( Verbosity.Minimal ) );
 });
 
+
 // Run the unit tests
 Task("RunTests")
     .IsDependentOn("Build")
     .Does(() =>
 {    
-    XUnit2( testDirectory.ToString() + "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
+	//  XUnit2( testDirectory.ToString()+ "/**/bin/" + configuration + "/*.Test.dll", new XUnit2Settings
+	XUnit2(new []{
+		testDirectory.ToString()+"/Web/bin/Release/Intranet.Web.Test.dll",
+		testDirectory.ToString()+"/Bll/bin/Release/Intranet.Bll.Test.dll",
+		testDirectory.ToString()+"/Common/bin/Release/Intranet.Common.Test.dll",
+		testDirectory.ToString()+"/Dal/bin/Release/Intranet.Dal.Test.dll",
+		testDirectory.ToString()+"/Labor/Bll/bin/Release/Intranet.Labor.Bll.Test.dll",
+		testDirectory.ToString()+"/Labor/Dal/bin/Release/Intranet.Labor.Dal.Test.dll",
+		testDirectory.ToString()+"/Labor/Model/bin/Release/Intranet.Labor.Model.Test.dll",
+		testDirectory.ToString()+"/Labor/ViewModel/bin/Release/Intranet.Labor.ViewModel.Test.dll",
+		testDirectory.ToString()+"/ViewModel/bin/Release/Intranet.ViewModel.Test.dll"
+	}, new XUnit2Settings
 		{ 
 			ToolPath = xUnit,
-			Parallelism = ParallelismOption.All,
 			HtmlReport = true,
 			NoAppDomain = true,
 			OutputDirectory = outputDirectory
-		});    
+		});    	
 });
 
 
@@ -88,6 +106,7 @@ Task("Default")
 {
     Information("Default task started");
 });
+
 
 RunTarget(target);
 

@@ -2,7 +2,7 @@ using System.Collections.ObjectModel;
 using System.Data.Entity.Migrations;
 using Intranet.Model;
 
-namespace Intranet.Dal.Migrations
+namespace Intranet.Dal
 {
     internal sealed class Configuration : DbMigrationsConfiguration<IntranetContext>
     {
@@ -44,8 +44,8 @@ namespace Intranet.Dal.Migrations
             var creator = new Module
             {
                 Description = "Labor QS Creator",
-                Name = "LaborCreator",
-                ControllerName = "LaborCreatorHome",
+                Name = "Creator",
+                ControllerName = "LaborCreator",
                 ActionName = "Index",
                 AreaName = "Labor",
                 Type = ModuleType.Sub,
@@ -56,8 +56,8 @@ namespace Intranet.Dal.Migrations
             var dashboard = new Module
             {
                 Description = "Labor QS Dashboard",
-                Name = "LaborDashboard",
-                ControllerName = "LaborDashboardHome",
+                Name = "Dashboard",
+                ControllerName = "LaborDashboard",
                 ActionName = "Index",
                 AreaName = "Labor",
                 Type = ModuleType.Sub,

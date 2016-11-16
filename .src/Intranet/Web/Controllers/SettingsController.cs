@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
-using Intranet.Definition.Bll;
+using Intranet.Definition;
 using Intranet.ViewModel;
 
 namespace Intranet.Web.Controllers
@@ -8,7 +8,7 @@ namespace Intranet.Web.Controllers
     /// <summary>
     ///     Class representing the SettingsController
     /// </summary>
-    [Authorize(Roles = "Everyone")]
+    [Authorize( Roles = "Everyone" )]
     public class SettingsController : BaseController
     {
         #region Properties
@@ -42,9 +42,7 @@ namespace Intranet.Web.Controllers
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index()
-        {
-            return View( SettingsService.GetSettingsViewModel() );
-        }
+            => View( "Index", SettingsService.GetSettingsViewModel() );
 
         /// <summary>
         ///     Update a module setting
@@ -54,15 +52,10 @@ namespace Intranet.Web.Controllers
         [HttpPost]
         public ActionResult Update( ModuleSetting moduleSetting )
         {
-            try
-            {
-                SettingsService.UpdateModuleSetting( moduleSetting );
+            if ( SettingsService.UpdateModuleSetting( moduleSetting ) != null )
                 return RedirectToAction( "Index" );
-            }
-            catch
-            {
-                return View();
-            }
+            Logger.Error( "Module Settings haven't been updated!" );
+            return HttpNotFound();
         }
     }
 }

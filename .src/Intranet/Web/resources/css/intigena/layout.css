@@ -1,5 +1,14 @@
+html body {
+  padding-top: 80px;
+  background-color: #F4F4F4;
+  padding-bottom: 70px; }
+
+.body-content {
+  padding-left: 10px;
+  padding-top: 5px; }
+
 body {
-  padding-top: 70px; }
+  padding-top: 90px; }
 
 .vertical-line {
   width: auto;
@@ -32,9 +41,12 @@ body {
 
 .nav > li > a:hover {
   color: #539ad8;
-  background-color: white; }
+  background-color: #F4F4F4; }
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 40px;
     padding-bottom: 10px; } }
+
+.error-message {
+  color: #FF0000; }

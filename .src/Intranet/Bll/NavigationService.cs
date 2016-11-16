@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Web.Security;
+using System.Linq;
 using Intranet.Common;
 using Intranet.ViewModel;
 
@@ -8,7 +8,7 @@ namespace Intranet.Bll
     /// <summary>
     ///     Class representing the service for the navigation.
     /// </summary>
-    public class NavigationService : LoggingBase, INavigationService
+    public class NavigationService : ServiceBase, INavigationService
 
     {
         #region Properties
@@ -42,7 +42,8 @@ namespace Intranet.Bll
         /// <returns>The ViewModel for the navigation</returns>
         public NavigationViewModel GetNavigationViewModel()
         {
-            var roleNames = Roles.GetRolesForUser();
+            var roleNames = Roles.GetRolesForUser()
+                                 .ToArray();
 
             var vm = new NavigationViewModel
             {
