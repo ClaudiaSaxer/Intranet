@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Extend;
-using Intranet.Common;
-using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
-using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborCreator;
+﻿using Intranet.Common;
 using Intranet.Labor.ViewModel.LaborDashboard;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -38,8 +31,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
         #endregion
 
+        #region Implementation of ILaborDashboardService
+
         /// <summary>
-        ///     to get the Labor dashboard view model
+        ///     Labor creator view model
         /// </summary>
         /// <returns>the LaborDashboardViewModel</returns>
         public LaborDashboardViewModel GetLaborDashboardViewModel()
@@ -47,6 +42,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
             return new LaborDashboardViewModel();
         }
 
-       
+        #endregion
     }
 }

@@ -55,6 +55,8 @@
     <Compile Include="Bll\IBabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="Bll\IBabyDiaperRewetService.cs" />
     <Compile Include="Bll\IBabyDiaperRewetServiceHelper.cs" />
+    <Compile Include="Bll\ILaborDashboardBll.cs" />
+    <Compile Include="Bll\ILaborDashboardService.cs" />
     <Compile Include="Bll\ILaborCreatorServiceHelper.cs" />
     <Compile Include="Bll\ITestServiceHelper.cs" />
     <Compile Include="Bll\ITestBll.cs" />

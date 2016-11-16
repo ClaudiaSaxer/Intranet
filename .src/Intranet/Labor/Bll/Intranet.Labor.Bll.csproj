@@ -55,6 +55,8 @@
     <Compile Include="BabyDiaperRetentionServiceHelper.cs" />
     <Compile Include="BabyDiaperRewetService.cs" />
     <Compile Include="BabyDiaperRewetServiceHelper.cs" />
+    <Compile Include="LaborDashboardService.cs" />
+    <Compile Include="LaborDashboardBll.cs" />
     <Compile Include="LaborCreatorServiceHelper.cs" />
     <Compile Include="TestServiceHelper.cs" />
     <Compile Include="TestBll.cs" />
