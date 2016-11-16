@@ -69,7 +69,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 return HttpNotFound();
             var viewModel = InkoRetentionService.GetNewInkoRetentionEditViewModel( id );
             if ( viewModel.IsNull() )
-                return new HttpNotFoundResult( "Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht." );
+                return new HttpNotFoundResult( "Das TestSheet ist entweder kein Inko Testsheet oder existiert nicht." );
             return View( "Edit", viewModel );
         }
 
@@ -97,7 +97,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
             var viewModel = InkoRetentionService.GetInkoRetentionEditViewModel( id );
             if ( viewModel.IsNull() )
-                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test." );
+                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein Inko Retention Test." );
             return View( "Edit", viewModel );
         }
 
