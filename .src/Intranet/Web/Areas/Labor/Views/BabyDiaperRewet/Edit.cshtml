@@ -162,7 +162,9 @@
                 document.getElementById('TestType').value = 'Rewet';
             }
             $("#addNote").click(function () {
-                addNote();
+                if ($('#submitForm').valid()) {
+                    addNote();
+                }
             });
             $('#submitForm').submit(function () {
                 if ($(this).valid()) {
