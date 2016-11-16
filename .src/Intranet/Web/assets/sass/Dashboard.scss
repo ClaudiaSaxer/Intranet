@@ -22,8 +22,8 @@
 
 @mixin dashboard-box($bordercolor) {
     background-color: $dashboard-box-background-color;
-    margin:10px;
     padding:10px;
+    margin:10px 10px 10px 0px;
     border-left: 5px solid $bordercolor;
     -webkit-box-shadow: 2px 2px 2px 0px $dashboard-box-shadow-color;
     -moz-box-shadow:2px 2px 2px  0px  $dashboard-box-shadow-color;

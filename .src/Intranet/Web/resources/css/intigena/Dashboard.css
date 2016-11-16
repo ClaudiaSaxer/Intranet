@@ -1,7 +1,7 @@
 .dashboard-box-Ok {
   background-color: #ffffff;
-  margin: 10px;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   border-left: 5px solid #E9E9E9;
   -webkit-box-shadow: 2px 2px 2px 0px #E9E9E9;
   -moz-box-shadow: 2px 2px 2px 0px #E9E9E9;
@@ -21,8 +21,8 @@
 
 .dashboard-box-Better {
   background-color: #ffffff;
-  margin: 10px;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   border-left: 5px solid #90EE90;
   -webkit-box-shadow: 2px 2px 2px 0px #E9E9E9;
   -moz-box-shadow: 2px 2px 2px 0px #E9E9E9;
@@ -42,8 +42,8 @@
 
 .dashboard-box-Worse {
   background-color: #ffffff;
-  margin: 10px;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   border-left: 5px solid #fa8072;
   -webkit-box-shadow: 2px 2px 2px 0px #E9E9E9;
   -moz-box-shadow: 2px 2px 2px 0px #E9E9E9;
@@ -63,8 +63,8 @@
 
 .dashboard-box-SomethingWorse {
   background-color: #ffffff;
-  margin: 10px;
   padding: 10px;
+  margin: 10px 10px 10px 0px;
   border-left: 5px solid #ffc878;
   -webkit-box-shadow: 2px 2px 2px 0px #E9E9E9;
   -moz-box-shadow: 2px 2px 2px 0px #E9E9E9;
