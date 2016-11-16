@@ -222,6 +222,7 @@
     <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
+    <Compile Include="Areas\Labor\Controllers\LaborDashboardController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -414,6 +415,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Labor\Views\LaborDashboard\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>
