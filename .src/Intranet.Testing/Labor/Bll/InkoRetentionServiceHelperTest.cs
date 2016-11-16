@@ -55,29 +55,22 @@ namespace Intranet.Labor.Bll.Test
             }
         };
 
-        #endregion
-
-        #region SaveNewRetentionTest Tests
-
-        /// <summary>
-        ///     Tests if Saving a new InkoRewet Test works
-        /// </summary>
-        [Fact]
-        public void SaveNewRetentionTestBaseTest()
+        private InkoRetentionEditViewModel GetViewModelTestData() => new InkoRetentionEditViewModel
         {
-            var viewModel = new InkoRetentionEditViewModel
-            {
-                TestPerson = "Hans",
-                TestValueId = -1,
-                TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
-                ProductionCodeDay = 123,
-                InkoWeight = 30.21,
-                InkoWeightWet = 430.15,
-                InkoWeightAfterZentrifuge = 212.11,
-                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
-            };
-            var testValueReturnedFromHelper = new TestValue
+            TestPerson = "Hans",
+            TestValueId = -1,
+            TestSheetId = 1,
+            ProductionCodeTime = new TimeSpan(12, 34, 0),
+            ProductionCodeDay = 123,
+            InkoWeight = 30.21,
+            InkoWeightWet = 430.15,
+            InkoWeightAfterZentrifuge = 212.11,
+            Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
+        };
+
+        private TestValue GetTestValueTestData()
+        {
+            return new TestValue
             {
                 TestSheetRefId = 1,
                 CreatedDateTime = new DateTime(2016, 1, 2),
@@ -88,6 +81,20 @@ namespace Intranet.Labor.Bll.Test
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
             };
+        }
+
+        #endregion
+
+        #region SaveNewRetentionTest Tests
+
+        /// <summary>
+        ///     Tests if Saving a new InkoRewet Test works
+        /// </summary>
+        [Fact]
+        public void SaveNewRetentionTestBaseTest()
+        {
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromHelper = GetTestValueTestData();
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
@@ -111,29 +118,8 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void SaveNewRetentionTestCalculationRwOkTest()
         {
-            var viewModel = new InkoRetentionEditViewModel
-            {
-                TestPerson = "Hans",
-                TestValueId = -1,
-                TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
-                ProductionCodeDay = 123,
-                InkoWeight = 30.21,
-                InkoWeightWet = 430.15,
-                InkoWeightAfterZentrifuge = 212.11,
-                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
-            };
-            var testValueReturnedFromHelper = new TestValue
-            {
-                TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
-                CreatedPerson = "Hans",
-                LastEditedPerson = "Hans",
-                DayInYearOfArticleCreation = 123,
-                ArticleTestType = ArticleType.IncontinencePad,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
-            };
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromHelper = GetTestValueTestData();
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
@@ -157,29 +143,9 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void SaveNewRetentionTestCalculationRwWorseTest()
         {
-            var viewModel = new InkoRetentionEditViewModel
-            {
-                TestPerson = "Hans",
-                TestValueId = -1,
-                TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
-                ProductionCodeDay = 123,
-                InkoWeight = 30.21,
-                InkoWeightWet = 430.15,
-                InkoWeightAfterZentrifuge = 202.11,
-                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
-            };
-            var testValueReturnedFromHelper = new TestValue
-            {
-                TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
-                CreatedPerson = "Hans",
-                LastEditedPerson = "Hans",
-                DayInYearOfArticleCreation = 123,
-                ArticleTestType = ArticleType.IncontinencePad,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
-            };
+            var viewModel = GetViewModelTestData();
+            viewModel.InkoWeightAfterZentrifuge = 202.11;
+            var testValueReturnedFromHelper = GetTestValueTestData();
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
@@ -224,34 +190,16 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void UpdateRetentionTestBaseTest()
         {
-            var viewModel = new InkoRetentionEditViewModel
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromDb = GetTestValueTestData();
+            testValueReturnedFromDb.CreatedPerson = "Fritz";
+            testValueReturnedFromDb.LastEditedPerson = "Fritz";
+            testValueReturnedFromDb.IncontinencePadTestValue = new IncontinencePadTestValue
             {
-                TestPerson = "Hans",
-                TestValueId = -1,
-                TestSheetId = 1,
-                ProductionCodeTime = new TimeSpan(12, 34, 0),
-                ProductionCodeDay = 123,
-                InkoWeight = 30.21,
-                InkoWeightWet = 430.15,
-                InkoWeightAfterZentrifuge = 212.11,
-                Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
+                IncontinencePadTime = new TimeSpan( 11, 11, 0 ),
+                TestType = TestTypeIncontinencePad.Retention
             };
-            var testValueReturnedFromDb = new TestValue
-            {
-                TestSheetRefId = 1,
-                CreatedDateTime = new DateTime(2016, 1, 2),
-                LastEditedDateTime = new DateTime(2016, 1, 2),
-                CreatedPerson = "Fritz",
-                LastEditedPerson = "Fritz",
-                DayInYearOfArticleCreation = 123,
-                ArticleTestType = ArticleType.IncontinencePad,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } },
-                IncontinencePadTestValue = new IncontinencePadTestValue
-                {
-                    IncontinencePadTime = new TimeSpan(11, 11, 0),
-                    TestType = TestTypeIncontinencePad.Retention
-                }
-            };
+
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
