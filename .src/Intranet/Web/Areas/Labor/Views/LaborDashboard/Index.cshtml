@@ -5,3 +5,52 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
+<div class="body-content">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Schicht 0</th>
+            <th>Schicht -1</th>
+            <th>Schicht -2</th>
+            <th>Schicht -3</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach ( var item in Model.DashboardItem )
+        {
+            <tr>
+                <th>@item.MachineName</th>
+                @foreach ( var shift in item.ShiftItems )
+                {
+                    <th>
+                        <div>
+                            @foreach (var po in shift.ProductionOrderItems)
+                            {
+                                <div class="dashboard-box-a">
+                                    <a href="@Url.Action( po.Action, po.Controller, new { area = "Labor" } )" >
+                                        <div class="dashboard-box-@po.RwType">
+                                            <p class="no-underline">
+                                                @po.ProductionOrderName
+                                                <span class="@(po.HasNotes ? "glyphicon glyphicon-comment" : "") aria-hidden="true"></span>
+                                            </p>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+
+                    </th>
+                }
+            </tr>
+        }
+
+        </tbody>
+    </table>
+
+
+</div>

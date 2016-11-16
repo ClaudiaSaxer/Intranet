@@ -1,0 +1,48 @@
+﻿@import "Variables.scss";
+
+
+@mixin colorize{
+    color: black;
+    &:visited {
+      color: black;
+      text-decoration: none;
+    }
+    &:hover {
+      color: black;    
+      background-color:$lightgray;
+      text-decoration: none;
+      text-decoration-line:none;
+    }
+    &:active {
+      color: black;    
+      text-decoration: none;
+    }
+    
+  }
+
+@mixin dashboard-box($bordercolor) {
+    background-color: $dashboard-box-background-color;
+    margin:10px;
+    padding:10px;
+    border-left: 5px solid $bordercolor;
+    -webkit-box-shadow: 2px 2px 2px 0px $dashboard-box-shadow-color;
+    -moz-box-shadow:2px 2px 2px  0px  $dashboard-box-shadow-color;
+    box-shadow: 2px 2px 2px  0px  $dashboard-box-shadow-color;   
+    @include colorize;
+} 
+
+.dashboard-box-Ok{
+    @include dashboard-box($darkgrey);  
+}
+
+.dashboard-box-Better{
+    @include dashboard-box($laborcreatorcolorbetter);
+}
+.dashboard-box-Worse{
+     @include dashboard-box($laborcreatorcolorworse);
+}
+.dashboard-box-SomethingWorse{
+     @include dashboard-box($laborcreatorcolorsomethingworse);
+}
+
+
