@@ -10,8 +10,7 @@
     <h2>Höschenwindeln - Retention-Test</h2>
 
     <div class="intigena-line"></div>
-
-    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm"}))
     {
         @Html.ValidationSummary(true)
         @Html.AntiForgeryToken()
@@ -76,6 +75,14 @@
                 <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" >
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
+                <!--
+                <span><a id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Aktivieren
+                </a>
+                <a id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Entfernen
+                </a></span>    
+                -->
             </h4>
             <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
                 <label class="col-sm-2 control-label">Zugabe 1 [s]:</label>
@@ -154,18 +161,20 @@
                 document.getElementById('penetration-test').style.display = 'none';
                 document.getElementById('TestType').value = 'Rewet';
             }
-                $("#addNote").click(function () {
-                    addNote();
-                });
-                $('#submitForm').submit(function () {
+            $("#addNote").click(function () {
+                addNote();
+            });
+            $('#submitForm').submit(function () {
+                if ($(this).valid()) {
                     $(this).find(':submit').attr('disabled', 'disabled');
-                });
-                $("#addPenetration").click(function () {
-                    addPenetration();
-                });
-                $("#removePenetration").click(function () {
-                    removePenetration();
-                });
+                }
+            });
+            $("#addPenetration").click(function () {
+                addPenetration();
+            });
+            $("#removePenetration").click(function () {
+                removePenetration();
+            });
         </script>
     }
 </div>
