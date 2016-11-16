@@ -1,7 +1,7 @@
 ﻿using System;
 using Intranet.Labor.Model.labor;
 
-namespace Intranet.Labor.ViewModel.LaborDashboard
+namespace Intranet.Labor.ViewModel
 {
     /// <summary>
     ///     Class representing a item for the production order
