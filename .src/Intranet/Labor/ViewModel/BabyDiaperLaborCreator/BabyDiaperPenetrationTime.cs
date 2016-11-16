@@ -1,4 +1,5 @@
 ﻿using System;
+using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -32,5 +33,11 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>penetration time value for the fourth addition</value>
         public Double PenetrationTimeAdditionFourth { get; set; }
+
+        /// <summary>
+        /// Gets or sets the rw type for the the penetrationTime of the fourth addition
+        /// </summary>
+        /// <value>the rw type for the penetrationTime of the fourth addition</value>
+        public RwType PenetrationTimeAdditionFourthRwType { get; set; }
     }
 }
