@@ -26,7 +26,7 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the value after the strike trough (with 210ml in g)
         /// </summary>
         /// <value>the value after the strike through</value>
-        public Double StrikeTroughValue { get; set; }
+        public Double StrikeThroughValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the distribution after the strikte trough (in mm)
