@@ -70,7 +70,7 @@
                 <td>@item.IncontinencePadTestInfo.ProductionCode</td>
                 <td>@item.IncontinencePadRewet.WeightDry</td>
                 <td>@item.IncontinencePadRewet.WeightWet</td>
-                <td>@item.IncontinencePadRewet.WeightDiff</td>
+                <td class="laborcreatorcolor-@item.IncontinencePadRewet.RewetRW">@item.IncontinencePadRewet.WeightDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action( "Edit", "IncontinencePadRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
@@ -88,10 +88,10 @@
         <tfoot>
         <tr>
             <th>Durchschnitt</th>
-            <th></th>
             <th>@Model.RewetAverage.WeightDry</th>
             <th>@Model.RewetAverage.WeightWet</th>
-            <th>@Model.RewetAverage.WeightDiff</th>
+            <th class="laborcreatorcolor-@Model.RewetAverage.RewetRW">@Model.RewetAverage.WeightDiff</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -99,10 +99,10 @@
         <tfoot>
         <tr>
             <th>Standard Abweichung</th>
-            <th></th>
             <th>@Model.RewetStandardDeviation.WeightDry</th>
             <th>@Model.RewetStandardDeviation.WeightWet</th>
-            <th>@Model.RewetStandardDeviation.WeightDiff</th>
+            <th class="laborcreatorcolor-@Model.RewetStandardDeviation.RewetRW">@Model.RewetStandardDeviation.WeightDiff</th>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -134,7 +134,7 @@
                 <td>@item.IncontinencePadRetention.RetentionWetWeight</td>
                 <td>@item.IncontinencePadRetention.RetentionAfterZentrifugeValue</td>
                 <td>@item.IncontinencePadRetention.AbsorptionDiff</td>
-                <td>@item.IncontinencePadRetention.RetentionDiff</td>
+                <td class="laborcreatorcolor-@item.IncontinencePadRetention.RetentionRw">@item.IncontinencePadRetention.RetentionDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action( "Edit", "IncontinencePadRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
@@ -152,12 +152,12 @@
         <tfoot>
         <tr>
             <th>Durchschnitt</th>
-            <th></th>
             <th>@Model.RetentionAverage.RetentionDryWeight</th>
             <th>@Model.RetentionAverage.RetentionWetWeight</th>
             <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
             <td>@Model.RetentionAverage.AbsorptionDiff</td>
-            <td>@Model.RetentionAverage.RetentionDiff</td>
+            <td class="laborcreatorcolor-@Model.RetentionAverage.RetentionRw">@Model.RetentionAverage.RetentionDiff</td>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -165,12 +165,12 @@
         <tfoot>
         <tr>
             <th>Standard Abweichung</th>
-            <th></th>
             <th>@Model.RetentionStandardDeviation.RetentionDryWeight</th>
             <th>@Model.RetentionStandardDeviation.RetentionWetWeight</th>
             <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
             <td>@Model.RetentionStandardDeviation.AbsorptionDiff</td>
-            <td>@Model.RetentionStandardDeviation.RetentionDiff</td>
+            <td class="laborcreatorcolor-@Model.RetentionStandardDeviation.RetentionRw">@Model.RetentionStandardDeviation.RetentionDiff</td>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -201,12 +201,12 @@
             <tr>
                 <td>@item.IncontinencePadTestInfo.ProductionCode</td>
                 <td>@item.AcquisitionTime.Weight</td>
-                <td>@item.AcquisitionTime.AcquisitionTimeAdditionFirst</td>
-                <td>@item.AcquisitionTime.AcquisitionTimeAdditionSecond</td>
-                <td>@item.AcquisitionTime.AcquisitionTimeAdditionThird</td>
+                <td class="laborcreatorcolor-@item.AcquisitionTime.AcquisitionTimeAdditionFirstRW">@item.AcquisitionTime.AcquisitionTimeAdditionFirst</td>
+                <td class="laborcreatorcolor-@item.AcquisitionTime.AcquisitionTimeAdditionSecondRW">@item.AcquisitionTime.AcquisitionTimeAdditionSecond</td>
+                <td class="laborcreatorcolor-@item.AcquisitionTime.AcquisitionTimeAdditionThirdRW">@item.AcquisitionTime.AcquisitionTimeAdditionThird</td>
                 <td>@item.RewetAfterAcquisitionTime.WeightDry</td>
                 <td>@item.RewetAfterAcquisitionTime.WeightWet</td>
-                <td>@item.RewetAfterAcquisitionTime.WeightDiff</td>
+                <td class="laborcreatorcolor-@item.RewetAfterAcquisitionTime.RewetRW">@item.RewetAfterAcquisitionTime.WeightDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
                 <td>
                     <a href="@Url.Action( "Edit", "IncontinencePadAquisitionTime", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
@@ -224,14 +224,14 @@
         <tfoot>
         <tr>
             <th>Durchschnitt</th>
-            <th></th>
             <td>@Model.AcquisitionTimeAverage.Weight</td>
-            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionFirst</td>
-            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionSecond</td>
-            <td>@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionThird</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionFirstRW">@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionFirst</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionSecondRW">@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionSecond</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionThirdRW">@Model.AcquisitionTimeAverage.AcquisitionTimeAdditionThird</td>
             <td>@Model.RewetAfterAcquisitionTimeAverage.WeightDry</td>
             <td>@Model.RewetAfterAcquisitionTimeAverage.WeightWet</td>
-            <td>@Model.RewetAfterAcquisitionTimeAverage.WeightDiff</td>
+            <td class="laborcreatorcolor-@Model.RewetAfterAcquisitionTimeAverage.RewetRW">@Model.RewetAfterAcquisitionTimeAverage.WeightDiff</td>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
@@ -239,14 +239,14 @@
         <tfoot>
         <tr>
             <th>Standard Abweichung</th>
-            <th></th>
             <td>@Model.AcquisitionTimeStandardDeviation.Weight</td>
-            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionFirst</td>
-            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionSecond</td>
-            <td>@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionThird</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionFirstRW">@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionFirst</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionSecondRW">@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionSecond</td>
+            <td class="laborcreatorcolor-@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionThirdRW">@Model.AcquisitionTimeStandardDeviation.AcquisitionTimeAdditionThird</td>
             <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDry</td>
             <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightWet</td>
-            <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDiff</td>
+            <td class="laborcreatorcolor-@Model.RewetAfterAcquisitionTimeStandardDeviation.RewetRW">@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDiff</td>
+            <th></th>
             <th></th>
             <th></th>
         </tr>
