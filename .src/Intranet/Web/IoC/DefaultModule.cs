@@ -194,6 +194,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<LaborDashboardService>()
+           .As<ILaborDashboardService>()
+           .PropertiesAutowired()
+           .InstancePerRequest();
         }
 
         /// <summary>
