@@ -190,11 +190,11 @@ namespace Intranet.Labor.Bll
             }
             if ( counter == 0 )
                 counter = 1;
-            else if ( GetRewetFreeRwType( tempInko.RewetFreeDifference, productionOrder ) == RwType.Worse )
-                tempInko.RewetFreeRw = RwType.Worse;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeDryValue = tempInko.RewetFreeDryValue / counter;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeWetValue = tempInko.RewetFreeWetValue / counter;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference = tempInko.RewetFreeDifference / counter;
+            if (GetRewetFreeRwType(rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference, productionOrder) == RwType.Worse)
+                tempInko.RewetFreeRw = RwType.Worse;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeRw = tempInko.RewetFreeRw;
             return rewetTestAvg;
         }

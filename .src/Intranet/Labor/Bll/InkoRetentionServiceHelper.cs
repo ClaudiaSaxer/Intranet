@@ -195,13 +195,13 @@ namespace Intranet.Labor.Bll
             }
             if ( counter == 0 )
                 counter = 1;
-            else if ( GetRetentionRwType( tempInko.RetentionEndValue, productionOrder ) == RwType.Worse )
-                tempInko.RetentionRw = RwType.Worse;
             retentionTestAvg.IncontinencePadTestValue.RetentionWeight = tempInko.RetentionWeight / counter;
             retentionTestAvg.IncontinencePadTestValue.RetentionWetValue = tempInko.RetentionWetValue / counter;
             retentionTestAvg.IncontinencePadTestValue.RetentionAfterZentrifuge = tempInko.RetentionAfterZentrifuge / counter;
             retentionTestAvg.IncontinencePadTestValue.RetentionAbsorbtion = tempInko.RetentionAbsorbtion / counter;
             retentionTestAvg.IncontinencePadTestValue.RetentionEndValue = tempInko.RetentionEndValue / counter;
+            if (GetRetentionRwType(retentionTestAvg.IncontinencePadTestValue.RetentionEndValue, productionOrder) == RwType.Worse && tempInko.RetentionRw != RwType.Ok)
+                tempInko.RetentionRw = RwType.Worse;
             retentionTestAvg.IncontinencePadTestValue.RetentionRw = tempInko.RetentionRw;
             return retentionTestAvg;
         }
