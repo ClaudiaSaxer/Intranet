@@ -48,7 +48,7 @@ namespace Intranet.Labor.Bll.Test
                 TestSheetRepository = null
             };
 
-            var actual = target.GetCurrentShift()
+            var actual = target.ShiftHelper.GetCurrentShift()
                                .Should()
                                .Be( ShiftType.Morning );
         }
@@ -86,7 +86,7 @@ namespace Intranet.Labor.Bll.Test
                 TestSheetRepository = null
             };
 
-            var actual = target.GetCurrentShift()
+            var actual = target.ShiftHelper.GetCurrentShift()
                                .Should()
                                .BeNull( "because not existing" );
         }
@@ -124,7 +124,7 @@ namespace Intranet.Labor.Bll.Test
                 TestSheetRepository = null
             };
 
-            var actual = target.GetCurrentShift()
+            var actual = target.ShiftHelper.GetCurrentShift()
                                .Should()
                                .BeNull( "because not existing" );
         }
@@ -162,7 +162,7 @@ namespace Intranet.Labor.Bll.Test
                 TestSheetRepository = null
             };
 
-            var actual = target.GetCurrentShift()
+            var actual = target.ShiftHelper.GetCurrentShift()
                                .Should()
                                .BeNull( "because not existing" );
         }
@@ -200,7 +200,7 @@ namespace Intranet.Labor.Bll.Test
                 TestSheetRepository = null
             };
 
-            target.GetCurrentShift()
+            target.ShiftHelper.GetCurrentShift()
                   .Should()
                   .BeNull( "because more than one existing" );
         }

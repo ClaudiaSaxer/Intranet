@@ -203,6 +203,11 @@ namespace Intranet.Web.IoC
                    .As<ILaborDashboardBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<ShiftHelper>()
+                 .As<IShiftHelper>()
+                 .PropertiesAutowired()
+                 .InstancePerRequest();
         }
 
         /// <summary>

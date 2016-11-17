@@ -42,6 +42,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the LaborDashboardViewModel</returns>
         public LaborDashboardViewModel GetLaborDashboardViewModel()
         {
+            LaborDashboardBll.GetTestSheetForActualAndLastThreeShifts();
             //TODO implement and remove test data
             return new LaborDashboardViewModel
                 {

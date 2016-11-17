@@ -12,6 +12,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public interface ILaborDashboardBll 
     {
- 
+        /// <summary>
+        /// Get the testsheets for the actual shift and the last 3 shifts
+        /// </summary>
+        /// <returns>the testsheets for the actual and last three shifts</returns>
+         ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts();
     }
 }
