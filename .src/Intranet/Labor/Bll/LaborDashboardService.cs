@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
@@ -42,92 +43,93 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the LaborDashboardViewModel</returns>
         public LaborDashboardViewModel GetLaborDashboardViewModel()
         {
-            LaborDashboardBll.GetTestSheetForActualAndLastThreeShifts();
-            //TODO implement and remove test data
-            return new LaborDashboardViewModel
+            var testsheets = LaborDashboardBll.GetTestSheetForActualAndLastThreeShifts();
+
+            var items = new List<DashboardItem>();
+
+            foreach ( var testSheet in testsheets )
+            {
+                var sheet = items.Find( item => item.MachineName.Equals( testSheet.MachineNr ) );
+                if ( sheet == null )
                 {
-                    DashboardItem = new List<DashboardItem>
+                    sheet = new DashboardItem
                     {
-                        new DashboardItem
-                        {
-                            MachineName = "M10",
-                            ShiftItems =
-                                new List<ShiftItem>
-                                {
-                                    new ShiftItem
-                                    {
-                                        ProductionOrderItems =
-                                            new List<ProductionOrderItem>
-                                            {
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 0,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"},new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"} }},
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Worse, ProductionOrderName = "FA45" ,SheetId = 1},
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Better, ProductionOrderName = "FA122" ,SheetId = 2},
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.SomethingWorse, ProductionOrderName = "FA666",SheetId = 3 ,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
-                                            }
-                                            
-                                    },
-                                    new ShiftItem
-                                    {
-                                        ProductionOrderItems =
-                                            new List<ProductionOrderItem>
-                                            {
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 4},
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122" ,SheetId = 5,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
-                                            }
-                                    },
-                                    new ShiftItem
-                                    {
-                                        ProductionOrderItems =
-                                            new List<ProductionOrderItem>
-                                            {
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 6},
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122",SheetId = 7 ,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
-                                            }
-                                    },
-                                    new ShiftItem
-                                    {
-                                        ProductionOrderItems =
-                                            new List<ProductionOrderItem>
-                                            {
-                                                new ProductionOrderItem
-                                                {
-                                                    HasNotes = true,
-                                                    RwType = RwType.Ok,
-                                                    ProductionOrderName = "FA122",SheetId = 8
-                                                }
-                                            }
-                                    }
-                                }
-                        },
-                        new DashboardItem
-                        {
-                            MachineName = "M11",
-                            ShiftItems =
-                                new List<ShiftItem>
-                                {
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() }
-                                }
-                        },
-                        new DashboardItem
-                        {
-                            MachineName = "M45",
-                            ShiftItems =
-                                new List<ShiftItem>
-                                {
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                    new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() }
-                                }
-                        }
-                    }
+                        MachineName = testSheet.MachineNr,
+                        ShiftItems =
+                            new List<ShiftItem>
+                            {
+                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
+                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
+                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
+                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() }
+                            }
+                    };
+                    items.Add( sheet );
                 }
-                ;
+                sheet.ShiftItems.ToList()[0].ProductionOrderItems.Add( new ProductionOrderItem
+                                                                       {
+                                                                           SheetId = testSheet.TestSheetId,
+                                                                           HasNotes = testSheet.TestValues.ToList()
+                                                                                               .Exists( value => value.TestValueNote.Count > 0 ),
+                                                                           Notes = toDashboardNote( testSheet.TestValues )
+                                                                           ,
+                                                                           ProductionOrderName = testSheet.FaNr,
+                                                                           RwType = ToRwTypeAll( testSheet.TestValues.ToList() ),
+                                                                           Action = "Edit",
+                                                                           Controller = testSheet.ArticleType == ArticleType.BabyDiaper ? "LaborCreatorBaby" : "LaborCreatorInko"
+                                                                       } );
+            }
+            return new LaborDashboardViewModel { DashboardItem = items };
 
             #endregion
+        }
+
+        private RwType CalcRwType( RwType before, RwType? rwType )
+        {
+            if ( rwType == null )
+                return before;
+            if ( ( before == RwType.Worse ) || ( rwType == RwType.Worse ) )
+                return RwType.Worse;
+            return before == RwType.SomethingWorse ? RwType.SomethingWorse : rwType.Value;
+        }
+
+        private List<DashboardNote> toDashboardNote( IEnumerable<TestValue> testValues )
+        {
+            var notes = new List<DashboardNote>();
+
+            foreach ( var testValue in testValues.Where( testValue => testValue.TestValueNote.Count > 0 ) )
+                notes.AddRange(
+                    testValue.TestValueNote.Select(
+                                 testValueNote =>
+                                         new DashboardNote { ErrorMessage = testValueNote.Error.Value, Message = testValueNote.Message, Code = testValueNote.Error.ErrorCode } ) );
+
+            return notes;
+        }
+
+        private RwType ToRwTypeAll( IEnumerable<TestValue> testValues )
+        {
+            var rwType = RwType.Ok;
+            foreach (
+                var testValue in
+                testValues.Where( testValue => ( testValue.TestValueType == TestValueType.Average ) || ( testValue.TestValueType == TestValueType.StandardDeviation ) ) )
+                if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
+                {
+                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.RetentionRw );
+                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.PenetrationRwType );
+                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.Rewet140Rw );
+                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.Rewet210Rw );
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RetentionRw );
+                }
+                else
+                {
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
+                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RewetFreeRw );
+                }
+
+            return rwType;
         }
     }
 }
