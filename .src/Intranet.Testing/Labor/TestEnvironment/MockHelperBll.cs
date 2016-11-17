@@ -6,6 +6,7 @@ using System.Linq;
 using Castle.Core.Internal;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Model;
@@ -284,6 +285,27 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup( x => x.SaveChanges() )
                 .Returns( 1 );
             return mock.Object;
+        }
+
+        /// <summary>
+        /// A mock for the shifthelper
+        /// </summary>
+        /// <param name="shiftType">the type the shift helper should return</param>
+        /// <returns>a mock for the interface ishifthelper</returns>
+        public static IShiftHelper GetShiftHelper( ShiftType? shiftType )
+        {
+
+            var mock = new Mock<IShiftHelper>
+            {
+                Name = "MockHelper.GetShiftHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetCurrentShift() )
+                .Returns( shiftType );
+
+            return mock.Object;
+
         }
     }
 }

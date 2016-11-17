@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 
@@ -28,6 +29,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>the production order repository</value>
         public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
 
+        /// <summary>
+        /// Gets or sets the shifthelper
+        /// </summary>
+        /// <value>the shifthelper</value>
         public IShiftHelper ShiftHelper { get; set; }
     
         #endregion
