@@ -2,7 +2,7 @@
   background-color: #ffffff;
   padding: 10px;
   margin: 10px 10px 10px 0px;
-  border-left: 5px solid #E9E9E9;
+  border-left: 5px solid #90EE90;
   -webkit-box-shadow: 2px 2px 2px 0px #E9E9E9;
   -moz-box-shadow: 2px 2px 2px 0px #E9E9E9;
   box-shadow: 2px 2px 2px 0px #E9E9E9;
@@ -81,3 +81,18 @@
   .dashboard-box-SomethingWorse:active {
     color: black;
     text-decoration: none; }
+
+.note-button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+  cursor: pointer;
+  font-style: normal;
+  font-size: 11px;
+  margin-left: 10px; }
+  .note-button :hover {
+    color: #539ad8; }
+
+.dashboard-notes {
+  font-size: 9px; }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Intranet.Common;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
@@ -57,10 +58,20 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                         ProductionOrderItems =
                                             new List<ProductionOrderItem>
                                             {
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA1234" },
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Worse, ProductionOrderName = "FA45" },
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Better, ProductionOrderName = "FA122" },
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.SomethingWorse, ProductionOrderName = "FA666" }
+                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 0,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"},new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"} }},
+                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Worse, ProductionOrderName = "FA45" ,SheetId = 1},
+                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Better, ProductionOrderName = "FA122" ,SheetId = 2},
+                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.SomethingWorse, ProductionOrderName = "FA666",SheetId = 3 ,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
+                                            }
+                                            
+                                    },
+                                    new ShiftItem
+                                    {
+                                        ProductionOrderItems =
+                                            new List<ProductionOrderItem>
+                                            {
+                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 4},
+                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122" ,SheetId = 5,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
                                             }
                                     },
                                     new ShiftItem
@@ -68,17 +79,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                         ProductionOrderItems =
                                             new List<ProductionOrderItem>
                                             {
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" },
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122" }
-                                            }
-                                    },
-                                    new ShiftItem
-                                    {
-                                        ProductionOrderItems =
-                                            new List<ProductionOrderItem>
-                                            {
-                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" },
-                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122" }
+                                                new ProductionOrderItem { HasNotes = false, RwType = RwType.Ok, ProductionOrderName = "FA1234" ,SheetId = 6},
+                                                new ProductionOrderItem { HasNotes = true, RwType = RwType.Ok, ProductionOrderName = "FA122",SheetId = 7 ,Notes = new List<DashboardNote> {new DashboardNote {ErrorMessage = "Nicht gefunden", Message = "habe ich", Code = "404"}}}
                                             }
                                     },
                                     new ShiftItem
@@ -90,7 +92,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                 {
                                                     HasNotes = true,
                                                     RwType = RwType.Ok,
-                                                    ProductionOrderName = "FA122"
+                                                    ProductionOrderName = "FA122",SheetId = 8
                                                 }
                                             }
                                     }

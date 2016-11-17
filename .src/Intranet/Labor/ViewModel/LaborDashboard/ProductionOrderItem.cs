@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.ViewModel
@@ -17,6 +18,11 @@ namespace Intranet.Labor.ViewModel
         public String ProductionOrderName { get; set; }
 
         /// <summary>
+        ///     Gets or sets the id of the sheet
+        /// </summary>
+        public Int32 SheetId { get; set; }
+
+        /// <summary>
         ///     Gets or sets the rw type, telling if something is wrong.
         /// </summary>
         /// <value>seths the type</value>
@@ -27,6 +33,12 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>if the production order has existing notes</value>
         public Boolean HasNotes { get; set; }
+
+        /// <summary>
+        /// Gets or sets a Collection of Notes
+        /// </summary>
+        /// <value>the notes</value>
+        public ICollection<DashboardNote> Notes { get; set; }
 
         /// <summary>
         ///     Gets or sets the controller for more details

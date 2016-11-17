@@ -32,7 +32,7 @@
 } 
 
 .dashboard-box-Ok{
-    @include dashboard-box($darkgrey);  
+    @include dashboard-box($laborcreatorcolorbetter);
 }
 
 .dashboard-box-Better{
@@ -45,4 +45,20 @@
      @include dashboard-box($laborcreatorcolorsomethingworse);
 }
 
+.note-button{
+     background:none!important;
+     border:none;  
+     padding:0!important;
+     font: inherit;
+     cursor: pointer;
+     font-style:normal; 
+     :hover {
+       color:$intigena-blue;  
+    }
+       font-size: $font-size-medium;
+       margin-left:10px;
 
+}
+.dashboard-notes{
+  font-size: $font-size-small;
+}

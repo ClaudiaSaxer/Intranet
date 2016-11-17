@@ -64,6 +64,7 @@
     <Compile Include="LaborDashboard\DashboardItem.cs" />
     <Compile Include="LaborDashboard\LaborDashboardViewModel.cs" />
     <Compile Include="LaborDashboard\ProductionOrderItem.cs" />
+    <Compile Include="LaborDashboard\DashboardNote.cs" />
     <Compile Include="LaborDashboard\SheduleItem.cs" />
     <Compile Include="TestNote.cs" />
     <Compile Include="BabyDiaperLaborCreator\BabyDiaperPenetrationTimeTestValue.cs" />
