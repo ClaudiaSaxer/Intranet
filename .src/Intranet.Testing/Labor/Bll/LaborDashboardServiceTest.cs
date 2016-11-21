@@ -1,11 +1,9 @@
 ﻿#region Usings
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
-using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
@@ -45,7 +43,35 @@ namespace Intranet.Labor.Bll.Test
 
             var actual = target.GetLaborDashboardViewModel();
 
-            actual.DashboardItems.Count.Should()
+            actual.DashboardItemM10.MachineName.Should()
+                  .Be( "M10" );
+            actual.DashboardItemM10.ShiftItemsCurrent.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM10.ShiftItemsMinus1.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM10.ShiftItemsMinus2.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM10.ShiftItemsMinus3.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM11.MachineName.Should()
+                  .Be( "M11" );
+            actual.DashboardItemM11.ShiftItemsCurrent.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM11.ShiftItemsMinus1.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM11.ShiftItemsMinus2.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM11.ShiftItemsMinus3.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM49.MachineName.Should()
+                  .Be( "M49" );
+            actual.DashboardItemM49.ShiftItemsCurrent.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM49.ShiftItemsMinus1.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM49.ShiftItemsMinus2.Count.Should()
+                  .Be( 0 );
+            actual.DashboardItemM49.ShiftItemsMinus3.Count.Should()
                   .Be( 0 );
         }
 
@@ -55,22 +81,6 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void GetLaborDashboardViewModelSingleTest()
         {
-            var now = DateTime.Now;
-            var testsheet = new TestSheet
-            {
-                ShiftType = ShiftType.Late,
-                ArticleType = ArticleType.BabyDiaper,
-                TestValues = new List<TestValue>(),
-                FaNr = "666",
-                CreatedDateTime = now,
-                MachineNr = "M12",
-                SizeName = "big",
-                TestSheetId = 1,
-                DayInYear = 123,
-                ProductName = "awesome",
-                SAPType = "W43",
-                SAPNr = "asdf"
-            };
             var note = new DashboardNote
             {
                 ErrorMessage = "en fehler",
@@ -83,15 +93,29 @@ namespace Intranet.Labor.Bll.Test
                 InfoValue = "666",
                 InfoKey = "the number of the beast"
             };
+            var po = new ProductionOrderItem
+            {
+                RwType = RwType.Better,
+                Action = "action",
+                HasNotes = true,
+                Notes = new List<DashboardNote> { note },
+                ProductionOrderName = "666",
+                Controller = "controller",
+                SheetId = 12,
+                DashboardInfos = new List<DashboardInfo> { info }
+            };
+
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet> { testsheet }
+                    new List<TestSheet>()
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
                     new List<DashboardNote> { note },
                     RwType.Better,
-                    new List<DashboardInfo> { info }
+                    new List<DashboardInfo> { info },
+                    po,
+                    new List<ProductionOrderItem> { po }
                 );
 
             var target = new LaborDashboardService( new NLogLoggerFactory() )
@@ -102,14 +126,57 @@ namespace Intranet.Labor.Bll.Test
 
             var actual = target.GetLaborDashboardViewModel();
 
-            actual.DashboardItems.Count.Should()
+            actual.DashboardItemM10.MachineName.Should()
+                  .Be( "M10" );
+            actual.DashboardItemM10.ShiftItemsCurrent.Count.Should()
                   .Be( 1 );
-            var actualItem = actual.DashboardItems.ToList()[0];
-            actualItem.MachineName.Should()
-                      .Be( testsheet.MachineNr );
-            actualItem.ShiftItems.Count.Should()
-                      .Be( 4 );
-          
+            actual.DashboardItemM10.ShiftItemsMinus1.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM10.ShiftItemsMinus2.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM10.ShiftItemsMinus3.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM11.MachineName.Should()
+                  .Be( "M11" );
+            actual.DashboardItemM11.ShiftItemsCurrent.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM11.ShiftItemsMinus1.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM11.ShiftItemsMinus2.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM11.ShiftItemsMinus3.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM49.MachineName.Should()
+                  .Be( "M49" );
+            actual.DashboardItemM49.ShiftItemsCurrent.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM49.ShiftItemsMinus1.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM49.ShiftItemsMinus2.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM49.ShiftItemsMinus3.Count.Should()
+                  .Be( 1 );
+
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].RwType.Should()
+                  .Be( po.RwType );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].DashboardInfos.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].DashboardInfos.ToList()[0].Should()
+                  .Be( info );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].SheetId.Should()
+                  .Be( po.SheetId );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].Action.Should()
+                  .Be( po.Action );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].Controller.Should()
+                  .Be( po.Controller );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].HasNotes.Should()
+                  .Be( po.HasNotes );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].ProductionOrderName.Should()
+                  .Be( po.ProductionOrderName );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].Notes.Count.Should()
+                  .Be( 1 );
+            actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].Notes.ToList()[0].Should()
+                  .Be( note );
         }
     }
 }

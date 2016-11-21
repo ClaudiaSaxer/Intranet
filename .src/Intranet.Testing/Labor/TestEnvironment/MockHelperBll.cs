@@ -190,7 +190,10 @@ namespace Intranet.Labor.TestEnvironment
             };
 
             mock.Setup(x => x.GetTestSheetForActualAndLastThreeShifts())
-                .Returns(testSheets);
+                .Returns(testSheets.ToList());
+
+            mock.Setup(x => x.GetTestSheetForMinusXShiftPerMachineNr(It.IsAny<Int32>(), It.IsAny<String>()))
+                .Returns(testSheets.ToList());
 
             return mock.Object;
         }   

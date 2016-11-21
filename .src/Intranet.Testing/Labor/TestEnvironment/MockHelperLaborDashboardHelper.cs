@@ -22,8 +22,10 @@ namespace Intranet.Labor.TestEnvironment
         /// <param name="notes">the dashboard notes to create</param>
         /// <param name="rwType">the rwtype to return for all methods calculating the cumulated rw type</param>
         /// <param name="dashboardInfos">the dashboard infos created by all methods ToDashbardInfo...</param>
+        /// <param name="productionOrderItem">production order item for toProductionOtderItem</param>
+        /// <param name="productionOrderItems">collection of production order items for toProductionOrderItems</param>
         /// <returns>A mock for the labor dashboard helper</returns>
-        public static ILaborDashboardHelper GetLaborDashboardHelper( List<DashboardNote> notes = null, RwType rwType = RwType.Ok, List<DashboardInfo> dashboardInfos = null )
+        public static ILaborDashboardHelper GetLaborDashboardHelper( List<DashboardNote> notes = null, RwType rwType = RwType.Ok, List<DashboardInfo> dashboardInfos = null,ProductionOrderItem productionOrderItem = null, ICollection<ProductionOrderItem> productionOrderItems = null)
         {
             var mock = new Mock<ILaborDashboardHelper>
             {
@@ -44,6 +46,10 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns( dashboardInfos );
             mock.Setup( x => x.ToDashboardInfosIncontinencePad( It.IsAny<TestValue>() ) )
                 .Returns( dashboardInfos );
+            mock.Setup( x => x.ToProductionOrderItem( It.IsAny<TestSheet>() ) )
+                .Returns( productionOrderItem );
+            mock.Setup( x => x.ToProductionOrderItems( It.IsAny<ICollection<TestSheet>>() ) )
+                .Returns( productionOrderItems );
 
             return mock.Object;
         }
