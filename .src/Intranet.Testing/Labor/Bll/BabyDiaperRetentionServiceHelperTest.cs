@@ -360,11 +360,14 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperRetentionBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperForUpdating();
 
             var target = new BabyDiaperRetentionServiceHelper(new NLogLoggerFactory())
             {
-                TestBll = babyDiaperRetentionBll,
+                TestBll = testBll,
+                TestServiceHelper = testServiceHelper
             };
 
             var actual = target.UpdateRetentionTest(viewModel);

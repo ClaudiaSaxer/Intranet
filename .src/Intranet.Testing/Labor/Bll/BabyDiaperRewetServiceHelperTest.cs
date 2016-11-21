@@ -313,9 +313,12 @@ namespace Intranet.Labor.Bll.Test
 
             var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
 
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperForUpdating();
+
             var target = new BabyDiaperRewetServiceHelper(new NLogLoggerFactory())
             {
                 TestBll = babyDiaperBll,
+                TestServiceHelper = testServiceHelper
             };
 
             var actual = target.UpdateRewetTest(viewModel);
