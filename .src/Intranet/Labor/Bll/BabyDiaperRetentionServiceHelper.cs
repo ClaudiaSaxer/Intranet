@@ -231,7 +231,7 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.SapGHoewiValue += Math.Pow( testValue.BabyDiaperTestValue.SapGHoewiValue - retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue, 2 );
                 counter++;
             }
-            if ( counter == 0 )
+            if ( counter < 2 )
             {
                 retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = 0;
                 retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = 0;

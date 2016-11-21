@@ -620,11 +620,11 @@ namespace Intranet.Labor.Bll.Test
 
             var actualStDev = actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.StandardDeviation && tv.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention);
             Assert.NotNull(actualStDev);
-            Assert.Equal(0.5, actualStDev.BabyDiaperTestValue.WeightDiaperDry);
-            Assert.Equal(2.25, actualStDev.BabyDiaperTestValue.RetentionWetWeight);
-            Assert.Equal(2.75, actualStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue);
-            Assert.Equal(50, actualStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent);
-            Assert.Equal(0.34, actualStDev.BabyDiaperTestValue.SapGHoewiValue,2);
+            Assert.Equal(0.71, actualStDev.BabyDiaperTestValue.WeightDiaperDry,2);
+            Assert.Equal(3.18, actualStDev.BabyDiaperTestValue.RetentionWetWeight,2);
+            Assert.Equal(3.89, actualStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue,2);
+            Assert.Equal(70.71, actualStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent,2);
+            Assert.Equal(0.48, actualStDev.BabyDiaperTestValue.SapGHoewiValue,2);
         }
 
         #endregion
