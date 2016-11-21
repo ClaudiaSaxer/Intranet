@@ -1,6 +1,4 @@
-﻿#region Usings
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
@@ -10,14 +8,12 @@ using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
 
-#endregion
-
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    ///     Class representing Tests for InkoRetentionService
+    ///     Class representing Tests for InkoAquisitionService
     /// </summary>
-    public class InkoRetentionServiceTest
+    public class InkoAquisitionServiceTest
     {
         /// <summary>
         ///     Test Delete
@@ -27,8 +23,8 @@ namespace Intranet.Labor.Bll.Test
         {
             var deletedTestValue = new TestValue { TestValueId = 1 };
 
-            var inkoRetentionServiceHelper =
-                MockHelperTestServiceHelper.GetInkoRetentionServiceHelper(
+            var inkoAquisitionServiceHelper =
+                MockHelperTestServiceHelper.GetInkoAquisitionServiceHelper(
                     null
                 );
             var testBll =
@@ -36,21 +32,21 @@ namespace Intranet.Labor.Bll.Test
                     deletedTestValue
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
-                InkoRetentionServiceHelper = inkoRetentionServiceHelper,
+                InkoAquisitionServiceHelper = inkoAquisitionServiceHelper,
                 TestBll = testBll
             };
 
-            var actual = target.Delete( 1 );
-            Assert.Equal( 1, actual.TestValueId );
+            var actual = target.Delete(1);
+            Assert.Equal(1, actual.TestValueId);
         }
 
         /// <summary>
         ///     Tests if it get null if the testValue doesnt exist in the db
         /// </summary>
         [Fact]
-        public void GetInkoRetentionEditViewModelFromNotExistingTestValueTest()
+        public void GetInkoAquisitionEditViewModelFromNotExistingTestValueTest()
         {
             var listOfTestValues = new List<TestValue>
             {
@@ -60,10 +56,10 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestSheetId = 2,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime( 2016, 5, 5 ),
+                CreatedDateTime = new DateTime(2016, 5, 5),
                 TestValues = listOfTestValues
             };
-            foreach ( var testValue in listOfTestValues )
+            foreach (var testValue in listOfTestValues)
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
@@ -71,21 +67,21 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll
             };
 
-            var actual = target.GetInkoRetentionEditViewModel( 2 );
+            var actual = target.GetInkoAquisitionEditViewModel(2);
 
-            Assert.Equal( null, actual );
+            Assert.Equal(null, actual);
         }
 
         /// <summary>
-        ///     Tests if it get a correct viewModel if everything for the testvalue exists in the db for inkorewettest
+        ///     Tests if it get a correct viewModel if everything for the testvalue exists in the db for inkoaquisitiontest
         /// </summary>
         [Fact]
-        public void GetInkoRetentionEditViewModelTest()
+        public void GetInkoAquisitionEditViewModelTest()
         {
             var listOfTestValues = new List<TestValue>
             {
@@ -99,13 +95,18 @@ namespace Intranet.Labor.Bll.Test
                         new IncontinencePadTestValue
                         {
                             IncontinencePadTime = new TimeSpan( 5, 10, 0 ),
-                            RetentionWeight = 30,
-                            RetentionWetValue = 400.2,
-                            RetentionAfterZentrifuge = 200,
-                            RetentionAbsorbtion = 380.2,
-                            RetentionEndValue = 190,
-                            RetentionRw = RwType.Ok,
-                            TestType = TestTypeIncontinencePad.Retention
+                            AcquisitionTimeFirst = 10,
+                            AcquisitionTimeFirstRw = RwType.Ok,
+                            AcquisitionTimeSecond = 20,
+                            AcquisitionTimeSecondRw = RwType.Ok,
+                            AcquisitionTimeThird = 30,
+                            AcquisitionTimeThirdRw = RwType.Ok,
+                            AcquisitionWeight = 20.2,
+                            RewetAfterAcquisitionTimeDryWeight = 12.5,
+                            RewetAfterAcquisitionTimeWetWeight = 13,
+                            RewetAfterAcquisitionTimeWeightDifference = 0.5,
+                            RewetAfterAcquisitionTimeRw = RwType.Ok,
+                            TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
                         }
                 }
             };
@@ -113,10 +114,10 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestSheetId = 1,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime( 2016, 5, 5 ),
+                CreatedDateTime = new DateTime(2016, 5, 5),
                 TestValues = listOfTestValues
             };
-            foreach ( var testValue in listOfTestValues )
+            foreach (var testValue in listOfTestValues)
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
@@ -124,35 +125,38 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper( "IT/49/16/" );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/49/16/");
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.GetInkoRetentionEditViewModel( 1 );
+            var actual = target.GetInkoAquisitionEditViewModel(1);
 
-            Assert.Equal( testSheetInDb.TestSheetId, actual.TestSheetId );
-            Assert.Equal( 1, actual.TestValueId );
-            Assert.Equal( "IT/49/16/", actual.ProductionCode );
-            Assert.Equal( "Hans", actual.TestPerson );
-            Assert.Equal( 123, actual.ProductionCodeDay );
-            Assert.Equal( new TimeSpan( 5, 10, 0 ), actual.ProductionCodeTime );
-            Assert.Equal( 30, actual.InkoWeight );
-            Assert.Equal( 400.2, actual.InkoWeightWet );
-            Assert.Equal( 200, actual.InkoWeightAfterZentrifuge );
-            Assert.Equal( 2,
+            Assert.Equal(testSheetInDb.TestSheetId, actual.TestSheetId);
+            Assert.Equal(1, actual.TestValueId);
+            Assert.Equal("IT/49/16/", actual.ProductionCode);
+            Assert.Equal("Hans", actual.TestPerson);
+            Assert.Equal(123, actual.ProductionCodeDay);
+            Assert.Equal(new TimeSpan(5, 10, 0), actual.ProductionCodeTime);
+            Assert.Equal(20.2, actual.InkoWeight);
+            Assert.Equal(10, actual.AquisitionAddition1);
+            Assert.Equal(20, actual.AquisitionAddition2);
+            Assert.Equal(30, actual.AquisitionAddition3);
+            Assert.Equal(12.5, actual.FPDry);
+            Assert.Equal(13, actual.FPWet);
+            Assert.Equal(2,
                           actual.NoteCodes.ToList()
-                                .Count );
+                                .Count);
         }
 
         /// <summary>
         ///     Tests if it get null if the IncontinenceTestValue for the testvalue doesnt exist in the db
         /// </summary>
         [Fact]
-        public void GetInkoRetentionEditViewModelWithNoIncontinenceTestVauleTest()
+        public void GetInkoAquisitionEditViewModelWithNoIncontinenceTestVauleTest()
         {
             var listOfTestValues = new List<TestValue>
             {
@@ -162,10 +166,10 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestSheetId = 1,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime( 2016, 5, 5 ),
+                CreatedDateTime = new DateTime(2016, 5, 5),
                 TestValues = listOfTestValues
             };
-            foreach ( var testValue in listOfTestValues )
+            foreach (var testValue in listOfTestValues)
                 testValue.TestSheet = testSheetInDb;
 
             var testBll =
@@ -173,14 +177,14 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll
             };
 
-            var actual = target.GetInkoRetentionEditViewModel( 1 );
+            var actual = target.GetInkoAquisitionEditViewModel(1);
 
-            Assert.Equal( null, actual );
+            Assert.Equal(null, actual);
         }
 
         /// <summary>
@@ -197,7 +201,7 @@ namespace Intranet.Labor.Bll.Test
             {
                 TestSheetId = 2,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime( 2016, 5, 5 ),
+                CreatedDateTime = new DateTime(2016, 5, 5),
                 TestValues = listOfTestValues
             };
 
@@ -206,27 +210,27 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll
             };
 
-            var actual = target.GetInkoRetentionEditViewModel( 1 );
+            var actual = target.GetInkoAquisitionEditViewModel(1);
 
-            Assert.Equal( null, actual );
+            Assert.Equal(null, actual);
         }
 
         /// <summary>
         ///     Tests if it get a new correct viewModel if the testSheet exists in the db
         /// </summary>
         [Fact]
-        public void GetNewInkoRetentionEditViewModelFromExistingTestSheetTest()
+        public void GetNewInkoAquisitionEditViewModelFromExistingTestSheetTest()
         {
             var testSheetInDb = new TestSheet
             {
                 TestSheetId = 2,
                 MachineNr = "M49",
-                CreatedDateTime = new DateTime( 2016, 5, 5 ),
+                CreatedDateTime = new DateTime(2016, 5, 5),
                 ArticleType = ArticleType.IncontinencePad
             };
             var testBll =
@@ -234,40 +238,40 @@ namespace Intranet.Labor.Bll.Test
                     testSheetInDb
                 );
 
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper( "IT/49/16/" );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelper("IT/49/16/");
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.GetNewInkoRetentionEditViewModel( 2 );
+            var actual = target.GetNewInkoAquisitionEditViewModel(2);
 
-            Assert.Equal( testSheetInDb.TestSheetId, actual.TestSheetId );
-            Assert.Equal( -1, actual.TestValueId );
-            Assert.Equal( "IT/49/16/", actual.ProductionCode );
+            Assert.Equal(testSheetInDb.TestSheetId, actual.TestSheetId);
+            Assert.Equal(-1, actual.TestValueId);
+            Assert.Equal("IT/49/16/", actual.ProductionCode);
         }
 
         /// <summary>
         ///     Tests if it get null if the testSheet doesnt exist in the db
         /// </summary>
         [Fact]
-        public void GetNewInkoRetentionEditViewModelFromNotExistingTestSheetTest()
+        public void GetNewInkoAquisitionEditViewModelFromNotExistingTestSheetTest()
         {
             var testBll =
                 MockHelperBll.GetTestBll(
                     new TestSheet { TestSheetId = 1 }
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
                 TestBll = testBll
             };
 
-            var actual = target.GetNewInkoRetentionEditViewModel( 2 );
+            var actual = target.GetNewInkoAquisitionEditViewModel(2);
 
-            Assert.Equal( null, actual );
+            Assert.Equal(null, actual);
         }
 
         /// <summary>
@@ -278,18 +282,18 @@ namespace Intranet.Labor.Bll.Test
         {
             var testValue = new TestValue();
 
-            var inkoRetentionServiceHelper =
-                MockHelperTestServiceHelper.GetInkoRetentionServiceHelper(
+            var inkoAquisitionServiceHelper =
+                MockHelperTestServiceHelper.GetInkoAquisitionServiceHelper(
                     testValue
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
-                InkoRetentionServiceHelper = inkoRetentionServiceHelper
+                InkoAquisitionServiceHelper = inkoAquisitionServiceHelper
             };
 
-            var actual = target.Save( null );
-            Assert.Equal( null, actual );
+            var actual = target.Save(null);
+            Assert.Equal(null, actual);
         }
 
         /// <summary>
@@ -300,18 +304,18 @@ namespace Intranet.Labor.Bll.Test
         {
             var testValue = new TestValue();
 
-            var inkoRetentionServiceHelper =
-                MockHelperTestServiceHelper.GetInkoRetentionServiceHelper(
+            var inkoAquisitionServiceHelper =
+                MockHelperTestServiceHelper.GetInkoAquisitionServiceHelper(
                     testValue
                 );
 
-            var target = new InkoRetentionService( new NLogLoggerFactory() )
+            var target = new InkoAquisitionService(new NLogLoggerFactory())
             {
-                InkoRetentionServiceHelper = inkoRetentionServiceHelper
+                InkoAquisitionServiceHelper = inkoAquisitionServiceHelper
             };
 
-            var actual = target.Save( new InkoRetentionEditViewModel() );
-            Assert.Equal( testValue, actual );
+            var actual = target.Save(new InkoAquisitionEditViewModel());
+            Assert.Equal(testValue, actual);
         }
     }
 }
