@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Intranet.Labor.Model.labor;
+using Intranet.Labor.ViewModel.LaborDashboard;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -51,6 +52,12 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the action for more detail</value>
         public String Action { get; set; }
+
+        /// <summary>
+        /// Gets or sets the additional dashboard infor
+        /// </summary>
+        /// <value>the dashboard info</value>
+        public ICollection<DashboardInfo> DashboardInfos { get; set; }
 
         #endregion
     }

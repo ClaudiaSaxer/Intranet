@@ -1,9 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
+using Intranet.Labor.ViewModel.LaborDashboard;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -73,6 +76,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                                                                                .Exists( value => value.TestValueNote.Count > 0 ),
                                                                            Notes = toDashboardNote( testSheet.TestValues )
                                                                            ,
+                                                                           DashboardInfos = ToDashboardInfos( testSheet.TestValues ),
                                                                            ProductionOrderName = testSheet.FaNr,
                                                                            RwType = ToRwTypeAll( testSheet.TestValues.ToList() ),
                                                                            Action = "Edit",
@@ -91,6 +95,97 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if ( ( before == RwType.Worse ) || ( rwType == RwType.Worse ) )
                 return RwType.Worse;
             return before == RwType.SomethingWorse ? RwType.SomethingWorse : rwType.Value;
+        }
+
+        private DashboardInfo toDashboardInfo( String key, String value, RwType rw ) => new DashboardInfo { InfoValue = value, InfoKey = key, RwType = rw };
+
+        private List<DashboardInfo> ToDashboardInfos( IEnumerable<TestValue> testValues )
+        {
+            var infos = new List<DashboardInfo>();
+            foreach ( var testValue in testValues.Where( value => value.TestValueType == TestValueType.Average ) )
+                infos.AddRange( testValue.ArticleTestType == ArticleType.BabyDiaper
+                                    ? ToDashboardInfosBabyDiapers( testValue )
+                                    : ToDashboardInfosIncontinencePad( testValue ) );
+
+            return infos;
+        }
+
+        private List<DashboardInfo> ToDashboardInfosBabyDiapers( TestValue testValue )
+        {
+            var infos = new List<DashboardInfo>();
+            switch ( testValue.BabyDiaperTestValue.TestType )
+            {
+                case TestTypeBabyDiaper.Rewet:
+                    infos.Add( toDashboardInfo( "Rewet - 140 ml",
+                                                Math.Round( testValue.BabyDiaperTestValue.Rewet140Value, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.BabyDiaperTestValue.Rewet140Rw.GetValueOrDefault() ) );
+                    return infos;
+
+                case TestTypeBabyDiaper.RewetAndPenetrationTime:
+                    infos.Add( toDashboardInfo( "Rewet - 210 ml",
+                                                Math.Round( testValue.BabyDiaperTestValue.Rewet210Value, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue
+                                                    .BabyDiaperTestValue.Rewet210Rw.GetValueOrDefault() ) );
+                    infos.Add( toDashboardInfo( "Penetrationszeit - Zugabe 4",
+                                                Math.Round( testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.BabyDiaperTestValue.PenetrationRwType.GetValueOrDefault() ) );
+                    return infos;
+
+                case TestTypeBabyDiaper.Retention:
+                    infos.Add( toDashboardInfo( "Retention - Nach Zentrifuge (g)",
+                                                Math.Round( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.BabyDiaperTestValue.RetentionRw.GetValueOrDefault() ) );
+                    return infos;
+            }
+            return infos;
+        }
+
+        private List<DashboardInfo> ToDashboardInfosIncontinencePad( TestValue testValue )
+        {
+            var infos = new List<DashboardInfo>();
+
+            switch ( testValue.IncontinencePadTestValue.TestType )
+            {
+                case TestTypeIncontinencePad.Retention:
+
+                    infos.Add( toDashboardInfo( "Retention",
+                                                Math.Round( testValue.IncontinencePadTestValue.RetentionEndValue, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.RetentionRw ) );
+                    return infos;
+
+                case TestTypeIncontinencePad.RewetFree:
+                    infos.Add( toDashboardInfo( "Rewet",
+                                                Math.Round( testValue.IncontinencePadTestValue.RewetFreeDifference, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.RewetFreeRw ) );
+                    return infos;
+                case TestTypeIncontinencePad.AcquisitionTimeAndRewet:
+
+                    infos.Add( toDashboardInfo( "Aquisitionszeit - Zugabe 1",
+                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeFirst, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw ) );
+                    infos.Add( toDashboardInfo( "Aquisitionszeit - Zugabe 2",
+                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeSecond, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw ) );
+                    infos.Add( toDashboardInfo( "Aquisitionszeit - Zugabe 3",
+                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeThird, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw ) );
+                    infos.Add( toDashboardInfo( "Rewet nach Aquisition",
+                                                Math.Round( testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2 )
+                                                    .ToString( CultureInfo.InvariantCulture ),
+                                                testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw ) );
+                    return infos;
+            }
+
+            return infos;
         }
 
         private List<DashboardNote> toDashboardNote( IEnumerable<TestValue> testValues )
@@ -114,19 +209,19 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 testValues.Where( testValue => ( testValue.TestValueType == TestValueType.Average ) || ( testValue.TestValueType == TestValueType.StandardDeviation ) ) )
                 if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
                 {
-                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.RetentionRw );
-                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.PenetrationRwType );
-                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.Rewet140Rw );
-                    rwType = CalcRwType( rwType, testValue.BabyDiaperTestValue.Rewet210Rw );
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RetentionRw );
+                    rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.RetentionRw );
+                    rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.PenetrationRwType );
+                    rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.Rewet140Rw );
+                    rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.Rewet210Rw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RetentionRw );
                 }
                 else
                 {
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw );
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw );
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw );
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
-                    rwType = CalcRwType( rwType, testValue.IncontinencePadTestValue.RewetFreeRw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeFirstRw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeSecondRw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeThirdRw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RewetAfterAcquisitionTimeRw );
+                    rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RewetFreeRw );
                 }
 
             return rwType;

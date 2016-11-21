@@ -62,6 +62,7 @@
     <Compile Include="InkoEdit\InkoRewetEditViewModel.cs" />
     <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
     <Compile Include="LaborCreator\RunningProductionOrder.cs" />
+    <Compile Include="LaborDashboard\DashboardInfo.cs" />
     <Compile Include="LaborDashboard\DashboardItem.cs" />
     <Compile Include="LaborDashboard\LaborDashboardViewModel.cs" />
     <Compile Include="LaborDashboard\ProductionOrderItem.cs" />
