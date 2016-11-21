@@ -204,6 +204,16 @@ namespace Intranet.Web.IoC
                    .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<InkoAquisitionService>()
+                   .As<IInkoAquisitionService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<InkoAquisitionServiceHelper>()
+                   .As<IInkoAquisitionServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
