@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
+using Intranet.Labor.ViewModel;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -182,5 +184,48 @@ namespace Intranet.Labor.Bll.Test
 
             Assert.Equal(null, actual.TestValueNote);
         }
+
+        #region UpdateNotes Test
+
+        /// <summary>
+        ///     Tests if Null from the viewModel puts an new empty List on TestValue;
+        /// </summary>
+        [Fact]
+        public void UpdateNotesTestNullNotesTest()
+        {
+            var expectedTestValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>()
+            };
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
+
+            testServiceHelper.UpdateNotes(null,expectedTestValue);
+
+            Assert.Equal(0, expectedTestValue.TestValueNote.Count);
+        }
+
+        /// <summary>
+        ///     Tests when the viewmodel has one note, the testvalue will have also one
+        /// </summary>
+        [Fact]
+        public void UpdateNotesTestOneNoteTest()
+        {
+            var notes = new List<TestNote>
+            {
+                new TestNote { ErrorCodeId = 1, Id = 0, Message = "Testmessage" }
+            };
+
+            var testValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>()
+            };
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
+
+            testServiceHelper.UpdateNotes(notes, testValue);
+
+            Assert.Equal(1, testValue.TestValueNote.Count);
+        }
+
+        #endregion
     }
 }
