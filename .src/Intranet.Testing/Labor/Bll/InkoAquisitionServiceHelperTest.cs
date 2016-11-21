@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
@@ -7,6 +9,8 @@ using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -63,7 +67,7 @@ namespace Intranet.Labor.Bll.Test
             TestPerson = "Hans",
             TestValueId = -1,
             TestSheetId = 1,
-            ProductionCodeTime = new TimeSpan(12, 34, 0),
+            ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
             ProductionCodeDay = 123,
             InkoWeight = 21.15,
             AquisitionAddition1 = 17.12,
@@ -77,8 +81,8 @@ namespace Intranet.Labor.Bll.Test
         private TestValue GetTestValueTestData() => new TestValue
         {
             TestSheetRefId = 1,
-            CreatedDateTime = new DateTime(2016, 1, 2),
-            LastEditedDateTime = new DateTime(2016, 1, 2),
+            CreatedDateTime = new DateTime( 2016, 1, 2 ),
+            LastEditedDateTime = new DateTime( 2016, 1, 2 ),
             CreatedPerson = "Hans",
             LastEditedPerson = "Hans",
             DayInYearOfArticleCreation = 123,
@@ -101,18 +105,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewAquisitionTest(viewModel);
+            var actual = target.SaveNewAquisitionTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromHelper, actual);
+            Assert.Equal( testValueReturnedFromHelper, actual );
         }
 
         /// <summary>
@@ -126,21 +130,21 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewAquisitionTest(viewModel);
+            var actual = target.SaveNewAquisitionTest( viewModel );
 
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
         }
 
         /// <summary>
@@ -158,21 +162,21 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewAquisitionTest(viewModel);
+            var actual = target.SaveNewAquisitionTest( viewModel );
 
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
         }
 
         #endregion
@@ -185,15 +189,15 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void UpdateAquisitionTestFailTest()
         {
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(null, null, null);
-            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( null, null, null );
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll
             };
 
-            var actual = target.UpdateAquisitionTest(new InkoAquisitionEditViewModel());
+            var actual = target.UpdateAquisitionTest( new InkoAquisitionEditViewModel() );
 
-            Assert.Equal(null, actual);
+            Assert.Equal( null, actual );
         }
 
         /// <summary>
@@ -208,44 +212,157 @@ namespace Intranet.Labor.Bll.Test
             testValueReturnedFromDb.LastEditedPerson = "Fritz";
             testValueReturnedFromDb.IncontinencePadTestValue = new IncontinencePadTestValue
             {
-                IncontinencePadTime = new TimeSpan(11, 11, 0),
+                IncontinencePadTime = new TimeSpan( 11, 11, 0 ),
                 TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
             };
 
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb );
 
-            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = babyDiaperBll
             };
 
-            var actual = target.UpdateAquisitionTest(viewModel);
+            var actual = target.UpdateAquisitionTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromDb, actual);
-            Assert.Equal(21.15, actual.IncontinencePadTestValue.AcquisitionWeight);
-            Assert.Equal(17.12, actual.IncontinencePadTestValue.AcquisitionTimeFirst);
-            Assert.Equal(54.06, actual.IncontinencePadTestValue.AcquisitionTimeSecond);
-            Assert.Equal(67.85, actual.IncontinencePadTestValue.AcquisitionTimeThird, 2);
-            Assert.Equal(21.73, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight, 2);
-            Assert.Equal(21.79, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight, 2);
-            Assert.Equal(0.06, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
-            Assert.Equal("Hans", actual.LastEditedPerson);
-            Assert.Equal("Fritz", actual.CreatedPerson);
-            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+            Assert.Equal( testValueReturnedFromDb, actual );
+            Assert.Equal( 21.15, actual.IncontinencePadTestValue.AcquisitionWeight );
+            Assert.Equal( 17.12, actual.IncontinencePadTestValue.AcquisitionTimeFirst );
+            Assert.Equal( 54.06, actual.IncontinencePadTestValue.AcquisitionTimeSecond );
+            Assert.Equal( 67.85, actual.IncontinencePadTestValue.AcquisitionTimeThird, 2 );
+            Assert.Equal( 21.73, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight, 2 );
+            Assert.Equal( 21.79, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight, 2 );
+            Assert.Equal( 0.06, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2 );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
+            Assert.Equal( "Hans", actual.LastEditedPerson );
+            Assert.Equal( "Fritz", actual.CreatedPerson );
+            Assert.NotEqual( new DateTime( 2016, 1, 2 ), actual.LastEditedDateTime );
         }
 
         #endregion
 
         #region UpdateAquisitionAverageAndStv Tests
 
+        /// <summary>
+        ///     Tests when there are no tests, the avg and dev values are default
+        /// </summary>
+        [Fact]
+        public void UpdateAquisitionAverageAndStvNoTestsTest()
+        {
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
 
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
+            {
+                TestBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateAquisitionAverageAndStv( 1 );
+
+            var actualAquisitionAvg =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+            Assert.NotNull( actualAquisitionAvg );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionWeight );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirst );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeSecond );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeThird );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight );
+            Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
+
+            var actualAquisitionStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+            Assert.NotNull( actualAquisitionStDev );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeFirst );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeSecond );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeThird );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference );
+        }
+
+        /// <summary>
+        ///     Tests when there is only one test, the avg values are equal the test values
+        /// </summary>
+        [Fact]
+        public void UpdateAquisitionAverageAndStvOneTestAvgTest()
+        {
+            var onlyTestValue = new TestValue
+            {
+                TestValueType = TestValueType.Single,
+                ArticleTestType = ArticleType.BabyDiaper,
+                IncontinencePadTestValue = new IncontinencePadTestValue
+                {
+                    TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                    AcquisitionWeight = 21.15,
+                    AcquisitionTimeFirst = 17.12,
+                    AcquisitionTimeSecond = 54.06,
+                    AcquisitionTimeThird = 67.85,
+                    RewetAfterAcquisitionTimeDryWeight = 21.73,
+                    RewetAfterAcquisitionTimeWetWeight = 21.79,
+                    RewetAfterAcquisitionTimeWeightDifference = 0.06,
+                    AcquisitionTimeFirstRw = RwType.Ok,
+                    AcquisitionTimeSecondRw = RwType.Ok,
+                    AcquisitionTimeThirdRw = RwType.Ok,
+                    RewetAfterAcquisitionTimeRw = RwType.Ok
+                }
+            };
+            var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
+            testSheetDataFromDb.TestValues.Add( onlyTestValue );
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+
+            var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
+            {
+                TestBll = testBll
+            };
+
+            var actual = target.UpdateAquisitionAverageAndStv( 1 );
+
+            var actualAquisitionAvg =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+            Assert.NotNull( actualAquisitionAvg );
+            Assert.Equal( 21.15, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionWeight );
+            Assert.Equal( 17.12, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirst );
+            Assert.Equal( 54.06, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeSecond );
+            Assert.Equal( 67.85, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeThird );
+            Assert.Equal( 21.73, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight );
+            Assert.Equal( 21.79, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight );
+            Assert.Equal( 0.06, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirstRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeSecondRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeThirdRw );
+            Assert.Equal( RwType.Ok, actualAquisitionAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw );
+
+            var actualAquisitionStDev =
+                actual.TestValues.FirstOrDefault(
+                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+            Assert.NotNull( actualAquisitionStDev );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeFirst );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeSecond );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeThird );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight );
+            Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference );
+        }
 
         #endregion
     }
