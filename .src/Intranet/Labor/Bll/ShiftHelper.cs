@@ -58,14 +58,15 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="shifts">the shift to test if the date exists in</param>
         /// <returns></returns>
         public Boolean DateExistsInShifts( DateTime date, List<ShiftSchedule> shifts ) => shifts.Exists(
-            schedule => DateExistsInShift( date, schedule ));
+            schedule => DateExistsInShift( date, schedule ) );
 
         /// <summary>
         ///     Gets the current shift
         /// </summary>
         /// <returns>the current shift</returns>
-        public ShiftType? GetCurrentShift() => GetCurrentShiftShedule()
-            .ShiftType;
+        public ShiftType? GetCurrentShift()
+            => GetCurrentShiftShedule()?
+                .ShiftType;
 
         /// <summary>
         ///     Gets the current shift shedule

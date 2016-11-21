@@ -65,8 +65,7 @@ namespace Intranet.Labor.Bll.Test
                 EndTime = new TimeSpan( now.Hour - 1, now.Minute, now.Second ),
                 StartTime = new TimeSpan( now.Hour + 2, now.Minute, now.Second ),
                 StartDay = now.DayOfWeek,
-                EndDay = now.AddDays( 1 )
-                            .DayOfWeek
+                EndDay = now.AddDays( 1 ).DayOfWeek
             };
 
             var shiftSheduleListQuery = new List<ShiftSchedule>

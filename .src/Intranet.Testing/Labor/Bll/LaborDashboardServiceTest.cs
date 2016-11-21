@@ -32,7 +32,7 @@ namespace Intranet.Labor.Bll.Test
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
-                    new List<DashboardNote>()
+                    new List<DashboardNote>(),productionOrderItems:new List<ProductionOrderItem>()
                 );
 
             var target = new LaborDashboardService( new NLogLoggerFactory() )
