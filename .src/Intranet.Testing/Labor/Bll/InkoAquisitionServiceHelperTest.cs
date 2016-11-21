@@ -179,7 +179,67 @@ namespace Intranet.Labor.Bll.Test
 
         #region UpdateAquisitionTest Tests
 
+        /// <summary>
+        ///     Tests if Updating an Test returns null if old test not exist
+        /// </summary>
+        [Fact]
+        public void UpdateAquisitionTestFailTest()
+        {
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(null, null, null);
+            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll
+            };
 
+            var actual = target.UpdateAquisitionTest(new InkoAquisitionEditViewModel());
+
+            Assert.Equal(null, actual);
+        }
+
+        /// <summary>
+        ///     Tests if Updating an existing Inko Retention Test works
+        /// </summary>
+        [Fact]
+        public void UpdateAquisitionTestBaseTest()
+        {
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromDb = GetTestValueTestData();
+            testValueReturnedFromDb.CreatedPerson = "Fritz";
+            testValueReturnedFromDb.LastEditedPerson = "Fritz";
+            testValueReturnedFromDb.IncontinencePadTestValue = new IncontinencePadTestValue
+            {
+                IncontinencePadTime = new TimeSpan(11, 11, 0),
+                TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
+            };
+
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+
+            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = babyDiaperBll
+            };
+
+            var actual = target.UpdateAquisitionTest(viewModel);
+
+            Assert.Equal(testValueReturnedFromDb, actual);
+            Assert.Equal(21.15, actual.IncontinencePadTestValue.AcquisitionWeight);
+            Assert.Equal(17.12, actual.IncontinencePadTestValue.AcquisitionTimeFirst);
+            Assert.Equal(54.06, actual.IncontinencePadTestValue.AcquisitionTimeSecond);
+            Assert.Equal(67.85, actual.IncontinencePadTestValue.AcquisitionTimeThird, 2);
+            Assert.Equal(21.73, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight, 2);
+            Assert.Equal(21.79, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight, 2);
+            Assert.Equal(0.06, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
+            Assert.Equal("Hans", actual.LastEditedPerson);
+            Assert.Equal("Fritz", actual.CreatedPerson);
+            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+        }
 
         #endregion
 
