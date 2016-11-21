@@ -196,9 +196,9 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<InkoRetentionServiceHelper>()
                    .As<IInkoRetentionServiceHelper>()
-				   .PropertiesAutowired()
+                   .PropertiesAutowired()
                    .InstancePerRequest();
-				   
+
             builder.RegisterType<LaborCreatorServiceHelper>()
                    .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
@@ -215,14 +215,14 @@ namespace Intranet.Web.IoC
                    .InstancePerRequest();
 
             builder.RegisterType<LaborDashboardHelper>()
-               .As<ILaborDashboardHelper>()
-               .PropertiesAutowired()
-               .InstancePerRequest();
+                   .As<ILaborDashboardHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
 
             builder.RegisterType<ShiftHelper>()
-                 .As<IShiftHelper>()
-                 .PropertiesAutowired()
-                 .InstancePerRequest();
+                   .As<IShiftHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
