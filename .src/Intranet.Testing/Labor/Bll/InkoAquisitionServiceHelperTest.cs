@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
+using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
 
@@ -88,7 +90,90 @@ namespace Intranet.Labor.Bll.Test
 
         #region SaveNewAquisitionTest Tests
 
+        /// <summary>
+        ///     Tests if Saving a new InkoAquisition Test works
+        /// </summary>
+        [Fact]
+        public void SaveNewAquisitionTestBaseTest()
+        {
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromHelper = GetTestValueTestData();
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
 
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+
+            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll,
+                TestServiceHelper = testServiceHelper
+            };
+
+            var actual = target.SaveNewAquisitionTest(viewModel);
+
+            Assert.Equal(testValueReturnedFromHelper, actual);
+        }
+
+        /// <summary>
+        ///     Tests if while saving the correct RwValue choosen
+        /// </summary>
+        [Fact]
+        public void SaveNewAquisitionTestCalculationRwOkTest()
+        {
+            var viewModel = GetViewModelTestData();
+            var testValueReturnedFromHelper = GetTestValueTestData();
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+
+            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll,
+                TestServiceHelper = testServiceHelper
+            };
+
+            var actual = target.SaveNewAquisitionTest(viewModel);
+
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
+            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
+        }
+
+        /// <summary>
+        ///     Tests if while saving the correct RwValue choosen
+        /// </summary>
+        [Fact]
+        public void SaveNewAquisitionTestCalculationRwWorseTest()
+        {
+            var viewModel = GetViewModelTestData();
+            viewModel.AquisitionAddition1 = 20.1;
+            viewModel.AquisitionAddition2 = 60.1;
+            viewModel.AquisitionAddition3 = 85.1;
+            viewModel.FPWet = 25;
+            var testValueReturnedFromHelper = GetTestValueTestData();
+            var testSheetDataFromDb = GetTestSheetTestData();
+            var productionOrderDataFromDb = GetProductionOrderTestData();
+
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+
+            var target = new InkoAquisitionServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll,
+                TestServiceHelper = testServiceHelper
+            };
+
+            var actual = target.SaveNewAquisitionTest(viewModel);
+
+            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeFirstRw);
+            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeSecondRw);
+            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.AcquisitionTimeThirdRw);
+            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw);
+        }
 
         #endregion
 

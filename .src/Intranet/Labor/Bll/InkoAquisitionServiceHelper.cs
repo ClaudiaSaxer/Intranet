@@ -166,7 +166,7 @@ namespace Intranet.Labor.Bll
             incontinencePadTestValue.AcquisitionTimeThirdRw = GetMaxRw(incontinencePadTestValue.AcquisitionTimeThird, productionOrder.Article.MaxHyTec3 );
 
             incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = incontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight - incontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight;
-            incontinencePadTestValue.RewetFreeRw = GetMaxRw(incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, productionOrder.Article.MaxInkoRewetAfterAquisition);
+            incontinencePadTestValue.RewetAfterAcquisitionTimeRw = GetMaxRw(incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, productionOrder.Article.MaxInkoRewetAfterAquisition);
             return incontinencePadTestValue;
         }
 
