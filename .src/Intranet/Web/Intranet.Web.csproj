@@ -218,6 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
+    <Compile Include="Areas\Labor\Controllers\InkoAquisitionController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
@@ -418,6 +419,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Labor\Views\InkoAquisition\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>

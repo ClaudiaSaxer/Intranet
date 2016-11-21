@@ -25,14 +25,14 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="rewetTestId">The Id of the Inko rewet test which will be edited</param>
         /// <returns>The InkoAquisitionEditViewModel</returns>
-        InkoAquisitionEditViewModel GetInkoRewetEditViewModel( Int32 rewetTestId );
+        InkoAquisitionEditViewModel GetInkoAquisitionEditViewModel( Int32 rewetTestId );
 
         /// <summary>
         ///     Gets the InkoAquisitionEditViewModel for edit
         /// </summary>
         /// <param name="testSheetId">The Id of the test sheet where the Inko rewet test is for</param>
         /// <returns>The InkoAquisitionEditViewModel</returns>
-        InkoAquisitionEditViewModel GetNewInkoRewetEditViewModel( Int32 testSheetId );
+        InkoAquisitionEditViewModel GetNewInkoAquisitionEditViewModel( Int32 testSheetId );
 
         /// <summary>
         ///     Saves or updates the InkoAquisitionEditViewModel
