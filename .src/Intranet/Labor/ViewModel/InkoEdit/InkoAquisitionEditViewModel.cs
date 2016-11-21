@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 #endregion
 
-namespace Intranet.Labor.ViewModel.InkoEdit
+namespace Intranet.Labor.ViewModel
 {
     /// <summary>
     ///     Class representing the ViewModel for the InkoAquisitionController

@@ -7,7 +7,6 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.InkoEdit;
 
 #endregion
 

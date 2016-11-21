@@ -386,6 +386,7 @@
     <Content Include="Areas\Labor\Views\LaborCreatorInko\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\InkoRewet\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\InkoRetention\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\InkoAquisition\Edit.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
@@ -419,7 +420,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Labor\Views\InkoAquisition\" />
     <Folder Include="Views\Navigation\" />
   </ItemGroup>
   <ItemGroup>
