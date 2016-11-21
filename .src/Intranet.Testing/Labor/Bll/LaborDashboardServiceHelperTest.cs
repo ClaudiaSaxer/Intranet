@@ -35,5 +35,70 @@ namespace Intranet.Labor.Bll.Test
                   .Should()
                   .Be( RwType.SomethingWorse );
         }
+
+        /// <summary>
+        ///    ToDashboardInfos test
+        /// </summary>
+        [Fact]
+        public void ToDashboardInfosTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToDashboardInfos(null);
+        }
+        /// <summary>
+        ///    ToDashboardInfosBabyDiapers test
+        /// </summary>
+        [Fact]
+        public void ToDashboardInfosBabyDiapersTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToDashboardInfosBabyDiapers( null );
+        }
+      
+        /// <summary>
+        ///    ToDashboardInfosIncontinencePad test
+        /// </summary>
+        [Fact]
+        public void ToDashboardInfosIncontinencePadTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToDashboardInfosIncontinencePad( null );
+        }
+        /// <summary>
+        ///    ToDashboardNote test
+        /// </summary>
+        [Fact]
+        public void ToDashboardNoteTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToDashboardNote( null );
+        }
+        /// <summary>
+        ///    ToProductionOrderItem test
+        /// </summary>
+        [Fact]
+        public void ToProductionOrderItemTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToProductionOrderItem( null );
+        }
+        /// <summary>
+        ///    ToProductionOrderItems test
+        /// </summary>
+        [Fact]
+        public void ToProductionOrderItemsTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToProductionOrderItems( null );
+        }
+        /// <summary>
+        ///    ToRwTypeAll test
+        /// </summary>
+        [Fact]
+        public void ToRwTypeAllTest()
+        {
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            target.ToRwTypeAll( null );
+        }
     }
 }
