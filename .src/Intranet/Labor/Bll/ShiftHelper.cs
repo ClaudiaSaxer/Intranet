@@ -91,7 +91,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var shift = ShiftScheduleRepository.GetAll()
                                                .Where(
                                                    schedule =>
-                                                       ( ( schedule.EndDay <= dayInWeekNow ) && ( schedule.StartTime >= now ) )
+                                                       ( ( schedule.EndDay <= dayInWeekNow ) && ( schedule.StartTime <= now ) )
                                                        || ( schedule.StartDay < dayInWeekNow )
                                                )
                                                .OrderByDescending( schedule => schedule.StartDay )
@@ -103,8 +103,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 var shiftafter = ShiftScheduleRepository.GetAll()
                                                         .Where(
                                                             schedule =>
-                                                                ( schedule.StartDay > dayInWeekNow )
-                                                                || ( ( schedule.StartDay == dayInWeekNow ) && ( schedule.StartTime < now ) ) )
+                                                                 schedule.StartDay > dayInWeekNow || (schedule.StartDay == dayInWeekNow && schedule.StartTime > now) 
+                                                                 )
                                                         .OrderByDescending( schedule => schedule.StartDay )
                                                         .ThenByDescending( schedule => schedule.StartTime )
                                                         ?.ToList();
