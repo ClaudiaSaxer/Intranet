@@ -100,7 +100,7 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for InkoRewetServiceHelper
         /// </summary>
         /// <param name="testValue">testValue returned by update or save new</param>
-        /// <returns>a IBabyDiaperRewetServiceHelper moq</returns>
+        /// <returns>a IInkoRewetServiceHelper moq</returns>
         public static IInkoRewetServiceHelper GetInkoRewetServiceHelper(TestValue testValue)
         {
             var mock = new Mock<IInkoRewetServiceHelper>
@@ -124,7 +124,7 @@ namespace Intranet.Labor.TestEnvironment
         ///     A mock for InkoRewetServiceHelper
         /// </summary>
         /// <param name="testValue">testValue returned by update or save new</param>
-        /// <returns>a IBabyDiaperRewetServiceHelper moq</returns>
+        /// <returns>a IInkoRetentionServiceHelper moq</returns>
         public static IInkoRetentionServiceHelper GetInkoRetentionServiceHelper(TestValue testValue)
         {
             var mock = new Mock<IInkoRetentionServiceHelper>
@@ -139,6 +139,30 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns(testValue);
 
             mock.Setup(x => x.UpdateRetentionAverageAndStv(It.IsAny<Int32>()))
+                .Returns(new TestSheet());
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for InkoAquisitionServiceHelper
+        /// </summary>
+        /// <param name="testValue">testValue returned by update or save new</param>
+        /// <returns>a IInkoAquisitionServiceHelper moq</returns>
+        public static IInkoAquisitionServiceHelper GetInkoAquisitionServiceHelper(TestValue testValue)
+        {
+            var mock = new Mock<IInkoAquisitionServiceHelper>
+            {
+                Name = "MockHelper.GetInkoAquisitionServiceHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.UpdateAquisitionTest(It.IsAny<InkoAquisitionEditViewModel>()))
+                .Returns(testValue);
+            mock.Setup(x => x.SaveNewAquisitionTest(It.IsAny<InkoAquisitionEditViewModel>()))
+                .Returns(testValue);
+
+            mock.Setup(x => x.UpdateAquisitionAverageAndStv(It.IsAny<Int32>()))
                 .Returns(new TestSheet());
 
             return mock.Object;
