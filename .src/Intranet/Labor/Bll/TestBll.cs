@@ -51,6 +51,11 @@ namespace Intranet.Labor.Bll
         /// </summary>
         public IGenericRepository<IncontinencePadTestValue> IncontinencePadTestValueRepository { get; set; }
 
+        /// <summary>
+        ///     TestValueNoteRepository
+        /// </summary>
+        public IGenericRepository<TestValueNote> TestValueNoteRepository { get; set; }
+
         #endregion
 
         #region Implementation of ITestBll
@@ -140,10 +145,6 @@ namespace Intranet.Labor.Bll
                                .Result;
             if ( testValue.IsNull() || testValue.TestValueType != TestValueType.Single )
                 return null;
-            /*var testSheet = TestSheetRepository.FindAsync( testValue.TestSheetRefId )
-                                               .Result;*/
-            //testSheet.TestValues.Remove( testValue );
-            //TestSheetRepository.SaveChanges();
             if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
             {
                 BabyDiaperTestValueRepository.Attach( testValue.BabyDiaperTestValue );
@@ -156,9 +157,31 @@ namespace Intranet.Labor.Bll
                 IncontinencePadTestValueRepository.Remove(testValue.IncontinencePadTestValue);
                 IncontinencePadTestValueRepository.SaveChanges();
             }
+            while ( !testValue.TestValueNote.IsNullOrEmpty() )
+            {
+                var firstOrDefault = testValue.TestValueNote.FirstOrDefault();
+                if ( firstOrDefault != null )
+                    DeleteNote( firstOrDefault
+                                         .TestValueNoteId );
+            }
             TestValueRepository.Attach(testValue);
             var result = TestValueRepository.Remove( testValue );
             TestValueRepository.SaveChanges();
+            return result;
+        }
+
+        /// <summary>
+        ///     Delete TestvalueNote from DB
+        /// </summary>
+        /// <param name="testValueNoteId">the Id of the Test value Note</param>
+        public TestValueNote DeleteNote( Int32 testValueNoteId )
+        {
+            var note = TestValueNoteRepository.FindAsync( testValueNoteId )
+                                              .Result;
+            if (note.IsNull())
+                return null;
+            var result = TestValueNoteRepository.Remove( note );
+            TestValueNoteRepository.SaveChanges();
             return result;
         }
 

@@ -51,6 +51,38 @@ namespace Intranet.Labor.Bll
         public String CreateProductionCode( TestSheet testSheet ) => "IT/" + testSheet.MachineNr.Substring(1) + "/" + testSheet.CreatedDateTime.Year.ToString().Substring(2) + "/";
 
         /// <summary>
+        ///     Converts the notes from the viewmodel to the dbmodel.
+        ///     Deletes notes which were deleted in the view
+        ///     adds new notes to the db
+        ///     updates notes
+        /// </summary>
+        /// <param name="vmNotes">the List of Notes from the ViewModel</param>
+        /// <param name="testValue">the testvalue where the notes are for</param>
+        /// <returns>the production code</returns>
+        public void UpdateNotes( IList<TestNote> vmNotes, TestValue testValue )
+        {
+            if (vmNotes.IsNull())
+                vmNotes = new List<TestNote>();
+
+            foreach (var note in vmNotes.Where(vmNote => vmNote.ErrorCodeId == 0)
+                                           .Select(vmNote => testValue.TestValueNote.FirstOrDefault(n => n.TestValueNoteId == vmNote.Id))
+                                           .Where(note => note.IsNotNull()))
+            {
+                testValue.TestValueNote.Remove(note);
+                TestBll.DeleteNote(note.TestValueNoteId);
+            }
+
+            foreach (var note in testValue.TestValueNote)
+                foreach (var vmNote in vmNotes.Where(vmNote => note.TestValueNoteId == vmNote.Id))
+                {
+                    note.Message = vmNote.Message;
+                    note.ErrorRefId = vmNote.ErrorCodeId;
+                }
+            foreach (var vmNote in vmNotes.Where(n => n.Id == 0 && n.ErrorCodeId != 0))
+                testValue.TestValueNote.Add(new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue });
+        }
+
+        /// <summary>
         ///     Creates a new testvalue initialized with following values
         /// </summary>
         /// <param name="testSheetId">ID of the testsheet</param>
@@ -69,9 +101,13 @@ namespace Intranet.Labor.Bll
                 LastEditedPerson = testPerson,
                 DayInYearOfArticleCreation = productionCodeDay
             };
-            if (notes.IsNotNull())
+            if ( notes.IsNotNull() )
+            {
+                notes = notes.Where(n => n.ErrorCodeId != 0)
+                         .ToList();
                 testValue.TestValueNote = notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })
                                                    .ToList();
+            }
             return testValue;
         }
 

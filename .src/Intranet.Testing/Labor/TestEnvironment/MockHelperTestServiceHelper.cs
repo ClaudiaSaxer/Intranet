@@ -167,5 +167,22 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for ITestServiceHelper for Updating
+        /// </summary>
+        /// <returns>a ITestServiceHelper moq</returns>
+        public static ITestServiceHelper GetTestServiceHelperForUpdating()
+        {
+            var mock = new Mock<ITestServiceHelper>
+            {
+                Name = "MockHelper.GetTestServiceHelperForUpdating",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.UpdateNotes(It.IsAny<IList<TestNote>>(),It.IsAny<TestValue>()));
+
+            return mock.Object;
+        }
     }
 }

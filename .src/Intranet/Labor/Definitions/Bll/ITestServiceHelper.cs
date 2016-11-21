@@ -30,5 +30,17 @@ namespace Intranet.Labor.Definition
         /// <param name="testSheet">the testSheet</param>
         /// <returns>the production code</returns>
         String CreateProductionCode( TestSheet testSheet );
+
+
+        /// <summary>
+        ///     Converts the notes from the viewmodel to the dbmodel.
+        ///     Deletes notes which were deleted in the view
+        ///     adds new notes to the db
+        ///     updates notes
+        /// </summary>
+        /// <param name="vmNotes">the List of Notes from the ViewModel</param>
+        /// <param name="testValue">the testvalue where the notes are for</param>
+        /// <returns>the production code</returns>
+        void UpdateNotes(IList<TestNote> vmNotes, TestValue testValue);
     }
 }

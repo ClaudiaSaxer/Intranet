@@ -243,8 +243,10 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns(testValue);
             mock.Setup( x => x.UpdateTestSheet() )
                 .Returns( 0 );
-				
-			return mock.Object;
+            mock.Setup(x => x.DeleteNote(It.IsAny<Int32>()))
+                .Returns(new TestValueNote());
+
+            return mock.Object;
         }
 		/// <summary>
         ///     A mock for LaborHomeBll

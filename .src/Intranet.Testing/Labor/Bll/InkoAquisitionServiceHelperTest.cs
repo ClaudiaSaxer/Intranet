@@ -221,9 +221,12 @@ namespace Intranet.Labor.Bll.Test
 
             var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb );
 
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperForUpdating();
+
             var target = new InkoAquisitionServiceHelper( new NLogLoggerFactory() )
             {
-                TestBll = babyDiaperBll
+                TestBll = babyDiaperBll,
+                TestServiceHelper = testServiceHelper
             };
 
             var actual = target.UpdateAquisitionTest( viewModel );
