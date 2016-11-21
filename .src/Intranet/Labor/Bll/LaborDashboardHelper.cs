@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
+using Extend;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
@@ -203,6 +205,36 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 }
 
             return rwType;
+        }
+
+        /// <summary>
+        ///     Creates a productionOrder item with the values from the testsheet
+        /// </summary>
+        /// <param name="testSheet">the testsheet</param>
+        /// <returns>a production order item</returns>
+        public ProductionOrderItem ToProductionOrderItem(TestSheet testSheet) => new ProductionOrderItem
+        {
+            SheetId = testSheet.TestSheetId,
+            HasNotes = testSheet.TestValues.ToList()
+                                .Exists(value => value.TestValueNote.Count > 0),
+            Notes = ToDashboardNote(testSheet.TestValues),
+            DashboardInfos = ToDashboardInfos(testSheet.TestValues),
+            ProductionOrderName = testSheet.FaNr,
+            RwType = ToRwTypeAll(testSheet.TestValues.ToList()),
+            Action = "Edit",
+            Controller = testSheet.ArticleType == ArticleType.BabyDiaper ? "LaborCreatorBaby" : "LaborCreatorInko"
+        };
+
+        /// <summary>
+        ///     Creates a list of production order items from a collection of test sheets
+        /// </summary>
+        /// <param name="testSheets">a collection of test sheets</param>
+        /// <returns></returns>
+        public ICollection<ProductionOrderItem> ToProductionOrderItems(ICollection<TestSheet> testSheets)
+        {
+            var productionorderitems = new Collection<ProductionOrderItem>();
+            testSheets?.ForEach(x => productionorderitems.Add(ToProductionOrderItem(x)));
+            return productionorderitems;
         }
     }
 }

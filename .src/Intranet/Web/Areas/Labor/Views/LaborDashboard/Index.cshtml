@@ -19,96 +19,28 @@
         </tr>
         </thead>
         <tbody>
+        <tr>
+            <th>M10</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus3 )
+        </tr>
+        <tr>
+            <th>M11</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus3 )
+        </tr>
 
-        @foreach ( var item in Model.DashboardItem )
-        {
-            <tr>
-                <th>@item.MachineName</th>
-                @foreach ( var shift in item.ShiftItems )
-                {
-                    <th>
-                        <div>
-                            @foreach ( var po in shift.ProductionOrderItems )
-                            {
-                                <a class="no-underline-hyperlink" href="@Url.Action( po.Action, po.Controller, new { area = "Labor", id = po.SheetId } )">
-
-                                    <div class="dashboard-box-a">
-                                        <div class="dashboard-box-@po.RwType">
-                                            @po.ProductionOrderName
-
-
-                                            @if ( po.HasNotes && ( po.Notes != null ) )
-                                            {
-                                                <button class="note-button" data-toggle="collapse" href="#collapseNotes-@po.SheetId" aria-expanded="false" aria-controls="#collapseNotes-@po.SheetId">
-                                                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> @po.Notes.Count
-                                                </button>
-                                                <div class="collapse" id="collapseNotes-@po.SheetId">
-                                                    <div class="card card-block dashboard-notes">
-
-                                                        <table id="notes-@po.SheetId" class="table table-striped table-bordered sortable">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>Code </th>
-                                                                <th>Meldung</th>
-                                                                <th>Nachricht</th>
-
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            @foreach ( var note in po?.Notes )
-                                                            {
-                                                                <tr>
-                                                                    <td>@note.Code</td>
-                                                                    <td>@note.ErrorMessage</td>
-                                                                    <td>@note.Message</td>
-
-                                                                </tr>
-                                                            }
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            }
-
-
-                                            <button class="btn btn-link" data-toggle="collapse" href="#collapseInfo-@po.SheetId" aria-expanded="false" aria-controls="#collapseInfo-@po.SheetId">
-                                                &#216;
-                                            </button>
-                                            <div class="collapse" id="collapseInfo-@po.SheetId">
-                                                <div class="card card-block dashboard-notes">
-
-                                                    <table id="notes-@po.SheetId" class="table table-striped table-bordered sortable">
-                                                        <thead>
-                                                        <tr>
-                                                            <th>Inhalt </th>
-                                                            <th>Wert</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        @foreach ( var info in po?.DashboardInfos )
-                                                        {
-                                                            <tr class="laborcreatorcolor-@info.RwType">
-                                                                <td>@info.InfoKey</td>
-                                                                <td>@info.InfoValue</td>
-                                                            </tr>
-                                                        }
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-
-
-                                        </div>
-
-                                    </div>
-                                </a>
-                            }
-                        </div>
-
-                    </th>
-                }
-            </tr>
-        }
+        <tr>
+            <th>M49</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus3 )
+        </tr>
 
         </tbody>
     </table>

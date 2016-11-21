@@ -18,6 +18,14 @@ namespace Intranet.Labor.Definition.Bll
         Boolean DateExistsInShifts( DateTime date, List<ShiftSchedule> shifts );
 
         /// <summary>
+        ///     Calculate if the acual date exists in the list of shifts
+        /// </summary>
+        /// <param name="date">the date to test</param>
+        /// <param name="shift">the shift to test if the date exists in</param>
+        /// <returns></returns>
+        Boolean DateExistsInShift(DateTime date, ShiftSchedule shift);
+
+        /// <summary>
         ///     Gets the current shift
         /// </summary>
         /// <returns>the current shift</returns>

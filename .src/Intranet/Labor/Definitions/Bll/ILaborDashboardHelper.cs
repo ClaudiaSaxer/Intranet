@@ -56,5 +56,19 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="testValues">a list of testvalues</param>
         /// <returns>a rw type representing the whole lot of testvalues</returns>
         RwType ToRwTypeAll( IEnumerable<TestValue> testValues );
+
+        /// <summary>
+        ///     Creates a productionOrder item with the values from the testsheet
+        /// </summary>
+        /// <param name="testSheet">the testsheet</param>
+        /// <returns>a production order item</returns>
+        ProductionOrderItem ToProductionOrderItem( TestSheet testSheet );
+
+        /// <summary>
+        ///     Creates a list of production order items from a collection of test sheets
+        /// </summary>
+        /// <param name="testSheets">a collection of test sheets</param>
+        /// <returns></returns>
+        ICollection<ProductionOrderItem> ToProductionOrderItems( ICollection<TestSheet> testSheets );
     }
 }

@@ -40,17 +40,25 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Calculate if the acual date exists in the list of shifts
         /// </summary>
         /// <param name="date">the date to test</param>
-        /// <param name="shifts">the shift to test if the date exists in</param>
+        /// <param name="shift">the shift to test if the date exists in</param>
         /// <returns></returns>
-        public Boolean DateExistsInShifts( DateTime date, List<ShiftSchedule> shifts )
+        public Boolean DateExistsInShift( DateTime date, ShiftSchedule shift )
         {
             var dayInWeekNow = date.DayOfWeek;
-            return shifts.Exists(
-                schedule =>
-                    ( ( schedule.StartDay == dayInWeekNow ) || ( schedule.EndDay == dayInWeekNow ) ) && ( schedule.StartTime.Hours <= date.Hour )
-                    && ( schedule.StartTime.Minutes <= date.Minute ) && ( schedule.EndTime.Hours >= date.Hour )
-                    && ( schedule.EndTime.Minutes >= date.Minute ) );
+            return
+                ( ( shift.StartDay == dayInWeekNow ) || ( shift.EndDay == dayInWeekNow ) ) && ( shift.StartTime.Hours <= date.Hour )
+                && ( shift.StartTime.Minutes <= date.Minute ) && ( shift.EndTime.Hours >= date.Hour )
+                && ( shift.EndTime.Minutes >= date.Minute );
         }
+
+        /// <summary>
+        ///     Calculate if the acual date exists in the list of shifts
+        /// </summary>
+        /// <param name="date">the date to test</param>
+        /// <param name="shifts">the shift to test if the date exists in</param>
+        /// <returns></returns>
+        public Boolean DateExistsInShifts( DateTime date, List<ShiftSchedule> shifts ) => shifts.Exists(
+            schedule => DateExistsInShift( date, schedule ));
 
         /// <summary>
         ///     Gets the current shift
@@ -103,8 +111,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 var shiftafter = ShiftScheduleRepository.GetAll()
                                                         .Where(
                                                             schedule =>
-                                                                 schedule.StartDay > dayInWeekNow || (schedule.StartDay == dayInWeekNow && schedule.StartTime > now) 
-                                                                 )
+                                                                ( schedule.StartDay > dayInWeekNow )
+                                                                || ( ( schedule.StartDay == dayInWeekNow ) && ( schedule.StartTime > now ) )
+                                                        )
                                                         .OrderByDescending( schedule => schedule.StartDay )
                                                         .ThenByDescending( schedule => schedule.StartTime )
                                                         ?.ToList();

@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Intranet.Common;
-using Intranet.Labor.Model;
+﻿using Intranet.Common;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -48,43 +45,31 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the LaborDashboardViewModel</returns>
         public LaborDashboardViewModel GetLaborDashboardViewModel()
         {
-            var testsheets = LaborDashboardBll.GetTestSheetForActualAndLastThreeShifts();
+            var dashboardItemM10 = new DashboardItem { MachineName = "M10" };
+            var dashboardItemM11 = new DashboardItem { MachineName = "M11" };
+            var dashboardItemM49 = new DashboardItem { MachineName = "M49" };
 
-            var items = new List<DashboardItem>();
+            dashboardItemM10.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M10" ) );
+            dashboardItemM10.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M10" ) );
+            dashboardItemM10.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M10" ) );
+            dashboardItemM10.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M10" ) );
 
-            foreach ( var testSheet in testsheets )
+            dashboardItemM11.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M11" ) );
+            dashboardItemM11.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M11" ) );
+            dashboardItemM11.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M11" ) );
+            dashboardItemM11.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M11" ) );
+
+            dashboardItemM49.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M49" ) );
+            dashboardItemM49.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M49" ) );
+            dashboardItemM49.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M49" ) );
+            dashboardItemM49.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M49" ) );
+
+            return new LaborDashboardViewModel
             {
-                var sheet = items.Find( item => item.MachineName.Equals( testSheet.MachineNr ) );
-                if ( sheet == null )
-                {
-                    sheet = new DashboardItem
-                    {
-                        MachineName = testSheet.MachineNr,
-                        ShiftItems =
-                            new List<ShiftItem>
-                            {
-                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() },
-                                new ShiftItem { ProductionOrderItems = new List<ProductionOrderItem>() }
-                            }
-                    };
-                    items.Add( sheet );
-                }
-                sheet.ShiftItems.ToList()[0].ProductionOrderItems.Add( new ProductionOrderItem
-                                                                       {
-                                                                           SheetId = testSheet.TestSheetId,
-                                                                           HasNotes = testSheet.TestValues.ToList()
-                                                                                               .Exists( value => value.TestValueNote.Count > 0 ),
-                                                                           Notes = LaborDashboardHelper.ToDashboardNote( testSheet.TestValues ),
-                                                                           DashboardInfos = LaborDashboardHelper.ToDashboardInfos( testSheet.TestValues ),
-                                                                           ProductionOrderName = testSheet.FaNr,
-                                                                           RwType = LaborDashboardHelper.ToRwTypeAll( testSheet.TestValues.ToList() ),
-                                                                           Action = "Edit",
-                                                                           Controller = testSheet.ArticleType == ArticleType.BabyDiaper ? "LaborCreatorBaby" : "LaborCreatorInko"
-                                                                       } );
-            }
-            return new LaborDashboardViewModel { DashboardItem = items };
+                DashboardItemM10 = dashboardItemM10,
+                DashboardItemM11 = dashboardItemM11,
+                DashboardItemM49 = dashboardItemM49
+            };
 
             #endregion
         }

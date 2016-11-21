@@ -177,6 +177,26 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
+        ///     A mock for LaborDashboard Bll
+        /// </summary>
+  
+        /// <returns>a moq for laborcreatorbll</returns>
+        public static ILaborDashboardBll GetLaborDashboardBll(ICollection<TestSheet>testSheets )
+        {
+            var mock = new Mock<ILaborDashboardBll>
+            {
+                Name = "MockHelper.ILaborDashboardBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetTestSheetForActualAndLastThreeShifts())
+                .Returns(testSheets);
+
+            return mock.Object;
+        }   
+       
+
+        /// <summary>
         ///     A mock for LaborHomeBll
         /// </summary>
         /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Intranet.Labor.ViewModel
+﻿namespace Intranet.Labor.ViewModel
 {
     /// <summary>
     ///     Class representing the viewmodel for the labor dashboard
@@ -10,10 +8,22 @@ namespace Intranet.Labor.ViewModel
         #region Properties
 
         /// <summary>
-        ///     Gets or sets a collection of Dashboard Items for the view model
+        ///     Gets or sets a the Dashboard Item M11 for the view model
         /// </summary>
         /// <value>doashboard items</value>
-        public ICollection<DashboardItem> DashboardItem { get; set; }
+        public DashboardItem DashboardItemM11 { get; set; }
+
+        /// <summary>
+        ///     Gets or sets a the Dashboard Item M10 for the view model
+        /// </summary>
+        /// <value>doashboard items</value>
+        public DashboardItem DashboardItemM10 { get; set; }
+
+        /// <summary>
+        ///     Gets or sets a the Dashboard Item M49 for the view model
+        /// </summary>
+        /// <value>doashboard items</value>
+        public DashboardItem DashboardItemM49 { get; set; }
 
         #endregion
     }

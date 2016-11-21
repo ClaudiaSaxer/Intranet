@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -50,16 +52,44 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var shifts = ShiftHelper.GetLastXShiftSchedule( 4 );
 
-            var testsheets =
-                TestSheets.GetAll()
-                          .ToList();
             var lastthreesheets = new List<TestSheet>();
-            testsheets.ForEach( sheet =>
+            TestSheets.GetAll()
+                      .ToList()
+                      .ForEach( sheet =>
                                 {
                                     if ( ShiftHelper.DateExistsInShifts( sheet.CreatedDateTime, shifts ) )
                                         lastthreesheets.Add( sheet );
                                 } );
             return lastthreesheets;
+        }
+
+        /// <summary>
+        ///     Get the testsheets for the last shift
+        /// </summary>
+        /// <returns>the testsheets for the last shift</returns>
+        public ICollection<TestSheet> GetTestSheetForShiftPerMachineNr( ShiftSchedule shiftSchedule, String machineNr )
+        {
+            var sheets = new List<TestSheet>();
+
+            TestSheets.GetAll().Where( sheet => sheet.MachineNr.Equals( machineNr ))
+                      .ToList()
+                      .ForEach( sheet =>
+                                {
+                                    if ( ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shiftSchedule ) )
+                                        sheets.Add( sheet );
+                                } );
+            return sheets;
+        }
+
+        /// <summary>
+        ///     Get the testsheets for the last shift. 
+        ///     Current = 0, Minus 1 shift = 1
+        /// </summary>
+        /// <returns>the testsheets for the last shift</returns>
+        public ICollection<TestSheet> GetTestSheetForMinusXShiftPerMachineNr( Int32 lastCounter,String machineNr )
+        {
+            var shift = ShiftHelper.GetLastXShiftSchedule( lastCounter+1 );
+            return shift.Count < lastCounter+1 ? null : GetTestSheetForShiftPerMachineNr( shift[lastCounter] ,machineNr);
         }
 
         #endregion

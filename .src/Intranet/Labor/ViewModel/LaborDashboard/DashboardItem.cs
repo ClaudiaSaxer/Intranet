@@ -17,10 +17,25 @@ namespace Intranet.Labor.ViewModel
         public String MachineName { get; set; }
 
         /// <summary>
-        ///     Gets or sets the shiftitems
+        ///     Gets or sets the production order items current
         /// </summary>
-        /// <value>the shift items</value>
-        public ICollection<ShiftItem> ShiftItems { get; set; }
+        /// <value>the production order items</value>
+        public ICollection<ProductionOrderItem> ShiftItemsCurrent { get; set; }
+        /// <summary>
+        ///     Gets or sets the production order items minus 1
+        /// </summary>
+        /// <value>the production order items</value>
+        public ICollection<ProductionOrderItem> ShiftItemsMinus1 { get; set; }
+        /// <summary>
+        ///     Gets or sets the production order items minus 2
+        /// </summary>
+        /// <value>the production order items</value>
+        public ICollection<ProductionOrderItem> ShiftItemsMinus2 { get; set; }
+        /// <summary>
+        ///     Gets or sets the production order items minus 3
+        /// </summary>
+        /// <value>the production order items</value>
+        public ICollection<ProductionOrderItem> ShiftItemsMinus3 { get; set; }
 
         #endregion
     }
