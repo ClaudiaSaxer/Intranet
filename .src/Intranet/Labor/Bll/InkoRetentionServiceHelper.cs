@@ -226,13 +226,23 @@ namespace Intranet.Labor.Bll
                 tempInko.RetentionEndValue += Math.Pow( testValue.IncontinencePadTestValue.RetentionEndValue - retentionTestAvg.IncontinencePadTestValue.RetentionEndValue, 2 );
                 counter++;
             }
-            if ( counter == 0 )
-                counter = 1;
-            retentionTestStDev.IncontinencePadTestValue.RetentionWeight = Math.Sqrt( tempInko.RetentionWeight / counter );
-            retentionTestStDev.IncontinencePadTestValue.RetentionWetValue = Math.Sqrt( tempInko.RetentionWetValue / counter );
-            retentionTestStDev.IncontinencePadTestValue.RetentionAfterZentrifuge = Math.Sqrt( tempInko.RetentionAfterZentrifuge / counter );
-            retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = Math.Sqrt( tempInko.RetentionAbsorbtion / counter );
-            retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = Math.Sqrt( tempInko.RetentionEndValue / counter );
+            if ( counter < 2 )
+            {
+                retentionTestStDev.IncontinencePadTestValue.RetentionWeight = 0;
+                retentionTestStDev.IncontinencePadTestValue.RetentionWetValue = 0;
+                retentionTestStDev.IncontinencePadTestValue.RetentionAfterZentrifuge = 0;
+                retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = 0;
+                retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = 0;
+            }
+            else
+            {
+                counter--;
+                retentionTestStDev.IncontinencePadTestValue.RetentionWeight = Math.Sqrt(tempInko.RetentionWeight / counter);
+                retentionTestStDev.IncontinencePadTestValue.RetentionWetValue = Math.Sqrt(tempInko.RetentionWetValue / counter);
+                retentionTestStDev.IncontinencePadTestValue.RetentionAfterZentrifuge = Math.Sqrt(tempInko.RetentionAfterZentrifuge / counter);
+                retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = Math.Sqrt(tempInko.RetentionAbsorbtion / counter);
+                retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = Math.Sqrt(tempInko.RetentionEndValue / counter);
+            }
             return retentionTestStDev;
 
             #endregion

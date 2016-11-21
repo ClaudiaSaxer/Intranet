@@ -301,13 +301,24 @@ namespace Intranet.Labor.Bll
                     Math.Pow( testValue.BabyDiaperTestValue.DistributionOfTheStrikeTrough - rewetTestAvg.BabyDiaperTestValue.DistributionOfTheStrikeTrough, 2 );
                 counter++;
             }
-            if ( counter == 0 )
-                counter = 1;
-            rewetTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt( tempBabyDiaper.WeightDiaperDry / counter );
-            rewetTestStDev.BabyDiaperTestValue.Rewet140Value = Math.Sqrt( tempBabyDiaper.Rewet140Value / counter );
-            rewetTestStDev.BabyDiaperTestValue.Rewet210Value = Math.Sqrt( tempBabyDiaper.Rewet210Value / counter );
-            rewetTestStDev.BabyDiaperTestValue.StrikeTroughValue = Math.Sqrt( tempBabyDiaper.StrikeTroughValue / counter );
-            rewetTestStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough = Math.Sqrt( tempBabyDiaper.DistributionOfTheStrikeTrough / counter );
+            if ( counter < 2 )
+            {
+                rewetTestStDev.BabyDiaperTestValue.WeightDiaperDry = 0;
+                rewetTestStDev.BabyDiaperTestValue.Rewet140Value = 0;
+                rewetTestStDev.BabyDiaperTestValue.Rewet210Value = 0;
+                rewetTestStDev.BabyDiaperTestValue.StrikeTroughValue = 0;
+                rewetTestStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough = 0;
+            }
+            else
+            {
+                counter--;
+                rewetTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+                rewetTestStDev.BabyDiaperTestValue.Rewet140Value = Math.Sqrt(tempBabyDiaper.Rewet140Value / counter);
+                rewetTestStDev.BabyDiaperTestValue.Rewet210Value = Math.Sqrt(tempBabyDiaper.Rewet210Value / counter);
+                rewetTestStDev.BabyDiaperTestValue.StrikeTroughValue = Math.Sqrt(tempBabyDiaper.StrikeTroughValue / counter);
+                rewetTestStDev.BabyDiaperTestValue.DistributionOfTheStrikeTrough = Math.Sqrt(tempBabyDiaper.DistributionOfTheStrikeTrough / counter);
+
+            }
             return rewetTestStDev;
         }
 
@@ -364,13 +375,23 @@ namespace Intranet.Labor.Bll
                     Math.Pow( testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth - penetrationTestAvg.BabyDiaperTestValue.PenetrationTimeAdditionFourth, 2 );
                 counter++;
             }
-            if ( counter == 0 )
-                counter = 1;
-            penetrationTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt( tempBabyDiaper.WeightDiaperDry / counter );
-            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst = Math.Sqrt( tempBabyDiaper.PenetrationTimeAdditionFirst / counter );
-            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond = Math.Sqrt( tempBabyDiaper.PenetrationTimeAdditionSecond / counter );
-            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird = Math.Sqrt( tempBabyDiaper.PenetrationTimeAdditionThird / counter );
-            penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth = Math.Sqrt( tempBabyDiaper.PenetrationTimeAdditionFourth / counter );
+            if ( counter < 2 )
+            {
+                penetrationTestStDev.BabyDiaperTestValue.WeightDiaperDry = 0;
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst = 0;
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond = 0;
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird = 0;
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth = 0;
+            }
+            else
+            {
+                counter--;
+                penetrationTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFirst = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionFirst / counter);
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionSecond = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionSecond / counter);
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionThird = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionThird / counter);
+                penetrationTestStDev.BabyDiaperTestValue.PenetrationTimeAdditionFourth = Math.Sqrt(tempBabyDiaper.PenetrationTimeAdditionFourth / counter);
+            }
             return penetrationTestStDev;
         }
 

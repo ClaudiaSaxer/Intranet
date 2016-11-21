@@ -232,12 +232,22 @@ namespace Intranet.Labor.Bll
                 counter++;
             }
             if ( counter == 0 )
-                counter = 1;
-            retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt( tempBabyDiaper.WeightDiaperDry / counter );
-            retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = Math.Sqrt( tempBabyDiaper.RetentionWetWeight / counter );
-            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugeValue / counter );
-            retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugePercent / counter );
-            retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt( tempBabyDiaper.SapGHoewiValue / counter );
+            {
+                retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = 0;
+                retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = 0;
+                retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = 0;
+                retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = 0;
+                retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = 0;
+            }
+            else
+            {
+                counter--;
+                retentionTestStDev.BabyDiaperTestValue.WeightDiaperDry = Math.Sqrt(tempBabyDiaper.WeightDiaperDry / counter);
+                retentionTestStDev.BabyDiaperTestValue.RetentionWetWeight = Math.Sqrt(tempBabyDiaper.RetentionWetWeight / counter);
+                retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugeValue = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugeValue / counter);
+                retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt(tempBabyDiaper.RetentionAfterZentrifugePercent / counter);
+                retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt(tempBabyDiaper.SapGHoewiValue / counter);
+            }
             return retentionTestStDev;
         }
 

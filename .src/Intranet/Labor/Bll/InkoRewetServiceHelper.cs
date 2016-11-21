@@ -216,11 +216,19 @@ namespace Intranet.Labor.Bll
                 tempInko.RewetFreeDifference += Math.Pow( testValue.IncontinencePadTestValue.RewetFreeDifference - rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference, 2 );
                 counter++;
             }
-            if ( counter == 0 )
-                counter = 1;
-            rewetTestStDev.IncontinencePadTestValue.RewetFreeDryValue = Math.Sqrt( tempInko.RewetFreeDryValue / counter );
-            rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = Math.Sqrt( tempInko.RewetFreeWetValue / counter );
-            rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = Math.Sqrt( tempInko.RewetFreeDifference / counter );
+            if ( counter < 2 )
+            {
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDryValue = 0;
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = 0;
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = 0;
+            }
+            else
+            {
+                counter--;
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDryValue = Math.Sqrt(tempInko.RewetFreeDryValue / counter);
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = Math.Sqrt(tempInko.RewetFreeWetValue / counter);
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = Math.Sqrt(tempInko.RewetFreeDifference / counter);
+            }
             return rewetTestStDev;
         }
 
