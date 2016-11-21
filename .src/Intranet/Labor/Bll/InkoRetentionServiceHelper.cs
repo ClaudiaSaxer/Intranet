@@ -123,17 +123,7 @@ namespace Intranet.Labor.Bll
             testValue.IncontinencePadTestValue.RetentionAfterZentrifuge = viewModel.InkoWeightAfterZentrifuge;
             testValue.IncontinencePadTestValue.TestType = TestTypeIncontinencePad.Retention;
 
-            if (viewModel.Notes.IsNull())
-                viewModel.Notes = new List<TestNote>();
-
-            foreach (var note in testValue.TestValueNote)
-                foreach (var vmNote in viewModel.Notes.Where(vmNote => note.TestValueNoteId == vmNote.Id))
-                {
-                    note.Message = vmNote.Message;
-                    note.ErrorRefId = vmNote.ErrorCodeId;
-                }
-            foreach (var vmNote in viewModel.Notes.Where(n => n.Id == 0))
-                testValue.TestValueNote.Add(new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue });
+            TestServiceHelper.UpdateNotes(viewModel.Notes, testValue);
 
             testValue.IncontinencePadTestValue = CalculateInkoRetentionValues(testValue.IncontinencePadTestValue, viewModel.TestSheetId);
 

@@ -93,19 +93,7 @@ namespace Intranet.Labor.Bll
             testValue.BabyDiaperTestValue.WeightDiaperDry = viewModel.DiaperWeight;
             testValue.BabyDiaperTestValue.RetentionWetWeight = viewModel.WeightRetentionWet;
 
-            if ( viewModel.Notes.IsNull() )
-                viewModel.Notes = new List<TestNote>();
-            /*var result = testValue.TestValueNote.Where(p => viewModel.Notes.All( p2 => p2.ErrorCodeId != p.ErrorRefId ) );
-            foreach ( var n in result )
-                testValue.TestValueNote.Remove( n );*/ //remove if not exist anymore
-            foreach ( var note in testValue.TestValueNote )
-                foreach ( var vmNote in viewModel.Notes.Where( vmNote => note.TestValueNoteId == vmNote.Id ) )
-                {
-                    note.Message = vmNote.Message;
-                    note.ErrorRefId = vmNote.ErrorCodeId;
-                }
-            foreach ( var vmNote in viewModel.Notes.Where( n => n.Id == 0 ) )
-                testValue.TestValueNote.Add( new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue } );
+            TestServiceHelper.UpdateNotes(viewModel.Notes, testValue);
 
             testValue.BabyDiaperTestValue = CalculateBabyDiaperRetentionValues( testValue.BabyDiaperTestValue,
                                                                                 viewModel.TestSheetId );
