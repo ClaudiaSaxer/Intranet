@@ -58,6 +58,7 @@
     <Compile Include="BabyDiaperRetention\BabyDiaperRetentionEditViewModel.cs" />
     <Compile Include="ErrorCode.cs" />
     <Compile Include="BabyDiaperRewet\BabyDiaperRewetEditViewModel.cs" />
+    <Compile Include="InkoEdit\InkoAquisitionEditViewModel.cs" />
     <Compile Include="InkoEdit\InkoRetentionEditViewModel.cs" />
     <Compile Include="InkoEdit\InkoRewetEditViewModel.cs" />
     <Compile Include="LaborCreator\LaborCreatorViewModel.cs" />
