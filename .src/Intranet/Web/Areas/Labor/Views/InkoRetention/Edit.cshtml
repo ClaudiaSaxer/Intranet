@@ -73,22 +73,28 @@
             {
                 for (var i = 0; i < Model.Notes.Count; i++)
                 {
-                    <div>
-                        <label class="col-sm-2 control-label">Error Code:</label>
+                    <div class="form-group row" id="Note-@i">
                         <div class="col-sm-10">
-                            @Html.DropDownListFor(
-                                m => m.Notes[i].ErrorCodeId,
-                                new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
-                                "Error Code auswählen",
-                                new { @class = "form-control" }
-                            )
+                            <label class="col-sm-3 control-label">Error Code:</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownListFor(
+                                    m => m.Notes[i].ErrorCodeId,
+                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    "Error Code auswählen",
+                                    new { @class = "form-control" }
+                                     )
+                            </div>
+                            <label class="col-sm-3 control-label">Message:</label>
+                            <div class="col-sm-9">
+                                @Html.HiddenFor(m => m.Notes[i].Id)
+                                @Html.TextAreaFor(m => m.Notes[i]
+                                                      .Message, new { @class = "form-control", type = "text" })
+                            </div>
                         </div>
-                        <label class="col-sm-2 control-label">Message:</label>
-                        <div class="col-sm-10">
-                            @Html.HiddenFor(m => m.Notes[i].Id)
-                            @Html.HiddenFor(m => m.Notes[i].ErrorCodeId)
-                            @Html.TextAreaFor(m => m.Notes[i]
-                                                  .Message, new { @class = "form-control", type = "text" })
+                        <div class="col-sm-2">
+                            <a class="btn btn-danger btn-lg addNote" id="@i">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
                         </div>
                     </div>
                 }
