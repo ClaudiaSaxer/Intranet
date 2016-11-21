@@ -214,6 +214,11 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
+            builder.RegisterType<LaborDashboardHelper>()
+               .As<ILaborDashboardHelper>()
+               .PropertiesAutowired()
+               .InstancePerRequest();
+
             builder.RegisterType<ShiftHelper>()
                  .As<IShiftHelper>()
                  .PropertiesAutowired()
