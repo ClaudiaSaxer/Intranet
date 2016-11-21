@@ -69,7 +69,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                     TestType = testTypeBabyDiaper,
                     RetentionRw = RwType.Ok,
                     Rewet140Rw = RwType.Ok,
-                    Rewet210Rw = RwType.Ok
+                    Rewet210Rw = RwType.Ok,
+                    PenetrationRwType = RwType.Ok
                 }
             };
 

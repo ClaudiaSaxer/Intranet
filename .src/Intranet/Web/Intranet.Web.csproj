@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -218,6 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
+    <Compile Include="Areas\Labor\Controllers\InkoRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
@@ -378,6 +379,7 @@
     <Content Include="resources\js\bootstrap\tab.js" />
     <Content Include="resources\js\bootstrap\tooltip.js" />
     <Content Include="resources\js\bootstrap\transition.js" />
+    <Content Include="resources\js\intigena\BabyDiaperRewetPenetration.js" />
     <Content Include="resources\js\intigena\shell-settings.js" />
     <Content Include="Areas\Labor\Views\LaborCreator\Index.cshtml" />
     <Content Include="Areas\Labor\Views\BabyDiaperRewet\Edit.cshtml" />
@@ -385,7 +387,9 @@
     <Content Include="Areas\Labor\Views\InkoRewet\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\LaborDashboard\Index.cshtml" />
     <Content Include="assets\sass\Dashboard.scss" />
+    <Content Include="Areas\Labor\Views\InkoRetention\Edit.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
+    <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
     <None Include="resources\js\jquery-3.1.1-vsdoc.js" />
     <Content Include="resources\js\jquery-3.1.1.js" />
@@ -472,8 +476,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="assets\ts\BabyDiaperRewetPenetration.ts" />
     <TypeScriptCompile Include="assets\ts\jquery.d.ts" />
     <TypeScriptCompile Include="assets\ts\shell-settings.ts" />
+    <TypeScriptCompile Include="assets\ts\TestEditCreate.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="resources\js\jquery-3.1.1.min.map" />

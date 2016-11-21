@@ -220,7 +220,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     Tests if Updating an existing BabyDiaperRewet Test works
+        ///     Tests if Updating an existing Inko Rewet Test works
         /// </summary>
         [Fact]
         public void UpdateRewetTestBaseTest()

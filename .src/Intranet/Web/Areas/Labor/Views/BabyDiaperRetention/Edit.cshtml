@@ -5,9 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
 <div class="container">
     
-    <h2>Höschenwindeln - BabyDiaperRetention-Test</h2>
+    <h2>Höschenwindeln - Retention - Test</h2>
 
     <div class="intigena-line"></div>
 
@@ -85,26 +86,10 @@
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/BabyDiaperRetention/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addNote() {
-                console.log("test");
-                console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRetention/AddNote';
-                console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').submit();
-            }
-                $("#addNote").click(function () {
-                    addNote();
-                });
-                $('#submitForm').submit(function () {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                });
-        </script>
     }
 </div>

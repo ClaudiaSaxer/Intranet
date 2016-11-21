@@ -5,13 +5,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
+<script src="/resources/js/intigena/BabyDiaperRewetPenetration.js"></script>
 <div class="container">
 
-    <h2>Höschenwindeln - Retention-Test</h2>
+    <h2>Höschenwindeln - Rewet - Test</h2>
 
     <div class="intigena-line"></div>
-
-    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm"}))
     {
         @Html.ValidationSummary(true)
         @Html.AntiForgeryToken()
@@ -76,6 +77,14 @@
                 <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" >
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
+                <!--
+                <span><a id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Aktivieren
+                </a>
+                <a id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Entfernen
+                </a></span>    
+                -->
             </h4>
             <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
                 <label class="col-sm-2 control-label">Zugabe 1 [s]:</label>
@@ -131,42 +140,11 @@
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/BabyDiaperRewet/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addNote() {
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRewet/AddNote';
-                document.getElementById('submitForm').submit();
-            }
-            function addPenetration() {
-                document.getElementById('addPenetration').style.display = 'none';
-                document.getElementById('removePenetration').style.display = 'block';
-                document.getElementById('penetration-test').style.display = 'block';
-                document.getElementById('TestType').value = 'RewetAndPenetrationTime';
-            }
-            function removePenetration() {
-                document.getElementById('addPenetration').style.display = 'block';
-                document.getElementById('removePenetration').style.display = 'none';
-                document.getElementById('penetration-test').style.display = 'none';
-                document.getElementById('TestType').value = 'Rewet';
-            }
-                $("#addNote").click(function () {
-                    addNote();
-                });
-                $('#submitForm').submit(function () {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                });
-                $("#addPenetration").click(function () {
-                    addPenetration();
-                });
-                $("#removePenetration").click(function () {
-                    removePenetration();
-                });
-        </script>
     }
 </div>
 
