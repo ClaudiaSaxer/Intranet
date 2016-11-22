@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTestEditViewModel.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadTestInfo.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTime.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTimeTestValue.cs" />
