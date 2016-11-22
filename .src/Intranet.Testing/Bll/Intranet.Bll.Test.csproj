@@ -92,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckDisableBllTest.cs" />
+    <Compile Include="CheckDisableServiceTest.cs" />
     <Compile Include="SettingsServiceTest.cs" />
     <Compile Include="HomeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
