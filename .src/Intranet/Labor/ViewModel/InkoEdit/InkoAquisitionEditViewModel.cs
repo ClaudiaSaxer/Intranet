@@ -22,6 +22,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition1
         /// </value>
         [DisplayName( "1. Zugabe" )]
+        [Required(ErrorMessage = "Der Wert der 1. Zugabe muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition1 { get; set; }
 
@@ -32,6 +33,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition2
         /// </value>
         [DisplayName( "2. Zugabe" )]
+        [Required(ErrorMessage = "Der Wert der 2. Zugabe muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition2 { get; set; }
 
@@ -42,6 +44,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition3
         /// </value>
         [DisplayName( "3. Zugabe" )]
+        [Required(ErrorMessage = "Der Wert der 3. Zugabe muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition3 { get; set; }
 
@@ -52,6 +55,7 @@ namespace Intranet.Labor.ViewModel
         ///     The InkoWeight
         /// </value>
         [DisplayName( "Prüflingsgewicht" )]
+        [Required(ErrorMessage = "Das Prüflingsgewicht muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double InkoWeight { get; set; }
 
@@ -62,6 +66,7 @@ namespace Intranet.Labor.ViewModel
         ///     The FPDry
         /// </value>
         [DisplayName( "FP trocken" )]
+        [Required(ErrorMessage = "Der FP trocken Wert muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double FPDry { get; set; }
 
@@ -72,6 +77,7 @@ namespace Intranet.Labor.ViewModel
         ///     The FPWet
         /// </value>
         [DisplayName( "FP feucht" )]
+        [Required(ErrorMessage = "Der FP feucht Wert muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double FPWet { get; set; }
 

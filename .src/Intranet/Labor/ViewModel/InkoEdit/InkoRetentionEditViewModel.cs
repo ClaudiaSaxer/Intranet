@@ -22,6 +22,7 @@ namespace Intranet.Labor.ViewModel
         ///     The InkoWeight
         /// </value>
         [DisplayName( "Prüflingsgewicht" )]
+        [Required(ErrorMessage = "Das Prüflingsgewicht muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double InkoWeight { get; set; }
 
@@ -32,6 +33,7 @@ namespace Intranet.Labor.ViewModel
         ///     The InkoWeightWet
         /// </value>
         [DisplayName( "Prüfling naß" )]
+        [Required(ErrorMessage = "Das Prüflingsgewicht naß muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double InkoWeightWet { get; set; }
 
@@ -42,6 +44,7 @@ namespace Intranet.Labor.ViewModel
         ///     The InkoWeightAfterZentrifuge
         /// </value>
         [DisplayName( "Prüfling nach Zentrifuge" )]
+        [Required(ErrorMessage = "Das Prüflingsgewicht nach Zentrifuge muss angegeben werden")]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double InkoWeightAfterZentrifuge { get; set; }
 
