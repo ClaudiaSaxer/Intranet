@@ -1,6 +1,8 @@
 ﻿#region Usings
 
 using System;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using Intranet.Labor.Model.labor;
 
 #endregion
@@ -20,6 +22,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The DiaperWeight value
         /// </value>
+        [DisplayName("Windeln Gewicht")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double DiaperWeight { get; set; }
 
         /// <summary>
@@ -28,6 +32,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The RewetAfter140 value
         /// </value>
+        [DisplayName("Rewet nach 140ml")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double RewetAfter140 { get; set; }
 
         /// <summary>
@@ -36,6 +42,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The RewetAfter210 value
         /// </value>
+        [DisplayName("Rewet nach 210ml")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double RewetAfter210 { get; set; }
 
         /// <summary>
@@ -44,6 +52,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The StrikeThrough value
         /// </value>
+        [DisplayName("Strike Through (g)")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double StrikeThrough { get; set; }
 
         /// <summary>
@@ -52,6 +62,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Distribution value
         /// </value>
+        [DisplayName("Verteilung (mm)")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Zahl sein")]
         public Double Distribution { get; set; }
 
         /// <summary>
@@ -60,6 +72,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime1 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 1. Zugabe")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime1 { get; set; }
 
         /// <summary>
@@ -68,6 +82,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime2 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 2. Zugabe")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime2 { get; set; }
 
         /// <summary>
@@ -76,6 +92,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime3 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 3. Zugabe")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime3 { get; set; }
 
         /// <summary>
@@ -84,6 +102,8 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime4 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 4. Zugabe")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime4 { get; set; }
 
         /// <summary>
