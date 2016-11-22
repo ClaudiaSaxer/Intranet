@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentAssertions;
-using Intranet.Common;
+﻿#region Usings
+
 using Intranet.Model;
 using Intranet.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Bll.Test
 {
@@ -17,24 +14,24 @@ namespace Intranet.Bll.Test
     public class CheckDisableServiceTest
     {
         /// <summary>
-        ///     Tests if IsVisbile returns true if module is visible
+        ///     Tests if IsVisbile returns false if module does not exist
         /// </summary>
         [Fact]
-        public void IsVisibleTrueTest()
+        public void IsVisibleFalseNoModuleTest()
         {
             var checkDisableBll =
                 MockHelperBll.GetCheckDisableBll(
-                    new Module { Name = "Labor", Visible = true }
+                    null
                 );
 
-            var target = new CheckDisableService()
+            var target = new CheckDisableService
             {
                 CheckDisableBll = checkDisableBll
             };
 
-            var actual = target.IsVisible("Labor");
+            var actual = target.IsVisible( "Labor" );
 
-            Assert.True(actual);
+            Assert.False( actual );
         }
 
         /// <summary>
@@ -48,35 +45,35 @@ namespace Intranet.Bll.Test
                     new Module { Name = "Labor", Visible = false }
                 );
 
-            var target = new CheckDisableService()
+            var target = new CheckDisableService
             {
                 CheckDisableBll = checkDisableBll
             };
 
-            var actual = target.IsVisible("Labor");
+            var actual = target.IsVisible( "Labor" );
 
-            Assert.False(actual);
+            Assert.False( actual );
         }
 
         /// <summary>
-        ///     Tests if IsVisbile returns false if module does not exist
+        ///     Tests if IsVisbile returns true if module is visible
         /// </summary>
         [Fact]
-        public void IsVisibleFalseNoModuleTest()
+        public void IsVisibleTrueTest()
         {
             var checkDisableBll =
                 MockHelperBll.GetCheckDisableBll(
-                    null
+                    new Module { Name = "Labor", Visible = true }
                 );
 
-            var target = new CheckDisableService()
+            var target = new CheckDisableService
             {
                 CheckDisableBll = checkDisableBll
             };
 
-            var actual = target.IsVisible("Labor");
+            var actual = target.IsVisible( "Labor" );
 
-            Assert.False(actual);
+            Assert.True( actual );
         }
     }
 }
