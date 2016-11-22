@@ -1,12 +1,14 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Web.Filter;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     ///     Class representing Labor Home Controller
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
     public class LaborHomeController : BaseController
     {
         #region Properties

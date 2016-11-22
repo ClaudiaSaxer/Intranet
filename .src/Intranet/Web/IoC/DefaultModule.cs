@@ -214,6 +214,16 @@ namespace Intranet.Web.IoC
                    .As<IInkoAquisitionServiceHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<CheckDisableService>()
+                   .As<ICheckDisableService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<CheckDisableBll>()
+                   .As<ICheckDisableBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>
