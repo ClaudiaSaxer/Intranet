@@ -10,14 +10,14 @@ using Intranet.Model;
 namespace Intranet.Bll
 {
     /// <summary>
-    /// 
+    ///     Class representing the bll of the checkdisable.
     /// </summary>
     public class CheckDisableBll : ICheckDisableBll
     {
         /// <summary>
         /// Repository for Modules
         /// </summary>
-        public IGenericRepository<Module> RoleRepository { get; set; }
+        public IGenericRepository<Module> ModuleRepository { get; set; }
 
         #region Implementation of ICheckDisableBll
 
@@ -27,8 +27,8 @@ namespace Intranet.Bll
         /// </summary>
         /// <param name="name">The name of the Modul</param>
         /// <returns>The Module if it exist (or null)</returns>
-        public Module GetModule( String name ) => RoleRepository.Where( m => m.Name.Equals( name ) )
-                                                                .FirstOrDefault();
+        public Module GetModule( String name ) => ModuleRepository.GetAll(  )
+                                                                .FirstOrDefault(m => m.Name.Equals( name ));
 
         #endregion
     }
