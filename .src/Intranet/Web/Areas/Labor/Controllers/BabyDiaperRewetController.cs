@@ -8,6 +8,7 @@ using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
+using Intranet.Web.Filter;
 
 #endregion
 
@@ -16,6 +17,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the BabyDiaperRewetController
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
     public class BabyDiaperRewetController : BaseController
     {
         #region Properties

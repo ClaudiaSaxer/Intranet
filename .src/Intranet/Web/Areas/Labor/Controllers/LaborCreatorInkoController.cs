@@ -4,12 +4,14 @@ using System.Web.Routing;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Web.Filter;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     ///     Class representing the controller for the labor creator
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
     public class LaborCreatorInkoController : BaseController
     {
         #region Properties

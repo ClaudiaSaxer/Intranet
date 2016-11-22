@@ -7,6 +7,7 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
+using Intranet.Web.Filter;
 
 #endregion
 
@@ -15,6 +16,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the InkoAquisitionController
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
     public class InkoAquisitionController : BaseController
     {
         #region Properties
