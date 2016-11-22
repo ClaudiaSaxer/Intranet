@@ -94,6 +94,9 @@ body {
 .error-message {
   color: #FF0000; }
 
+.input-validation-error {
+  border-color: #FF0000; }
+
 .intigena-line {
   height: 3px;
   background-color: #539ad8;
