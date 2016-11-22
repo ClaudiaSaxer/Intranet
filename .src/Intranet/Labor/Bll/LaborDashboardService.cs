@@ -1,4 +1,10 @@
-﻿using Intranet.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Intranet.Common;
+using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Model;
+using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Web.Areas.Labor.Controllers
@@ -21,6 +27,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <value>the labor dashboard helper</value>
         public ILaborDashboardHelper LaborDashboardHelper { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the shift helper
+        /// </summary>
+        /// <value>the shift helper</value>
+        public IShiftHelper ShiftHelper { get; set; }
 
         #endregion
 
@@ -49,20 +61,26 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var dashboardItemM11 = new DashboardItem { MachineName = "M11" };
             var dashboardItemM49 = new DashboardItem { MachineName = "M49" };
 
-            dashboardItemM10.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M10" ) );
-            dashboardItemM10.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M10" ) );
-            dashboardItemM10.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M10" ) );
-            dashboardItemM10.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M10" ) );
+            var shifts = ShiftHelper.GetLastXShiftSchedule( 4 );        
+            var items = LaborDashboardBll.GetTestSheetForShifts( shifts );
 
-            dashboardItemM11.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M11" ) );
-            dashboardItemM11.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M11" ) );
-            dashboardItemM11.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M11" ) );
-            dashboardItemM11.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M11" ) );
+            var dictionary = items.GroupBy( sheet => sheet.MachineNr )
+                                  .ToDictionary( sheets => sheets.Key, sheets => sheets.ToList() );
 
-            dashboardItemM49.ShiftItemsCurrent = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 0, "M49" ) );
-            dashboardItemM49.ShiftItemsMinus1 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 1, "M49" ) );
-            dashboardItemM49.ShiftItemsMinus2 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 2, "M49" ) );
-            dashboardItemM49.ShiftItemsMinus3 = LaborDashboardHelper.ToProductionOrderItems( LaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr( 3, "M49" ) );
+            dashboardItemM10.ShiftItemsCurrent = DictionaryToProductionOrderItem( "M10", shifts[0], dictionary );
+            dashboardItemM10.ShiftItemsMinus1 = DictionaryToProductionOrderItem( "M10", shifts[1], dictionary );
+            dashboardItemM10.ShiftItemsMinus2 = DictionaryToProductionOrderItem( "M10", shifts[2], dictionary );
+            dashboardItemM10.ShiftItemsMinus3 = DictionaryToProductionOrderItem( "M10", shifts[3], dictionary );
+
+            dashboardItemM11.ShiftItemsCurrent = DictionaryToProductionOrderItem( "M11", shifts[0], dictionary );
+            dashboardItemM11.ShiftItemsMinus1 = DictionaryToProductionOrderItem( "M11", shifts[1], dictionary );
+            dashboardItemM11.ShiftItemsMinus2 = DictionaryToProductionOrderItem( "M11", shifts[2], dictionary );
+            dashboardItemM11.ShiftItemsMinus3 = DictionaryToProductionOrderItem( "M11", shifts[3], dictionary );
+
+            dashboardItemM49.ShiftItemsCurrent = DictionaryToProductionOrderItem( "M49", shifts[0], dictionary );
+            dashboardItemM49.ShiftItemsMinus1 = DictionaryToProductionOrderItem( "M49", shifts[1], dictionary );
+            dashboardItemM49.ShiftItemsMinus2 = DictionaryToProductionOrderItem( "M49", shifts[2], dictionary );
+            dashboardItemM49.ShiftItemsMinus3 = DictionaryToProductionOrderItem( "M49", shifts[3], dictionary );
 
             return new LaborDashboardViewModel
             {
@@ -73,5 +91,18 @@ namespace Intranet.Web.Areas.Labor.Controllers
 
             #endregion
         }
+
+        private ICollection<ProductionOrderItem> DictionaryToProductionOrderItem( String machine, ShiftSchedule shift, Dictionary<String, List<TestSheet>> dictionary )
+        {
+            if ( dictionary.ContainsKey( machine ) )
+            {
+                var sheets = dictionary[machine].Where( sheet => ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shift ) )
+                                                .ToList();
+                if(sheets.Count!=0)
+                    return LaborDashboardHelper.ToProductionOrderItems( sheets );
+            }
+             return new List<ProductionOrderItem>();                                                              
+        } 
+                
     }
 }

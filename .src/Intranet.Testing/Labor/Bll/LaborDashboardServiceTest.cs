@@ -1,9 +1,11 @@
 ﻿#region Usings
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
+using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
@@ -28,17 +30,29 @@ namespace Intranet.Labor.Bll.Test
         {
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet>()
+                    new List<TestSheet> { new TestSheet { MachineNr = "M10" } }
+                );
+            var shifthelpermock =
+                MockHelperBll.GetShiftHelper(
+                    lastXShiftSchedules: new List<ShiftSchedule>
+                    {
+                        new ShiftSchedule(),
+                        new ShiftSchedule(),
+                        new ShiftSchedule(),
+                        new ShiftSchedule()
+                    }
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
-                    new List<DashboardNote>(),productionOrderItems:new List<ProductionOrderItem>()
+                    new List<DashboardNote>(),
+                    productionOrderItems: new List<ProductionOrderItem>()
                 );
 
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
                 LaborDashboardBll = labordashboardbllmock,
-                LaborDashboardHelper = labordashboardhelpermock
+                LaborDashboardHelper = labordashboardhelpermock,
+                ShiftHelper = shifthelpermock
             };
 
             var actual = target.GetLaborDashboardViewModel();
@@ -81,6 +95,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void GetLaborDashboardViewModelSingleTest()
         {
+            var now = DateTime.Now;
             var note = new DashboardNote
             {
                 ErrorMessage = "en fehler",
@@ -107,7 +122,7 @@ namespace Intranet.Labor.Bll.Test
 
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet>()
+                    new List<TestSheet> { new TestSheet { MachineNr = "M10",CreatedDateTime = now} }
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
@@ -117,45 +132,61 @@ namespace Intranet.Labor.Bll.Test
                     po,
                     new List<ProductionOrderItem> { po }
                 );
-
+            var shifthelpermock =
+                MockHelperBll.GetShiftHelper(
+                    lastXShiftSchedules:
+                    new List<ShiftSchedule>
+                    {
+                        new ShiftSchedule {ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay },
+                        new ShiftSchedule(),
+                        new ShiftSchedule(),
+                        new ShiftSchedule()
+                    }
+                    ,shiftType: ShiftType.Morning
+                    ,shiftScheduleCurrent: new ShiftSchedule { ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay }
+                    , dateExistsInShifts:time => time.Equals( now )
+                );
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
                 LaborDashboardBll = labordashboardbllmock,
-                LaborDashboardHelper = labordashboardhelpermock
+                LaborDashboardHelper = labordashboardhelpermock,
+                ShiftHelper = shifthelpermock
             };
 
             var actual = target.GetLaborDashboardViewModel();
 
             actual.DashboardItemM10.MachineName.Should()
                   .Be( "M10" );
+            actual.DashboardItemM11.MachineName.Should()
+                  .Be( "M11" );
+            actual.DashboardItemM49.MachineName.Should()
+                  .Be( "M49" );
             actual.DashboardItemM10.ShiftItemsCurrent.Count.Should()
                   .Be( 1 );
             actual.DashboardItemM10.ShiftItemsMinus1.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM10.ShiftItemsMinus2.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM10.ShiftItemsMinus3.Count.Should()
-                  .Be( 1 );
-            actual.DashboardItemM11.MachineName.Should()
-                  .Be( "M11" );
+                  .Be( 0 );
+
             actual.DashboardItemM11.ShiftItemsCurrent.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM11.ShiftItemsMinus1.Count.Should()
-                  .Be( 1 );
+                  .Be( 0);
             actual.DashboardItemM11.ShiftItemsMinus2.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM11.ShiftItemsMinus3.Count.Should()
-                  .Be( 1 );
-            actual.DashboardItemM49.MachineName.Should()
-                  .Be( "M49" );
+                  .Be( 0 );
+
             actual.DashboardItemM49.ShiftItemsCurrent.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM49.ShiftItemsMinus1.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM49.ShiftItemsMinus2.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
             actual.DashboardItemM49.ShiftItemsMinus3.Count.Should()
-                  .Be( 1 );
+                  .Be( 0 );
 
             actual.DashboardItemM10.ShiftItemsCurrent.ToList()[0].RwType.Should()
                   .Be( po.RwType );

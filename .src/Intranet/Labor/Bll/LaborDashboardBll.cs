@@ -48,20 +48,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Get the testsheets for the actual shift and the last 3 shifts
         /// </summary>
         /// <returns>the testsheets for the actual and last three shifts</returns>
-        public ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts()
-        {
-            var shifts = ShiftHelper.GetLastXShiftSchedule( 4 );
-
-            var lastthreesheets = new List<TestSheet>();
-            TestSheets.GetAll()
-                      .ToList()
-                      .ForEach( sheet =>
-                                {
-                                    if ( ShiftHelper.DateExistsInShifts( sheet.CreatedDateTime, shifts ) )
-                                        lastthreesheets.Add( sheet );
-                                } );
-            return lastthreesheets;
-        }
+        public ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts() => GetTestSheetForShifts(ShiftHelper.GetLastXShiftSchedule(4));
 
         /// <summary>
         ///     Get the testsheets for the last shift
@@ -90,6 +77,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var shift = ShiftHelper.GetLastXShiftSchedule( lastCounter+1 );
             return shift.Count < lastCounter+1 ? null : GetTestSheetForShiftPerMachineNr( shift[lastCounter] ,machineNr);
+        }
+
+        /// <summary>
+        ///     Get the testsheets for the given shift
+        /// </summary>
+        /// <returns>the testsheets for the given shift</returns>
+        public ICollection<TestSheet> GetTestSheetForShifts( List<ShiftSchedule> shifts )
+        {
+
+            var sheets = new List<TestSheet>();
+            TestSheets.GetAll()
+                      .ToList()
+                      .ForEach(sheet =>
+                      {
+                          if (ShiftHelper.DateExistsInShifts(sheet.CreatedDateTime, shifts))
+                              sheets.Add(sheet);
+                      });
+            return sheets;
         }
 
         #endregion

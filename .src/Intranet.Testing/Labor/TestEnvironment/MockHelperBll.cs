@@ -194,6 +194,8 @@ namespace Intranet.Labor.TestEnvironment
 
             mock.Setup(x => x.GetTestSheetForMinusXShiftPerMachineNr(It.IsAny<Int32>(), It.IsAny<String>()))
                 .Returns(testSheets.ToList());
+            mock.Setup(x => x.GetTestSheetForShifts(It.IsAny<List<ShiftSchedule>>()))
+            .Returns(testSheets.ToList());
 
             return mock.Object;
         }   
@@ -224,8 +226,9 @@ namespace Intranet.Labor.TestEnvironment
         /// <param name="shiftType">the current shift type</param>
         /// <param name="shiftScheduleCurrent">the current shift schedule</param>
         /// <param name="lastXShiftSchedules">the last x shift schedules</param>
+        /// <param name="dateExistsInShifts">Function to determate if date exists in shift</param>
         /// <returns>a mock for the interface ishifthelper</returns>
-        public static IShiftHelper GetShiftHelper( ShiftType? shiftType = null, ShiftSchedule shiftScheduleCurrent = null, List<ShiftSchedule> lastXShiftSchedules = null )
+        public static IShiftHelper GetShiftHelper( ShiftType? shiftType = null, ShiftSchedule shiftScheduleCurrent = null, List<ShiftSchedule> lastXShiftSchedules = null, Func<DateTime,Boolean> dateExistsInShifts = null)
         {
             var mock = new Mock<IShiftHelper>
             {
@@ -246,12 +249,14 @@ namespace Intranet.Labor.TestEnvironment
                 x =>
                     x.DateExistsInShifts(
                         It.Is<DateTime>(
-                            time =>
+                            time => dateExistsInShifts.Invoke(time) ||
                                 lastXShiftSchedules.Exists(
                                     schedule =>
                                         ( schedule.StartTime.Hours <= time.Hour ) && ( schedule.EndTime.Hours >= time.Hour )
                                         && ( ( schedule.StartDay == time.DayOfWeek ) || ( schedule.EndDay == time.DayOfWeek ) ) ) ),
                         It.IsAny<List<ShiftSchedule>>() ) ).Returns( true );
+
+
             return mock.Object;
         }
 

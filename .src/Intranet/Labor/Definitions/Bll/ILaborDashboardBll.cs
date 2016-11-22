@@ -24,5 +24,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <returns>the testsheets for the last shift</returns>
         ICollection<TestSheet> GetTestSheetForMinusXShiftPerMachineNr( Int32 lastCounter, String machineNr );
+        /// <summary>
+        ///     Get the testsheets for the given shift
+        /// </summary>
+        /// <returns>the testsheets for the given shift</returns>
+        ICollection<TestSheet> GetTestSheetForShifts( List<ShiftSchedule> shifts );
     }
 }
