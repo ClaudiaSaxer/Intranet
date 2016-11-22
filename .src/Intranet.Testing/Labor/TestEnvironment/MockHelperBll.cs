@@ -287,5 +287,24 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns( 1 );
             return mock.Object;
         }
+
+
+        /// <summary>
+        ///     A mock for TestBll
+        /// </summary>
+        /// <returns>a IloaborHomebll moq</returns>
+        public static ITestBll GetTestBllForDeletingNotes()
+        {
+            var mock = new Mock<ITestBll>
+            {
+                Name = "MockHelper.GetTestBllForDeletingNotes",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.DeleteNote(It.IsAny<Int32>()))
+                .Returns((Int32 testValueNoteId) => new TestValueNote { TestValueNoteId = testValueNoteId });
+
+            return mock.Object;
+        }
     }
 }
