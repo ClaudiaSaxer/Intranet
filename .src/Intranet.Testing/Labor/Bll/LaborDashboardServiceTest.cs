@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
+using FluentAssertions.Common;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
@@ -144,7 +145,7 @@ namespace Intranet.Labor.Bll.Test
                     }
                     ,shiftType: ShiftType.Morning
                     ,shiftScheduleCurrent: new ShiftSchedule { ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay }
-                    , dateExistsInShifts:time => time.Equals( now )
+                    , dateExistsInShift: time => now.IsSameOrEqualTo( time )
                 );
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
@@ -164,11 +165,11 @@ namespace Intranet.Labor.Bll.Test
             actual.DashboardItemM10.ShiftItemsCurrent.Count.Should()
                   .Be( 1 );
             actual.DashboardItemM10.ShiftItemsMinus1.Count.Should()
-                  .Be( 0 );
+                  .Be( 1 );
             actual.DashboardItemM10.ShiftItemsMinus2.Count.Should()
-                  .Be( 0 );
+                  .Be( 1 );
             actual.DashboardItemM10.ShiftItemsMinus3.Count.Should()
-                  .Be( 0 );
+                  .Be( 1 );
 
             actual.DashboardItemM11.ShiftItemsCurrent.Count.Should()
                   .Be( 0 );

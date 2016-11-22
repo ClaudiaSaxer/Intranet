@@ -96,6 +96,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             if ( dictionary.ContainsKey( machine ) )
             {
+                var x = ShiftHelper.DateExistsInShift( dictionary[machine][0].CreatedDateTime, shift );
                 var sheets = dictionary[machine].Where( sheet => ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shift ) )
                                                 .ToList();
                 if(sheets.Count!=0)
