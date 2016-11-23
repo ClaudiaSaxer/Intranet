@@ -257,7 +257,7 @@ namespace Intranet.Labor.TestEnvironment
                             It.IsAny<List<ShiftSchedule>>() ) )
                 .Returns( true );
 
-            mock.Setup( x => x.DateExistsInShift( It.Is<DateTime>( time => dateExistsInShift( time )), It.IsAny<ShiftSchedule>()  ) ).Returns( true );
+            mock.Setup( x => x.DateExistsInShift( It.Is<DateTime>( time => time != null && dateExistsInShift( time )), It.IsAny<ShiftSchedule>()  ) ).Returns( true );
 
             return mock.Object;
         }

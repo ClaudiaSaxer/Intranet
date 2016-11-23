@@ -31,7 +31,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet> { new TestSheet { MachineNr = "M10" } }
+                    new List<TestSheet> { new TestSheet { MachineNr = "M10"} }
                 );
             var shifthelpermock =
                 MockHelperBll.GetShiftHelper(
@@ -42,12 +42,13 @@ namespace Intranet.Labor.Bll.Test
                         new ShiftSchedule(),
                         new ShiftSchedule()
                     }
+                    ,dateExistsInShift:time => false
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
                     new List<DashboardNote>(),
                     productionOrderItems: new List<ProductionOrderItem>()
-                );
+                    );
 
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
