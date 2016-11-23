@@ -7,7 +7,9 @@ using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Web.Areas.Labor.Controllers;
+using Microsoft.Build.Tasks;
 using Xunit;
+using Error = Intranet.Labor.Model.Error;
 
 #endregion
 
@@ -154,7 +156,7 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     ToDashboardInfos test
+        ///     ToDashboardInfos test empty
         /// </summary>
         [Fact]
         public void ToDashboardInfosEmptyTest()
@@ -192,7 +194,7 @@ namespace Intranet.Labor.Bll.Test
             var info = target.ToDashboardInfosIncontinencePad( testvalue );
             info.Count.Should()
                 .Be( 4 );
-        
+
             info.ToList()[0].RwType.Should()
                 .Be( RwType.Better );
             info.ToList()[0].InfoKey.Should()
@@ -278,7 +280,68 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     ToDashboardNote test
+        ///     ToDashboardInfos test
+        /// </summary>
+        [Fact]
+        public void ToDashboardInfosTest()
+        {
+            var target = new LaborDashboardHelper( new NLogLoggerFactory() );
+            var infos = target.ToDashboardInfos(
+                new List<TestValue>
+                {
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.BabyDiaper,
+                        TestValueType = TestValueType.Average,
+                        BabyDiaperTestValue = new BabyDiaperTestValue
+                        {
+                            TestType = TestTypeBabyDiaper.Rewet,
+                            Rewet140Rw = RwType.Better,
+                            Rewet140Value = 12.12345,
+                            Rewet210Value = 14.444,
+                            Rewet210Rw = RwType.Ok
+                        }
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.IncontinencePad,
+                        TestValueType = TestValueType.Average,
+                        IncontinencePadTestValue = new IncontinencePadTestValue
+                        {
+                            TestType = TestTypeIncontinencePad.Retention,
+                            RetentionRw = RwType.Ok,
+                            RetentionEndValue = 12
+                        }
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.IncontinencePad,
+                        TestValueType = TestValueType.Single,
+                        IncontinencePadTestValue = new IncontinencePadTestValue
+                        {
+                            TestType = TestTypeIncontinencePad.Retention,
+                            RetentionRw = RwType.Ok,
+                            RetentionEndValue = 12
+                        }
+                    },
+                    new TestValue
+                    {
+                        ArticleTestType = ArticleType.IncontinencePad,
+                        TestValueType = TestValueType.StandardDeviation,
+                        IncontinencePadTestValue = new IncontinencePadTestValue
+                        {
+                            TestType = TestTypeIncontinencePad.Retention,
+                            RetentionRw = RwType.Ok,
+                            RetentionEndValue = 12
+                        }
+                    }
+                } );
+            infos.Count.Should()
+                 .Be( 3 );
+        }
+
+        /// <summary>
+        ///     ToDashboardNote test empty
         /// </summary>
         [Fact]
         public void ToDashboardNoteEmptyTest()
@@ -290,17 +353,28 @@ namespace Intranet.Labor.Bll.Test
         }
 
         /// <summary>
-        ///     ToProductionOrderItems test
+        ///     ToDashboardNote test normal
         /// </summary>
         [Fact]
-        public void ToProductionOrderItemsTest()
+        public void ToDashboardNoteTest()
         {
-            var target = new LaborDashboardHelper( new NLogLoggerFactory() );
-            var po = target.ToProductionOrderItems( new List<TestSheet> {new TestSheet(),new TestSheet()} );
-            po.Count.Should()
-              .Be( 2 );
-        }
+            var note = new TestValueNote
+            {
+                Error = new Error { Value = "Fehler Bla bla", ErrorCode = "666" },
+                Message = "eifach kaputt gange",
+            };
+            var target = new LaborDashboardHelper(new NLogLoggerFactory());
+            var actual = target.ToDashboardNote(new List<TestValue> {new TestValue {TestValueNote = new List<TestValueNote>{note,note}},new TestValue {TestValueNote = new List<TestValueNote> {note} }});
+            actual.Count.Should()
+                  .Be( 3 );
+            actual.ToList()[0].Code.Should()
+                  .Be( "666" );
+            actual.ToList()[0].ErrorMessage.Should()
+                  .Be( note.Error.Value );
+            actual.ToList()[0].Message.Should()
+                  .Be( note.Message );
 
+        }
         /// <summary>
         ///     ToProductionOrderItem test
         /// </summary>
@@ -316,15 +390,27 @@ namespace Intranet.Labor.Bll.Test
             po.Action.Should()
               .Be( "Edit" );
             po.Controller.Should()
-              .Be("LaborCreatorBaby");
+              .Be( "LaborCreatorBaby" );
             po.DashboardInfos.Should()
               .BeNullOrEmpty( "because it is empty" );
             po.Notes.Should()
-              .BeNullOrEmpty("because it is empty");
+              .BeNullOrEmpty( "because it is empty" );
             po.ProductionOrderName.Should()
               .BeNullOrEmpty( "because it is empty" );
             po.SheetId.Should()
               .Be( 0 );
+        }
+
+        /// <summary>
+        ///     ToProductionOrderItems test
+        /// </summary>
+        [Fact]
+        public void ToProductionOrderItemsTest()
+        {
+            var target = new LaborDashboardHelper( new NLogLoggerFactory() );
+            var po = target.ToProductionOrderItems( new List<TestSheet> { new TestSheet(), new TestSheet() } );
+            po.Count.Should()
+              .Be( 2 );
         }
 
         /// <summary>
