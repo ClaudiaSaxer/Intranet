@@ -328,29 +328,8 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns( testValue );
             mock.Setup( x => x.UpdateTestSheet() )
                 .Returns( 0 );
-<<<<<<< HEAD
             mock.Setup(x => x.DeleteNote(It.IsAny<Int32>()))
                 .Returns(new TestValueNote());
-
-            return mock.Object;
-        }
-		/// <summary>
-        ///     A mock for LaborHomeBll
-        /// </summary>
-        /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
-        /// <returns>a IloaborHomebll moq</returns>
-        public static ILaborHome GetLaborHomeBll( IEnumerable<Module> modules )
-        {
-            var mock = new Mock<ILaborHome>
-            {
-                Name = "MockHelper.GetLaborHomeBll",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
-                .Returns( modules );
-=======
->>>>>>> dev
 
             return mock.Object;
         }
