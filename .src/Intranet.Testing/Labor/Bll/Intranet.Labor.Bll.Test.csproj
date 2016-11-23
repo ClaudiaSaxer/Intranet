@@ -48,6 +48,7 @@
       <HintPath>..\..\..\packages\FluentAssertions.4.14.0\lib\net45\FluentAssertions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +90,10 @@
     <Compile Include="InkoRewetServiceHelperTest.cs" />
     <Compile Include="InkoRewetServiceTest.cs" />
     <Compile Include="LaborCreatorServiceHelperTest.cs" />
+    <Compile Include="LaborDashboardBllTest.cs" />
+    <Compile Include="LaborDashboardServiceHelperTest.cs" />
+    <Compile Include="LaborDashboardServiceTest.cs" />
+    <Compile Include="ShiftHelperTest.cs" />
     <Compile Include="TestServiceHelperTest.cs" />
     <Compile Include="LaborCreatorBllTest.cs" />
     <Compile Include="LaborCreatorServiceTest.cs" />

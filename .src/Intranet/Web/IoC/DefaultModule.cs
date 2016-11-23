@@ -12,7 +12,6 @@ using Intranet.Labor.Dal;
 using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Definition.Bll;
-using Intranet.Labor.Model;
 using Intranet.Web.Areas.Labor.Controllers;
 
 #endregion
@@ -169,17 +168,17 @@ namespace Intranet.Web.IoC
                    .As<IIncontinencePadLaborCreatorBll>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
-				   
+
             builder.RegisterType<IncontinencePadLaborCreatorService>()
-                  .As<IIncontinencePadLaborCreatorService>()
-                  .PropertiesAutowired()
-                  .InstancePerRequest();
-				  
+                   .As<IIncontinencePadLaborCreatorService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
             builder.RegisterType<IncontinencePadLaborCreatorServiceHelper>()
-                  .As<IIncontinencePadLaborCreatorServiceHelper>()
-                  .PropertiesAutowired()
-                  .InstancePerRequest();
-				  
+                   .As<IIncontinencePadLaborCreatorServiceHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
             builder.RegisterType<InkoRewetService>()
                    .As<IInkoRewetService>()
                    .PropertiesAutowired()
@@ -197,9 +196,9 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<InkoRetentionServiceHelper>()
                    .As<IInkoRetentionServiceHelper>()
-				   .PropertiesAutowired()
+                   .PropertiesAutowired()
                    .InstancePerRequest();
-				   
+
             builder.RegisterType<LaborCreatorServiceHelper>()
                    .As<ILaborCreatorServiceHelper>()
                    .PropertiesAutowired()
@@ -222,6 +221,26 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<CheckDisableBll>()
                    .As<ICheckDisableBll>()
+				   .PropertiesAutowired()
+                   .InstancePerRequest();
+				   
+            builder.RegisterType<LaborDashboardService>()
+                   .As<ILaborDashboardService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborDashboardBll>()
+                   .As<ILaborDashboardBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<LaborDashboardHelper>()
+                   .As<ILaborDashboardHelper>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<ShiftHelper>()
+                   .As<IShiftHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
         }
@@ -306,13 +325,11 @@ namespace Intranet.Web.IoC
                    .PropertiesAutowired()
                    .InstancePerRequest();
 
-            builder.RegisterAssemblyTypes(typeof(IncontinencePadTestValueRepository).Assembly)
-                   .Where(t => t.Name.EndsWith("Repository", StringComparison.Ordinal))
+            builder.RegisterAssemblyTypes( typeof(IncontinencePadTestValueRepository).Assembly )
+                   .Where( t => t.Name.EndsWith( "Repository", StringComparison.Ordinal ) )
                    .AsImplementedInterfaces()
                    .PropertiesAutowired()
                    .InstancePerRequest();
-
-
         }
 
         /// <summary>
