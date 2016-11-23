@@ -60,5 +60,11 @@ namespace Intranet.Labor.Definition
         /// </summary>
         /// <param name="testValueId">the Id of the Test value</param>
         TestValue DeleteTestValue(Int32 testValueId);
+
+        /// <summary>
+        ///     Delete TestvalueNote from DB
+        /// </summary>
+        /// <param name="testValueNoteId">the Id of the Test value Note</param>
+        TestValueNote DeleteNote(Int32 testValueNoteId);
     }
 }

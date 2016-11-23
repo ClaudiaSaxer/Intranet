@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 
@@ -12,6 +13,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// </summary>
     public class LaborCreatorBll : ServiceBase, ILaborCreatorBll
     {
+
         #region Properties
 
         /// <summary>
@@ -20,11 +22,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>the production order repository</value>
         public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the repository for the shift schuedule
-        /// </summary>
-        /// <value>the shift shedule repository</value>
-        public IGenericRepository<ShiftSchedule> ShiftScheduleRepository { get; set; }
 
         /// <summary>
         ///     Gets or sets the repository for the production order
@@ -32,6 +29,12 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>the production order repository</value>
         public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
 
+        /// <summary>
+        /// Gets or sets the shifthelper
+        /// </summary>
+        /// <value>the shifthelper</value>
+        public IShiftHelper ShiftHelper { get; set; }
+    
         #endregion
 
         #region Ctor
@@ -66,7 +69,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                     TestType = testTypeBabyDiaper,
                     RetentionRw = RwType.Ok,
                     Rewet140Rw = RwType.Ok,
-                    Rewet210Rw = RwType.Ok
+                    Rewet210Rw = RwType.Ok,
+                    PenetrationRwType = RwType.Ok
                 }
             };
 
@@ -104,7 +108,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ICollection<TestSheet> RunningTestSheets()
         {
             var today = DateTime.Today;
-            var shift = GetCurrentShift();
+            var shift = ShiftHelper.GetCurrentShift();
             if ( shift == null )
                 return null;
             return TestSheetRepository.GetAll().Where( sheet => sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
@@ -119,7 +123,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public TestSheet GetTestSheetForFaNr( String faNr )
         {
             var today = DateTime.Today;
-            var shift = GetCurrentShift();
+            var shift = ShiftHelper.GetCurrentShift();
             if ( shift == null )
                 return null;
             var testsheet = TestSheetRepository.GetAll().Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
@@ -144,7 +148,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 Logger.Error( "Fanr " + faNr + " not found in Production Order" );
                 return null;
             }
-            var shift = GetCurrentShift();
+            var shift = ShiftHelper.GetCurrentShift();
 
             if ( shift == null )
                 return null;
@@ -190,27 +194,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
             TestSheetRepository.SaveChanges();
 
             return testSheet;
-        }
-
-        /// <summary>
-        ///     Gets the current shift
-        /// </summary>
-        /// <returns>the current shift</returns>
-        public ShiftType? GetCurrentShift()
-        {
-            var now = DateTime.Now;
-            var dayInWeekNow = now.DayOfWeek;
-            var shift = ShiftScheduleRepository.GetAll().Where(
-                                                   schedule =>
-                                                       ( ( schedule.StartDay == dayInWeekNow ) || ( schedule.EndDay == dayInWeekNow ) ) && ( schedule.StartTime.Hours <= now.Hour )
-                                                       && ( schedule.StartTime.Minutes <= now.Minute ) && ( schedule.EndTime.Hours >= now.Hour )
-                                                       && ( schedule.EndTime.Minutes >= now.Minute ) )
-                                               ?.ToList();
-
-            if ( shift?.Count == 1 )
-                return shift?[0].ShiftType;
-            Logger.Error( "More than one or no shift found for " + now );
-            return null;
         }
 
         #endregion

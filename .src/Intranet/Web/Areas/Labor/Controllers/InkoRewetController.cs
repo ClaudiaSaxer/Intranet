@@ -7,14 +7,16 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
+using Intranet.Web.Filter;
 
 #endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     Class representing the BabyDiaperRewetController
+    ///     Class representing the InkoRewetController
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
     public class InkoRewetController : BaseController
     {
         #region Properties
@@ -55,7 +57,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 return HttpNotFound();
             var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel( id );
             if ( viewModel.IsNull() )
-                return new HttpNotFoundResult( "Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht." );
+                return new HttpNotFoundResult( "Das TestSheet ist entweder kein Inko Testsheet oder existiert nicht." );
             return View( "Edit", viewModel );
         }
 
@@ -70,9 +72,9 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if ( id.IsNull() )
                 return HttpNotFound();
 
-            var viewModel = InkoRewetService.GetNewInkoRewetEditViewModel( id );
+            var viewModel = InkoRewetService.GetInkoRewetEditViewModel( id );
             if ( viewModel.IsNull() )
-                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test." );
+                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein Inko - Rewet Test." );
             return View( "Edit", viewModel );
         }
 
@@ -84,7 +86,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = InkoRewetService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetRefId } );
         }
 
         /// <summary>
@@ -97,7 +99,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( InkoRewetEditViewModel viewModel )
         {
             var savedModel = InkoRewetService.Save( viewModel );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = savedModel.TestSheetRefId } );
         }
 
         /// <summary>

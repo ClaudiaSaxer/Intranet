@@ -5,22 +5,26 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
+<script src="/resources/js/intigena/BabyDiaperRewetPenetration.js"></script>
 <div class="container">
 
-    <h2>Höschenwindeln - Retention-Test</h2>
+    <h2>Höschenwindeln - Rewet - Test</h2>
 
     <div class="intigena-line"></div>
-
-    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm"}))
     {
         @Html.ValidationSummary(true)
         @Html.AntiForgeryToken()
         @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
         @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);
         <div class="form-group">
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.TestPerson)
+            </p>
             <label class="col-sm-2 control-label">Testperson:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" } )
             </div>
         </div>
         <div class="form-group">
@@ -38,15 +42,25 @@
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
+            <div class="error-message">
+                @Html.ValidationMessageFor( m => m.DiaperWeight)
+            </div>
             <label class="col-sm-2 control-label">Gewicht [g]:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
             </div>
         </div>
         <div class="intigena-line"></div>
 
         <div class="form-group">
             <h4>BabyDiaperRewet (g)</h4>
+            <div class="error-message">
+                @Html.ValidationMessageFor(m => m.RewetAfter140)
+                @Html.ValidationMessageFor(m => m.RewetAfter210)
+                @Html.ValidationMessageFor(m => m.StrikeThrough)
+                @Html.ValidationMessageFor(m => m.Distribution)
+            </div>
+
             <label class="col-sm-2 control-label">140 ml:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.RewetAfter140, new { placeholder = @Model.RewetAfter140, @class = "form-control", type = "text", @required = "required" })
@@ -76,8 +90,22 @@
                 <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" >
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
+                <!--
+                <span><a id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Aktivieren
+                </a>
+                <a id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
+                    Entfernen
+                </a></span>    
+                -->
             </h4>
             <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
+                <div class="error-message">
+                    @Html.ValidationMessageFor(m => m.PenetrationTime1)
+                    @Html.ValidationMessageFor(m => m.PenetrationTime2)
+                    @Html.ValidationMessageFor(m => m.PenetrationTime3)
+                    @Html.ValidationMessageFor(m => m.PenetrationTime4)
+                </div>
                 <label class="col-sm-2 control-label">Zugabe 1 [s]:</label>
                 <div class="col-sm-10">
                     @Html.TextBoxFor( m => m.PenetrationTime1, new { placeholder = @Model.PenetrationTime1, @class = "form-control", type = "text", @required = "required" } )
@@ -111,62 +139,37 @@
             {
                 for (var i = 0; i < Model.Notes.Count; i++)
                 {
-                    <div>
-                        <label class="col-sm-2 control-label">Error Code:</label>
+                    <div class="form-group row" id="Note-@i">
                         <div class="col-sm-10">
-                            @Html.DropDownListFor(
-                                m => m.Notes[i].ErrorCodeId,
-                                new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
-                                "Error Code auswählen",
-                                new { @class = "form-control" }
-                            )
+                            <label class="col-sm-3 control-label">Error Code:</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownListFor(
+                                    m => m.Notes[i].ErrorCodeId,
+                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    "Error Code auswählen",
+                                    new { @class = "form-control" }
+                                     )
+                            </div>
+                            <label class="col-sm-3 control-label">Message:</label>
+                            <div class="col-sm-9">
+                                @Html.HiddenFor(m => m.Notes[i].Id)
+                                @Html.TextAreaFor(m => m.Notes[i]
+                                                      .Message, new { @class = "form-control", type = "text" })
+                            </div>
                         </div>
-                        <label class="col-sm-2 control-label">Message:</label>
-                        <div class="col-sm-10">
-                            @Html.HiddenFor(m => m.Notes[i].Id)
-                            @Html.HiddenFor(m => m.Notes[i].ErrorCodeId)
-                            @Html.TextAreaFor(m => m.Notes[i]
-                                                  .Message, new { @class = "form-control", type = "text" })
+                        <div class="col-sm-2">
+                            <a class="btn btn-danger btn-lg addNote" id="@i">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
                         </div>
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/BabyDiaperRewet/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addNote() {
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRewet/AddNote';
-                document.getElementById('submitForm').submit();
-            }
-            function addPenetration() {
-                document.getElementById('addPenetration').style.display = 'none';
-                document.getElementById('removePenetration').style.display = 'block';
-                document.getElementById('penetration-test').style.display = 'block';
-                document.getElementById('TestType').value = 'RewetAndPenetrationTime';
-            }
-            function removePenetration() {
-                document.getElementById('addPenetration').style.display = 'block';
-                document.getElementById('removePenetration').style.display = 'none';
-                document.getElementById('penetration-test').style.display = 'none';
-                document.getElementById('TestType').value = 'Rewet';
-            }
-                $("#addNote").click(function () {
-                    addNote();
-                });
-                $('#submitForm').submit(function () {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                });
-                $("#addPenetration").click(function () {
-                    addPenetration();
-                });
-                $("#removePenetration").click(function () {
-                    removePenetration();
-                });
-        </script>
     }
 </div>
 

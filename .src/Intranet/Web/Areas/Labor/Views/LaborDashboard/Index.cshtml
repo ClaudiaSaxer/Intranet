@@ -1,0 +1,49 @@
+﻿@model Intranet.Labor.ViewModel.LaborDashboardViewModel
+
+@{
+    ViewBag.Title = "Intigena Intranet - Labor Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="body-content">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Schicht 0</th>
+            <th>Schicht -1</th>
+            <th>Schicht -2</th>
+            <th>Schicht -3</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>M10</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM10.ShiftItemsMinus3 )
+        </tr>
+        <tr>
+            <th>M11</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM11.ShiftItemsMinus3 )
+        </tr>
+
+        <tr>
+            <th>M49</th>
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsCurrent )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus1 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus2 )
+            @Html.Partial( "DashboardPartial", Model.DashboardItemM49.ShiftItemsMinus3 )
+        </tr>
+
+        </tbody>
+    </table>
+
+
+</div>

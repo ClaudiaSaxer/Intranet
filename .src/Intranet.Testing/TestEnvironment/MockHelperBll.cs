@@ -81,5 +81,42 @@ namespace Intranet.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for checkdisable bll
+        /// </summary>
+        /// <param name="module">The returned module</param>
+        /// <returns>a generic repository for production orders</returns>
+        public static ICheckDisableBll GetCheckDisableBll(Module module)
+        {
+            var mock = new Mock<ICheckDisableBll>
+            {
+                Name = "MockHelper.GetCheckDisableBll",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup(x => x.GetModule(It.IsAny<String>()))
+                .Returns(module);
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for GenericRepository
+        /// </summary>
+        /// <param name="modules">Queryable modules returned by GetAll</param>
+        /// <returns>a generic repository for roles</returns>
+        public static IGenericRepository<Module> GetAllModules(IQueryable<Module> modules)
+        {
+            var mock = new Mock<IGenericRepository<Module>>
+            {
+                Name = "MockHelper.GetAllModules",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetAll())
+                .Returns(modules);
+
+            return mock.Object;
+        }
     }
 }

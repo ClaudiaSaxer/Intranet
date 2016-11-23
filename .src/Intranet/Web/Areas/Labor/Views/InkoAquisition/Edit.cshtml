@@ -1,0 +1,141 @@
+﻿@model Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
+<div class="container">
+
+    <h2>Inko - Aquisition - Test</h2>
+
+    <div class="intigena-line"></div>
+
+    @using (Html.BeginForm("Save", "InkoAquisition", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    {
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
+        @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);
+        <div class="form-group">
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.TestPerson)
+            </p>
+            <label class="col-sm-2 control-label">Testperson:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" } )
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Produktions Code:</label>
+            <div class="col-sm-10 form-inline">
+                <label class="control-label">
+                    @Html.HiddenFor(m => m.ProductionCode)
+                    @Model.ProductionCode
+                </label>
+                @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" })
+                <label class="control-label">/</label>
+                @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
+                <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
+            </div>
+
+
+        </div>
+
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.InkoWeight)
+            </p>
+            <label class="col-sm-2 control-label">Prüflingsgewicht:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.InkoWeight, new { placeholder = @Model.InkoWeight, @class = "form-control", type = "text", @required = "required" })
+            </div>
+        </div>
+
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            <h4>Aquisitionszeit 3x50 (s) analog Hytec:</h4>
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.AquisitionAddition1)
+                @Html.ValidationMessageFor(m => m.AquisitionAddition2)
+                @Html.ValidationMessageFor(m => m.AquisitionAddition3)
+            </p>
+            <label class="col-sm-2 control-label">1. Zugabe:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.AquisitionAddition1, new { placeholder = @Model.AquisitionAddition1, @class = "form-control", type = "text", @required = "required" })
+            </div>
+            <label class="col-sm-2 control-label">2. Zugabe:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.AquisitionAddition2, new { placeholder = @Model.AquisitionAddition2, @class = "form-control", type = "text", @required = "required" })
+            </div>
+            <label class="col-sm-2 control-label">3. Zugabe:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.AquisitionAddition3, new { placeholder = @Model.AquisitionAddition3, @class = "form-control", type = "text", @required = "required" })
+            </div>
+        </div>
+
+        <div class="intigena-line"></div>
+        <div class="form-group">
+            <h4>Rewet nach Aquisitionszeit (g): 90ml</h4>
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.FPDry)
+                @Html.ValidationMessageFor(m => m.FPWet)
+            </p>
+            <label class="col-sm-2 control-label">FP trocken:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.FPDry, new { placeholder = @Model.FPDry, @class = "form-control", type = "text", @required = "required" })
+            </div>
+            <label class="col-sm-2 control-label">FP feucht:</label>
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.FPWet, new { placeholder = @Model.FPWet, @class = "form-control", type = "text", @required = "required" })
+            </div>
+        </div>
+
+        <div class="intigena-line"></div>
+        <div class="form-group" id="notes">
+            <h4>Notizen:</h4>
+            @for (var i = 0; i < Model.NoteCodes.Count(); i++)
+            {
+                @Html.HiddenFor(model => Model.NoteCodes[i].Name)
+                @Html.HiddenFor(model => Model.NoteCodes[i].ErrorId)
+            }
+
+            @if (Model.Notes != null)
+            {
+                for (var i = 0; i < Model.Notes.Count; i++)
+                {
+                    <div class="form-group row" id="Note-@i">
+                        <div class="col-sm-10">
+                            <label class="col-sm-3 control-label">Error Code:</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownListFor(
+                                    m => m.Notes[i].ErrorCodeId,
+                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    "Error Code auswählen",
+                                    new { @class = "form-control" }
+                                     )
+                            </div>
+                            <label class="col-sm-3 control-label">Message:</label>
+                            <div class="col-sm-9">
+                                @Html.HiddenFor(m => m.Notes[i].Id)
+                                @Html.TextAreaFor(m => m.Notes[i]
+                                                      .Message, new { @class = "form-control", type = "text" })
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="btn btn-danger btn-lg addNote" id="@i">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/InkoAquisition/AddNote">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </a>
+        </div>
+        <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
+    }
+</div>
+

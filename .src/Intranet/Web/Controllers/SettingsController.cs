@@ -8,7 +8,7 @@ namespace Intranet.Web.Controllers
     /// <summary>
     ///     Class representing the SettingsController
     /// </summary>
-    [Authorize( Roles = "Everyone" )]
+    [Authorize( Roles = "Everyone,Jeder" )]
     public class SettingsController : BaseController
     {
         #region Properties

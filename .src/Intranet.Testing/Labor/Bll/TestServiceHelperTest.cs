@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
+using Intranet.Labor.TestEnvironment;
+using Intranet.Labor.ViewModel;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -182,5 +186,116 @@ namespace Intranet.Labor.Bll.Test
 
             Assert.Equal(null, actual.TestValueNote);
         }
+
+        #region UpdateNotes Test
+
+        /// <summary>
+        ///     Tests if Null from the viewModel puts an new empty List on TestValue;
+        /// </summary>
+        [Fact]
+        public void UpdateNotesNullNotesTest()
+        {
+            var expectedTestValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>()
+            };
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
+
+            testServiceHelper.UpdateNotes(null,expectedTestValue);
+
+            Assert.Equal(0, expectedTestValue.TestValueNote.Count);
+        }
+
+        /// <summary>
+        ///     Tests when the viewmodel has one note, the testvalue will have also one
+        /// </summary>
+        [Fact]
+        public void UpdateNotesOneNoteTest()
+        {
+            var notes = new List<TestNote>
+            {
+                new TestNote { ErrorCodeId = 1, Id = 0, Message = "Testmessage" }
+            };
+
+            var testValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>()
+            };
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
+
+            testServiceHelper.UpdateNotes(notes, testValue);
+
+            Assert.Equal(1, testValue.TestValueNote.Count);
+        }
+
+        /// <summary>
+        ///     Tests if an existing Note will be updated
+        /// </summary>
+        [Fact]
+        public void UpdateNotesUpdateExistingNoteTest()
+        {
+            var notes = new List<TestNote>
+            {
+                new TestNote { ErrorCodeId = 1, Id = 1, Message = "New Message" }
+            };
+
+            var testValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>
+                {
+                    new TestValueNote
+                    {
+                        ErrorRefId = 2,
+                        TestValueNoteId = 1,
+                        Message = "Old Message"
+                    }
+                }
+            };
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory());
+
+            testServiceHelper.UpdateNotes(notes, testValue);
+
+            Assert.Equal(1, testValue.TestValueNote.Count);
+            Assert.Equal("New Message", testValue.TestValueNote.First().Message);
+            Assert.Equal(1, testValue.TestValueNote.First().ErrorRefId);
+        }
+
+        /// <summary>
+        ///     Tests if an existing Note will be deleted
+        /// </summary>
+        [Fact]
+        public void UpdateNotesDeleteNoteTest()
+        {
+            var notes = new List<TestNote>
+            {
+                new TestNote { ErrorCodeId = 0, Id = 1, Message = "TestMessage" }
+            };
+
+            var testValue = new TestValue
+            {
+                TestValueNote = new List<TestValueNote>
+                {
+                    new TestValueNote
+                    {
+                        ErrorRefId = 2,
+                        TestValueNoteId = 1,
+                        Message = "TestMessage"
+                    }
+                }
+            };
+
+            var testBll = MockHelperBll.GetTestBllForDeletingNotes();
+
+            var testServiceHelper = new TestServiceHelper(new NLogLoggerFactory())
+            {
+                TestBll = testBll
+            };
+
+            testServiceHelper.UpdateNotes(notes, testValue);
+
+            Assert.Equal(0, testValue.TestValueNote.Count);
+        }
+
+        #endregion
     }
 }

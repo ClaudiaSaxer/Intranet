@@ -1,7 +1,6 @@
 ﻿#region Usings
 
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using Intranet.Labor.Model.labor;
@@ -13,60 +12,9 @@ namespace Intranet.Labor.ViewModel
     /// <summary>
     ///     Class representing the ViewModel for the BabyDiaperRewetController
     /// </summary>
-    public class BabyDiaperRewetEditViewModel
+    public class BabyDiaperRewetEditViewModel : BaseTestEditViewModel
     {
         #region Properties
-
-        /// <summary>
-        ///     Gets or sets the ID of the Babydapers test
-        /// </summary>
-        /// <value>
-        ///     The ID of the Babydapers test
-        /// </value>
-        public Int32 TestValueId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ID of the Test Sheet
-        /// </summary>
-        /// <value>
-        ///     The ID of the Test Sheet
-        /// </value>
-        public Int32 TestSheetId { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the TestPerson
-        /// </summary>
-        /// <value>
-        ///     The TestPerson
-        /// </value>
-        public String TestPerson { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ProductionCode
-        /// </summary>
-        /// <value>
-        ///     The ProductionCode
-        /// </value>
-        public String ProductionCode { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ProductionCodeDay
-        /// </summary>
-        /// <value>
-        ///     The ProductionCodeDay
-        /// </value>
-        [DisplayName("Tag im Jahr")]
-        [Required(ErrorMessage = "Der Tag muss angegeben werden")]
-        [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
-        public Int32 ProductionCodeDay { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the ProductionCodeTime
-        /// </summary>
-        /// <value>
-        ///     The ProductionCodeTime
-        /// </value>
-        public TimeSpan ProductionCodeTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the DiaperWeight value
@@ -74,6 +22,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The DiaperWeight value
         /// </value>
+        [DisplayName("Windeln Gewicht")]
+        [Required(ErrorMessage = "Das Windeln Gewicht muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double DiaperWeight { get; set; }
 
         /// <summary>
@@ -82,6 +33,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The RewetAfter140 value
         /// </value>
+        [DisplayName("Rewet nach 140ml")]
+        [Required(ErrorMessage = "Der Rewet-Wert nach 140ml muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double RewetAfter140 { get; set; }
 
         /// <summary>
@@ -90,6 +44,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The RewetAfter210 value
         /// </value>
+        [DisplayName("Rewet nach 210ml")]
+        [Required(ErrorMessage = "Der Rewet-Wert nach 210ml muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double RewetAfter210 { get; set; }
 
         /// <summary>
@@ -98,6 +55,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The StrikeThrough value
         /// </value>
+        [DisplayName("Strike Through (g)")]
+        [Required(ErrorMessage = "Der Strike Through muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double StrikeThrough { get; set; }
 
         /// <summary>
@@ -106,6 +66,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The Distribution value
         /// </value>
+        [DisplayName("Verteilung (mm)")]
+        [Required(ErrorMessage = "Die Verteilung muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Zahl sein")]
         public Double Distribution { get; set; }
 
         /// <summary>
@@ -114,6 +77,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime1 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 1. Zugabe")]
+        [Required(ErrorMessage = "Die Penetrationszeit nach der 1. Zugabe muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime1 { get; set; }
 
         /// <summary>
@@ -122,6 +88,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime2 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 2. Zugabe")]
+        [Required(ErrorMessage = "Die Penetrationszeit nach der 2. Zugabe muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime2 { get; set; }
 
         /// <summary>
@@ -130,6 +99,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime3 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 3. Zugabe")]
+        [Required(ErrorMessage = "Die Penetrationszeit nach der 3. Zugabe muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime3 { get; set; }
 
         /// <summary>
@@ -138,6 +110,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The PenetrationTime4 value
         /// </value>
+        [DisplayName("Penetrationszeit nach 4. Zugabe")]
+        [Required(ErrorMessage = "Die Penetrationszeit nach der 4. Zugabe muss angegeben werden")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
         public Double PenetrationTime4 { get; set; }
 
         /// <summary>
@@ -147,22 +122,6 @@ namespace Intranet.Labor.ViewModel
         ///     The TestType value
         /// </value>
         public TestTypeBabyDiaper TestType { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the Collection of Notes
-        /// </summary>
-        /// <value>
-        ///     The Collection of Notes
-        /// </value>
-        public IList<TestNote> Notes { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the Collection of NoteCodes
-        /// </summary>
-        /// <value>
-        ///     The Collection of NoteCodes
-        /// </value>
-        public IList<ErrorCode> NoteCodes { get; set; }
 
         #endregion
     }

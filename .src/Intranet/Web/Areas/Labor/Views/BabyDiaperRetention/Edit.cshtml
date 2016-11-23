@@ -5,9 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script src="/resources/js/intigena/TestEditCreate.js"></script>
 <div class="container">
     
-    <h2>Höschenwindeln - BabyDiaperRetention-Test</h2>
+    <h2>Höschenwindeln - Retention - Test</h2>
 
     <div class="intigena-line"></div>
 
@@ -18,9 +19,12 @@
         @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
         @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);
         <div class="form-group">
+            <p class="error-message">
+                @Html.ValidationMessageFor(m => m.TestPerson)
+            </p>
             <label class="col-sm-2 control-label">Testperson:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" } )
             </div>
         </div>
         <div class="form-group">
@@ -39,6 +43,9 @@
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
+            <div class="error-message">
+                @Html.ValidationMessageFor( m => m.DiaperWeight)
+            </div>
             <label class="col-sm-2 control-label">Gewicht [g]:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
@@ -47,6 +54,10 @@
         <div class="intigena-line"></div>
         <div class="form-group">
             <h4>BabyDiaperRetention (g)</h4>
+            <div class="error-message">
+                @Html.ValidationMessageFor(m => m.WeightRetentionWet)
+            </div>
+
             <label class="col-sm-2 control-label">Nass [g]:</label>
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.WeightRetentionWet, new { placeholder = @Model.WeightRetentionWet, @class = "form-control", type = "text", @required = "required" })
@@ -64,47 +75,37 @@
             @if (Model.Notes != null)
             {
                 for (var i = 0; i < Model.Notes.Count; i++)
-                {   
-                    <div>
-                        <label class="col-sm-2 control-label">Error Code:</label>
+                {
+                    <div class="form-group row" id="Note-@i">
                         <div class="col-sm-10">
-                            @Html.DropDownListFor(
-                                m => m.Notes[i].ErrorCodeId,
-                                new SelectList(Model.NoteCodes,"ErrorID","Name",Model.Notes[i].ErrorCodeId),
-                                "Error Code auswählen",
-                                new { @class = "form-control" }
-                            )
+                            <label class="col-sm-3 control-label">Error Code:</label>
+                            <div class="col-sm-9">
+                                @Html.DropDownListFor(
+                                    m => m.Notes[i].ErrorCodeId,
+                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    "Error Code auswählen",
+                                    new { @class = "form-control" }
+                                     )
+                            </div>
+                            <label class="col-sm-3 control-label">Message:</label>
+                            <div class="col-sm-9">
+                                @Html.HiddenFor(m => m.Notes[i].Id)
+                                @Html.TextAreaFor(m => m.Notes[i]
+                                                      .Message, new { @class = "form-control", type = "text" })
+                            </div>
                         </div>
-                        <label class="col-sm-2 control-label">Message:</label>
-                        <div class="col-sm-10">
-                            @Html.HiddenFor(m => m.Notes[i].Id)
-                            @Html.HiddenFor(m => m.Notes[i].ErrorCodeId)
-                            @Html.TextAreaFor( m => m.Notes[i]
-                                                   .Message, new { @class = "form-control", type = "text" } )
+                        <div class="col-sm-2">
+                            <a class="btn btn-danger btn-lg addNote" id="@i">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
                         </div>
                     </div>
                 }
             }
-            <a class="btn btn-primary btn-lg" id="addNote">
+            <a class="btn btn-primary btn-lg" id="addNote" value="/Labor/BabyDiaperRetention/AddNote">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </a>
         </div>
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
-
-        <script>
-            function addNote() {
-                console.log("test");
-                console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').action = '/Labor/BabyDiaperRetention/AddNote';
-                console.log(document.getElementById('submitForm').action);
-                document.getElementById('submitForm').submit();
-            }
-                $("#addNote").click(function () {
-                    addNote();
-                });
-                $('#submitForm').submit(function () {
-                    $(this).find(':submit').attr('disabled', 'disabled');
-                });
-        </script>
     }
 </div>

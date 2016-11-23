@@ -50,3 +50,6 @@ body {
 
 .error-message {
   color: #FF0000; }
+
+.input-validation-error {
+  border-color: #FF0000; }

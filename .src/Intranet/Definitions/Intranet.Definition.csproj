@@ -90,10 +90,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bll\ICheckDisableBll.cs" />
     <Compile Include="Bll\ISettingsBll.cs" />
     <Compile Include="Bll\IHomeService.cs" />
     <Compile Include="Bll\IHomeBll.cs" />
     <Compile Include="Bll\ISettingsService.cs" />
+    <Compile Include="ICheckDisableService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
