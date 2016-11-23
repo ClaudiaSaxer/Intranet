@@ -32,9 +32,25 @@ namespace Intranet.Labor.Bll
         /// </summary>
         public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
 
+
+        /// <summary>
+        ///     Gets or sets the Helper for Roles
+        /// </summary>
+        public IRoles RolesHelper { get; set; }
+
         #endregion
 
-      
+
+        /// <summary>
+        ///     Computes if the user can Edit the Incontinence Pad
+        /// </summary>
+        /// <returns></returns>
+        public Boolean CanUserEdit()
+            => RolesHelper
+                .GetRolesForUser()
+                .ToList()
+                .Any(s => s.Equals("LaborUser") || s.Equals("LaborAdmin"));
+
         /// <summary>
         ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct
         ///     <see cref="TestTypeIncontinencePad" /> and
