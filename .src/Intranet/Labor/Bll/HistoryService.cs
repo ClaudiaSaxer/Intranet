@@ -101,7 +101,7 @@ namespace Intranet.Labor.Bll
 
         #region Private Methods
 
-        private RwType GetRwTypeBaby(TestSheet testSheet)
+        private static RwType GetRwTypeBaby(TestSheet testSheet)
         {
             var result = RwType.Ok;
             foreach ( var babyDiaper in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Average ).Select( testValue => testValue.BabyDiaperTestValue ) )
@@ -130,7 +130,7 @@ namespace Intranet.Labor.Bll
             return result;
         }
 
-        private RwType GetRwTypeInko(TestSheet testSheet)
+        private static RwType GetRwTypeInko(TestSheet testSheet)
         {
             var result = RwType.Ok;
             foreach (var inko in testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Average).Select(testValue => testValue.IncontinencePadTestValue))
