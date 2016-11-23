@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseTestEditViewModel.cs" />
+    <Compile Include="History\HistoryItem.cs" />
+    <Compile Include="History\HistoryViewModel.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadTestInfo.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTime.cs" />
     <Compile Include="IncontinencePadLaborCreator\IncontinencePadAcquisitionTimeTestValue.cs" />
