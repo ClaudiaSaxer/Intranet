@@ -243,6 +243,16 @@ namespace Intranet.Web.IoC
                    .As<IShiftHelper>()
                    .PropertiesAutowired()
                    .InstancePerRequest();
+
+            builder.RegisterType<HistoryBll>()
+                   .As<IHistoryBll>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
+
+            builder.RegisterType<HistoryService>()
+                   .As<IHistoryService>()
+                   .PropertiesAutowired()
+                   .InstancePerRequest();
         }
 
         /// <summary>

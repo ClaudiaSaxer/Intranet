@@ -23,6 +23,14 @@ namespace Intranet.Labor.ViewModel
         public String FaNr { get; set; }
 
         /// <summary>
+        ///     Gets or sets a Info-Message for the View
+        /// </summary>
+        /// <value>
+        ///     The info message
+        /// </value>
+        public String Message { get; set; }
+
+        /// <summary>
         ///     Gets or sets the Sheets
         ///     Collection contains an HistoryItem
         /// </summary>

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Intranet.Labor.Model;
+﻿#region Usings
+
+using System;
+using Intranet.Labor.Model.labor;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel
 {
@@ -12,6 +12,8 @@ namespace Intranet.Labor.ViewModel
     /// </summary>
     public class HistoryItem
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the ID of the Test Sheet
         /// </summary>
@@ -29,10 +31,10 @@ namespace Intranet.Labor.ViewModel
         public String FaNr { get; set; }
 
         /// <summary>
-        ///     Gets or sets the Shift
+        ///     Gets or sets the shift
         /// </summary>
-        /// <value>the shift of the test sheet</value>
-        public ShiftType ShiftType { get; set; }
+        /// <value>the shift</value>
+        public String Shift { get; set; }
 
         /// <summary>
         ///     Gets or sets the number of the machine
@@ -45,5 +47,25 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the timestamp of the creation</value>
         public DateTime CreatedDateTime { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the rw type, telling if something is wrong.
+        /// </summary>
+        /// <value>seths the type</value>
+        public RwType RwType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the controller for more details
+        /// </summary>
+        /// <value>the controller for more detail</value>
+        public String Controller { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the action for more detail
+        /// </summary>
+        /// <value>the action for more detail</value>
+        public String Action { get; set; }
+
+        #endregion
     }
 }

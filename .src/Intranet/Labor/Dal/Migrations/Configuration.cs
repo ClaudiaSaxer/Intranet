@@ -520,6 +520,7 @@ namespace Intranet.Labor.Dal.Migrations
                 PenetrationTimeAdditionFourth = 0,
                 PenetrationTimeAdditionFirst = 0,
                 RetentionAfterZentrifugePercent = 0,
+                PenetrationRwType = RwType.Ok,
                 TestType = TestTypeBabyDiaper.RewetAndPenetrationTime
             };
             var babyDiapersPenetrationTimeTestStandardDeviation = new BabyDiaperTestValue
@@ -532,6 +533,7 @@ namespace Intranet.Labor.Dal.Migrations
                 PenetrationTimeAdditionFirst = 0,
                 RetentionAfterZentrifugePercent = 0,
                 WeightDiaperDry = 0,
+                PenetrationRwType = RwType.Ok,
                 TestType = TestTypeBabyDiaper.RewetAndPenetrationTime
             };
 
