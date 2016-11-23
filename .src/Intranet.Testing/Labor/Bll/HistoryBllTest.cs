@@ -1,11 +1,12 @@
-﻿using System;
+﻿#region Usings
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -26,39 +27,16 @@ namespace Intranet.Labor.Bll.Test
                     testSheets.AsQueryable()
                 );
 
-            var target = new HistoryBll()
+            var target = new HistoryBll
             {
                 TestSheetRepository = testSheetRepository
             };
 
-            var actual = target.GetTestSheets("FA123456");
+            var actual = target.GetTestSheets( "FA123456" );
 
-            Assert.Equal(0,actual.ToList().Count);
-        }
-
-        /// <summary>
-        ///     Test when it has one Testsheet with the FaNr you are looking for
-        /// </summary>
-        [Fact]
-        public void GetTestSheetsOneSheetTest()
-        {
-            var testSheets = new List<TestSheet>
-            {
-                new TestSheet { FaNr = "FA123456"}
-            };
-            var testSheetRepository =
-                MockHelperBll.GetTestSheetRepositoryForHistory(
-                    testSheets.AsQueryable()
-                );
-
-            var target = new HistoryBll()
-            {
-                TestSheetRepository = testSheetRepository
-            };
-
-            var actual = target.GetTestSheets("FA123456");
-
-            Assert.Equal(1, actual.ToList().Count);
+            Assert.Equal( 0,
+                          actual.ToList()
+                                .Count );
         }
 
         /// <summary>
@@ -69,22 +47,51 @@ namespace Intranet.Labor.Bll.Test
         {
             var testSheets = new List<TestSheet>
             {
-                new TestSheet { FaNr = "FA654321"},
-                new TestSheet { FaNr = "FA123456"}
+                new TestSheet { FaNr = "FA654321" },
+                new TestSheet { FaNr = "FA123456" }
             };
             var testSheetRepository =
                 MockHelperBll.GetTestSheetRepositoryForHistory(
                     testSheets.AsQueryable()
                 );
 
-            var target = new HistoryBll()
+            var target = new HistoryBll
             {
                 TestSheetRepository = testSheetRepository
             };
 
-            var actual = target.GetTestSheets("FA123456");
+            var actual = target.GetTestSheets( "FA123456" );
 
-            Assert.Equal(1, actual.ToList().Count);
+            Assert.Equal( 1,
+                          actual.ToList()
+                                .Count );
+        }
+
+        /// <summary>
+        ///     Test when it has one Testsheet with the FaNr you are looking for
+        /// </summary>
+        [Fact]
+        public void GetTestSheetsOneSheetTest()
+        {
+            var testSheets = new List<TestSheet>
+            {
+                new TestSheet { FaNr = "FA123456" }
+            };
+            var testSheetRepository =
+                MockHelperBll.GetTestSheetRepositoryForHistory(
+                    testSheets.AsQueryable()
+                );
+
+            var target = new HistoryBll
+            {
+                TestSheetRepository = testSheetRepository
+            };
+
+            var actual = target.GetTestSheets( "FA123456" );
+
+            Assert.Equal( 1,
+                          actual.ToList()
+                                .Count );
         }
 
         /// <summary>
@@ -95,22 +102,24 @@ namespace Intranet.Labor.Bll.Test
         {
             var testSheets = new List<TestSheet>
             {
-                new TestSheet { FaNr = "FA123456"},
-                new TestSheet { FaNr = "FA123456"}
+                new TestSheet { FaNr = "FA123456" },
+                new TestSheet { FaNr = "FA123456" }
             };
             var testSheetRepository =
                 MockHelperBll.GetTestSheetRepositoryForHistory(
                     testSheets.AsQueryable()
                 );
 
-            var target = new HistoryBll()
+            var target = new HistoryBll
             {
                 TestSheetRepository = testSheetRepository
             };
 
-            var actual = target.GetTestSheets("FA123456");
+            var actual = target.GetTestSheets( "FA123456" );
 
-            Assert.Equal(2, actual.ToList().Count);
+            Assert.Equal( 2,
+                          actual.ToList()
+                                .Count );
         }
     }
 }

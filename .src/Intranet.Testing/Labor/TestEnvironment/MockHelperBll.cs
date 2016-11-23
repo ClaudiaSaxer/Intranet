@@ -390,5 +390,25 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns(testSheets);
             return mock.Object;
         }
+
+
+        /// <summary>
+        ///     A mock for HistoryBll
+        /// </summary>
+        /// <returns>a IHistoryBll moq</returns>
+        public static IHistoryBll GetHistoryBll(List<TestSheet> testSheets)
+        {
+            var mock = new Mock<IHistoryBll>
+            {
+                Name = "MockHelper.GetHistoryBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetTestSheets(It.IsAny<String>()))
+                .Returns(testSheets);
+
+
+            return mock.Object;
+        }
     }
 }

@@ -57,16 +57,17 @@ namespace Intranet.Labor.Bll
                 FaNr = faNr,
                 Sheets = new List<HistoryItem>()
             };
-            var testSheets = HistoryBll.GetTestSheets( faNr ).ToList();
-            if ( testSheets.IsNull() )
+            var dbTestSheets = HistoryBll.GetTestSheets( faNr );
+            if (dbTestSheets.IsNull() )
             {
                 Logger.Error("Datenbankproblem beim suchen nach Testsheets mit FaNr. " +faNr);
                 viewModel.Message = "Es ist ein Problem aufgetreten. Bitte wenden Sie sich an ihren Administrator";
                 return viewModel;
             }
+            var testSheets = dbTestSheets.ToList();
             if ( !testSheets.Any() )
             {
-                viewModel.Message = "Kein Eintrag mit Fertigunsnummer " + faNr + " gefunden." ;
+                viewModel.Message = "Kein Eintrag mit Fertigunsnummer " + faNr + " gefunden.";
                 return viewModel;
             }
             foreach ( var testSheet in testSheets )

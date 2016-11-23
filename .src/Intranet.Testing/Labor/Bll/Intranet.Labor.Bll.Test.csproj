@@ -76,6 +76,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HistoryBllTest.cs" />
+    <Compile Include="HistoryServiceTest.cs" />
     <Compile Include="IncontinencePadLaborCreaterServiceTest.cs" />
     <Compile Include="IncontinencePadLaborCreatorServiceHelperTest.cs" />
     <Compile Include="BabyDiaperRetentionServiceHelperTest.cs" />
