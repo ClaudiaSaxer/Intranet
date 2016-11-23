@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Security;
 
 namespace Intranet.Common
@@ -17,6 +18,14 @@ namespace Intranet.Common
         /// <returns>the current user roles</returns>
         public IEnumerable<String> GetRolesForUser() => Roles.GetRolesForUser();
 
+        /// <summary>
+        ///     Computes if the user can Edit the Baby Diaper
+        /// </summary>
+        /// <returns></returns>
+        public Boolean CanUserEditLabor()
+            => GetRolesForUser()
+                .ToList()
+                .Any(s => s.Equals("LaborUser") || s.Equals("LaborAdmin"));
         #endregion
     }
 }

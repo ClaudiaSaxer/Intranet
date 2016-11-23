@@ -19,5 +19,10 @@ namespace Intranet.Common
         /// <returns>the current user roles</returns>
         IEnumerable<String> GetRolesForUser();
 
+        /// <summary>
+        ///     Computes if the user can Edit Labor
+        /// </summary>
+        /// <returns></returns>
+        Boolean CanUserEditLabor();
     }
 }

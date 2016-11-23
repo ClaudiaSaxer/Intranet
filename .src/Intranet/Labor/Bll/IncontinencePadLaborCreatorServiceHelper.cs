@@ -47,9 +47,7 @@ namespace Intranet.Labor.Bll
         /// <returns></returns>
         public Boolean CanUserEdit()
             => RolesHelper
-                .GetRolesForUser()
-                .ToList()
-                .Any(s => s.Equals("LaborUser") || s.Equals("LaborAdmin"));
+                .CanUserEditLabor();
 
         /// <summary>
         ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct

@@ -51,9 +51,7 @@ namespace Intranet.Labor.Bll
         /// <returns></returns>
         public Boolean CanUserEdit()
             => RolesHelper
-                .GetRolesForUser()
-                .ToList()
-                .Any( s => s.Equals( "LaborUser" ) || s.Equals( "LaborAdmin" ) );
+                .CanUserEditLabor();
 
         /// <summary>
         ///     gets the average weight for all tests
