@@ -6,6 +6,7 @@ using System.Linq;
 using Castle.Core.Internal;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+using Intranet.Labor.Definition.Bll;
 using Intranet.Labor.Model;
 using Intranet.Labor.Model.labor;
 using Intranet.Model;
@@ -89,6 +90,24 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup( x => x.GetAll() )
                 .Returns( shiftSchedules );
 
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for BabyDiaperRetentionBll for delete methods
+        /// </summary>
+        /// <param name="testValue">testValue data which would be in the db</param>
+        /// <returns>a ITestBll moq</returns>
+        public static ITestBll GetBabyDiaperBllForDelete( TestValue testValue )
+        {
+            var mock = new Mock<ITestBll>
+            {
+                Name = "MockHelper.GetBabyDiaperBllForDelete",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.DeleteTestValue( It.IsAny<Int32>() ) )
+                .Returns( testValue );
 
             return mock.Object;
         }
@@ -117,7 +136,7 @@ namespace Intranet.Labor.TestEnvironment
         /// </summary>
         /// <param name="testSheet">the testsheet</param>
         /// <returns>a moq for laborcreatorbll</returns>
-        public static IIncontinencePadLaborCreatorBll GetIncontinencePadLaborCreatorBll(TestSheet testSheet)
+        public static IIncontinencePadLaborCreatorBll GetIncontinencePadLaborCreatorBll( TestSheet testSheet )
         {
             var mock = new Mock<IIncontinencePadLaborCreatorBll>
             {
@@ -125,19 +144,130 @@ namespace Intranet.Labor.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup(x => x.GetTestSheetForId(It.IsAny<Int32>()))
-                .Returns(testSheet);
+            mock.Setup( x => x.GetTestSheetForId( It.IsAny<Int32>() ) )
+                .Returns( testSheet );
 
             return mock.Object;
         }
 
+        /// <summary>
+        ///     A mock for LaborCreatorBll
+        /// </summary>
+        /// <param name="testSheet">the testsheet</param>
+        /// <param name="runningTestSheets">the running testsheets</param>
+        /// <returns>a moq for laborcreatorbll</returns>
+        public static ILaborCreatorBll GetLaborCreatorsBll( TestSheet testSheet, ICollection<TestSheet> runningTestSheets )
+        {
+            var mock = new Mock<ILaborCreatorBll>
+            {
+                Name = "MockHelper.ILaborCreatorBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetTestSheetForFaNr( It.IsAny<String>() ) )
+                .Returns( testSheet );
+
+            mock.Setup( x => x.InitTestSheetForFaNr( It.IsAny<String>() ) )
+                .Returns( testSheet );
+
+            mock.Setup( x => x.RunningTestSheets() )
+                .Returns( runningTestSheets );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for LaborDashboard Bll
+        /// </summary>
+        /// <returns>a moq for laborcreatorbll</returns>
+        public static ILaborDashboardBll GetLaborDashboardBll( ICollection<TestSheet> testSheets )
+        {
+            var mock = new Mock<ILaborDashboardBll>
+            {
+                Name = "MockHelper.ILaborDashboardBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetTestSheetForActualAndLastThreeShifts() )
+                .Returns( testSheets.ToList() );
+
+            mock.Setup( x => x.GetTestSheetForMinusXShiftPerMachineNr( It.IsAny<Int32>(), It.IsAny<String>() ) )
+                .Returns( testSheets.ToList() );
+            mock.Setup( x => x.GetTestSheetForShifts( It.IsAny<List<ShiftSchedule>>() ) )
+                .Returns( testSheets.ToList() );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for LaborHomeBll
+        /// </summary>
+        /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
+        /// <returns>a IloaborHomebll moq</returns>
+        public static ILaborHome GetLaborHomeBll( IEnumerable<Module> modules )
+        {
+            var mock = new Mock<ILaborHome>
+            {
+                Name = "MockHelper.GetLaborHomeBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
+                .Returns( modules );
+
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for the shifthelper
+        /// </summary>
+        /// <param name="shiftType">the current shift type</param>
+        /// <param name="shiftScheduleCurrent">the current shift schedule</param>
+        /// <param name="lastXShiftSchedules">the last x shift schedules</param>
+        /// <param name="dateExistsInShift">Function to determate if date exists in shift</param>
+        /// <returns>a mock for the interface ishifthelper</returns>
+        public static IShiftHelper GetShiftHelper( ShiftType? shiftType = null,
+                                                   ShiftSchedule shiftScheduleCurrent = null,
+                                                   List<ShiftSchedule> lastXShiftSchedules = null,
+                                                   Func<DateTime, Boolean> dateExistsInShift = null )
+        {
+            var mock = new Mock<IShiftHelper>
+            {
+                Name = "MockHelper.GetShiftHelper",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetCurrentShift() )
+                .Returns( shiftType );
+
+            mock.Setup( x => x.GetCurrentShiftShedule() )
+                .Returns( shiftScheduleCurrent );
+
+            mock.Setup( x => x.GetLastXShiftSchedule( It.IsAny<Int32>() ) )
+                .Returns( lastXShiftSchedules );
+
+            mock.Setup(
+                    x =>
+                        x.DateExistsInShifts(
+                            It.Is<DateTime>( time =>
+                                                 lastXShiftSchedules.Exists(
+                                                     schedule =>
+                                                         ( schedule.StartTime.Hours <= time.Hour ) && ( schedule.EndTime.Hours >= time.Hour )
+                                                         && ( ( schedule.StartDay == time.DayOfWeek ) || ( schedule.EndDay == time.DayOfWeek ) ) ) ),
+                            It.IsAny<List<ShiftSchedule>>() ) )
+                .Returns( true );
+
+            mock.Setup( x => x.DateExistsInShift( It.Is<DateTime>( time => time != null && dateExistsInShift( time )), It.IsAny<ShiftSchedule>()  ) ).Returns( true );
+
+            return mock.Object;
+        }
 
         /// <summary>
         ///     A mock for BabyDiaperRetentionBll
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <returns>a IBabyDiaperRetentionBll moq</returns>
-        public static ITestBll GetTestBll(TestSheet testSheet)
+        public static ITestBll GetTestBll( TestSheet testSheet )
         {
             var mock = new Mock<ITestBll>
             {
@@ -172,58 +302,13 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
-        ///     A mock for BabyDiaperRetentionBll for delete methods
-        /// </summary>
-        /// <param name="testValue">testValue data which would be in the db</param>
-        /// <returns>a ITestBll moq</returns>
-        public static ITestBll GetBabyDiaperBllForDelete(TestValue testValue)
-        {
-            var mock = new Mock<ITestBll>
-            {
-                Name = "MockHelper.GetBabyDiaperBllForDelete",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup( x => x.DeleteTestValue(It.IsAny<Int32>()))
-                .Returns( testValue );
-				
-			return mock.Object;
-        }
-		
-		/// <summary>
-        ///     A mock for LaborCreatorBll
-        /// </summary>
-        /// <param name="testSheet">the testsheet</param>
-        /// <param name="runningTestSheets">the running testsheets</param>
-        /// <returns>a moq for laborcreatorbll</returns>
-        public static ILaborCreatorBll GetLaborCreatorsBll( TestSheet testSheet, ICollection<TestSheet> runningTestSheets )
-        {
-            var mock = new Mock<ILaborCreatorBll>
-            {
-                Name = "MockHelper.ILaborCreatorBll",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup( x => x.GetTestSheetForFaNr( It.IsAny<String>() ) )
-                .Returns( testSheet );
-
-            mock.Setup( x => x.InitTestSheetForFaNr( It.IsAny<String>() ) )
-                .Returns( testSheet );
-
-            mock.Setup( x => x.RunningTestSheets() )
-                .Returns( runningTestSheets );
-
-            return mock.Object;
-        }
-
-        /// <summary>
         ///     A mock for BabyDiaperRetentionBll for Save methods
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
         /// <param name="productionOrder">testSheet data which would be in the db</param>
         /// <param name="testValue">testValue data which would be in the db</param>
         /// <returns>a ITestBll moq</returns>
-        public static ITestBll GetTestBllForSavingAndUpdating(TestSheet testSheet, ProductionOrder productionOrder, TestValue testValue)
+        public static ITestBll GetTestBllForSavingAndUpdating( TestSheet testSheet, ProductionOrder productionOrder, TestValue testValue )
         {
             var mock = new Mock<ITestBll>
             {
@@ -231,36 +316,18 @@ namespace Intranet.Labor.TestEnvironment
                 DefaultValue = DefaultValue.Mock
             };
 
-            mock.Setup(x => x.SaveNewTestValue(It.IsAny<TestValue>()))
-                .Returns((TestValue tValue) => tValue);
-            mock.Setup(x => x.UpdateTestValue(It.IsAny<TestValue>()))
-                .Returns((TestValue tValue) => tValue);
+            mock.Setup( x => x.SaveNewTestValue( It.IsAny<TestValue>() ) )
+                .Returns( ( TestValue tValue ) => tValue );
+            mock.Setup( x => x.UpdateTestValue( It.IsAny<TestValue>() ) )
+                .Returns( ( TestValue tValue ) => tValue );
             mock.Setup( x => x.GetTestSheetInfo( It.IsAny<Int32>() ) )
                 .Returns( testSheet );
-            mock.Setup(x => x.GetProductionOrder(It.IsAny<String>()))
-                .Returns(productionOrder);
-            mock.Setup(x => x.GetTestValue(It.IsAny<Int32>()))
-                .Returns(testValue);
+            mock.Setup( x => x.GetProductionOrder( It.IsAny<String>() ) )
+                .Returns( productionOrder );
+            mock.Setup( x => x.GetTestValue( It.IsAny<Int32>() ) )
+                .Returns( testValue );
             mock.Setup( x => x.UpdateTestSheet() )
                 .Returns( 0 );
-				
-			return mock.Object;
-        }
-		/// <summary>
-        ///     A mock for LaborHomeBll
-        /// </summary>
-        /// <param name="modules">Modules returned by AllLaborModulesForRoles</param>
-        /// <returns>a IloaborHomebll moq</returns>
-        public static ILaborHome GetLaborHomeBll( IEnumerable<Module> modules )
-        {
-            var mock = new Mock<ILaborHome>
-            {
-                Name = "MockHelper.GetLaborHomeBll",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup( x => x.AllLaborModulesForRoles( It.IsAny<IEnumerable<String>>() ) )
-                .Returns( modules );
 
             return mock.Object;
         }

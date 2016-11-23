@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -223,6 +223,7 @@
     <Compile Include="Areas\Labor\Controllers\InkoRewetController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorBabyController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorController.cs" />
+    <Compile Include="Areas\Labor\Controllers\LaborDashboardController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborHomeController.cs" />
     <Compile Include="Areas\Labor\LaborAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -384,7 +385,10 @@
     <Content Include="Areas\Labor\Views\BabyDiaperRewet\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\LaborCreatorInko\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\InkoRewet\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\LaborDashboard\Index.cshtml" />
+    <Content Include="assets\sass\Dashboard.scss" />
     <Content Include="Areas\Labor\Views\InkoRetention\Edit.cshtml" />
+    <Content Include="Areas\Labor\Views\LaborDashboard\DashboardPartial.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />

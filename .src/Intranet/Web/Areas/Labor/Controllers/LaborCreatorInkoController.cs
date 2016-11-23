@@ -54,18 +54,16 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Edit( Int32 id = 0 )
         {
             if ( id.IsNull() )
-                return RedirectToAction( "Index",
-                                         new RouteValueDictionary(
-                                             new { controller = "LaborCreator", action = "Index" } ) );
+                return RedirectToAction("Index", "LaborCreator", new { area = "Labor" });
+
 
             try
             {
                 var laborCreatorView = IncontinencePadLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
-                    return RedirectToAction( "Index",
-                                             new RouteValueDictionary(
-                                                 new { controller = "LaborCreator", action = "Index" } ) );
+                    return RedirectToAction("Index", "LaborCreator", new { area = "Labor" });
+
                 return View( laborCreatorView );
             }
             catch ( Exception e )
