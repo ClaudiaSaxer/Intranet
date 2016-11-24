@@ -28,8 +28,6 @@ namespace Intranet.Web.Filter
         {
             if (!CheckDisableService.IsVisible(ModuleName))
                 filterContext.Result = new HttpNotFoundResult("Das Module " + ModuleName + " ist zurzeit nicht Verfügbar. Bitte wenden Sie sich an den Administrator.");
-            /*filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(
-                                                                 new { controller = "Home", action = "Index", area = "" }));*/
         }
     }
 }

@@ -1,17 +1,25 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Web.Mvc;
-using System.Web.Routing;
 using Extend;
 using Intranet.Common;
+using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     ///     Class representing the controller for the labor creator
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles =
+         RoleSettings.LaborAdmin + "," +
+         RoleSettings.LaborUser + "," +
+         RoleSettings.LaborViewer )]
     public class LaborCreatorBabyController : BaseController
     {
         #region Properties
@@ -56,17 +64,15 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Edit( Int32 id = 0 )
         {
             if ( id.IsNull() )
-                return RedirectToAction("Index", "LaborCreator", new { area = "Labor"});
-
+                return RedirectToAction( "Index", "LaborCreator", new { area = "Labor" } );
 
             try
             {
                 var laborCreatorView = BabyDiaperLaborCreatorService.GetLaborCreatorViewModel( id );
 
                 if ( laborCreatorView == null )
-                    return RedirectToAction("Index", "LaborCreator", new { area = "Labor" });
+                    return RedirectToAction( "Index", "LaborCreator", new { area = "Labor" } );
 
-         
                 return View( laborCreatorView );
             }
             catch ( Exception e )

@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
     <UseGlobalApplicationHostFile />
@@ -218,6 +218,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
+    <Compile Include="Areas\Labor\Controllers\HistoryController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoAquisitionController.cs" />
     <Compile Include="Areas\Labor\Controllers\InkoRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\LaborCreatorInkoController.cs" />
@@ -392,6 +393,7 @@
     <Content Include="Areas\Labor\Views\InkoRetention\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\InkoAquisition\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\LaborDashboard\DashboardPartial.cshtml" />
+    <Content Include="Areas\Labor\Views\History\Search.cshtml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
