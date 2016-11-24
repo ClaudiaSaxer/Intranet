@@ -108,8 +108,8 @@ namespace Intranet.Labor.Bll
                 {
                     PenetrationTimeAdditionFourth = Round( penetrationTime.PenetrationTimeAdditionFourth ),
                     PenetrationTimeAdditionSecond = Round( penetrationTime.PenetrationTimeAdditionSecond ),
-                    PenetrationTimeAdditionFirst = Round( penetrationTime.PenetrationTimeAdditionFirst )),
-                    PenetrationTimeAdditionThird = Round( penetrationTime.PenetrationTimeAdditionThird )),
+                    PenetrationTimeAdditionFirst = Round( penetrationTime.PenetrationTimeAdditionFirst ),
+                    PenetrationTimeAdditionThird = Round( penetrationTime.PenetrationTimeAdditionThird ),
                     PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
                 }
                 ;
