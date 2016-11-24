@@ -397,5 +397,13 @@ namespace Intranet.Labor.Bll
                     RewetRW = rewet.RewetAfterAcquisitionTimeRw
                 };
         }
+        /// <summary>
+        /// Round double to value to show on viewmodel 
+        /// </summary>
+        /// <param name="value">the double before round</param>
+        /// <returns>the double after Round</returns>
+        private Double Round(Double value) => Math.Round(value, 2);
     }
+
+
 }
