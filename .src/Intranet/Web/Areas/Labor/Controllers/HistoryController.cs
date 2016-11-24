@@ -1,20 +1,25 @@
-﻿using System;
+﻿#region Usings
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Intranet.Common;
+using Intranet.Common.Role;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     ///     Class representing the InkoAquisitionController
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles =
+         RoleSettings.LaborAdmin + "," +
+         RoleSettings.LaborUser + "," +
+         RoleSettings.LaborViewer )]
     public class HistoryController : BaseController
     {
         #region Properties
@@ -35,10 +40,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Initialize a new instance of the <see cref="HistoryController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public HistoryController(ILoggerFactory loggerFactory)
+        public HistoryController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(HistoryController) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
@@ -53,7 +58,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             {
                 Sheets = new List<HistoryItem>()
             };
-            return View("Search", viewModel);
+            return View( "Search", viewModel );
         }
 
         /// <summary>
@@ -62,10 +67,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="viewModel">the viewmodel which contains the FaNr</param>
         /// <returns>View Listed with a history list</returns>
         [HttpPost]
-        public ActionResult Search(HistoryViewModel viewModel)
+        public ActionResult Search( HistoryViewModel viewModel )
         {
             viewModel = HistoryService.GetHistoryViewModel( viewModel.FaNr );
-            return View("Search", viewModel);
+            return View( "Search", viewModel );
         }
     }
 }

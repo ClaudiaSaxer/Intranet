@@ -14,14 +14,14 @@ namespace Intranet.Common.Role
         /// <summary>
         /// The Admin of the Labor, can do everything in the Labor. Inclussive Settings.
         /// </summary>
-        public static String LaborAdmin => "Everyone";
+        public const String LaborAdmin = "Everyone";
         /// <summary>
         /// The User of the Labor, only has read and write access.
         /// </summary>
-        public static String LaborUser => "LaborUser";
+        public const String LaborUser = "LaborUser";
         /// <summary>
         /// The Viewer of the Labor, only has read access.
         /// </summary>
-        public static String LaborViewer => "LaborViewer";
+        public const String LaborViewer = "LaborViewer";
     }
 }

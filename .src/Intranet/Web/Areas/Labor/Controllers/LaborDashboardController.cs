@@ -1,11 +1,18 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
+using Intranet.Common.Role;
+using Intranet.Web.Filter;
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
     ///     Class representing a Controller for the Labor Dashboard
     /// </summary>
+    [CheckDisable(ModuleName = "Labor")]
+    [Authorize(Roles =
+         RoleSettings.LaborAdmin + "," +
+         RoleSettings.LaborUser + "," +
+         RoleSettings.LaborViewer)]
     public class LaborDashboardController : BaseController
     {
         #region Properties

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
+using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
@@ -17,6 +18,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
     ///     Class representing the InkoAquisitionController
     /// </summary>
     [CheckDisable(ModuleName = "Labor")]
+    [Authorize(Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser)]
     public class InkoAquisitionController : BaseController
     {
         #region Properties

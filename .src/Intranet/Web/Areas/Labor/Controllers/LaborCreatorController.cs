@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
+using Intranet.Common.Role;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
@@ -12,6 +13,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
     ///     Class representing Labor Creator
     /// </summary>
     [CheckDisable(ModuleName = "Labor")]
+    [Authorize(Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser)]
     public class LaborCreatorController : BaseController
     {
         #region Properties
