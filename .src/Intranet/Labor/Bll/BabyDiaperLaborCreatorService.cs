@@ -65,6 +65,8 @@ namespace Intranet.Labor.Bll
                 var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection(babydiaper);
                 var penetrationTimeAverage = Helper.ToPenetrationTimeAverage(babydiaper);
                 var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation(babydiaper);
+
+                var canEdit = Helper.CanUserEdit();
                 var vm = new BabyDiaperLaborCreatorViewModel
                 {
                     Producer = "Intigena",
@@ -84,7 +86,8 @@ namespace Intranet.Labor.Bll
                     BabyDiaperPenetrationTimeAverage = penetrationTimeAverage,
                     WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
                     WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
-                    TestSheetId = testSheetId
+                    TestSheetId = testSheetId,
+                    CanEdit = canEdit 
                 };
                 return vm;
             }

@@ -18,10 +18,19 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper
     {
+        #region Properties
+
         /// <summary>
-        /// Labor Creator Service Helper for Common 
+        ///     Labor Creator Service Helper for Common
         /// </summary>
         public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the Helper for Roles
+        /// </summary>
+        public IRoles RolesHelper { get; set; }
+
+        #endregion
 
         #region Ctor
 
@@ -35,6 +44,14 @@ namespace Intranet.Labor.Bll
         }
 
         #endregion
+
+        /// <summary>
+        ///     Computes if the user can Edit the Baby Diaper
+        /// </summary>
+        /// <returns></returns>
+        public Boolean CanUserEdit()
+            => RolesHelper
+                .CanUserEditLabor();
 
         /// <summary>
         ///     gets the average weight for all tests
@@ -85,21 +102,20 @@ namespace Intranet.Labor.Bll
         /// <returns>The Penetration Time View Model with the data collected from the model</returns>
         public BabyDiaperPenetrationTime ToPenetrationTime( BabyDiaperTestValue penetrationTime )
         {
-            ValidateRequiredItem(penetrationTime.PenetrationRwType, "penetration rw");
+            ValidateRequiredItem( penetrationTime.PenetrationRwType, "penetration rw" );
 
             return new BabyDiaperPenetrationTime
-        {
-            PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
-            PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
-            PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
-            PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird,
-            PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
+                {
+                    PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
+                    PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
+                    PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
+                    PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird,
+                    PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
+                }
+                ;
         }
 
-        ;
-    }
-
-    /// <summary>
+        /// <summary>
         ///     Creates a BabyDiaperPenetrationTime Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
@@ -140,7 +156,7 @@ namespace Intranet.Labor.Bll
         /// <returns>a collection for all penetration time tests</returns>
         public ICollection<BabyDiaperPenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection( IEnumerable<TestValue> testValues )
             => ToTestValuesCollectionByTestType( testValues,
-                                                 TestValueType.Single, 
+                                                 TestValueType.Single,
                                                  new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.RewetAndPenetrationTime },
                                                  ToPenetrationTimeTestValue );
 
@@ -294,6 +310,49 @@ namespace Intranet.Labor.Bll
             };
 
         /// <summary>
+        ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
+        ///     parameter
+        /// </summary>
+        /// <typeparam name="T">
+        ///     the collection type. For example: <see cref="BabyDiaperRewetTestValue" />,
+        ///     <see cref="BabyDiaperPenetrationTimeTestValue" />,<see cref="BabyDiaperRetentionTestValue" />
+        /// </typeparam>
+        /// <param name="testValue">the testvalues that contain the data</param>
+        /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
+        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
+        /// <param name="toTestTypeTestValueAction">
+        ///     the action the get the correct data for a collection item. For example:
+        ///     <see cref="ToRewetTestValue" />, <see cref="ToRetentionTestValue" />, <see cref="ToPenetrationTimeTestValue" />
+        /// </param>
+        /// <returns>
+        ///     A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction" /> given as a
+        ///     input action
+        /// </returns>
+        public Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
+                                                                  TestValueType testValueType,
+                                                                  ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
+                                                                  Func<BabyDiaperTestValue, String, String, Int32, T> toTestTypeTestValueAction )
+        {
+            var tests = new Collection<T>();
+            var values = testValue.ToList()
+                                  .Where(
+                                      x =>
+                                          ( x.TestValueType == testValueType )
+                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
+                                  .ForEach(
+                                      x =>
+                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
+                                                                                x.LastEditedPerson,
+                                                                                LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
+                                                                                                                            x.TestSheet.CreatedDateTime.Year,
+                                                                                                                            x.DayInYearOfArticleCreation,
+                                                                                                                            x.BabyDiaperTestValue.DiaperCreatedTime )
+                                                                                ,
+                                                                                x.TestValueId ) ) );
+            return tests;
+        }
+
+        /// <summary>
         ///     Validates a required item
         /// </summary>
         /// <param name="item">the idtem to be validated</param>
@@ -341,59 +400,14 @@ namespace Intranet.Labor.Bll
         public Collection<Double> AllWeightsOfArticleTypeForSingle( IEnumerable<TestValue> testValues, ArticleType articleType )
         {
             var weights = new Collection<Double>();
-            
+
             testValues.ForEach( value =>
                                 {
-                                    if ( value.ArticleTestType == articleType && value.TestValueType == TestValueType.Single)
+                                    if ( ( value.ArticleTestType == articleType ) && ( value.TestValueType == TestValueType.Single ) )
                                         weights.Add( value.BabyDiaperTestValue.WeightDiaperDry );
                                 }
             );
             return weights;
         }
-
-        /// <summary>
-        ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
-        ///     parameter
-        /// </summary>
-        /// <typeparam name="T">
-        ///     the collection type. For example: <see cref="BabyDiaperRewetTestValue" />,
-        ///     <see cref="BabyDiaperPenetrationTimeTestValue" />,<see cref="BabyDiaperRetentionTestValue" />
-        /// </typeparam>
-        /// <param name="testValue">the testvalues that contain the data</param>
-        /// <param name="testValueType">the value type of the test. <see cref="TestValueType" /></param>
-        /// <param name="testTypeBabyDiaper">the type of the baby diaper. <see cref="TestTypeBabyDiaper" /></param>
-        /// <param name="toTestTypeTestValueAction">
-        ///     the action the get the correct data for a collection item. For example:
-        ///     <see cref="ToRewetTestValue" />, <see cref="ToRetentionTestValue" />, <see cref="ToPenetrationTimeTestValue" />
-        /// </param>
-        /// <returns>
-        ///     A Collection with the Type of the output from the <paramref name="toTestTypeTestValueAction" /> given as a
-        ///     input action
-        /// </returns>
-        public Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
-                                                                  TestValueType testValueType,
-                                                                  ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
-                                                                  Func<BabyDiaperTestValue, String, String, Int32, T> toTestTypeTestValueAction )
-        {
-            var tests = new Collection<T>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x =>
-                                          ( x.TestValueType == testValueType )
-                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
-                                  .ForEach(
-                                      x =>
-                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
-                                                                                x.LastEditedPerson,
-                                                              LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                  x.TestSheet.CreatedDateTime.Year,
-                                                                                                  x.DayInYearOfArticleCreation,
-                                                                                                  x.BabyDiaperTestValue.DiaperCreatedTime )
-                                                                                ,
-                                                                                x.TestValueId ) ) );
-            return tests;
-        }
     }
-
-
 }

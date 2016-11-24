@@ -68,6 +68,7 @@ namespace Intranet.Labor.Bll
                 var rewetAfterAcquisitionTimeAverage = Helper.ToRewetAfterAcquisitionTimeAverage( incontinencePad );
                 var rewetAfterAcquisitionTimeStandardDeviation = Helper.ToRewetAfterAcquisitionTimeStandardDeviation( incontinencePad );
 
+                var canEdit = Helper.CanUserEdit();
                 var vm = new IncontinencePadLaborCreatorViewModel
                 {
                     Producer = "Intigena",
@@ -87,7 +88,8 @@ namespace Intranet.Labor.Bll
                     AcquisitionTimeAverage = acquisitionTimeAverage,
                     RewetAfterAcquisitionTimeAverage = rewetAfterAcquisitionTimeAverage,
                     RewetAfterAcquisitionTimeStandardDeviation = rewetAfterAcquisitionTimeStandardDeviation,
-                    TestSheetId = testSheetId
+                    TestSheetId = testSheetId,
+                    CanEdit = canEdit
                 };
                 return vm;
             }

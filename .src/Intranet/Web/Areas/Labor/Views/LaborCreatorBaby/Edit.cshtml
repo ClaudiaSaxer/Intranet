@@ -1,5 +1,4 @@
-﻿@using Intranet.Labor.Model.labor
-@model Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+﻿@model Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
 
 @{
     ViewBag.Title = "Intigena Intranet - Labor Module";
@@ -32,18 +31,19 @@
 
 
 </div>
+@if ( Model.CanEdit )
+{
+    <div class="body-content">
 
+        <a href="@Url.Action( "Create", "BabyDiaperRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
+        </a>
+        <a href="@Url.Action( "Create", "BabyDiaperRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
+        </a>
 
-<div class="body-content">
-
-    <a href="@Url.Action( "Create", "BabyDiaperRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
-    </a>
-    <a href="@Url.Action( "Create", "BabyDiaperRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
-    </a>
-
-</div>
+    </div>
+}
 
 <div class="body-content">
     <h2>Rewet</h2>
@@ -57,8 +57,11 @@
             <th>Strike Through</th>
             <th>Verteilung</th>
             <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
+            @if ( Model.CanEdit )
+            {
+                <td>Editieren</td>
+                <td>Löschen</td>
+            }
 
         </tr>
         </thead>
@@ -73,16 +76,19 @@
                 <td>@item.BabyDiaperRewet.StrikeThroughValue</td>
                 <td>@item.BabyDiaperRewet.DistributionOfTheStrikeTrough</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span> 
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span> 
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -94,9 +100,11 @@
             <th class="laborcreatorcolor-@Model.BabyDiaperRewetAverage.Rewet210Rw">@Model.BabyDiaperRewetAverage.Rewet210Value</th>
             <th>@Model.BabyDiaperRewetAverage.StrikeThroughValue</th>
             <th>@Model.BabyDiaperRewetAverage.DistributionOfTheStrikeTrough</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -107,9 +115,11 @@
             <th class="laborcreatorcolor-@Model.BabyDiaperRewetStandardDeviation.Rewet210Rw">@Model.BabyDiaperRewetStandardDeviation.Rewet210Value</th>
             <th>@Model.BabyDiaperRewetStandardDeviation.StrikeThroughValue </th>
             <th>@Model.BabyDiaperRewetStandardDeviation.DistributionOfTheStrikeTrough</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>
@@ -126,9 +136,11 @@
             <th>Zugabe 2</th>
             <th>Zugabe 3</th>
             <th>Zugabe 4</th>
-            <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
+            <th>Testperson</th>@if ( Model.CanEdit )
+                               {
+                                   <td>Editieren</td>
+                                   <td>Löschen</td>
+                               }
         </tr>
         </thead> <tbody>
         @foreach ( var item in Model.PenetrationTimes )
@@ -141,16 +153,19 @@
                 <td>@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird</td>
                 <td class="laborcreatorcolor-@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType">@item.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "BabyDiaperRewet", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -162,9 +177,11 @@
             <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionSecond</th>
             <th>@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionThird</th>
             <th class="laborcreatorcolor-@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionFourthRwType">@Model.BabyDiaperPenetrationTimeAverage.PenetrationTimeAdditionFourth</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -175,9 +192,11 @@
             <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionSecond</th>
             <th>@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionThird</th>
             <th class="laborcreatorcolor-@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionFourthRwType">@Model.BabyDiaperPenetrationTimeStandardDeviation.PenetrationTimeAdditionFourth</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>
@@ -196,9 +215,11 @@
             <th>SAP Typ</th>
             <th>SAP Nr.</th>
             <th>g/Höwi</th>
-            <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
+            <th>Testperson</th>@if ( Model.CanEdit )
+                               {
+                                   <td>Editieren</td>
+                                   <td>Löschen</td>
+                               }
         </tr>
         </thead>
         <tbody>
@@ -214,16 +235,19 @@
                 <td>@item.BabyDiaperRetention.SapNr</td>
                 <td>@item.BabyDiaperRetention.SapGHoewiValue</td>
                 <td>@item.BabyDiaperTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "BabyDiaperRetention", new { area = "Labor", id = item.BabyDiaperTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -237,9 +261,11 @@
             <th></th>
             <th></th>
             <th>@Model.BabyDiaperRetentionAverage.SapGHoewiValue</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -252,9 +278,11 @@
             <th></th>
             <th></th>
             <th>@Model.BabyDiaperRetentionStandardDeviation.SapGHoewiValue</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>

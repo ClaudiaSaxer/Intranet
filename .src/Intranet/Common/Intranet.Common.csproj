@@ -70,6 +70,7 @@
     <Compile Include="Bll\INavigationBll.cs" />
     <Compile Include="Bll\INavigationService.cs" />
     <Compile Include="Role\Definition\IRoles.cs" />
+    <Compile Include="Role\RoleSettings.cs" />
     <Compile Include="Role\SystemWebSecurityRoles.cs" />
     <Compile Include="Bll\ServiceBase.cs" />
     <Compile Include="Db\BaseClass\GenericRepository.cs" />
