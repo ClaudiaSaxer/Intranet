@@ -415,6 +415,6 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="value">the double before round</param>
         /// <returns>the double after Round</returns>
-        private Double Round( Double value ) => Math.Round( value, 2 );
+        private static Double Round( Double value ) => Math.Round( value, 2 );
     }
 }

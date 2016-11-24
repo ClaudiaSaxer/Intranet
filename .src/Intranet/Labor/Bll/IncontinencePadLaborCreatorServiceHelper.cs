@@ -82,10 +82,10 @@ namespace Intranet.Labor.Bll
         public IncontinencePadAcquisitionTime ToAcquisitionTime( IncontinencePadTestValue acquisitionTime )
             => new IncontinencePadAcquisitionTime
             {
-                AcquisitionTimeAdditionFirst = acquisitionTime.AcquisitionTimeFirst,
-                AcquisitionTimeAdditionSecond = acquisitionTime.AcquisitionTimeSecond,
-                AcquisitionTimeAdditionThird = acquisitionTime.AcquisitionTimeThird,
-                Weight = acquisitionTime.AcquisitionWeight,
+                AcquisitionTimeAdditionFirst = Round( acquisitionTime.AcquisitionTimeFirst ),
+                AcquisitionTimeAdditionSecond = Round( acquisitionTime.AcquisitionTimeSecond ),
+                AcquisitionTimeAdditionThird = Round( acquisitionTime.AcquisitionTimeThird ),
+                Weight = Round( acquisitionTime.AcquisitionWeight ),
                 AcquisitionTimeAdditionFirstRW = acquisitionTime.AcquisitionTimeFirstRw,
                 AcquisitionTimeAdditionSecondRW = acquisitionTime.AcquisitionTimeSecondRw,
                 AcquisitionTimeAdditionThirdRW = acquisitionTime.AcquisitionTimeThirdRw
@@ -147,12 +147,12 @@ namespace Intranet.Labor.Bll
             ValidateRequiredItem( retention.RetentionRw, "retention rw" );
             return new IncontinencePadRetention
             {
-                RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifuge,
+                RetentionAfterZentrifugeValue = Round( retention.RetentionAfterZentrifuge ),
                 RetentionRw = retention.RetentionRw,
-                RetentionWetWeight = retention.RetentionWetValue,
-                RetentionDryWeight = retention.RetentionWeight,
-                AbsorptionDiff = retention.RetentionAbsorbtion,
-                RetentionDiff = retention.RetentionEndValue
+                RetentionWetWeight = Round( retention.RetentionWetValue ),
+                RetentionDryWeight = Round( retention.RetentionWeight ),
+                AbsorptionDiff = Round( retention.RetentionAbsorbtion ),
+                RetentionDiff = Round( retention.RetentionEndValue )
             };
         }
 
@@ -213,9 +213,9 @@ namespace Intranet.Labor.Bll
             return
                 new IncontinencePadRewet
                 {
-                    WeightDry = rewet.RewetFreeDryValue,
-                    WeightWet = rewet.RewetFreeWetValue,
-                    WeightDiff = rewet.RewetFreeDifference,
+                    WeightDry = Round( rewet.RewetFreeDryValue ),
+                    WeightWet = Round( rewet.RewetFreeWetValue ),
+                    WeightDiff = Round( rewet.RewetFreeDifference ),
                     RewetRW = rewet.RewetFreeRw
                 };
         }
@@ -391,19 +391,18 @@ namespace Intranet.Labor.Bll
             return
                 new IncontinencePadRewet
                 {
-                    WeightDry = rewet.RewetAfterAcquisitionTimeDryWeight,
-                    WeightWet = rewet.RewetAfterAcquisitionTimeWetWeight,
-                    WeightDiff = rewet.RewetAfterAcquisitionTimeWeightDifference,
+                    WeightDry = Round( rewet.RewetAfterAcquisitionTimeDryWeight ),
+                    WeightWet = Round( rewet.RewetAfterAcquisitionTimeWetWeight ),
+                    WeightDiff = Round( rewet.RewetAfterAcquisitionTimeWeightDifference ),
                     RewetRW = rewet.RewetAfterAcquisitionTimeRw
                 };
         }
+
         /// <summary>
-        /// Round double to value to show on viewmodel 
+        ///     Round double to value to show on viewmodel
         /// </summary>
         /// <param name="value">the double before round</param>
         /// <returns>the double after Round</returns>
-        private Double Round(Double value) => Math.Round(value, 2);
+        private static Double Round( Double value ) => Math.Round( value, 2 );
     }
-
-
 }
