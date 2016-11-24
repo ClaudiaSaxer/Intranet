@@ -117,6 +117,12 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the testsheet id</value>
         public Int32 TestSheetId { get; set; }
+
+        /// <summary>
+        /// Gets or sets the boolean, if the current user is allowed to edit the baby diaper
+        /// </summary>
+        /// <value>true if the current user is allowed to edit the baby diaper</value>
+        public Boolean CanEdit { get; set; }
         #endregion
     }
 }

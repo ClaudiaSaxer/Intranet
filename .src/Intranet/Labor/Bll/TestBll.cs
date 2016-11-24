@@ -15,7 +15,7 @@ using Intranet.Labor.Model.labor;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the bll of the Baby diapers retention
+    ///     Class representing the bll for all testedit views
     /// </summary>
     public class TestBll : ITestBll
     {

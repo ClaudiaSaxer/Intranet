@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HistoryBll.cs" />
+    <Compile Include="HistoryService.cs" />
     <Compile Include="IncontinencePadLaborCreatorBll.cs" />
     <Compile Include="IncontinencePadLaborCreatorService.cs" />
     <Compile Include="IncontinencePadLaborCreatorServiceHelper.cs" />

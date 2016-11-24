@@ -43,8 +43,8 @@ namespace Intranet.Dal
 
             var creator = new Module
             {
-                Description = "Labor QS Creator",
-                Name = "Creator",
+                Description = "Zum erfassen neuer Tests",
+                Name = "Testerfassung",
                 ControllerName = "LaborCreator",
                 ActionName = "Index",
                 AreaName = "Labor",
@@ -55,7 +55,7 @@ namespace Intranet.Dal
 
             var dashboard = new Module
             {
-                Description = "Labor QS Dashboard",
+                Description = "Übersicht über die letzten 3 Schichten",
                 Name = "Dashboard",
                 ControllerName = "LaborDashboard",
                 ActionName = "Index",
@@ -65,7 +65,19 @@ namespace Intranet.Dal
                 Roles = roles
             };
 
-            var submodules = new Collection<Module> { creator, dashboard };
+            var history = new Module
+            {
+                Description = "Zum finden alter Testwerte",
+                Name = "History",
+                ControllerName = "History",
+                ActionName = "Index",
+                AreaName = "Labor",
+                Type = ModuleType.Sub,
+                Visible = null,
+                Roles = roles
+            };
+
+            var submodules = new Collection<Module> { creator, dashboard, history };
 
             var labor = new Module
             {
@@ -91,7 +103,7 @@ namespace Intranet.Dal
                 Roles = rolesadmin
             };
 
-            context.Modules.AddOrUpdate( m => m.Name, labor, adminshell, creator, dashboard );
+            context.Modules.AddOrUpdate( m => m.Name, labor, adminshell, creator, dashboard, history);
         }
     }
 }

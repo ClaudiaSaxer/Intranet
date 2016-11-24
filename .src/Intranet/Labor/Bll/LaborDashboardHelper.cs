@@ -72,24 +72,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if ( ( testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Rewet ) || ( testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ) )
             {
                 infos.Add( ToDashboardInfo( "Rewet - 140 ml",
-                                            Math.Round( testValue.BabyDiaperTestValue.Rewet140Value, 2 )
+                                            Round( testValue.BabyDiaperTestValue.Rewet140Value )
                                                 .ToString( CultureInfo.InvariantCulture ),
                                             testValue.BabyDiaperTestValue.Rewet140Rw.GetValueOrDefault() ) );
                 infos.Add( ToDashboardInfo( "Rewet - 210 ml",
-                                            Math.Round( testValue.BabyDiaperTestValue.Rewet210Value, 2 )
+                                            Round( testValue.BabyDiaperTestValue.Rewet210Value )
                                                 .ToString( CultureInfo.InvariantCulture ),
                                             testValue
                                                 .BabyDiaperTestValue.Rewet210Rw.GetValueOrDefault() ) );
                 if ( testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime )
                     infos.Add( ToDashboardInfo( "Penetrationszeit - Zugabe 4",
-                                                Math.Round( testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth, 2 )
+                                                Round( testValue.BabyDiaperTestValue.PenetrationTimeAdditionFourth )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.BabyDiaperTestValue.PenetrationRwType.GetValueOrDefault() ) );
             }
             else if ( testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
             {
                 infos.Add( ToDashboardInfo( "Retention - Nach Zentrifuge (g)",
-                                            Math.Round( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue, 2 )
+                                            Round( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue)
                                                 .ToString( CultureInfo.InvariantCulture ),
                                             testValue.BabyDiaperTestValue.RetentionRw.GetValueOrDefault() ) );
             }
@@ -111,33 +111,33 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 case TestTypeIncontinencePad.Retention:
 
                     infos.Add( ToDashboardInfo( "Retention",
-                                                Math.Round( testValue.IncontinencePadTestValue.RetentionEndValue, 2 )
+                                                Round( testValue.IncontinencePadTestValue.RetentionEndValue )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.RetentionRw ) );
                     return infos;
 
                 case TestTypeIncontinencePad.RewetFree:
                     infos.Add( ToDashboardInfo( "Rewet",
-                                                Math.Round( testValue.IncontinencePadTestValue.RewetFreeDifference, 2 )
+                                                Round( testValue.IncontinencePadTestValue.RewetFreeDifference )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.RewetFreeRw ) );
                     return infos;
                 case TestTypeIncontinencePad.AcquisitionTimeAndRewet:
 
                     infos.Add( ToDashboardInfo( "Aquisitionszeit - Zugabe 1",
-                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeFirst, 2 )
+                                                Round( testValue.IncontinencePadTestValue.AcquisitionTimeFirst )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw ) );
                     infos.Add( ToDashboardInfo( "Aquisitionszeit - Zugabe 2",
-                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeSecond, 2 )
+                                                Round( testValue.IncontinencePadTestValue.AcquisitionTimeSecond )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw ) );
                     infos.Add( ToDashboardInfo( "Aquisitionszeit - Zugabe 3",
-                                                Math.Round( testValue.IncontinencePadTestValue.AcquisitionTimeThird, 2 )
+                                                Round( testValue.IncontinencePadTestValue.AcquisitionTimeThird )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw ) );
                     infos.Add( ToDashboardInfo( "Rewet nach Aquisition",
-                                                Math.Round( testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2 )
+                                                Round( testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference )
                                                     .ToString( CultureInfo.InvariantCulture ),
                                                 testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw ) );
                     return infos;
@@ -234,5 +234,13 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="rw">the rw type for the info</param>
         /// <returns></returns>
         private DashboardInfo ToDashboardInfo( String key, String value, RwType rw ) => new DashboardInfo { InfoValue = value, InfoKey = key, RwType = rw };
+
+
+        /// <summary>
+        ///     Round double to value to show on viewmodel
+        /// </summary>
+        /// <param name="value">the double before round</param>
+        /// <returns>the double after Round</returns>
+        private static Double Round(Double value) => Math.Round(value, 2);
     }
 }

@@ -373,5 +373,42 @@ namespace Intranet.Labor.TestEnvironment
 
             return mock.Object;
         }
+
+        /// <summary>
+        ///     A mock for test sheets Repository for HistoryBll tests
+        /// </summary>
+        /// <param name="testSheets">Queryable test sheets returned by GetAll</param>
+        /// <returns>a moq repository for test sheets</returns>
+        public static IGenericRepository<TestSheet> GetTestSheetRepositoryForHistory(IQueryable<TestSheet> testSheets)
+        {
+            var mock = new Mock<IGenericRepository<TestSheet>>
+            {
+                Name = "MockHelper.GetTestSheetRepositoryForHistory",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup(x => x.GetAll())
+                .Returns(testSheets);
+            return mock.Object;
+        }
+
+
+        /// <summary>
+        ///     A mock for HistoryBll
+        /// </summary>
+        /// <returns>a IHistoryBll moq</returns>
+        public static IHistoryBll GetHistoryBll(List<TestSheet> testSheets)
+        {
+            var mock = new Mock<IHistoryBll>
+            {
+                Name = "MockHelper.GetHistoryBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup(x => x.GetTestSheets(It.IsAny<String>()))
+                .Returns(testSheets);
+
+
+            return mock.Object;
+        }
     }
 }
