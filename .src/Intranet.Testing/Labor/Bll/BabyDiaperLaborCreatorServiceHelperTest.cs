@@ -140,9 +140,8 @@ namespace Intranet.Labor.Bll.Test
                         TestValueType = TestValueType.Single
                     }
                 } );
-            const Double expected = 3.1091;
-            var actualRounded = Math.Round( actual, 4 );
-            actualRounded.Should()
+            const Double expected = 3.11;
+            actual.Should()
                          .Be( expected );
         }
 
@@ -193,9 +192,8 @@ namespace Intranet.Labor.Bll.Test
                         TestValueType = TestValueType.Average
                     }
                 } );
-            const Double expected = 3.1091;
-            var actualRounded = Math.Round( actual, 4 );
-            actualRounded.Should()
+            const Double expected = 3.11;
+            actual.Should()
                          .Be( expected );
         }
 

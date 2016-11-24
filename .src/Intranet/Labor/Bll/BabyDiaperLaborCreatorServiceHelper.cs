@@ -59,7 +59,7 @@ namespace Intranet.Labor.Bll
         public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
         {
             var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
-            return weights.Count == 0 ? 0 : weights.Average();
+            return Round( weights.Count == 0 ? 0 : weights.Average() );
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Intranet.Labor.Bll
             var sumOfSquaresOfDifferences = weights.Sum( val => ( val - average ) * ( val - average ) );
             var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / ( weights.Count - 1 ) );
 
-            return standardDeviation;
+            return Round( standardDeviation );
         }
 
         /// <summary>
@@ -106,10 +106,10 @@ namespace Intranet.Labor.Bll
 
             return new BabyDiaperPenetrationTime
                 {
-                    PenetrationTimeAdditionFourth = penetrationTime.PenetrationTimeAdditionFourth,
-                    PenetrationTimeAdditionSecond = penetrationTime.PenetrationTimeAdditionSecond,
-                    PenetrationTimeAdditionFirst = penetrationTime.PenetrationTimeAdditionFirst,
-                    PenetrationTimeAdditionThird = penetrationTime.PenetrationTimeAdditionThird,
+                    PenetrationTimeAdditionFourth = Round( penetrationTime.PenetrationTimeAdditionFourth ),
+                    PenetrationTimeAdditionSecond = Round( penetrationTime.PenetrationTimeAdditionSecond ),
+                    PenetrationTimeAdditionFirst = Round( penetrationTime.PenetrationTimeAdditionFirst ),
+                    PenetrationTimeAdditionThird = Round( penetrationTime.PenetrationTimeAdditionThird ),
                     PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
                 }
                 ;
@@ -171,12 +171,12 @@ namespace Intranet.Labor.Bll
             return new BabyDiaperRetention
             {
                 SapNr = retention.SapNr,
-                RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifugeValue,
+                RetentionAfterZentrifugeValue = Round( retention.RetentionAfterZentrifugeValue ),
                 SapType = retention.SapType,
                 RetentionRw = retention.RetentionRw.GetValueOrDefault(),
-                RetentionWetWeight = retention.RetentionWetWeight,
-                RetentionAfterZentrifugePercent = retention.RetentionAfterZentrifugePercent,
-                SapGHoewiValue = retention.SapGHoewiValue
+                RetentionWetWeight = Round( retention.RetentionWetWeight ),
+                RetentionAfterZentrifugePercent = Round( retention.RetentionAfterZentrifugePercent ),
+                SapGHoewiValue = Round( retention.SapGHoewiValue )
             };
         }
 
@@ -239,11 +239,11 @@ namespace Intranet.Labor.Bll
                 new BabyDiaperRewet
                 {
                     Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
-                    StrikeThroughValue = rewet.StrikeTroughValue,
-                    DistributionOfTheStrikeTrough = rewet.DistributionOfTheStrikeTrough,
-                    Rewet210Value = rewet.Rewet210Value,
+                    StrikeThroughValue = Round( rewet.StrikeTroughValue ),
+                    DistributionOfTheStrikeTrough = Round( rewet.DistributionOfTheStrikeTrough ),
+                    Rewet210Value = Round( rewet.Rewet210Value ),
                     Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
-                    Rewet140Value = rewet.Rewet140Value
+                    Rewet140Value = Round( rewet.Rewet140Value )
                 };
         }
 
@@ -305,7 +305,7 @@ namespace Intranet.Labor.Bll
             {
                 TestPerson = testPerson,
                 ProductionCode = prodCode,
-                WeightyDiaperDry = weightDiaperDry,
+                WeightyDiaperDry = Round( weightDiaperDry ),
                 TestValueId = testValueId
             };
 
@@ -409,5 +409,12 @@ namespace Intranet.Labor.Bll
             );
             return weights;
         }
+
+        /// <summary>
+        ///     Round double to value to show on viewmodel
+        /// </summary>
+        /// <param name="value">the double before round</param>
+        /// <returns>the double after Round</returns>
+        private static Double Round( Double value ) => Math.Round( value, 2 );
     }
 }
