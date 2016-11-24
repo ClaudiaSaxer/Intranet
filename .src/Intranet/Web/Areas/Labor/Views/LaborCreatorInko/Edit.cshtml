@@ -33,21 +33,22 @@
 
 </div>
 
+@if ( Model.CanEdit )
+{
+    <div class="body-content">
 
-<div class="body-content">
+        <a href="@Url.Action( "Create", "InkoRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
+        </a>
+        <a href="@Url.Action( "Create", "InkoAquisition", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Aquisitionszeit
+        </a>
+        <a href="@Url.Action( "Create", "InkoRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
+        </a>
 
-    <a href="@Url.Action( "Create", "InkoRewet", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Rewet
-    </a>
-    <a href="@Url.Action( "Create", "InkoAquisition", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Aquisitionszeit
-    </a>
-    <a href="@Url.Action( "Create", "InkoRetention", new { area = "Labor", id = Model.TestSheetId } )" class="btn btn-primary btn-lg">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Retention
-    </a>
-
-</div>
-
+    </div>
+}
 <div class="body-content">
     <h2>Rewet</h2>
     <table id="rewet" class="table table-striped table-bordered sortable">
@@ -58,9 +59,11 @@
             <th>FP feucht</th>
             <th>Rewet</th>
             <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
-
+            @if ( Model.CanEdit )
+            {
+                <td>Editieren</td>
+                <td>Löschen</td>
+            }
         </tr>
         </thead>
         <tbody>
@@ -72,16 +75,19 @@
                 <td>@item.IncontinencePadRewet.WeightWet</td>
                 <td class="laborcreatorcolor-@item.IncontinencePadRewet.RewetRW">@item.IncontinencePadRewet.WeightDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "InkoRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "InkoRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span> 
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "InkoRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "InkoRewet", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span> 
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -91,9 +97,11 @@
             <th>@Model.RewetAverage.WeightDry</th>
             <th>@Model.RewetAverage.WeightWet</th>
             <th class="laborcreatorcolor-@Model.RewetAverage.RewetRW">@Model.RewetAverage.WeightDiff</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -102,9 +110,11 @@
             <th>@Model.RewetStandardDeviation.WeightDry</th>
             <th>@Model.RewetStandardDeviation.WeightWet</th>
             <th class="laborcreatorcolor-@Model.RewetStandardDeviation.RewetRW">@Model.RewetStandardDeviation.WeightDiff</th>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>
@@ -120,9 +130,11 @@
             <th>Nach Zentrifuge (g)</th>
             <th>Absorption (g)</th>
             <th>Retention (g)</th>
-            <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
+            <th>Testperson</th>@if ( Model.CanEdit )
+                               {
+                                   <td>Editieren</td>
+                                   <td>Löschen</td>
+                               }
         </tr>
         </thead>
         <tbody>
@@ -136,16 +148,19 @@
                 <td>@item.IncontinencePadRetention.AbsorptionDiff</td>
                 <td class="laborcreatorcolor-@item.IncontinencePadRetention.RetentionRw">@item.IncontinencePadRetention.RetentionDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "InkoRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "InkoRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "InkoRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "InkoRetention", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -157,9 +172,11 @@
             <th>@Model.RetentionAverage.RetentionAfterZentrifugeValue</th>
             <td>@Model.RetentionAverage.AbsorptionDiff</td>
             <td class="laborcreatorcolor-@Model.RetentionAverage.RetentionRw">@Model.RetentionAverage.RetentionDiff</td>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -170,9 +187,11 @@
             <th>@Model.RetentionStandardDeviation.RetentionAfterZentrifugeValue</th>
             <td>@Model.RetentionStandardDeviation.AbsorptionDiff</td>
             <td class="laborcreatorcolor-@Model.RetentionStandardDeviation.RetentionRw">@Model.RetentionStandardDeviation.RetentionDiff</td>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>
@@ -190,9 +209,11 @@
             <th>Rewet FP trocken</th>
             <th>Rewet FP feucht</th>
             <th>Rewet</th>
-            <th>Testperson</th>
-            <td>Editieren</td>
-            <td>Löschen</td>
+            <th>Testperson</th>@if ( Model.CanEdit )
+                               {
+                                   <td>Editieren</td>
+                                   <td>Löschen</td>
+                               }
         </tr>
         </thead>
         <tbody>
@@ -208,16 +229,19 @@
                 <td>@item.RewetAfterAcquisitionTime.WeightWet</td>
                 <td class="laborcreatorcolor-@item.RewetAfterAcquisitionTime.RewetRW">@item.RewetAfterAcquisitionTime.WeightDiff</td>
                 <td>@item.IncontinencePadTestInfo.TestPerson</td>
-                <td>
-                    <a href="@Url.Action( "Edit", "InkoAquisition", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </a>
-                </td>
-                <td>
-                    <a href="@Url.Action( "Delete", "InkoAquisition", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
-                        <span class="glyphicon glyphicon-trash"></span>
-                    </a>
-                </td>
+                @if ( Model.CanEdit )
+                {
+                    <td>
+                        <a href="@Url.Action( "Edit", "InkoAquisition", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-info btn-lg">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action( "Delete", "InkoAquisition", new { area = "Labor", id = item.IncontinencePadTestInfo.TestValueId } )" class="btn btn-danger btn-lg">
+                            <span class="glyphicon glyphicon-trash"></span>
+                        </a>
+                    </td>
+                }
             </tr>
         }
         </tbody>
@@ -231,9 +255,11 @@
             <td>@Model.RewetAfterAcquisitionTimeAverage.WeightDry</td>
             <td>@Model.RewetAfterAcquisitionTimeAverage.WeightWet</td>
             <td class="laborcreatorcolor-@Model.RewetAfterAcquisitionTimeAverage.RewetRW">@Model.RewetAfterAcquisitionTimeAverage.WeightDiff</td>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
         <tfoot>
@@ -246,12 +272,13 @@
             <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDry</td>
             <td>@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightWet</td>
             <td class="laborcreatorcolor-@Model.RewetAfterAcquisitionTimeStandardDeviation.RewetRW">@Model.RewetAfterAcquisitionTimeStandardDeviation.WeightDiff</td>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th></th>@if ( Model.CanEdit )
+                     {
+                         <th></th>
+                         <th></th>
+                     }
         </tr>
         </tfoot>
     </table>
 
 </div>
-

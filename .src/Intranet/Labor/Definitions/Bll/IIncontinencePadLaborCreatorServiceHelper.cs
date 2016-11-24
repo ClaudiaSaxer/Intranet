@@ -206,6 +206,12 @@ namespace Intranet.Labor.Definition
         /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
         void ValidateRequiredItem<T>( T item, String name );
 
-    
+        /// <summary>
+        ///     Computes if the user can Edit the Incontinence Pad
+        /// </summary>
+        /// <returns></returns>
+        Boolean CanUserEdit();
+
+
     }
 }

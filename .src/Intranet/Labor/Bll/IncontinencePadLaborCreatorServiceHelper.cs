@@ -17,6 +17,20 @@ namespace Intranet.Labor.Bll
     /// </summary>
     public class IncontinencePadLaborCreatorServiceHelper : ServiceBase, IIncontinencePadLaborCreatorServiceHelper
     {
+        #region Properties
+
+        /// <summary>
+        ///     Labor Creator Service Helper for Common
+        /// </summary>
+        public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the Helper for Roles
+        /// </summary>
+        public IRoles RolesHelper { get; set; }
+
+        #endregion
+
         #region Ctor
 
         /// <summary>
@@ -27,14 +41,17 @@ namespace Intranet.Labor.Bll
             : base( loggerFactory.CreateLogger( typeof(IncontinencePadLaborCreatorServiceHelper) ) )
         {
         }
-        /// <summary>
-        /// Labor Creator Service Helper for Common 
-        /// </summary>
-        public ILaborCreatorServiceHelper LaborCreatorServiceHelper { get; set; }
 
         #endregion
 
-      
+        /// <summary>
+        ///     Computes if the user can Edit the Incontinence Pad
+        /// </summary>
+        /// <returns></returns>
+        public Boolean CanUserEdit()
+            => RolesHelper
+                .CanUserEditLabor();
+
         /// <summary>
         ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct
         ///     <see cref="TestTypeIncontinencePad" /> and
@@ -65,10 +82,10 @@ namespace Intranet.Labor.Bll
         public IncontinencePadAcquisitionTime ToAcquisitionTime( IncontinencePadTestValue acquisitionTime )
             => new IncontinencePadAcquisitionTime
             {
-                AcquisitionTimeAdditionFirst = acquisitionTime.AcquisitionTimeFirst,
-                AcquisitionTimeAdditionSecond = acquisitionTime.AcquisitionTimeSecond,
-                AcquisitionTimeAdditionThird = acquisitionTime.AcquisitionTimeThird,
-                Weight = acquisitionTime.AcquisitionWeight,
+                AcquisitionTimeAdditionFirst = Round( acquisitionTime.AcquisitionTimeFirst ),
+                AcquisitionTimeAdditionSecond = Round( acquisitionTime.AcquisitionTimeSecond ),
+                AcquisitionTimeAdditionThird = Round( acquisitionTime.AcquisitionTimeThird ),
+                Weight = Round( acquisitionTime.AcquisitionWeight ),
                 AcquisitionTimeAdditionFirstRW = acquisitionTime.AcquisitionTimeFirstRw,
                 AcquisitionTimeAdditionSecondRW = acquisitionTime.AcquisitionTimeSecondRw,
                 AcquisitionTimeAdditionThirdRW = acquisitionTime.AcquisitionTimeThirdRw
@@ -130,12 +147,12 @@ namespace Intranet.Labor.Bll
             ValidateRequiredItem( retention.RetentionRw, "retention rw" );
             return new IncontinencePadRetention
             {
-                RetentionAfterZentrifugeValue = retention.RetentionAfterZentrifuge,
+                RetentionAfterZentrifugeValue = Round( retention.RetentionAfterZentrifuge ),
                 RetentionRw = retention.RetentionRw,
-                RetentionWetWeight = retention.RetentionWetValue,
-                RetentionDryWeight = retention.RetentionWeight,
-                AbsorptionDiff = retention.RetentionAbsorbtion,
-                RetentionDiff = retention.RetentionEndValue
+                RetentionWetWeight = Round( retention.RetentionWetValue ),
+                RetentionDryWeight = Round( retention.RetentionWeight ),
+                AbsorptionDiff = Round( retention.RetentionAbsorbtion ),
+                RetentionDiff = Round( retention.RetentionEndValue )
             };
         }
 
@@ -169,11 +186,9 @@ namespace Intranet.Labor.Bll
             {
                 IncontinencePadTestInfo = ToTestInfo( testPerson, prodCode, testValueId ),
                 IncontinencePadRetention = ToRetention( retention )
-                
             };
             return vm;
         }
-       
 
         /// <summary>
         ///     Creates the retention  test value collection for all singe tests
@@ -186,8 +201,6 @@ namespace Intranet.Labor.Bll
                                                  new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
                                                  ToRetentionTestValue );
 
-
-
         /// <summary>
         ///     Sets the values for the rewet View Model out of the incontinence pad TestValue Model
         /// </summary>
@@ -199,32 +212,14 @@ namespace Intranet.Labor.Bll
 
             return
                 new IncontinencePadRewet
-                { 
-                    WeightDry = rewet.RewetFreeDryValue, 
-                    WeightWet = rewet.RewetFreeWetValue,
-                    WeightDiff = rewet.RewetFreeDifference,
+                {
+                    WeightDry = Round( rewet.RewetFreeDryValue ),
+                    WeightWet = Round( rewet.RewetFreeWetValue ),
+                    WeightDiff = Round( rewet.RewetFreeDifference ),
                     RewetRW = rewet.RewetFreeRw
                 };
         }
 
-        /// <summary>
-        ///     Sets the values for the rewet View Model out of the incontinence pad TestValue Model
-        /// </summary>
-        /// <param name="rewet">the incontinence pad Test value with the rewet after acquisition data</param>
-        /// <returns>The rewet after acquisition View Model with the data collected from the model</returns>
-        public IncontinencePadRewet ToRewetAfterAcquisitionTime(IncontinencePadTestValue rewet)
-        {
-            ValidateRequiredItem(rewet.RewetAfterAcquisitionTimeRw, "rewet after acquisition rw");
-
-            return
-                new IncontinencePadRewet
-                {
-                    WeightDry = rewet.RewetAfterAcquisitionTimeDryWeight,
-                    WeightWet = rewet.RewetAfterAcquisitionTimeWetWeight,
-                    WeightDiff = rewet.RewetAfterAcquisitionTimeWeightDifference,
-                    RewetRW = rewet.RewetAfterAcquisitionTimeRw
-                };
-        }
         /// <summary>
         ///     Creates a rewet after acquisition  Average with the data from the test values
         /// </summary>
@@ -337,9 +332,9 @@ namespace Intranet.Labor.Bll
                                                          x.IncontinencePadTestValue,
                                                          x.LastEditedPerson,
                                                          LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
-                                                                           x.TestSheet.CreatedDateTime.Year,
-                                                                           x.DayInYearOfArticleCreation,
-                                                                           x.IncontinencePadTestValue.IncontinencePadTime )
+                                                                                                     x.TestSheet.CreatedDateTime.Year,
+                                                                                                     x.DayInYearOfArticleCreation,
+                                                                                                     x.IncontinencePadTestValue.IncontinencePadTime )
                                                          ,
                                                          x.TestValueId ) ) );
             return tests;
@@ -383,5 +378,31 @@ namespace Intranet.Labor.Bll
             }
             return item;
         }
+
+        /// <summary>
+        ///     Sets the values for the rewet View Model out of the incontinence pad TestValue Model
+        /// </summary>
+        /// <param name="rewet">the incontinence pad Test value with the rewet after acquisition data</param>
+        /// <returns>The rewet after acquisition View Model with the data collected from the model</returns>
+        public IncontinencePadRewet ToRewetAfterAcquisitionTime( IncontinencePadTestValue rewet )
+        {
+            ValidateRequiredItem( rewet.RewetAfterAcquisitionTimeRw, "rewet after acquisition rw" );
+
+            return
+                new IncontinencePadRewet
+                {
+                    WeightDry = Round( rewet.RewetAfterAcquisitionTimeDryWeight ),
+                    WeightWet = Round( rewet.RewetAfterAcquisitionTimeWetWeight ),
+                    WeightDiff = Round( rewet.RewetAfterAcquisitionTimeWeightDifference ),
+                    RewetRW = rewet.RewetAfterAcquisitionTimeRw
+                };
+        }
+
+        /// <summary>
+        ///     Round double to value to show on viewmodel
+        /// </summary>
+        /// <param name="value">the double before round</param>
+        /// <returns>the double after Round</returns>
+        private static Double Round( Double value ) => Math.Round( value, 2 );
     }
 }

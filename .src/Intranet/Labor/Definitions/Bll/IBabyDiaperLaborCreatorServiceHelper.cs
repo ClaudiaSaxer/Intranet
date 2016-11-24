@@ -201,5 +201,11 @@ namespace Intranet.Labor.Definition
         /// gets the average weight for all tests
         /// </summary>
         Double ComputeWeightAverageAll(IEnumerable<TestValue> testValue);
+
+        /// <summary>
+        /// Computes if the user can Edit the Baby Diaper
+        /// </summary>
+        /// <returns></returns>
+        Boolean CanUserEdit();
     }
 }
