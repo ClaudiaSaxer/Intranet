@@ -59,7 +59,7 @@ namespace Intranet.Labor.Bll
         public Double ComputeWeightAverageAll( IEnumerable<TestValue> testValues )
         {
             var weights = AllWeightsOfArticleTypeForSingle( testValues, ArticleType.BabyDiaper );
-            return Round(weights.Count == 0 ? 0 : weights.Average());
+            return Round( weights.Count == 0 ? 0 : weights.Average() );
         }
 
         /// <summary>
@@ -73,7 +73,7 @@ namespace Intranet.Labor.Bll
             var sumOfSquaresOfDifferences = weights.Sum( val => ( val - average ) * ( val - average ) );
             var standardDeviation = Math.Sqrt( sumOfSquaresOfDifferences / ( weights.Count - 1 ) );
 
-            return Round(standardDeviation);
+            return Round( standardDeviation );
         }
 
         /// <summary>
@@ -106,10 +106,10 @@ namespace Intranet.Labor.Bll
 
             return new BabyDiaperPenetrationTime
                 {
-                    PenetrationTimeAdditionFourth = Round(  penetrationTime.PenetrationTimeAdditionFourth),
-                    PenetrationTimeAdditionSecond = Round( penetrationTime.PenetrationTimeAdditionSecond),
-                    PenetrationTimeAdditionFirst = Round(penetrationTime.PenetrationTimeAdditionFirst)),
-                    PenetrationTimeAdditionThird = Round(penetrationTime.PenetrationTimeAdditionThird)),
+                    PenetrationTimeAdditionFourth = Round( penetrationTime.PenetrationTimeAdditionFourth ),
+                    PenetrationTimeAdditionSecond = Round( penetrationTime.PenetrationTimeAdditionSecond ),
+                    PenetrationTimeAdditionFirst = Round( penetrationTime.PenetrationTimeAdditionFirst )),
+                    PenetrationTimeAdditionThird = Round( penetrationTime.PenetrationTimeAdditionThird )),
                     PenetrationTimeAdditionFourthRwType = penetrationTime.PenetrationRwType.GetValueOrDefault()
                 }
                 ;
@@ -171,12 +171,12 @@ namespace Intranet.Labor.Bll
             return new BabyDiaperRetention
             {
                 SapNr = retention.SapNr,
-                RetentionAfterZentrifugeValue = Round( retention.RetentionAfterZentrifugeValue),
+                RetentionAfterZentrifugeValue = Round( retention.RetentionAfterZentrifugeValue ),
                 SapType = retention.SapType,
                 RetentionRw = retention.RetentionRw.GetValueOrDefault(),
-                RetentionWetWeight = Round(  retention.RetentionWetWeight),
-                RetentionAfterZentrifugePercent = Round( retention.RetentionAfterZentrifugePercent),
-                SapGHoewiValue = Round(retention.SapGHoewiValue)
+                RetentionWetWeight = Round( retention.RetentionWetWeight ),
+                RetentionAfterZentrifugePercent = Round( retention.RetentionAfterZentrifugePercent ),
+                SapGHoewiValue = Round( retention.SapGHoewiValue )
             };
         }
 
@@ -239,11 +239,11 @@ namespace Intranet.Labor.Bll
                 new BabyDiaperRewet
                 {
                     Rewet210Rw = rewet.Rewet210Rw.GetValueOrDefault(),
-                    StrikeThroughValue = Round( rewet.StrikeTroughValue),
-                    DistributionOfTheStrikeTrough = Round( rewet.DistributionOfTheStrikeTrough),
-                    Rewet210Value = Round( rewet.Rewet210Value),
+                    StrikeThroughValue = Round( rewet.StrikeTroughValue ),
+                    DistributionOfTheStrikeTrough = Round( rewet.DistributionOfTheStrikeTrough ),
+                    Rewet210Value = Round( rewet.Rewet210Value ),
                     Rewet140Rw = rewet.Rewet140Rw.GetValueOrDefault(),
-                    Rewet140Value = Round(rewet.Rewet140Value)
+                    Rewet140Value = Round( rewet.Rewet140Value )
                 };
         }
 
@@ -305,7 +305,7 @@ namespace Intranet.Labor.Bll
             {
                 TestPerson = testPerson,
                 ProductionCode = prodCode,
-                WeightyDiaperDry = Round( weightDiaperDry),
+                WeightyDiaperDry = Round( weightDiaperDry ),
                 TestValueId = testValueId
             };
 
@@ -411,7 +411,7 @@ namespace Intranet.Labor.Bll
         }
 
         /// <summary>
-        /// Round double to value to show on viewmodel 
+        ///     Round double to value to show on viewmodel
         /// </summary>
         /// <param name="value">the double before round</param>
         /// <returns>the double after Round</returns>
