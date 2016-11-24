@@ -22,7 +22,7 @@ namespace Intranet.Common
         /// <summary>
         ///     Computes if the user can Edit Labor
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true: if the current user is allowed to edit the labor</returns>
         Boolean CanUserEditLabor();
     }
 }

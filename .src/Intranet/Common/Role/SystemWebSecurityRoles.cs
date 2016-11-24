@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Security;
+using Intranet.Common.Role;
 
 namespace Intranet.Common
 {
@@ -25,7 +26,7 @@ namespace Intranet.Common
         public Boolean CanUserEditLabor()
             => GetRolesForUser()
                 .ToList()
-                .Any(s => s.Equals("LaborUser") || s.Equals("LaborAdmin"));
+                .Any(s => s.Equals(RoleSettings.LaborUser) || s.Equals(RoleSettings.LaborAdmin));
         #endregion
     }
 }
