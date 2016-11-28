@@ -26,6 +26,7 @@ namespace Intranet.Labor.ViewModel
         [DataType(DataType.Text, ErrorMessage = "Nummer muss ein Test sein")]
         [StringLength(1024, ErrorMessage = "Fertigungsnummer darf nicht länger als 1024 Zeichen sein.")]
         [MinLength(3, ErrorMessage = "Fertigunsnummer muss mindestens 3 Zeichen lang sein.")]
+        [RegularExpression(@"FA[0-9]*", ErrorMessage = "Fertigungsnummer muss mit FA beginnen und mit Nummern Enden.")]
         public String FaNr { get; set; }
 
         /// <summary>
