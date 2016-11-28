@@ -27,10 +27,10 @@ namespace Intranet.Labor.ViewModel
         public Int32 ExpireMonth { get; set; }
 
         /// <summary>
-        ///     Gets or sets the ExpireMonth
+        ///     Gets or sets the ExpireYear
         /// </summary>
         /// <value>
-        ///     The ExpireMonth
+        ///     The ExpireYear
         /// </value>
         [DisplayName("Ablauf-Jahr")]
         [Required(ErrorMessage = "Das Ablauf-Jahr muss angegeben werden")]
