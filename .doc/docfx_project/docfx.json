@@ -4,13 +4,14 @@
       "src": [
         {
           "files": [
-            ".src/Intranet/**.csproj"
+            ".src/Intranet/**/**.csproj"
           ],
           "exclude": [
             "**/obj/**",
             "**/bin/**",
             "_site/**"
-          ]
+          ],
+		  "cwd": "../../"
         }
       ],
       "dest": "api"
@@ -26,6 +27,8 @@
       },
       {
         "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
           "toc.yml",
           "*.md"
         ],
@@ -57,12 +60,11 @@
         ]
       }
     ],
-    "dest": "../../.Output/Doc",
+    "dest": "_site",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
-      "default",
-	  "IntranetTemplate"
+      "default"
     ],
     "postProcessors": [],
     "noLangKeyword": false
