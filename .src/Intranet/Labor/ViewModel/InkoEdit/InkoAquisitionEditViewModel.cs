@@ -16,6 +16,28 @@ namespace Intranet.Labor.ViewModel
         #region Properties
 
         /// <summary>
+        ///     Gets or sets the ExpireMonth
+        /// </summary>
+        /// <value>
+        ///     The ExpireMonth
+        /// </value>
+        [DisplayName("Ablauf-Monat")]
+        [Required(ErrorMessage = "Der Ablauf-Monat muss angegeben werden")]
+        [Range(1, 12, ErrorMessage = "Die Zahl muss zwischen 1 und 12 liegen.")]
+        public Int32 ExpireMonth { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the ExpireMonth
+        /// </summary>
+        /// <value>
+        ///     The ExpireMonth
+        /// </value>
+        [DisplayName("Ablauf-Jahr")]
+        [Required(ErrorMessage = "Das Ablauf-Jahr muss angegeben werden")]
+        [Range(0, 9999, ErrorMessage = "Die Zahl muss zwischen 0 und 9999 liegen.")]
+        public Int32 ExpireYear { get; set; }
+
+        /// <summary>
         ///     Gets or sets the AquisitionAddition1
         /// </summary>
         /// <value>

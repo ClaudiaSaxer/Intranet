@@ -26,7 +26,7 @@ namespace Intranet.Labor.Model.labor
         /// <summary>
         ///     Gets or sets the month the incontinence pad expires
         /// </summary>
-        /// <value>the expire montn</value>
+        /// <value>the expire month</value>
         public Int32 ExpireMonth { get; set; }
 
         /// <summary>
