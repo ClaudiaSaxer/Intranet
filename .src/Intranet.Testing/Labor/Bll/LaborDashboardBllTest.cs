@@ -87,7 +87,7 @@ namespace Intranet.Labor.Bll.Test
                 FaNr = "666",
                 ShiftType = ShiftType.Late,
                 DayInYear = now.DayOfYear,
-                CreatedDateTime = now.AddDays( 7 )
+                CreatedDateTime = now.AddDays( -7 )
             };
 
             var shift = new ShiftSchedule
