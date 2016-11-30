@@ -189,7 +189,7 @@ items:
     parameters: []
     return:
       type: System.Int32
-      description: the expire montn
+      description: the expire month
   overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth*
   modifiers.csharp:
   - public

@@ -31,7 +31,6 @@ items:
     content: 'public class BabyDiaperLaborHomeBll : ILaborHome'
     content.vb: >-
       Public Class BabyDiaperLaborHomeBll
-
           Implements ILaborHome
   inheritance:
   - System.Object

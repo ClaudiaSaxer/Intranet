@@ -32,7 +32,6 @@ items:
     content: 'public class NavigationBll : INavigationBll'
     content.vb: >-
       Public Class NavigationBll
-
           Implements INavigationBll
   inheritance:
   - System.Object

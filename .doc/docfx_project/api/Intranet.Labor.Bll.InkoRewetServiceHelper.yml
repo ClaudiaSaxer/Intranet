@@ -35,9 +35,7 @@ items:
     content: 'public class InkoRewetServiceHelper : ServiceBase, IInkoRewetServiceHelper'
     content.vb: >-
       Public Class InkoRewetServiceHelper
-
           Inherits ServiceBase
-
           Implements IInkoRewetServiceHelper
   inheritance:
   - System.Object
@@ -230,7 +228,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateRewetAverageAndStv
     path: .src/Intranet/Labor/Bll/InkoRewetServiceHelper.cs
-    startLine: 80
+    startLine: 82
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -271,7 +269,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateRewetTest
     path: .src/Intranet/Labor/Bll/InkoRewetServiceHelper.cs
-    startLine: 107
+    startLine: 109
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

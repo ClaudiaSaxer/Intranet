@@ -32,9 +32,7 @@ items:
     content: 'public class IntranetContext : DbContext, IDisposable, IObjectContextAdapter'
     content.vb: >-
       Public Class IntranetContext
-
           Inherits DbContext
-
           Implements IDisposable, IObjectContextAdapter
   inheritance:
   - System.Object

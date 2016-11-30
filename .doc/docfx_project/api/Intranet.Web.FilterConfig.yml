@@ -30,7 +30,6 @@ items:
     content: 'public static class FilterConfig : object'
     content.vb: >-
       Public Module FilterConfig
-
           Inherits Object
   inheritance:
   - System.Object

@@ -33,9 +33,7 @@ items:
     content: 'public class IncontinencePadLaborCreatorService : ServiceBase, IIncontinencePadLaborCreatorService'
     content.vb: >-
       Public Class IncontinencePadLaborCreatorService
-
           Inherits ServiceBase
-
           Implements IIncontinencePadLaborCreatorService
   inheritance:
   - System.Object

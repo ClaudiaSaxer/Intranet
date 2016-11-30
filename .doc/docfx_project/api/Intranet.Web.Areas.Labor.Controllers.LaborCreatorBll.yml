@@ -36,9 +36,7 @@ items:
     content: 'public class LaborCreatorBll : ServiceBase, ILaborCreatorBll'
     content.vb: >-
       Public Class LaborCreatorBll
-
           Inherits ServiceBase
-
           Implements ILaborCreatorBll
   inheritance:
   - System.Object

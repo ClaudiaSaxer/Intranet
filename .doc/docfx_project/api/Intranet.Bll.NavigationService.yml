@@ -32,9 +32,7 @@ items:
     content: 'public class NavigationService : ServiceBase, INavigationService'
     content.vb: >-
       Public Class NavigationService
-
           Inherits ServiceBase
-
           Implements INavigationService
   inheritance:
   - System.Object

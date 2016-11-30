@@ -43,9 +43,7 @@ items:
     content: 'public class LaborContext : DbContext, IDisposable, IObjectContextAdapter'
     content.vb: >-
       Public Class LaborContext
-
           Inherits DbContext
-
           Implements IDisposable, IObjectContextAdapter
   inheritance:
   - System.Object

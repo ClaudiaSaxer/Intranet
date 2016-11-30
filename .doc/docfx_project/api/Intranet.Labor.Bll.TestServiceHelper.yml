@@ -34,9 +34,7 @@ items:
     content: 'public class TestServiceHelper : ServiceBase, ITestServiceHelper'
     content.vb: >-
       Public Class TestServiceHelper
-
           Inherits ServiceBase
-
           Implements ITestServiceHelper
   inheritance:
   - System.Object

@@ -33,7 +33,6 @@ items:
     content: 'public class HistoryController : BaseController'
     content.vb: >-
       Public Class HistoryController
-
           Inherits BaseController
   inheritance:
   - System.Object

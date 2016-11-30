@@ -31,7 +31,6 @@ items:
     content: 'public class ServiceBase : LoggingBase'
     content.vb: >-
       Public Class ServiceBase
-
           Inherits LoggingBase
   inheritance:
   - System.Object

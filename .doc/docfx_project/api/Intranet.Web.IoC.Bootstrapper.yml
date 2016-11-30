@@ -30,7 +30,6 @@ items:
     content: 'public class Bootstrapper : object'
     content.vb: >-
       Public Class Bootstrapper
-
           Inherits Object
   inheritance:
   - System.Object

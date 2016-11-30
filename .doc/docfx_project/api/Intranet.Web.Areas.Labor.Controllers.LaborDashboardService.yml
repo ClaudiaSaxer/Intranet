@@ -34,9 +34,7 @@ items:
     content: 'public class LaborDashboardService : ServiceBase, ILaborDashboardService'
     content.vb: >-
       Public Class LaborDashboardService
-
           Inherits ServiceBase
-
           Implements ILaborDashboardService
   inheritance:
   - System.Object

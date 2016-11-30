@@ -37,9 +37,7 @@ items:
     content: 'public class InkoRewetService : ServiceBase, IInkoRewetService'
     content.vb: >-
       Public Class InkoRewetService
-
           Inherits ServiceBase
-
           Implements IInkoRewetService
   inheritance:
   - System.Object
@@ -310,7 +308,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetNewInkoRewetEditViewModel
     path: .src/Intranet/Labor/Bll/InkoRewetService.cs
-    startLine: 128
+    startLine: 130
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -351,7 +349,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Save
     path: .src/Intranet/Labor/Bll/InkoRewetService.cs
-    startLine: 169
+    startLine: 173
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

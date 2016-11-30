@@ -45,7 +45,6 @@ items:
     content: 'public class TestBll : ITestBll'
     content.vb: >-
       Public Class TestBll
-
           Implements ITestBll
   inheritance:
   - System.Object

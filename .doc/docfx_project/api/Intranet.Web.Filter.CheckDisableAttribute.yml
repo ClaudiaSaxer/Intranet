@@ -32,7 +32,6 @@ items:
     content: 'public class CheckDisableAttribute : ActionFilterAttribute'
     content.vb: >-
       Public Class CheckDisableAttribute
-
           Inherits ActionFilterAttribute
   inheritance:
   - System.Object

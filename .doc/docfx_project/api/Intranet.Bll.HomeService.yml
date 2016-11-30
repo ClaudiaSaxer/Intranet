@@ -32,9 +32,7 @@ items:
     content: 'public class HomeService : ServiceBase, IHomeService'
     content.vb: >-
       Public Class HomeService
-
           Inherits ServiceBase
-
           Implements IHomeService
   inheritance:
   - System.Object

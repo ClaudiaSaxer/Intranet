@@ -31,7 +31,6 @@ items:
     content: 'public interface IDbCommit<TContext> : IDisposable'
     content.vb: >-
       Public Interface IDbCommit(Of TContext)
-
           Inherits IDisposable
     typeParameters:
     - id: TContext

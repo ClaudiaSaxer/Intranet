@@ -31,7 +31,6 @@ items:
     content: 'public class SystemWebSecurityRoles : IRoles'
     content.vb: >-
       Public Class SystemWebSecurityRoles
-
           Implements IRoles
   inheritance:
   - System.Object

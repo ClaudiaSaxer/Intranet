@@ -30,9 +30,7 @@ items:
     content: 'public class TestValueRepository : GenericRepository<LaborContext, TestValue>, IGenericRepository<TestValue>, IDisposable'
     content.vb: >-
       Public Class TestValueRepository
-
           Inherits GenericRepository(Of LaborContext, TestValue)
-
           Implements IGenericRepository(Of TestValue), IDisposable
   inheritance:
   - System.Object

@@ -31,7 +31,6 @@ items:
     content: 'public class HomeBll : IHomeBll'
     content.vb: >-
       Public Class HomeBll
-
           Implements IHomeBll
   inheritance:
   - System.Object

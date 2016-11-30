@@ -60,7 +60,7 @@
         ]
       }
     ],
-    "dest": "../../.Output/Doc",
+    "dest": "../../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

@@ -43,7 +43,6 @@ items:
     content: 'public interface IGenericRepository<TEntity> : IDisposable where TEntity : class'
     content.vb: >-
       Public Interface IGenericRepository(Of TEntity As Class)
-
           Inherits IDisposable
     typeParameters:
     - id: TEntity

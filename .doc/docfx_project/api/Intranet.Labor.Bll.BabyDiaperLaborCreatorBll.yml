@@ -31,7 +31,6 @@ items:
     content: 'public class BabyDiaperLaborCreatorBll : IBabyDiaperLaborCreatorBll'
     content.vb: >-
       Public Class BabyDiaperLaborCreatorBll
-
           Implements IBabyDiaperLaborCreatorBll
   inheritance:
   - System.Object

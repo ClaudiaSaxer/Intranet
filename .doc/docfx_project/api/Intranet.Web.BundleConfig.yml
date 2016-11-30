@@ -30,7 +30,6 @@ items:
     content: 'public class BundleConfig : object'
     content.vb: >-
       Public Class BundleConfig
-
           Inherits Object
   inheritance:
   - System.Object

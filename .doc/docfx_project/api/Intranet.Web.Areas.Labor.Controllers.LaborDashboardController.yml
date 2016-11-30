@@ -32,7 +32,6 @@ items:
     content: 'public class LaborDashboardController : BaseController'
     content.vb: >-
       Public Class LaborDashboardController
-
           Inherits BaseController
   inheritance:
   - System.Object

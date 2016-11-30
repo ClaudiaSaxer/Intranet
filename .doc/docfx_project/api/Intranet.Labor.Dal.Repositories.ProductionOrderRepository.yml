@@ -30,9 +30,7 @@ items:
     content: 'public class ProductionOrderRepository : GenericRepository<LaborContext, ProductionOrder>, IGenericRepository<ProductionOrder>, IDisposable'
     content.vb: >-
       Public Class ProductionOrderRepository
-
           Inherits GenericRepository(Of LaborContext, ProductionOrder)
-
           Implements IGenericRepository(Of ProductionOrder), IDisposable
   inheritance:
   - System.Object

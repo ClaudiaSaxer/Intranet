@@ -37,9 +37,7 @@ items:
     content: 'public class BabyDiaperRetentionService : ServiceBase, IBabyDiaperRetentionService'
     content.vb: >-
       Public Class BabyDiaperRetentionService
-
           Inherits ServiceBase
-
           Implements IBabyDiaperRetentionService
   inheritance:
   - System.Object

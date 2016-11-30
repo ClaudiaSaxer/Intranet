@@ -33,9 +33,7 @@ items:
     content: 'public abstract class DisposableBase : LoggingBase, IDisposable'
     content.vb: >-
       Public MustInherit Class DisposableBase
-
           Inherits LoggingBase
-
           Implements IDisposable
   inheritance:
   - System.Object

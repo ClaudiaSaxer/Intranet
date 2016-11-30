@@ -33,7 +33,6 @@ items:
     content: 'public class SettingsBll : ISettingsBll'
     content.vb: >-
       Public Class SettingsBll
-
           Implements ISettingsBll
   inheritance:
   - System.Object

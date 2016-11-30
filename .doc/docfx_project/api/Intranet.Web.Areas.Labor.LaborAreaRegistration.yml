@@ -31,7 +31,6 @@ items:
     content: 'public class LaborAreaRegistration : AreaRegistration'
     content.vb: >-
       Public Class LaborAreaRegistration
-
           Inherits AreaRegistration
   inheritance:
   - System.Object

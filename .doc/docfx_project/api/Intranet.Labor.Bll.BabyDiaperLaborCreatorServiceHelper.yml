@@ -56,9 +56,7 @@ items:
     content: 'public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper'
     content.vb: >-
       Public Class BabyDiaperLaborCreatorServiceHelper
-
           Inherits ServiceBase
-
           Implements IBabyDiaperLaborCreatorServiceHelper
   inheritance:
   - System.Object

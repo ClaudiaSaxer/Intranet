@@ -31,7 +31,6 @@ items:
     content: 'public class BabyDiaperRetentionEditViewModel : BaseTestEditViewModel'
     content.vb: >-
       Public Class BabyDiaperRetentionEditViewModel
-
           Inherits BaseTestEditViewModel
   inheritance:
   - System.Object
