@@ -1,0 +1,1517 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  commentId: T:Intranet.Labor.Model.labor.BabyDiaperTestValue
+  id: BabyDiaperTestValue
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+  - Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValue
+  nameWithType: BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValue
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nClass representing the baby diaper test value\n"
+  example: []
+  syntax:
+    content: public class BabyDiaperTestValue
+    content.vb: Public Class BabyDiaperTestValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+  id: BabyDiaperTestValueId
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValueId
+  nameWithType: BabyDiaperTestValue.BabyDiaperTestValueId
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValueId
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the id of the baby diaper test value\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("TestValue")]
+
+      public int BabyDiaperTestValueId { get; set; }
+    content.vb: >-
+      <ForeignKey("TestValue")>
+
+      Public Property BabyDiaperTestValueId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'the baby diaper test value id '
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: TestValue
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+  id: DiaperCreatedTime
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: DiaperCreatedTime
+  nameWithType: BabyDiaperTestValue.DiaperCreatedTime
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DiaperCreatedTime
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the time the diaper was created\n"
+  example: []
+  syntax:
+    content: public TimeSpan DiaperCreatedTime { get; set; }
+    content.vb: Public Property DiaperCreatedTime As TimeSpan
+    parameters: []
+    return:
+      type: System.TimeSpan
+      description: the time the diaper was created
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+  id: WeightDiaperDry
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: WeightDiaperDry
+  nameWithType: BabyDiaperTestValue.WeightDiaperDry
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: WeightDiaperDry
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight the diaper has if it is dry\n"
+  example: []
+  syntax:
+    content: public double WeightDiaperDry { get; set; }
+    content.vb: Public Property WeightDiaperDry As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of the dry diaper
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+  id: Rewet140Value
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: Rewet140Value
+  nameWithType: BabyDiaperTestValue.Rewet140Value
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet140Value
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 35
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for the revet after 140ml\n"
+  example: []
+  syntax:
+    content: public double Rewet140Value { get; set; }
+    content.vb: Public Property Rewet140Value As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the revet after 140ml
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+  id: Rewet210Value
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: Rewet210Value
+  nameWithType: BabyDiaperTestValue.Rewet210Value
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet210Value
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for revet after 120ml\n"
+  example: []
+  syntax:
+    content: public double Rewet210Value { get; set; }
+    content.vb: Public Property Rewet210Value As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the revet after 120ml
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+  id: StrikeTroughValue
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: StrikeTroughValue
+  nameWithType: BabyDiaperTestValue.StrikeTroughValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StrikeTroughValue
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 47
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value after the strike trough (with 210ml in g)\n"
+  example: []
+  syntax:
+    content: public double StrikeTroughValue { get; set; }
+    content.vb: Public Property StrikeTroughValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value after the strike through
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  id: DistributionOfTheStrikeTrough
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: DistributionOfTheStrikeTrough
+  nameWithType: BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DistributionOfTheStrikeTrough
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the distribution after the strikte trough (in mm)\n"
+  example: []
+  syntax:
+    content: public double DistributionOfTheStrikeTrough { get; set; }
+    content.vb: Public Property DistributionOfTheStrikeTrough As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the distribution after the strikte trough
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+  id: Rewet140Rw
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: Rewet140Rw
+  nameWithType: BabyDiaperTestValue.Rewet140Rw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet140Rw
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 60
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW of the revet for 140ml\n"
+  example: []
+  syntax:
+    content: public RwType? Rewet140Rw { get; set; }
+    content.vb: Public Property Rewet140Rw As RwType?
+    parameters: []
+    return:
+      type: System.Nullable{Intranet.Labor.Model.labor.RwType}
+      description: the RW of the revet for 140ml
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+  id: Rewet210Rw
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: Rewet210Rw
+  nameWithType: BabyDiaperTestValue.Rewet210Rw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet210Rw
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 66
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW of the revet for 210ml\n"
+  example: []
+  syntax:
+    content: public RwType? Rewet210Rw { get; set; }
+    content.vb: Public Property Rewet210Rw As RwType?
+    parameters: []
+    return:
+      type: System.Nullable{Intranet.Labor.Model.labor.RwType}
+      description: the RW of the revet for 210ml
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+  id: RetentionRw
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionRw
+  nameWithType: BabyDiaperTestValue.RetentionRw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionRw
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 72
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW of the retention\n"
+  example: []
+  syntax:
+    content: public RwType? RetentionRw { get; set; }
+    content.vb: Public Property RetentionRw As RwType?
+    parameters: []
+    return:
+      type: System.Nullable{Intranet.Labor.Model.labor.RwType}
+      description: the RW of the retention
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  id: RetentionAfterZentrifugeValue
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionAfterZentrifugeValue
+  nameWithType: BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAfterZentrifugeValue
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 78
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the rentention value after the zentrifuge\n"
+  example: []
+  syntax:
+    content: public double RetentionAfterZentrifugeValue { get; set; }
+    content.vb: Public Property RetentionAfterZentrifugeValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention value after zentrifuge
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  id: RetentionAfterZentrifugePercent
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionAfterZentrifugePercent
+  nameWithType: BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAfterZentrifugePercent
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 84
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the rentention percent after the zentrifuge\n"
+  example: []
+  syntax:
+    content: public double RetentionAfterZentrifugePercent { get; set; }
+    content.vb: Public Property RetentionAfterZentrifugePercent As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention percent after the zentrifuge
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+  id: RetentionWetWeight
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionWetWeight
+  nameWithType: BabyDiaperTestValue.RetentionWetWeight
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionWetWeight
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 89
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the retention wet weight of the diaper\n"
+  example: []
+  syntax:
+    content: public double RetentionWetWeight { get; set; }
+    content.vb: Public Property RetentionWetWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the wet weight of the diaper
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+  id: SapGHoewiValue
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: SapGHoewiValue
+  nameWithType: BabyDiaperTestValue.SapGHoewiValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SapGHoewiValue
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for the SAP g/Höwi\n"
+  example: []
+  syntax:
+    content: public double SapGHoewiValue { get; set; }
+    content.vb: Public Property SapGHoewiValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the SAP g/Höwi value
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+  id: SapType
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: SapType
+  nameWithType: BabyDiaperTestValue.SapType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SapType
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 101
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the sap type\n"
+  example: []
+  syntax:
+    content: public string SapType { get; set; }
+    content.vb: Public Property SapType As String
+    parameters: []
+    return:
+      type: System.String
+      description: the sap type
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+  id: SapNr
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: SapNr
+  nameWithType: BabyDiaperTestValue.SapNr
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SapNr
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the sap number\n"
+  example: []
+  syntax:
+    content: public string SapNr { get; set; }
+    content.vb: Public Property SapNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the sap number
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+  id: TestValue
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: TestValue
+  nameWithType: BabyDiaperTestValue.TestValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValue
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 113
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test value of the baby diaper test value\n"
+  example: []
+  syntax:
+    content: public virtual TestValue TestValue { get; set; }
+    content.vb: Public Overridable Property TestValue As TestValue
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the test value
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  id: PenetrationTimeAdditionFirst
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionFirst
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionFirst
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 119
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value of the penetrationTime of the first addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionFirst { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionFirst As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the first addition
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  id: PenetrationTimeAdditionSecond
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionSecond
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionSecond
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 125
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value of the penetrationTime of the second addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionSecond { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionSecond As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the second addition
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+  id: PenetrationTimeAdditionThird
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionThird
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionThird
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionThird
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 131
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value of the penetrationTime of the third addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionThird { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionThird As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the third addition
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  id: PenetrationTimeAdditionFourth
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionFourth
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionFourth
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 137
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value of the penetrationTime of the fourth addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionFourth { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionFourth As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the fourth addition
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+  id: PenetrationRwType
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: PenetrationRwType
+  nameWithType: BabyDiaperTestValue.PenetrationRwType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationRwType
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 143
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW of the Penetration test\n"
+  example: []
+  syntax:
+    content: public RwType? PenetrationRwType { get; set; }
+    content.vb: Public Property PenetrationRwType As RwType?
+    parameters: []
+    return:
+      type: System.Nullable{Intranet.Labor.Model.labor.RwType}
+      description: the rw type of the penetration test
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+  commentId: P:Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+  id: TestType
+  parent: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  langs:
+  - csharp
+  - vb
+  name: TestType
+  nameWithType: BabyDiaperTestValue.TestType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestType
+    path: .src/Intranet/Labor/Model/labor/BabyDiaperTestValue.cs
+    startLine: 149
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test type of the baby diaper test value\n"
+  example: []
+  syntax:
+    content: public TestTypeBabyDiaper TestType { get; set; }
+    content.vb: Public Property TestType As TestTypeBabyDiaper
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+      description: the test type of the baby diaper test value
+  overload: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+  isExternal: false
+  name: BabyDiaperTestValueId
+  nameWithType: BabyDiaperTestValue.BabyDiaperTestValueId
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.BabyDiaperTestValueId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+  isExternal: false
+  name: DiaperCreatedTime
+  nameWithType: BabyDiaperTestValue.DiaperCreatedTime
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.DiaperCreatedTime
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+  isExternal: false
+  name: WeightDiaperDry
+  nameWithType: BabyDiaperTestValue.WeightDiaperDry
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.WeightDiaperDry
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+  isExternal: false
+  name: Rewet140Value
+  nameWithType: BabyDiaperTestValue.Rewet140Value
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Value
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+  isExternal: false
+  name: Rewet210Value
+  nameWithType: BabyDiaperTestValue.Rewet210Value
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Value
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+  isExternal: false
+  name: StrikeTroughValue
+  nameWithType: BabyDiaperTestValue.StrikeTroughValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.StrikeTroughValue
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  isExternal: false
+  name: DistributionOfTheStrikeTrough
+  nameWithType: BabyDiaperTestValue.DistributionOfTheStrikeTrough
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.DistributionOfTheStrikeTrough
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+  isExternal: false
+  name: Rewet140Rw
+  nameWithType: BabyDiaperTestValue.Rewet140Rw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet140Rw
+- uid: System.Nullable{Intranet.Labor.Model.labor.RwType}
+  commentId: T:System.Nullable{Intranet.Labor.Model.labor.RwType}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<RwType>
+  nameWithType: Nullable<RwType>
+  fullName: System.Nullable<Intranet.Labor.Model.labor.RwType>
+  nameWithType.vb: Nullable(Of RwType)
+  fullname.vb: System.Nullable(Of Intranet.Labor.Model.labor.RwType)
+  name.vb: Nullable(Of RwType)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.RwType
+    name: RwType
+    nameWithType: RwType
+    fullName: Intranet.Labor.Model.labor.RwType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.RwType
+    name: RwType
+    nameWithType: RwType
+    fullName: Intranet.Labor.Model.labor.RwType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+  isExternal: false
+  name: Rewet210Rw
+  nameWithType: BabyDiaperTestValue.Rewet210Rw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.Rewet210Rw
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+  isExternal: false
+  name: RetentionRw
+  nameWithType: BabyDiaperTestValue.RetentionRw
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionRw
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  isExternal: false
+  name: RetentionAfterZentrifugeValue
+  nameWithType: BabyDiaperTestValue.RetentionAfterZentrifugeValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugeValue
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  isExternal: false
+  name: RetentionAfterZentrifugePercent
+  nameWithType: BabyDiaperTestValue.RetentionAfterZentrifugePercent
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionAfterZentrifugePercent
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+  isExternal: false
+  name: RetentionWetWeight
+  nameWithType: BabyDiaperTestValue.RetentionWetWeight
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.RetentionWetWeight
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+  isExternal: false
+  name: SapGHoewiValue
+  nameWithType: BabyDiaperTestValue.SapGHoewiValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapGHoewiValue
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+  isExternal: false
+  name: SapType
+  nameWithType: BabyDiaperTestValue.SapType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+  isExternal: false
+  name: SapNr
+  nameWithType: BabyDiaperTestValue.SapNr
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.SapNr
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+  isExternal: false
+  name: TestValue
+  nameWithType: BabyDiaperTestValue.TestValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestValue
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  isExternal: false
+  name: PenetrationTimeAdditionFirst
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionFirst
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFirst
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  isExternal: false
+  name: PenetrationTimeAdditionSecond
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionSecond
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionSecond
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+  isExternal: false
+  name: PenetrationTimeAdditionThird
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionThird
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionThird
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  isExternal: false
+  name: PenetrationTimeAdditionFourth
+  nameWithType: BabyDiaperTestValue.PenetrationTimeAdditionFourth
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationTimeAdditionFourth
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+  isExternal: false
+  name: PenetrationRwType
+  nameWithType: BabyDiaperTestValue.PenetrationRwType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.PenetrationRwType
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType*
+  commentId: Overload:Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+  isExternal: false
+  name: TestType
+  nameWithType: BabyDiaperTestValue.TestType
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue.TestType
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper

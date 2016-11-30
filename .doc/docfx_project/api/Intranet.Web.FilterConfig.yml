@@ -1,0 +1,113 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.FilterConfig
+  commentId: T:Intranet.Web.FilterConfig
+  id: FilterConfig
+  parent: Intranet.Web
+  children:
+  - Intranet.Web.FilterConfig.RegisterGlobalFilters(GlobalFilterCollection)
+  langs:
+  - csharp
+  - vb
+  name: FilterConfig
+  nameWithType: FilterConfig
+  fullName: Intranet.Web.FilterConfig
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/FilterConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FilterConfig
+    path: .src/Intranet/Web/App_Start/FilterConfig.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nFilter Config\n"
+  example: []
+  syntax:
+    content: 'public static class FilterConfig : object'
+    content.vb: >-
+      Public Module FilterConfig
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Intranet.Web.FilterConfig.RegisterGlobalFilters(GlobalFilterCollection)
+  commentId: M:Intranet.Web.FilterConfig.RegisterGlobalFilters(GlobalFilterCollection)
+  id: RegisterGlobalFilters(GlobalFilterCollection)
+  parent: Intranet.Web.FilterConfig
+  langs:
+  - csharp
+  - vb
+  name: RegisterGlobalFilters(GlobalFilterCollection)
+  nameWithType: FilterConfig.RegisterGlobalFilters(GlobalFilterCollection)
+  fullName: Intranet.Web.FilterConfig.RegisterGlobalFilters(GlobalFilterCollection)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/FilterConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RegisterGlobalFilters
+    path: .src/Intranet/Web/App_Start/FilterConfig.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nRegisters Global Filters\n"
+  example: []
+  syntax:
+    content: public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+    content.vb: Public Shared Sub RegisterGlobalFilters(filters As GlobalFilterCollection)
+    parameters:
+    - id: filters
+      type: GlobalFilterCollection
+      description: ''
+  overload: Intranet.Web.FilterConfig.RegisterGlobalFilters*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  isExternal: false
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.FilterConfig.RegisterGlobalFilters*
+  commentId: Overload:Intranet.Web.FilterConfig.RegisterGlobalFilters
+  isExternal: false
+  name: RegisterGlobalFilters
+  nameWithType: FilterConfig.RegisterGlobalFilters
+  fullName: Intranet.Web.FilterConfig.RegisterGlobalFilters
+- uid: GlobalFilterCollection
+  commentId: '!:GlobalFilterCollection'
+  isExternal: true
+  name: GlobalFilterCollection
+  nameWithType: GlobalFilterCollection
+  fullName: GlobalFilterCollection

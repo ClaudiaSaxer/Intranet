@@ -1,0 +1,293 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Controllers.HomeController
+  commentId: T:Intranet.Web.Controllers.HomeController
+  id: HomeController
+  parent: Intranet.Web.Controllers
+  children:
+  - Intranet.Web.Controllers.HomeController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Controllers.HomeController.HomeService
+  - Intranet.Web.Controllers.HomeController.Index
+  langs:
+  - csharp
+  - vb
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Intranet.Web.Controllers.HomeController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/HomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HomeController
+    path: .src/Intranet/Web/Controllers/HomeController.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nClass representing the HomeController\n"
+  example: []
+  syntax:
+    content: 'public class HomeController : BaseController'
+    content.vb: >-
+      Public Class HomeController
+
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Controllers.HomeController.HomeService
+  commentId: P:Intranet.Web.Controllers.HomeController.HomeService
+  id: HomeService
+  parent: Intranet.Web.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: HomeService
+  nameWithType: HomeController.HomeService
+  fullName: Intranet.Web.Controllers.HomeController.HomeService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/HomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HomeService
+    path: .src/Intranet/Web/Controllers/HomeController.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Definition.IHomeService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public IHomeService HomeService { get; set; }
+    content.vb: Public Property HomeService As IHomeService
+    parameters: []
+    return:
+      type: Intranet.Definition.IHomeService
+      description: "\n<xref href=\"Intranet.Definition.IHomeService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Controllers.HomeController.HomeService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Controllers.HomeController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Controllers.HomeController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: HomeController(ILoggerFactory)
+  nameWithType: HomeController.HomeController(ILoggerFactory)
+  fullName: Intranet.Web.Controllers.HomeController.HomeController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/HomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Controllers/HomeController.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Controllers.HomeController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public HomeController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Controllers.HomeController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Controllers.HomeController.Index
+  commentId: M:Intranet.Web.Controllers.HomeController.Index
+  id: Index
+  parent: Intranet.Web.Controllers.HomeController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: HomeController.Index()
+  fullName: Intranet.Web.Controllers.HomeController.Index()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/HomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Index
+    path: .src/Intranet/Web/Controllers/HomeController.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nLoads the index page of the HomeController\n"
+  example: []
+  syntax:
+    content: public ActionResult Index()
+    content.vb: Public Function Index As ActionResult
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Controllers.HomeController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Controllers
+  commentId: N:Intranet.Web.Controllers
+  isExternal: false
+  name: Intranet.Web.Controllers
+  nameWithType: Intranet.Web.Controllers
+  fullName: Intranet.Web.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Definition.IHomeService
+  commentId: T:Intranet.Definition.IHomeService
+  parent: Intranet.Definition
+  isExternal: false
+  name: IHomeService
+  nameWithType: IHomeService
+  fullName: Intranet.Definition.IHomeService
+- uid: Intranet.Web.Controllers.HomeController.HomeService*
+  commentId: Overload:Intranet.Web.Controllers.HomeController.HomeService
+  isExternal: false
+  name: HomeService
+  nameWithType: HomeController.HomeService
+  fullName: Intranet.Web.Controllers.HomeController.HomeService
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Web.Controllers.HomeController
+  commentId: T:Intranet.Web.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Intranet.Web.Controllers.HomeController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Controllers.HomeController.#ctor*
+  commentId: Overload:Intranet.Web.Controllers.HomeController.#ctor
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController.HomeController
+  fullName: Intranet.Web.Controllers.HomeController.HomeController
+- uid: Intranet.Web.Controllers.HomeController.Index*
+  commentId: Overload:Intranet.Web.Controllers.HomeController.Index
+  isExternal: false
+  name: Index
+  nameWithType: HomeController.Index
+  fullName: Intranet.Web.Controllers.HomeController.Index
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult

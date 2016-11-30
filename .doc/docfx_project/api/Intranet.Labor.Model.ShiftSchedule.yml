@@ -1,0 +1,716 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.ShiftSchedule
+  commentId: T:Intranet.Labor.Model.ShiftSchedule
+  id: ShiftSchedule
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.ShiftSchedule.EndDay
+  - Intranet.Labor.Model.ShiftSchedule.EndTime
+  - Intranet.Labor.Model.ShiftSchedule.Name
+  - Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  - Intranet.Labor.Model.ShiftSchedule.ShiftType
+  - Intranet.Labor.Model.ShiftSchedule.StartDay
+  - Intranet.Labor.Model.ShiftSchedule.StartTime
+  langs:
+  - csharp
+  - vb
+  name: ShiftSchedule
+  nameWithType: ShiftSchedule
+  fullName: Intranet.Labor.Model.ShiftSchedule
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftSchedule
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nClass representing the shift schedule\n"
+  example: []
+  syntax:
+    content: public class ShiftSchedule
+    content.vb: Public Class ShiftSchedule
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  id: ShiftScheduleID
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: ShiftScheduleID
+  nameWithType: ShiftSchedule.ShiftScheduleID
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftScheduleID
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the id of the shift shedule\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int ShiftScheduleID { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property ShiftScheduleID As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the id of the shift shedule
+  overload: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.Name
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.Name
+  id: Name
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: ShiftSchedule.Name
+  fullName: Intranet.Labor.Model.ShiftSchedule.Name
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Name
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the name of the shift shedule\n"
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    content.vb: Public Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the shift shedule
+  overload: Intranet.Labor.Model.ShiftSchedule.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.StartDay
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.StartDay
+  id: StartDay
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: StartDay
+  nameWithType: ShiftSchedule.StartDay
+  fullName: Intranet.Labor.Model.ShiftSchedule.StartDay
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StartDay
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the start day of the shift shedule <xref href=\"System.DayOfWeek\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public DayOfWeek StartDay { get; set; }
+    content.vb: Public Property StartDay As DayOfWeek
+    parameters: []
+    return:
+      type: System.DayOfWeek
+      description: the start day
+  overload: Intranet.Labor.Model.ShiftSchedule.StartDay*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.EndDay
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.EndDay
+  id: EndDay
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: EndDay
+  nameWithType: ShiftSchedule.EndDay
+  fullName: Intranet.Labor.Model.ShiftSchedule.EndDay
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: EndDay
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the end day of the shift shedule <xref href=\"System.DayOfWeek\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public DayOfWeek EndDay { get; set; }
+    content.vb: Public Property EndDay As DayOfWeek
+    parameters: []
+    return:
+      type: System.DayOfWeek
+      description: the end day
+  overload: Intranet.Labor.Model.ShiftSchedule.EndDay*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.StartTime
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.StartTime
+  id: StartTime
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: ShiftSchedule.StartTime
+  fullName: Intranet.Labor.Model.ShiftSchedule.StartTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StartTime
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the start time of the shift shedule\n"
+  example: []
+  syntax:
+    content: public TimeSpan StartTime { get; set; }
+    content.vb: Public Property StartTime As TimeSpan
+    parameters: []
+    return:
+      type: System.TimeSpan
+      description: the start time
+  overload: Intranet.Labor.Model.ShiftSchedule.StartTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.EndTime
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.EndTime
+  id: EndTime
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: EndTime
+  nameWithType: ShiftSchedule.EndTime
+  fullName: Intranet.Labor.Model.ShiftSchedule.EndTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: EndTime
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 49
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the end time of the shift shedule\n"
+  example: []
+  syntax:
+    content: public TimeSpan EndTime { get; set; }
+    content.vb: Public Property EndTime As TimeSpan
+    parameters: []
+    return:
+      type: System.TimeSpan
+      description: the end time
+  overload: Intranet.Labor.Model.ShiftSchedule.EndTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftType
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.ShiftType
+  id: ShiftType
+  parent: Intranet.Labor.Model.ShiftSchedule
+  langs:
+  - csharp
+  - vb
+  name: ShiftType
+  nameWithType: ShiftSchedule.ShiftType
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftType
+    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the type of the shift <xref href=\"Intranet.Labor.Model.ShiftSchedule.ShiftType\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ShiftType ShiftType { get; set; }
+    content.vb: Public Property ShiftType As ShiftType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.ShiftType
+      description: the type of the shift
+  overload: Intranet.Labor.Model.ShiftSchedule.ShiftType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  isExternal: false
+  name: ShiftScheduleID
+  nameWithType: ShiftSchedule.ShiftScheduleID
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.ShiftSchedule.Name*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.Name
+  isExternal: false
+  name: Name
+  nameWithType: ShiftSchedule.Name
+  fullName: Intranet.Labor.Model.ShiftSchedule.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DayOfWeek
+  commentId: T:System.DayOfWeek
+  parent: System
+  isExternal: true
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: System.DayOfWeek
+- uid: Intranet.Labor.Model.ShiftSchedule.StartDay*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.StartDay
+  isExternal: false
+  name: StartDay
+  nameWithType: ShiftSchedule.StartDay
+  fullName: Intranet.Labor.Model.ShiftSchedule.StartDay
+- uid: Intranet.Labor.Model.ShiftSchedule.EndDay*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.EndDay
+  isExternal: false
+  name: EndDay
+  nameWithType: ShiftSchedule.EndDay
+  fullName: Intranet.Labor.Model.ShiftSchedule.EndDay
+- uid: Intranet.Labor.Model.ShiftSchedule.StartTime*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.StartTime
+  isExternal: false
+  name: StartTime
+  nameWithType: ShiftSchedule.StartTime
+  fullName: Intranet.Labor.Model.ShiftSchedule.StartTime
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Intranet.Labor.Model.ShiftSchedule.EndTime*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.EndTime
+  isExternal: false
+  name: EndTime
+  nameWithType: ShiftSchedule.EndTime
+  fullName: Intranet.Labor.Model.ShiftSchedule.EndTime
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftType
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.ShiftType
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftType*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.ShiftType
+  isExternal: false
+  name: ShiftType
+  nameWithType: ShiftSchedule.ShiftType
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftType
+- uid: Intranet.Labor.Model.ShiftType
+  commentId: T:Intranet.Labor.Model.ShiftType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ShiftType
+  nameWithType: ShiftType
+  fullName: Intranet.Labor.Model.ShiftType

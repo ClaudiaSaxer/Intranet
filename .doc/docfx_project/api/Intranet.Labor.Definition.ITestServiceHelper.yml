@@ -1,0 +1,311 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  id: ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  - Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  - Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  langs:
+  - csharp
+  - vb
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ITestServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the baby diaper service helper\n"
+  example: []
+  syntax:
+    content: public interface ITestServiceHelper
+    content.vb: Public Interface ITestServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  id: CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  nameWithType: ITestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateNewTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a new testvalue initialized with following values\n"
+  example: []
+  syntax:
+    content: TestValue CreateNewTestValue(int testSheetId, string testPerson, int productionCodeDay, IList<TestNote> notes)
+    content.vb: Function CreateNewTestValue(testSheetId As Integer, testPerson As String, productionCodeDay As Integer, notes As IList(Of TestNote)) As TestValue
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: ID of the testsheet
+    - id: testPerson
+      type: System.String
+      description: the Testperson
+    - id: productionCodeDay
+      type: System.Int32
+      description: the production-day of the diaper
+    - id: notes
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+      description: the notes for the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the created testvalue
+  overload: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue*
+  nameWithType.vb: ITestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+  fullName.vb: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote))
+  name.vb: CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  id: CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateProductionCode(TestSheet)
+  nameWithType: ITestServiceHelper.CreateProductionCode(TestSheet)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateProductionCode
+    path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the Production code string from the testsheet\n"
+  example: []
+  syntax:
+    content: string CreateProductionCode(TestSheet testSheet)
+    content.vb: Function CreateProductionCode(testSheet As TestSheet) As String
+    parameters:
+    - id: testSheet
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the testSheet
+    return:
+      type: System.String
+      description: the production code
+  overload: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode*
+- uid: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  id: UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateNotes(IList<TestNote>, TestValue)
+  nameWithType: ITestServiceHelper.UpdateNotes(IList<TestNote>, TestValue)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>, Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateNotes
+    path: .src/Intranet/Labor/Definitions/Bll/ITestServiceHelper.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nConverts the notes from the viewmodel to the dbmodel.\nDeletes notes which were deleted in the view\nadds new notes to the db\nupdates notes\n"
+  example: []
+  syntax:
+    content: void UpdateNotes(IList<TestNote> vmNotes, TestValue testValue)
+    content.vb: Sub UpdateNotes(vmNotes As IList(Of TestNote), testValue As TestValue)
+    parameters:
+    - id: vmNotes
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+      description: the List of Notes from the ViewModel
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the testvalue where the notes are for
+  overload: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes*
+  nameWithType.vb: ITestServiceHelper.UpdateNotes(IList(Of TestNote), TestValue)
+  fullName.vb: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote), Intranet.Labor.Model.labor.TestValue)
+  name.vb: UpdateNotes(IList(Of TestNote), TestValue)
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue*
+  commentId: Overload:Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue
+  isExternal: false
+  name: CreateNewTestValue
+  nameWithType: ITestServiceHelper.CreateNewTestValue
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  commentId: T:System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<TestNote>
+  nameWithType: IList<TestNote>
+  fullName: System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>
+  nameWithType.vb: IList(Of TestNote)
+  fullname.vb: System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote)
+  name.vb: IList(Of TestNote)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullname.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode*
+  commentId: Overload:Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode
+  isExternal: false
+  name: CreateProductionCode
+  nameWithType: ITestServiceHelper.CreateProductionCode
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes*
+  commentId: Overload:Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes
+  isExternal: false
+  name: UpdateNotes
+  nameWithType: ITestServiceHelper.UpdateNotes
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes

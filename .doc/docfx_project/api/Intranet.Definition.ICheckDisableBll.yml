@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition.ICheckDisableBll
+  commentId: T:Intranet.Definition.ICheckDisableBll
+  id: ICheckDisableBll
+  parent: Intranet.Definition
+  children:
+  - Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ICheckDisableBll
+  nameWithType: ICheckDisableBll
+  fullName: Intranet.Definition.ICheckDisableBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ICheckDisableBll
+    path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nInterface representing the bll for the checkdisable\n"
+  example: []
+  syntax:
+    content: public interface ICheckDisableBll
+    content.vb: Public Interface ICheckDisableBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  commentId: M:Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  id: GetModule(System.String)
+  parent: Intranet.Definition.ICheckDisableBll
+  langs:
+  - csharp
+  - vb
+  name: GetModule(String)
+  nameWithType: ICheckDisableBll.GetModule(String)
+  fullName: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetModule
+    path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nReturns the Module with the name if it exist.\nIf it doesnt exist, it will be null\n"
+  example: []
+  syntax:
+    content: Module GetModule(string name)
+    content.vb: 'Function GetModule(name As String) As '
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the Modul
+    return:
+      type: Intranet.Model.Module
+      description: The Module if it exist (or null)
+  overload: Intranet.Definition.ICheckDisableBll.GetModule*
+references:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Definition.ICheckDisableBll.GetModule*
+  commentId: Overload:Intranet.Definition.ICheckDisableBll.GetModule
+  isExternal: false
+  name: GetModule
+  nameWithType: ICheckDisableBll.GetModule
+  fullName: Intranet.Definition.ICheckDisableBll.GetModule
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

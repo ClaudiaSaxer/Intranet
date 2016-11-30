@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.ArticleType
+  commentId: T:Intranet.Labor.Model.ArticleType
+  id: ArticleType
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.ArticleType.BabyDiaper
+  - Intranet.Labor.Model.ArticleType.IncontinencePad
+  langs:
+  - csharp
+  - vb
+  name: ArticleType
+  nameWithType: ArticleType
+  fullName: Intranet.Labor.Model.ArticleType
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleType
+    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nEnum representing the article type.\n"
+  example: []
+  syntax:
+    content: public enum ArticleType
+    content.vb: Public Enum ArticleType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.ArticleType.BabyDiaper
+  commentId: F:Intranet.Labor.Model.ArticleType.BabyDiaper
+  id: BabyDiaper
+  parent: Intranet.Labor.Model.ArticleType
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaper
+  nameWithType: ArticleType.BabyDiaper
+  fullName: Intranet.Labor.Model.ArticleType.BabyDiaper
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaper
+    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nArticle representing a baby diaper\n"
+  example: []
+  syntax:
+    content: BabyDiaper = 0
+    return:
+      type: Intranet.Labor.Model.ArticleType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.ArticleType.IncontinencePad
+  commentId: F:Intranet.Labor.Model.ArticleType.IncontinencePad
+  id: IncontinencePad
+  parent: Intranet.Labor.Model.ArticleType
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePad
+  nameWithType: ArticleType.IncontinencePad
+  fullName: Intranet.Labor.Model.ArticleType.IncontinencePad
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePad
+    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nArticle representing a incontinence pad\n"
+  example: []
+  syntax:
+    content: IncontinencePad = 1
+    return:
+      type: Intranet.Labor.Model.ArticleType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Model.ArticleType
+  commentId: T:Intranet.Labor.Model.ArticleType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ArticleType
+  nameWithType: ArticleType
+  fullName: Intranet.Labor.Model.ArticleType

@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  commentId: T:Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  id: TestTypeIncontinencePad
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.TestTypeIncontinencePad.AcquisitionTimeAndRewet
+  - Intranet.Labor.Model.labor.TestTypeIncontinencePad.Retention
+  - Intranet.Labor.Model.labor.TestTypeIncontinencePad.RewetFree
+  langs:
+  - csharp
+  - vb
+  name: TestTypeIncontinencePad
+  nameWithType: TestTypeIncontinencePad
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestTypeIncontinencePad
+    path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nEnum representing the types of tests for incontinence pads\n"
+  example: []
+  syntax:
+    content: public enum TestTypeIncontinencePad
+    content.vb: Public Enum TestTypeIncontinencePad
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad.RewetFree
+  commentId: F:Intranet.Labor.Model.labor.TestTypeIncontinencePad.RewetFree
+  id: RewetFree
+  parent: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  langs:
+  - csharp
+  - vb
+  name: RewetFree
+  nameWithType: TestTypeIncontinencePad.RewetFree
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad.RewetFree
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetFree
+    path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing a rewet free test\n"
+  example: []
+  syntax:
+    content: RewetFree = 0
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad.Retention
+  commentId: F:Intranet.Labor.Model.labor.TestTypeIncontinencePad.Retention
+  id: Retention
+  parent: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  langs:
+  - csharp
+  - vb
+  name: Retention
+  nameWithType: TestTypeIncontinencePad.Retention
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad.Retention
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Retention
+    path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing a retention test\n"
+  example: []
+  syntax:
+    content: Retention = 1
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad.AcquisitionTimeAndRewet
+  commentId: F:Intranet.Labor.Model.labor.TestTypeIncontinencePad.AcquisitionTimeAndRewet
+  id: AcquisitionTimeAndRewet
+  parent: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAndRewet
+  nameWithType: TestTypeIncontinencePad.AcquisitionTimeAndRewet
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad.AcquisitionTimeAndRewet
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAndRewet
+    path: .src/Intranet/Labor/Model/labor/TestTypeIncontinencePad.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing acquisition time test and a rewet after acquisition time test\n"
+  example: []
+  syntax:
+    content: AcquisitionTimeAndRewet = 2
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  commentId: T:Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeIncontinencePad
+  nameWithType: TestTypeIncontinencePad
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad

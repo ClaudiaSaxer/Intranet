@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  id: ILaborDashboardService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  langs:
+  - csharp
+  - vb
+  name: ILaborDashboardService
+  nameWithType: ILaborDashboardService
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborDashboardService
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardService.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInteraface representing Labor Dashboard Service\n"
+  example: []
+  syntax:
+    content: public interface ILaborDashboardService
+    content.vb: Public Interface ILaborDashboardService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  id: GetLaborDashboardViewModel
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborDashboardViewModel()
+  nameWithType: ILaborDashboardService.GetLaborDashboardViewModel()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborDashboardViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLabor creator view model\n"
+  example: []
+  syntax:
+    content: LaborDashboardViewModel GetLaborDashboardViewModel()
+    content.vb: Function GetLaborDashboardViewModel As LaborDashboardViewModel
+    return:
+      type: Intranet.Labor.ViewModel.LaborDashboardViewModel
+      description: the LaborDashboardViewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel*
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  isExternal: false
+  name: GetLaborDashboardViewModel
+  nameWithType: ILaborDashboardService.GetLaborDashboardViewModel
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborDashboardViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborDashboardViewModel
+  nameWithType: LaborDashboardViewModel
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

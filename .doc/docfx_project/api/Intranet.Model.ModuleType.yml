@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Model.ModuleType
+  commentId: T:Intranet.Model.ModuleType
+  id: ModuleType
+  parent: Intranet.Model
+  children:
+  - Intranet.Model.ModuleType.Main
+  - Intranet.Model.ModuleType.Setting
+  - Intranet.Model.ModuleType.Sub
+  langs:
+  - csharp
+  - vb
+  name: ModuleType
+  nameWithType: ModuleType
+  fullName: Intranet.Model.ModuleType
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Model/ModuleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ModuleType
+    path: .src/Intranet/Model/ModuleType.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nEnum representing the different module types\n"
+  example: []
+  syntax:
+    content: public enum ModuleType
+    content.vb: Public Enum ModuleType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Model.ModuleType.Main
+  commentId: F:Intranet.Model.ModuleType.Main
+  id: Main
+  parent: Intranet.Model.ModuleType
+  langs:
+  - csharp
+  - vb
+  name: Main
+  nameWithType: ModuleType.Main
+  fullName: Intranet.Model.ModuleType.Main
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Model/ModuleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Main
+    path: .src/Intranet/Model/ModuleType.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nModule is a Mainmodule\n"
+  example: []
+  syntax:
+    content: Main = 0
+    return:
+      type: Intranet.Model.ModuleType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Model.ModuleType.Sub
+  commentId: F:Intranet.Model.ModuleType.Sub
+  id: Sub
+  parent: Intranet.Model.ModuleType
+  langs:
+  - csharp
+  - vb
+  name: Sub
+  nameWithType: ModuleType.Sub
+  fullName: Intranet.Model.ModuleType.Sub
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Model/ModuleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Sub
+    path: .src/Intranet/Model/ModuleType.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nModule is a Submodule\n"
+  example: []
+  syntax:
+    content: Sub = 1
+    return:
+      type: Intranet.Model.ModuleType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Model.ModuleType.Setting
+  commentId: F:Intranet.Model.ModuleType.Setting
+  id: Setting
+  parent: Intranet.Model.ModuleType
+  langs:
+  - csharp
+  - vb
+  name: Setting
+  nameWithType: ModuleType.Setting
+  fullName: Intranet.Model.ModuleType.Setting
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Model/ModuleType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Setting
+    path: .src/Intranet/Model/ModuleType.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nModule is a module for the settings\n"
+  example: []
+  syntax:
+    content: Setting = 2
+    return:
+      type: Intranet.Model.ModuleType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model
+- uid: Intranet.Model.ModuleType
+  commentId: T:Intranet.Model.ModuleType
+  parent: Intranet.Model
+  isExternal: false
+  name: ModuleType
+  nameWithType: ModuleType
+  fullName: Intranet.Model.ModuleType

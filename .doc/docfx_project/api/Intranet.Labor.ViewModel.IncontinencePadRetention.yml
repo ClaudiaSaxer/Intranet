@@ -1,0 +1,635 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRetention
+  id: IncontinencePadRetention
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+  - Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadRetention
+  nameWithType: IncontinencePadRetention
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadRetention
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model for the retention\n"
+  example: []
+  syntax:
+    content: public class IncontinencePadRetention
+    content.vb: Public Class IncontinencePadRetention
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+  id: RetentionRw
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: RetentionRw
+  nameWithType: IncontinencePadRetention.RetentionRw
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionRw
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW of the retention\n"
+  example: []
+  syntax:
+    content: public RwType RetentionRw { get; set; }
+    content.vb: Public Property RetentionRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW of the retention
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+  id: RetentionAfterZentrifugeValue
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: RetentionAfterZentrifugeValue
+  nameWithType: IncontinencePadRetention.RetentionAfterZentrifugeValue
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAfterZentrifugeValue
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the rentention value after the zentrifuge\n"
+  example: []
+  syntax:
+    content: public double RetentionAfterZentrifugeValue { get; set; }
+    content.vb: Public Property RetentionAfterZentrifugeValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention value after zentrifuge
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+  id: RetentionDiff
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: RetentionDiff
+  nameWithType: IncontinencePadRetention.RetentionDiff
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionDiff
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value for retention difference\n"
+  example: []
+  syntax:
+    content: public double RetentionDiff { get; set; }
+    content.vb: Public Property RetentionDiff As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention difference value
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+  id: AbsorptionDiff
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: AbsorptionDiff
+  nameWithType: IncontinencePadRetention.AbsorptionDiff
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AbsorptionDiff
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value for absorption difference\n"
+  example: []
+  syntax:
+    content: public double AbsorptionDiff { get; set; }
+    content.vb: Public Property AbsorptionDiff As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the absorption difference value
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+  id: RetentionWetWeight
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: RetentionWetWeight
+  nameWithType: IncontinencePadRetention.RetentionWetWeight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionWetWeight
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the weight of the diaper, wet after the retention\n"
+  example: []
+  syntax:
+    content: public double RetentionWetWeight { get; set; }
+    content.vb: Public Property RetentionWetWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of a wet diaper after retention
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight
+  id: RetentionDryWeight
+  parent: Intranet.Labor.ViewModel.IncontinencePadRetention
+  langs:
+  - csharp
+  - vb
+  name: RetentionDryWeight
+  nameWithType: IncontinencePadRetention.RetentionDryWeight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionDryWeight
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the weight the diaper has if it is dry\n"
+  example: []
+  syntax:
+    content: public double RetentionDryWeight { get; set; }
+    content.vb: Public Property RetentionDryWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of the dry diaper
+  overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+  isExternal: false
+  name: RetentionRw
+  nameWithType: IncontinencePadRetention.RetentionRw
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+  isExternal: false
+  name: RetentionAfterZentrifugeValue
+  nameWithType: IncontinencePadRetention.RetentionAfterZentrifugeValue
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+  isExternal: false
+  name: RetentionDiff
+  nameWithType: IncontinencePadRetention.RetentionDiff
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDiff
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+  isExternal: false
+  name: AbsorptionDiff
+  nameWithType: IncontinencePadRetention.AbsorptionDiff
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.AbsorptionDiff
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+  isExternal: false
+  name: RetentionWetWeight
+  nameWithType: IncontinencePadRetention.RetentionWetWeight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionWetWeight
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight
+  isExternal: false
+  name: RetentionDryWeight
+  nameWithType: IncontinencePadRetention.RetentionDryWeight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionDryWeight

@@ -1,0 +1,1413 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  id: IncontinencePadLaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+  - Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadLaborCreatorViewModel
+  nameWithType: IncontinencePadLaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadLaborCreatorViewModel
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model for the labor creator\n"
+  example: []
+  syntax:
+    content: public class IncontinencePadLaborCreatorViewModel
+    content.vb: Public Class IncontinencePadLaborCreatorViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+  id: Producer
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Producer
+  nameWithType: IncontinencePadLaborCreatorViewModel.Producer
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Producer
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the producer\n"
+  example: []
+  syntax:
+    content: public string Producer { get; set; }
+    content.vb: Public Property Producer As String
+    parameters: []
+    return:
+      type: System.String
+      description: the producer
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+  id: Shift
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Shift
+  nameWithType: IncontinencePadLaborCreatorViewModel.Shift
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Shift
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the shift\n"
+  example: []
+  syntax:
+    content: public string Shift { get; set; }
+    content.vb: Public Property Shift As String
+    parameters: []
+    return:
+      type: System.String
+      description: the shift
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+  id: FaNr
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: FaNr
+  nameWithType: IncontinencePadLaborCreatorViewModel.FaNr
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaNr
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the production order number\n"
+  example: []
+  syntax:
+    content: public string FaNr { get; set; }
+    content.vb: Public Property FaNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the production order number
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+  id: CreatedDate
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: CreatedDate
+  nameWithType: IncontinencePadLaborCreatorViewModel.CreatedDate
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreatedDate
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the timestamp of the creation of the test sheet\n"
+  example: []
+  syntax:
+    content: public string CreatedDate { get; set; }
+    content.vb: Public Property CreatedDate As String
+    parameters: []
+    return:
+      type: System.String
+      description: the timestamp of the creation
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+  id: ProductName
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProductName
+  nameWithType: IncontinencePadLaborCreatorViewModel.ProductName
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductName
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the name of the product\n"
+  example: []
+  syntax:
+    content: public string ProductName { get; set; }
+    content.vb: Public Property ProductName As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the product
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+  id: SizeName
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: SizeName
+  nameWithType: IncontinencePadLaborCreatorViewModel.SizeName
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SizeName
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the name of the size\n"
+  example: []
+  syntax:
+    content: public string SizeName { get; set; }
+    content.vb: Public Property SizeName As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the size
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+  id: Rewets
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Rewets
+  nameWithType: IncontinencePadLaborCreatorViewModel.Rewets
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewets
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the rewets\n"
+  example: []
+  syntax:
+    content: public ICollection<IncontinencePadRewetTestValue> Rewets { get; set; }
+    content.vb: Public Property Rewets As ICollection(Of IncontinencePadRewetTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+      description: collection of rewet
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+  id: RewetAverage
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAverage
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 58
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the rewets\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRewet RewetAverage { get; set; }
+    content.vb: Public Property RewetAverage As IncontinencePadRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: the average of the rewet
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  id: RewetStandardDeviation
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 64
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the rewets\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRewet RewetStandardDeviation { get; set; }
+    content.vb: Public Property RewetStandardDeviation As IncontinencePadRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: the standard deviation of the rewets
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+  id: Retentions
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Retentions
+  nameWithType: IncontinencePadLaborCreatorViewModel.Retentions
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Retentions
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 70
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the retentions\n"
+  example: []
+  syntax:
+    content: public ICollection<IncontinencePadRetentionTestValue> Retentions { get; set; }
+    content.vb: Public Property Retentions As ICollection(Of IncontinencePadRetentionTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+      description: collection of retention
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+  id: RetentionAverage
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RetentionAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RetentionAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAverage
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 76
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the retention\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRetention RetentionAverage { get; set; }
+    content.vb: Public Property RetentionAverage As IncontinencePadRetention
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetention
+      description: the average of the retention
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  id: RetentionStandardDeviation
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RetentionStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 83
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the retention\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRetention RetentionStandardDeviation { get; set; }
+    content.vb: Public Property RetentionStandardDeviation As IncontinencePadRetention
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetention
+      description: the standard deviation of the retention
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  id: AcquisitionTimes
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimes
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimes
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 89
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the aquisation time\n"
+  example: []
+  syntax:
+    content: public ICollection<IncontinencePadAcquisitionTimeTestValue> AcquisitionTimes { get; set; }
+    content.vb: Public Property AcquisitionTimes As ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+      description: collection of aquisation time
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  id: AcquisitionTimeAverage
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAverage
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the aquisation time\n"
+  example: []
+  syntax:
+    content: public IncontinencePadAcquisitionTime AcquisitionTimeAverage { get; set; }
+    content.vb: Public Property AcquisitionTimeAverage As IncontinencePadAcquisitionTime
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+      description: the average of the aquisation time
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  id: AcquisitionTimeStandardDeviation
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 101
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the  aquisition  time\n"
+  example: []
+  syntax:
+    content: public IncontinencePadAcquisitionTime AcquisitionTimeStandardDeviation { get; set; }
+    content.vb: Public Property AcquisitionTimeStandardDeviation As IncontinencePadAcquisitionTime
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+      description: the standard deviation of the  aquisition  time
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  id: RewetAfterAcquisitionTimeAverage
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeAverage
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 108
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the aquisation time\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRewet RewetAfterAcquisitionTimeAverage { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeAverage As IncontinencePadRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: the average of the aquisation time
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  id: RewetAfterAcquisitionTimeStandardDeviation
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 114
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the rewet adter aquisition  time\n"
+  example: []
+  syntax:
+    content: public IncontinencePadRewet RewetAfterAcquisitionTimeStandardDeviation { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeStandardDeviation As IncontinencePadRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: the standard deviation of the  aquisition  time
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+  id: TestSheetId
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestSheetId
+  nameWithType: IncontinencePadLaborCreatorViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetId
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 120
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the id for the test sheet\n"
+  example: []
+  syntax:
+    content: public int TestSheetId { get; set; }
+    content.vb: Public Property TestSheetId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the testsheet id
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+  id: CanEdit
+  parent: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: CanEdit
+  nameWithType: IncontinencePadLaborCreatorViewModel.CanEdit
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CanEdit
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadLaborCreatorViewModel.cs
+    startLine: 126
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the boolean, if the current user is allowed to edit the incontinence pad\n"
+  example: []
+  syntax:
+    content: public bool CanEdit { get; set; }
+    content.vb: Public Property CanEdit As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the current user is allowed to edit theincontinence pad
+  overload: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+  isExternal: false
+  name: Producer
+  nameWithType: IncontinencePadLaborCreatorViewModel.Producer
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Producer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+  isExternal: false
+  name: Shift
+  nameWithType: IncontinencePadLaborCreatorViewModel.Shift
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Shift
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+  isExternal: false
+  name: FaNr
+  nameWithType: IncontinencePadLaborCreatorViewModel.FaNr
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.FaNr
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+  isExternal: false
+  name: CreatedDate
+  nameWithType: IncontinencePadLaborCreatorViewModel.CreatedDate
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CreatedDate
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+  isExternal: false
+  name: ProductName
+  nameWithType: IncontinencePadLaborCreatorViewModel.ProductName
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.ProductName
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+  isExternal: false
+  name: SizeName
+  nameWithType: IncontinencePadLaborCreatorViewModel.SizeName
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.SizeName
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+  isExternal: false
+  name: Rewets
+  nameWithType: IncontinencePadLaborCreatorViewModel.Rewets
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Rewets
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadRewetTestValue>
+  nameWithType: ICollection<IncontinencePadRewetTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadRewetTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadRewetTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadRewetTestValue)
+  name.vb: ICollection(Of IncontinencePadRewetTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+    name: IncontinencePadRewetTestValue
+    nameWithType: IncontinencePadRewetTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+    name: IncontinencePadRewetTestValue
+    nameWithType: IncontinencePadRewetTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+  isExternal: false
+  name: RewetAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAverage
+- uid: Intranet.Labor.ViewModel.IncontinencePadRewet
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRewet
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRewet
+  nameWithType: IncontinencePadRewet
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRewet
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  isExternal: false
+  name: RewetStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetStandardDeviation
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+  isExternal: false
+  name: Retentions
+  nameWithType: IncontinencePadLaborCreatorViewModel.Retentions
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.Retentions
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadRetentionTestValue>
+  nameWithType: ICollection<IncontinencePadRetentionTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadRetentionTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue)
+  name.vb: ICollection(Of IncontinencePadRetentionTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+    name: IncontinencePadRetentionTestValue
+    nameWithType: IncontinencePadRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+    name: IncontinencePadRetentionTestValue
+    nameWithType: IncontinencePadRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+  isExternal: false
+  name: RetentionAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RetentionAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionAverage
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRetention
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRetention
+  nameWithType: IncontinencePadRetention
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  isExternal: false
+  name: RetentionStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RetentionStandardDeviation
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  isExternal: false
+  name: AcquisitionTimes
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimes
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadAcquisitionTimeTestValue>
+  nameWithType: ICollection<IncontinencePadAcquisitionTimeTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue)
+  name.vb: ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+    name: IncontinencePadAcquisitionTimeTestValue
+    nameWithType: IncontinencePadAcquisitionTimeTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+    name: IncontinencePadAcquisitionTimeTestValue
+    nameWithType: IncontinencePadAcquisitionTimeTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  isExternal: false
+  name: AcquisitionTimeAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeAverage
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadAcquisitionTime
+  nameWithType: IncontinencePadAcquisitionTime
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  isExternal: false
+  name: AcquisitionTimeStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.AcquisitionTimeStandardDeviation
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  isExternal: false
+  name: RewetAfterAcquisitionTimeAverage
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeAverage
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  isExternal: false
+  name: RewetAfterAcquisitionTimeStandardDeviation
+  nameWithType: IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.RewetAfterAcquisitionTimeStandardDeviation
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+  isExternal: false
+  name: TestSheetId
+  nameWithType: IncontinencePadLaborCreatorViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.TestSheetId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+  isExternal: false
+  name: CanEdit
+  nameWithType: IncontinencePadLaborCreatorViewModel.CanEdit
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel.CanEdit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

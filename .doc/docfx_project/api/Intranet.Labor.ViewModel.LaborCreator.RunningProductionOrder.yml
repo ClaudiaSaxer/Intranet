@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  commentId: T:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  id: RunningProductionOrder
+  parent: Intranet.Labor.ViewModel.LaborCreator
+  children:
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+  langs:
+  - csharp
+  - vb
+  name: RunningProductionOrder
+  nameWithType: RunningProductionOrder
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RunningProductionOrder
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nClass representing the running Production Orders\n"
+  example: []
+  syntax:
+    content: public class RunningProductionOrder
+    content.vb: Public Class RunningProductionOrder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+  id: PoId
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: PoId
+  nameWithType: RunningProductionOrder.PoId
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PoId
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the production id\n"
+  example: []
+  syntax:
+    content: public int PoId { get; set; }
+    content.vb: Public Property PoId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the production order id
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+  id: PoName
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: PoName
+  nameWithType: RunningProductionOrder.PoName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PoName
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the production order name\n"
+  example: []
+  syntax:
+    content: public string PoName { get; set; }
+    content.vb: Public Property PoName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+  id: ActionName
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: ActionName
+  nameWithType: RunningProductionOrder.ActionName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ActionName
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the path to the module start page\n"
+  example: []
+  syntax:
+    content: public string ActionName { get; set; }
+    content.vb: Public Property ActionName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The path of the module.
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+  id: ControllerName
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: ControllerName
+  nameWithType: RunningProductionOrder.ControllerName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ControllerName
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the path to the module start page\n"
+  example: []
+  syntax:
+    content: public string ControllerName { get; set; }
+    content.vb: Public Property ControllerName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The path of the module.
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+  id: AreaName
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: AreaName
+  nameWithType: RunningProductionOrder.AreaName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AreaName
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the area to the module\n"
+  example: []
+  syntax:
+    content: public string AreaName { get; set; }
+    content.vb: Public Property AreaName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The area of the module.
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
+  commentId: P:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
+  id: Description
+  parent: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: RunningProductionOrder.Description
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Description
+    path: .src/Intranet/Labor/ViewModel/LaborCreator/RunningProductionOrder.cs
+    startLine: 47
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel.LaborCreator
+  summary: "\nGets or sets the description to the module\n"
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    content.vb: Public Property Description As String
+    parameters: []
+    return:
+      type: System.String
+      description: The description of the module.
+  overload: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel.LaborCreator
+  commentId: N:Intranet.Labor.ViewModel.LaborCreator
+  isExternal: false
+  name: Intranet.Labor.ViewModel.LaborCreator
+  nameWithType: Intranet.Labor.ViewModel.LaborCreator
+  fullName: Intranet.Labor.ViewModel.LaborCreator
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+  isExternal: false
+  name: PoId
+  nameWithType: RunningProductionOrder.PoId
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+  isExternal: false
+  name: PoName
+  nameWithType: RunningProductionOrder.PoName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.PoName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+  isExternal: false
+  name: ActionName
+  nameWithType: RunningProductionOrder.ActionName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ActionName
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+  isExternal: false
+  name: ControllerName
+  nameWithType: RunningProductionOrder.ControllerName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.ControllerName
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+  isExternal: false
+  name: AreaName
+  nameWithType: RunningProductionOrder.AreaName
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.AreaName
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
+  isExternal: false
+  name: Description
+  nameWithType: RunningProductionOrder.Description
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder.Description
