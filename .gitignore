@@ -246,3 +246,7 @@ ModelManifest.xml
 
 #Logfiles
 /.log
+
+
+#Docfiles
+/.doc
