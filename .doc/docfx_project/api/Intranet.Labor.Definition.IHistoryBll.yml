@@ -1,0 +1,185 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IHistoryBll
+  commentId: T:Intranet.Labor.Definition.IHistoryBll
+  id: IHistoryBll
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IHistoryBll.GetTestSheets(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IHistoryBll
+  nameWithType: IHistoryBll
+  fullName: Intranet.Labor.Definition.IHistoryBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IHistoryBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IHistoryBll
+    path: .src/Intranet/Labor/Definitions/Bll/IHistoryBll.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nInterface representing the history bll\n"
+  example: []
+  syntax:
+    content: public interface IHistoryBll
+    content.vb: Public Interface IHistoryBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IHistoryBll.GetTestSheets(System.String)
+  commentId: M:Intranet.Labor.Definition.IHistoryBll.GetTestSheets(System.String)
+  id: GetTestSheets(System.String)
+  parent: Intranet.Labor.Definition.IHistoryBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheets(String)
+  nameWithType: IHistoryBll.GetTestSheets(String)
+  fullName: Intranet.Labor.Definition.IHistoryBll.GetTestSheets(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IHistoryBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheets
+    path: .src/Intranet/Labor/Definitions/Bll/IHistoryBll.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets all testsheet with the given faNr from the database\n"
+  example: []
+  syntax:
+    content: IEnumerable<TestSheet> GetTestSheets(string faNr)
+    content.vb: Function GetTestSheets(faNr As String) As IEnumerable(Of TestSheet)
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the faNr for the testsheets
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
+      description: a list of testsheets
+  overload: Intranet.Labor.Definition.IHistoryBll.GetTestSheets*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IHistoryBll.GetTestSheets*
+  commentId: Overload:Intranet.Labor.Definition.IHistoryBll.GetTestSheets
+  isExternal: false
+  name: GetTestSheets
+  nameWithType: IHistoryBll.GetTestSheets
+  fullName: Intranet.Labor.Definition.IHistoryBll.GetTestSheets
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TestSheet>
+  nameWithType: IEnumerable<TestSheet>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: IEnumerable(Of TestSheet)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: IEnumerable(Of TestSheet)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

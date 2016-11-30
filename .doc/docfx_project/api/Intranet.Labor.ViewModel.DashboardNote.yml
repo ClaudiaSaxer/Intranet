@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.DashboardNote
+  commentId: T:Intranet.Labor.ViewModel.DashboardNote
+  id: DashboardNote
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.DashboardNote.Code
+  - Intranet.Labor.ViewModel.DashboardNote.ErrorMessage
+  - Intranet.Labor.ViewModel.DashboardNote.Message
+  langs:
+  - csharp
+  - vb
+  name: DashboardNote
+  nameWithType: DashboardNote
+  fullName: Intranet.Labor.ViewModel.DashboardNote
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DashboardNote
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing a Note for the Dashboard\n"
+  example: []
+  syntax:
+    content: public class DashboardNote
+    content.vb: Public Class DashboardNote
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.DashboardNote.Message
+  commentId: P:Intranet.Labor.ViewModel.DashboardNote.Message
+  id: Message
+  parent: Intranet.Labor.ViewModel.DashboardNote
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: DashboardNote.Message
+  fullName: Intranet.Labor.ViewModel.DashboardNote.Message
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Message
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the message for the note\n"
+  example: []
+  syntax:
+    content: public string Message { get; set; }
+    content.vb: Public Property Message As String
+    parameters: []
+    return:
+      type: System.String
+      description: the message
+  overload: Intranet.Labor.ViewModel.DashboardNote.Message*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.DashboardNote.Code
+  commentId: P:Intranet.Labor.ViewModel.DashboardNote.Code
+  id: Code
+  parent: Intranet.Labor.ViewModel.DashboardNote
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: DashboardNote.Code
+  fullName: Intranet.Labor.ViewModel.DashboardNote.Code
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Code
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the error code of the note\n"
+  example: []
+  syntax:
+    content: public string Code { get; set; }
+    content.vb: Public Property Code As String
+    parameters: []
+    return:
+      type: System.String
+      description: the defined error code
+  overload: Intranet.Labor.ViewModel.DashboardNote.Code*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.DashboardNote.ErrorMessage
+  commentId: P:Intranet.Labor.ViewModel.DashboardNote.ErrorMessage
+  id: ErrorMessage
+  parent: Intranet.Labor.ViewModel.DashboardNote
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessage
+  nameWithType: DashboardNote.ErrorMessage
+  fullName: Intranet.Labor.ViewModel.DashboardNote.ErrorMessage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ErrorMessage
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the error message for the code\n"
+  example: []
+  syntax:
+    content: public string ErrorMessage { get; set; }
+    content.vb: Public Property ErrorMessage As String
+    parameters: []
+    return:
+      type: System.String
+      description: the error message
+  overload: Intranet.Labor.ViewModel.DashboardNote.ErrorMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.DashboardNote.Message*
+  commentId: Overload:Intranet.Labor.ViewModel.DashboardNote.Message
+  isExternal: false
+  name: Message
+  nameWithType: DashboardNote.Message
+  fullName: Intranet.Labor.ViewModel.DashboardNote.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.DashboardNote.Code*
+  commentId: Overload:Intranet.Labor.ViewModel.DashboardNote.Code
+  isExternal: false
+  name: Code
+  nameWithType: DashboardNote.Code
+  fullName: Intranet.Labor.ViewModel.DashboardNote.Code
+- uid: Intranet.Labor.ViewModel.DashboardNote.ErrorMessage*
+  commentId: Overload:Intranet.Labor.ViewModel.DashboardNote.ErrorMessage
+  isExternal: false
+  name: ErrorMessage
+  nameWithType: DashboardNote.ErrorMessage
+  fullName: Intranet.Labor.ViewModel.DashboardNote.ErrorMessage

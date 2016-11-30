@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  id: RwType
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.RwType.Better
+  - Intranet.Labor.Model.labor.RwType.Ok
+  - Intranet.Labor.Model.labor.RwType.SomethingWorse
+  - Intranet.Labor.Model.labor.RwType.Worse
+  langs:
+  - csharp
+  - vb
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/RWType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RwType
+    path: .src/Intranet/Labor/Model/labor/RWType.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nEnum representing the RW Type\n"
+  example: []
+  syntax:
+    content: public enum RwType
+    content.vb: Public Enum RwType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.labor.RwType.Ok
+  commentId: F:Intranet.Labor.Model.labor.RwType.Ok
+  id: Ok
+  parent: Intranet.Labor.Model.labor.RwType
+  langs:
+  - csharp
+  - vb
+  name: Ok
+  nameWithType: RwType.Ok
+  fullName: Intranet.Labor.Model.labor.RwType.Ok
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/RWType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Ok
+    path: .src/Intranet/Labor/Model/labor/RWType.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nthe value is in the range and ok\n"
+  example: []
+  syntax:
+    content: Ok = 0
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.RwType.Better
+  commentId: F:Intranet.Labor.Model.labor.RwType.Better
+  id: Better
+  parent: Intranet.Labor.Model.labor.RwType
+  langs:
+  - csharp
+  - vb
+  name: Better
+  nameWithType: RwType.Better
+  fullName: Intranet.Labor.Model.labor.RwType.Better
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/RWType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Better
+    path: .src/Intranet/Labor/Model/labor/RWType.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nthe value is better than expected\n"
+  example: []
+  syntax:
+    content: Better = 1
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.RwType.Worse
+  commentId: F:Intranet.Labor.Model.labor.RwType.Worse
+  id: Worse
+  parent: Intranet.Labor.Model.labor.RwType
+  langs:
+  - csharp
+  - vb
+  name: Worse
+  nameWithType: RwType.Worse
+  fullName: Intranet.Labor.Model.labor.RwType.Worse
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/RWType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Worse
+    path: .src/Intranet/Labor/Model/labor/RWType.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nthe value is worse than expected\n"
+  example: []
+  syntax:
+    content: Worse = 2
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.RwType.SomethingWorse
+  commentId: F:Intranet.Labor.Model.labor.RwType.SomethingWorse
+  id: SomethingWorse
+  parent: Intranet.Labor.Model.labor.RwType
+  langs:
+  - csharp
+  - vb
+  name: SomethingWorse
+  nameWithType: RwType.SomethingWorse
+  fullName: Intranet.Labor.Model.labor.RwType.SomethingWorse
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/RWType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SomethingWorse
+    path: .src/Intranet/Labor/Model/labor/RWType.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nsome value correlationg with the endvalue is worse\n"
+  example: []
+  syntax:
+    content: SomethingWorse = 3
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType

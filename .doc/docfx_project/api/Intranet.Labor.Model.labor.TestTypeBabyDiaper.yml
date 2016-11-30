@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  id: TestTypeBabyDiaper
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.TestTypeBabyDiaper.Retention
+  - Intranet.Labor.Model.labor.TestTypeBabyDiaper.Rewet
+  - Intranet.Labor.Model.labor.TestTypeBabyDiaper.RewetAndPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestTypeBabyDiaper
+    path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nEnum representing the types of tests for baby diapers\n"
+  example: []
+  syntax:
+    content: public enum TestTypeBabyDiaper
+    content.vb: Public Enum TestTypeBabyDiaper
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper.Rewet
+  commentId: F:Intranet.Labor.Model.labor.TestTypeBabyDiaper.Rewet
+  id: Rewet
+  parent: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  langs:
+  - csharp
+  - vb
+  name: Rewet
+  nameWithType: TestTypeBabyDiaper.Rewet
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper.Rewet
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet
+    path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing a rewet test\n"
+  example: []
+  syntax:
+    content: Rewet = 0
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper.Retention
+  commentId: F:Intranet.Labor.Model.labor.TestTypeBabyDiaper.Retention
+  id: Retention
+  parent: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  langs:
+  - csharp
+  - vb
+  name: Retention
+  nameWithType: TestTypeBabyDiaper.Retention
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper.Retention
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Retention
+    path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing a retention test\n"
+  example: []
+  syntax:
+    content: Retention = 1
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper.RewetAndPenetrationTime
+  commentId: F:Intranet.Labor.Model.labor.TestTypeBabyDiaper.RewetAndPenetrationTime
+  id: RewetAndPenetrationTime
+  parent: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  langs:
+  - csharp
+  - vb
+  name: RewetAndPenetrationTime
+  nameWithType: TestTypeBabyDiaper.RewetAndPenetrationTime
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper.RewetAndPenetrationTime
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAndPenetrationTime
+    path: .src/Intranet/Labor/Model/labor/TestTypeBabyDiaper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nA Test representing a penetration time test\n"
+  example: []
+  syntax:
+    content: RewetAndPenetrationTime = 2
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper

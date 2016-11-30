@@ -1,0 +1,1879 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.TestBll
+  commentId: T:Intranet.Labor.Bll.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+  - Intranet.Labor.Bll.TestBll.DeleteNote(System.Int32)
+  - Intranet.Labor.Bll.TestBll.DeleteTestValue(System.Int32)
+  - Intranet.Labor.Bll.TestBll.ErrorRepository
+  - Intranet.Labor.Bll.TestBll.GetAllNoteCodes
+  - Intranet.Labor.Bll.TestBll.GetProductionOrder(System.String)
+  - Intranet.Labor.Bll.TestBll.GetTestSheetInfo(System.Int32)
+  - Intranet.Labor.Bll.TestBll.GetTestValue(System.Int32)
+  - Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+  - Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+  - Intranet.Labor.Bll.TestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  - Intranet.Labor.Bll.TestBll.TestSheetRepository
+  - Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+  - Intranet.Labor.Bll.TestBll.TestValueRepository
+  - Intranet.Labor.Bll.TestBll.UpdateTestSheet
+  - Intranet.Labor.Bll.TestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: TestBll
+  fullName: Intranet.Labor.Bll.TestBll
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the bll for all testedit views\n"
+  example: []
+  syntax:
+    content: 'public class TestBll : ITestBll'
+    content.vb: >-
+      Public Class TestBll
+          Implements ITestBll
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Labor.Definition.ITestBll
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.TestBll.TestSheetRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.TestSheetRepository
+  id: TestSheetRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: TestSheetRepository
+  nameWithType: TestBll.TestSheetRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestSheetRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nTestSheetRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
+    content.vb: Public Property TestSheetRepository As IGenericRepository(Of TestSheet)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  overload: Intranet.Labor.Bll.TestBll.TestSheetRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.ErrorRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.ErrorRepository
+  id: ErrorRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: ErrorRepository
+  nameWithType: TestBll.ErrorRepository
+  fullName: Intranet.Labor.Bll.TestBll.ErrorRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ErrorRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nErrorRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<Error> ErrorRepository { get; set; }
+    content.vb: Public Property ErrorRepository As IGenericRepository(Of  Error)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.Error}
+  overload: Intranet.Labor.Bll.TestBll.ErrorRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.TestValueRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.TestValueRepository
+  id: TestValueRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: TestValueRepository
+  nameWithType: TestBll.TestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestValueRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nTestValueRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<TestValue> TestValueRepository { get; set; }
+    content.vb: Public Property TestValueRepository As IGenericRepository(Of TestValue)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValue}
+  overload: Intranet.Labor.Bll.TestBll.TestValueRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+  id: ProductionOrderRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrderRepository
+  nameWithType: TestBll.ProductionOrderRepository
+  fullName: Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrderRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nProductionOrderRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
+    content.vb: Public Property ProductionOrderRepository As IGenericRepository(Of ProductionOrder)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.ProductionOrder}
+  overload: Intranet.Labor.Bll.TestBll.ProductionOrderRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+  id: BabyDiaperTestValueRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValueRepository
+  nameWithType: TestBll.BabyDiaperTestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValueRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nBabyDiaperTestValueRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<BabyDiaperTestValue> BabyDiaperTestValueRepository { get; set; }
+    content.vb: Public Property BabyDiaperTestValueRepository As IGenericRepository(Of BabyDiaperTestValue)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  overload: Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+  id: IncontinencePadTestValueRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTestValueRepository
+  nameWithType: TestBll.IncontinencePadTestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTestValueRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 51
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nIncontinencePadTestValueRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<IncontinencePadTestValue> IncontinencePadTestValueRepository { get; set; }
+    content.vb: Public Property IncontinencePadTestValueRepository As IGenericRepository(Of IncontinencePadTestValue)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+  overload: Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+  commentId: P:Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+  id: TestValueNoteRepository
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: TestValueNoteRepository
+  nameWithType: TestBll.TestValueNoteRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueNoteRepository
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nTestValueNoteRepository\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<TestValueNote> TestValueNoteRepository { get; set; }
+    content.vb: Public Property TestValueNoteRepository As IGenericRepository(Of TestValueNote)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValueNote}
+  overload: Intranet.Labor.Bll.TestBll.TestValueNoteRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.GetTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Bll.TestBll.GetTestValue(System.Int32)
+  id: GetTestValue(System.Int32)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestValue(Int32)
+  nameWithType: TestBll.GetTestValue(Int32)
+  fullName: Intranet.Labor.Bll.TestBll.GetTestValue(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestValue
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 67
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nQuery for a testvalue\n"
+  example: []
+  syntax:
+    content: public TestValue GetTestValue(int retentionTestId)
+    content.vb: Public Function GetTestValue(retentionTestId As Integer) As TestValue
+    parameters:
+    - id: retentionTestId
+      type: System.Int32
+      description: The ID of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The test value with the given Id
+  overload: Intranet.Labor.Bll.TestBll.GetTestValue*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.GetTestSheetInfo(System.Int32)
+  commentId: M:Intranet.Labor.Bll.TestBll.GetTestSheetInfo(System.Int32)
+  id: GetTestSheetInfo(System.Int32)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetInfo(Int32)
+  nameWithType: TestBll.GetTestSheetInfo(Int32)
+  fullName: Intranet.Labor.Bll.TestBll.GetTestSheetInfo(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetInfo
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 79
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nQuery for the Test sheet info\n"
+  example: []
+  syntax:
+    content: public TestSheet GetTestSheetInfo(int testSheetId)
+    content.vb: Public Function GetTestSheetInfo(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The ID of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: The test sheet
+  overload: Intranet.Labor.Bll.TestBll.GetTestSheetInfo*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.GetAllNoteCodes
+  commentId: M:Intranet.Labor.Bll.TestBll.GetAllNoteCodes
+  id: GetAllNoteCodes
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: GetAllNoteCodes()
+  nameWithType: TestBll.GetAllNoteCodes()
+  fullName: Intranet.Labor.Bll.TestBll.GetAllNoteCodes()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetAllNoteCodes
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 90
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nQuery for all Error Codes\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Error> GetAllNoteCodes()
+    content.vb: Public Function GetAllNoteCodes As IEnumerable(Of  Error)
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.Error}
+      description: Collection of all Error Codes
+  overload: Intranet.Labor.Bll.TestBll.GetAllNoteCodes*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Bll.TestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  id: SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: SaveNewTestValue(TestValue)
+  nameWithType: TestBll.SaveNewTestValue(TestValue)
+  fullName: Intranet.Labor.Bll.TestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewTestValue
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 101
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nSaves a new testvalue in the db\n"
+  example: []
+  syntax:
+    content: public TestValue SaveNewTestValue(TestValue testValue)
+    content.vb: Public Function SaveNewTestValue(testValue As TestValue) As TestValue
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the test value which will be saved
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+  overload: Intranet.Labor.Bll.TestBll.SaveNewTestValue*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Bll.TestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  id: UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: UpdateTestValue(TestValue)
+  nameWithType: TestBll.UpdateTestValue(TestValue)
+  fullName: Intranet.Labor.Bll.TestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateTestValue
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 112
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nupdate an testvalue\n"
+  example: []
+  syntax:
+    content: public TestValue UpdateTestValue(TestValue testValue)
+    content.vb: Public Function UpdateTestValue(testValue As TestValue) As TestValue
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the testvalue which will be updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+  overload: Intranet.Labor.Bll.TestBll.UpdateTestValue*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.UpdateTestSheet
+  commentId: M:Intranet.Labor.Bll.TestBll.UpdateTestSheet
+  id: UpdateTestSheet
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: UpdateTestSheet()
+  nameWithType: TestBll.UpdateTestSheet()
+  fullName: Intranet.Labor.Bll.TestBll.UpdateTestSheet()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateTestSheet
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 121
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nUpdates the TestSheet\n"
+  example: []
+  syntax:
+    content: public int UpdateTestSheet()
+    content.vb: Public Function UpdateTestSheet As Integer
+    return:
+      type: System.Int32
+  overload: Intranet.Labor.Bll.TestBll.UpdateTestSheet*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.GetProductionOrder(System.String)
+  commentId: M:Intranet.Labor.Bll.TestBll.GetProductionOrder(System.String)
+  id: GetProductionOrder(System.String)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: GetProductionOrder(String)
+  nameWithType: TestBll.GetProductionOrder(String)
+  fullName: Intranet.Labor.Bll.TestBll.GetProductionOrder(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetProductionOrder
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 127
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nQuery for the ProductionOrder\n"
+  example: []
+  syntax:
+    content: public ProductionOrder GetProductionOrder(string productionOrderFa)
+    content.vb: Public Function GetProductionOrder(productionOrderFa As String) As ProductionOrder
+    parameters:
+    - id: productionOrderFa
+      type: System.String
+      description: the Id of the Production order
+    return:
+      type: Intranet.Labor.Model.ProductionOrder
+  overload: Intranet.Labor.Bll.TestBll.GetProductionOrder*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.DeleteTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Bll.TestBll.DeleteTestValue(System.Int32)
+  id: DeleteTestValue(System.Int32)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: DeleteTestValue(Int32)
+  nameWithType: TestBll.DeleteTestValue(Int32)
+  fullName: Intranet.Labor.Bll.TestBll.DeleteTestValue(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DeleteTestValue
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 141
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nDelete Testvalue from DB\n"
+  example: []
+  syntax:
+    content: public TestValue DeleteTestValue(int testValueId)
+    content.vb: Public Function DeleteTestValue(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: the Id of the Test value
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+  overload: Intranet.Labor.Bll.TestBll.DeleteTestValue*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestBll.DeleteNote(System.Int32)
+  commentId: M:Intranet.Labor.Bll.TestBll.DeleteNote(System.Int32)
+  id: DeleteNote(System.Int32)
+  parent: Intranet.Labor.Bll.TestBll
+  langs:
+  - csharp
+  - vb
+  name: DeleteNote(Int32)
+  nameWithType: TestBll.DeleteNote(Int32)
+  fullName: Intranet.Labor.Bll.TestBll.DeleteNote(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DeleteNote
+    path: .src/Intranet/Labor/Bll/TestBll.cs
+    startLine: 176
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nDelete TestvalueNote from DB\n"
+  example: []
+  syntax:
+    content: public TestValueNote DeleteNote(int testValueNoteId)
+    content.vb: Public Function DeleteNote(testValueNoteId As Integer) As TestValueNote
+    parameters:
+    - id: testValueNoteId
+      type: System.Int32
+      description: the Id of the Test value Note
+    return:
+      type: Intranet.Labor.Model.labor.TestValueNote
+  overload: Intranet.Labor.Bll.TestBll.DeleteNote*
+  implements:
+  - Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.TestBll.TestSheetRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.TestSheetRepository
+  isExternal: false
+  name: TestSheetRepository
+  nameWithType: TestBll.TestSheetRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestSheetRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<TestSheet>
+  nameWithType: IGenericRepository<TestSheet>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: IGenericRepository(Of TestSheet)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: IGenericRepository(Of TestSheet)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Bll.TestBll.ErrorRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.ErrorRepository
+  isExternal: false
+  name: ErrorRepository
+  nameWithType: TestBll.ErrorRepository
+  fullName: Intranet.Labor.Bll.TestBll.ErrorRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.Error}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.Error}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<Error>
+  nameWithType: IGenericRepository<Error>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.Error>
+  nameWithType.vb: IGenericRepository(Of Error)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.Error)
+  name.vb: IGenericRepository(Of Error)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.TestValueRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.TestValueRepository
+  isExternal: false
+  name: TestValueRepository
+  nameWithType: TestBll.TestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestValueRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValue}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<TestValue>
+  nameWithType: IGenericRepository<TestValue>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: IGenericRepository(Of TestValue)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: IGenericRepository(Of TestValue)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.ProductionOrderRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+  isExternal: false
+  name: ProductionOrderRepository
+  nameWithType: TestBll.ProductionOrderRepository
+  fullName: Intranet.Labor.Bll.TestBll.ProductionOrderRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.ProductionOrder}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.ProductionOrder}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<ProductionOrder>
+  nameWithType: IGenericRepository<ProductionOrder>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.ProductionOrder>
+  nameWithType.vb: IGenericRepository(Of ProductionOrder)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.ProductionOrder)
+  name.vb: IGenericRepository(Of ProductionOrder)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+  isExternal: false
+  name: BabyDiaperTestValueRepository
+  nameWithType: TestBll.BabyDiaperTestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.BabyDiaperTestValueRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<BabyDiaperTestValue>
+  nameWithType: IGenericRepository<BabyDiaperTestValue>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.BabyDiaperTestValue>
+  nameWithType.vb: IGenericRepository(Of BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  name.vb: IGenericRepository(Of BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+  isExternal: false
+  name: IncontinencePadTestValueRepository
+  nameWithType: TestBll.IncontinencePadTestValueRepository
+  fullName: Intranet.Labor.Bll.TestBll.IncontinencePadTestValueRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<IncontinencePadTestValue>
+  nameWithType: IGenericRepository<IncontinencePadTestValue>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.IncontinencePadTestValue>
+  nameWithType.vb: IGenericRepository(Of IncontinencePadTestValue)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  name.vb: IGenericRepository(Of IncontinencePadTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.TestValueNoteRepository*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+  isExternal: false
+  name: TestValueNoteRepository
+  nameWithType: TestBll.TestValueNoteRepository
+  fullName: Intranet.Labor.Bll.TestBll.TestValueNoteRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValueNote}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestValueNote}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<TestValueNote>
+  nameWithType: IGenericRepository<TestValueNote>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestValueNote>
+  nameWithType.vb: IGenericRepository(Of TestValueNote)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestValueNote)
+  name.vb: IGenericRepository(Of TestValueNote)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.GetTestValue*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.GetTestValue
+  isExternal: false
+  name: GetTestValue
+  nameWithType: TestBll.GetTestValue
+  fullName: Intranet.Labor.Bll.TestBll.GetTestValue
+- uid: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: true
+  name: GetTestValue(Int32)
+  nameWithType: ITestBll.GetTestValue(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+    name: GetTestValue
+    nameWithType: ITestBll.GetTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.GetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+    name: GetTestValue
+    nameWithType: ITestBll.GetTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.GetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.TestBll.GetTestSheetInfo*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.GetTestSheetInfo
+  isExternal: false
+  name: GetTestSheetInfo
+  nameWithType: TestBll.GetTestSheetInfo
+  fullName: Intranet.Labor.Bll.TestBll.GetTestSheetInfo
+- uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: true
+  name: GetTestSheetInfo(Int32)
+  nameWithType: ITestBll.GetTestSheetInfo(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+    name: GetTestSheetInfo
+    nameWithType: ITestBll.GetTestSheetInfo
+    fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+    name: GetTestSheetInfo
+    nameWithType: ITestBll.GetTestSheetInfo
+    fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Bll.TestBll.GetAllNoteCodes*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.GetAllNoteCodes
+  isExternal: false
+  name: GetAllNoteCodes
+  nameWithType: TestBll.GetAllNoteCodes
+  fullName: Intranet.Labor.Bll.TestBll.GetAllNoteCodes
+- uid: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: false
+  name: GetAllNoteCodes()
+  nameWithType: ITestBll.GetAllNoteCodes()
+  fullName: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes()
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+    name: GetAllNoteCodes
+    nameWithType: ITestBll.GetAllNoteCodes
+    fullName: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+    name: GetAllNoteCodes
+    nameWithType: ITestBll.GetAllNoteCodes
+    fullName: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.Error}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.Error}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Error>
+  nameWithType: IEnumerable<Error>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.Error>
+  nameWithType.vb: IEnumerable(Of Error)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.Error)
+  name.vb: IEnumerable(Of Error)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Bll.TestBll.SaveNewTestValue*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.SaveNewTestValue
+  isExternal: false
+  name: SaveNewTestValue
+  nameWithType: TestBll.SaveNewTestValue
+  fullName: Intranet.Labor.Bll.TestBll.SaveNewTestValue
+- uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: false
+  name: SaveNewTestValue(TestValue)
+  nameWithType: ITestBll.SaveNewTestValue(TestValue)
+  fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+    name: SaveNewTestValue
+    nameWithType: ITestBll.SaveNewTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+    name: SaveNewTestValue
+    nameWithType: ITestBll.SaveNewTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.UpdateTestValue*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.UpdateTestValue
+  isExternal: false
+  name: UpdateTestValue
+  nameWithType: TestBll.UpdateTestValue
+  fullName: Intranet.Labor.Bll.TestBll.UpdateTestValue
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: false
+  name: UpdateTestValue(TestValue)
+  nameWithType: ITestBll.UpdateTestValue(TestValue)
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+    name: UpdateTestValue
+    nameWithType: ITestBll.UpdateTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+    name: UpdateTestValue
+    nameWithType: ITestBll.UpdateTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.UpdateTestSheet*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.UpdateTestSheet
+  isExternal: false
+  name: UpdateTestSheet
+  nameWithType: TestBll.UpdateTestSheet
+  fullName: Intranet.Labor.Bll.TestBll.UpdateTestSheet
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: false
+  name: UpdateTestSheet()
+  nameWithType: ITestBll.UpdateTestSheet()
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet()
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+    name: UpdateTestSheet
+    nameWithType: ITestBll.UpdateTestSheet
+    fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+    name: UpdateTestSheet
+    nameWithType: ITestBll.UpdateTestSheet
+    fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.GetProductionOrder*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.GetProductionOrder
+  isExternal: false
+  name: GetProductionOrder
+  nameWithType: TestBll.GetProductionOrder
+  fullName: Intranet.Labor.Bll.TestBll.GetProductionOrder
+- uid: Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: true
+  name: GetProductionOrder(String)
+  nameWithType: ITestBll.GetProductionOrder(String)
+  fullName: Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+    name: GetProductionOrder
+    nameWithType: ITestBll.GetProductionOrder
+    fullName: Intranet.Labor.Definition.ITestBll.GetProductionOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
+    name: GetProductionOrder
+    nameWithType: ITestBll.GetProductionOrder
+    fullName: Intranet.Labor.Definition.ITestBll.GetProductionOrder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.ProductionOrder
+  commentId: T:Intranet.Labor.Model.ProductionOrder
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ProductionOrder
+  nameWithType: ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrder
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Bll.TestBll.DeleteTestValue*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.DeleteTestValue
+  isExternal: false
+  name: DeleteTestValue
+  nameWithType: TestBll.DeleteTestValue
+  fullName: Intranet.Labor.Bll.TestBll.DeleteTestValue
+- uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: true
+  name: DeleteTestValue(Int32)
+  nameWithType: ITestBll.DeleteTestValue(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+    name: DeleteTestValue
+    nameWithType: ITestBll.DeleteTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+    name: DeleteTestValue
+    nameWithType: ITestBll.DeleteTestValue
+    fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.TestBll.DeleteNote*
+  commentId: Overload:Intranet.Labor.Bll.TestBll.DeleteNote
+  isExternal: false
+  name: DeleteNote
+  nameWithType: TestBll.DeleteNote
+  fullName: Intranet.Labor.Bll.TestBll.DeleteNote
+- uid: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  parent: Intranet.Labor.Definition.ITestBll
+  isExternal: true
+  name: DeleteNote(Int32)
+  nameWithType: ITestBll.DeleteNote(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+    name: DeleteNote
+    nameWithType: ITestBll.DeleteNote
+    fullName: Intranet.Labor.Definition.ITestBll.DeleteNote
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+    name: DeleteNote
+    nameWithType: ITestBll.DeleteNote
+    fullName: Intranet.Labor.Definition.ITestBll.DeleteNote
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestValueNote
+  commentId: T:Intranet.Labor.Model.labor.TestValueNote
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValueNote
+  nameWithType: TestValueNote
+  fullName: Intranet.Labor.Model.labor.TestValueNote

@@ -1,0 +1,1420 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  id: BabyDiaperLaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  - Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperLaborCreatorViewModel
+  nameWithType: BabyDiaperLaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperLaborCreatorViewModel
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model for the labor creator\n"
+  example: []
+  syntax:
+    content: public class BabyDiaperLaborCreatorViewModel
+    content.vb: Public Class BabyDiaperLaborCreatorViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+  id: Producer
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Producer
+  nameWithType: BabyDiaperLaborCreatorViewModel.Producer
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Producer
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the producer\n"
+  example: []
+  syntax:
+    content: public string Producer { get; set; }
+    content.vb: Public Property Producer As String
+    parameters: []
+    return:
+      type: System.String
+      description: the producer
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+  id: Shift
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Shift
+  nameWithType: BabyDiaperLaborCreatorViewModel.Shift
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Shift
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the shift\n"
+  example: []
+  syntax:
+    content: public string Shift { get; set; }
+    content.vb: Public Property Shift As String
+    parameters: []
+    return:
+      type: System.String
+      description: the shift
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+  id: FaNr
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: FaNr
+  nameWithType: BabyDiaperLaborCreatorViewModel.FaNr
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaNr
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the production order number\n"
+  example: []
+  syntax:
+    content: public string FaNr { get; set; }
+    content.vb: Public Property FaNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the production order number
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+  id: CreatedDate
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: CreatedDate
+  nameWithType: BabyDiaperLaborCreatorViewModel.CreatedDate
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreatedDate
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the timestamp of the creation of the test sheet\n"
+  example: []
+  syntax:
+    content: public string CreatedDate { get; set; }
+    content.vb: Public Property CreatedDate As String
+    parameters: []
+    return:
+      type: System.String
+      description: the timestamp of the creation
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+  id: ProductName
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProductName
+  nameWithType: BabyDiaperLaborCreatorViewModel.ProductName
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductName
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the name of the product\n"
+  example: []
+  syntax:
+    content: public string ProductName { get; set; }
+    content.vb: Public Property ProductName As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the product
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+  id: SizeName
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: SizeName
+  nameWithType: BabyDiaperLaborCreatorViewModel.SizeName
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SizeName
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the name of the size\n"
+  example: []
+  syntax:
+    content: public string SizeName { get; set; }
+    content.vb: Public Property SizeName As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the size
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+  id: Rewets
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Rewets
+  nameWithType: BabyDiaperLaborCreatorViewModel.Rewets
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewets
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the rewets\n"
+  example: []
+  syntax:
+    content: public ICollection<BabyDiaperRewetTestValue> Rewets { get; set; }
+    content.vb: Public Property Rewets As ICollection(Of BabyDiaperRewetTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+      description: collection of rewet
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  id: BabyDiaperRewetAverage
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetAverage
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 58
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the rewets\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRewet BabyDiaperRewetAverage { get; set; }
+    content.vb: Public Property BabyDiaperRewetAverage As BabyDiaperRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewet
+      description: the average of the rewet
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  id: BabyDiaperRewetStandardDeviation
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 64
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the rewets\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRewet BabyDiaperRewetStandardDeviation { get; set; }
+    content.vb: Public Property BabyDiaperRewetStandardDeviation As BabyDiaperRewet
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewet
+      description: the standard deviation of the rewets
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+  id: Retentions
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: Retentions
+  nameWithType: BabyDiaperLaborCreatorViewModel.Retentions
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Retentions
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 70
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the retentions\n"
+  example: []
+  syntax:
+    content: public ICollection<BabyDiaperRetentionTestValue> Retentions { get; set; }
+    content.vb: Public Property Retentions As ICollection(Of BabyDiaperRetentionTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+      description: collection of retention
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  id: BabyDiaperRetentionAverage
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRetentionAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRetentionAverage
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 76
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the retention\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRetention BabyDiaperRetentionAverage { get; set; }
+    content.vb: Public Property BabyDiaperRetentionAverage As BabyDiaperRetention
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetention
+      description: the average of the retention
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  id: BabyDiaperRetentionStandardDeviation
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRetentionStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRetentionStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 82
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the retention\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRetention BabyDiaperRetentionStandardDeviation { get; set; }
+    content.vb: Public Property BabyDiaperRetentionStandardDeviation As BabyDiaperRetention
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetention
+      description: the standard deviation of the retention
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  id: PenetrationTimes
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimes
+  nameWithType: BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimes
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 88
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the PenetrationTimes\n"
+  example: []
+  syntax:
+    content: public ICollection<BabyDiaperPenetrationTimeTestValue> PenetrationTimes { get; set; }
+    content.vb: Public Property PenetrationTimes As ICollection(Of BabyDiaperPenetrationTimeTestValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+      description: collection of penetrationtime
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  id: BabyDiaperPenetrationTimeAverage
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperPenetrationTimeAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperPenetrationTimeAverage
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 94
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of the penetration time\n"
+  example: []
+  syntax:
+    content: public BabyDiaperPenetrationTime BabyDiaperPenetrationTimeAverage { get; set; }
+    content.vb: Public Property BabyDiaperPenetrationTimeAverage As BabyDiaperPenetrationTime
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+      description: the average of the penetration time
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  id: BabyDiaperPenetrationTimeStandardDeviation
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperPenetrationTimeStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperPenetrationTimeStandardDeviation
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 100
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard deviaion of the penetration time\n"
+  example: []
+  syntax:
+    content: public BabyDiaperPenetrationTime BabyDiaperPenetrationTimeStandardDeviation { get; set; }
+    content.vb: Public Property BabyDiaperPenetrationTimeStandardDeviation As BabyDiaperPenetrationTime
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+      description: the standard deviation of the penetration time
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  id: WeigthAverageAll
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: WeigthAverageAll
+  nameWithType: BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: WeigthAverageAll
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 106
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the average of all tests\n"
+  example: []
+  syntax:
+    content: public double WeigthAverageAll { get; set; }
+    content.vb: Public Property WeigthAverageAll As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the average of all tests
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  id: WeightStandardDeviationAll
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: WeightStandardDeviationAll
+  nameWithType: BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: WeightStandardDeviationAll
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 112
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the standard Deviation of all tests\n"
+  example: []
+  syntax:
+    content: public double WeightStandardDeviationAll { get; set; }
+    content.vb: Public Property WeightStandardDeviationAll As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the standard deviation of all tests
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+  id: TestSheetId
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestSheetId
+  nameWithType: BabyDiaperLaborCreatorViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetId
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 118
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the id for the test sheet\n"
+  example: []
+  syntax:
+    content: public int TestSheetId { get; set; }
+    content.vb: Public Property TestSheetId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the testsheet id
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+  id: CanEdit
+  parent: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  langs:
+  - csharp
+  - vb
+  name: CanEdit
+  nameWithType: BabyDiaperLaborCreatorViewModel.CanEdit
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CanEdit
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
+    startLine: 124
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the boolean, if the current user is allowed to edit the baby diaper\n"
+  example: []
+  syntax:
+    content: public bool CanEdit { get; set; }
+    content.vb: Public Property CanEdit As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true if the current user is allowed to edit the baby diaper
+  overload: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+  isExternal: false
+  name: Producer
+  nameWithType: BabyDiaperLaborCreatorViewModel.Producer
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Producer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+  isExternal: false
+  name: Shift
+  nameWithType: BabyDiaperLaborCreatorViewModel.Shift
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Shift
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+  isExternal: false
+  name: FaNr
+  nameWithType: BabyDiaperLaborCreatorViewModel.FaNr
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.FaNr
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+  isExternal: false
+  name: CreatedDate
+  nameWithType: BabyDiaperLaborCreatorViewModel.CreatedDate
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CreatedDate
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+  isExternal: false
+  name: ProductName
+  nameWithType: BabyDiaperLaborCreatorViewModel.ProductName
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.ProductName
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+  isExternal: false
+  name: SizeName
+  nameWithType: BabyDiaperLaborCreatorViewModel.SizeName
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.SizeName
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+  isExternal: false
+  name: Rewets
+  nameWithType: BabyDiaperLaborCreatorViewModel.Rewets
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Rewets
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperRewetTestValue>
+  nameWithType: ICollection<BabyDiaperRewetTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperRewetTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperRewetTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperRewetTestValue)
+  name.vb: ICollection(Of BabyDiaperRewetTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+    name: BabyDiaperRewetTestValue
+    nameWithType: BabyDiaperRewetTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+    name: BabyDiaperRewetTestValue
+    nameWithType: BabyDiaperRewetTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  isExternal: false
+  name: BabyDiaperRewetAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetAverage
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewet
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewet
+  nameWithType: BabyDiaperRewet
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  isExternal: false
+  name: BabyDiaperRewetStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRewetStandardDeviation
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+  isExternal: false
+  name: Retentions
+  nameWithType: BabyDiaperLaborCreatorViewModel.Retentions
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.Retentions
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperRetentionTestValue>
+  nameWithType: ICollection<BabyDiaperRetentionTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperRetentionTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue)
+  name.vb: ICollection(Of BabyDiaperRetentionTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+    name: BabyDiaperRetentionTestValue
+    nameWithType: BabyDiaperRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+    name: BabyDiaperRetentionTestValue
+    nameWithType: BabyDiaperRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  isExternal: false
+  name: BabyDiaperRetentionAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionAverage
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetention
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetention
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetention
+  nameWithType: BabyDiaperRetention
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetention
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  isExternal: false
+  name: BabyDiaperRetentionStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperRetentionStandardDeviation
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  isExternal: false
+  name: PenetrationTimes
+  nameWithType: BabyDiaperLaborCreatorViewModel.PenetrationTimes
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.PenetrationTimes
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperPenetrationTimeTestValue>
+  nameWithType: ICollection<BabyDiaperPenetrationTimeTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperPenetrationTimeTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue)
+  name.vb: ICollection(Of BabyDiaperPenetrationTimeTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+    name: BabyDiaperPenetrationTimeTestValue
+    nameWithType: BabyDiaperPenetrationTimeTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+    name: BabyDiaperPenetrationTimeTestValue
+    nameWithType: BabyDiaperPenetrationTimeTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  isExternal: false
+  name: BabyDiaperPenetrationTimeAverage
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeAverage
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperPenetrationTime
+  nameWithType: BabyDiaperPenetrationTime
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  isExternal: false
+  name: BabyDiaperPenetrationTimeStandardDeviation
+  nameWithType: BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.BabyDiaperPenetrationTimeStandardDeviation
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  isExternal: false
+  name: WeigthAverageAll
+  nameWithType: BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeigthAverageAll
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  isExternal: false
+  name: WeightStandardDeviationAll
+  nameWithType: BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.WeightStandardDeviationAll
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+  isExternal: false
+  name: TestSheetId
+  nameWithType: BabyDiaperLaborCreatorViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.TestSheetId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+  isExternal: false
+  name: CanEdit
+  nameWithType: BabyDiaperLaborCreatorViewModel.CanEdit
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel.CanEdit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

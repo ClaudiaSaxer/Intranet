@@ -1,0 +1,1052 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  id: Module
+  parent: Intranet.Model
+  children:
+  - Intranet.Model.Module.ActionName
+  - Intranet.Model.Module.AreaName
+  - Intranet.Model.Module.ControllerName
+  - Intranet.Model.Module.Description
+  - Intranet.Model.Module.ModuleId
+  - Intranet.Model.Module.Name
+  - Intranet.Model.Module.Roles
+  - Intranet.Model.Module.Submodules
+  - Intranet.Model.Module.Type
+  - Intranet.Model.Module.Visible
+  langs:
+  - csharp
+  - vb
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Module
+    path: .src/Intranet/Model/Module.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nClass representing a Module\n"
+  example: []
+  syntax:
+    content: public class Module
+    content.vb: Public Class Module
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Model.Module.ModuleId
+  commentId: P:Intranet.Model.Module.ModuleId
+  id: ModuleId
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: ModuleId
+  nameWithType: Module.ModuleId
+  fullName: Intranet.Model.Module.ModuleId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ModuleId
+    path: .src/Intranet/Model/Module.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the Id of the module\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int ModuleId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property ModuleId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The module id of the module.
+  overload: Intranet.Model.Module.ModuleId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.Name
+  commentId: P:Intranet.Model.Module.Name
+  id: Name
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Module.Name
+  fullName: Intranet.Model.Module.Name
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Name
+    path: .src/Intranet/Model/Module.cs
+    startLine: 33
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the name of the module\n"
+  example:
+  - "\nname example: Labor\n"
+  syntax:
+    content: public string Name { get; set; }
+    content.vb: Public Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the module.
+  overload: Intranet.Model.Module.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.Description
+  commentId: P:Intranet.Model.Module.Description
+  id: Description
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Module.Description
+  fullName: Intranet.Model.Module.Description
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Description
+    path: .src/Intranet/Model/Module.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets a description of the module\n"
+  example: []
+  syntax:
+    content: public string Description { get; set; }
+    content.vb: Public Property Description As String
+    parameters: []
+    return:
+      type: System.String
+      description: The description of the module.
+  overload: Intranet.Model.Module.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.ActionName
+  commentId: P:Intranet.Model.Module.ActionName
+  id: ActionName
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: ActionName
+  nameWithType: Module.ActionName
+  fullName: Intranet.Model.Module.ActionName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ActionName
+    path: .src/Intranet/Model/Module.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the path to the module start page\n"
+  example: []
+  syntax:
+    content: public string ActionName { get; set; }
+    content.vb: Public Property ActionName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The path of the module.
+  overload: Intranet.Model.Module.ActionName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.ControllerName
+  commentId: P:Intranet.Model.Module.ControllerName
+  id: ControllerName
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: ControllerName
+  nameWithType: Module.ControllerName
+  fullName: Intranet.Model.Module.ControllerName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ControllerName
+    path: .src/Intranet/Model/Module.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the path to the module start page\n"
+  example: []
+  syntax:
+    content: public string ControllerName { get; set; }
+    content.vb: Public Property ControllerName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The path of the module.
+  overload: Intranet.Model.Module.ControllerName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.AreaName
+  commentId: P:Intranet.Model.Module.AreaName
+  id: AreaName
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: AreaName
+  nameWithType: Module.AreaName
+  fullName: Intranet.Model.Module.AreaName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AreaName
+    path: .src/Intranet/Model/Module.cs
+    startLine: 58
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the are to the module\n"
+  example: []
+  syntax:
+    content: public string AreaName { get; set; }
+    content.vb: Public Property AreaName As String
+    parameters: []
+    return:
+      type: System.String
+      description: The are of the module.
+  overload: Intranet.Model.Module.AreaName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.Visible
+  commentId: P:Intranet.Model.Module.Visible
+  id: Visible
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Visible
+  nameWithType: Module.Visible
+  fullName: Intranet.Model.Module.Visible
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Visible
+    path: .src/Intranet/Model/Module.cs
+    startLine: 64
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nIf Main Module is Visible in Shell or not\n"
+  example: []
+  syntax:
+    content: public bool ? Visible { get; set; }
+    content.vb: Public Property Visible As Boolean?
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+      description: The visability of the module. Null if type is not main
+  overload: Intranet.Model.Module.Visible*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.Type
+  commentId: P:Intranet.Model.Module.Type
+  id: Type
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Module.Type
+  fullName: Intranet.Model.Module.Type
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Type
+    path: .src/Intranet/Model/Module.cs
+    startLine: 70
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets the are to the module\n"
+  example: []
+  syntax:
+    content: public ModuleType Type { get; set; }
+    content.vb: Public Property Type As ModuleType
+    parameters: []
+    return:
+      type: Intranet.Model.ModuleType
+      description: The are of the module.
+  overload: Intranet.Model.Module.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Model.Module.Submodules
+  commentId: P:Intranet.Model.Module.Submodules
+  id: Submodules
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Submodules
+  nameWithType: Module.Submodules
+  fullName: Intranet.Model.Module.Submodules
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Submodules
+    path: .src/Intranet/Model/Module.cs
+    startLine: 76
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets Collection of Submodules to this module\n"
+  example: []
+  syntax:
+    content: public virtual ICollection<Module> Submodules { get; set; }
+    content.vb: Public Overridable Property Submodules As ICollection(Of  Module)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Model.Module}
+      description: The submodules of the module.
+  overload: Intranet.Model.Module.Submodules*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Model.Module.Roles
+  commentId: P:Intranet.Model.Module.Roles
+  id: Roles
+  parent: Intranet.Model.Module
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: Module.Roles
+  fullName: Intranet.Model.Module.Roles
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Model/Module.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Roles
+    path: .src/Intranet/Model/Module.cs
+    startLine: 82
+  assemblies:
+  - Intranet.Model
+  namespace: Intranet.Model
+  summary: "\nGets or sets Collection of role types to this module\n"
+  example: []
+  syntax:
+    content: public virtual ICollection<Role> Roles { get; set; }
+    content.vb: Public Overridable Property Roles As ICollection(Of Role)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Model.Role}
+      description: The roletypes of the module.
+  overload: Intranet.Model.Module.Roles*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Model.Module.ModuleId*
+  commentId: Overload:Intranet.Model.Module.ModuleId
+  isExternal: false
+  name: ModuleId
+  nameWithType: Module.ModuleId
+  fullName: Intranet.Model.Module.ModuleId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Model.Module.Name*
+  commentId: Overload:Intranet.Model.Module.Name
+  isExternal: false
+  name: Name
+  nameWithType: Module.Name
+  fullName: Intranet.Model.Module.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Model.Module.Description*
+  commentId: Overload:Intranet.Model.Module.Description
+  isExternal: false
+  name: Description
+  nameWithType: Module.Description
+  fullName: Intranet.Model.Module.Description
+- uid: Intranet.Model.Module.ActionName*
+  commentId: Overload:Intranet.Model.Module.ActionName
+  isExternal: false
+  name: ActionName
+  nameWithType: Module.ActionName
+  fullName: Intranet.Model.Module.ActionName
+- uid: Intranet.Model.Module.ControllerName*
+  commentId: Overload:Intranet.Model.Module.ControllerName
+  isExternal: false
+  name: ControllerName
+  nameWithType: Module.ControllerName
+  fullName: Intranet.Model.Module.ControllerName
+- uid: Intranet.Model.Module.AreaName*
+  commentId: Overload:Intranet.Model.Module.AreaName
+  isExternal: false
+  name: AreaName
+  nameWithType: Module.AreaName
+  fullName: Intranet.Model.Module.AreaName
+- uid: Intranet.Model.Module.Visible*
+  commentId: Overload:Intranet.Model.Module.Visible
+  isExternal: false
+  name: Visible
+  nameWithType: Module.Visible
+  fullName: Intranet.Model.Module.Visible
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullname.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Model.Module.Type*
+  commentId: Overload:Intranet.Model.Module.Type
+  isExternal: false
+  name: Type
+  nameWithType: Module.Type
+  fullName: Intranet.Model.Module.Type
+- uid: Intranet.Model.ModuleType
+  commentId: T:Intranet.Model.ModuleType
+  parent: Intranet.Model
+  isExternal: false
+  name: ModuleType
+  nameWithType: ModuleType
+  fullName: Intranet.Model.ModuleType
+- uid: Intranet.Model.Module.Submodules*
+  commentId: Overload:Intranet.Model.Module.Submodules
+  isExternal: false
+  name: Submodules
+  nameWithType: Module.Submodules
+  fullName: Intranet.Model.Module.Submodules
+- uid: System.Collections.Generic.ICollection{Intranet.Model.Module}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Model.Module}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Module>
+  nameWithType: ICollection<Module>
+  fullName: System.Collections.Generic.ICollection<Intranet.Model.Module>
+  nameWithType.vb: ICollection(Of Module)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Model.Module)
+  name.vb: ICollection(Of Module)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Model.Module.Roles*
+  commentId: Overload:Intranet.Model.Module.Roles
+  isExternal: false
+  name: Roles
+  nameWithType: Module.Roles
+  fullName: Intranet.Model.Module.Roles
+- uid: System.Collections.Generic.ICollection{Intranet.Model.Role}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Model.Role}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<Role>
+  nameWithType: ICollection<Role>
+  fullName: System.Collections.Generic.ICollection<Intranet.Model.Role>
+  nameWithType.vb: ICollection(Of Role)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Model.Role)
+  name.vb: ICollection(Of Role)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Role
+    name: Role
+    nameWithType: Role
+    fullName: Intranet.Model.Role
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Role
+    name: Role
+    nameWithType: Role
+    fullName: Intranet.Model.Role
+  - name: )
+    nameWithType: )
+    fullName: )

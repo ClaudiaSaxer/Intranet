@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  id: Intranet.Definition
+  children:
+  - Intranet.Definition.ICheckDisableBll
+  - Intranet.Definition.ICheckDisableService
+  - Intranet.Definition.IHomeBll
+  - Intranet.Definition.IHomeService
+  - Intranet.Definition.ISettingsBll
+  - Intranet.Definition.ISettingsService
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+  type: Namespace
+  assemblies:
+  - Intranet.Definition
+references:
+- uid: Intranet.Definition.ICheckDisableBll
+  commentId: T:Intranet.Definition.ICheckDisableBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: ICheckDisableBll
+  nameWithType: ICheckDisableBll
+  fullName: Intranet.Definition.ICheckDisableBll
+- uid: Intranet.Definition.ISettingsBll
+  commentId: T:Intranet.Definition.ISettingsBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: ISettingsBll
+  nameWithType: ISettingsBll
+  fullName: Intranet.Definition.ISettingsBll
+- uid: Intranet.Definition.IHomeService
+  commentId: T:Intranet.Definition.IHomeService
+  parent: Intranet.Definition
+  isExternal: false
+  name: IHomeService
+  nameWithType: IHomeService
+  fullName: Intranet.Definition.IHomeService
+- uid: Intranet.Definition.IHomeBll
+  commentId: T:Intranet.Definition.IHomeBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: IHomeBll
+  nameWithType: IHomeBll
+  fullName: Intranet.Definition.IHomeBll
+- uid: Intranet.Definition.ISettingsService
+  commentId: T:Intranet.Definition.ISettingsService
+  parent: Intranet.Definition
+  isExternal: false
+  name: ISettingsService
+  nameWithType: ISettingsService
+  fullName: Intranet.Definition.ISettingsService
+- uid: Intranet.Definition.ICheckDisableService
+  commentId: T:Intranet.Definition.ICheckDisableService
+  parent: Intranet.Definition
+  isExternal: false
+  name: ICheckDisableService
+  nameWithType: ICheckDisableService
+  fullName: Intranet.Definition.ICheckDisableService
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition

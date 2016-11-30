@@ -1,0 +1,850 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  commentId: T:Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  id: InkoAquisitionServiceHelper
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  - Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: InkoAquisitionServiceHelper
+  nameWithType: InkoAquisitionServiceHelper
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoAquisitionServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the inko aquisition service helper\n"
+  example: []
+  syntax:
+    content: 'public class InkoAquisitionServiceHelper : ServiceBase, IInkoAquisitionServiceHelper'
+    content.vb: >-
+      Public Class InkoAquisitionServiceHelper
+          Inherits ServiceBase
+          Implements IInkoAquisitionServiceHelper
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+  commentId: P:Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: InkoAquisitionServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the all testvalues.\n"
+  example: []
+  syntax:
+    content: public ITestBll TestBll { get; set; }
+    content.vb: Public Property TestBll As ITestBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestBll
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+  commentId: P:Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+  id: TestServiceHelper
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper
+  nameWithType: InkoAquisitionServiceHelper.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the test service helper.\n"
+  example: []
+  syntax:
+    content: public ITestServiceHelper TestServiceHelper { get; set; }
+    content.vb: Public Property TestServiceHelper As ITestServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestServiceHelper
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: InkoAquisitionServiceHelper(ILoggerFactory)
+  nameWithType: InkoAquisitionServiceHelper.InkoAquisitionServiceHelper(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.InkoAquisitionServiceHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 39
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InkoAquisitionServiceHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  id: SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: InkoAquisitionServiceHelper.SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewAquisitionTest
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 54
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: public TestValue SaveNewAquisitionTest(InkoAquisitionEditViewModel viewModel)
+    content.vb: Public Function SaveNewAquisitionTest(viewModel As InkoAquisitionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest*
+  implements:
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  id: UpdateAquisitionAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateAquisitionAverageAndStv(Int32)
+  nameWithType: InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(Int32)
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateAquisitionAverageAndStv
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 84
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for aquisition values\n"
+  example: []
+  syntax:
+    content: public TestSheet UpdateAquisitionAverageAndStv(int testSheetId)
+    content.vb: Public Function UpdateAquisitionAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
+  implements:
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  id: UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: InkoAquisitionServiceHelper.UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateAquisitionTest
+    path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
+    startLine: 111
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: public TestValue UpdateAquisitionTest(InkoAquisitionEditViewModel viewModel)
+    content.vb: Public Function UpdateAquisitionTest(viewModel As InkoAquisitionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest*
+  implements:
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoAquisitionServiceHelper
+  nameWithType: IInkoAquisitionServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+  isExternal: false
+  name: TestBll
+  nameWithType: InkoAquisitionServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestBll
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+  isExternal: false
+  name: TestServiceHelper
+  nameWithType: InkoAquisitionServiceHelper.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.TestServiceHelper
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.#ctor
+  isExternal: false
+  name: InkoAquisitionServiceHelper
+  nameWithType: InkoAquisitionServiceHelper.InkoAquisitionServiceHelper
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.InkoAquisitionServiceHelper
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest
+  isExternal: false
+  name: SaveNewAquisitionTest
+  nameWithType: InkoAquisitionServiceHelper.SaveNewAquisitionTest
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  isExternal: false
+  name: SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: IInkoAquisitionServiceHelper.SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+    name: SaveNewAquisitionTest
+    nameWithType: IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+    name: InkoAquisitionEditViewModel
+    nameWithType: InkoAquisitionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+    name: SaveNewAquisitionTest
+    nameWithType: IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+    name: InkoAquisitionEditViewModel
+    nameWithType: InkoAquisitionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoAquisitionEditViewModel
+  nameWithType: InkoAquisitionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  isExternal: false
+  name: UpdateAquisitionAverageAndStv
+  nameWithType: InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  isExternal: true
+  name: UpdateAquisitionAverageAndStv(Int32)
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+    name: UpdateAquisitionAverageAndStv
+    nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+    name: UpdateAquisitionAverageAndStv
+    nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest*
+  commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest
+  isExternal: false
+  name: UpdateAquisitionTest
+  nameWithType: InkoAquisitionServiceHelper.UpdateAquisitionTest
+  fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  isExternal: false
+  name: UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+    name: UpdateAquisitionTest
+    nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionTest
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+    name: InkoAquisitionEditViewModel
+    nameWithType: InkoAquisitionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+    name: UpdateAquisitionTest
+    nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionTest
+    fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+    name: InkoAquisitionEditViewModel
+    nameWithType: InkoAquisitionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )

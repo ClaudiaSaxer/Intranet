@@ -1,0 +1,850 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  commentId: T:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  id: BabyDiaperRewetServiceHelper
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  - Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetServiceHelper
+  nameWithType: BabyDiaperRewetServiceHelper
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetServiceHelper
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the babydiaper rewet service helper\n"
+  example: []
+  syntax:
+    content: 'public class BabyDiaperRewetServiceHelper : ServiceBase, IBabyDiaperRewetServiceHelper'
+    content.vb: >-
+      Public Class BabyDiaperRewetServiceHelper
+          Inherits ServiceBase
+          Implements IBabyDiaperRewetServiceHelper
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+  commentId: P:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: BabyDiaperRewetServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the baby diapers retention test.\n"
+  example: []
+  syntax:
+    content: public ITestBll TestBll { get; set; }
+    content.vb: Public Property TestBll As ITestBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestBll
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+  commentId: P:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+  id: TestServiceHelper
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper
+  nameWithType: BabyDiaperRewetServiceHelper.TestServiceHelper
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestServiceHelper
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the baby diaper service helper.\n"
+  example: []
+  syntax:
+    content: public ITestServiceHelper TestServiceHelper { get; set; }
+    content.vb: Public Property TestServiceHelper As ITestServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestServiceHelper
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetServiceHelper(ILoggerFactory)
+  nameWithType: BabyDiaperRewetServiceHelper.BabyDiaperRewetServiceHelper(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.BabyDiaperRewetServiceHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRewetServiceHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: BabyDiaperRewetServiceHelper.SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewRewetTest
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: public TestValue SaveNewRewetTest(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Public Function SaveNewRewetTest(viewModel As BabyDiaperRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest*
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  id: UpdateRewetAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetAverageAndStv(Int32)
+  nameWithType: BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(Int32)
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetAverageAndStv
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 94
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for retention values\n"
+  example: []
+  syntax:
+    content: public TestSheet UpdateRewetAverageAndStv(int testSheetId)
+    content.vb: Public Function UpdateRewetAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv*
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: BabyDiaperRewetServiceHelper.UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetTest
+    path: .src/Intranet/Labor/Bll/BabyDiaperRewetServiceHelper.cs
+    startLine: 136
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: public TestValue UpdateRewetTest(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Public Function UpdateRewetTest(viewModel As BabyDiaperRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest*
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperRewetServiceHelper
+  nameWithType: IBabyDiaperRewetServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+  isExternal: false
+  name: TestBll
+  nameWithType: BabyDiaperRewetServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestBll
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+  isExternal: false
+  name: TestServiceHelper
+  nameWithType: BabyDiaperRewetServiceHelper.TestServiceHelper
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.TestServiceHelper
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.#ctor
+  isExternal: false
+  name: BabyDiaperRewetServiceHelper
+  nameWithType: BabyDiaperRewetServiceHelper.BabyDiaperRewetServiceHelper
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.BabyDiaperRewetServiceHelper
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest
+  isExternal: false
+  name: SaveNewRewetTest
+  nameWithType: BabyDiaperRewetServiceHelper.SaveNewRewetTest
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.SaveNewRewetTest
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  isExternal: false
+  name: SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: IBabyDiaperRewetServiceHelper.SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+    name: SaveNewRewetTest
+    nameWithType: IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+    name: BabyDiaperRewetEditViewModel
+    nameWithType: BabyDiaperRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+    name: SaveNewRewetTest
+    nameWithType: IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+    name: BabyDiaperRewetEditViewModel
+    nameWithType: BabyDiaperRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewetEditViewModel
+  nameWithType: BabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  isExternal: false
+  name: UpdateRewetAverageAndStv
+  nameWithType: BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  isExternal: true
+  name: UpdateRewetAverageAndStv(Int32)
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+    name: UpdateRewetAverageAndStv
+    nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+    name: UpdateRewetAverageAndStv
+    nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest
+  isExternal: false
+  name: UpdateRewetTest
+  nameWithType: BabyDiaperRewetServiceHelper.UpdateRewetTest
+  fullName: Intranet.Labor.Bll.BabyDiaperRewetServiceHelper.UpdateRewetTest
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  isExternal: false
+  name: UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+    name: UpdateRewetTest
+    nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetTest
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+    name: BabyDiaperRewetEditViewModel
+    nameWithType: BabyDiaperRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+    name: UpdateRewetTest
+    nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetTest
+    fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+    name: BabyDiaperRewetEditViewModel
+    nameWithType: BabyDiaperRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )

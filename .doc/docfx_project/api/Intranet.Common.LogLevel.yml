@@ -1,0 +1,376 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.LogLevel
+  commentId: T:Intranet.Common.LogLevel
+  id: LogLevel
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.LogLevel.Debug
+  - Intranet.Common.LogLevel.Error
+  - Intranet.Common.LogLevel.Fatal
+  - Intranet.Common.LogLevel.Info
+  - Intranet.Common.LogLevel.Off
+  - Intranet.Common.LogLevel.Trace
+  - Intranet.Common.LogLevel.Warn
+  langs:
+  - csharp
+  - vb
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Intranet.Common.LogLevel
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LogLevel
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nEnumeration of all available log levels.\n"
+  example: []
+  syntax:
+    content: public enum LogLevel
+    content.vb: Public Enum LogLevel
+  extensionMethods:
+  - Intranet.Common.LogLevel.Intranet.Common.NLogExtensions.ToLogLevel
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Common.LogLevel.Trace
+  commentId: F:Intranet.Common.LogLevel.Trace
+  id: Trace
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Trace
+  nameWithType: LogLevel.Trace
+  fullName: Intranet.Common.LogLevel.Trace
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Trace
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nTrace log level.\n"
+  remarks: "\nVery detailed log messages, potentially of a high frequency and volume.\n"
+  example: []
+  syntax:
+    content: Trace = 0
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Debug
+  commentId: F:Intranet.Common.LogLevel.Debug
+  id: Debug
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: LogLevel.Debug
+  fullName: Intranet.Common.LogLevel.Debug
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Debug
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nDebug log level.\n"
+  remarks: "\nLess detailed and/or less frequent debugging messages.\n"
+  example: []
+  syntax:
+    content: Debug = 1
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Info
+  commentId: F:Intranet.Common.LogLevel.Info
+  id: Info
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: LogLevel.Info
+  fullName: Intranet.Common.LogLevel.Info
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Info
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInfo log level.\n"
+  remarks: "\nInformational messages.\n"
+  example: []
+  syntax:
+    content: Info = 2
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Warn
+  commentId: F:Intranet.Common.LogLevel.Warn
+  id: Warn
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Warn
+  nameWithType: LogLevel.Warn
+  fullName: Intranet.Common.LogLevel.Warn
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Warn
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWarn log level.\n"
+  remarks: "\nWarnings which don't appear to the user of the application.\n"
+  example: []
+  syntax:
+    content: Warn = 3
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Error
+  commentId: F:Intranet.Common.LogLevel.Error
+  id: Error
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: LogLevel.Error
+  fullName: Intranet.Common.LogLevel.Error
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nError log level.\n"
+  remarks: "\nError messages.\n"
+  example: []
+  syntax:
+    content: Error = 4
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Fatal
+  commentId: F:Intranet.Common.LogLevel.Fatal
+  id: Fatal
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Fatal
+  nameWithType: LogLevel.Fatal
+  fullName: Intranet.Common.LogLevel.Fatal
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Fatal
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nFatal log level.\n"
+  remarks: "\nFatal error messages. After a fatal error, the application usually terminates.\n"
+  example: []
+  syntax:
+    content: Fatal = 5
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Common.LogLevel.Off
+  commentId: F:Intranet.Common.LogLevel.Off
+  id: Off
+  parent: Intranet.Common.LogLevel
+  langs:
+  - csharp
+  - vb
+  name: Off
+  nameWithType: LogLevel.Off
+  fullName: Intranet.Common.LogLevel.Off
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Off
+    path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nLogging is disabled.\n"
+  remarks: "\nLogging is not enabled for any level.\n"
+  example: []
+  syntax:
+    content: Off = 6
+    return:
+      type: Intranet.Common.LogLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.LogLevel.Intranet.Common.NLogExtensions.ToLogLevel
+  commentId: M:Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+  parent: Intranet.Common.NLogExtensions
+  definition: Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+  name: ToLogLevel()
+  nameWithType: NLogExtensions.ToLogLevel()
+  fullName: Intranet.Common.NLogExtensions.ToLogLevel()
+  spec.csharp:
+  - uid: Intranet.Common.NLogExtensions.ToLogLevel
+    name: ToLogLevel
+    nameWithType: NLogExtensions.ToLogLevel
+    fullName: Intranet.Common.NLogExtensions.ToLogLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.NLogExtensions.ToLogLevel
+    name: ToLogLevel
+    nameWithType: NLogExtensions.ToLogLevel
+    fullName: Intranet.Common.NLogExtensions.ToLogLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+  commentId: M:Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+  isExternal: false
+  name: ToLogLevel(LogLevel)
+  nameWithType: NLogExtensions.ToLogLevel(LogLevel)
+  fullName: Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+  spec.csharp:
+  - uid: Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+    name: ToLogLevel
+    nameWithType: NLogExtensions.ToLogLevel
+    fullName: Intranet.Common.NLogExtensions.ToLogLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Common.LogLevel
+    name: LogLevel
+    nameWithType: LogLevel
+    fullName: Intranet.Common.LogLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.NLogExtensions.ToLogLevel(Intranet.Common.LogLevel)
+    name: ToLogLevel
+    nameWithType: NLogExtensions.ToLogLevel
+    fullName: Intranet.Common.NLogExtensions.ToLogLevel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Common.LogLevel
+    name: LogLevel
+    nameWithType: LogLevel
+    fullName: Intranet.Common.LogLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogExtensions
+  commentId: T:Intranet.Common.NLogExtensions
+  parent: Intranet.Common
+  isExternal: false
+  name: NLogExtensions
+  nameWithType: NLogExtensions
+  fullName: Intranet.Common.NLogExtensions
+- uid: Intranet.Common.LogLevel
+  commentId: T:Intranet.Common.LogLevel
+  parent: Intranet.Common
+  isExternal: false
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Intranet.Common.LogLevel

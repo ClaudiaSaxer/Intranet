@@ -1,0 +1,707 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  id: InkoRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+  - Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+  - Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+  - Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet
+  langs:
+  - csharp
+  - vb
+  name: InkoRewetEditViewModel
+  nameWithType: InkoRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRewetEditViewModel
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the ViewModel for the InkoRewetController\n"
+  example: []
+  syntax:
+    content: 'public class InkoRewetEditViewModel : BaseTestEditViewModel'
+    content.vb: >-
+      Public Class InkoRewetEditViewModel
+          Inherits BaseTestEditViewModel
+  inheritance:
+  - System.Object
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel
+  inheritedMembers:
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+  commentId: P:Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+  id: ExpireMonth
+  parent: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ExpireMonth
+  nameWithType: InkoRewetEditViewModel.ExpireMonth
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireMonth
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ExpireMonth\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Ablauf-Monat muss angegeben werden")]
+
+      [Range(1, 12, ErrorMessage = "Die Zahl muss zwischen 1 und 12 liegen.")]
+
+      public int ExpireMonth { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Ablauf-Monat muss angegeben werden")>
+
+      <Range(1, 12, ErrorMessage:="Die Zahl muss zwischen 1 und 12 liegen.")>
+
+      Public Property ExpireMonth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ExpireMonth\n"
+  overload: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Ablauf-Monat muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1
+    - type: System.Int32
+      value: 12
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss zwischen 1 und 12 liegen.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+  commentId: P:Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+  id: ExpireYear
+  parent: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ExpireYear
+  nameWithType: InkoRewetEditViewModel.ExpireYear
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireYear
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ExpireYear\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Das Ablauf-Jahr muss angegeben werden")]
+
+      [Range(0, 9999, ErrorMessage = "Die Zahl muss zwischen 0 und 9999 liegen.")]
+
+      public int ExpireYear { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Das Ablauf-Jahr muss angegeben werden")>
+
+      <Range(0, 9999, ErrorMessage:="Die Zahl muss zwischen 0 und 9999 liegen.")>
+
+      Public Property ExpireYear As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ExpireYear\n"
+  overload: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Das Ablauf-Jahr muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 9999
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss zwischen 0 und 9999 liegen.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+  commentId: P:Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+  id: FPDry
+  parent: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: FPDry
+  nameWithType: InkoRewetEditViewModel.FPDry
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FPDry
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the FPDry\n"
+  example: []
+  syntax:
+    content: >-
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double FPDry { get; set; }
+    content.vb: >-
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property FPDry As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe FPDry\n"
+  overload: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet
+  commentId: P:Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet
+  id: FPWet
+  parent: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: FPWet
+  nameWithType: InkoRewetEditViewModel.FPWet
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FPWet
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the FPWet\n"
+  example: []
+  syntax:
+    content: >-
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double FPWet { get; set; }
+    content.vb: >-
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property FPWet As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe FPWet\n"
+  overload: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BaseTestEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BaseTestEditViewModel
+  nameWithType: BaseTestEditViewModel
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestValueId
+  nameWithType: BaseTestEditViewModel.TestValueId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestSheetId
+  nameWithType: BaseTestEditViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestPerson
+  nameWithType: BaseTestEditViewModel.TestPerson
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCode
+  nameWithType: BaseTestEditViewModel.ProductionCode
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCodeDay
+  nameWithType: BaseTestEditViewModel.ProductionCodeDay
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCodeTime
+  nameWithType: BaseTestEditViewModel.ProductionCodeTime
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: Notes
+  nameWithType: BaseTestEditViewModel.Notes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: NoteCodes
+  nameWithType: BaseTestEditViewModel.NoteCodes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+  isExternal: false
+  name: ExpireMonth
+  nameWithType: InkoRewetEditViewModel.ExpireMonth
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireMonth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+  isExternal: false
+  name: ExpireYear
+  nameWithType: InkoRewetEditViewModel.ExpireYear
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.ExpireYear
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+  isExternal: false
+  name: FPDry
+  nameWithType: InkoRewetEditViewModel.FPDry
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPDry
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet
+  isExternal: false
+  name: FPWet
+  nameWithType: InkoRewetEditViewModel.FPWet
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel.FPWet

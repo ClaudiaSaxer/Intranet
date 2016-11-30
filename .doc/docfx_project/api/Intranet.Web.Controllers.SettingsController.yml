@@ -1,0 +1,358 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Controllers.SettingsController
+  commentId: T:Intranet.Web.Controllers.SettingsController
+  id: SettingsController
+  parent: Intranet.Web.Controllers
+  children:
+  - Intranet.Web.Controllers.SettingsController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Controllers.SettingsController.Index
+  - Intranet.Web.Controllers.SettingsController.SettingsService
+  - Intranet.Web.Controllers.SettingsController.Update(Intranet.ViewModel.ModuleSetting)
+  langs:
+  - csharp
+  - vb
+  name: SettingsController
+  nameWithType: SettingsController
+  fullName: Intranet.Web.Controllers.SettingsController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/SettingsController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SettingsController
+    path: .src/Intranet/Web/Controllers/SettingsController.cs
+    startLine: 11
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nClass representing the SettingsController\n"
+  example: []
+  syntax:
+    content: 'public class SettingsController : BaseController'
+    content.vb: >-
+      Public Class SettingsController
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Controllers.SettingsController.SettingsService
+  commentId: P:Intranet.Web.Controllers.SettingsController.SettingsService
+  id: SettingsService
+  parent: Intranet.Web.Controllers.SettingsController
+  langs:
+  - csharp
+  - vb
+  name: SettingsService
+  nameWithType: SettingsController.SettingsService
+  fullName: Intranet.Web.Controllers.SettingsController.SettingsService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/SettingsController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SettingsService
+    path: .src/Intranet/Web/Controllers/SettingsController.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Definition.IHomeBll\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ISettingsService SettingsService { get; set; }
+    content.vb: Public Property SettingsService As ISettingsService
+    parameters: []
+    return:
+      type: Intranet.Definition.ISettingsService
+      description: "\n<xref href=\"Intranet.Definition.IHomeBll\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Controllers.SettingsController.SettingsService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Controllers.SettingsController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Controllers.SettingsController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Controllers.SettingsController
+  langs:
+  - csharp
+  - vb
+  name: SettingsController(ILoggerFactory)
+  nameWithType: SettingsController.SettingsController(ILoggerFactory)
+  fullName: Intranet.Web.Controllers.SettingsController.SettingsController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/SettingsController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Controllers/SettingsController.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Controllers.HomeController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public SettingsController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Controllers.SettingsController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Controllers.SettingsController.Index
+  commentId: M:Intranet.Web.Controllers.SettingsController.Index
+  id: Index
+  parent: Intranet.Web.Controllers.SettingsController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: SettingsController.Index()
+  fullName: Intranet.Web.Controllers.SettingsController.Index()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/SettingsController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Index
+    path: .src/Intranet/Web/Controllers/SettingsController.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nLoads the index page of the SettingsController\n"
+  example: []
+  syntax:
+    content: public ActionResult Index()
+    content.vb: Public Function Index As ActionResult
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Controllers.SettingsController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Controllers.SettingsController.Update(Intranet.ViewModel.ModuleSetting)
+  commentId: M:Intranet.Web.Controllers.SettingsController.Update(Intranet.ViewModel.ModuleSetting)
+  id: Update(Intranet.ViewModel.ModuleSetting)
+  parent: Intranet.Web.Controllers.SettingsController
+  langs:
+  - csharp
+  - vb
+  name: Update(ModuleSetting)
+  nameWithType: SettingsController.Update(ModuleSetting)
+  fullName: Intranet.Web.Controllers.SettingsController.Update(Intranet.ViewModel.ModuleSetting)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Controllers/SettingsController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Update
+    path: .src/Intranet/Web/Controllers/SettingsController.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Controllers
+  summary: "\nUpdate a module setting\n"
+  example: []
+  syntax:
+    content: public ActionResult Update(ModuleSetting moduleSetting)
+    content.vb: Public Function Update(moduleSetting As ModuleSetting) As ActionResult
+    parameters:
+    - id: moduleSetting
+      type: Intranet.ViewModel.ModuleSetting
+      description: The moduleSetting which will be updated
+    return:
+      type: ActionResult
+      description: Redirect to the Index View
+  overload: Intranet.Web.Controllers.SettingsController.Update*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Controllers
+  commentId: N:Intranet.Web.Controllers
+  isExternal: false
+  name: Intranet.Web.Controllers
+  nameWithType: Intranet.Web.Controllers
+  fullName: Intranet.Web.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Definition.IHomeBll
+  commentId: T:Intranet.Definition.IHomeBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: IHomeBll
+  nameWithType: IHomeBll
+  fullName: Intranet.Definition.IHomeBll
+- uid: Intranet.Web.Controllers.SettingsController.SettingsService*
+  commentId: Overload:Intranet.Web.Controllers.SettingsController.SettingsService
+  isExternal: false
+  name: SettingsService
+  nameWithType: SettingsController.SettingsService
+  fullName: Intranet.Web.Controllers.SettingsController.SettingsService
+- uid: Intranet.Definition.ISettingsService
+  commentId: T:Intranet.Definition.ISettingsService
+  parent: Intranet.Definition
+  isExternal: false
+  name: ISettingsService
+  nameWithType: ISettingsService
+  fullName: Intranet.Definition.ISettingsService
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Web.Controllers.HomeController
+  commentId: T:Intranet.Web.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Intranet.Web.Controllers.HomeController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Controllers.SettingsController.#ctor*
+  commentId: Overload:Intranet.Web.Controllers.SettingsController.#ctor
+  isExternal: false
+  name: SettingsController
+  nameWithType: SettingsController.SettingsController
+  fullName: Intranet.Web.Controllers.SettingsController.SettingsController
+- uid: Intranet.Web.Controllers.SettingsController.Index*
+  commentId: Overload:Intranet.Web.Controllers.SettingsController.Index
+  isExternal: false
+  name: Index
+  nameWithType: SettingsController.Index
+  fullName: Intranet.Web.Controllers.SettingsController.Index
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Web.Controllers.SettingsController.Update*
+  commentId: Overload:Intranet.Web.Controllers.SettingsController.Update
+  isExternal: false
+  name: Update
+  nameWithType: SettingsController.Update
+  fullName: Intranet.Web.Controllers.SettingsController.Update
+- uid: Intranet.ViewModel.ModuleSetting
+  commentId: T:Intranet.ViewModel.ModuleSetting
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: ModuleSetting
+  nameWithType: ModuleSetting
+  fullName: Intranet.ViewModel.ModuleSetting
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel

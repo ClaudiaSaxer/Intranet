@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.TestValueType
+  commentId: T:Intranet.Labor.Model.labor.TestValueType
+  id: TestValueType
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.TestValueType.Average
+  - Intranet.Labor.Model.labor.TestValueType.Single
+  - Intranet.Labor.Model.labor.TestValueType.StandardDeviation
+  langs:
+  - csharp
+  - vb
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValueType
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueType
+    path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nEnum representing the test value type\n"
+  example: []
+  syntax:
+    content: public enum TestValueType
+    content.vb: Public Enum TestValueType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.labor.TestValueType.Single
+  commentId: F:Intranet.Labor.Model.labor.TestValueType.Single
+  id: Single
+  parent: Intranet.Labor.Model.labor.TestValueType
+  langs:
+  - csharp
+  - vb
+  name: Single
+  nameWithType: TestValueType.Single
+  fullName: Intranet.Labor.Model.labor.TestValueType.Single
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Single
+    path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nSingle test value\n"
+  example: []
+  syntax:
+    content: Single = 0
+    return:
+      type: Intranet.Labor.Model.labor.TestValueType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestValueType.StandardDeviation
+  commentId: F:Intranet.Labor.Model.labor.TestValueType.StandardDeviation
+  id: StandardDeviation
+  parent: Intranet.Labor.Model.labor.TestValueType
+  langs:
+  - csharp
+  - vb
+  name: StandardDeviation
+  nameWithType: TestValueType.StandardDeviation
+  fullName: Intranet.Labor.Model.labor.TestValueType.StandardDeviation
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StandardDeviation
+    path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\ntest value as standard deviation\n"
+  example: []
+  syntax:
+    content: StandardDeviation = 1
+    return:
+      type: Intranet.Labor.Model.labor.TestValueType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.labor.TestValueType.Average
+  commentId: F:Intranet.Labor.Model.labor.TestValueType.Average
+  id: Average
+  parent: Intranet.Labor.Model.labor.TestValueType
+  langs:
+  - csharp
+  - vb
+  name: Average
+  nameWithType: TestValueType.Average
+  fullName: Intranet.Labor.Model.labor.TestValueType.Average
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Average
+    path: .src/Intranet/Labor/Model/labor/TestValueType.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nTest value as average\n"
+  example: []
+  syntax:
+    content: Average = 2
+    return:
+      type: Intranet.Labor.Model.labor.TestValueType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.labor.TestValueType
+  commentId: T:Intranet.Labor.Model.labor.TestValueType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValueType

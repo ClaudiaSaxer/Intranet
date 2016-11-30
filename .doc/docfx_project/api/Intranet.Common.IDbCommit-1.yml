@@ -1,0 +1,363 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.IDbCommit`1
+  commentId: T:Intranet.Common.IDbCommit`1
+  id: IDbCommit`1
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.IDbCommit`1.Commit
+  - Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  langs:
+  - csharp
+  - vb
+  name: IDbCommit<TContext>
+  nameWithType: IDbCommit<TContext>
+  fullName: Intranet.Common.IDbCommit<TContext>
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IDbCommit
+    path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInterface representing a class able to commit changes to the database.\n"
+  example: []
+  syntax:
+    content: 'public interface IDbCommit<TContext> : IDisposable'
+    content.vb: >-
+      Public Interface IDbCommit(Of TContext)
+          Inherits IDisposable
+    typeParameters:
+    - id: TContext
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  nameWithType.vb: IDbCommit(Of TContext)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Intranet.Common.IDbCommit(Of TContext)
+  name.vb: IDbCommit(Of TContext)
+- uid: Intranet.Common.IDbCommit`1.Commit
+  commentId: M:Intranet.Common.IDbCommit`1.Commit
+  id: Commit
+  parent: Intranet.Common.IDbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: Commit()
+  nameWithType: IDbCommit<TContext>.Commit()
+  fullName: Intranet.Common.IDbCommit<TContext>.Commit()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Commit
+    path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCommits all pending changes to the database.\n"
+  example: []
+  syntax:
+    content: int Commit()
+    content.vb: Function Commit As Integer
+    return:
+      type: System.Int32
+      description: Returns the number of changed records.
+  overload: Intranet.Common.IDbCommit`1.Commit*
+  nameWithType.vb: IDbCommit(Of TContext).Commit()
+  fullName.vb: Intranet.Common.IDbCommit(Of TContext).Commit()
+- uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  id: CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.IDbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: CommitAsync(Nullable<CancellationToken>)
+  nameWithType: IDbCommit<TContext>.CommitAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync(System.Nullable<System.Threading.CancellationToken>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CommitAsync
+    path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCommits all pending changes to the database asynchronously.\n"
+  example: []
+  syntax:
+    content: Task<int> CommitAsync(CancellationToken? cancellationToken = null)
+    content.vb: Function CommitAsync(cancellationToken As CancellationToken? = Nothing) As Task(Of Integer)
+    parameters:
+    - id: cancellationToken
+      type: System.Nullable{System.Threading.CancellationToken}
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: Returns the number of changed records asynchronously.
+  overload: Intranet.Common.IDbCommit`1.CommitAsync*
+  nameWithType.vb: IDbCommit(Of TContext).CommitAsync(Nullable(Of CancellationToken))
+  fullName.vb: Intranet.Common.IDbCommit(Of TContext).CommitAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: CommitAsync(Nullable(Of CancellationToken))
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.IDbCommit`1.Commit*
+  commentId: Overload:Intranet.Common.IDbCommit`1.Commit
+  isExternal: false
+  name: Commit
+  nameWithType: IDbCommit<TContext>.Commit
+  fullName: Intranet.Common.IDbCommit<TContext>.Commit
+  nameWithType.vb: IDbCommit(Of TContext).Commit
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).Commit
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Common.IDbCommit`1.CommitAsync*
+  commentId: Overload:Intranet.Common.IDbCommit`1.CommitAsync
+  isExternal: false
+  name: CommitAsync
+  nameWithType: IDbCommit<TContext>.CommitAsync
+  fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync
+  nameWithType.vb: IDbCommit(Of TContext).CommitAsync
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).CommitAsync
+- uid: System.Nullable{System.Threading.CancellationToken}
+  commentId: T:System.Nullable{System.Threading.CancellationToken}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<CancellationToken>
+  nameWithType: Nullable<CancellationToken>
+  fullName: System.Nullable<System.Threading.CancellationToken>
+  nameWithType.vb: Nullable(Of CancellationToken)
+  fullname.vb: System.Nullable(Of System.Threading.CancellationToken)
+  name.vb: Nullable(Of CancellationToken)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullname.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

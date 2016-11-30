@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.LaborCreator
+  commentId: N:Intranet.Labor.ViewModel.LaborCreator
+  id: Intranet.Labor.ViewModel.LaborCreator
+  children:
+  - Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Labor.ViewModel.LaborCreator
+  nameWithType: Intranet.Labor.ViewModel.LaborCreator
+  fullName: Intranet.Labor.ViewModel.LaborCreator
+  type: Namespace
+  assemblies:
+  - Intranet.Labor.ViewModel
+references:
+- uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  commentId: T:Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  isExternal: false
+  name: RunningProductionOrder
+  nameWithType: RunningProductionOrder
+  fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder

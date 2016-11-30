@@ -1,0 +1,588 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Bll.NavigationService
+  commentId: T:Intranet.Bll.NavigationService
+  id: NavigationService
+  parent: Intranet.Bll
+  children:
+  - Intranet.Bll.NavigationService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Bll.NavigationService.GetNavigationViewModel
+  - Intranet.Bll.NavigationService.NavigationBll
+  langs:
+  - csharp
+  - vb
+  name: NavigationService
+  nameWithType: NavigationService
+  fullName: Intranet.Bll.NavigationService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Bll/NavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: NavigationService
+    path: .src/Intranet/Bll/NavigationService.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nClass representing the service for the navigation.\n"
+  example: []
+  syntax:
+    content: 'public class NavigationService : ServiceBase, INavigationService'
+    content.vb: >-
+      Public Class NavigationService
+          Inherits ServiceBase
+          Implements INavigationService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Common.INavigationService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Bll.NavigationService.NavigationBll
+  commentId: P:Intranet.Bll.NavigationService.NavigationBll
+  id: NavigationBll
+  parent: Intranet.Bll.NavigationService
+  langs:
+  - csharp
+  - vb
+  name: NavigationBll
+  nameWithType: NavigationService.NavigationBll
+  fullName: Intranet.Bll.NavigationService.NavigationBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Bll/NavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: NavigationBll
+    path: .src/Intranet/Bll/NavigationService.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nGets or sets the bll for the navigation.\n"
+  example: []
+  syntax:
+    content: public INavigationBll NavigationBll { get; set; }
+    content.vb: Public Property NavigationBll As INavigationBll
+    parameters: []
+    return:
+      type: Intranet.Common.INavigationBll
+  overload: Intranet.Bll.NavigationService.NavigationBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.NavigationService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Bll.NavigationService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Bll.NavigationService
+  langs:
+  - csharp
+  - vb
+  name: NavigationService(ILoggerFactory)
+  nameWithType: NavigationService.NavigationService(ILoggerFactory)
+  fullName: Intranet.Bll.NavigationService.NavigationService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Bll/NavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Bll/NavigationService.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.LoggingBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public NavigationService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Bll.NavigationService.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: loggerFactory can not be null
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.NavigationService.GetNavigationViewModel
+  commentId: M:Intranet.Bll.NavigationService.GetNavigationViewModel
+  id: GetNavigationViewModel
+  parent: Intranet.Bll.NavigationService
+  langs:
+  - csharp
+  - vb
+  name: GetNavigationViewModel()
+  nameWithType: NavigationService.GetNavigationViewModel()
+  fullName: Intranet.Bll.NavigationService.GetNavigationViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Bll/NavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNavigationViewModel
+    path: .src/Intranet/Bll/NavigationService.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nAll main models that the current User is allowed to see.\n"
+  example: []
+  syntax:
+    content: public NavigationViewModel GetNavigationViewModel()
+    content.vb: Public Function GetNavigationViewModel As NavigationViewModel
+    return:
+      type: Intranet.ViewModel.NavigationViewModel
+      description: The ViewModel for the navigation
+  overload: Intranet.Bll.NavigationService.GetNavigationViewModel*
+  implements:
+  - Intranet.Common.INavigationService.GetNavigationViewModel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Bll
+  commentId: N:Intranet.Bll
+  isExternal: false
+  name: Intranet.Bll
+  nameWithType: Intranet.Bll
+  fullName: Intranet.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Common.INavigationService
+  commentId: T:Intranet.Common.INavigationService
+  parent: Intranet.Common
+  isExternal: false
+  name: INavigationService
+  nameWithType: INavigationService
+  fullName: Intranet.Common.INavigationService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Bll.NavigationService.NavigationBll*
+  commentId: Overload:Intranet.Bll.NavigationService.NavigationBll
+  isExternal: false
+  name: NavigationBll
+  nameWithType: NavigationService.NavigationBll
+  fullName: Intranet.Bll.NavigationService.NavigationBll
+- uid: Intranet.Common.INavigationBll
+  commentId: T:Intranet.Common.INavigationBll
+  parent: Intranet.Common
+  isExternal: false
+  name: INavigationBll
+  nameWithType: INavigationBll
+  fullName: Intranet.Common.INavigationBll
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Bll.NavigationService.#ctor*
+  commentId: Overload:Intranet.Bll.NavigationService.#ctor
+  isExternal: false
+  name: NavigationService
+  nameWithType: NavigationService.NavigationService
+  fullName: Intranet.Bll.NavigationService.NavigationService
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+- uid: Intranet.Bll.NavigationService.GetNavigationViewModel*
+  commentId: Overload:Intranet.Bll.NavigationService.GetNavigationViewModel
+  isExternal: false
+  name: GetNavigationViewModel
+  nameWithType: NavigationService.GetNavigationViewModel
+  fullName: Intranet.Bll.NavigationService.GetNavigationViewModel
+- uid: Intranet.Common.INavigationService.GetNavigationViewModel
+  commentId: M:Intranet.Common.INavigationService.GetNavigationViewModel
+  parent: Intranet.Common.INavigationService
+  isExternal: false
+  name: GetNavigationViewModel()
+  nameWithType: INavigationService.GetNavigationViewModel()
+  fullName: Intranet.Common.INavigationService.GetNavigationViewModel()
+  spec.csharp:
+  - uid: Intranet.Common.INavigationService.GetNavigationViewModel
+    name: GetNavigationViewModel
+    nameWithType: INavigationService.GetNavigationViewModel
+    fullName: Intranet.Common.INavigationService.GetNavigationViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.INavigationService.GetNavigationViewModel
+    name: GetNavigationViewModel
+    nameWithType: INavigationService.GetNavigationViewModel
+    fullName: Intranet.Common.INavigationService.GetNavigationViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.ViewModel.NavigationViewModel
+  commentId: T:Intranet.ViewModel.NavigationViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: NavigationViewModel
+  nameWithType: NavigationViewModel
+  fullName: Intranet.ViewModel.NavigationViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel

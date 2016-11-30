@@ -1,0 +1,690 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  id: LaborCreatorService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId(System.String)
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorService
+  nameWithType: LaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborCreatorService
+    path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing labor creator service\n"
+  example: []
+  syntax:
+    content: 'public class LaborCreatorService : ServiceBase, ILaborCreatorService'
+    content.vb: >-
+      Public Class LaborCreatorService
+          Inherits ServiceBase
+          Implements ILaborCreatorService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+  id: LaborCreatorBll
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorBll
+  nameWithType: LaborCreatorService.LaborCreatorBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborCreatorBll
+    path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets the bll for the labor creator service\n"
+  example: []
+  syntax:
+    content: public ILaborCreatorBll LaborCreatorBll { get; set; }
+    content.vb: Public Property LaborCreatorBll As ILaborCreatorBll
+    parameters: []
+    return:
+      type: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+      description: the bll
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorService(ILoggerFactory)
+  nameWithType: LaborCreatorService.LaborCreatorService(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborCreatorService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel
+  id: GetLaborCreatorViewModel
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborCreatorViewModel()
+  nameWithType: LaborCreatorService.GetLaborCreatorViewModel()
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborCreatorViewModel
+    path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLabor creator view model\n"
+  example: []
+  syntax:
+    content: public LaborCreatorViewModel GetLaborCreatorViewModel()
+    content.vb: Public Function GetLaborCreatorViewModel As LaborCreatorViewModel
+    return:
+      type: Intranet.Labor.ViewModel.LaborCreatorViewModel
+      description: the LaborCreatorViewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel*
+  implements:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId(System.String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId(System.String)
+  id: GetTestSheetId(System.String)
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetId(String)
+  nameWithType: LaborCreatorService.GetTestSheetId(String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetId
+    path: .src/Intranet/Labor/Bll/LaborCreatorService.cs
+    startLine: 77
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets the test sheet id for the fa nr\n"
+  example: []
+  syntax:
+    content: public TestSheet GetTestSheetId(string faNr)
+    content.vb: Public Function GetTestSheetId(faNr As String) As TestSheet
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the production order number
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the id of the testsheet or null if no exists
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId*
+  implements:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborCreatorService
+  nameWithType: ILaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+  isExternal: false
+  name: LaborCreatorBll
+  nameWithType: LaborCreatorService.LaborCreatorBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorBll
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborCreatorBll
+  nameWithType: ILaborCreatorBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.#ctor
+  isExternal: false
+  name: LaborCreatorService
+  nameWithType: LaborCreatorService.LaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.LaborCreatorService
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel
+  isExternal: false
+  name: GetLaborCreatorViewModel
+  nameWithType: LaborCreatorService.GetLaborCreatorViewModel
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetLaborCreatorViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  isExternal: false
+  name: GetLaborCreatorViewModel()
+  nameWithType: ILaborCreatorService.GetLaborCreatorViewModel()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel()
+  spec.csharp:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+    name: GetLaborCreatorViewModel
+    nameWithType: ILaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+    name: GetLaborCreatorViewModel
+    nameWithType: ILaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.LaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborCreatorViewModel
+  nameWithType: LaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.LaborCreatorViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId
+  isExternal: false
+  name: GetTestSheetId
+  nameWithType: LaborCreatorService.GetTestSheetId
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService.GetTestSheetId
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  isExternal: true
+  name: GetTestSheetId(String)
+  nameWithType: ILaborCreatorService.GetTestSheetId(String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+  spec.csharp:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+    name: GetTestSheetId
+    nameWithType: ILaborCreatorService.GetTestSheetId
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId(System.String)
+    name: GetTestSheetId
+    nameWithType: ILaborCreatorService.GetTestSheetId
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService.GetTestSheetId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor

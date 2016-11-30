@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  id: Intranet.Labor.Definition.Bll
+  children:
+  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  - Intranet.Labor.Definition.Bll.IShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll
+  type: Namespace
+  assemblies:
+  - Intranet.Labor.Definition
+references:
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: ILaborCreatorServiceHelper
+  nameWithType: ILaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper
+  commentId: T:Intranet.Labor.Definition.Bll.IShiftHelper
+  parent: Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: IShiftHelper
+  nameWithType: IShiftHelper
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll

@@ -1,0 +1,609 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.HistoryService
+  commentId: T:Intranet.Labor.Bll.HistoryService
+  id: HistoryService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.HistoryService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.HistoryService.GetHistoryViewModel(System.String)
+  - Intranet.Labor.Bll.HistoryService.HistoryBll
+  langs:
+  - csharp
+  - vb
+  name: HistoryService
+  nameWithType: HistoryService
+  fullName: Intranet.Labor.Bll.HistoryService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/HistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HistoryService
+    path: .src/Intranet/Labor/Bll/HistoryService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the history service\n"
+  example: []
+  syntax:
+    content: 'public class HistoryService : ServiceBase, IHistoryService'
+    content.vb: >-
+      Public Class HistoryService
+          Inherits ServiceBase
+          Implements IHistoryService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IHistoryService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.HistoryService.HistoryBll
+  commentId: P:Intranet.Labor.Bll.HistoryService.HistoryBll
+  id: HistoryBll
+  parent: Intranet.Labor.Bll.HistoryService
+  langs:
+  - csharp
+  - vb
+  name: HistoryBll
+  nameWithType: HistoryService.HistoryBll
+  fullName: Intranet.Labor.Bll.HistoryService.HistoryBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/HistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HistoryBll
+    path: .src/Intranet/Labor/Bll/HistoryService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the history.\n"
+  example: []
+  syntax:
+    content: public IHistoryBll HistoryBll { get; set; }
+    content.vb: Public Property HistoryBll As IHistoryBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IHistoryBll
+  overload: Intranet.Labor.Bll.HistoryService.HistoryBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.HistoryService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.HistoryService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.HistoryService
+  langs:
+  - csharp
+  - vb
+  name: HistoryService(ILoggerFactory)
+  nameWithType: HistoryService.HistoryService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.HistoryService.HistoryService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/HistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/HistoryService.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public HistoryService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.HistoryService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.HistoryService.GetHistoryViewModel(System.String)
+  commentId: M:Intranet.Labor.Bll.HistoryService.GetHistoryViewModel(System.String)
+  id: GetHistoryViewModel(System.String)
+  parent: Intranet.Labor.Bll.HistoryService
+  langs:
+  - csharp
+  - vb
+  name: GetHistoryViewModel(String)
+  nameWithType: HistoryService.GetHistoryViewModel(String)
+  fullName: Intranet.Labor.Bll.HistoryService.GetHistoryViewModel(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/HistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetHistoryViewModel
+    path: .src/Intranet/Labor/Bll/HistoryService.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\ngets the HistoryViewModel\n"
+  example: []
+  syntax:
+    content: public HistoryViewModel GetHistoryViewModel(string faNr)
+    content.vb: Public Function GetHistoryViewModel(faNr As String) As HistoryViewModel
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the FaNr
+    return:
+      type: Intranet.Labor.ViewModel.HistoryViewModel
+      description: The HistoryViewModel
+  overload: Intranet.Labor.Bll.HistoryService.GetHistoryViewModel*
+  implements:
+  - Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IHistoryService
+  commentId: T:Intranet.Labor.Definition.IHistoryService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IHistoryService
+  nameWithType: IHistoryService
+  fullName: Intranet.Labor.Definition.IHistoryService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.HistoryService.HistoryBll*
+  commentId: Overload:Intranet.Labor.Bll.HistoryService.HistoryBll
+  isExternal: false
+  name: HistoryBll
+  nameWithType: HistoryService.HistoryBll
+  fullName: Intranet.Labor.Bll.HistoryService.HistoryBll
+- uid: Intranet.Labor.Definition.IHistoryBll
+  commentId: T:Intranet.Labor.Definition.IHistoryBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IHistoryBll
+  nameWithType: IHistoryBll
+  fullName: Intranet.Labor.Definition.IHistoryBll
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.HistoryService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.HistoryService.#ctor
+  isExternal: false
+  name: HistoryService
+  nameWithType: HistoryService.HistoryService
+  fullName: Intranet.Labor.Bll.HistoryService.HistoryService
+- uid: Intranet.Labor.Bll.HistoryService.GetHistoryViewModel*
+  commentId: Overload:Intranet.Labor.Bll.HistoryService.GetHistoryViewModel
+  isExternal: false
+  name: GetHistoryViewModel
+  nameWithType: HistoryService.GetHistoryViewModel
+  fullName: Intranet.Labor.Bll.HistoryService.GetHistoryViewModel
+- uid: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  commentId: M:Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  parent: Intranet.Labor.Definition.IHistoryService
+  isExternal: true
+  name: GetHistoryViewModel(String)
+  nameWithType: IHistoryService.GetHistoryViewModel(String)
+  fullName: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+    name: GetHistoryViewModel
+    nameWithType: IHistoryService.GetHistoryViewModel
+    fullName: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+    name: GetHistoryViewModel
+    nameWithType: IHistoryService.GetHistoryViewModel
+    fullName: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.HistoryViewModel
+  commentId: T:Intranet.Labor.ViewModel.HistoryViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: HistoryViewModel
+  nameWithType: HistoryViewModel
+  fullName: Intranet.Labor.ViewModel.HistoryViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

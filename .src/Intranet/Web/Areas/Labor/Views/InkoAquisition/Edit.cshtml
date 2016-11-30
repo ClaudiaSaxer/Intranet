@@ -36,7 +36,15 @@
                 @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" })
                 <label class="control-label">/</label>
                 @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
-                <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
+                <label class="control-label">/EXP</label>
+                @Html.TextBoxFor(m => m.ExpireMonth, new { placeholder = @Model.ExpireMonth, @class = "form-control", style = "width: 50px;", type = "text", @required = "required" })
+                <label class="control-label">/</label>
+                @Html.TextBoxFor(m => m.ExpireYear, new { placeholder = @Model.ExpireYear, @class = "form-control", style = "width: 100px;", type = "text", @required = "required" })
+                <div class="error-message">
+                    @Html.ValidationMessageFor( m => m.ProductionCodeDay )
+                    @Html.ValidationMessageFor(m => m.ExpireMonth)
+                    @Html.ValidationMessageFor(m => m.ExpireYear)
+                </div>
             </div>
 
 

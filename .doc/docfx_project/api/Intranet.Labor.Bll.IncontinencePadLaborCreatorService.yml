@@ -1,0 +1,661 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  commentId: T:Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  id: IncontinencePadLaborCreatorService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadLaborCreatorService
+  nameWithType: IncontinencePadLaborCreatorService
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadLaborCreatorService
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the labor creator service\n"
+  example: []
+  syntax:
+    content: 'public class IncontinencePadLaborCreatorService : ServiceBase, IIncontinencePadLaborCreatorService'
+    content.vb: >-
+      Public Class IncontinencePadLaborCreatorService
+          Inherits ServiceBase
+          Implements IIncontinencePadLaborCreatorService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  commentId: P:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  id: IncontinencePadLaborCreatorBll
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadLaborCreatorBll
+  nameWithType: IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadLaborCreatorBll
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the Labor creator bll\n"
+  example: []
+  syntax:
+    content: public IIncontinencePadLaborCreatorBll IncontinencePadLaborCreatorBll { get; set; }
+    content.vb: Public Property IncontinencePadLaborCreatorBll As IIncontinencePadLaborCreatorBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+      description: the labor creator bll
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+  commentId: P:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+  id: Helper
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: Helper
+  nameWithType: IncontinencePadLaborCreatorService.Helper
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Helper
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the Helper for the Labor Creator Service\n"
+  example: []
+  syntax:
+    content: public IIncontinencePadLaborCreatorServiceHelper Helper { get; set; }
+    content.vb: Public Property Helper As IIncontinencePadLaborCreatorServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+      description: the helper for the Labor creator service
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadLaborCreatorService(ILoggerFactory)
+  nameWithType: IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public IncontinencePadLaborCreatorService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  id: GetLaborCreatorViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborCreatorViewModel(Int32)
+  nameWithType: IncontinencePadLaborCreatorService.GetLaborCreatorViewModel(Int32)
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborCreatorViewModel
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorService.cs
+    startLine: 47
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGet the labor creator view model for a specific id.\n"
+  example: []
+  syntax:
+    content: public IncontinencePadLaborCreatorViewModel GetLaborCreatorViewModel(int testSheetId)
+    content.vb: Public Function GetLaborCreatorViewModel(testSheetId As Integer) As IncontinencePadLaborCreatorViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+      description: the labor creator view model
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel*
+  implements:
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IIncontinencePadLaborCreatorService
+  nameWithType: IIncontinencePadLaborCreatorService
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  isExternal: false
+  name: IncontinencePadLaborCreatorBll
+  nameWithType: IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorBll
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IIncontinencePadLaborCreatorBll
+  nameWithType: IIncontinencePadLaborCreatorBll
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+  isExternal: false
+  name: Helper
+  nameWithType: IncontinencePadLaborCreatorService.Helper
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.Helper
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IIncontinencePadLaborCreatorServiceHelper
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.#ctor
+  isExternal: false
+  name: IncontinencePadLaborCreatorService
+  nameWithType: IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorService
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.IncontinencePadLaborCreatorService
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+  isExternal: false
+  name: GetLaborCreatorViewModel
+  nameWithType: IncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService
+  isExternal: true
+  name: GetLaborCreatorViewModel(Int32)
+  nameWithType: IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+    name: GetLaborCreatorViewModel
+    nameWithType: IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+    name: GetLaborCreatorViewModel
+    nameWithType: IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadLaborCreatorViewModel
+  nameWithType: IncontinencePadLaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.IncontinencePadLaborCreatorViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

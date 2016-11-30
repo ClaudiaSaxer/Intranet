@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor
+  commentId: N:Intranet.Web.Areas.Labor
+  id: Intranet.Web.Areas.Labor
+  children:
+  - Intranet.Web.Areas.Labor.LaborAreaRegistration
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Web.Areas.Labor
+  nameWithType: Intranet.Web.Areas.Labor
+  fullName: Intranet.Web.Areas.Labor
+  type: Namespace
+  assemblies:
+  - Intranet.Web
+references:
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration
+  commentId: T:Intranet.Web.Areas.Labor.LaborAreaRegistration
+  isExternal: false
+  name: LaborAreaRegistration
+  nameWithType: LaborAreaRegistration
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration

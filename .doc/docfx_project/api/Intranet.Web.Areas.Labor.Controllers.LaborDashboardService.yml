@@ -1,0 +1,693 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  id: LaborDashboardService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel
+  - Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+  - Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+  - Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: LaborDashboardService
+  nameWithType: LaborDashboardService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborDashboardService
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing labor dashboard service\n"
+  example: []
+  syntax:
+    content: 'public class LaborDashboardService : ServiceBase, ILaborDashboardService'
+    content.vb: >-
+      Public Class LaborDashboardService
+          Inherits ServiceBase
+          Implements ILaborDashboardService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+  id: LaborDashboardBll
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: LaborDashboardBll
+  nameWithType: LaborDashboardService.LaborDashboardBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborDashboardBll
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets the bll for the labor dashboard service\n"
+  example: []
+  syntax:
+    content: public ILaborDashboardBll LaborDashboardBll { get; set; }
+    content.vb: Public Property LaborDashboardBll As ILaborDashboardBll
+    parameters: []
+    return:
+      type: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+      description: the bll
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+  id: LaborDashboardHelper
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: LaborDashboardHelper
+  nameWithType: LaborDashboardService.LaborDashboardHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborDashboardHelper
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets the helper for the labor dashboard\n"
+  example: []
+  syntax:
+    content: public ILaborDashboardHelper LaborDashboardHelper { get; set; }
+    content.vb: Public Property LaborDashboardHelper As ILaborDashboardHelper
+    parameters: []
+    return:
+      type: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+      description: the labor dashboard helper
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+  id: ShiftHelper
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: ShiftHelper
+  nameWithType: LaborDashboardService.ShiftHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftHelper
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets the shift helper\n"
+  example: []
+  syntax:
+    content: public IShiftHelper ShiftHelper { get; set; }
+    content.vb: Public Property ShiftHelper As IShiftHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.Bll.IShiftHelper
+      description: the shift helper
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: LaborDashboardService(ILoggerFactory)
+  nameWithType: LaborDashboardService.LaborDashboardService(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborDashboardService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel
+  id: GetLaborDashboardViewModel
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborDashboardViewModel()
+  nameWithType: LaborDashboardService.GetLaborDashboardViewModel()
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborDashboardViewModel
+    path: .src/Intranet/Labor/Bll/LaborDashboardService.cs
+    startLine: 57
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLabor creator view model\n"
+  example: []
+  syntax:
+    content: public LaborDashboardViewModel GetLaborDashboardViewModel()
+    content.vb: Public Function GetLaborDashboardViewModel As LaborDashboardViewModel
+    return:
+      type: Intranet.Labor.ViewModel.LaborDashboardViewModel
+      description: the LaborDashboardViewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel*
+  implements:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborDashboardService
+  nameWithType: ILaborDashboardService
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+  isExternal: false
+  name: LaborDashboardBll
+  nameWithType: LaborDashboardService.LaborDashboardBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardBll
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborDashboardBll
+  nameWithType: ILaborDashboardBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+  isExternal: false
+  name: LaborDashboardHelper
+  nameWithType: LaborDashboardService.LaborDashboardHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardHelper
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborDashboardHelper
+  nameWithType: ILaborDashboardHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+  isExternal: false
+  name: ShiftHelper
+  nameWithType: LaborDashboardService.ShiftHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.ShiftHelper
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper
+  commentId: T:Intranet.Labor.Definition.Bll.IShiftHelper
+  parent: Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: IShiftHelper
+  nameWithType: IShiftHelper
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.#ctor
+  isExternal: false
+  name: LaborDashboardService
+  nameWithType: LaborDashboardService.LaborDashboardService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.LaborDashboardService
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel
+  isExternal: false
+  name: GetLaborDashboardViewModel
+  nameWithType: LaborDashboardService.GetLaborDashboardViewModel
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService.GetLaborDashboardViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  isExternal: false
+  name: GetLaborDashboardViewModel()
+  nameWithType: ILaborDashboardService.GetLaborDashboardViewModel()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel()
+  spec.csharp:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+    name: GetLaborDashboardViewModel
+    nameWithType: ILaborDashboardService.GetLaborDashboardViewModel
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+    name: GetLaborDashboardViewModel
+    nameWithType: ILaborDashboardService.GetLaborDashboardViewModel
+    fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService.GetLaborDashboardViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborDashboardViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborDashboardViewModel
+  nameWithType: LaborDashboardViewModel
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

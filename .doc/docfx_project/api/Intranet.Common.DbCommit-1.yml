@@ -1,0 +1,1206 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.DbCommit`1
+  commentId: T:Intranet.Common.DbCommit`1
+  id: DbCommit`1
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.DbCommit`1.#ctor(Intranet.Common.IDatabaseFactory{`0},Intranet.Common.ILoggerFactory)
+  - Intranet.Common.DbCommit`1.Commit
+  - Intranet.Common.DbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  - Intranet.Common.DbCommit`1.Disposed
+  langs:
+  - csharp
+  - vb
+  name: DbCommit<TContext>
+  nameWithType: DbCommit<TContext>
+  fullName: Intranet.Common.DbCommit<TContext>
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DbCommit
+    path: .src/Intranet/Common/Db/DbCommit.cs
+    startLine: 11
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nClass responsible for committing pending changes to the database.\n"
+  example: []
+  syntax:
+    content: 'public class DbCommit<TContext> : DisposableBase, IDbCommit<TContext>, IDisposable where TContext : DbContext, new ()'
+    content.vb: >-
+      Public Class DbCommit(Of TContext As {DbContext, New})
+          Inherits DisposableBase
+          Implements IDbCommit(Of TContext), IDisposable
+    typeParameters:
+    - id: TContext
+      description: ''
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.DisposableBase
+  implements:
+  - Intranet.Common.IDbCommit{{TContext}}
+  - System.IDisposable
+  inheritedMembers:
+  - Intranet.Common.DisposableBase.Dispose
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: DbCommit(Of TContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Intranet.Common.DbCommit(Of TContext)
+  name.vb: DbCommit(Of TContext)
+- uid: Intranet.Common.DbCommit`1.#ctor(Intranet.Common.IDatabaseFactory{`0},Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Common.DbCommit`1.#ctor(Intranet.Common.IDatabaseFactory{`0},Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.IDatabaseFactory{`0},Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Common.DbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: DbCommit(IDatabaseFactory<TContext>, ILoggerFactory)
+  nameWithType: DbCommit<TContext>.DbCommit(IDatabaseFactory<TContext>, ILoggerFactory)
+  fullName: Intranet.Common.DbCommit<TContext>.DbCommit(Intranet.Common.IDatabaseFactory<TContext>, Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Common/Db/DbCommit.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.DbCommit%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DbCommit(IDatabaseFactory<TContext> databaseFactory, ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(databaseFactory As IDatabaseFactory(Of TContext), loggerFactory As ILoggerFactory)
+    parameters:
+    - id: databaseFactory
+      type: Intranet.Common.IDatabaseFactory{{TContext}}
+      description: ''
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Common.DbCommit`1.#ctor*
+  nameWithType.vb: DbCommit(Of TContext).DbCommit(IDatabaseFactory(Of TContext), ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbCommit(Of TContext).DbCommit(Intranet.Common.IDatabaseFactory(Of TContext), Intranet.Common.ILoggerFactory)
+  name.vb: DbCommit(IDatabaseFactory(Of TContext), ILoggerFactory)
+- uid: Intranet.Common.DbCommit`1.Disposed
+  commentId: M:Intranet.Common.DbCommit`1.Disposed
+  id: Disposed
+  parent: Intranet.Common.DbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: Disposed()
+  nameWithType: DbCommit<TContext>.Disposed()
+  fullName: Intranet.Common.DbCommit<TContext>.Disposed()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Disposed
+    path: .src/Intranet/Common/Db/DbCommit.cs
+    startLine: 71
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nDispose all managed resources.\n"
+  example: []
+  syntax:
+    content: protected override void Disposed()
+    content.vb: Protected Overrides Sub Disposed
+  overridden: Intranet.Common.DisposableBase.Disposed
+  overload: Intranet.Common.DbCommit`1.Disposed*
+  nameWithType.vb: DbCommit(Of TContext).Disposed()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Intranet.Common.DbCommit(Of TContext).Disposed()
+- uid: Intranet.Common.DbCommit`1.Commit
+  commentId: M:Intranet.Common.DbCommit`1.Commit
+  id: Commit
+  parent: Intranet.Common.DbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: Commit()
+  nameWithType: DbCommit<TContext>.Commit()
+  fullName: Intranet.Common.DbCommit<TContext>.Commit()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Commit
+    path: .src/Intranet/Common/Db/DbCommit.cs
+    startLine: 81
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCommits all pending changes to the database.\n"
+  example: []
+  syntax:
+    content: public int Commit()
+    content.vb: Public Function Commit As Integer
+    return:
+      type: System.Int32
+      description: Returns the number of changed records.
+  overload: Intranet.Common.DbCommit`1.Commit*
+  implements:
+  - Intranet.Common.IDbCommit{{TContext}}.Commit
+  nameWithType.vb: DbCommit(Of TContext).Commit()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbCommit(Of TContext).Commit()
+- uid: Intranet.Common.DbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.DbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  id: CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.DbCommit`1
+  langs:
+  - csharp
+  - vb
+  name: CommitAsync(Nullable<CancellationToken>)
+  nameWithType: DbCommit<TContext>.CommitAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.DbCommit<TContext>.CommitAsync(System.Nullable<System.Threading.CancellationToken>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbCommit.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CommitAsync
+    path: .src/Intranet/Common/Db/DbCommit.cs
+    startLine: 92
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCommits all pending changes to the database asynchronously.\n"
+  example: []
+  syntax:
+    content: public Task<int> CommitAsync(CancellationToken? cancellationToken = null)
+    content.vb: Public Function CommitAsync(cancellationToken As CancellationToken? = Nothing) As Task(Of Integer)
+    parameters:
+    - id: cancellationToken
+      type: System.Nullable{System.Threading.CancellationToken}
+      description: cancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: Returns the number of changed records asynchronously.
+  overload: Intranet.Common.DbCommit`1.CommitAsync*
+  implements:
+  - Intranet.Common.IDbCommit{{TContext}}.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  nameWithType.vb: DbCommit(Of TContext).CommitAsync(Nullable(Of CancellationToken))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbCommit(Of TContext).CommitAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: CommitAsync(Nullable(Of CancellationToken))
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.IDbCommit{{TContext}}
+  commentId: T:Intranet.Common.IDbCommit{`0}
+  parent: Intranet.Common
+  definition: Intranet.Common.IDbCommit`1
+  name: IDbCommit<TContext>
+  nameWithType: IDbCommit<TContext>
+  fullName: Intranet.Common.IDbCommit<TContext>
+  nameWithType.vb: IDbCommit(Of TContext)
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext)
+  name.vb: IDbCommit(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Intranet.Common.DisposableBase.Dispose
+  commentId: M:Intranet.Common.DisposableBase.Dispose
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Dispose()
+  nameWithType: DisposableBase.Dispose()
+  fullName: Intranet.Common.DisposableBase.Dispose()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.IDbCommit`1
+  commentId: T:Intranet.Common.IDbCommit`1
+  isExternal: false
+  name: IDbCommit<TContext>
+  nameWithType: IDbCommit<TContext>
+  fullName: Intranet.Common.IDbCommit<TContext>
+  nameWithType.vb: IDbCommit(Of TContext)
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext)
+  name.vb: IDbCommit(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbCommit`1
+  commentId: T:Intranet.Common.DbCommit`1
+  isExternal: false
+  name: DbCommit<TContext>
+  nameWithType: DbCommit<TContext>
+  fullName: Intranet.Common.DbCommit<TContext>
+  nameWithType.vb: DbCommit(Of TContext)
+  fullname.vb: Intranet.Common.DbCommit(Of TContext)
+  name.vb: DbCommit(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.DbCommit`1
+    name: DbCommit
+    nameWithType: DbCommit
+    fullName: Intranet.Common.DbCommit
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.DbCommit`1
+    name: DbCommit
+    nameWithType: DbCommit
+    fullName: Intranet.Common.DbCommit
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Common.DbCommit`1.#ctor*
+  commentId: Overload:Intranet.Common.DbCommit`1.#ctor
+  isExternal: false
+  name: DbCommit
+  nameWithType: DbCommit<TContext>.DbCommit
+  fullName: Intranet.Common.DbCommit<TContext>.DbCommit
+  nameWithType.vb: DbCommit(Of TContext).DbCommit
+  fullname.vb: Intranet.Common.DbCommit(Of TContext).DbCommit
+- uid: Intranet.Common.IDatabaseFactory{{TContext}}
+  commentId: T:Intranet.Common.IDatabaseFactory{`0}
+  parent: Intranet.Common
+  definition: Intranet.Common.IDatabaseFactory`1
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  isExternal: false
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Disposed
+  commentId: M:Intranet.Common.DisposableBase.Disposed
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Disposed()
+  nameWithType: DisposableBase.Disposed()
+  fullName: Intranet.Common.DisposableBase.Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbCommit`1.Disposed*
+  commentId: Overload:Intranet.Common.DbCommit`1.Disposed
+  isExternal: false
+  name: Disposed
+  nameWithType: DbCommit<TContext>.Disposed
+  fullName: Intranet.Common.DbCommit<TContext>.Disposed
+  nameWithType.vb: DbCommit(Of TContext).Disposed
+  fullname.vb: Intranet.Common.DbCommit(Of TContext).Disposed
+- uid: Intranet.Common.DbCommit`1.Commit*
+  commentId: Overload:Intranet.Common.DbCommit`1.Commit
+  isExternal: false
+  name: Commit
+  nameWithType: DbCommit<TContext>.Commit
+  fullName: Intranet.Common.DbCommit<TContext>.Commit
+  nameWithType.vb: DbCommit(Of TContext).Commit
+  fullname.vb: Intranet.Common.DbCommit(Of TContext).Commit
+- uid: Intranet.Common.IDbCommit{{TContext}}.Commit
+  commentId: M:Intranet.Common.IDbCommit{`0}.Commit
+  parent: Intranet.Common.IDbCommit{{TContext}}
+  definition: Intranet.Common.IDbCommit`1.Commit
+  name: Commit()
+  nameWithType: IDbCommit<TContext>.Commit()
+  fullName: Intranet.Common.IDbCommit<TContext>.Commit()
+  nameWithType.vb: IDbCommit(Of TContext).Commit()
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).Commit()
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1.Commit
+    name: Commit
+    nameWithType: IDbCommit<TContext>.Commit
+    fullName: Intranet.Common.IDbCommit<TContext>.Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1.Commit
+    name: Commit
+    nameWithType: IDbCommit(Of TContext).Commit
+    fullName: Intranet.Common.IDbCommit(Of TContext).Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Common.IDbCommit`1.Commit
+  commentId: M:Intranet.Common.IDbCommit`1.Commit
+  isExternal: false
+  name: Commit()
+  nameWithType: IDbCommit<TContext>.Commit()
+  fullName: Intranet.Common.IDbCommit<TContext>.Commit()
+  nameWithType.vb: IDbCommit(Of TContext).Commit()
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).Commit()
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1.Commit
+    name: Commit
+    nameWithType: IDbCommit<TContext>.Commit
+    fullName: Intranet.Common.IDbCommit<TContext>.Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1.Commit
+    name: Commit
+    nameWithType: IDbCommit(Of TContext).Commit
+    fullName: Intranet.Common.IDbCommit(Of TContext).Commit
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbCommit`1.CommitAsync*
+  commentId: Overload:Intranet.Common.DbCommit`1.CommitAsync
+  isExternal: false
+  name: CommitAsync
+  nameWithType: DbCommit<TContext>.CommitAsync
+  fullName: Intranet.Common.DbCommit<TContext>.CommitAsync
+  nameWithType.vb: DbCommit(Of TContext).CommitAsync
+  fullname.vb: Intranet.Common.DbCommit(Of TContext).CommitAsync
+- uid: Intranet.Common.IDbCommit{{TContext}}.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.IDbCommit{`0}.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.IDbCommit{{TContext}}
+  definition: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  name: CommitAsync(Nullable<CancellationToken>)
+  nameWithType: IDbCommit<TContext>.CommitAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: IDbCommit(Of TContext).CommitAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).CommitAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: CommitAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+    name: CommitAsync
+    nameWithType: IDbCommit<TContext>.CommitAsync
+    fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+    name: CommitAsync
+    nameWithType: IDbCommit(Of TContext).CommitAsync
+    fullName: Intranet.Common.IDbCommit(Of TContext).CommitAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.Threading.CancellationToken}
+  commentId: T:System.Nullable{System.Threading.CancellationToken}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<CancellationToken>
+  nameWithType: Nullable<CancellationToken>
+  fullName: System.Nullable<System.Threading.CancellationToken>
+  nameWithType.vb: Nullable(Of CancellationToken)
+  fullname.vb: System.Nullable(Of System.Threading.CancellationToken)
+  name.vb: Nullable(Of CancellationToken)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullname.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+  isExternal: true
+  name: CommitAsync(Nullable<CancellationToken>)
+  nameWithType: IDbCommit<TContext>.CommitAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: IDbCommit(Of TContext).CommitAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext).CommitAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: CommitAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+    name: CommitAsync
+    nameWithType: IDbCommit<TContext>.CommitAsync
+    fullName: Intranet.Common.IDbCommit<TContext>.CommitAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1.CommitAsync(System.Nullable{System.Threading.CancellationToken})
+    name: CommitAsync
+    nameWithType: IDbCommit(Of TContext).CommitAsync
+    fullName: Intranet.Common.IDbCommit(Of TContext).CommitAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

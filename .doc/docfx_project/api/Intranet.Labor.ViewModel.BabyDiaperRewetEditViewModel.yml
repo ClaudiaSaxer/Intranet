@@ -1,0 +1,1150 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  id: BabyDiaperRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+  - Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetEditViewModel
+  nameWithType: BabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetEditViewModel
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the ViewModel for the BabyDiaperRewetController\n"
+  example: []
+  syntax:
+    content: 'public class BabyDiaperRewetEditViewModel : BaseTestEditViewModel'
+    content.vb: >-
+      Public Class BabyDiaperRewetEditViewModel
+          Inherits BaseTestEditViewModel
+  inheritance:
+  - System.Object
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel
+  inheritedMembers:
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+  id: DiaperWeight
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: DiaperWeight
+  nameWithType: BabyDiaperRewetEditViewModel.DiaperWeight
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DiaperWeight
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the DiaperWeight value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Das Windeln Gewicht muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double DiaperWeight { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Das Windeln Gewicht muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property DiaperWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe DiaperWeight value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Das Windeln Gewicht muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+  id: RewetAfter140
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetAfter140
+  nameWithType: BabyDiaperRewetEditViewModel.RewetAfter140
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfter140
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 35
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RewetAfter140 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Rewet-Wert nach 140ml muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double RewetAfter140 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Rewet-Wert nach 140ml muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property RewetAfter140 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe RewetAfter140 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Rewet-Wert nach 140ml muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+  id: RewetAfter210
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: RewetAfter210
+  nameWithType: BabyDiaperRewetEditViewModel.RewetAfter210
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfter210
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RewetAfter210 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Rewet-Wert nach 210ml muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double RewetAfter210 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Rewet-Wert nach 210ml muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property RewetAfter210 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe RewetAfter210 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Rewet-Wert nach 210ml muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+  id: StrikeThrough
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: StrikeThrough
+  nameWithType: BabyDiaperRewetEditViewModel.StrikeThrough
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StrikeThrough
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 57
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the StrikeThrough value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Strike Through muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double StrikeThrough { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Strike Through muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property StrikeThrough As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe StrikeThrough value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Strike Through muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+  id: Distribution
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: Distribution
+  nameWithType: BabyDiaperRewetEditViewModel.Distribution
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Distribution
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 68
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the Distribution value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Die Verteilung muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Zahl sein")]
+
+      public double Distribution { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Die Verteilung muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Zahl sein")>
+
+      Public Property Distribution As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe Distribution value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Verteilung muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Zahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+  id: PenetrationTime1
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTime1
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime1
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTime1
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 79
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the PenetrationTime1 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Die Penetrationszeit nach der 1. Zugabe muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double PenetrationTime1 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Die Penetrationszeit nach der 1. Zugabe muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property PenetrationTime1 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe PenetrationTime1 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Penetrationszeit nach der 1. Zugabe muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+  id: PenetrationTime2
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTime2
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime2
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTime2
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 90
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the PenetrationTime2 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Die Penetrationszeit nach der 2. Zugabe muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double PenetrationTime2 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Die Penetrationszeit nach der 2. Zugabe muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property PenetrationTime2 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe PenetrationTime2 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Penetrationszeit nach der 2. Zugabe muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+  id: PenetrationTime3
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTime3
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime3
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTime3
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 101
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the PenetrationTime3 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Die Penetrationszeit nach der 3. Zugabe muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double PenetrationTime3 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Die Penetrationszeit nach der 3. Zugabe muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property PenetrationTime3 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe PenetrationTime3 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Penetrationszeit nach der 3. Zugabe muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+  id: PenetrationTime4
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTime4
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime4
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTime4
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 112
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the PenetrationTime4 value\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Die Penetrationszeit nach der 4. Zugabe muss angegeben werden")]
+
+      [Range(0, 1.7976931348623157E+308, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+
+      public double PenetrationTime4 { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Die Penetrationszeit nach der 4. Zugabe muss angegeben werden")>
+
+      <Range(0, 1.7976931348623157E+308, ErrorMessage:="Die Zahl muss eine Positive Kommazahl sein")>
+
+      Public Property PenetrationTime4 As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: "\nThe PenetrationTime4 value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Penetrationszeit nach der 4. Zugabe muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)
+    arguments:
+    - type: System.Double
+      value: 0
+    - type: System.Double
+      value: 1.7976931348623157E+308
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss eine Positive Kommazahl sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+  id: TestType
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestType
+  nameWithType: BabyDiaperRewetEditViewModel.TestType
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestType
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
+    startLine: 123
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the TestType for the babydiaper\n"
+  example: []
+  syntax:
+    content: public TestTypeBabyDiaper TestType { get; set; }
+    content.vb: Public Property TestType As TestTypeBabyDiaper
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+      description: "\nThe TestType value\n"
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BaseTestEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BaseTestEditViewModel
+  nameWithType: BaseTestEditViewModel
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestValueId
+  nameWithType: BaseTestEditViewModel.TestValueId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestSheetId
+  nameWithType: BaseTestEditViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: TestPerson
+  nameWithType: BaseTestEditViewModel.TestPerson
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCode
+  nameWithType: BaseTestEditViewModel.ProductionCode
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCodeDay
+  nameWithType: BaseTestEditViewModel.ProductionCodeDay
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: ProductionCodeTime
+  nameWithType: BaseTestEditViewModel.ProductionCodeTime
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: Notes
+  nameWithType: BaseTestEditViewModel.Notes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  isExternal: false
+  name: NoteCodes
+  nameWithType: BaseTestEditViewModel.NoteCodes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+  isExternal: false
+  name: DiaperWeight
+  nameWithType: BabyDiaperRewetEditViewModel.DiaperWeight
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.DiaperWeight
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+  isExternal: false
+  name: RewetAfter140
+  nameWithType: BabyDiaperRewetEditViewModel.RewetAfter140
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter140
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+  isExternal: false
+  name: RewetAfter210
+  nameWithType: BabyDiaperRewetEditViewModel.RewetAfter210
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.RewetAfter210
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+  isExternal: false
+  name: StrikeThrough
+  nameWithType: BabyDiaperRewetEditViewModel.StrikeThrough
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.StrikeThrough
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+  isExternal: false
+  name: Distribution
+  nameWithType: BabyDiaperRewetEditViewModel.Distribution
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.Distribution
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+  isExternal: false
+  name: PenetrationTime1
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime1
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime1
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+  isExternal: false
+  name: PenetrationTime2
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime2
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime2
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+  isExternal: false
+  name: PenetrationTime3
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime3
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime3
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+  isExternal: false
+  name: PenetrationTime4
+  nameWithType: BabyDiaperRewetEditViewModel.PenetrationTime4
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.PenetrationTime4
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+  isExternal: false
+  name: TestType
+  nameWithType: BabyDiaperRewetEditViewModel.TestType
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor

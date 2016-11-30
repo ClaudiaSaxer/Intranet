@@ -1,0 +1,2178 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Dal.ModuleRepository
+  commentId: T:Intranet.Dal.ModuleRepository
+  id: ModuleRepository
+  parent: Intranet.Dal
+  children:
+  - Intranet.Dal.ModuleRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext},Intranet.Common.ILoggerFactory)
+  langs:
+  - csharp
+  - vb
+  name: ModuleRepository
+  nameWithType: ModuleRepository
+  fullName: Intranet.Dal.ModuleRepository
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Dal/Repositories/ModulRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ModuleRepository
+    path: .src/Intranet/Dal/Repositories/ModulRepository.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Dal
+  namespace: Intranet.Dal
+  summary: "\nThe Repository for the SubModule\n"
+  example: []
+  syntax:
+    content: 'public class ModuleRepository : GenericRepository<IntranetContext, Module>, IGenericRepository<Module>, IDisposable'
+    content.vb: >-
+      Public Class ModuleRepository
+          Inherits GenericRepository(Of IntranetContext,  Module)
+          Implements IGenericRepository(Of  Module), IDisposable
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.DisposableBase
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  implements:
+  - Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  - System.IDisposable
+  inheritedMembers:
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Context
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DatabaseFactory
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DbCommit
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Disposed
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.GetAll
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Model.Module,System.Boolean}})
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Add(Intranet.Model.Module)
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Model.Module})
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Remove(Intranet.Model.Module)
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SetModified(Intranet.Model.Module)
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Attach(Intranet.Model.Module)
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChanges
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Entry``1({TAnyEntity})
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecords
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecordsAsync
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.FindAsync(System.Object[])
+  - Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SqlQuery(System.String,System.Object[])
+  - Intranet.Common.DisposableBase.Dispose
+  - Intranet.Common.DisposableBase.Disposed
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Dal.ModuleRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext},Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Dal.ModuleRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext},Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext},Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Dal.ModuleRepository
+  langs:
+  - csharp
+  - vb
+  name: ModuleRepository(IDatabaseFactory<IntranetContext>, ILoggerFactory)
+  nameWithType: ModuleRepository.ModuleRepository(IDatabaseFactory<IntranetContext>, ILoggerFactory)
+  fullName: Intranet.Dal.ModuleRepository.ModuleRepository(Intranet.Common.IDatabaseFactory<Intranet.Dal.IntranetContext>, Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Dal/Repositories/ModulRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Dal/Repositories/ModulRepository.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Dal
+  namespace: Intranet.Dal
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.GenericRepository%602\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ModuleRepository(IDatabaseFactory<IntranetContext> databaseFactory, ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(databaseFactory As IDatabaseFactory(Of IntranetContext), loggerFactory As ILoggerFactory)
+    parameters:
+    - id: databaseFactory
+      type: Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext}
+      description: A <xref href="Intranet.Common.IDatabaseFactory%601" data-throw-if-not-resolved="false"></xref>.
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Dal.ModuleRepository.#ctor*
+  nameWithType.vb: ModuleRepository.ModuleRepository(IDatabaseFactory(Of IntranetContext), ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Dal.ModuleRepository.ModuleRepository(Intranet.Common.IDatabaseFactory(Of Intranet.Dal.IntranetContext), Intranet.Common.ILoggerFactory)
+  name.vb: ModuleRepository(IDatabaseFactory(Of IntranetContext), ILoggerFactory)
+references:
+- uid: Intranet.Dal
+  commentId: N:Intranet.Dal
+  isExternal: false
+  name: Intranet.Dal
+  nameWithType: Intranet.Dal
+  fullName: Intranet.Dal
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  commentId: T:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  parent: Intranet.Common
+  definition: Intranet.Common.GenericRepository`2
+  name: GenericRepository<IntranetContext, Module>
+  nameWithType: GenericRepository<IntranetContext, Module>
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module)
+  name.vb: GenericRepository(Of IntranetContext, Module)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Dal.IntranetContext
+    name: IntranetContext
+    nameWithType: IntranetContext
+    fullName: Intranet.Dal.IntranetContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Dal.IntranetContext
+    name: IntranetContext
+    nameWithType: IntranetContext
+    fullName: Intranet.Dal.IntranetContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<Module>
+  nameWithType: IGenericRepository<Module>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Model.Module>
+  nameWithType.vb: IGenericRepository(Of Module)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Model.Module)
+  name.vb: IGenericRepository(Of Module)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Context
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Context
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Context
+  name: Context
+  nameWithType: GenericRepository<IntranetContext, Module>.Context
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Context
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Context
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Context
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DatabaseFactory
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DatabaseFactory
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.DatabaseFactory
+  name: DatabaseFactory
+  nameWithType: GenericRepository<IntranetContext, Module>.DatabaseFactory
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.DatabaseFactory
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).DatabaseFactory
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).DatabaseFactory
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DbCommit
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.DbCommit
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.DbCommit
+  name: DbCommit
+  nameWithType: GenericRepository<IntranetContext, Module>.DbCommit
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.DbCommit
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).DbCommit
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).DbCommit
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Disposed
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Disposed
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Disposed
+  name: Disposed()
+  nameWithType: GenericRepository<IntranetContext, Module>.Disposed()
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Disposed()
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Disposed()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository<IntranetContext, Module>.Disposed
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository(Of IntranetContext, Module).Disposed
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.GetAll
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.GetAll
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.GetAll
+  name: GetAll()
+  nameWithType: GenericRepository<IntranetContext, Module>.GetAll()
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.GetAll()
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).GetAll()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).GetAll()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository<IntranetContext, Module>.GetAll
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository(Of IntranetContext, Module).GetAll
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Model.Module,System.Boolean}})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Model.Module,System.Boolean}})
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  name: Where(Expression<Func<Module, Boolean>>)
+  nameWithType: GenericRepository<IntranetContext, Module>.Where(Expression<Func<Module, Boolean>>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Where(System.Linq.Expressions.Expression<System.Func<Intranet.Model.Module, System.Boolean>>)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Where(Expression(Of Func(Of Module, Boolean)))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Where(System.Linq.Expressions.Expression(Of System.Func(Of Intranet.Model.Module, System.Boolean)))
+  name.vb: Where(Expression(Of Func(Of Module, Boolean)))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository<IntranetContext, Module>.Where
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository(Of IntranetContext, Module).Where
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Add(Intranet.Model.Module)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Add(Intranet.Model.Module)
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Add(`1)
+  name: Add(Module)
+  nameWithType: GenericRepository<IntranetContext, Module>.Add(Module)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Add(Intranet.Model.Module)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Add(Module)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Add(Intranet.Model.Module)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository<IntranetContext, Module>.Add
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository(Of IntranetContext, Module).Add
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Model.Module})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Model.Module})
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  name: AddRange(IEnumerable<Module>)
+  nameWithType: GenericRepository<IntranetContext, Module>.AddRange(IEnumerable<Module>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.AddRange(System.Collections.Generic.IEnumerable<Intranet.Model.Module>)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).AddRange(IEnumerable(Of Module))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).AddRange(System.Collections.Generic.IEnumerable(Of Intranet.Model.Module))
+  name.vb: AddRange(IEnumerable(Of Module))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository<IntranetContext, Module>.AddRange
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository(Of IntranetContext, Module).AddRange
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Remove(Intranet.Model.Module)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Remove(Intranet.Model.Module)
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Remove(`1)
+  name: Remove(Module)
+  nameWithType: GenericRepository<IntranetContext, Module>.Remove(Module)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Remove(Intranet.Model.Module)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Remove(Module)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Remove(Intranet.Model.Module)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository<IntranetContext, Module>.Remove
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository(Of IntranetContext, Module).Remove
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SetModified(Intranet.Model.Module)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SetModified(Intranet.Model.Module)
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.SetModified(`1)
+  name: SetModified(Module)
+  nameWithType: GenericRepository<IntranetContext, Module>.SetModified(Module)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SetModified(Intranet.Model.Module)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).SetModified(Module)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SetModified(Intranet.Model.Module)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository<IntranetContext, Module>.SetModified
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository(Of IntranetContext, Module).SetModified
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Attach(Intranet.Model.Module)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Attach(Intranet.Model.Module)
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Attach(`1)
+  name: Attach(Module)
+  nameWithType: GenericRepository<IntranetContext, Module>.Attach(Module)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Attach(Intranet.Model.Module)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Attach(Module)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Attach(Intranet.Model.Module)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository<IntranetContext, Module>.Attach
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository(Of IntranetContext, Module).Attach
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChanges
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChanges
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.SaveChanges
+  name: SaveChanges()
+  nameWithType: GenericRepository<IntranetContext, Module>.SaveChanges()
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SaveChanges()
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).SaveChanges()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SaveChanges()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository<IntranetContext, Module>.SaveChanges
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository(Of IntranetContext, Module).SaveChanges
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  name: SaveChangesAsync(Nullable<CancellationToken>)
+  nameWithType: GenericRepository<IntranetContext, Module>.SaveChangesAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SaveChangesAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).SaveChangesAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SaveChangesAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: SaveChangesAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository<IntranetContext, Module>.SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository(Of IntranetContext, Module).SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Entry``1({TAnyEntity})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.Entry``1(``0)
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.Entry``1(``0)
+  name: Entry<TAnyEntity>(TAnyEntity)
+  nameWithType: GenericRepository<IntranetContext, Module>.Entry<TAnyEntity>(TAnyEntity)
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Entry<TAnyEntity>(TAnyEntity)
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).Entry(Of TAnyEntity)(TAnyEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Entry(Of TAnyEntity)(TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)(TAnyEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry<TAnyEntity>
+    nameWithType: GenericRepository<IntranetContext, Module>.Entry<TAnyEntity>
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.Entry<TAnyEntity>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry(Of TAnyEntity)
+    nameWithType: GenericRepository(Of IntranetContext, Module).Entry(Of TAnyEntity)
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).Entry(Of TAnyEntity)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecords
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecords
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.CountRecords
+  name: CountRecords()
+  nameWithType: GenericRepository<IntranetContext, Module>.CountRecords()
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.CountRecords()
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).CountRecords()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).CountRecords()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository<IntranetContext, Module>.CountRecords
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository(Of IntranetContext, Module).CountRecords
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecordsAsync
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.CountRecordsAsync
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.CountRecordsAsync
+  name: CountRecordsAsync()
+  nameWithType: GenericRepository<IntranetContext, Module>.CountRecordsAsync()
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.CountRecordsAsync()
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).CountRecordsAsync()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).CountRecordsAsync()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository<IntranetContext, Module>.CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository(Of IntranetContext, Module).CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.FindAsync(System.Object[])
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.FindAsync(System.Object[])
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  name: FindAsync(Object[])
+  nameWithType: GenericRepository<IntranetContext, Module>.FindAsync(Object[])
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.FindAsync(System.Object[])
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).FindAsync(Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).FindAsync(System.Object())
+  name.vb: FindAsync(Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository<IntranetContext, Module>.FindAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository(Of IntranetContext, Module).FindAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SqlQuery(System.String,System.Object[])
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}.SqlQuery(System.String,System.Object[])
+  parent: Intranet.Common.GenericRepository{Intranet.Dal.IntranetContext,Intranet.Model.Module}
+  definition: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  name: SqlQuery(String, Object[])
+  nameWithType: GenericRepository<IntranetContext, Module>.SqlQuery(String, Object[])
+  fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SqlQuery(System.String, System.Object[])
+  nameWithType.vb: GenericRepository(Of IntranetContext, Module).SqlQuery(String, Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SqlQuery(System.String, System.Object())
+  name.vb: SqlQuery(String, Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository<IntranetContext, Module>.SqlQuery
+    fullName: Intranet.Common.GenericRepository<Intranet.Dal.IntranetContext, Intranet.Model.Module>.SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository(Of IntranetContext, Module).SqlQuery
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Dal.IntranetContext, Intranet.Model.Module).SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Dispose
+  commentId: M:Intranet.Common.DisposableBase.Dispose
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Dispose()
+  nameWithType: DisposableBase.Dispose()
+  fullName: Intranet.Common.DisposableBase.Dispose()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Disposed
+  commentId: M:Intranet.Common.DisposableBase.Disposed
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Disposed()
+  nameWithType: DisposableBase.Disposed()
+  fullName: Intranet.Common.DisposableBase.Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.GenericRepository`2
+  commentId: T:Intranet.Common.GenericRepository`2
+  isExternal: false
+  name: GenericRepository<TContext, TEntity>
+  nameWithType: GenericRepository<TContext, TEntity>
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>
+  nameWithType.vb: GenericRepository(Of TContext, TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity)
+  name.vb: GenericRepository(Of TContext, TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Context
+  commentId: P:Intranet.Common.GenericRepository`2.Context
+  isExternal: false
+  name: Context
+  nameWithType: GenericRepository<TContext, TEntity>.Context
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Context
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Context
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Context
+- uid: Intranet.Common.GenericRepository`2.DatabaseFactory
+  commentId: P:Intranet.Common.GenericRepository`2.DatabaseFactory
+  isExternal: false
+  name: DatabaseFactory
+  nameWithType: GenericRepository<TContext, TEntity>.DatabaseFactory
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.DatabaseFactory
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).DatabaseFactory
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).DatabaseFactory
+- uid: Intranet.Common.GenericRepository`2.DbCommit
+  commentId: P:Intranet.Common.GenericRepository`2.DbCommit
+  isExternal: false
+  name: DbCommit
+  nameWithType: GenericRepository<TContext, TEntity>.DbCommit
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.DbCommit
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).DbCommit
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).DbCommit
+- uid: Intranet.Common.GenericRepository`2.Disposed
+  commentId: M:Intranet.Common.GenericRepository`2.Disposed
+  isExternal: false
+  name: Disposed()
+  nameWithType: GenericRepository<TContext, TEntity>.Disposed()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Disposed()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Disposed()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository<TContext, TEntity>.Disposed
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository(Of TContext, TEntity).Disposed
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.GetAll
+  commentId: M:Intranet.Common.GenericRepository`2.GetAll
+  isExternal: false
+  name: GetAll()
+  nameWithType: GenericRepository<TContext, TEntity>.GetAll()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.GetAll()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).GetAll()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).GetAll()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository<TContext, TEntity>.GetAll
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository(Of TContext, TEntity).GetAll
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  commentId: M:Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  isExternal: true
+  name: Where(Expression<Func<TEntity, Boolean>>)
+  nameWithType: GenericRepository<TContext, TEntity>.Where(Expression<Func<TEntity, Boolean>>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Where(System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Where(Expression(Of Func(Of TEntity, Boolean)))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean)))
+  name.vb: Where(Expression(Of Func(Of TEntity, Boolean)))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository<TContext, TEntity>.Where
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository(Of TContext, TEntity).Where
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Add(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Add(`1)
+  isExternal: false
+  name: Add(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Add(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Add(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Add(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Add(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository<TContext, TEntity>.Add
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository(Of TContext, TEntity).Add
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  commentId: M:Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  isExternal: true
+  name: AddRange(IEnumerable<TEntity>)
+  nameWithType: GenericRepository<TContext, TEntity>.AddRange(IEnumerable<TEntity>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.AddRange(System.Collections.Generic.IEnumerable<TEntity>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).AddRange(IEnumerable(Of TEntity))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).AddRange(System.Collections.Generic.IEnumerable(Of TEntity))
+  name.vb: AddRange(IEnumerable(Of TEntity))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository<TContext, TEntity>.AddRange
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository(Of TContext, TEntity).AddRange
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Remove(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Remove(`1)
+  isExternal: false
+  name: Remove(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Remove(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Remove(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Remove(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Remove(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository<TContext, TEntity>.Remove
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository(Of TContext, TEntity).Remove
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.SetModified(`1)
+  isExternal: false
+  name: SetModified(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.SetModified(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SetModified(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SetModified(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SetModified(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository<TContext, TEntity>.SetModified
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository(Of TContext, TEntity).SetModified
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Attach(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Attach(`1)
+  isExternal: false
+  name: Attach(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Attach(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Attach(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Attach(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Attach(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository<TContext, TEntity>.Attach
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository(Of TContext, TEntity).Attach
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SaveChanges
+  commentId: M:Intranet.Common.GenericRepository`2.SaveChanges
+  isExternal: false
+  name: SaveChanges()
+  nameWithType: GenericRepository<TContext, TEntity>.SaveChanges()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChanges()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SaveChanges()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChanges()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository<TContext, TEntity>.SaveChanges
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository(Of TContext, TEntity).SaveChanges
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  isExternal: true
+  name: SaveChangesAsync(Nullable<CancellationToken>)
+  nameWithType: GenericRepository<TContext, TEntity>.SaveChangesAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChangesAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SaveChangesAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChangesAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: SaveChangesAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository<TContext, TEntity>.SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+  commentId: M:Intranet.Common.GenericRepository`2.Entry``1(``0)
+  isExternal: false
+  name: Entry<TAnyEntity>(TAnyEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)(TAnyEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry<TAnyEntity>
+    nameWithType: GenericRepository<TContext, TEntity>.Entry<TAnyEntity>
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Entry<TAnyEntity>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry(Of TAnyEntity)
+    nameWithType: GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.CountRecords
+  commentId: M:Intranet.Common.GenericRepository`2.CountRecords
+  isExternal: false
+  name: CountRecords()
+  nameWithType: GenericRepository<TContext, TEntity>.CountRecords()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecords()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).CountRecords()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecords()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository<TContext, TEntity>.CountRecords
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository(Of TContext, TEntity).CountRecords
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+  commentId: M:Intranet.Common.GenericRepository`2.CountRecordsAsync
+  isExternal: false
+  name: CountRecordsAsync()
+  nameWithType: GenericRepository<TContext, TEntity>.CountRecordsAsync()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecordsAsync()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).CountRecordsAsync()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecordsAsync()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository<TContext, TEntity>.CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  commentId: M:Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  isExternal: true
+  name: FindAsync(Object[])
+  nameWithType: GenericRepository<TContext, TEntity>.FindAsync(Object[])
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.FindAsync(System.Object[])
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).FindAsync(Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).FindAsync(System.Object())
+  name.vb: FindAsync(Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository<TContext, TEntity>.FindAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).FindAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  commentId: M:Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  isExternal: true
+  name: SqlQuery(String, Object[])
+  nameWithType: GenericRepository<TContext, TEntity>.SqlQuery(String, Object[])
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SqlQuery(System.String, System.Object[])
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SqlQuery(String, Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SqlQuery(System.String, System.Object())
+  name.vb: SqlQuery(String, Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository<TContext, TEntity>.SqlQuery
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository(Of TContext, TEntity).SqlQuery
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  isExternal: false
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Dal.ModuleRepository.#ctor*
+  commentId: Overload:Intranet.Dal.ModuleRepository.#ctor
+  isExternal: false
+  name: ModuleRepository
+  nameWithType: ModuleRepository.ModuleRepository
+  fullName: Intranet.Dal.ModuleRepository.ModuleRepository
+- uid: Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext}
+  commentId: T:Intranet.Common.IDatabaseFactory{Intranet.Dal.IntranetContext}
+  parent: Intranet.Common
+  definition: Intranet.Common.IDatabaseFactory`1
+  name: IDatabaseFactory<IntranetContext>
+  nameWithType: IDatabaseFactory<IntranetContext>
+  fullName: Intranet.Common.IDatabaseFactory<Intranet.Dal.IntranetContext>
+  nameWithType.vb: IDatabaseFactory(Of IntranetContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of Intranet.Dal.IntranetContext)
+  name.vb: IDatabaseFactory(Of IntranetContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Dal.IntranetContext
+    name: IntranetContext
+    nameWithType: IntranetContext
+    fullName: Intranet.Dal.IntranetContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Dal.IntranetContext
+    name: IntranetContext
+    nameWithType: IntranetContext
+    fullName: Intranet.Dal.IntranetContext
+  - name: )
+    nameWithType: )
+    fullName: )

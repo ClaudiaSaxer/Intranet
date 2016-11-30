@@ -1,0 +1,2271 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.NLogLogger
+  commentId: T:Intranet.Common.NLogLogger
+  id: NLogLogger
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.NLogLogger.#ctor(NLog.Logger)
+  - Intranet.Common.NLogLogger.Debug(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Debug(System.String)
+  - Intranet.Common.NLogLogger.DefaultLevel
+  - Intranet.Common.NLogLogger.Error(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Error(System.String)
+  - Intranet.Common.NLogLogger.Fatal(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Fatal(System.String)
+  - Intranet.Common.NLogLogger.Info(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Info(System.String)
+  - Intranet.Common.NLogLogger.IsDebugEnabled
+  - Intranet.Common.NLogLogger.IsErrorEnabled
+  - Intranet.Common.NLogLogger.IsFatalEnabled
+  - Intranet.Common.NLogLogger.IsInfoEnabled
+  - Intranet.Common.NLogLogger.IsWarnEnabled
+  - Intranet.Common.NLogLogger.Log(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Log(System.String)
+  - Intranet.Common.NLogLogger.Log(System.String,Intranet.Common.LogLevel)
+  - Intranet.Common.NLogLogger.Trace(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Trace(System.String)
+  - Intranet.Common.NLogLogger.Warn(System.Func{System.String})
+  - Intranet.Common.NLogLogger.Warn(System.String)
+  langs:
+  - csharp
+  - vb
+  name: NLogLogger
+  nameWithType: NLogLogger
+  fullName: Intranet.Common.NLogLogger
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: NLogLogger
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nA NLog loggerFactory.\n"
+  example: []
+  syntax:
+    content: 'public class NLogLogger : ILogger'
+    content.vb: >-
+      Public Class NLogLogger
+          Implements ILogger
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Common.ILogger
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Common.NLogLogger.#ctor(NLog.Logger)
+  commentId: M:Intranet.Common.NLogLogger.#ctor(NLog.Logger)
+  id: '#ctor(NLog.Logger)'
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: NLogLogger(Logger)
+  nameWithType: NLogLogger.NLogLogger(Logger)
+  fullName: Intranet.Common.NLogLogger.NLogLogger(NLog.Logger)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInitialize a new <xref href=\"Intranet.Common.NLogLogger\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public NLogLogger(Logger logger)
+    content.vb: Public Sub New(logger As Logger)
+    parameters:
+    - id: logger
+      type: NLog.Logger
+      description: A NLog loggerFactory
+  overload: Intranet.Common.NLogLogger.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.DefaultLevel
+  commentId: P:Intranet.Common.NLogLogger.DefaultLevel
+  id: DefaultLevel
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: DefaultLevel
+  nameWithType: NLogLogger.DefaultLevel
+  fullName: Intranet.Common.NLogLogger.DefaultLevel
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DefaultLevel
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets or sets the default log level\n"
+  example: []
+  syntax:
+    content: public LogLevel DefaultLevel { get; set; }
+    content.vb: Public Property DefaultLevel As LogLevel
+    parameters: []
+    return:
+      type: Intranet.Common.LogLevel
+      description: The default log level
+  overload: Intranet.Common.NLogLogger.DefaultLevel*
+  implements:
+  - Intranet.Common.ILogger.DefaultLevel
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.IsDebugEnabled
+  commentId: P:Intranet.Common.NLogLogger.IsDebugEnabled
+  id: IsDebugEnabled
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: IsDebugEnabled
+  nameWithType: NLogLogger.IsDebugEnabled
+  fullName: Intranet.Common.NLogLogger.IsDebugEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsDebugEnabled
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Debug level.\n"
+  example: []
+  syntax:
+    content: public bool IsDebugEnabled { get; }
+    content.vb: Public ReadOnly Property IsDebugEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Debug level, otherwise it returns false.
+  overload: Intranet.Common.NLogLogger.IsDebugEnabled*
+  implements:
+  - Intranet.Common.ILogger.IsDebugEnabled
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Intranet.Common.NLogLogger.IsErrorEnabled
+  commentId: P:Intranet.Common.NLogLogger.IsErrorEnabled
+  id: IsErrorEnabled
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: IsErrorEnabled
+  nameWithType: NLogLogger.IsErrorEnabled
+  fullName: Intranet.Common.NLogLogger.IsErrorEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsErrorEnabled
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Error level.\n"
+  example: []
+  syntax:
+    content: public bool IsErrorEnabled { get; }
+    content.vb: Public ReadOnly Property IsErrorEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Error level, otherwise it returns false.
+  overload: Intranet.Common.NLogLogger.IsErrorEnabled*
+  implements:
+  - Intranet.Common.ILogger.IsErrorEnabled
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Intranet.Common.NLogLogger.IsFatalEnabled
+  commentId: P:Intranet.Common.NLogLogger.IsFatalEnabled
+  id: IsFatalEnabled
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: IsFatalEnabled
+  nameWithType: NLogLogger.IsFatalEnabled
+  fullName: Intranet.Common.NLogLogger.IsFatalEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsFatalEnabled
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Fatal level.\n"
+  example: []
+  syntax:
+    content: public bool IsFatalEnabled { get; }
+    content.vb: Public ReadOnly Property IsFatalEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Fatal level, otherwise it returns false.
+  overload: Intranet.Common.NLogLogger.IsFatalEnabled*
+  implements:
+  - Intranet.Common.ILogger.IsFatalEnabled
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Intranet.Common.NLogLogger.IsInfoEnabled
+  commentId: P:Intranet.Common.NLogLogger.IsInfoEnabled
+  id: IsInfoEnabled
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: IsInfoEnabled
+  nameWithType: NLogLogger.IsInfoEnabled
+  fullName: Intranet.Common.NLogLogger.IsInfoEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsInfoEnabled
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 70
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Info level.\n"
+  example: []
+  syntax:
+    content: public bool IsInfoEnabled { get; }
+    content.vb: Public ReadOnly Property IsInfoEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Info level, otherwise it returns false.
+  overload: Intranet.Common.NLogLogger.IsInfoEnabled*
+  implements:
+  - Intranet.Common.ILogger.IsInfoEnabled
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Intranet.Common.NLogLogger.IsWarnEnabled
+  commentId: P:Intranet.Common.NLogLogger.IsWarnEnabled
+  id: IsWarnEnabled
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: IsWarnEnabled
+  nameWithType: NLogLogger.IsWarnEnabled
+  fullName: Intranet.Common.NLogLogger.IsWarnEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsWarnEnabled
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 79
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Warn level.\n"
+  example: []
+  syntax:
+    content: public bool IsWarnEnabled { get; }
+    content.vb: Public ReadOnly Property IsWarnEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Warn level, otherwise it returns false.
+  overload: Intranet.Common.NLogLogger.IsWarnEnabled*
+  implements:
+  - Intranet.Common.ILogger.IsWarnEnabled
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Intranet.Common.NLogLogger.Log(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Log(System.Func{System.String})
+  id: Log(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(Func<String>)
+  nameWithType: NLogLogger.Log(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Log(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 93
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the default level.\n"
+  example: []
+  syntax:
+    content: public void Log(Func<string> messageFunc)
+    content.vb: Public Sub Log(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Log*
+  implements:
+  - Intranet.Common.ILogger.Log(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Log(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Log(System.Func(Of System.String))
+  name.vb: Log(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Log(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Log(System.String)
+  id: Log(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(String)
+  nameWithType: NLogLogger.Log(String)
+  fullName: Intranet.Common.NLogLogger.Log(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 100
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the default level.\n"
+  example: []
+  syntax:
+    content: public void Log(string message)
+    content.vb: Public Sub Log(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Log*
+  implements:
+  - Intranet.Common.ILogger.Log(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Log(System.String,Intranet.Common.LogLevel)
+  commentId: M:Intranet.Common.NLogLogger.Log(System.String,Intranet.Common.LogLevel)
+  id: Log(System.String,Intranet.Common.LogLevel)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Log(String, LogLevel)
+  nameWithType: NLogLogger.Log(String, LogLevel)
+  fullName: Intranet.Common.NLogLogger.Log(System.String, Intranet.Common.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 108
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the specified level.\n"
+  example: []
+  syntax:
+    content: public void Log(string message, LogLevel level)
+    content.vb: Public Sub Log(message As String, level As LogLevel)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+    - id: level
+      type: Intranet.Common.LogLevel
+      description: The log level.
+  overload: Intranet.Common.NLogLogger.Log*
+  implements:
+  - Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Trace(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Trace(System.Func{System.String})
+  id: Trace(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Trace(Func<String>)
+  nameWithType: NLogLogger.Trace(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Trace(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Trace
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 122
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Trace level.\n"
+  example: []
+  syntax:
+    content: public void Trace(Func<string> messageFunc)
+    content.vb: Public Sub Trace(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Trace*
+  implements:
+  - Intranet.Common.ILogger.Trace(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Trace(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Trace(System.Func(Of System.String))
+  name.vb: Trace(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Trace(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Trace(System.String)
+  id: Trace(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Trace(String)
+  nameWithType: NLogLogger.Trace(String)
+  fullName: Intranet.Common.NLogLogger.Trace(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Trace
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 129
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Trace level.\n"
+  example: []
+  syntax:
+    content: public void Trace(string message)
+    content.vb: Public Sub Trace(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Trace*
+  implements:
+  - Intranet.Common.ILogger.Trace(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Debug(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Debug(System.Func{System.String})
+  id: Debug(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Debug(Func<String>)
+  nameWithType: NLogLogger.Debug(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Debug(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Debug
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 143
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Debug level.\n"
+  example: []
+  syntax:
+    content: public void Debug(Func<string> messageFunc)
+    content.vb: Public Sub Debug(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Debug*
+  implements:
+  - Intranet.Common.ILogger.Debug(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Debug(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Debug(System.Func(Of System.String))
+  name.vb: Debug(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Debug(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Debug(System.String)
+  id: Debug(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Debug(String)
+  nameWithType: NLogLogger.Debug(String)
+  fullName: Intranet.Common.NLogLogger.Debug(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Debug
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 150
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Debug level.\n"
+  example: []
+  syntax:
+    content: public void Debug(string message)
+    content.vb: Public Sub Debug(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Debug*
+  implements:
+  - Intranet.Common.ILogger.Debug(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Info(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Info(System.Func{System.String})
+  id: Info(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Info(Func<String>)
+  nameWithType: NLogLogger.Info(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Info(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Info
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 164
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Info level.\n"
+  example: []
+  syntax:
+    content: public void Info(Func<string> messageFunc)
+    content.vb: Public Sub Info(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Info*
+  implements:
+  - Intranet.Common.ILogger.Info(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Info(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Info(System.Func(Of System.String))
+  name.vb: Info(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Info(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Info(System.String)
+  id: Info(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Info(String)
+  nameWithType: NLogLogger.Info(String)
+  fullName: Intranet.Common.NLogLogger.Info(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Info
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 171
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Info level.\n"
+  example: []
+  syntax:
+    content: public void Info(string message)
+    content.vb: Public Sub Info(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Info*
+  implements:
+  - Intranet.Common.ILogger.Info(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Warn(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Warn(System.Func{System.String})
+  id: Warn(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Warn(Func<String>)
+  nameWithType: NLogLogger.Warn(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Warn(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Warn
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 185
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Warn level.\n"
+  example: []
+  syntax:
+    content: public void Warn(Func<string> messageFunc)
+    content.vb: Public Sub Warn(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Warn*
+  implements:
+  - Intranet.Common.ILogger.Warn(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Warn(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Warn(System.Func(Of System.String))
+  name.vb: Warn(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Warn(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Warn(System.String)
+  id: Warn(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Warn(String)
+  nameWithType: NLogLogger.Warn(String)
+  fullName: Intranet.Common.NLogLogger.Warn(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Warn
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 192
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Warn level.\n"
+  example: []
+  syntax:
+    content: public void Warn(string message)
+    content.vb: Public Sub Warn(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Warn*
+  implements:
+  - Intranet.Common.ILogger.Warn(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Error(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Error(System.Func{System.String})
+  id: Error(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Error(Func<String>)
+  nameWithType: NLogLogger.Error(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Error(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 206
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Error level.\n"
+  example: []
+  syntax:
+    content: public void Error(Func<string> messageFunc)
+    content.vb: Public Sub Error(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Error*
+  implements:
+  - Intranet.Common.ILogger.Error(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Error(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Error(System.Func(Of System.String))
+  name.vb: Error(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Error(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Error(System.String)
+  id: Error(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Error(String)
+  nameWithType: NLogLogger.Error(String)
+  fullName: Intranet.Common.NLogLogger.Error(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 213
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Error level.\n"
+  example: []
+  syntax:
+    content: public void Error(string message)
+    content.vb: Public Sub Error(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Error*
+  implements:
+  - Intranet.Common.ILogger.Error(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLogger.Fatal(System.Func{System.String})
+  commentId: M:Intranet.Common.NLogLogger.Fatal(System.Func{System.String})
+  id: Fatal(System.Func{System.String})
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Fatal(Func<String>)
+  nameWithType: NLogLogger.Fatal(Func<String>)
+  fullName: Intranet.Common.NLogLogger.Fatal(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Fatal
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 227
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Fatal level.\n"
+  example: []
+  syntax:
+    content: public void Fatal(Func<string> messageFunc)
+    content.vb: Public Sub Fatal(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.NLogLogger.Fatal*
+  implements:
+  - Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  nameWithType.vb: NLogLogger.Fatal(Func(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLogger.Fatal(System.Func(Of System.String))
+  name.vb: Fatal(Func(Of String))
+- uid: Intranet.Common.NLogLogger.Fatal(System.String)
+  commentId: M:Intranet.Common.NLogLogger.Fatal(System.String)
+  id: Fatal(System.String)
+  parent: Intranet.Common.NLogLogger
+  langs:
+  - csharp
+  - vb
+  name: Fatal(String)
+  nameWithType: NLogLogger.Fatal(String)
+  fullName: Intranet.Common.NLogLogger.Fatal(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Fatal
+    path: .src/Intranet/Common/Logging/NLogLogger.cs
+    startLine: 234
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Fatal level.\n"
+  example: []
+  syntax:
+    content: public void Fatal(string message)
+    content.vb: Public Sub Fatal(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.NLogLogger.Fatal*
+  implements:
+  - Intranet.Common.ILogger.Fatal(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.NLogLogger
+  commentId: T:Intranet.Common.NLogLogger
+  isExternal: false
+  name: NLogLogger
+  nameWithType: NLogLogger
+  fullName: Intranet.Common.NLogLogger
+- uid: Intranet.Common.NLogLogger.#ctor*
+  commentId: Overload:Intranet.Common.NLogLogger.#ctor
+  isExternal: false
+  name: NLogLogger
+  nameWithType: NLogLogger.NLogLogger
+  fullName: Intranet.Common.NLogLogger.NLogLogger
+- uid: NLog.Logger
+  commentId: T:NLog.Logger
+  parent: NLog
+  isExternal: true
+  name: Logger
+  nameWithType: Logger
+  fullName: NLog.Logger
+- uid: NLog
+  commentId: N:NLog
+  isExternal: false
+  name: NLog
+  nameWithType: NLog
+  fullName: NLog
+- uid: Intranet.Common.NLogLogger.DefaultLevel*
+  commentId: Overload:Intranet.Common.NLogLogger.DefaultLevel
+  isExternal: false
+  name: DefaultLevel
+  nameWithType: NLogLogger.DefaultLevel
+  fullName: Intranet.Common.NLogLogger.DefaultLevel
+- uid: Intranet.Common.ILogger.DefaultLevel
+  commentId: P:Intranet.Common.ILogger.DefaultLevel
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: DefaultLevel
+  nameWithType: ILogger.DefaultLevel
+  fullName: Intranet.Common.ILogger.DefaultLevel
+- uid: Intranet.Common.LogLevel
+  commentId: T:Intranet.Common.LogLevel
+  parent: Intranet.Common
+  isExternal: false
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Intranet.Common.LogLevel
+- uid: Intranet.Common.NLogLogger.IsDebugEnabled*
+  commentId: Overload:Intranet.Common.NLogLogger.IsDebugEnabled
+  isExternal: false
+  name: IsDebugEnabled
+  nameWithType: NLogLogger.IsDebugEnabled
+  fullName: Intranet.Common.NLogLogger.IsDebugEnabled
+- uid: Intranet.Common.ILogger.IsDebugEnabled
+  commentId: P:Intranet.Common.ILogger.IsDebugEnabled
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: IsDebugEnabled
+  nameWithType: ILogger.IsDebugEnabled
+  fullName: Intranet.Common.ILogger.IsDebugEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Intranet.Common.NLogLogger.IsErrorEnabled*
+  commentId: Overload:Intranet.Common.NLogLogger.IsErrorEnabled
+  isExternal: false
+  name: IsErrorEnabled
+  nameWithType: NLogLogger.IsErrorEnabled
+  fullName: Intranet.Common.NLogLogger.IsErrorEnabled
+- uid: Intranet.Common.ILogger.IsErrorEnabled
+  commentId: P:Intranet.Common.ILogger.IsErrorEnabled
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: IsErrorEnabled
+  nameWithType: ILogger.IsErrorEnabled
+  fullName: Intranet.Common.ILogger.IsErrorEnabled
+- uid: Intranet.Common.NLogLogger.IsFatalEnabled*
+  commentId: Overload:Intranet.Common.NLogLogger.IsFatalEnabled
+  isExternal: false
+  name: IsFatalEnabled
+  nameWithType: NLogLogger.IsFatalEnabled
+  fullName: Intranet.Common.NLogLogger.IsFatalEnabled
+- uid: Intranet.Common.ILogger.IsFatalEnabled
+  commentId: P:Intranet.Common.ILogger.IsFatalEnabled
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: IsFatalEnabled
+  nameWithType: ILogger.IsFatalEnabled
+  fullName: Intranet.Common.ILogger.IsFatalEnabled
+- uid: Intranet.Common.NLogLogger.IsInfoEnabled*
+  commentId: Overload:Intranet.Common.NLogLogger.IsInfoEnabled
+  isExternal: false
+  name: IsInfoEnabled
+  nameWithType: NLogLogger.IsInfoEnabled
+  fullName: Intranet.Common.NLogLogger.IsInfoEnabled
+- uid: Intranet.Common.ILogger.IsInfoEnabled
+  commentId: P:Intranet.Common.ILogger.IsInfoEnabled
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: IsInfoEnabled
+  nameWithType: ILogger.IsInfoEnabled
+  fullName: Intranet.Common.ILogger.IsInfoEnabled
+- uid: Intranet.Common.NLogLogger.IsWarnEnabled*
+  commentId: Overload:Intranet.Common.NLogLogger.IsWarnEnabled
+  isExternal: false
+  name: IsWarnEnabled
+  nameWithType: NLogLogger.IsWarnEnabled
+  fullName: Intranet.Common.NLogLogger.IsWarnEnabled
+- uid: Intranet.Common.ILogger.IsWarnEnabled
+  commentId: P:Intranet.Common.ILogger.IsWarnEnabled
+  parent: Intranet.Common.ILogger
+  isExternal: false
+  name: IsWarnEnabled
+  nameWithType: ILogger.IsWarnEnabled
+  fullName: Intranet.Common.ILogger.IsWarnEnabled
+- uid: Intranet.Common.NLogLogger.Log*
+  commentId: Overload:Intranet.Common.NLogLogger.Log
+  isExternal: false
+  name: Log
+  nameWithType: NLogLogger.Log
+  fullName: Intranet.Common.NLogLogger.Log
+- uid: Intranet.Common.ILogger.Log(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Log(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Log(Func<String>)
+  nameWithType: ILogger.Log(Func<String>)
+  fullName: Intranet.Common.ILogger.Log(System.Func<System.String>)
+  nameWithType.vb: ILogger.Log(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Log(System.Func(Of System.String))
+  name.vb: Log(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Log(System.Func{System.String})
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Log(System.Func{System.String})
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{System.String}
+  commentId: T:System.Func{System.String}
+  parent: System
+  definition: System.Func`1
+  name: Func<String>
+  nameWithType: Func<String>
+  fullName: System.Func<System.String>
+  nameWithType.vb: Func(Of String)
+  fullname.vb: System.Func(Of System.String)
+  name.vb: Func(Of String)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullname.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Log(System.String)
+  commentId: M:Intranet.Common.ILogger.Log(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Log(String)
+  nameWithType: ILogger.Log(String)
+  fullName: Intranet.Common.ILogger.Log(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Log(System.String)
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Log(System.String)
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  commentId: M:Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Log(String, LogLevel)
+  nameWithType: ILogger.Log(String, LogLevel)
+  fullName: Intranet.Common.ILogger.Log(System.String, Intranet.Common.LogLevel)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Common.LogLevel
+    name: LogLevel
+    nameWithType: LogLevel
+    fullName: Intranet.Common.LogLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+    name: Log
+    nameWithType: ILogger.Log
+    fullName: Intranet.Common.ILogger.Log
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Common.LogLevel
+    name: LogLevel
+    nameWithType: LogLevel
+    fullName: Intranet.Common.LogLevel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Trace*
+  commentId: Overload:Intranet.Common.NLogLogger.Trace
+  isExternal: false
+  name: Trace
+  nameWithType: NLogLogger.Trace
+  fullName: Intranet.Common.NLogLogger.Trace
+- uid: Intranet.Common.ILogger.Trace(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Trace(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Trace(Func<String>)
+  nameWithType: ILogger.Trace(Func<String>)
+  fullName: Intranet.Common.ILogger.Trace(System.Func<System.String>)
+  nameWithType.vb: ILogger.Trace(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Trace(System.Func(Of System.String))
+  name.vb: Trace(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Trace(System.Func{System.String})
+    name: Trace
+    nameWithType: ILogger.Trace
+    fullName: Intranet.Common.ILogger.Trace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Trace(System.Func{System.String})
+    name: Trace
+    nameWithType: ILogger.Trace
+    fullName: Intranet.Common.ILogger.Trace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Trace(System.String)
+  commentId: M:Intranet.Common.ILogger.Trace(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Trace(String)
+  nameWithType: ILogger.Trace(String)
+  fullName: Intranet.Common.ILogger.Trace(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Trace(System.String)
+    name: Trace
+    nameWithType: ILogger.Trace
+    fullName: Intranet.Common.ILogger.Trace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Trace(System.String)
+    name: Trace
+    nameWithType: ILogger.Trace
+    fullName: Intranet.Common.ILogger.Trace
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Debug*
+  commentId: Overload:Intranet.Common.NLogLogger.Debug
+  isExternal: false
+  name: Debug
+  nameWithType: NLogLogger.Debug
+  fullName: Intranet.Common.NLogLogger.Debug
+- uid: Intranet.Common.ILogger.Debug(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Debug(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Debug(Func<String>)
+  nameWithType: ILogger.Debug(Func<String>)
+  fullName: Intranet.Common.ILogger.Debug(System.Func<System.String>)
+  nameWithType.vb: ILogger.Debug(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Debug(System.Func(Of System.String))
+  name.vb: Debug(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Debug(System.Func{System.String})
+    name: Debug
+    nameWithType: ILogger.Debug
+    fullName: Intranet.Common.ILogger.Debug
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Debug(System.Func{System.String})
+    name: Debug
+    nameWithType: ILogger.Debug
+    fullName: Intranet.Common.ILogger.Debug
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Debug(System.String)
+  commentId: M:Intranet.Common.ILogger.Debug(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Debug(String)
+  nameWithType: ILogger.Debug(String)
+  fullName: Intranet.Common.ILogger.Debug(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Debug(System.String)
+    name: Debug
+    nameWithType: ILogger.Debug
+    fullName: Intranet.Common.ILogger.Debug
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Debug(System.String)
+    name: Debug
+    nameWithType: ILogger.Debug
+    fullName: Intranet.Common.ILogger.Debug
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Info*
+  commentId: Overload:Intranet.Common.NLogLogger.Info
+  isExternal: false
+  name: Info
+  nameWithType: NLogLogger.Info
+  fullName: Intranet.Common.NLogLogger.Info
+- uid: Intranet.Common.ILogger.Info(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Info(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Info(Func<String>)
+  nameWithType: ILogger.Info(Func<String>)
+  fullName: Intranet.Common.ILogger.Info(System.Func<System.String>)
+  nameWithType.vb: ILogger.Info(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Info(System.Func(Of System.String))
+  name.vb: Info(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Info(System.Func{System.String})
+    name: Info
+    nameWithType: ILogger.Info
+    fullName: Intranet.Common.ILogger.Info
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Info(System.Func{System.String})
+    name: Info
+    nameWithType: ILogger.Info
+    fullName: Intranet.Common.ILogger.Info
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Info(System.String)
+  commentId: M:Intranet.Common.ILogger.Info(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Info(String)
+  nameWithType: ILogger.Info(String)
+  fullName: Intranet.Common.ILogger.Info(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Info(System.String)
+    name: Info
+    nameWithType: ILogger.Info
+    fullName: Intranet.Common.ILogger.Info
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Info(System.String)
+    name: Info
+    nameWithType: ILogger.Info
+    fullName: Intranet.Common.ILogger.Info
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Warn*
+  commentId: Overload:Intranet.Common.NLogLogger.Warn
+  isExternal: false
+  name: Warn
+  nameWithType: NLogLogger.Warn
+  fullName: Intranet.Common.NLogLogger.Warn
+- uid: Intranet.Common.ILogger.Warn(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Warn(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Warn(Func<String>)
+  nameWithType: ILogger.Warn(Func<String>)
+  fullName: Intranet.Common.ILogger.Warn(System.Func<System.String>)
+  nameWithType.vb: ILogger.Warn(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Warn(System.Func(Of System.String))
+  name.vb: Warn(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Warn(System.Func{System.String})
+    name: Warn
+    nameWithType: ILogger.Warn
+    fullName: Intranet.Common.ILogger.Warn
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Warn(System.Func{System.String})
+    name: Warn
+    nameWithType: ILogger.Warn
+    fullName: Intranet.Common.ILogger.Warn
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Warn(System.String)
+  commentId: M:Intranet.Common.ILogger.Warn(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Warn(String)
+  nameWithType: ILogger.Warn(String)
+  fullName: Intranet.Common.ILogger.Warn(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Warn(System.String)
+    name: Warn
+    nameWithType: ILogger.Warn
+    fullName: Intranet.Common.ILogger.Warn
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Warn(System.String)
+    name: Warn
+    nameWithType: ILogger.Warn
+    fullName: Intranet.Common.ILogger.Warn
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Error*
+  commentId: Overload:Intranet.Common.NLogLogger.Error
+  isExternal: false
+  name: Error
+  nameWithType: NLogLogger.Error
+  fullName: Intranet.Common.NLogLogger.Error
+- uid: Intranet.Common.ILogger.Error(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Error(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Error(Func<String>)
+  nameWithType: ILogger.Error(Func<String>)
+  fullName: Intranet.Common.ILogger.Error(System.Func<System.String>)
+  nameWithType.vb: ILogger.Error(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Error(System.Func(Of System.String))
+  name.vb: Error(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Error(System.Func{System.String})
+    name: Error
+    nameWithType: ILogger.Error
+    fullName: Intranet.Common.ILogger.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Error(System.Func{System.String})
+    name: Error
+    nameWithType: ILogger.Error
+    fullName: Intranet.Common.ILogger.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Error(System.String)
+  commentId: M:Intranet.Common.ILogger.Error(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Error(String)
+  nameWithType: ILogger.Error(String)
+  fullName: Intranet.Common.ILogger.Error(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Error(System.String)
+    name: Error
+    nameWithType: ILogger.Error
+    fullName: Intranet.Common.ILogger.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Error(System.String)
+    name: Error
+    nameWithType: ILogger.Error
+    fullName: Intranet.Common.ILogger.Error
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.NLogLogger.Fatal*
+  commentId: Overload:Intranet.Common.NLogLogger.Fatal
+  isExternal: false
+  name: Fatal
+  nameWithType: NLogLogger.Fatal
+  fullName: Intranet.Common.NLogLogger.Fatal
+- uid: Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Fatal(Func<String>)
+  nameWithType: ILogger.Fatal(Func<String>)
+  fullName: Intranet.Common.ILogger.Fatal(System.Func<System.String>)
+  nameWithType.vb: ILogger.Fatal(Func(Of String))
+  fullname.vb: Intranet.Common.ILogger.Fatal(System.Func(Of System.String))
+  name.vb: Fatal(Func(Of String))
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Fatal(System.Func{System.String})
+    name: Fatal
+    nameWithType: ILogger.Fatal
+    fullName: Intranet.Common.ILogger.Fatal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Fatal(System.Func{System.String})
+    name: Fatal
+    nameWithType: ILogger.Fatal
+    fullName: Intranet.Common.ILogger.Fatal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILogger.Fatal(System.String)
+  commentId: M:Intranet.Common.ILogger.Fatal(System.String)
+  parent: Intranet.Common.ILogger
+  isExternal: true
+  name: Fatal(String)
+  nameWithType: ILogger.Fatal(String)
+  fullName: Intranet.Common.ILogger.Fatal(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILogger.Fatal(System.String)
+    name: Fatal
+    nameWithType: ILogger.Fatal
+    fullName: Intranet.Common.ILogger.Fatal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILogger.Fatal(System.String)
+    name: Fatal
+    nameWithType: ILogger.Fatal
+    fullName: Intranet.Common.ILogger.Fatal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

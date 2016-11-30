@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.BundleConfig
+  commentId: T:Intranet.Web.BundleConfig
+  id: BundleConfig
+  parent: Intranet.Web
+  children:
+  - Intranet.Web.BundleConfig.RegisterBundles(BundleCollection)
+  langs:
+  - csharp
+  - vb
+  name: BundleConfig
+  nameWithType: BundleConfig
+  fullName: Intranet.Web.BundleConfig
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/BundleConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BundleConfig
+    path: .src/Intranet/Web/App_Start/BundleConfig.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nTHe Confic Bundle\n"
+  example: []
+  syntax:
+    content: 'public class BundleConfig : object'
+    content.vb: >-
+      Public Class BundleConfig
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.BundleConfig.RegisterBundles(BundleCollection)
+  commentId: M:Intranet.Web.BundleConfig.RegisterBundles(BundleCollection)
+  id: RegisterBundles(BundleCollection)
+  parent: Intranet.Web.BundleConfig
+  langs:
+  - csharp
+  - vb
+  name: RegisterBundles(BundleCollection)
+  nameWithType: BundleConfig.RegisterBundles(BundleCollection)
+  fullName: Intranet.Web.BundleConfig.RegisterBundles(BundleCollection)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/BundleConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RegisterBundles
+    path: .src/Intranet/Web/App_Start/BundleConfig.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nRegisters script Bundles\n"
+  example: []
+  syntax:
+    content: public static void RegisterBundles(BundleCollection bundles)
+    content.vb: Public Shared Sub RegisterBundles(bundles As BundleCollection)
+    parameters:
+    - id: bundles
+      type: BundleCollection
+      description: ''
+  overload: Intranet.Web.BundleConfig.RegisterBundles*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  isExternal: false
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.BundleConfig.RegisterBundles*
+  commentId: Overload:Intranet.Web.BundleConfig.RegisterBundles
+  isExternal: false
+  name: RegisterBundles
+  nameWithType: BundleConfig.RegisterBundles
+  fullName: Intranet.Web.BundleConfig.RegisterBundles
+- uid: BundleCollection
+  commentId: '!:BundleCollection'
+  isExternal: true
+  name: BundleCollection
+  nameWithType: BundleCollection
+  fullName: BundleCollection

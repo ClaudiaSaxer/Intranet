@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  id: ILaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition.Bll
+  children:
+  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: ILaborCreatorServiceHelper
+  nameWithType: ILaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborCreatorServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorServiceHelper.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition.Bll
+  summary: "\nInterface representing Labor Creator Service Helper\n"
+  example: []
+  syntax:
+    content: public interface ILaborCreatorServiceHelper
+    content.vb: Public Interface ILaborCreatorServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  id: GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  parent: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateProdCode(String, Int32, Int32, TimeSpan)
+  nameWithType: ILaborCreatorServiceHelper.GenerateProdCode(String, Int32, Int32, TimeSpan)
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String, System.Int32, System.Int32, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GenerateProdCode
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorServiceHelper.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition.Bll
+  summary: "\nGenerates the Production Code for the Diaper\n"
+  example: []
+  syntax:
+    content: string GenerateProdCode(string machine, int year, int dayOfyear, TimeSpan time)
+    content.vb: Function GenerateProdCode(machine As String, year As Integer, dayOfyear As Integer, time As TimeSpan) As String
+    parameters:
+    - id: machine
+      type: System.String
+      description: The machine Nr
+    - id: year
+      type: System.Int32
+      description: the year of the production of the diaper
+    - id: dayOfyear
+      type: System.Int32
+      description: the day of the year of the production of the diaper
+    - id: time
+      type: System.TimeSpan
+      description: the time od the production of the diaper
+    return:
+      type: System.String
+      description: A Production code for a single diaper
+  overload: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode*
+references:
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode*
+  commentId: Overload:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+  isExternal: false
+  name: GenerateProdCode
+  nameWithType: ILaborCreatorServiceHelper.GenerateProdCode
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

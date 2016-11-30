@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoRewetService
+  commentId: T:Intranet.Labor.Definition.IInkoRewetService
+  id: IInkoRewetService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  - Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoRewetService
+  nameWithType: IInkoRewetService
+  fullName: Intranet.Labor.Definition.IInkoRewetService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoRewetService
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the InkoRewetService\n"
+  example: []
+  syntax:
+    content: public interface IInkoRewetService
+    content.vb: Public Interface IInkoRewetService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: IInkoRewetService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: TestValue Delete(int testValueId)
+    content.vb: Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Definition.IInkoRewetService.Delete*
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  id: GetInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetInkoRewetEditViewModel(Int32)
+  nameWithType: IInkoRewetService.GetInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetInkoRewetEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets a new InkoRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: InkoRewetEditViewModel GetInkoRewetEditViewModel(int rewetTestId)
+    content.vb: Function GetInkoRewetEditViewModel(rewetTestId As Integer) As InkoRewetEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Inko rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  id: GetNewInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetNewInkoRewetEditViewModel(Int32)
+  nameWithType: IInkoRewetService.GetNewInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewInkoRewetEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the InkoRewetEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: InkoRewetEditViewModel GetNewInkoRewetEditViewModel(int testSheetId)
+    content.vb: Function GetNewInkoRewetEditViewModel(testSheetId As Integer) As InkoRewetEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Inko rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoRewetEditViewModel)
+  nameWithType: IInkoRewetService.Save(InkoRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetService.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves or updates the InkoRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: TestValue Save(InkoRewetEditViewModel viewModel)
+    content.vb: Function Save(viewModel As InkoRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Definition.IInkoRewetService.Save*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoRewetService.Delete*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: IInkoRewetService.Delete
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel
+  isExternal: false
+  name: GetInkoRewetEditViewModel
+  nameWithType: IInkoRewetService.GetInkoRewetEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRewetEditViewModel
+  nameWithType: InkoRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel
+  isExternal: false
+  name: GetNewInkoRewetEditViewModel
+  nameWithType: IInkoRewetService.GetNewInkoRewetEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRewetService.Save*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetService.Save
+  isExternal: false
+  name: Save
+  nameWithType: IInkoRewetService.Save
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Save

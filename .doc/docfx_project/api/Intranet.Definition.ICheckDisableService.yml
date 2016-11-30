@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition.ICheckDisableService
+  commentId: T:Intranet.Definition.ICheckDisableService
+  id: ICheckDisableService
+  parent: Intranet.Definition
+  children:
+  - Intranet.Definition.ICheckDisableService.IsVisible(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ICheckDisableService
+  nameWithType: ICheckDisableService
+  fullName: Intranet.Definition.ICheckDisableService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Definitions/ICheckDisableService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ICheckDisableService
+    path: .src/Intranet/Definitions/ICheckDisableService.cs
+    startLine: 11
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nInterface representing the service for the checkdisable\n"
+  example: []
+  syntax:
+    content: public interface ICheckDisableService
+    content.vb: Public Interface ICheckDisableService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Definition.ICheckDisableService.IsVisible(System.String)
+  commentId: M:Intranet.Definition.ICheckDisableService.IsVisible(System.String)
+  id: IsVisible(System.String)
+  parent: Intranet.Definition.ICheckDisableService
+  langs:
+  - csharp
+  - vb
+  name: IsVisible(String)
+  nameWithType: ICheckDisableService.IsVisible(String)
+  fullName: Intranet.Definition.ICheckDisableService.IsVisible(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/ICheckDisableService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsVisible
+    path: .src/Intranet/Definitions/ICheckDisableService.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nchecks if the modul is visible in the db.\nIf the modul doesnt exist, it will return false\n"
+  example: []
+  syntax:
+    content: bool IsVisible(string modulName)
+    content.vb: Function IsVisible(modulName As String) As Boolean
+    parameters:
+    - id: modulName
+      type: System.String
+      description: The name of the modul
+    return:
+      type: System.Boolean
+      description: The visible status
+  overload: Intranet.Definition.ICheckDisableService.IsVisible*
+references:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Definition.ICheckDisableService.IsVisible*
+  commentId: Overload:Intranet.Definition.ICheckDisableService.IsVisible
+  isExternal: false
+  name: IsVisible
+  nameWithType: ICheckDisableService.IsVisible
+  fullName: Intranet.Definition.ICheckDisableService.IsVisible
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System

@@ -113,6 +113,8 @@ namespace Intranet.Labor.Bll
                 ProductionCode = TestServiceHelper.CreateProductionCode( testSheet ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
                 ProductionCodeTime = incontinencePadTestValue.IncontinencePadTime,
+                ExpireMonth = incontinencePadTestValue.ExpireMonth,
+                ExpireYear = incontinencePadTestValue.ExpireYear,
                 FPDry = incontinencePadTestValue.RewetFreeDryValue,
                 FPWet = incontinencePadTestValue.RewetFreeWetValue,
                 Notes = testNotes,
@@ -157,6 +159,8 @@ namespace Intranet.Labor.Bll
                 viewModel.TestPerson = oldTestValue.LastEditedPerson;
                 viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
                 viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
+                viewModel.ExpireMonth = oldTestValue.IncontinencePadTestValue.ExpireMonth;
+                viewModel.ExpireYear = oldTestValue.IncontinencePadTestValue.ExpireYear;
             }
 
             return viewModel;

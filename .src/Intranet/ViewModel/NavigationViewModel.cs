@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Intranet.Model;
 
 namespace Intranet.ViewModel
@@ -22,24 +21,6 @@ namespace Intranet.ViewModel
         /// </summary>
         /// <value>the setting modules from the shell</value>
         public IEnumerable<Module> SettingModules { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the path to the module start page
-        /// </summary>
-        /// <value>The path of the module.</value>
-        public String ActionName { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the path to the module start page
-        /// </summary>
-        /// <value>The path of the module.</value>
-        public String ControllerName { get; set; }
-
-        /// <summary>
-        ///     Gets or sets the are to the module
-        /// </summary>
-        /// <value>The are of the module.</value>
-        public String AreaName { get; set; }
 
         #endregion
     }

@@ -1,0 +1,389 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  id: LaborCreatorController
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit(Intranet.Labor.ViewModel.LaborCreatorViewModel)
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home(String)
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index
+  - Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorController
+  nameWithType: LaborCreatorController
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborCreatorController
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing Labor Creator\n"
+  example: []
+  syntax:
+    content: 'public class LaborCreatorController : BaseController'
+    content.vb: >-
+      Public Class LaborCreatorController
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+  id: LaborCreatorService
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorService
+  nameWithType: LaborCreatorController.LaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborCreatorService
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ILaborCreatorService LaborCreatorService { get; set; }
+    content.vb: Public Property LaborCreatorService As ILaborCreatorService
+    parameters: []
+    return:
+      type: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+      description: "\n<xref href=\"Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorController(ILoggerFactory)
+  nameWithType: LaborCreatorController.LaborCreatorController(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.BaseController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborCreatorController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit(Intranet.Labor.ViewModel.LaborCreatorViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit(Intranet.Labor.ViewModel.LaborCreatorViewModel)
+  id: Edit(Intranet.Labor.ViewModel.LaborCreatorViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  langs:
+  - csharp
+  - vb
+  name: Edit(LaborCreatorViewModel)
+  nameWithType: LaborCreatorController.Edit(LaborCreatorViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit(Intranet.Labor.ViewModel.LaborCreatorViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Edit
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 48
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nEdit Creator with given Production order Number\n"
+  example: []
+  syntax:
+    content: public ActionResult Edit(LaborCreatorViewModel vm)
+    content.vb: Public Function Edit(vm As LaborCreatorViewModel) As ActionResult
+    parameters:
+    - id: vm
+      type: Intranet.Labor.ViewModel.LaborCreatorViewModel
+      description: the viewmodel with the chodsen production number
+    return:
+      type: ActionResult
+      description: the action result for edit
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index
+  id: Index
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: LaborCreatorController.Index()
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Index
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 73
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the index page of the LaborCreatorController\n"
+  example: []
+  syntax:
+    content: public ActionResult Index()
+    content.vb: Public Function Index As ActionResult
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home(String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home(String)
+  id: Home(String)
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
+  langs:
+  - csharp
+  - vb
+  name: Home(String)
+  nameWithType: LaborCreatorController.Home(String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home(String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Home
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorController.cs
+    startLine: 82
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the index page of the LaborCreatorController\nwith a user message\n"
+  example: []
+  syntax:
+    content: public ActionResult Home(String message = null)
+    content.vb: Public Function Home(message As String = Nothing) As ActionResult
+    parameters:
+    - id: message
+      type: String
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  parent: Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: ILaborCreatorService
+  nameWithType: ILaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+  isExternal: false
+  name: LaborCreatorService
+  nameWithType: LaborCreatorController.LaborCreatorService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorService
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.#ctor
+  isExternal: false
+  name: LaborCreatorController
+  nameWithType: LaborCreatorController.LaborCreatorController
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.LaborCreatorController
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit
+  isExternal: false
+  name: Edit
+  nameWithType: LaborCreatorController.Edit
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Edit
+- uid: Intranet.Labor.ViewModel.LaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborCreatorViewModel
+  nameWithType: LaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.LaborCreatorViewModel
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index
+  isExternal: false
+  name: Index
+  nameWithType: LaborCreatorController.Index
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Index
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home
+  isExternal: false
+  name: Home
+  nameWithType: LaborCreatorController.Home
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController.Home
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String

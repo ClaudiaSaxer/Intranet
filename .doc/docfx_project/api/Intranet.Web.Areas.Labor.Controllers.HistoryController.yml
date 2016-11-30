@@ -1,0 +1,351 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.HistoryController
+  id: HistoryController
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+  - Intranet.Web.Areas.Labor.Controllers.HistoryController.Index
+  - Intranet.Web.Areas.Labor.Controllers.HistoryController.Search(Intranet.Labor.ViewModel.HistoryViewModel)
+  langs:
+  - csharp
+  - vb
+  name: HistoryController
+  nameWithType: HistoryController
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HistoryController
+    path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing the InkoAquisitionController\n"
+  example: []
+  syntax:
+    content: 'public class HistoryController : BaseController'
+    content.vb: >-
+      Public Class HistoryController
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+  id: HistoryService
+  parent: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  langs:
+  - csharp
+  - vb
+  name: HistoryService
+  nameWithType: HistoryController.HistoryService
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HistoryService
+    path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Labor.Definition.IHistoryService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public IHistoryService HistoryService { get; set; }
+    content.vb: Public Property HistoryService As IHistoryService
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IHistoryService
+      description: "\n<xref href=\"Intranet.Labor.Definition.IHistoryService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  langs:
+  - csharp
+  - vb
+  name: HistoryController(ILoggerFactory)
+  nameWithType: HistoryController.HistoryController(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Areas.Labor.Controllers.HistoryController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public HistoryController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.Index
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.HistoryController.Index
+  id: Index
+  parent: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: HistoryController.Index()
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.Index()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Index
+    path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+    startLine: 54
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets the History Site to search for older TestSheets\n"
+  example: []
+  syntax:
+    content: public ActionResult Index()
+    content.vb: Public Function Index As ActionResult
+    return:
+      type: ActionResult
+      description: history view
+  overload: Intranet.Web.Areas.Labor.Controllers.HistoryController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.Search(Intranet.Labor.ViewModel.HistoryViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.HistoryController.Search(Intranet.Labor.ViewModel.HistoryViewModel)
+  id: Search(Intranet.Labor.ViewModel.HistoryViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  langs:
+  - csharp
+  - vb
+  name: Search(HistoryViewModel)
+  nameWithType: HistoryController.Search(HistoryViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.Search(Intranet.Labor.ViewModel.HistoryViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Search
+    path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
+    startLine: 68
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nSearch for all Testsheets with the FaNr and returns them\n"
+  example: []
+  syntax:
+    content: public ActionResult Search(HistoryViewModel viewModel)
+    content.vb: Public Function Search(viewModel As HistoryViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.HistoryViewModel
+      description: the viewmodel which contains the FaNr
+    return:
+      type: ActionResult
+      description: View Listed with a history list
+  overload: Intranet.Web.Areas.Labor.Controllers.HistoryController.Search*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.IHistoryService
+  commentId: T:Intranet.Labor.Definition.IHistoryService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IHistoryService
+  nameWithType: IHistoryService
+  fullName: Intranet.Labor.Definition.IHistoryService
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+  isExternal: false
+  name: HistoryService
+  nameWithType: HistoryController.HistoryService
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryService
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.HistoryController
+  isExternal: false
+  name: HistoryController
+  nameWithType: HistoryController
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.HistoryController.#ctor
+  isExternal: false
+  name: HistoryController
+  nameWithType: HistoryController.HistoryController
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.HistoryController
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.Index*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.HistoryController.Index
+  isExternal: false
+  name: Index
+  nameWithType: HistoryController.Index
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.Index
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Web.Areas.Labor.Controllers.HistoryController.Search*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.HistoryController.Search
+  isExternal: false
+  name: Search
+  nameWithType: HistoryController.Search
+  fullName: Intranet.Web.Areas.Labor.Controllers.HistoryController.Search
+- uid: Intranet.Labor.ViewModel.HistoryViewModel
+  commentId: T:Intranet.Labor.ViewModel.HistoryViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: HistoryViewModel
+  nameWithType: HistoryViewModel
+  fullName: Intranet.Labor.ViewModel.HistoryViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

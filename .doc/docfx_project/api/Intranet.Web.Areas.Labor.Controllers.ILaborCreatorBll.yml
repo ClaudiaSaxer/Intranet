@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  id: ILaborCreatorBll
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr(System.String)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr(System.String)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets
+  langs:
+  - csharp
+  - vb
+  name: ILaborCreatorBll
+  nameWithType: ILaborCreatorBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborCreatorBll
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInteraface representing Labor Creator Bll\n"
+  example: []
+  syntax:
+    content: public interface ILaborCreatorBll
+    content.vb: Public Interface ILaborCreatorBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets
+  id: RunningTestSheets
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: RunningTestSheets()
+  nameWithType: ILaborCreatorBll.RunningTestSheets()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RunningTestSheets
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nThe Production Orders which are running at the moment\n"
+  example: []
+  syntax:
+    content: ICollection<TestSheet> RunningTestSheets()
+    content.vb: Function RunningTestSheets As ICollection(Of TestSheet)
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+      description: the running production orders
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr(System.String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr(System.String)
+  id: GetTestSheetForFaNr(System.String)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForFaNr(String)
+  nameWithType: ILaborCreatorBll.GetTestSheetForFaNr(String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForFaNr
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nThe current existing testsheet for given fanr or null if not existing\n"
+  example: []
+  syntax:
+    content: TestSheet GetTestSheetForFaNr(string faNr)
+    content.vb: Function GetTestSheetForFaNr(faNr As String) As TestSheet
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the production order number
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the current testsheet
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr(System.String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr(System.String)
+  id: InitTestSheetForFaNr(System.String)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: InitTestSheetForFaNr(String)
+  nameWithType: ILaborCreatorBll.InitTestSheetForFaNr(String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InitTestSheetForFaNr
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborCreatorBll.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitializes a new testsheet for the faNr and the current date\n"
+  example: []
+  syntax:
+    content: TestSheet InitTestSheetForFaNr(string faNr)
+    content.vb: Function InitTestSheetForFaNr(faNr As String) As TestSheet
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the production order number
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the initialized testsheet
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr*
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets
+  isExternal: false
+  name: RunningTestSheets
+  nameWithType: ILaborCreatorBll.RunningTestSheets
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.RunningTestSheets
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestSheet>
+  nameWithType: ICollection<TestSheet>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: ICollection(Of TestSheet)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: ICollection(Of TestSheet)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr
+  isExternal: false
+  name: GetTestSheetForFaNr
+  nameWithType: ILaborCreatorBll.GetTestSheetForFaNr
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.GetTestSheetForFaNr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr
+  isExternal: false
+  name: InitTestSheetForFaNr
+  nameWithType: ILaborCreatorBll.InitTestSheetForFaNr
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll.InitTestSheetForFaNr

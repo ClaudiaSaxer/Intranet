@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition.IHomeService
+  commentId: T:Intranet.Definition.IHomeService
+  id: IHomeService
+  parent: Intranet.Definition
+  children:
+  - Intranet.Definition.IHomeService.GetHomeViewModel
+  langs:
+  - csharp
+  - vb
+  name: IHomeService
+  nameWithType: IHomeService
+  fullName: Intranet.Definition.IHomeService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/IHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IHomeService
+    path: .src/Intranet/Definitions/Bll/IHomeService.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nThe Interface for the HomeService\n"
+  example: []
+  syntax:
+    content: public interface IHomeService
+    content.vb: Public Interface IHomeService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Definition.IHomeService.GetHomeViewModel
+  commentId: M:Intranet.Definition.IHomeService.GetHomeViewModel
+  id: GetHomeViewModel
+  parent: Intranet.Definition.IHomeService
+  langs:
+  - csharp
+  - vb
+  name: GetHomeViewModel()
+  nameWithType: IHomeService.GetHomeViewModel()
+  fullName: Intranet.Definition.IHomeService.GetHomeViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/IHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetHomeViewModel
+    path: .src/Intranet/Definitions/Bll/IHomeService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nGets the HomeViewModel\n"
+  example: []
+  syntax:
+    content: HomeViewModel GetHomeViewModel()
+    content.vb: Function GetHomeViewModel As HomeViewModel
+    return:
+      type: Intranet.ViewModel.HomeViewModel
+      description: The HomeViewModel
+  overload: Intranet.Definition.IHomeService.GetHomeViewModel*
+references:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Definition.IHomeService.GetHomeViewModel*
+  commentId: Overload:Intranet.Definition.IHomeService.GetHomeViewModel
+  isExternal: false
+  name: GetHomeViewModel
+  nameWithType: IHomeService.GetHomeViewModel
+  fullName: Intranet.Definition.IHomeService.GetHomeViewModel
+- uid: Intranet.ViewModel.HomeViewModel
+  commentId: T:Intranet.ViewModel.HomeViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: HomeViewModel
+  nameWithType: HomeViewModel
+  fullName: Intranet.ViewModel.HomeViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel

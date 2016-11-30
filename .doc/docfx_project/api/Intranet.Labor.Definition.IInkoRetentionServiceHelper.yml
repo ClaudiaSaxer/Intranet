@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  id: IInkoRetentionServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  - Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  - Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoRetentionServiceHelper
+  nameWithType: IInkoRetentionServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoRetentionServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the incontinence retention service helper\n"
+  example: []
+  syntax:
+    content: public interface IInkoRetentionServiceHelper
+    content.vb: Public Interface IInkoRetentionServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: SaveNewRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewRetentionTest(InkoRetentionEditViewModel)
+  nameWithType: IInkoRetentionServiceHelper.SaveNewRetentionTest(InkoRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewRetentionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewRetentionTest(InkoRetentionEditViewModel viewModel)
+    content.vb: Function SaveNewRetentionTest(viewModel As InkoRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest*
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  id: UpdateRetentionAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRetentionAverageAndStv(Int32)
+  nameWithType: IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRetentionAverageAndStv
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for retention values\n"
+  example: []
+  syntax:
+    content: TestSheet UpdateRetentionAverageAndStv(int testSheetId)
+    content.vb: Function UpdateRetentionAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv*
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: UpdateRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRetentionTest(InkoRetentionEditViewModel)
+  nameWithType: IInkoRetentionServiceHelper.UpdateRetentionTest(InkoRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRetentionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionServiceHelper.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue UpdateRetentionTest(InkoRetentionEditViewModel viewModel)
+    content.vb: Function UpdateRetentionTest(viewModel As InkoRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest
+  isExternal: false
+  name: SaveNewRetentionTest
+  nameWithType: IInkoRetentionServiceHelper.SaveNewRetentionTest
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.SaveNewRetentionTest
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRetentionEditViewModel
+  nameWithType: InkoRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv
+  isExternal: false
+  name: UpdateRetentionAverageAndStv
+  nameWithType: IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionAverageAndStv
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest
+  isExternal: false
+  name: UpdateRetentionTest
+  nameWithType: IInkoRetentionServiceHelper.UpdateRetentionTest
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper.UpdateRetentionTest

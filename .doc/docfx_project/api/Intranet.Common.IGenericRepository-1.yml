@@ -1,0 +1,1468 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  id: IGenericRepository`1
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.IGenericRepository`1.Add(`0)
+  - Intranet.Common.IGenericRepository`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  - Intranet.Common.IGenericRepository`1.Attach(`0)
+  - Intranet.Common.IGenericRepository`1.CountRecords
+  - Intranet.Common.IGenericRepository`1.CountRecordsAsync
+  - Intranet.Common.IGenericRepository`1.Entry``1(``0)
+  - Intranet.Common.IGenericRepository`1.FindAsync(System.Object[])
+  - Intranet.Common.IGenericRepository`1.GetAll
+  - Intranet.Common.IGenericRepository`1.Remove(`0)
+  - Intranet.Common.IGenericRepository`1.SaveChanges
+  - Intranet.Common.IGenericRepository`1.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  - Intranet.Common.IGenericRepository`1.SetModified(`0)
+  - Intranet.Common.IGenericRepository`1.SqlQuery(System.String,System.Object[])
+  - Intranet.Common.IGenericRepository`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  langs:
+  - csharp
+  - vb
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IGenericRepository
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInterface representing a repository.\n"
+  example: []
+  syntax:
+    content: 'public interface IGenericRepository<TEntity> : IDisposable where TEntity : class'
+    content.vb: >-
+      Public Interface IGenericRepository(Of TEntity As Class)
+          Inherits IDisposable
+    typeParameters:
+    - id: TEntity
+      description: The type of the entities in the repository.
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+- uid: Intranet.Common.IGenericRepository`1.Add(`0)
+  commentId: M:Intranet.Common.IGenericRepository`1.Add(`0)
+  id: Add(`0)
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Add(TEntity)
+  nameWithType: IGenericRepository<TEntity>.Add(TEntity)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Add(TEntity)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Add
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAdds the given entity to the repository.\n"
+  example: []
+  syntax:
+    content: TEntity Add(TEntity entity)
+    content.vb: Function Add(entity As TEntity) As TEntity
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: The entity to add.
+    return:
+      type: '{TEntity}'
+      description: Returns the added entity.
+  overload: Intranet.Common.IGenericRepository`1.Add*
+  nameWithType.vb: IGenericRepository(Of TEntity).Add(TEntity)
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).Add(TEntity)
+- uid: Intranet.Common.IGenericRepository`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:Intranet.Common.IGenericRepository`1.AddRange(System.Collections.Generic.IEnumerable{`0})
+  id: AddRange(System.Collections.Generic.IEnumerable{`0})
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: AddRange(IEnumerable<TEntity>)
+  nameWithType: IGenericRepository<TEntity>.AddRange(IEnumerable<TEntity>)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.AddRange(System.Collections.Generic.IEnumerable<TEntity>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AddRange
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAdds the given collection of entities into context underlying the set with\neach entity being put into the Added state such that it will be inserted\ninto the database when SaveChangesAsync is called.\n"
+  example: []
+  syntax:
+    content: IEnumerable<TEntity> AddRange(IEnumerable<TEntity> entities)
+    content.vb: Function AddRange(entities As IEnumerable(Of TEntity)) As IEnumerable(Of TEntity)
+    parameters:
+    - id: entities
+      type: System.Collections.Generic.IEnumerable{{TEntity}}
+      description: The collection of entities to add.
+    return:
+      type: System.Collections.Generic.IEnumerable{{TEntity}}
+      description: The collection of entities.
+  overload: Intranet.Common.IGenericRepository`1.AddRange*
+  nameWithType.vb: IGenericRepository(Of TEntity).AddRange(IEnumerable(Of TEntity))
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).AddRange(System.Collections.Generic.IEnumerable(Of TEntity))
+  name.vb: AddRange(IEnumerable(Of TEntity))
+- uid: Intranet.Common.IGenericRepository`1.Attach(`0)
+  commentId: M:Intranet.Common.IGenericRepository`1.Attach(`0)
+  id: Attach(`0)
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Attach(TEntity)
+  nameWithType: IGenericRepository<TEntity>.Attach(TEntity)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Attach(TEntity)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Attach
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAttaches the given entity to the current database context.\n"
+  example: []
+  syntax:
+    content: TEntity Attach(TEntity entity)
+    content.vb: Function Attach(entity As TEntity) As TEntity
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: The entity to attach.
+    return:
+      type: '{TEntity}'
+      description: Returns the attached entity.
+  overload: Intranet.Common.IGenericRepository`1.Attach*
+  nameWithType.vb: IGenericRepository(Of TEntity).Attach(TEntity)
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).Attach(TEntity)
+- uid: Intranet.Common.IGenericRepository`1.CountRecords
+  commentId: M:Intranet.Common.IGenericRepository`1.CountRecords
+  id: CountRecords
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: CountRecords()
+  nameWithType: IGenericRepository<TEntity>.CountRecords()
+  fullName: Intranet.Common.IGenericRepository<TEntity>.CountRecords()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CountRecords
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets the number of records of the repositories table.\n"
+  example: []
+  syntax:
+    content: int CountRecords()
+    content.vb: Function CountRecords As Integer
+    return:
+      type: System.Int32
+      description: Returns the number records of the repositories table.
+  overload: Intranet.Common.IGenericRepository`1.CountRecords*
+  nameWithType.vb: IGenericRepository(Of TEntity).CountRecords()
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).CountRecords()
+- uid: Intranet.Common.IGenericRepository`1.CountRecordsAsync
+  commentId: M:Intranet.Common.IGenericRepository`1.CountRecordsAsync
+  id: CountRecordsAsync
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: CountRecordsAsync()
+  nameWithType: IGenericRepository<TEntity>.CountRecordsAsync()
+  fullName: Intranet.Common.IGenericRepository<TEntity>.CountRecordsAsync()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CountRecordsAsync
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 49
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets the number of records of the repositories table asynchronously.\n"
+  example: []
+  syntax:
+    content: Task<int> CountRecordsAsync()
+    content.vb: Function CountRecordsAsync As Task(Of Integer)
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: Returns the number records of the repositories table.
+  overload: Intranet.Common.IGenericRepository`1.CountRecordsAsync*
+  nameWithType.vb: IGenericRepository(Of TEntity).CountRecordsAsync()
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).CountRecordsAsync()
+- uid: Intranet.Common.IGenericRepository`1.Entry``1(``0)
+  commentId: M:Intranet.Common.IGenericRepository`1.Entry``1(``0)
+  id: Entry``1(``0)
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Entry<TAnyEntity>(TAnyEntity)
+  nameWithType: IGenericRepository<TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Entry
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 59
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a <xref href=\"System.Data.Entity.Infrastructure.DbEntityEntry%601\" data-throw-if-not-resolved=\"false\"></xref> Object for\nthe given entity providing access to information about the entity and the\nability to perform actions on the entity.\n"
+  example: []
+  syntax:
+    content: 'DbEntityEntry<TAnyEntity> Entry<TAnyEntity>(TAnyEntity entity)where TAnyEntity : class'
+    content.vb: Function Entry(Of TAnyEntity As Class)(entity As TAnyEntity) As DbEntityEntry(Of TAnyEntity)
+    parameters:
+    - id: entity
+      type: '{TAnyEntity}'
+      description: The entity.
+    typeParameters:
+    - id: TAnyEntity
+      description: The type of the entity.
+    return:
+      type: System.Data.Entity.Infrastructure.DbEntityEntry{{TAnyEntity}}
+      description: Returns an entry for the entity.
+  overload: Intranet.Common.IGenericRepository`1.Entry*
+  nameWithType.vb: IGenericRepository(Of TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)(TAnyEntity)
+- uid: Intranet.Common.IGenericRepository`1.FindAsync(System.Object[])
+  commentId: M:Intranet.Common.IGenericRepository`1.FindAsync(System.Object[])
+  id: FindAsync(System.Object[])
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: FindAsync(Object[])
+  nameWithType: IGenericRepository<TEntity>.FindAsync(Object[])
+  fullName: Intranet.Common.IGenericRepository<TEntity>.FindAsync(System.Object[])
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FindAsync
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 78
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAsynchronously finds an entity with the given primary key values.  If an\nentity with the given primary key values exists in the context, then it is\nreturned immediately without making a request to the store. Otherwise, a\nrequest is made to the store for an entity with the given primary key values\nand this entity, if found, is attached to the context and returned. If no\nentity is found in the context or the store, then null is returned.\n"
+  remarks: "\nThe ordering of composite key values is as defined in the EDM, which is in\nturn as defined in the designer, by the Code First fluent API, or by the\nDataMember attribute.  Multiple active operations on the same context instance\nare not supported. Use 'await' to ensure that any asynchronous operations\nhave completed before calling another method on this context.\n"
+  example: []
+  syntax:
+    content: Task<TEntity> FindAsync(params object[] keyValues)
+    content.vb: Function FindAsync(ParamArray keyValues As Object()) As Task(Of TEntity)
+    parameters:
+    - id: keyValues
+      type: System.Object[]
+      description: The values of the primary key for the entity to be found.
+    return:
+      type: System.Threading.Tasks.Task{{TEntity}}
+      description: A task that represents the asynchronous find operation. The task result contains the entity found, or null.
+  overload: Intranet.Common.IGenericRepository`1.FindAsync*
+  nameWithType.vb: IGenericRepository(Of TEntity).FindAsync(Object())
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).FindAsync(System.Object())
+  name.vb: FindAsync(Object())
+- uid: Intranet.Common.IGenericRepository`1.GetAll
+  commentId: M:Intranet.Common.IGenericRepository`1.GetAll
+  id: GetAll
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: GetAll()
+  nameWithType: IGenericRepository<TEntity>.GetAll()
+  fullName: Intranet.Common.IGenericRepository<TEntity>.GetAll()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetAll
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 84
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets all entities.\n"
+  example: []
+  syntax:
+    content: IQueryable<TEntity> GetAll()
+    content.vb: Function GetAll As IQueryable(Of TEntity)
+    return:
+      type: System.Linq.IQueryable{{TEntity}}
+      description: All entities
+  overload: Intranet.Common.IGenericRepository`1.GetAll*
+  nameWithType.vb: IGenericRepository(Of TEntity).GetAll()
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).GetAll()
+- uid: Intranet.Common.IGenericRepository`1.Remove(`0)
+  commentId: M:Intranet.Common.IGenericRepository`1.Remove(`0)
+  id: Remove(`0)
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(TEntity)
+  nameWithType: IGenericRepository<TEntity>.Remove(TEntity)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Remove(TEntity)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Remove
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 91
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nRemoves the given entity from the repository.\n"
+  example: []
+  syntax:
+    content: TEntity Remove(TEntity entity)
+    content.vb: Function Remove(entity As TEntity) As TEntity
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: The entity to remove.
+    return:
+      type: '{TEntity}'
+      description: Returns the removed entity.
+  overload: Intranet.Common.IGenericRepository`1.Remove*
+  nameWithType.vb: IGenericRepository(Of TEntity).Remove(TEntity)
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).Remove(TEntity)
+- uid: Intranet.Common.IGenericRepository`1.SaveChanges
+  commentId: M:Intranet.Common.IGenericRepository`1.SaveChanges
+  id: SaveChanges
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: SaveChanges()
+  nameWithType: IGenericRepository<TEntity>.SaveChanges()
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SaveChanges()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveChanges
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 97
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nSaves all changes made in this context to the underlying database.\n"
+  example: []
+  syntax:
+    content: int SaveChanges()
+    content.vb: Function SaveChanges As Integer
+    return:
+      type: System.Int32
+      description: Returns the number of Objects written to the underlying database.
+  overload: Intranet.Common.IGenericRepository`1.SaveChanges*
+  nameWithType.vb: IGenericRepository(Of TEntity).SaveChanges()
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).SaveChanges()
+- uid: Intranet.Common.IGenericRepository`1.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.IGenericRepository`1.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  id: SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: SaveChangesAsync(Nullable<CancellationToken>)
+  nameWithType: IGenericRepository<TEntity>.SaveChangesAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SaveChangesAsync(System.Nullable<System.Threading.CancellationToken>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveChangesAsync
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAsynchronously saves all changes made in this context to the underlying database.\n"
+  example: []
+  syntax:
+    content: Task<int> SaveChangesAsync(CancellationToken? cancellationToken = null)
+    content.vb: Function SaveChangesAsync(cancellationToken As CancellationToken? = Nothing) As Task(Of Integer)
+    parameters:
+    - id: cancellationToken
+      type: System.Nullable{System.Threading.CancellationToken}
+      description: A <xref href="System.Threading.CancellationToken" data-throw-if-not-resolved="false"></xref> to observe while waiting for the task to complete.
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+      description: "\nA task that represents the asynchronous save operation.\nThe task result contains the number of Objects written to the underlying database.\n"
+  overload: Intranet.Common.IGenericRepository`1.SaveChangesAsync*
+  nameWithType.vb: IGenericRepository(Of TEntity).SaveChangesAsync(Nullable(Of CancellationToken))
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).SaveChangesAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: SaveChangesAsync(Nullable(Of CancellationToken))
+- uid: Intranet.Common.IGenericRepository`1.SetModified(`0)
+  commentId: M:Intranet.Common.IGenericRepository`1.SetModified(`0)
+  id: SetModified(`0)
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: SetModified(TEntity)
+  nameWithType: IGenericRepository<TEntity>.SetModified(TEntity)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SetModified(TEntity)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SetModified
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 113
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nSets the state of the given entity to modified.\n"
+  example: []
+  syntax:
+    content: void SetModified(TEntity entity)
+    content.vb: Sub SetModified(entity As TEntity)
+    parameters:
+    - id: entity
+      type: '{TEntity}'
+      description: The entity to mark as modified.
+  overload: Intranet.Common.IGenericRepository`1.SetModified*
+  nameWithType.vb: IGenericRepository(Of TEntity).SetModified(TEntity)
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).SetModified(TEntity)
+- uid: Intranet.Common.IGenericRepository`1.SqlQuery(System.String,System.Object[])
+  commentId: M:Intranet.Common.IGenericRepository`1.SqlQuery(System.String,System.Object[])
+  id: SqlQuery(System.String,System.Object[])
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: SqlQuery(String, Object[])
+  nameWithType: IGenericRepository<TEntity>.SqlQuery(String, Object[])
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SqlQuery(System.String, System.Object[])
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SqlQuery
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 145
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCreates a raw SQL query that will return entities in this set. By default,\nthe entities returned are tracked by the context; this can be changed by\ncalling AsNoTracking on the <xref href=\"System.Data.Entity.Infrastructure.DbSqlQuery%601\" data-throw-if-not-resolved=\"false\"></xref>\nreturned.  Note that the entities returned are always of the type for this\nset and never of a derived type. If the table or tables queried may contain\ndata for other entity types, then the SQL query must be written appropriately\nto ensure that only entities of the correct type are returned.  As with any\nAPI that accepts SQL it is important to parameterize any user input to protect\nagainst a SQL injection attack. You can include parameter place holders in\nthe SQL query String and then supply parameter values as additional arguments.\nAny parameter values you supply will automatically be converted to a DbParameter.\ncontext.Blogs.SqlQuery(\"SELECT * FROM dbo.Posts WHERE Author = @p0\", userSuppliedAuthor);\nAlternatively, you can also construct a DbParameter and supply it to SqlQuery.\nThis allows you to use named parameters in the SQL query string .\ncontext.Blogs.SqlQuery(\"SELECT * FROM dbo.Posts WHERE Author = @author\", new SqlParameter(\"@author\",\nuserSuppliedAuthor));\n"
+  example: []
+  syntax:
+    content: DbSqlQuery<TEntity> SqlQuery(string sql, params object[] parameters)
+    content.vb: Function SqlQuery(sql As String, ParamArray parameters As Object()) As DbSqlQuery(Of TEntity)
+    parameters:
+    - id: sql
+      type: System.String
+      description: The SQL query string .
+    - id: parameters
+      type: System.Object[]
+      description: "\nThe parameters to apply to the SQL query string . If output parameters are\nused, their values will not be available until the results have been read\ncompletely. This is due to the underlying behavior of DbDataReader, see\nhttp://go.microsoft.com/fwlink/?LinkID=398589\nfor more details.\n"
+    return:
+      type: System.Data.Entity.Infrastructure.DbSqlQuery{{TEntity}}
+      description: "\nA <xref href=\"System.Data.Entity.Infrastructure.DbSqlQuery%601\" data-throw-if-not-resolved=\"false\"></xref> Object that will execute the query when\nit is enumerated.\n"
+  overload: Intranet.Common.IGenericRepository`1.SqlQuery*
+  nameWithType.vb: IGenericRepository(Of TEntity).SqlQuery(String, Object())
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).SqlQuery(System.String, System.Object())
+  name.vb: SqlQuery(String, Object())
+- uid: Intranet.Common.IGenericRepository`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  commentId: M:Intranet.Common.IGenericRepository`1.Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  id: Where(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})
+  parent: Intranet.Common.IGenericRepository`1
+  langs:
+  - csharp
+  - vb
+  name: Where(Expression<Func<TEntity, Boolean>>)
+  nameWithType: IGenericRepository<TEntity>.Where(Expression<Func<TEntity, Boolean>>)
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Where(System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Where
+    path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
+    startLine: 152
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets the entities matching the given predicate.\n"
+  example: []
+  syntax:
+    content: IQueryable<TEntity> Where(Expression<Func<TEntity, bool>> predicate)
+    content.vb: Function Where(predicate As Expression(Of Func(Of TEntity, Boolean))) As IQueryable(Of TEntity)
+    parameters:
+    - id: predicate
+      type: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+      description: The predicate.
+    return:
+      type: System.Linq.IQueryable{{TEntity}}
+      description: The entities matching the given predicate.
+  overload: Intranet.Common.IGenericRepository`1.Where*
+  nameWithType.vb: IGenericRepository(Of TEntity).Where(Expression(Of Func(Of TEntity, Boolean)))
+  fullName.vb: Intranet.Common.IGenericRepository(Of TEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean)))
+  name.vb: Where(Expression(Of Func(Of TEntity, Boolean)))
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.IGenericRepository`1.Add*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.Add
+  isExternal: false
+  name: Add
+  nameWithType: IGenericRepository<TEntity>.Add
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Add
+  nameWithType.vb: IGenericRepository(Of TEntity).Add
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).Add
+- uid: '{TEntity}'
+  commentId: '!:TEntity'
+  definition: TEntity
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: TEntity
+  isExternal: false
+  name: TEntity
+  nameWithType: TEntity
+  fullName: TEntity
+- uid: Intranet.Common.IGenericRepository`1.AddRange*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.AddRange
+  isExternal: false
+  name: AddRange
+  nameWithType: IGenericRepository<TEntity>.AddRange
+  fullName: Intranet.Common.IGenericRepository<TEntity>.AddRange
+  nameWithType.vb: IGenericRepository(Of TEntity).AddRange
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).AddRange
+- uid: System.Collections.Generic.IEnumerable{{TEntity}}
+  commentId: T:System.Collections.Generic.IEnumerable{`1}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TEntity>
+  nameWithType: IEnumerable<TEntity>
+  fullName: System.Collections.Generic.IEnumerable<TEntity>
+  nameWithType.vb: IEnumerable(Of TEntity)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of TEntity)
+  name.vb: IEnumerable(Of TEntity)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Common.IGenericRepository`1.Attach*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.Attach
+  isExternal: false
+  name: Attach
+  nameWithType: IGenericRepository<TEntity>.Attach
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Attach
+  nameWithType.vb: IGenericRepository(Of TEntity).Attach
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).Attach
+- uid: Intranet.Common.IGenericRepository`1.CountRecords*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.CountRecords
+  isExternal: false
+  name: CountRecords
+  nameWithType: IGenericRepository<TEntity>.CountRecords
+  fullName: Intranet.Common.IGenericRepository<TEntity>.CountRecords
+  nameWithType.vb: IGenericRepository(Of TEntity).CountRecords
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).CountRecords
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Common.IGenericRepository`1.CountRecordsAsync*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.CountRecordsAsync
+  isExternal: false
+  name: CountRecordsAsync
+  nameWithType: IGenericRepository<TEntity>.CountRecordsAsync
+  fullName: Intranet.Common.IGenericRepository<TEntity>.CountRecordsAsync
+  nameWithType.vb: IGenericRepository(Of TEntity).CountRecordsAsync
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).CountRecordsAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Int32>
+  nameWithType: Task<Int32>
+  fullName: System.Threading.Tasks.Task<System.Int32>
+  nameWithType.vb: Task(Of Int32)
+  fullname.vb: System.Threading.Tasks.Task(Of System.Int32)
+  name.vb: Task(Of Int32)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Data.Entity.Infrastructure.DbEntityEntry`1
+  commentId: T:System.Data.Entity.Infrastructure.DbEntityEntry`1
+  isExternal: true
+  name: DbEntityEntry<TEntity>
+  nameWithType: DbEntityEntry<TEntity>
+  fullName: System.Data.Entity.Infrastructure.DbEntityEntry<TEntity>
+  nameWithType.vb: DbEntityEntry(Of TEntity)
+  fullname.vb: System.Data.Entity.Infrastructure.DbEntityEntry(Of TEntity)
+  name.vb: DbEntityEntry(Of TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry`1
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry`1
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1.Entry*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.Entry
+  isExternal: false
+  name: Entry<TAnyEntity>
+  nameWithType: IGenericRepository<TEntity>.Entry<TAnyEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Entry<TAnyEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity).Entry(Of TAnyEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).Entry(Of TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)
+- uid: '{TAnyEntity}'
+  commentId: '!:TAnyEntity'
+  definition: TAnyEntity
+  name: TAnyEntity
+  nameWithType: TAnyEntity
+  fullName: TAnyEntity
+- uid: System.Data.Entity.Infrastructure.DbEntityEntry{{TAnyEntity}}
+  commentId: T:System.Data.Entity.Infrastructure.DbEntityEntry{``0}
+  parent: System.Data.Entity.Infrastructure
+  definition: System.Data.Entity.Infrastructure.DbEntityEntry`1
+  name: DbEntityEntry<TAnyEntity>
+  nameWithType: DbEntityEntry<TAnyEntity>
+  fullName: System.Data.Entity.Infrastructure.DbEntityEntry<TAnyEntity>
+  nameWithType.vb: DbEntityEntry(Of TAnyEntity)
+  fullname.vb: System.Data.Entity.Infrastructure.DbEntityEntry(Of TAnyEntity)
+  name.vb: DbEntityEntry(Of TAnyEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry`1
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry`1
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TAnyEntity
+  isExternal: false
+  name: TAnyEntity
+  nameWithType: TAnyEntity
+  fullName: TAnyEntity
+- uid: System.Data.Entity.Infrastructure
+  commentId: N:System.Data.Entity.Infrastructure
+  isExternal: false
+  name: System.Data.Entity.Infrastructure
+  nameWithType: System.Data.Entity.Infrastructure
+  fullName: System.Data.Entity.Infrastructure
+- uid: Intranet.Common.IGenericRepository`1.FindAsync*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.FindAsync
+  isExternal: false
+  name: FindAsync
+  nameWithType: IGenericRepository<TEntity>.FindAsync
+  fullName: Intranet.Common.IGenericRepository<TEntity>.FindAsync
+  nameWithType.vb: IGenericRepository(Of TEntity).FindAsync
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).FindAsync
+- uid: System.Object[]
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullname.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Threading.Tasks.Task{{TEntity}}
+  commentId: T:System.Threading.Tasks.Task{`1}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TEntity>
+  nameWithType: Task<TEntity>
+  fullName: System.Threading.Tasks.Task<TEntity>
+  nameWithType.vb: Task(Of TEntity)
+  fullname.vb: System.Threading.Tasks.Task(Of TEntity)
+  name.vb: Task(Of TEntity)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1.GetAll*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.GetAll
+  isExternal: false
+  name: GetAll
+  nameWithType: IGenericRepository<TEntity>.GetAll
+  fullName: Intranet.Common.IGenericRepository<TEntity>.GetAll
+  nameWithType.vb: IGenericRepository(Of TEntity).GetAll
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).GetAll
+- uid: System.Linq.IQueryable{{TEntity}}
+  commentId: T:System.Linq.IQueryable{`1}
+  parent: System.Linq
+  definition: System.Linq.IQueryable`1
+  name: IQueryable<TEntity>
+  nameWithType: IQueryable<TEntity>
+  fullName: System.Linq.IQueryable<TEntity>
+  nameWithType.vb: IQueryable(Of TEntity)
+  fullname.vb: System.Linq.IQueryable(Of TEntity)
+  name.vb: IQueryable(Of TEntity)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.IQueryable`1
+  commentId: T:System.Linq.IQueryable`1
+  isExternal: true
+  name: IQueryable<T>
+  nameWithType: IQueryable<T>
+  fullName: System.Linq.IQueryable<T>
+  nameWithType.vb: IQueryable(Of T)
+  fullname.vb: System.Linq.IQueryable(Of T)
+  name.vb: IQueryable(Of T)
+  spec.csharp:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.IQueryable`1
+    name: IQueryable
+    nameWithType: IQueryable
+    fullName: System.Linq.IQueryable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq
+  commentId: N:System.Linq
+  isExternal: false
+  name: System.Linq
+  nameWithType: System.Linq
+  fullName: System.Linq
+- uid: Intranet.Common.IGenericRepository`1.Remove*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.Remove
+  isExternal: false
+  name: Remove
+  nameWithType: IGenericRepository<TEntity>.Remove
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Remove
+  nameWithType.vb: IGenericRepository(Of TEntity).Remove
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).Remove
+- uid: Intranet.Common.IGenericRepository`1.SaveChanges*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.SaveChanges
+  isExternal: false
+  name: SaveChanges
+  nameWithType: IGenericRepository<TEntity>.SaveChanges
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SaveChanges
+  nameWithType.vb: IGenericRepository(Of TEntity).SaveChanges
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).SaveChanges
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+- uid: Intranet.Common.IGenericRepository`1.SaveChangesAsync*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.SaveChangesAsync
+  isExternal: false
+  name: SaveChangesAsync
+  nameWithType: IGenericRepository<TEntity>.SaveChangesAsync
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SaveChangesAsync
+  nameWithType.vb: IGenericRepository(Of TEntity).SaveChangesAsync
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).SaveChangesAsync
+- uid: System.Nullable{System.Threading.CancellationToken}
+  commentId: T:System.Nullable{System.Threading.CancellationToken}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<CancellationToken>
+  nameWithType: Nullable<CancellationToken>
+  fullName: System.Nullable<System.Threading.CancellationToken>
+  nameWithType.vb: Nullable(Of CancellationToken)
+  fullname.vb: System.Nullable(Of System.Threading.CancellationToken)
+  name.vb: Nullable(Of CancellationToken)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1.SetModified*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.SetModified
+  isExternal: false
+  name: SetModified
+  nameWithType: IGenericRepository<TEntity>.SetModified
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SetModified
+  nameWithType.vb: IGenericRepository(Of TEntity).SetModified
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).SetModified
+- uid: System.Data.Entity.Infrastructure.DbSqlQuery`1
+  commentId: T:System.Data.Entity.Infrastructure.DbSqlQuery`1
+  isExternal: true
+  name: DbSqlQuery<TEntity>
+  nameWithType: DbSqlQuery<TEntity>
+  fullName: System.Data.Entity.Infrastructure.DbSqlQuery<TEntity>
+  nameWithType.vb: DbSqlQuery(Of TEntity)
+  fullname.vb: System.Data.Entity.Infrastructure.DbSqlQuery(Of TEntity)
+  name.vb: DbSqlQuery(Of TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.Infrastructure.DbSqlQuery`1
+    name: DbSqlQuery
+    nameWithType: DbSqlQuery
+    fullName: System.Data.Entity.Infrastructure.DbSqlQuery
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.Infrastructure.DbSqlQuery`1
+    name: DbSqlQuery
+    nameWithType: DbSqlQuery
+    fullName: System.Data.Entity.Infrastructure.DbSqlQuery
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1.SqlQuery*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.SqlQuery
+  isExternal: false
+  name: SqlQuery
+  nameWithType: IGenericRepository<TEntity>.SqlQuery
+  fullName: Intranet.Common.IGenericRepository<TEntity>.SqlQuery
+  nameWithType.vb: IGenericRepository(Of TEntity).SqlQuery
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).SqlQuery
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Data.Entity.Infrastructure.DbSqlQuery{{TEntity}}
+  commentId: T:System.Data.Entity.Infrastructure.DbSqlQuery{`1}
+  parent: System.Data.Entity.Infrastructure
+  definition: System.Data.Entity.Infrastructure.DbSqlQuery`1
+  name: DbSqlQuery<TEntity>
+  nameWithType: DbSqlQuery<TEntity>
+  fullName: System.Data.Entity.Infrastructure.DbSqlQuery<TEntity>
+  nameWithType.vb: DbSqlQuery(Of TEntity)
+  fullname.vb: System.Data.Entity.Infrastructure.DbSqlQuery(Of TEntity)
+  name.vb: DbSqlQuery(Of TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.Infrastructure.DbSqlQuery`1
+    name: DbSqlQuery
+    nameWithType: DbSqlQuery
+    fullName: System.Data.Entity.Infrastructure.DbSqlQuery
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.Infrastructure.DbSqlQuery`1
+    name: DbSqlQuery
+    nameWithType: DbSqlQuery
+    fullName: System.Data.Entity.Infrastructure.DbSqlQuery
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1.Where*
+  commentId: Overload:Intranet.Common.IGenericRepository`1.Where
+  isExternal: false
+  name: Where
+  nameWithType: IGenericRepository<TEntity>.Where
+  fullName: Intranet.Common.IGenericRepository<TEntity>.Where
+  nameWithType.vb: IGenericRepository(Of TEntity).Where
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity).Where
+- uid: System.Linq.Expressions.Expression{System.Func{{TEntity},System.Boolean}}
+  commentId: T:System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}}
+  parent: System.Linq.Expressions
+  definition: System.Linq.Expressions.Expression`1
+  name: Expression<Func<TEntity, Boolean>>
+  nameWithType: Expression<Func<TEntity, Boolean>>
+  fullName: System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>
+  nameWithType.vb: Expression(Of Func(Of TEntity, Boolean))
+  fullname.vb: System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean))
+  name.vb: Expression(Of Func(Of TEntity, Boolean))
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions.Expression`1
+  commentId: T:System.Linq.Expressions.Expression`1
+  isExternal: true
+  name: Expression<TDelegate>
+  nameWithType: Expression<TDelegate>
+  fullName: System.Linq.Expressions.Expression<TDelegate>
+  nameWithType.vb: Expression(Of TDelegate)
+  fullname.vb: System.Linq.Expressions.Expression(Of TDelegate)
+  name.vb: Expression(Of TDelegate)
+  spec.csharp:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TDelegate
+    nameWithType: TDelegate
+    fullName: TDelegate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Linq.Expressions
+  commentId: N:System.Linq.Expressions
+  isExternal: false
+  name: System.Linq.Expressions
+  nameWithType: System.Linq.Expressions
+  fullName: System.Linq.Expressions

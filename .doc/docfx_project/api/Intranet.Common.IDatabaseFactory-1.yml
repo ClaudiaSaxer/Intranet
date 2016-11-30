@@ -1,0 +1,149 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  id: IDatabaseFactory`1
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.IDatabaseFactory`1.GetDb
+  langs:
+  - csharp
+  - vb
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IDatabaseFactory
+    path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInterface representing a class creating database contexts.\n"
+  example: []
+  syntax:
+    content: 'public interface IDatabaseFactory<out TContext> : IDisposable where TContext : DbContext, new ()'
+    content.vb: >-
+      Public Interface IDatabaseFactory(Of Out TContext As {DbContext, New})
+          Inherits IDisposable
+    typeParameters:
+    - id: TContext
+  inheritedMembers:
+  - System.IDisposable.Dispose
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+- uid: Intranet.Common.IDatabaseFactory`1.GetDb
+  commentId: M:Intranet.Common.IDatabaseFactory`1.GetDb
+  id: GetDb
+  parent: Intranet.Common.IDatabaseFactory`1
+  langs:
+  - csharp
+  - vb
+  name: GetDb()
+  nameWithType: IDatabaseFactory<TContext>.GetDb()
+  fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetDb
+    path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a database context.\n"
+  example: []
+  syntax:
+    content: TContext GetDb()
+    content.vb: Function GetDb As TContext
+    return:
+      type: '{TContext}'
+      description: Returns a database context.
+  overload: Intranet.Common.IDatabaseFactory`1.GetDb*
+  nameWithType.vb: IDatabaseFactory(Of TContext).GetDb()
+  fullName.vb: Intranet.Common.IDatabaseFactory(Of TContext).GetDb()
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.IDatabaseFactory`1.GetDb*
+  commentId: Overload:Intranet.Common.IDatabaseFactory`1.GetDb
+  isExternal: false
+  name: GetDb
+  nameWithType: IDatabaseFactory<TContext>.GetDb
+  fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb
+  nameWithType.vb: IDatabaseFactory(Of TContext).GetDb
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext).GetDb
+- uid: '{TContext}'
+  commentId: '!:TContext'
+  definition: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: TContext
+  isExternal: false
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext

@@ -1,0 +1,208 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.IoC.DefaultModule
+  commentId: T:Intranet.Web.IoC.DefaultModule
+  id: DefaultModule
+  parent: Intranet.Web.IoC
+  children:
+  - Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+  - Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+  - Intranet.Web.IoC.DefaultModule.Load(ContainerBuilder)
+  langs:
+  - csharp
+  - vb
+  name: DefaultModule
+  nameWithType: DefaultModule
+  fullName: Intranet.Web.IoC.DefaultModule
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/DefaultModule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DefaultModule
+    path: .src/Intranet/Web/IoC/DefaultModule.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nDefault composition module.\n"
+  example: []
+  syntax:
+    content: 'public class DefaultModule : Module'
+    content.vb: >-
+      Public Class DefaultModule
+          Inherits
+
+           Module
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+  commentId: P:Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+  id: ApplicationAssemblyName
+  parent: Intranet.Web.IoC.DefaultModule
+  langs:
+  - csharp
+  - vb
+  name: ApplicationAssemblyName
+  nameWithType: DefaultModule.ApplicationAssemblyName
+  fullName: Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/DefaultModule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ApplicationAssemblyName
+    path: .src/Intranet/Web/IoC/DefaultModule.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nGets or sets the name of the executing application assembly.\n"
+  example: []
+  syntax:
+    content: public String ApplicationAssemblyName { get; set; }
+    content.vb: Public Property ApplicationAssemblyName As String
+    parameters: []
+    return:
+      type: String
+      description: The name of the executing application assembly.
+  overload: Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+  commentId: P:Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+  id: DefaultExceptionLogLevel
+  parent: Intranet.Web.IoC.DefaultModule
+  langs:
+  - csharp
+  - vb
+  name: DefaultExceptionLogLevel
+  nameWithType: DefaultModule.DefaultExceptionLogLevel
+  fullName: Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/DefaultModule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DefaultExceptionLogLevel
+    path: .src/Intranet/Web/IoC/DefaultModule.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nGets or sets the default log level for exceptions.\n"
+  example: []
+  syntax:
+    content: public String DefaultExceptionLogLevel { get; set; }
+    content.vb: Public Property DefaultExceptionLogLevel As String
+    parameters: []
+    return:
+      type: String
+      description: The default log level for exceptions.
+  overload: Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.IoC.DefaultModule.Load(ContainerBuilder)
+  commentId: M:Intranet.Web.IoC.DefaultModule.Load(ContainerBuilder)
+  id: Load(ContainerBuilder)
+  parent: Intranet.Web.IoC.DefaultModule
+  langs:
+  - csharp
+  - vb
+  name: Load(ContainerBuilder)
+  nameWithType: DefaultModule.Load(ContainerBuilder)
+  fullName: Intranet.Web.IoC.DefaultModule.Load(ContainerBuilder)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/DefaultModule.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Load
+    path: .src/Intranet/Web/IoC/DefaultModule.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nAdds registrations to the container.\n"
+  example: []
+  syntax:
+    content: protected override void Load(ContainerBuilder builder)
+    content.vb: Protected Overrides Sub Load(builder As ContainerBuilder)
+    parameters:
+    - id: builder
+      type: ContainerBuilder
+      description: The builder through which components can be registered.
+  overload: Intranet.Web.IoC.DefaultModule.Load*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Intranet.Web.IoC
+  commentId: N:Intranet.Web.IoC
+  isExternal: false
+  name: Intranet.Web.IoC
+  nameWithType: Intranet.Web.IoC
+  fullName: Intranet.Web.IoC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName*
+  commentId: Overload:Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+  isExternal: false
+  name: ApplicationAssemblyName
+  nameWithType: DefaultModule.ApplicationAssemblyName
+  fullName: Intranet.Web.IoC.DefaultModule.ApplicationAssemblyName
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel*
+  commentId: Overload:Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+  isExternal: false
+  name: DefaultExceptionLogLevel
+  nameWithType: DefaultModule.DefaultExceptionLogLevel
+  fullName: Intranet.Web.IoC.DefaultModule.DefaultExceptionLogLevel
+- uid: Intranet.Web.IoC.DefaultModule.Load*
+  commentId: Overload:Intranet.Web.IoC.DefaultModule.Load
+  isExternal: false
+  name: Load
+  nameWithType: DefaultModule.Load
+  fullName: Intranet.Web.IoC.DefaultModule.Load
+- uid: ContainerBuilder
+  commentId: '!:ContainerBuilder'
+  isExternal: true
+  name: ContainerBuilder
+  nameWithType: ContainerBuilder
+  fullName: ContainerBuilder

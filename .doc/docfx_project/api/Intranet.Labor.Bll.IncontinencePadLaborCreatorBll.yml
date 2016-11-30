@@ -1,0 +1,596 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll
+  commentId: T:Intranet.Labor.Bll.IncontinencePadLaborCreatorBll
+  id: IncontinencePadLaborCreatorBll
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  - Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadLaborCreatorBll
+  nameWithType: IncontinencePadLaborCreatorBll
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadLaborCreatorBll
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing Labro creator bll\n"
+  example: []
+  syntax:
+    content: 'public class IncontinencePadLaborCreatorBll : IIncontinencePadLaborCreatorBll'
+    content.vb: >-
+      Public Class IncontinencePadLaborCreatorBll
+          Implements IIncontinencePadLaborCreatorBll
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+  commentId: P:Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+  id: TestSheets
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: TestSheets
+  nameWithType: IncontinencePadLaborCreatorBll.TestSheets
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheets
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nRepository fpr TestSheets\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<TestSheet> TestSheets { get; set; }
+    content.vb: Public Property TestSheets As IGenericRepository(Of TestSheet)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  commentId: M:Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  id: GetTestSheetForId(System.Int32)
+  parent: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForId(Int32)
+  nameWithType: IncontinencePadLaborCreatorBll.GetTestSheetForId(Int32)
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForId
+    path: .src/Intranet/Labor/Bll/IncontinencePadLaborCreatorBll.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets the testsheet for the given id from the database\n"
+  example: []
+  syntax:
+    content: public TestSheet GetTestSheetForId(int id)
+    content.vb: Public Function GetTestSheetForId(id As Integer) As TestSheet
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the unique identifier for the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: a testsheet with the given data, or null if not found
+  overload: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId*
+  implements:
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IIncontinencePadLaborCreatorBll
+  nameWithType: IIncontinencePadLaborCreatorBll
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+  isExternal: false
+  name: TestSheets
+  nameWithType: IncontinencePadLaborCreatorBll.TestSheets
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.TestSheets
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<TestSheet>
+  nameWithType: IGenericRepository<TestSheet>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: IGenericRepository(Of TestSheet)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: IGenericRepository(Of TestSheet)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId*
+  commentId: Overload:Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId
+  isExternal: false
+  name: GetTestSheetForId
+  nameWithType: IncontinencePadLaborCreatorBll.GetTestSheetForId
+  fullName: Intranet.Labor.Bll.IncontinencePadLaborCreatorBll.GetTestSheetForId
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll
+  isExternal: true
+  name: GetTestSheetForId(Int32)
+  nameWithType: IIncontinencePadLaborCreatorBll.GetTestSheetForId(Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+    name: GetTestSheetForId
+    nameWithType: IIncontinencePadLaborCreatorBll.GetTestSheetForId
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId(System.Int32)
+    name: GetTestSheetForId
+    nameWithType: IIncontinencePadLaborCreatorBll.GetTestSheetForId
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorBll.GetTestSheetForId
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor

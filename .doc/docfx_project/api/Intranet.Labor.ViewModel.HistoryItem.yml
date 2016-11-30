@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.HistoryItem
+  commentId: T:Intranet.Labor.ViewModel.HistoryItem
+  id: HistoryItem
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.HistoryItem.Action
+  - Intranet.Labor.ViewModel.HistoryItem.Controller
+  - Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+  - Intranet.Labor.ViewModel.HistoryItem.FaNr
+  - Intranet.Labor.ViewModel.HistoryItem.MachineNr
+  - Intranet.Labor.ViewModel.HistoryItem.RwType
+  - Intranet.Labor.ViewModel.HistoryItem.Shift
+  - Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+  langs:
+  - csharp
+  - vb
+  name: HistoryItem
+  nameWithType: HistoryItem
+  fullName: Intranet.Labor.ViewModel.HistoryItem
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HistoryItem
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing an history item for the history viewmodel\n"
+  example: []
+  syntax:
+    content: public class HistoryItem
+    content.vb: Public Class HistoryItem
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+  id: TestSheetId
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: TestSheetId
+  nameWithType: HistoryItem.TestSheetId
+  fullName: Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetId
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ID of the Test Sheet\n"
+  example: []
+  syntax:
+    content: public int TestSheetId { get; set; }
+    content.vb: Public Property TestSheetId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ID of the Test Sheet\n"
+  overload: Intranet.Labor.ViewModel.HistoryItem.TestSheetId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.FaNr
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.FaNr
+  id: FaNr
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: FaNr
+  nameWithType: HistoryItem.FaNr
+  fullName: Intranet.Labor.ViewModel.HistoryItem.FaNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaNr
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the FaNr of the Test Sheet\n"
+  example: []
+  syntax:
+    content: public string FaNr { get; set; }
+    content.vb: Public Property FaNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe FaNr of the Test Sheet\n"
+  overload: Intranet.Labor.ViewModel.HistoryItem.FaNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.Shift
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.Shift
+  id: Shift
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: Shift
+  nameWithType: HistoryItem.Shift
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Shift
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Shift
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the shift\n"
+  example: []
+  syntax:
+    content: public string Shift { get; set; }
+    content.vb: Public Property Shift As String
+    parameters: []
+    return:
+      type: System.String
+      description: the shift
+  overload: Intranet.Labor.ViewModel.HistoryItem.Shift*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.MachineNr
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.MachineNr
+  id: MachineNr
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: MachineNr
+  nameWithType: HistoryItem.MachineNr
+  fullName: Intranet.Labor.ViewModel.HistoryItem.MachineNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MachineNr
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the number of the machine\n"
+  example: []
+  syntax:
+    content: public string MachineNr { get; set; }
+    content.vb: Public Property MachineNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the number of the machine
+  overload: Intranet.Labor.ViewModel.HistoryItem.MachineNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+  id: CreatedDateTime
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: CreatedDateTime
+  nameWithType: HistoryItem.CreatedDateTime
+  fullName: Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreatedDateTime
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 48
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the timestamp of the creation of the test sheet\n"
+  example: []
+  syntax:
+    content: public DateTime CreatedDateTime { get; set; }
+    content.vb: Public Property CreatedDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: the timestamp of the creation
+  overload: Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.RwType
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.RwType
+  id: RwType
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: RwType
+  nameWithType: HistoryItem.RwType
+  fullName: Intranet.Labor.ViewModel.HistoryItem.RwType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RwType
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 54
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the rw type, telling if something is wrong.\n"
+  example: []
+  syntax:
+    content: public RwType RwType { get; set; }
+    content.vb: Public Property RwType As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: seths the type
+  overload: Intranet.Labor.ViewModel.HistoryItem.RwType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.Controller
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.Controller
+  id: Controller
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: Controller
+  nameWithType: HistoryItem.Controller
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Controller
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Controller
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 60
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the controller for more details\n"
+  example: []
+  syntax:
+    content: public string Controller { get; set; }
+    content.vb: Public Property Controller As String
+    parameters: []
+    return:
+      type: System.String
+      description: the controller for more detail
+  overload: Intranet.Labor.ViewModel.HistoryItem.Controller*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.HistoryItem.Action
+  commentId: P:Intranet.Labor.ViewModel.HistoryItem.Action
+  id: Action
+  parent: Intranet.Labor.ViewModel.HistoryItem
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: HistoryItem.Action
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Action
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Action
+    path: .src/Intranet/Labor/ViewModel/History/HistoryItem.cs
+    startLine: 66
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the action for more detail\n"
+  example: []
+  syntax:
+    content: public string Action { get; set; }
+    content.vb: Public Property Action As String
+    parameters: []
+    return:
+      type: System.String
+      description: the action for more detail
+  overload: Intranet.Labor.ViewModel.HistoryItem.Action*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.HistoryItem.TestSheetId*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+  isExternal: false
+  name: TestSheetId
+  nameWithType: HistoryItem.TestSheetId
+  fullName: Intranet.Labor.ViewModel.HistoryItem.TestSheetId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.HistoryItem.FaNr*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.FaNr
+  isExternal: false
+  name: FaNr
+  nameWithType: HistoryItem.FaNr
+  fullName: Intranet.Labor.ViewModel.HistoryItem.FaNr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.HistoryItem.Shift*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.Shift
+  isExternal: false
+  name: Shift
+  nameWithType: HistoryItem.Shift
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Shift
+- uid: Intranet.Labor.ViewModel.HistoryItem.MachineNr*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.MachineNr
+  isExternal: false
+  name: MachineNr
+  nameWithType: HistoryItem.MachineNr
+  fullName: Intranet.Labor.ViewModel.HistoryItem.MachineNr
+- uid: Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+  isExternal: false
+  name: CreatedDateTime
+  nameWithType: HistoryItem.CreatedDateTime
+  fullName: Intranet.Labor.ViewModel.HistoryItem.CreatedDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Intranet.Labor.ViewModel.HistoryItem.RwType*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.RwType
+  isExternal: false
+  name: RwType
+  nameWithType: HistoryItem.RwType
+  fullName: Intranet.Labor.ViewModel.HistoryItem.RwType
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.ViewModel.HistoryItem.Controller*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.Controller
+  isExternal: false
+  name: Controller
+  nameWithType: HistoryItem.Controller
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Controller
+- uid: Intranet.Labor.ViewModel.HistoryItem.Action*
+  commentId: Overload:Intranet.Labor.ViewModel.HistoryItem.Action
+  isExternal: false
+  name: Action
+  nameWithType: HistoryItem.Action
+  fullName: Intranet.Labor.ViewModel.HistoryItem.Action

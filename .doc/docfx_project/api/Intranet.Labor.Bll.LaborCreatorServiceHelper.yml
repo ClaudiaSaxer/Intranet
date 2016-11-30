@@ -1,0 +1,616 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Bll.LaborCreatorServiceHelper
+  id: LaborCreatorServiceHelper
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorServiceHelper
+  nameWithType: LaborCreatorServiceHelper
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborCreatorServiceHelper
+    path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nLabor Creator Service Helper\n"
+  example: []
+  syntax:
+    content: 'public class LaborCreatorServiceHelper : ServiceBase, ILaborCreatorServiceHelper'
+    content.vb: >-
+      Public Class LaborCreatorServiceHelper
+          Inherits ServiceBase
+          Implements ILaborCreatorServiceHelper
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  id: GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  parent: Intranet.Labor.Bll.LaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: GenerateProdCode(String, Int32, Int32, TimeSpan)
+  nameWithType: LaborCreatorServiceHelper.GenerateProdCode(String, Int32, Int32, TimeSpan)
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String, System.Int32, System.Int32, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GenerateProdCode
+    path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGenerates the Production Code for the Diaper\n"
+  example: []
+  syntax:
+    content: public string GenerateProdCode(string machine, int year, int dayOfyear, TimeSpan time)
+    content.vb: Public Function GenerateProdCode(machine As String, year As Integer, dayOfyear As Integer, time As TimeSpan) As String
+    parameters:
+    - id: machine
+      type: System.String
+      description: The machine Nr
+    - id: year
+      type: System.Int32
+      description: the year of the production of the diaper
+    - id: dayOfyear
+      type: System.Int32
+      description: the day of the year of the production of the diaper
+    - id: time
+      type: System.TimeSpan
+      description: the time od the production of the diaper
+    return:
+      type: System.String
+      description: A Production code for a single diaper
+  overload: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode*
+  implements:
+  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.LaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorServiceHelper(ILoggerFactory)
+  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborCreatorServiceHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: ILaborCreatorServiceHelper
+  nameWithType: ILaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode*
+  commentId: Overload:Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode
+  isExternal: false
+  name: GenerateProdCode
+  nameWithType: LaborCreatorServiceHelper.GenerateProdCode
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode
+- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  parent: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  isExternal: true
+  name: GenerateProdCode(String, Int32, Int32, TimeSpan)
+  nameWithType: ILaborCreatorServiceHelper.GenerateProdCode(String, Int32, Int32, TimeSpan)
+  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String, System.Int32, System.Int32, System.TimeSpan)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+    name: GenerateProdCode
+    nameWithType: ILaborCreatorServiceHelper.GenerateProdCode
+    fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+    name: GenerateProdCode
+    nameWithType: ILaborCreatorServiceHelper.GenerateProdCode
+    fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: System.TimeSpan
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor
+  isExternal: false
+  name: LaborCreatorServiceHelper
+  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper

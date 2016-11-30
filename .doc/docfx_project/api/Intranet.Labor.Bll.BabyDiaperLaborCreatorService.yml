@@ -1,0 +1,661 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  commentId: T:Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  id: BabyDiaperLaborCreatorService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  - Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  - Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperLaborCreatorService
+  nameWithType: BabyDiaperLaborCreatorService
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperLaborCreatorService
+    path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the labor creator service\n"
+  example: []
+  syntax:
+    content: 'public class BabyDiaperLaborCreatorService : ServiceBase, IBabyDiaperLaborCreatorService'
+    content.vb: >-
+      Public Class BabyDiaperLaborCreatorService
+          Inherits ServiceBase
+          Implements IBabyDiaperLaborCreatorService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  commentId: P:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  id: BabyDiaperLaborCreatorBll
+  parent: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperLaborCreatorBll
+  nameWithType: BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperLaborCreatorBll
+    path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the Labor creator bll\n"
+  example: []
+  syntax:
+    content: public IBabyDiaperLaborCreatorBll BabyDiaperLaborCreatorBll { get; set; }
+    content.vb: Public Property BabyDiaperLaborCreatorBll As IBabyDiaperLaborCreatorBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+      description: the labor creator bll
+  overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+  commentId: P:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+  id: Helper
+  parent: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: Helper
+  nameWithType: BabyDiaperLaborCreatorService.Helper
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Helper
+    path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the Helper for the Labor Creator Service\n"
+  example: []
+  syntax:
+    content: public IBabyDiaperLaborCreatorServiceHelper Helper { get; set; }
+    content.vb: Public Property Helper As IBabyDiaperLaborCreatorServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+      description: the helper for the Labor creator service
+  overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperLaborCreatorService(ILoggerFactory)
+  nameWithType: BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public BabyDiaperLaborCreatorService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  id: GetLaborCreatorViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.BabyDiaperLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborCreatorViewModel(Int32)
+  nameWithType: BabyDiaperLaborCreatorService.GetLaborCreatorViewModel(Int32)
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborCreatorViewModel
+    path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
+    startLine: 48
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGet the labor creator view model for a specific id.\n"
+  example: []
+  syntax:
+    content: public BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel(int testSheetId)
+    content.vb: Public Function GetLaborCreatorViewModel(testSheetId As Integer) As BabyDiaperLaborCreatorViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+      description: the labor creator view model
+  overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel*
+  implements:
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperLaborCreatorService
+  nameWithType: IBabyDiaperLaborCreatorService
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  isExternal: false
+  name: BabyDiaperLaborCreatorBll
+  nameWithType: BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorBll
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperLaborCreatorBll
+  nameWithType: IBabyDiaperLaborCreatorBll
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+  isExternal: false
+  name: Helper
+  nameWithType: BabyDiaperLaborCreatorService.Helper
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.Helper
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperLaborCreatorServiceHelper
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.#ctor
+  isExternal: false
+  name: BabyDiaperLaborCreatorService
+  nameWithType: BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorService
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.BabyDiaperLaborCreatorService
+- uid: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel*
+  commentId: Overload:Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  isExternal: false
+  name: GetLaborCreatorViewModel
+  nameWithType: BabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  isExternal: true
+  name: GetLaborCreatorViewModel(Int32)
+  nameWithType: IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+    name: GetLaborCreatorViewModel
+    nameWithType: IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+    name: GetLaborCreatorViewModel
+    nameWithType: IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperLaborCreatorViewModel
+  nameWithType: BabyDiaperLaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

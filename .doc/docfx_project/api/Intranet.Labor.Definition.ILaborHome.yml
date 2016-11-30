@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.ILaborHome
+  commentId: T:Intranet.Labor.Definition.ILaborHome
+  id: ILaborHome
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  langs:
+  - csharp
+  - vb
+  name: ILaborHome
+  nameWithType: ILaborHome
+  fullName: Intranet.Labor.Definition.ILaborHome
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborHome
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nInterface representing the bll for the labor home\n"
+  example: []
+  syntax:
+    content: public interface ILaborHome
+    content.vb: Public Interface ILaborHome
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  id: AllLaborModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  parent: Intranet.Labor.Definition.ILaborHome
+  langs:
+  - csharp
+  - vb
+  name: AllLaborModulesForRoles(IEnumerable<String>)
+  nameWithType: ILaborHome.AllLaborModulesForRoles(IEnumerable<String>)
+  fullName: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AllLaborModulesForRoles
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nQuery for all labor modules for a given roles.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Module> AllLaborModulesForRoles(IEnumerable<string> rolenames)
+    content.vb: Function AllLaborModulesForRoles(rolenames As IEnumerable(Of String)) As IEnumerable(Of  Module)
+    parameters:
+    - id: rolenames
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The name of the roles the user has.
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+      description: All labor modules for the given roles
+  overload: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles*
+  nameWithType.vb: ILaborHome.AllLaborModulesForRoles(IEnumerable(Of String))
+  fullName.vb: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: AllLaborModulesForRoles(IEnumerable(Of String))
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles*
+  commentId: Overload:Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles
+  isExternal: false
+  name: AllLaborModulesForRoles
+  nameWithType: ILaborHome.AllLaborModulesForRoles
+  fullName: Intranet.Labor.Definition.ILaborHome.AllLaborModulesForRoles
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Module>
+  nameWithType: IEnumerable<Module>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Model.Module>
+  nameWithType.vb: IEnumerable(Of Module)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Model.Module)
+  name.vb: IEnumerable(Of Module)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

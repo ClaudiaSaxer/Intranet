@@ -1,0 +1,2236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Dal.LaborContext
+  commentId: T:Intranet.Labor.Dal.LaborContext
+  id: LaborContext
+  parent: Intranet.Labor.Dal
+  children:
+  - Intranet.Labor.Dal.LaborContext.Articles
+  - Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+  - Intranet.Labor.Dal.LaborContext.Errors
+  - Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+  - Intranet.Labor.Dal.LaborContext.Instrons
+  - Intranet.Labor.Dal.LaborContext.InstronValues
+  - Intranet.Labor.Dal.LaborContext.Machines
+  - Intranet.Labor.Dal.LaborContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  - Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+  - Intranet.Labor.Dal.LaborContext.ProductionOrders
+  - Intranet.Labor.Dal.LaborContext.ShiftSchedules
+  - Intranet.Labor.Dal.LaborContext.TestNotes
+  - Intranet.Labor.Dal.LaborContext.TestSheets
+  - Intranet.Labor.Dal.LaborContext.TestValues
+  langs:
+  - csharp
+  - vb
+  name: LaborContext
+  nameWithType: LaborContext
+  fullName: Intranet.Labor.Dal.LaborContext
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborContext
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nThe Context of the Module Labor\n"
+  example: []
+  syntax:
+    content: 'public class LaborContext : DbContext, IDisposable, IObjectContextAdapter'
+    content.vb: >-
+      Public Class LaborContext
+          Inherits DbContext
+          Implements IDisposable, IObjectContextAdapter
+  inheritance:
+  - System.Object
+  - System.Data.Entity.DbContext
+  implements:
+  - System.IDisposable
+  - System.Data.Entity.Infrastructure.IObjectContextAdapter
+  inheritedMembers:
+  - System.Data.Entity.DbContext.Set``1
+  - System.Data.Entity.DbContext.Set(System.Type)
+  - System.Data.Entity.DbContext.SaveChanges
+  - System.Data.Entity.DbContext.SaveChangesAsync
+  - System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  - System.Data.Entity.DbContext.GetValidationErrors
+  - System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  - System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  - System.Data.Entity.DbContext.Entry``1({TEntity})
+  - System.Data.Entity.DbContext.Entry(System.Object)
+  - System.Data.Entity.DbContext.Dispose
+  - System.Data.Entity.DbContext.Dispose(System.Boolean)
+  - System.Data.Entity.DbContext.Database
+  - System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  - System.Data.Entity.DbContext.ChangeTracker
+  - System.Data.Entity.DbContext.Configuration
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Dal.LaborContext.Articles
+  commentId: P:Intranet.Labor.Dal.LaborContext.Articles
+  id: Articles
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: Articles
+  nameWithType: LaborContext.Articles
+  fullName: Intranet.Labor.Dal.LaborContext.Articles
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Articles
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the articles for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<Article> Articles { get; set; }
+    content.vb: Public Property Articles As DbSet(Of Article)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.Article}
+      description: the articles
+  overload: Intranet.Labor.Dal.LaborContext.Articles*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+  commentId: P:Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+  id: ProductionOrderComponent
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrderComponent
+  nameWithType: LaborContext.ProductionOrderComponent
+  fullName: Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrderComponent
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the components for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<ProductionOrderComponent> ProductionOrderComponent { get; set; }
+    content.vb: Public Property ProductionOrderComponent As DbSet(Of ProductionOrderComponent)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrderComponent}
+      description: the components
+  overload: Intranet.Labor.Dal.LaborContext.ProductionOrderComponent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.Errors
+  commentId: P:Intranet.Labor.Dal.LaborContext.Errors
+  id: Errors
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: LaborContext.Errors
+  fullName: Intranet.Labor.Dal.LaborContext.Errors
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Errors
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the errors for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<Error> Errors { get; set; }
+    content.vb: Public Property Errors As DbSet(Of  Error)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.Error}
+      description: the errors
+  overload: Intranet.Labor.Dal.LaborContext.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.ProductionOrders
+  commentId: P:Intranet.Labor.Dal.LaborContext.ProductionOrders
+  id: ProductionOrders
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrders
+  nameWithType: LaborContext.ProductionOrders
+  fullName: Intranet.Labor.Dal.LaborContext.ProductionOrders
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrders
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 35
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the production orders for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<ProductionOrder> ProductionOrders { get; set; }
+    content.vb: Public Property ProductionOrders As DbSet(Of ProductionOrder)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrder}
+      description: the production orders
+  overload: Intranet.Labor.Dal.LaborContext.ProductionOrders*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.ShiftSchedules
+  commentId: P:Intranet.Labor.Dal.LaborContext.ShiftSchedules
+  id: ShiftSchedules
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: ShiftSchedules
+  nameWithType: LaborContext.ShiftSchedules
+  fullName: Intranet.Labor.Dal.LaborContext.ShiftSchedules
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftSchedules
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the shift shedules for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<ShiftSchedule> ShiftSchedules { get; set; }
+    content.vb: Public Property ShiftSchedules As DbSet(Of ShiftSchedule)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.ShiftSchedule}
+      description: the shift shedules
+  overload: Intranet.Labor.Dal.LaborContext.ShiftSchedules*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.Machines
+  commentId: P:Intranet.Labor.Dal.LaborContext.Machines
+  id: Machines
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: Machines
+  nameWithType: LaborContext.Machines
+  fullName: Intranet.Labor.Dal.LaborContext.Machines
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Machines
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 49
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the machines for the labor\n"
+  example: []
+  syntax:
+    content: public DbSet<Machine> Machines { get; set; }
+    content.vb: Public Property Machines As DbSet(Of Machine)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.Machine}
+      description: "\nthe machines\n"
+  overload: Intranet.Labor.Dal.LaborContext.Machines*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.Instrons
+  commentId: P:Intranet.Labor.Dal.LaborContext.Instrons
+  id: Instrons
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: Instrons
+  nameWithType: LaborContext.Instrons
+  fullName: Intranet.Labor.Dal.LaborContext.Instrons
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Instrons
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the instrons\n"
+  example: []
+  syntax:
+    content: public DbSet<Instron> Instrons { get; set; }
+    content.vb: Public Property Instrons As DbSet(Of Instron)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.Instron}
+      description: the instrons
+  overload: Intranet.Labor.Dal.LaborContext.Instrons*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.InstronValues
+  commentId: P:Intranet.Labor.Dal.LaborContext.InstronValues
+  id: InstronValues
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: InstronValues
+  nameWithType: LaborContext.InstronValues
+  fullName: Intranet.Labor.Dal.LaborContext.InstronValues
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InstronValues
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the instron values\n"
+  example: []
+  syntax:
+    content: public DbSet<InstronValue> InstronValues { get; set; }
+    content.vb: Public Property InstronValues As DbSet(Of InstronValue)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.InstronValue}
+      description: the instron values
+  overload: Intranet.Labor.Dal.LaborContext.InstronValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+  commentId: P:Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+  id: BabyDiaperTestValues
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValues
+  nameWithType: LaborContext.BabyDiaperTestValues
+  fullName: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValues
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 67
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the baby diaper test values\n"
+  example: []
+  syntax:
+    content: public DbSet<BabyDiaperTestValue> BabyDiaperTestValues { get; set; }
+    content.vb: Public Property BabyDiaperTestValues As DbSet(Of BabyDiaperTestValue)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+      description: the baby diaper test values
+  overload: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+  commentId: P:Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+  id: IncontinencePadTestValues
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTestValues
+  nameWithType: LaborContext.IncontinencePadTestValues
+  fullName: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTestValues
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 73
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the incontinence pad test values\n"
+  example: []
+  syntax:
+    content: public DbSet<IncontinencePadTestValue> IncontinencePadTestValues { get; set; }
+    content.vb: Public Property IncontinencePadTestValues As DbSet(Of IncontinencePadTestValue)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+      description: the incontinence pad test values
+  overload: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.TestValues
+  commentId: P:Intranet.Labor.Dal.LaborContext.TestValues
+  id: TestValues
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: TestValues
+  nameWithType: LaborContext.TestValues
+  fullName: Intranet.Labor.Dal.LaborContext.TestValues
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValues
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 79
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the test values\n"
+  example: []
+  syntax:
+    content: public DbSet<TestValue> TestValues { get; set; }
+    content.vb: Public Property TestValues As DbSet(Of TestValue)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
+      description: the test values
+  overload: Intranet.Labor.Dal.LaborContext.TestValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.TestNotes
+  commentId: P:Intranet.Labor.Dal.LaborContext.TestNotes
+  id: TestNotes
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: TestNotes
+  nameWithType: LaborContext.TestNotes
+  fullName: Intranet.Labor.Dal.LaborContext.TestNotes
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestNotes
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 85
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the test notes\n"
+  example: []
+  syntax:
+    content: public DbSet<TestValueNote> TestNotes { get; set; }
+    content.vb: Public Property TestNotes As DbSet(Of TestValueNote)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
+      description: the test notes
+  overload: Intranet.Labor.Dal.LaborContext.TestNotes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.TestSheets
+  commentId: P:Intranet.Labor.Dal.LaborContext.TestSheets
+  id: TestSheets
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: TestSheets
+  nameWithType: LaborContext.TestSheets
+  fullName: Intranet.Labor.Dal.LaborContext.TestSheets
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheets
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 91
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nGets or sets the test sheets\n"
+  example: []
+  syntax:
+    content: public DbSet<TestSheet> TestSheets { get; set; }
+    content.vb: Public Property TestSheets As DbSet(Of TestSheet)
+    parameters: []
+    return:
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
+      description: the test sheets
+  overload: Intranet.Labor.Dal.LaborContext.TestSheets*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Dal.LaborContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  commentId: M:Intranet.Labor.Dal.LaborContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  id: OnModelCreating(System.Data.Entity.DbModelBuilder)
+  parent: Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: OnModelCreating(DbModelBuilder)
+  nameWithType: LaborContext.OnModelCreating(DbModelBuilder)
+  fullName: Intranet.Labor.Dal.LaborContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/LaborContext.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: OnModelCreating
+    path: .src/Intranet/Labor/Dal/LaborContext.cs
+    startLine: 110
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal
+  summary: "\nThis method is called when the model for a derived context has been initialized, but\nbefore the model has been locked down and used to initialize the context.  The default\nimplementation of this method does nothing, but it can be overridden in a derived class\nsuch that the model can be further configured before it is locked down.\n"
+  remarks: "\nTypically, this method is called only once when the first instance of a derived context\nis created.  The model for that context is then cached and is for all further instances of\nthe context in the app domain.  This caching can be disabled by setting the ModelCaching\nproperty on the given ModelBuidler, but note that this can seriously degrade performance.\nMore control over caching is provided through use of the DbModelBuilder and DbContextFactory\nclasses directly.\n"
+  example: []
+  syntax:
+    content: protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    content.vb: Protected Overrides Sub OnModelCreating(modelBuilder As DbModelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: System.Data.Entity.DbModelBuilder
+      description: 'The builder that defines the model for the context being created. '
+  overridden: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  overload: Intranet.Labor.Dal.LaborContext.OnModelCreating*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Intranet.Labor.Dal
+  commentId: N:Intranet.Labor.Dal
+  isExternal: false
+  name: Intranet.Labor.Dal
+  nameWithType: Intranet.Labor.Dal
+  fullName: Intranet.Labor.Dal
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Data.Entity.DbContext
+  commentId: T:System.Data.Entity.DbContext
+  parent: System.Data.Entity
+  isExternal: true
+  name: DbContext
+  nameWithType: DbContext
+  fullName: System.Data.Entity.DbContext
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Data.Entity.Infrastructure.IObjectContextAdapter
+  commentId: T:System.Data.Entity.Infrastructure.IObjectContextAdapter
+  parent: System.Data.Entity.Infrastructure
+  isExternal: true
+  name: IObjectContextAdapter
+  nameWithType: IObjectContextAdapter
+  fullName: System.Data.Entity.Infrastructure.IObjectContextAdapter
+- uid: System.Data.Entity.DbContext.Set``1
+  commentId: M:System.Data.Entity.DbContext.Set``1
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Set<TEntity>()
+  nameWithType: DbContext.Set<TEntity>()
+  fullName: System.Data.Entity.DbContext.Set<TEntity>()
+  nameWithType.vb: DbContext.Set(Of TEntity)()
+  fullname.vb: System.Data.Entity.DbContext.Set(Of TEntity)()
+  name.vb: Set(Of TEntity)()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Set``1
+    name: Set<TEntity>
+    nameWithType: DbContext.Set<TEntity>
+    fullName: System.Data.Entity.DbContext.Set<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Set``1
+    name: Set(Of TEntity)
+    nameWithType: DbContext.Set(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Set(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Set(System.Type)
+  commentId: M:System.Data.Entity.DbContext.Set(System.Type)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Set(Type)
+  nameWithType: DbContext.Set(Type)
+  fullName: System.Data.Entity.DbContext.Set(System.Type)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Set(System.Type)
+    name: Set
+    nameWithType: DbContext.Set
+    fullName: System.Data.Entity.DbContext.Set
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Set(System.Type)
+    name: Set
+    nameWithType: DbContext.Set
+    fullName: System.Data.Entity.DbContext.Set
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChanges
+  commentId: M:System.Data.Entity.DbContext.SaveChanges
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChanges()
+  nameWithType: DbContext.SaveChanges()
+  fullName: System.Data.Entity.DbContext.SaveChanges()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: System.Data.Entity.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChanges
+    name: SaveChanges
+    nameWithType: DbContext.SaveChanges
+    fullName: System.Data.Entity.DbContext.SaveChanges
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChangesAsync
+  commentId: M:System.Data.Entity.DbContext.SaveChangesAsync
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChangesAsync()
+  nameWithType: DbContext.SaveChangesAsync()
+  fullName: System.Data.Entity.DbContext.SaveChangesAsync()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  commentId: M:System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: SaveChangesAsync(CancellationToken)
+  nameWithType: DbContext.SaveChangesAsync(CancellationToken)
+  fullName: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.SaveChangesAsync(System.Threading.CancellationToken)
+    name: SaveChangesAsync
+    nameWithType: DbContext.SaveChangesAsync
+    fullName: System.Data.Entity.DbContext.SaveChangesAsync
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.GetValidationErrors
+  commentId: M:System.Data.Entity.DbContext.GetValidationErrors
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: GetValidationErrors()
+  nameWithType: DbContext.GetValidationErrors()
+  fullName: System.Data.Entity.DbContext.GetValidationErrors()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.GetValidationErrors
+    name: GetValidationErrors
+    nameWithType: DbContext.GetValidationErrors
+    fullName: System.Data.Entity.DbContext.GetValidationErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.GetValidationErrors
+    name: GetValidationErrors
+    nameWithType: DbContext.GetValidationErrors
+    fullName: System.Data.Entity.DbContext.GetValidationErrors
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  commentId: M:System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ShouldValidateEntity(DbEntityEntry)
+  nameWithType: DbContext.ShouldValidateEntity(DbEntityEntry)
+  fullName: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+    name: ShouldValidateEntity
+    nameWithType: DbContext.ShouldValidateEntity
+    fullName: System.Data.Entity.DbContext.ShouldValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.ShouldValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry)
+    name: ShouldValidateEntity
+    nameWithType: DbContext.ShouldValidateEntity
+    fullName: System.Data.Entity.DbContext.ShouldValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  commentId: M:System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ValidateEntity(DbEntityEntry, IDictionary<Object, Object>)
+  nameWithType: DbContext.ValidateEntity(DbEntityEntry, IDictionary<Object, Object>)
+  fullName: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry, System.Collections.Generic.IDictionary<System.Object, System.Object>)
+  nameWithType.vb: DbContext.ValidateEntity(DbEntityEntry, IDictionary(Of Object, Object))
+  fullname.vb: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry, System.Collections.Generic.IDictionary(Of System.Object, System.Object))
+  name.vb: ValidateEntity(DbEntityEntry, IDictionary(Of Object, Object))
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+    name: ValidateEntity
+    nameWithType: DbContext.ValidateEntity
+    fullName: System.Data.Entity.DbContext.ValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.ValidateEntity(System.Data.Entity.Infrastructure.DbEntityEntry,System.Collections.Generic.IDictionary{System.Object,System.Object})
+    name: ValidateEntity
+    nameWithType: DbContext.ValidateEntity
+    fullName: System.Data.Entity.DbContext.ValidateEntity
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.Infrastructure.DbEntityEntry
+    name: DbEntityEntry
+    nameWithType: DbEntityEntry
+    fullName: System.Data.Entity.Infrastructure.DbEntityEntry
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    nameWithType: IDictionary
+    fullName: System.Collections.Generic.IDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Entry``1({TEntity})
+  commentId: M:System.Data.Entity.DbContext.Entry``1(``0)
+  parent: System.Data.Entity.DbContext
+  definition: System.Data.Entity.DbContext.Entry``1(``0)
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: System.Data.Entity.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullname.vb: System.Data.Entity.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: System.Data.Entity.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Entry(System.Object)
+  commentId: M:System.Data.Entity.DbContext.Entry(System.Object)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Entry(Object)
+  nameWithType: DbContext.Entry(Object)
+  fullName: System.Data.Entity.DbContext.Entry(System.Object)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: System.Data.Entity.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry(System.Object)
+    name: Entry
+    nameWithType: DbContext.Entry
+    fullName: System.Data.Entity.DbContext.Entry
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Dispose
+  commentId: M:System.Data.Entity.DbContext.Dispose
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Dispose()
+  nameWithType: DbContext.Dispose()
+  fullName: System.Data.Entity.DbContext.Dispose()
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Dispose
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+  commentId: M:System.Data.Entity.DbContext.Dispose(System.Boolean)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: DbContext.Dispose(Boolean)
+  fullName: System.Data.Entity.DbContext.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DbContext.Dispose
+    fullName: System.Data.Entity.DbContext.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.Database
+  commentId: P:System.Data.Entity.DbContext.Database
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Database
+  nameWithType: DbContext.Database
+  fullName: System.Data.Entity.DbContext.Database
+- uid: System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  commentId: P:System.Data.Entity.DbContext.System#Data#Entity#Infrastructure#IObjectContextAdapter#ObjectContext
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: IObjectContextAdapter.ObjectContext
+  nameWithType: DbContext.IObjectContextAdapter.ObjectContext
+  fullName: System.Data.Entity.DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+  nameWithType.vb: DbContext.System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+  name.vb: System.Data.Entity.Infrastructure.IObjectContextAdapter.ObjectContext
+- uid: System.Data.Entity.DbContext.ChangeTracker
+  commentId: P:System.Data.Entity.DbContext.ChangeTracker
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: ChangeTracker
+  nameWithType: DbContext.ChangeTracker
+  fullName: System.Data.Entity.DbContext.ChangeTracker
+- uid: System.Data.Entity.DbContext.Configuration
+  commentId: P:System.Data.Entity.DbContext.Configuration
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: Configuration
+  nameWithType: DbContext.Configuration
+  fullName: System.Data.Entity.DbContext.Configuration
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Data.Entity
+  commentId: N:System.Data.Entity
+  isExternal: false
+  name: System.Data.Entity
+  nameWithType: System.Data.Entity
+  fullName: System.Data.Entity
+- uid: System.Data.Entity.Infrastructure
+  commentId: N:System.Data.Entity.Infrastructure
+  isExternal: false
+  name: System.Data.Entity.Infrastructure
+  nameWithType: System.Data.Entity.Infrastructure
+  fullName: System.Data.Entity.Infrastructure
+- uid: System.Data.Entity.DbContext.Entry``1(``0)
+  commentId: M:System.Data.Entity.DbContext.Entry``1(``0)
+  isExternal: true
+  name: Entry<TEntity>(TEntity)
+  nameWithType: DbContext.Entry<TEntity>(TEntity)
+  fullName: System.Data.Entity.DbContext.Entry<TEntity>(TEntity)
+  nameWithType.vb: DbContext.Entry(Of TEntity)(TEntity)
+  fullname.vb: System.Data.Entity.DbContext.Entry(Of TEntity)(TEntity)
+  name.vb: Entry(Of TEntity)(TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry<TEntity>
+    nameWithType: DbContext.Entry<TEntity>
+    fullName: System.Data.Entity.DbContext.Entry<TEntity>
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.Entry``1(``0)
+    name: Entry(Of TEntity)
+    nameWithType: DbContext.Entry(Of TEntity)
+    fullName: System.Data.Entity.DbContext.Entry(Of TEntity)
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.Articles*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.Articles
+  isExternal: false
+  name: Articles
+  nameWithType: LaborContext.Articles
+  fullName: Intranet.Labor.Dal.LaborContext.Articles
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.Article}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.Article}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Article>
+  nameWithType: DbSet<Article>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.Article>
+  nameWithType.vb: DbSet(Of Article)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.Article)
+  name.vb: DbSet(Of Article)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Article
+    name: Article
+    nameWithType: Article
+    fullName: Intranet.Labor.Model.Article
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Article
+    name: Article
+    nameWithType: Article
+    fullName: Intranet.Labor.Model.Article
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbSet`1
+  commentId: T:System.Data.Entity.DbSet`1
+  isExternal: true
+  name: DbSet<TEntity>
+  nameWithType: DbSet<TEntity>
+  fullName: System.Data.Entity.DbSet<TEntity>
+  nameWithType.vb: DbSet(Of TEntity)
+  fullname.vb: System.Data.Entity.DbSet(Of TEntity)
+  name.vb: DbSet(Of TEntity)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.ProductionOrderComponent*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+  isExternal: false
+  name: ProductionOrderComponent
+  nameWithType: LaborContext.ProductionOrderComponent
+  fullName: Intranet.Labor.Dal.LaborContext.ProductionOrderComponent
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrderComponent}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrderComponent}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<ProductionOrderComponent>
+  nameWithType: DbSet<ProductionOrderComponent>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.ProductionOrderComponent>
+  nameWithType.vb: DbSet(Of ProductionOrderComponent)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.ProductionOrderComponent)
+  name.vb: DbSet(Of ProductionOrderComponent)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ProductionOrderComponent
+    name: ProductionOrderComponent
+    nameWithType: ProductionOrderComponent
+    fullName: Intranet.Labor.Model.ProductionOrderComponent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ProductionOrderComponent
+    name: ProductionOrderComponent
+    nameWithType: ProductionOrderComponent
+    fullName: Intranet.Labor.Model.ProductionOrderComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.Errors*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.Errors
+  isExternal: false
+  name: Errors
+  nameWithType: LaborContext.Errors
+  fullName: Intranet.Labor.Dal.LaborContext.Errors
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.Error}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.Error}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Error>
+  nameWithType: DbSet<Error>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.Error>
+  nameWithType.vb: DbSet(Of Error)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.Error)
+  name.vb: DbSet(Of Error)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Error
+    name: Error
+    nameWithType: Error
+    fullName: Intranet.Labor.Model.Error
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.ProductionOrders*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.ProductionOrders
+  isExternal: false
+  name: ProductionOrders
+  nameWithType: LaborContext.ProductionOrders
+  fullName: Intranet.Labor.Dal.LaborContext.ProductionOrders
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrder}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.ProductionOrder}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<ProductionOrder>
+  nameWithType: DbSet<ProductionOrder>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.ProductionOrder>
+  nameWithType.vb: DbSet(Of ProductionOrder)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.ProductionOrder)
+  name.vb: DbSet(Of ProductionOrder)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.ShiftSchedules*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.ShiftSchedules
+  isExternal: false
+  name: ShiftSchedules
+  nameWithType: LaborContext.ShiftSchedules
+  fullName: Intranet.Labor.Dal.LaborContext.ShiftSchedules
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.ShiftSchedule}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.ShiftSchedule}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<ShiftSchedule>
+  nameWithType: DbSet<ShiftSchedule>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.ShiftSchedule>
+  nameWithType.vb: DbSet(Of ShiftSchedule)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.ShiftSchedule)
+  name.vb: DbSet(Of ShiftSchedule)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.Machines*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.Machines
+  isExternal: false
+  name: Machines
+  nameWithType: LaborContext.Machines
+  fullName: Intranet.Labor.Dal.LaborContext.Machines
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.Machine}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.Machine}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Machine>
+  nameWithType: DbSet<Machine>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.Machine>
+  nameWithType.vb: DbSet(Of Machine)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.Machine)
+  name.vb: DbSet(Of Machine)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Machine
+    name: Machine
+    nameWithType: Machine
+    fullName: Intranet.Labor.Model.Machine
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Machine
+    name: Machine
+    nameWithType: Machine
+    fullName: Intranet.Labor.Model.Machine
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.Instrons*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.Instrons
+  isExternal: false
+  name: Instrons
+  nameWithType: LaborContext.Instrons
+  fullName: Intranet.Labor.Dal.LaborContext.Instrons
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.Instron}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.Instron}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<Instron>
+  nameWithType: DbSet<Instron>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.Instron>
+  nameWithType.vb: DbSet(Of Instron)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.Instron)
+  name.vb: DbSet(Of Instron)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.Instron
+    name: Instron
+    nameWithType: Instron
+    fullName: Intranet.Labor.Model.Instron
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.Instron
+    name: Instron
+    nameWithType: Instron
+    fullName: Intranet.Labor.Model.Instron
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.InstronValues*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.InstronValues
+  isExternal: false
+  name: InstronValues
+  nameWithType: LaborContext.InstronValues
+  fullName: Intranet.Labor.Dal.LaborContext.InstronValues
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.InstronValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.InstronValue}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<InstronValue>
+  nameWithType: DbSet<InstronValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.InstronValue>
+  nameWithType.vb: DbSet(Of InstronValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.InstronValue)
+  name.vb: DbSet(Of InstronValue)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.InstronValue
+    name: InstronValue
+    nameWithType: InstronValue
+    fullName: Intranet.Labor.Model.InstronValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.InstronValue
+    name: InstronValue
+    nameWithType: InstronValue
+    fullName: Intranet.Labor.Model.InstronValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+  isExternal: false
+  name: BabyDiaperTestValues
+  nameWithType: LaborContext.BabyDiaperTestValues
+  fullName: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<BabyDiaperTestValue>
+  nameWithType: DbSet<BabyDiaperTestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.BabyDiaperTestValue>
+  nameWithType.vb: DbSet(Of BabyDiaperTestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  name.vb: DbSet(Of BabyDiaperTestValue)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+  isExternal: false
+  name: IncontinencePadTestValues
+  nameWithType: LaborContext.IncontinencePadTestValues
+  fullName: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<IncontinencePadTestValue>
+  nameWithType: DbSet<IncontinencePadTestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.IncontinencePadTestValue>
+  nameWithType.vb: DbSet(Of IncontinencePadTestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  name.vb: DbSet(Of IncontinencePadTestValue)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.TestValues*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.TestValues
+  isExternal: false
+  name: TestValues
+  nameWithType: LaborContext.TestValues
+  fullName: Intranet.Labor.Dal.LaborContext.TestValues
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<TestValue>
+  nameWithType: DbSet<TestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: DbSet(Of TestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: DbSet(Of TestValue)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.TestNotes*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.TestNotes
+  isExternal: false
+  name: TestNotes
+  nameWithType: LaborContext.TestNotes
+  fullName: Intranet.Labor.Dal.LaborContext.TestNotes
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<TestValueNote>
+  nameWithType: DbSet<TestValueNote>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestValueNote>
+  nameWithType.vb: DbSet(Of TestValueNote)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestValueNote)
+  name.vb: DbSet(Of TestValueNote)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.TestSheets*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.TestSheets
+  isExternal: false
+  name: TestSheets
+  nameWithType: LaborContext.TestSheets
+  fullName: Intranet.Labor.Dal.LaborContext.TestSheets
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
+  parent: System.Data.Entity
+  definition: System.Data.Entity.DbSet`1
+  name: DbSet<TestSheet>
+  nameWithType: DbSet<TestSheet>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: DbSet(Of TestSheet)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: DbSet(Of TestSheet)
+  spec.csharp:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Data.Entity.DbSet`1
+    name: DbSet
+    nameWithType: DbSet
+    fullName: System.Data.Entity.DbSet
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  commentId: M:System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  parent: System.Data.Entity.DbContext
+  isExternal: true
+  name: OnModelCreating(DbModelBuilder)
+  nameWithType: DbContext.OnModelCreating(DbModelBuilder)
+  fullName: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+  spec.csharp:
+  - uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: System.Data.Entity.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.DbModelBuilder
+    name: DbModelBuilder
+    nameWithType: DbModelBuilder
+    fullName: System.Data.Entity.DbModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Data.Entity.DbContext.OnModelCreating(System.Data.Entity.DbModelBuilder)
+    name: OnModelCreating
+    nameWithType: DbContext.OnModelCreating
+    fullName: System.Data.Entity.DbContext.OnModelCreating
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.Entity.DbModelBuilder
+    name: DbModelBuilder
+    nameWithType: DbModelBuilder
+    fullName: System.Data.Entity.DbModelBuilder
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Dal.LaborContext.OnModelCreating*
+  commentId: Overload:Intranet.Labor.Dal.LaborContext.OnModelCreating
+  isExternal: false
+  name: OnModelCreating
+  nameWithType: LaborContext.OnModelCreating
+  fullName: Intranet.Labor.Dal.LaborContext.OnModelCreating
+- uid: System.Data.Entity.DbModelBuilder
+  commentId: T:System.Data.Entity.DbModelBuilder
+  parent: System.Data.Entity
+  isExternal: true
+  name: DbModelBuilder
+  nameWithType: DbModelBuilder
+  fullName: System.Data.Entity.DbModelBuilder

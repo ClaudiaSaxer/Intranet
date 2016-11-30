@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.MvcApplication
+  commentId: T:Intranet.Web.MvcApplication
+  id: MvcApplication
+  parent: Intranet.Web
+  children:
+  - Intranet.Web.MvcApplication.Application_Start
+  langs:
+  - csharp
+  - vb
+  name: MvcApplication
+  nameWithType: MvcApplication
+  fullName: Intranet.Web.MvcApplication
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Global.asax.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MvcApplication
+    path: .src/Intranet/Web/Global.asax.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nThe Application\n"
+  example: []
+  syntax:
+    content: 'public class MvcApplication : HttpApplication'
+    content.vb: >-
+      Public Class MvcApplication
+          Inherits HttpApplication
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.MvcApplication.Application_Start
+  commentId: M:Intranet.Web.MvcApplication.Application_Start
+  id: Application_Start
+  parent: Intranet.Web.MvcApplication
+  langs:
+  - csharp
+  - vb
+  name: Application_Start()
+  nameWithType: MvcApplication.Application_Start()
+  fullName: Intranet.Web.MvcApplication.Application_Start()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Global.asax.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Application_Start
+    path: .src/Intranet/Web/Global.asax.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nWhat to run at application start\n"
+  example: []
+  syntax:
+    content: protected void Application_Start()
+    content.vb: Protected Sub Application_Start
+  overload: Intranet.Web.MvcApplication.Application_Start*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  isExternal: false
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.MvcApplication.Application_Start*
+  commentId: Overload:Intranet.Web.MvcApplication.Application_Start
+  isExternal: false
+  name: Application_Start
+  nameWithType: MvcApplication.Application_Start
+  fullName: Intranet.Web.MvcApplication.Application_Start

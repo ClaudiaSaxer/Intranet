@@ -1,0 +1,498 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  id: BabyDiaperRewetController
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetController
+  nameWithType: BabyDiaperRewetController
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetController
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing the BabyDiaperRewetController\n"
+  example: []
+  syntax:
+    content: 'public class BabyDiaperRewetController : BaseController'
+    content.vb: >-
+      Public Class BabyDiaperRewetController
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+  id: BabyDiaperRewetService
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetService
+  nameWithType: BabyDiaperRewetController.BabyDiaperRewetService
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewetService
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Labor.Definition.IBabyDiaperRewetService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public IBabyDiaperRewetService BabyDiaperRewetService { get; set; }
+    content.vb: Public Property BabyDiaperRewetService As IBabyDiaperRewetService
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IBabyDiaperRewetService
+      description: "\n<xref href=\"Intranet.Labor.Definition.IBabyDiaperRewetService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewetController(ILoggerFactory)
+  nameWithType: BabyDiaperRewetController.BabyDiaperRewetController(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public BabyDiaperRewetController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create(Int32)
+  id: Create(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: Create(Int32)
+  nameWithType: BabyDiaperRewetController.Create(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Create
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the BabywindelnRewet Edit View with a new Item for the Test-Sheet\n"
+  example: []
+  syntax:
+    content: public ActionResult Create(Int32 id = null)
+    content.vb: Public Function Create(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Edit View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit(Int32)
+  id: Edit(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: Edit(Int32)
+  nameWithType: BabyDiaperRewetController.Edit(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Edit
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 71
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the BabywindelnRewet Edit View with an Item form the Test-Sheet which will be edited \n"
+  example: []
+  syntax:
+    content: public ActionResult Edit(Int32 id = null)
+    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete(Int32)
+  id: Delete(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: BabyDiaperRewetController.Delete(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 87
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nDeletes the Testvalue\n"
+  example: []
+  syntax:
+    content: public ActionResult Delete(Int32 id)
+    content.vb: Public Function Delete(id As Int32) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the TestValue
+    return:
+      type: ActionResult
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: Save(BabyDiaperRewetEditViewModel)
+  nameWithType: BabyDiaperRewetController.Save(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 98
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nSaves the new test or update it\n"
+  example: []
+  syntax:
+    content: public ActionResult Save(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Public Function Save(viewModel As BabyDiaperRewetEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: the testdata whicht will be saved
+    return:
+      type: ActionResult
+      description: The Edit View
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: AddNote(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  langs:
+  - csharp
+  - vb
+  name: AddNote(BabyDiaperRewetEditViewModel)
+  nameWithType: BabyDiaperRewetController.AddNote(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AddNote
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRewetController.cs
+    startLine: 111
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nadds a new note to the test\n"
+  example: []
+  syntax:
+    content: public ActionResult AddNote(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Public Function AddNote(viewModel As BabyDiaperRewetEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: ''
+    return:
+      type: ActionResult
+      description: The Edit View
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRewetService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperRewetService
+  nameWithType: IBabyDiaperRewetService
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+  isExternal: false
+  name: BabyDiaperRewetService
+  nameWithType: BabyDiaperRewetController.BabyDiaperRewetService
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetService
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+  isExternal: false
+  name: BabyDiaperRewetController
+  nameWithType: BabyDiaperRewetController
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.#ctor
+  isExternal: false
+  name: BabyDiaperRewetController
+  nameWithType: BabyDiaperRewetController.BabyDiaperRewetController
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.BabyDiaperRewetController
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create
+  isExternal: false
+  name: Create
+  nameWithType: BabyDiaperRewetController.Create
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Create
+- uid: Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: Int32
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit
+  isExternal: false
+  name: Edit
+  nameWithType: BabyDiaperRewetController.Edit
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Edit
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: BabyDiaperRewetController.Delete
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Delete
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save
+  isExternal: false
+  name: Save
+  nameWithType: BabyDiaperRewetController.Save
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.Save
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewetEditViewModel
+  nameWithType: BabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote
+  isExternal: false
+  name: AddNote
+  nameWithType: BabyDiaperRewetController.AddNote
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRewetController.AddNote

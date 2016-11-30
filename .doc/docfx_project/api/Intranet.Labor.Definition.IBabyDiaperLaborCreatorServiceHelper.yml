@@ -1,0 +1,2127 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  id: IBabyDiaperLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeBabyDiaper,Intranet.Labor.Model.labor.TestValueType)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo(System.String,System.String,System.Double,System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper},System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,``0})
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperLaborCreatorServiceHelper
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperLaborCreatorServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nClass representing a interface for BabyDiaperLaborCreatorServiceHelper\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperLaborCreatorServiceHelper
+    content.vb: Public Interface IBabyDiaperLaborCreatorServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeBabyDiaper,Intranet.Labor.Model.labor.TestValueType)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeBabyDiaper,Intranet.Labor.Model.labor.TestValueType)
+  id: GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeBabyDiaper,Intranet.Labor.Model.labor.TestValueType)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: GetBabyDiaperTestValueForType(IEnumerable<TestValue>, TestTypeBabyDiaper, TestValueType)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(IEnumerable<TestValue>, TestTypeBabyDiaper, TestValueType)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>, Intranet.Labor.Model.labor.TestTypeBabyDiaper, Intranet.Labor.Model.labor.TestValueType)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetBabyDiaperTestValueForType
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the BabyDiaperTestValue out of a list of testvalues for the correct <xref href=\"Intranet.Labor.Model.labor.TestTypeBabyDiaper\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"Intranet.Labor.Model.labor.TestValueType\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: BabyDiaperTestValue GetBabyDiaperTestValueForType(IEnumerable<TestValue> testValues, TestTypeBabyDiaper testTypeBabyDiaper, TestValueType testValueType)
+    content.vb: Function GetBabyDiaperTestValueForType(testValues As IEnumerable(Of TestValue), testTypeBabyDiaper As TestTypeBabyDiaper, testValueType As TestValueType) As BabyDiaperTestValue
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the test values containing the wanted item
+    - id: testTypeBabyDiaper
+      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+      description: the type of the baby diaper. <xref href="Intranet.Labor.Model.labor.TestTypeBabyDiaper" data-throw-if-not-resolved="false"></xref>
+    - id: testValueType
+      type: Intranet.Labor.Model.labor.TestValueType
+      description: the value type of the baby diaper. <xref href="Intranet.Labor.Model.labor.TestValueType" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: ''
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(IEnumerable(Of TestValue), TestTypeBabyDiaper, TestValueType)
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue), Intranet.Labor.Model.labor.TestTypeBabyDiaper, Intranet.Labor.Model.labor.TestValueType)
+  name.vb: GetBabyDiaperTestValueForType(IEnumerable(Of TestValue), TestTypeBabyDiaper, TestValueType)
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  id: ToPenetrationTime(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToPenetrationTime(BabyDiaperTestValue)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime(BabyDiaperTestValue)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToPenetrationTime
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the Penetration Time View Model out of the BabyDiaperTestValue Model\n"
+  example: []
+  syntax:
+    content: BabyDiaperPenetrationTime ToPenetrationTime(BabyDiaperTestValue penetrationTime)
+    content.vb: Function ToPenetrationTime(penetrationTime As BabyDiaperTestValue) As BabyDiaperPenetrationTime
+    parameters:
+    - id: penetrationTime
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the Baby Diaper Test value with the penetration time data
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+      description: The Penetration Time View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToPenetrationTimeAverage(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToPenetrationTimeAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 38
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a BabyDiaperPenetrationTime Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperPenetrationTime ToPenetrationTimeAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToPenetrationTimeAverage(testValues As IEnumerable(Of TestValue)) As BabyDiaperPenetrationTime
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+      description: a class representing the penetration time with the average
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToPenetrationTimeAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToPenetrationTimeStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToPenetrationTimeStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a BabyDiaperPenetrationTime Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperPenetrationTime ToPenetrationTimeStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToPenetrationTimeStandardDeviation(testValues As IEnumerable(Of TestValue)) As BabyDiaperPenetrationTime
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+      description: a class representing the penetration time with the standard deviation
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToPenetrationTimeStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  id: ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToPenetrationTimeTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToPenetrationTimeTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the BabyDiaperPenetrationTime TestValue from diffrent input data\n"
+  example: []
+  syntax:
+    content: BabyDiaperPenetrationTimeTestValue ToPenetrationTimeTestValue(BabyDiaperTestValue penetrationTime, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToPenetrationTimeTestValue(penetrationTime As BabyDiaperTestValue, testPerson As String, prodCode As String, testValueId As Integer) As BabyDiaperPenetrationTimeTestValue
+    parameters:
+    - id: penetrationTime
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the baby diaper test value containing the penetration time data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the testvalue
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+      description: a Penetration Time test value
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToPenetrationTimeTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToPenetrationTimeTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 62
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the penetration time test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<BabyDiaperPenetrationTimeTestValue> ToPenetrationTimeTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToPenetrationTimeTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of BabyDiaperPenetrationTimeTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the penetration time tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+      description: a collection for all penetration time tests
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToPenetrationTimeTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  id: ToRetention(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetention(BabyDiaperTestValue)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetention(BabyDiaperTestValue)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetention
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 69
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the BabyDiaperRetention View Model out of the BabyDiaperTestValue Model\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetention ToRetention(BabyDiaperTestValue retention)
+    content.vb: Function ToRetention(retention As BabyDiaperTestValue) As BabyDiaperRetention
+    parameters:
+    - id: retention
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the Baby Diaper Test value with the retention data
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetention
+      description: The BabyDiaperRetention View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionAverage(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 76
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a retention Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetention ToRetentionAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionAverage(testValues As IEnumerable(Of TestValue)) As BabyDiaperRetention
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetention
+      description: a class representing the retention with the average
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 83
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a BabyDiaperRetention Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetention ToRetentionStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionStandardDeviation(testValues As IEnumerable(Of TestValue)) As BabyDiaperRetention
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetention
+      description: a class representing the retention with the standard deviation
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  id: ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 93
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the RetentionTestValues from diffrent input data\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetentionTestValue ToRetentionTestValue(BabyDiaperTestValue retention, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToRetentionTestValue(retention As BabyDiaperTestValue, testPerson As String, prodCode As String, testValueId As Integer) As BabyDiaperRetentionTestValue
+    parameters:
+    - id: retention
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the baby diaper test value containing the retention data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the test value
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+      description: a test value for the retention test
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 100
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the retention  test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<BabyDiaperRetentionTestValue> ToRetentionTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of BabyDiaperRetentionTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the retention tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+      description: a collection for all retention tests
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  id: ToRewet(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewet(BabyDiaperTestValue)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewet(BabyDiaperTestValue)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewet
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the BabyDiaperRewet View Model out of the BabyDiaperTestValue Model\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewet ToRewet(BabyDiaperTestValue rewet)
+    content.vb: Function ToRewet(rewet As BabyDiaperTestValue) As BabyDiaperRewet
+    parameters:
+    - id: rewet
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the Baby Diaper Test value with the rewet data
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewet
+      description: The rewet View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetAverage(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 114
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rewet Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewet ToRewetAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetAverage(testValues As IEnumerable(Of TestValue)) As BabyDiaperRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewet
+      description: a class representing the rewet with the average
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 121
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a BabyDiaperRewet Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewet ToRewetStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetStandardDeviation(testValues As IEnumerable(Of TestValue)) As BabyDiaperRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewet
+      description: a class representing the rewet with the standard deviation
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  id: ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 131
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the BabyDiaperRewet TestValue from diffrent input data\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewetTestValue ToRewetTestValue(BabyDiaperTestValue rewet, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToRewetTestValue(rewet As BabyDiaperTestValue, testPerson As String, prodCode As String, testValueId As Integer) As BabyDiaperRewetTestValue
+    parameters:
+    - id: rewet
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the baby diaper test value containing the rewet data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the test value
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+      description: the test value for the rewet test
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 138
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the rewet test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<BabyDiaperRewetTestValue> ToRewetTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of BabyDiaperRewetTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the rewet tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+      description: a collection for all rewet tests
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo(System.String,System.String,System.Double,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo(System.String,System.String,System.Double,System.Int32)
+  id: toTestInfo(System.String,System.String,System.Double,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: toTestInfo(String, String, Double, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.toTestInfo(String, String, Double, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo(System.String, System.String, System.Double, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: toTestInfo
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 148
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates to BabyDiaperTestInfo from diffrent input data\n"
+  example: []
+  syntax:
+    content: BabyDiaperTestInfo toTestInfo(string testPerson, string prodCode, double weightDiaperDry, int testValueId)
+    content.vb: Function toTestInfo(testPerson As String, prodCode As String, weightDiaperDry As Double, testValueId As Integer) As BabyDiaperTestInfo
+    parameters:
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the prodcution code from the diaper
+    - id: weightDiaperDry
+      type: System.Double
+      description: the weight of the dry diaper
+    - id: testValueId
+      type: System.Int32
+      description: the id of the testvalue
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperTestInfo
+      description: a BabyDiaperTestInfo
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo*
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper},System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,``0})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper},System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,``0})
+  id: ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper},System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,``0})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue>, TestValueType, ICollection<TestTypeBabyDiaper>, Func<BabyDiaperTestValue, String, String, Int32, T>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue>, TestValueType, ICollection<TestTypeBabyDiaper>, Func<BabyDiaperTestValue, String, String, Int32, T>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>, Intranet.Labor.Model.labor.TestValueType, System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestTypeBabyDiaper>, System.Func<Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32, T>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToTestValuesCollectionByTestType
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 169
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input\nparameter\n"
+  example: []
+  syntax:
+    content: Collection<T> ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue> testValue, TestValueType testValueType, ICollection<TestTypeBabyDiaper> testTypeBabyDiaper, Func<BabyDiaperTestValue, string, string, int, T> toTestTypeTestValueAction)
+    content.vb: Function ToTestValuesCollectionByTestType(Of T)(testValue As IEnumerable(Of TestValue), testValueType As TestValueType, testTypeBabyDiaper As ICollection(Of TestTypeBabyDiaper), toTestTypeTestValueAction As Func(Of BabyDiaperTestValue, String, String, Integer, T)) As Collection(Of T)
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues that contain the data
+    - id: testValueType
+      type: Intranet.Labor.Model.labor.TestValueType
+      description: the value type of the test. <xref href="Intranet.Labor.Model.labor.TestValueType" data-throw-if-not-resolved="false"></xref>
+    - id: testTypeBabyDiaper
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper}
+      description: the type of the baby diaper. <xref href="Intranet.Labor.Model.labor.TestTypeBabyDiaper" data-throw-if-not-resolved="false"></xref>
+    - id: toTestTypeTestValueAction
+      type: System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,{T}}
+      description: "\nthe action the get the correct data for a collection item. For example:\n<xref href=\"Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    typeParameters:
+    - id: T
+      description: "\nthe collection type. For example: <xref href=\"Intranet.Labor.ViewModel.BabyDiaperRewetTestValue\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue\" data-throw-if-not-resolved=\"false\"></xref>,<xref href=\"Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    return:
+      type: System.Collections.ObjectModel.Collection{{T}}
+      description: "\nA Collection with the Type of the output from the <em>toTestTypeTestValueAction</em> given as a\ninput action\n"
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)(IEnumerable(Of TestValue), TestValueType, ICollection(Of TestTypeBabyDiaper), Func(Of BabyDiaperTestValue, String, String, Int32, T))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue), Intranet.Labor.Model.labor.TestValueType, System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestTypeBabyDiaper), System.Func(Of Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32, T))
+  name.vb: ToTestValuesCollectionByTestType(Of T)(IEnumerable(Of TestValue), TestValueType, ICollection(Of TestTypeBabyDiaper), Func(Of BabyDiaperTestValue, String, String, Int32, T))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  id: ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue>, String, String)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue>, String, String)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValue>, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ValidateTestValueOnlyExactlyOneHasToExist
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 183
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nValidates the test value where only one item is allowed to exists for the given input parameter. Throws a\n<xref href=\"System.IO.InvalidDataException\" data-throw-if-not-resolved=\"false\"></xref> if more than one or none is found.\nUsed for example as average or standard deviation.\n"
+  example: []
+  syntax:
+    content: TestValue ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue> testValue, string testType, string valueType)
+    content.vb: Function ValidateTestValueOnlyExactlyOneHasToExist(testValue As ICollection(Of TestValue), testType As String, valueType As String) As TestValue
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalue collection to validate.
+    - id: testType
+      type: System.String
+      description: the testtype that is validate
+    - id: valueType
+      type: System.String
+      description: the valuetype that is validated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: ''
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(ICollection(Of TestValue), String, String)
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValue), System.String, System.String)
+  name.vb: ValidateTestValueOnlyExactlyOneHasToExist(ICollection(Of TestValue), String, String)
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  id: ValidateRequiredItem``1(``0,System.String)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ValidateRequiredItem<T>(T, String)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem<T>(T, String)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem<T>(T, System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ValidateRequiredItem
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 192
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nValidates a required item\n"
+  example: []
+  syntax:
+    content: void ValidateRequiredItem<T>(T item, string name)
+    content.vb: Sub ValidateRequiredItem(Of T)(item As T, name As String)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: the idtem to be validated
+    - id: name
+      type: System.String
+      description: the name of the item
+    typeParameters:
+    - id: T
+      description: the type of the item
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem*
+  exceptions:
+  - type: System.IO.InvalidDataException
+    commentId: T:System.IO.InvalidDataException
+    description: a Invalid Data Exception because the item must be set
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem(Of T)(T, String)
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem(Of T)(T, System.String)
+  name.vb: ValidateRequiredItem(Of T)(T, String)
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ComputeWeightStandardDeviationAll(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ComputeWeightStandardDeviationAll
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 197
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ngets the weight for the standard deviation for all tests\n"
+  example: []
+  syntax:
+    content: double ComputeWeightStandardDeviationAll(IEnumerable<TestValue> testValue)
+    content.vb: Function ComputeWeightStandardDeviationAll(testValue As IEnumerable(Of TestValue)) As Double
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ComputeWeightStandardDeviationAll(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ComputeWeightAverageAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ComputeWeightAverageAll(IEnumerable<TestValue>)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ComputeWeightAverageAll
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 202
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ngets the average weight for all tests\n"
+  example: []
+  syntax:
+    content: double ComputeWeightAverageAll(IEnumerable<TestValue> testValue)
+    content.vb: Function ComputeWeightAverageAll(testValue As IEnumerable(Of TestValue)) As Double
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll*
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ComputeWeightAverageAll(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+  id: CanUserEdit
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CanUserEdit()
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.CanUserEdit()
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CanUserEdit
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorServiceHelper.cs
+    startLine: 208
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nComputes if the user can Edit the Baby Diaper\n"
+  example: []
+  syntax:
+    content: bool CanUserEdit()
+    content.vb: Function CanUserEdit As Boolean
+    return:
+      type: System.Boolean
+      description: ''
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+- uid: Intranet.Labor.Model.labor.TestValueType
+  commentId: T:Intranet.Labor.Model.labor.TestValueType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValueType
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType
+  isExternal: false
+  name: GetBabyDiaperTestValueForType
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.GetBabyDiaperTestValueForType
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TestValue>
+  nameWithType: IEnumerable<TestValue>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: IEnumerable(Of TestValue)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: IEnumerable(Of TestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  commentId: T:Intranet.Labor.Model.labor.BabyDiaperTestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: BabyDiaperTestValue
+  nameWithType: BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime
+  isExternal: false
+  name: ToPenetrationTime
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTime
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperPenetrationTime
+  nameWithType: BabyDiaperPenetrationTime
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage
+  isExternal: false
+  name: ToPenetrationTimeAverage
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeAverage
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation
+  isExternal: false
+  name: ToPenetrationTimeStandardDeviation
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeStandardDeviation
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+  isExternal: false
+  name: ToPenetrationTimeTestValue
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperPenetrationTimeTestValue
+  nameWithType: BabyDiaperPenetrationTimeTestValue
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection
+  isExternal: false
+  name: ToPenetrationTimeTestValuesCollection
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperPenetrationTimeTestValue>
+  nameWithType: ICollection<BabyDiaperPenetrationTimeTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperPenetrationTimeTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue)
+  name.vb: ICollection(Of BabyDiaperPenetrationTimeTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+    name: BabyDiaperPenetrationTimeTestValue
+    nameWithType: BabyDiaperPenetrationTimeTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+    name: BabyDiaperPenetrationTimeTestValue
+    nameWithType: BabyDiaperPenetrationTimeTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTimeTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention
+  isExternal: false
+  name: ToRetention
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetention
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetention
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetention
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetention
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetention
+  nameWithType: BabyDiaperRetention
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetention
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage
+  isExternal: false
+  name: ToRetentionAverage
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionAverage
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation
+  isExternal: false
+  name: ToRetentionStandardDeviation
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionStandardDeviation
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+  isExternal: false
+  name: ToRetentionTestValue
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetentionTestValue
+  nameWithType: BabyDiaperRetentionTestValue
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+  isExternal: false
+  name: ToRetentionTestValuesCollection
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperRetentionTestValue>
+  nameWithType: ICollection<BabyDiaperRetentionTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperRetentionTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue)
+  name.vb: ICollection(Of BabyDiaperRetentionTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+    name: BabyDiaperRetentionTestValue
+    nameWithType: BabyDiaperRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+    name: BabyDiaperRetentionTestValue
+    nameWithType: BabyDiaperRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet
+  isExternal: false
+  name: ToRewet
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewet
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewet
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewet
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewet
+  nameWithType: BabyDiaperRewet
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage
+  isExternal: false
+  name: ToRewetAverage
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetAverage
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation
+  isExternal: false
+  name: ToRewetStandardDeviation
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetStandardDeviation
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+  isExternal: false
+  name: ToRewetTestValue
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewetTestValue
+  nameWithType: BabyDiaperRewetTestValue
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection
+  isExternal: false
+  name: ToRewetTestValuesCollection
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.BabyDiaperRewetTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<BabyDiaperRewetTestValue>
+  nameWithType: ICollection<BabyDiaperRewetTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.BabyDiaperRewetTestValue>
+  nameWithType.vb: ICollection(Of BabyDiaperRewetTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.BabyDiaperRewetTestValue)
+  name.vb: ICollection(Of BabyDiaperRewetTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+    name: BabyDiaperRewetTestValue
+    nameWithType: BabyDiaperRewetTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+    name: BabyDiaperRewetTestValue
+    nameWithType: BabyDiaperRewetTestValue
+    fullName: Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo
+  isExternal: false
+  name: toTestInfo
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.toTestInfo
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.toTestInfo
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.BabyDiaperTestInfo
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperTestInfo
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperTestInfo
+  nameWithType: BabyDiaperTestInfo
+  fullName: Intranet.Labor.ViewModel.BabyDiaperTestInfo
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  isExternal: true
+  name: ToRewetTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToRewetTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToRewetTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRewetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  isExternal: true
+  name: ToRetentionTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToRetentionTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToRetentionTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToRetentionTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  isExternal: true
+  name: ToPenetrationTimeTestValue(BabyDiaperTestValue, String, String, Int32)
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(BabyDiaperTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToPenetrationTimeTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue(Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32)
+    name: ToPenetrationTimeTestValue
+    nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+    fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToPenetrationTimeTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType
+  isExternal: false
+  name: ToTestValuesCollectionByTestType<T>
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)
+  fullname.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)
+  name.vb: ToTestValuesCollectionByTestType(Of T)
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeBabyDiaper}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestTypeBabyDiaper>
+  nameWithType: ICollection<TestTypeBabyDiaper>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestTypeBabyDiaper>
+  nameWithType.vb: ICollection(Of TestTypeBabyDiaper)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestTypeBabyDiaper)
+  name.vb: ICollection(Of TestTypeBabyDiaper)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+    name: TestTypeBabyDiaper
+    nameWithType: TestTypeBabyDiaper
+    fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+    name: TestTypeBabyDiaper
+    nameWithType: TestTypeBabyDiaper
+    fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,{T}}
+  commentId: T:System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.String,System.String,System.Int32,``0}
+  parent: System
+  definition: System.Func`5
+  name: Func<BabyDiaperTestValue, String, String, Int32, T>
+  nameWithType: Func<BabyDiaperTestValue, String, String, Int32, T>
+  fullName: System.Func<Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32, T>
+  nameWithType.vb: Func(Of BabyDiaperTestValue, String, String, Int32, T)
+  fullname.vb: System.Func(Of Intranet.Labor.Model.labor.BabyDiaperTestValue, System.String, System.String, System.Int32, T)
+  name.vb: Func(Of BabyDiaperTestValue, String, String, Int32, T)
+  spec.csharp:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.Collection{{T}}
+  commentId: T:System.Collections.ObjectModel.Collection{``0}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.Collection`1
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullname.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IBabyDiaperLaborCreatorServiceHelper
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper
+- uid: System.Func`5
+  commentId: T:System.Func`5
+  isExternal: true
+  name: Func<T1, T2, T3, T4, TResult>
+  nameWithType: Func<T1, T2, T3, T4, TResult>
+  fullName: System.Func<T1, T2, T3, T4, TResult>
+  nameWithType.vb: Func(Of T1, T2, T3, T4, TResult)
+  fullname.vb: System.Func(Of T1, T2, T3, T4, TResult)
+  name.vb: Func(Of T1, T2, T3, T4, TResult)
+  spec.csharp:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.Collection`1
+  commentId: T:System.Collections.ObjectModel.Collection`1
+  isExternal: true
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullname.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: System.IO.InvalidDataException
+  commentId: T:System.IO.InvalidDataException
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+  isExternal: false
+  name: ValidateTestValueOnlyExactlyOneHasToExist
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestValue>
+  nameWithType: ICollection<TestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: ICollection(Of TestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: ICollection(Of TestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem
+  isExternal: false
+  name: ValidateRequiredItem<T>
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem<T>
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem<T>
+  nameWithType.vb: IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem(Of T)
+  fullname.vb: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ValidateRequiredItem(Of T)
+  name.vb: ValidateRequiredItem(Of T)
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll
+  isExternal: false
+  name: ComputeWeightStandardDeviationAll
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightStandardDeviationAll
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll
+  isExternal: false
+  name: ComputeWeightAverageAll
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.ComputeWeightAverageAll
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+  isExternal: false
+  name: CanUserEdit
+  nameWithType: IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorServiceHelper.CanUserEdit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
