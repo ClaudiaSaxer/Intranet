@@ -30,9 +30,7 @@ items:
     content: 'public class BabyDiaperTestValueRepository : GenericRepository<LaborContext, BabyDiaperTestValue>, IGenericRepository<BabyDiaperTestValue>, IDisposable'
     content.vb: >-
       Public Class BabyDiaperTestValueRepository
-
           Inherits GenericRepository(Of LaborContext, BabyDiaperTestValue)
-
           Implements IGenericRepository(Of BabyDiaperTestValue), IDisposable
   inheritance:
   - System.Object

@@ -32,9 +32,7 @@ items:
     content: 'public class LaborHomeService : ServiceBase, ILaborHomeService'
     content.vb: >-
       Public Class LaborHomeService
-
           Inherits ServiceBase
-
           Implements ILaborHomeService
   inheritance:
   - System.Object

@@ -30,7 +30,6 @@ items:
     content: 'public interface IDatabaseFactory<out TContext> : IDisposable where TContext : DbContext, new ()'
     content.vb: >-
       Public Interface IDatabaseFactory(Of Out TContext As {DbContext, New})
-
           Inherits IDisposable
     typeParameters:
     - id: TContext

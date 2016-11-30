@@ -36,7 +36,6 @@ items:
     content: 'public class BabyDiaperRetentionController : BaseController'
     content.vb: >-
       Public Class BabyDiaperRetentionController
-
           Inherits BaseController
   inheritance:
   - System.Object

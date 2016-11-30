@@ -33,9 +33,7 @@ items:
     content: 'public abstract class BaseController : Controller, IActionFilter, IAuthenticationFilter, IAuthorizationFilter, IDisposable, IExceptionFilter, IResultFilter, IAsyncController, IController, IAsyncManagerContainer'
     content.vb: >-
       Public MustInherit Class BaseController
-
           Inherits Controller
-
           Implements IActionFilter, IAuthenticationFilter, IAuthorizationFilter, IDisposable, IExceptionFilter, IResultFilter, IAsyncController, IController, IAsyncManagerContainer
   inheritance:
   - System.Object

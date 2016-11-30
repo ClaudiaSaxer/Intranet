@@ -33,9 +33,7 @@ items:
     content: 'public class SettingsService : ServiceBase, ISettingsService'
     content.vb: >-
       Public Class SettingsService
-
           Inherits ServiceBase
-
           Implements ISettingsService
   inheritance:
   - System.Object

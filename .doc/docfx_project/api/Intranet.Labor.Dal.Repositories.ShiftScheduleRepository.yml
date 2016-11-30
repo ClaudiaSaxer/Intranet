@@ -30,9 +30,7 @@ items:
     content: 'public class ShiftScheduleRepository : GenericRepository<LaborContext, ShiftSchedule>, IGenericRepository<ShiftSchedule>, IDisposable'
     content.vb: >-
       Public Class ShiftScheduleRepository
-
           Inherits GenericRepository(Of LaborContext, ShiftSchedule)
-
           Implements IGenericRepository(Of ShiftSchedule), IDisposable
   inheritance:
   - System.Object

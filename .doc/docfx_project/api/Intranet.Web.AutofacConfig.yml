@@ -30,7 +30,6 @@ items:
     content: 'public class AutofacConfig : object'
     content.vb: >-
       Public Class AutofacConfig
-
           Inherits Object
   inheritance:
   - System.Object

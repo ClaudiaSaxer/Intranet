@@ -35,9 +35,7 @@ items:
     content: 'public class InkoAquisitionServiceHelper : ServiceBase, IInkoAquisitionServiceHelper'
     content.vb: >-
       Public Class InkoAquisitionServiceHelper
-
           Inherits ServiceBase
-
           Implements IInkoAquisitionServiceHelper
   inheritance:
   - System.Object
@@ -230,7 +228,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateAquisitionAverageAndStv
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-    startLine: 82
+    startLine: 84
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -271,7 +269,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateAquisitionTest
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-    startLine: 109
+    startLine: 111
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

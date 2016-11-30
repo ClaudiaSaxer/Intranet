@@ -37,9 +37,7 @@ items:
     content: 'public class InkoAquisitionService : ServiceBase, IInkoAquisitionService'
     content.vb: >-
       Public Class InkoAquisitionService
-
           Inherits ServiceBase
-
           Implements IInkoAquisitionService
   inheritance:
   - System.Object
@@ -310,7 +308,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetNewInkoAquisitionEditViewModel
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 132
+    startLine: 134
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -351,7 +349,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Save
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 173
+    startLine: 177
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

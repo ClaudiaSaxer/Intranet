@@ -33,9 +33,7 @@ items:
     content: 'public class DbCommit<TContext> : DisposableBase, IDbCommit<TContext>, IDisposable where TContext : DbContext, new ()'
     content.vb: >-
       Public Class DbCommit(Of TContext As {DbContext, New})
-
           Inherits DisposableBase
-
           Implements IDbCommit(Of TContext), IDisposable
     typeParameters:
     - id: TContext

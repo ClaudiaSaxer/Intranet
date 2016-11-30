@@ -31,7 +31,6 @@ items:
     content: 'public class IncontinencePadLaborCreatorBll : IIncontinencePadLaborCreatorBll'
     content.vb: >-
       Public Class IncontinencePadLaborCreatorBll
-
           Implements IIncontinencePadLaborCreatorBll
   inheritance:
   - System.Object

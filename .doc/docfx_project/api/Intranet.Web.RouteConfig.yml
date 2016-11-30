@@ -30,7 +30,6 @@ items:
     content: 'public class RouteConfig : object'
     content.vb: >-
       Public Class RouteConfig
-
           Inherits Object
   inheritance:
   - System.Object

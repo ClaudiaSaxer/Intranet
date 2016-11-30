@@ -30,7 +30,6 @@ items:
     content: 'public class MvcApplication : HttpApplication'
     content.vb: >-
       Public Class MvcApplication
-
           Inherits HttpApplication
   inheritance:
   - System.Object

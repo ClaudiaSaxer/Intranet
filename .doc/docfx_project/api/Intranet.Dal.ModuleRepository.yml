@@ -30,9 +30,7 @@ items:
     content: 'public class ModuleRepository : GenericRepository<IntranetContext, Module>, IGenericRepository<Module>, IDisposable'
     content.vb: >-
       Public Class ModuleRepository
-
           Inherits GenericRepository(Of IntranetContext,  Module)
-
           Implements IGenericRepository(Of  Module), IDisposable
   inheritance:
   - System.Object

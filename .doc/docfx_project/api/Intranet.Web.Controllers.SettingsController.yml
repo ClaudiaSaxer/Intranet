@@ -33,7 +33,6 @@ items:
     content: 'public class SettingsController : BaseController'
     content.vb: >-
       Public Class SettingsController
-
           Inherits BaseController
   inheritance:
   - System.Object

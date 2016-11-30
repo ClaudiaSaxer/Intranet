@@ -32,10 +32,7 @@ items:
     content: 'public class DefaultModule : Module'
     content.vb: >-
       Public Class DefaultModule
-
           Inherits
-
-
 
            Module
   inheritance:

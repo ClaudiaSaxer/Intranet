@@ -32,9 +32,7 @@ items:
     content: 'public class HistoryService : ServiceBase, IHistoryService'
     content.vb: >-
       Public Class HistoryService
-
           Inherits ServiceBase
-
           Implements IHistoryService
   inheritance:
   - System.Object

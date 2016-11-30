@@ -31,9 +31,7 @@ items:
     content: 'public class LaborCreatorServiceHelper : ServiceBase, ILaborCreatorServiceHelper'
     content.vb: >-
       Public Class LaborCreatorServiceHelper
-
           Inherits ServiceBase
-
           Implements ILaborCreatorServiceHelper
   inheritance:
   - System.Object

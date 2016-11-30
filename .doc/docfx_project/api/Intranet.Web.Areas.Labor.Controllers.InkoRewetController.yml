@@ -36,7 +36,6 @@ items:
     content: 'public class InkoRewetController : BaseController'
     content.vb: >-
       Public Class InkoRewetController
-
           Inherits BaseController
   inheritance:
   - System.Object

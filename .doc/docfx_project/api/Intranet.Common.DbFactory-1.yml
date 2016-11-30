@@ -34,9 +34,7 @@ items:
     content: 'public class DbFactory<TContext> : DisposableBase, IDatabaseFactory<TContext>, IDisposable where TContext : DbContext, new ()'
     content.vb: >-
       Public Class DbFactory(Of TContext As {DbContext, New})
-
           Inherits DisposableBase
-
           Implements IDatabaseFactory(Of TContext), IDisposable
     typeParameters:
     - id: TContext

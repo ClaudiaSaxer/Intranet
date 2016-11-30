@@ -31,7 +31,6 @@ items:
     content: 'public class HistoryBll : IHistoryBll'
     content.vb: >-
       Public Class HistoryBll
-
           Implements IHistoryBll
   inheritance:
   - System.Object

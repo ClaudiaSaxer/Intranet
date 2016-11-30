@@ -36,7 +36,6 @@ items:
     content: 'public class InkoAquisitionController : BaseController'
     content.vb: >-
       Public Class InkoAquisitionController
-
           Inherits BaseController
   inheritance:
   - System.Object

@@ -35,9 +35,7 @@ items:
     content: 'public class BabyDiaperRewetServiceHelper : ServiceBase, IBabyDiaperRewetServiceHelper'
     content.vb: >-
       Public Class BabyDiaperRewetServiceHelper
-
           Inherits ServiceBase
-
           Implements IBabyDiaperRewetServiceHelper
   inheritance:
   - System.Object

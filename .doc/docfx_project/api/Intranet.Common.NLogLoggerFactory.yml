@@ -32,7 +32,6 @@ items:
     content: 'public class NLogLoggerFactory : ILoggerFactory'
     content.vb: >-
       Public Class NLogLoggerFactory
-
           Implements ILoggerFactory
   inheritance:
   - System.Object

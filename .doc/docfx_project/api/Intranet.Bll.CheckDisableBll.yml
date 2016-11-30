@@ -31,7 +31,6 @@ items:
     content: 'public class CheckDisableBll : ICheckDisableBll'
     content.vb: >-
       Public Class CheckDisableBll
-
           Implements ICheckDisableBll
   inheritance:
   - System.Object

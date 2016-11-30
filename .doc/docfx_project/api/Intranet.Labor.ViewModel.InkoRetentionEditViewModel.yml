@@ -5,6 +5,8 @@ items:
   id: InkoRetentionEditViewModel
   parent: Intranet.Labor.ViewModel
   children:
+  - Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+  - Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
   - Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeight
   - Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeightAfterZentrifuge
   - Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeightWet
@@ -32,7 +34,6 @@ items:
     content: 'public class InkoRetentionEditViewModel : BaseTestEditViewModel'
     content.vb: >-
       Public Class InkoRetentionEditViewModel
-
           Inherits BaseTestEditViewModel
   inheritance:
   - System.Object
@@ -59,6 +60,140 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+  commentId: P:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+  id: ExpireMonth
+  parent: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ExpireMonth
+  nameWithType: InkoRetentionEditViewModel.ExpireMonth
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireMonth
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ExpireMonth\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Ablauf-Monat muss angegeben werden")]
+
+      [Range(1, 12, ErrorMessage = "Die Zahl muss zwischen 1 und 12 liegen.")]
+
+      public int ExpireMonth { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Ablauf-Monat muss angegeben werden")>
+
+      <Range(1, 12, ErrorMessage:="Die Zahl muss zwischen 1 und 12 liegen.")>
+
+      Public Property ExpireMonth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ExpireMonth\n"
+  overload: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Ablauf-Monat muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1
+    - type: System.Int32
+      value: 12
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss zwischen 1 und 12 liegen.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
+  commentId: P:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
+  id: ExpireYear
+  parent: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ExpireYear
+  nameWithType: InkoRetentionEditViewModel.ExpireYear
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireYear
+    path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ExpireYear\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Das Ablauf-Jahr muss angegeben werden")]
+
+      [Range(0, 9999, ErrorMessage = "Die Zahl muss zwischen 0 und 9999 liegen.")]
+
+      public int ExpireYear { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Das Ablauf-Jahr muss angegeben werden")>
+
+      <Range(0, 9999, ErrorMessage:="Die Zahl muss zwischen 0 und 9999 liegen.")>
+
+      Public Property ExpireYear As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ExpireYear\n"
+  overload: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Das Ablauf-Jahr muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 9999
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Zahl muss zwischen 0 und 9999 liegen.
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeight
   commentId: P:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeight
   id: InkoWeight
@@ -77,7 +212,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeight
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-    startLine: 23
+    startLine: 45
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -144,7 +279,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeightWet
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-    startLine: 34
+    startLine: 56
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -211,7 +346,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeightAfterZentrifuge
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-    startLine: 45
+    startLine: 67
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -622,6 +757,25 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+  isExternal: false
+  name: ExpireMonth
+  nameWithType: InkoRetentionEditViewModel.ExpireMonth
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireMonth
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear*
+  commentId: Overload:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
+  isExternal: false
+  name: ExpireYear
+  nameWithType: InkoRetentionEditViewModel.ExpireYear
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.ExpireYear
 - uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeight*
   commentId: Overload:Intranet.Labor.ViewModel.InkoRetentionEditViewModel.InkoWeight
   isExternal: false

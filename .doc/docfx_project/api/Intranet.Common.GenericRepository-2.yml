@@ -48,9 +48,7 @@ items:
     content: 'public abstract class GenericRepository<TContext, TEntity> : DisposableBase, IGenericRepository<TEntity>, IDisposable where TContext : DbContext, new ()where TEntity : class'
     content.vb: >-
       Public MustInherit Class GenericRepository(Of TContext As {DbContext, New}, TEntity As Class)
-
           Inherits DisposableBase
-
           Implements IGenericRepository(Of TEntity), IDisposable
     typeParameters:
     - id: TContext

@@ -32,7 +32,6 @@ items:
     content: 'public class LaborHomeController : BaseController'
     content.vb: >-
       Public Class LaborHomeController
-
           Inherits BaseController
   inheritance:
   - System.Object

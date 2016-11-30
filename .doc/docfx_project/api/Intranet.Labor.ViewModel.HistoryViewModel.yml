@@ -79,6 +79,8 @@ items:
 
       [MinLength(3, ErrorMessage = "Fertigunsnummer muss mindestens 3 Zeichen lang sein.")]
 
+      [RegularExpression("FA[0-9]*", ErrorMessage = "Fertigungsnummer muss mit FA beginnen und mit Nummern Enden.")]
+
       public string FaNr { get; set; }
     content.vb: >-
       <DataType(DataType.Text, ErrorMessage:="Nummer muss ein Test sein")>
@@ -86,6 +88,8 @@ items:
       <StringLength(1024, ErrorMessage:="Fertigungsnummer darf nicht länger als 1024 Zeichen sein.")>
 
       <MinLength(3, ErrorMessage:="Fertigunsnummer muss mindestens 3 Zeichen lang sein.")>
+
+      <RegularExpression("FA[0-9]*", ErrorMessage:="Fertigungsnummer muss mit FA beginnen und mit Nummern Enden.")>
 
       Public Property FaNr As String
     parameters: []
@@ -121,6 +125,15 @@ items:
     - name: ErrorMessage
       type: System.String
       value: Fertigunsnummer muss mindestens 3 Zeichen lang sein.
+  - type: System.ComponentModel.DataAnnotations.RegularExpressionAttribute
+    ctor: System.ComponentModel.DataAnnotations.RegularExpressionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: FA[0-9]*
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Fertigungsnummer muss mit FA beginnen und mit Nummern Enden.
   modifiers.csharp:
   - public
   - get
@@ -145,7 +158,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Message
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -183,7 +196,7 @@ items:
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Sheets
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-    startLine: 42
+    startLine: 43
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

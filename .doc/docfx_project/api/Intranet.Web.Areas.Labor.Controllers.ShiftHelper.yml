@@ -36,9 +36,7 @@ items:
     content: 'public class ShiftHelper : ServiceBase, IShiftHelper'
     content.vb: >-
       Public Class ShiftHelper
-
           Inherits ServiceBase
-
           Implements IShiftHelper
   inheritance:
   - System.Object

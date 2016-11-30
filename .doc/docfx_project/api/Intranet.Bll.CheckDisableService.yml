@@ -31,7 +31,6 @@ items:
     content: 'public class CheckDisableService : ICheckDisableService'
     content.vb: >-
       Public Class CheckDisableService
-
           Implements ICheckDisableService
   inheritance:
   - System.Object
