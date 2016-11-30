@@ -1,0 +1,937 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BaseTestEditViewModel
+  id: BaseTestEditViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  - Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  langs:
+  - csharp
+  - vb
+  name: BaseTestEditViewModel
+  nameWithType: BaseTestEditViewModel
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BaseTestEditViewModel
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the Base ViewModel for all TestEdit ViewModels\n"
+  example: []
+  syntax:
+    content: public class BaseTestEditViewModel
+    content.vb: Public Class BaseTestEditViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  id: TestValueId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestValueId
+  nameWithType: BaseTestEditViewModel.TestValueId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueId
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ID of the Inko test\n"
+  example: []
+  syntax:
+    content: public int TestValueId { get; set; }
+    content.vb: Public Property TestValueId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ID of the Inko test\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  id: TestSheetId
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestSheetId
+  nameWithType: BaseTestEditViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetId
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ID of the Test Sheet\n"
+  example: []
+  syntax:
+    content: public int TestSheetId { get; set; }
+    content.vb: Public Property TestSheetId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ID of the Test Sheet\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  id: TestPerson
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: TestPerson
+  nameWithType: BaseTestEditViewModel.TestPerson
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestPerson
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the TestPerson\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Name darf nicht leer sein")]
+
+      [DataType(DataType.Text, ErrorMessage = "Name muss ein Text sein")]
+
+      [StringLength(1024, ErrorMessage = "Der Name darf nicht länger als 1024 Zeichen sein")]
+
+      [MinLength(2, ErrorMessage = "Der Name muss mindestens 2 Zeichen lang sein")]
+
+      public string TestPerson { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Name darf nicht leer sein")>
+
+      <DataType(DataType.Text, ErrorMessage:="Name muss ein Text sein")>
+
+      <StringLength(1024, ErrorMessage:="Der Name darf nicht länger als 1024 Zeichen sein")>
+
+      <MinLength(2, ErrorMessage:="Der Name muss mindestens 2 Zeichen lang sein")>
+
+      Public Property TestPerson As String
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe TestPerson\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Name darf nicht leer sein
+  - type: System.ComponentModel.DataAnnotations.DataTypeAttribute
+    ctor: System.ComponentModel.DataAnnotations.DataTypeAttribute.#ctor(System.ComponentModel.DataAnnotations.DataType)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.DataType
+      value: 7
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Name muss ein Text sein
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1024
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Name darf nicht länger als 1024 Zeichen sein
+  - type: System.ComponentModel.DataAnnotations.MinLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.MinLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 2
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Name muss mindestens 2 Zeichen lang sein
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  id: ProductionCode
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProductionCode
+  nameWithType: BaseTestEditViewModel.ProductionCode
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionCode
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ProductionCode\n"
+  example: []
+  syntax:
+    content: public string ProductionCode { get; set; }
+    content.vb: Public Property ProductionCode As String
+    parameters: []
+    return:
+      type: System.String
+      description: "\nThe ProductionCode\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  id: ProductionCodeDay
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProductionCodeDay
+  nameWithType: BaseTestEditViewModel.ProductionCodeDay
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionCodeDay
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ProductionCodeDay\n"
+  example: []
+  syntax:
+    content: >-
+      [Required(ErrorMessage = "Der Tag muss angegeben werden")]
+
+      [Range(0, 366, ErrorMessage = "Die Anzahl Tage dürfen ein Jahr nicht überschreiten")]
+
+      public int ProductionCodeDay { get; set; }
+    content.vb: >-
+      <Required(ErrorMessage:="Der Tag muss angegeben werden")>
+
+      <Range(0, 366, ErrorMessage:="Die Anzahl Tage dürfen ein Jahr nicht überschreiten")>
+
+      Public Property ProductionCodeDay As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe ProductionCodeDay\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.RequiredAttribute
+    ctor: System.ComponentModel.DataAnnotations.RequiredAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Der Tag muss angegeben werden
+  - type: System.ComponentModel.DataAnnotations.RangeAttribute
+    ctor: System.ComponentModel.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 0
+    - type: System.Int32
+      value: 366
+    namedArguments:
+    - name: ErrorMessage
+      type: System.String
+      value: Die Anzahl Tage dürfen ein Jahr nicht überschreiten
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  id: ProductionCodeTime
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: ProductionCodeTime
+  nameWithType: BaseTestEditViewModel.ProductionCodeTime
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionCodeTime
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 72
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the ProductionCodeTime\n"
+  example: []
+  syntax:
+    content: public TimeSpan ProductionCodeTime { get; set; }
+    content.vb: Public Property ProductionCodeTime As TimeSpan
+    parameters: []
+    return:
+      type: System.TimeSpan
+      description: "\nThe ProductionCodeTime\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  id: Notes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: Notes
+  nameWithType: BaseTestEditViewModel.Notes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Notes
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 80
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the Collection of Notes\n"
+  example: []
+  syntax:
+    content: public IList<TestNote> Notes { get; set; }
+    content.vb: Public Property Notes As IList(Of TestNote)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+      description: "\nThe Collection of Notes\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  commentId: P:Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  id: NoteCodes
+  parent: Intranet.Labor.ViewModel.BaseTestEditViewModel
+  langs:
+  - csharp
+  - vb
+  name: NoteCodes
+  nameWithType: BaseTestEditViewModel.NoteCodes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: NoteCodes
+    path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
+    startLine: 88
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the Collection of NoteCodes\n"
+  example: []
+  syntax:
+    content: public IList<ErrorCode> NoteCodes { get; set; }
+    content.vb: Public Property NoteCodes As IList(Of ErrorCode)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.ErrorCode}
+      description: "\nThe Collection of NoteCodes\n"
+  overload: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+  isExternal: false
+  name: TestValueId
+  nameWithType: BaseTestEditViewModel.TestValueId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestValueId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+  isExternal: false
+  name: TestSheetId
+  nameWithType: BaseTestEditViewModel.TestSheetId
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestSheetId
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+  isExternal: false
+  name: TestPerson
+  nameWithType: BaseTestEditViewModel.TestPerson
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.TestPerson
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+  isExternal: false
+  name: ProductionCode
+  nameWithType: BaseTestEditViewModel.ProductionCode
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCode
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+  isExternal: false
+  name: ProductionCodeDay
+  nameWithType: BaseTestEditViewModel.ProductionCodeDay
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeDay
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+  isExternal: false
+  name: ProductionCodeTime
+  nameWithType: BaseTestEditViewModel.ProductionCodeTime
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.ProductionCodeTime
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+  isExternal: false
+  name: Notes
+  nameWithType: BaseTestEditViewModel.Notes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.Notes
+- uid: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  commentId: T:System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<TestNote>
+  nameWithType: IList<TestNote>
+  fullName: System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>
+  nameWithType.vb: IList(Of TestNote)
+  fullname.vb: System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote)
+  name.vb: IList(Of TestNote)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullname.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes*
+  commentId: Overload:Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+  isExternal: false
+  name: NoteCodes
+  nameWithType: BaseTestEditViewModel.NoteCodes
+  fullName: Intranet.Labor.ViewModel.BaseTestEditViewModel.NoteCodes
+- uid: System.Collections.Generic.IList{Intranet.Labor.ViewModel.ErrorCode}
+  commentId: T:System.Collections.Generic.IList{Intranet.Labor.ViewModel.ErrorCode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<ErrorCode>
+  nameWithType: IList<ErrorCode>
+  fullName: System.Collections.Generic.IList<Intranet.Labor.ViewModel.ErrorCode>
+  nameWithType.vb: IList(Of ErrorCode)
+  fullname.vb: System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.ErrorCode)
+  name.vb: IList(Of ErrorCode)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.ErrorCode
+    name: ErrorCode
+    nameWithType: ErrorCode
+    fullName: Intranet.Labor.ViewModel.ErrorCode
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.ErrorCode
+    name: ErrorCode
+    nameWithType: ErrorCode
+    fullName: Intranet.Labor.ViewModel.ErrorCode
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,880 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.DbFactory`1
+  commentId: T:Intranet.Common.DbFactory`1
+  id: DbFactory`1
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILogger)
+  - Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Common.DbFactory`1.CreateContext
+  - Intranet.Common.DbFactory`1.Disposed
+  - Intranet.Common.DbFactory`1.GetDb
+  langs:
+  - csharp
+  - vb
+  name: DbFactory<TContext>
+  nameWithType: DbFactory<TContext>
+  fullName: Intranet.Common.DbFactory<TContext>
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DbFactory
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nClass creating database contexts.\n"
+  example: []
+  syntax:
+    content: 'public class DbFactory<TContext> : DisposableBase, IDatabaseFactory<TContext>, IDisposable where TContext : DbContext, new ()'
+    content.vb: >-
+      Public Class DbFactory(Of TContext As {DbContext, New})
+
+          Inherits DisposableBase
+
+          Implements IDatabaseFactory(Of TContext), IDisposable
+    typeParameters:
+    - id: TContext
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.DisposableBase
+  implements:
+  - Intranet.Common.IDatabaseFactory{{TContext}}
+  - System.IDisposable
+  inheritedMembers:
+  - Intranet.Common.DisposableBase.Dispose
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  nameWithType.vb: DbFactory(Of TContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Intranet.Common.DbFactory(Of TContext)
+  name.vb: DbFactory(Of TContext)
+- uid: Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Common.DbFactory`1
+  langs:
+  - csharp
+  - vb
+  name: DbFactory(ILoggerFactory)
+  nameWithType: DbFactory<TContext>.DbFactory(ILoggerFactory)
+  fullName: Intranet.Common.DbFactory<TContext>.DbFactory(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.DbFactory%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DbFactory(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Common.DbFactory`1.#ctor*
+  nameWithType.vb: DbFactory(Of TContext).DbFactory(ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbFactory(Of TContext).DbFactory(Intranet.Common.ILoggerFactory)
+- uid: Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILogger)
+  commentId: M:Intranet.Common.DbFactory`1.#ctor(Intranet.Common.ILogger)
+  id: '#ctor(Intranet.Common.ILogger)'
+  parent: Intranet.Common.DbFactory`1
+  langs:
+  - csharp
+  - vb
+  name: DbFactory(ILogger)
+  nameWithType: DbFactory<TContext>.DbFactory(ILogger)
+  fullName: Intranet.Common.DbFactory<TContext>.DbFactory(Intranet.Common.ILogger)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 42
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.DbFactory%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DbFactory(ILogger logger)
+    content.vb: Public Sub New(logger As ILogger)
+    parameters:
+    - id: logger
+      type: Intranet.Common.ILogger
+      description: A <xref href="Intranet.Common.ILogger" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Common.DbFactory`1.#ctor*
+  nameWithType.vb: DbFactory(Of TContext).DbFactory(ILogger)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbFactory(Of TContext).DbFactory(Intranet.Common.ILogger)
+- uid: Intranet.Common.DbFactory`1.GetDb
+  commentId: M:Intranet.Common.DbFactory`1.GetDb
+  id: GetDb
+  parent: Intranet.Common.DbFactory`1
+  langs:
+  - csharp
+  - vb
+  name: GetDb()
+  nameWithType: DbFactory<TContext>.GetDb()
+  fullName: Intranet.Common.DbFactory<TContext>.GetDb()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetDb
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets the database context.\n"
+  example: []
+  syntax:
+    content: public TContext GetDb()
+    content.vb: Public Function GetDb As TContext
+    return:
+      type: '{TContext}'
+      description: The database context.
+  overload: Intranet.Common.DbFactory`1.GetDb*
+  implements:
+  - Intranet.Common.IDatabaseFactory{{TContext}}.GetDb
+  nameWithType.vb: DbFactory(Of TContext).GetDb()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.DbFactory(Of TContext).GetDb()
+- uid: Intranet.Common.DbFactory`1.CreateContext
+  commentId: M:Intranet.Common.DbFactory`1.CreateContext
+  id: CreateContext
+  parent: Intranet.Common.DbFactory`1
+  langs:
+  - csharp
+  - vb
+  name: CreateContext()
+  nameWithType: DbFactory<TContext>.CreateContext()
+  fullName: Intranet.Common.DbFactory<TContext>.CreateContext()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateContext
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 77
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCreates a DbContext of type <em>TContext</em>.\n"
+  example: []
+  syntax:
+    content: protected virtual TContext CreateContext()
+    content.vb: Protected Overridable Function CreateContext As TContext
+    return:
+      type: '{TContext}'
+      description: A new DbContext of type <em>TContext</em>.
+  overload: Intranet.Common.DbFactory`1.CreateContext*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Failed to create DbContext.
+  nameWithType.vb: DbFactory(Of TContext).CreateContext()
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: Intranet.Common.DbFactory(Of TContext).CreateContext()
+- uid: Intranet.Common.DbFactory`1.Disposed
+  commentId: M:Intranet.Common.DbFactory`1.Disposed
+  id: Disposed
+  parent: Intranet.Common.DbFactory`1
+  langs:
+  - csharp
+  - vb
+  name: Disposed()
+  nameWithType: DbFactory<TContext>.Disposed()
+  fullName: Intranet.Common.DbFactory<TContext>.Disposed()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Db/DbFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Disposed
+    path: .src/Intranet/Common/Db/DbFactory.cs
+    startLine: 87
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nDispose all managed resources.\n"
+  example: []
+  syntax:
+    content: protected override void Disposed()
+    content.vb: Protected Overrides Sub Disposed
+  overridden: Intranet.Common.DisposableBase.Disposed
+  overload: Intranet.Common.DbFactory`1.Disposed*
+  nameWithType.vb: DbFactory(Of TContext).Disposed()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Intranet.Common.DbFactory(Of TContext).Disposed()
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.IDatabaseFactory{{TContext}}
+  commentId: T:Intranet.Common.IDatabaseFactory{`0}
+  parent: Intranet.Common
+  definition: Intranet.Common.IDatabaseFactory`1
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Intranet.Common.DisposableBase.Dispose
+  commentId: M:Intranet.Common.DisposableBase.Dispose
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Dispose()
+  nameWithType: DisposableBase.Dispose()
+  fullName: Intranet.Common.DisposableBase.Dispose()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  isExternal: false
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbFactory`1
+  commentId: T:Intranet.Common.DbFactory`1
+  isExternal: false
+  name: DbFactory<TContext>
+  nameWithType: DbFactory<TContext>
+  fullName: Intranet.Common.DbFactory<TContext>
+  nameWithType.vb: DbFactory(Of TContext)
+  fullname.vb: Intranet.Common.DbFactory(Of TContext)
+  name.vb: DbFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.DbFactory`1
+    name: DbFactory
+    nameWithType: DbFactory
+    fullName: Intranet.Common.DbFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.DbFactory`1
+    name: DbFactory
+    nameWithType: DbFactory
+    fullName: Intranet.Common.DbFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Common.DbFactory`1.#ctor*
+  commentId: Overload:Intranet.Common.DbFactory`1.#ctor
+  isExternal: false
+  name: DbFactory
+  nameWithType: DbFactory<TContext>.DbFactory
+  fullName: Intranet.Common.DbFactory<TContext>.DbFactory
+  nameWithType.vb: DbFactory(Of TContext).DbFactory
+  fullname.vb: Intranet.Common.DbFactory(Of TContext).DbFactory
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: Intranet.Common.DbFactory`1.GetDb*
+  commentId: Overload:Intranet.Common.DbFactory`1.GetDb
+  isExternal: false
+  name: GetDb
+  nameWithType: DbFactory<TContext>.GetDb
+  fullName: Intranet.Common.DbFactory<TContext>.GetDb
+  nameWithType.vb: DbFactory(Of TContext).GetDb
+  fullname.vb: Intranet.Common.DbFactory(Of TContext).GetDb
+- uid: Intranet.Common.IDatabaseFactory{{TContext}}.GetDb
+  commentId: M:Intranet.Common.IDatabaseFactory{`0}.GetDb
+  parent: Intranet.Common.IDatabaseFactory{{TContext}}
+  definition: Intranet.Common.IDatabaseFactory`1.GetDb
+  name: GetDb()
+  nameWithType: IDatabaseFactory<TContext>.GetDb()
+  fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb()
+  nameWithType.vb: IDatabaseFactory(Of TContext).GetDb()
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext).GetDb()
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1.GetDb
+    name: GetDb
+    nameWithType: IDatabaseFactory<TContext>.GetDb
+    fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1.GetDb
+    name: GetDb
+    nameWithType: IDatabaseFactory(Of TContext).GetDb
+    fullName: Intranet.Common.IDatabaseFactory(Of TContext).GetDb
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TContext}'
+  commentId: '!:TContext'
+  definition: TContext
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: Intranet.Common.IDatabaseFactory`1.GetDb
+  commentId: M:Intranet.Common.IDatabaseFactory`1.GetDb
+  isExternal: false
+  name: GetDb()
+  nameWithType: IDatabaseFactory<TContext>.GetDb()
+  fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb()
+  nameWithType.vb: IDatabaseFactory(Of TContext).GetDb()
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext).GetDb()
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1.GetDb
+    name: GetDb
+    nameWithType: IDatabaseFactory<TContext>.GetDb
+    fullName: Intranet.Common.IDatabaseFactory<TContext>.GetDb
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1.GetDb
+    name: GetDb
+    nameWithType: IDatabaseFactory(Of TContext).GetDb
+    fullName: Intranet.Common.IDatabaseFactory(Of TContext).GetDb
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TContext
+  isExternal: false
+  name: TContext
+  nameWithType: TContext
+  fullName: TContext
+- uid: Intranet.Common.DbFactory`1.CreateContext*
+  commentId: Overload:Intranet.Common.DbFactory`1.CreateContext
+  isExternal: false
+  name: CreateContext
+  nameWithType: DbFactory<TContext>.CreateContext
+  fullName: Intranet.Common.DbFactory<TContext>.CreateContext
+  nameWithType.vb: DbFactory(Of TContext).CreateContext
+  fullname.vb: Intranet.Common.DbFactory(Of TContext).CreateContext
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+- uid: Intranet.Common.DisposableBase.Disposed
+  commentId: M:Intranet.Common.DisposableBase.Disposed
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Disposed()
+  nameWithType: DisposableBase.Disposed()
+  fullName: Intranet.Common.DisposableBase.Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbFactory`1.Disposed*
+  commentId: Overload:Intranet.Common.DbFactory`1.Disposed
+  isExternal: false
+  name: Disposed
+  nameWithType: DbFactory<TContext>.Disposed
+  fullName: Intranet.Common.DbFactory<TContext>.Disposed
+  nameWithType.vb: DbFactory(Of TContext).Disposed
+  fullname.vb: Intranet.Common.DbFactory(Of TContext).Disposed

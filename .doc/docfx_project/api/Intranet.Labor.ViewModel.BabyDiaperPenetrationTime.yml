@@ -1,0 +1,590 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  id: BabyDiaperPenetrationTime
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  - Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  - Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  - Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  - Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperPenetrationTime
+  nameWithType: BabyDiaperPenetrationTime
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperPenetrationTime
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model of the penetration time\n"
+  example: []
+  syntax:
+    content: public class BabyDiaperPenetrationTime
+    content.vb: Public Class BabyDiaperPenetrationTime
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  id: PenetrationTimeAdditionFirst
+  parent: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionFirst
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionFirst
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the penetrationTime of the first addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionFirst { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionFirst As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the first addition
+  overload: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  id: PenetrationTimeAdditionSecond
+  parent: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionSecond
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionSecond
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the penetrationTime of the second addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionSecond { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionSecond As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the second addition
+  overload: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  id: PenetrationTimeAdditionThird
+  parent: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionThird
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionThird
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the penetrationTime of the third addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionThird { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionThird As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the third addition
+  overload: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  id: PenetrationTimeAdditionFourth
+  parent: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionFourth
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionFourth
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the penetrationTime of the fourth addition\n"
+  example: []
+  syntax:
+    content: public double PenetrationTimeAdditionFourth { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionFourth As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: penetration time value for the fourth addition
+  overload: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  id: PenetrationTimeAdditionFourthRwType
+  parent: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime
+  langs:
+  - csharp
+  - vb
+  name: PenetrationTimeAdditionFourthRwType
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PenetrationTimeAdditionFourthRwType
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperPenetrationTime.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the rw type for the the penetrationTime of the fourth addition\n"
+  example: []
+  syntax:
+    content: public RwType PenetrationTimeAdditionFourthRwType { get; set; }
+    content.vb: Public Property PenetrationTimeAdditionFourthRwType As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the rw type for the penetrationTime of the fourth addition
+  overload: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  isExternal: false
+  name: PenetrationTimeAdditionFirst
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFirst
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  isExternal: false
+  name: PenetrationTimeAdditionSecond
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionSecond
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  isExternal: false
+  name: PenetrationTimeAdditionThird
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionThird
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  isExternal: false
+  name: PenetrationTimeAdditionFourth
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourth
+- uid: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  isExternal: false
+  name: PenetrationTimeAdditionFourthRwType
+  nameWithType: BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+  fullName: Intranet.Labor.ViewModel.BabyDiaperPenetrationTime.PenetrationTimeAdditionFourthRwType
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor

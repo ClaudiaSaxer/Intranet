@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRetentionService
+  id: IBabyDiaperRetentionService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRetentionService.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperRetentionService
+  nameWithType: IBabyDiaperRetentionService
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperRetentionService
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the BabyDiaperRetentionService\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperRetentionService
+    content.vb: Public Interface IBabyDiaperRetentionService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(System.Int32)
+  id: GetBabyDiapersRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetBabyDiapersRetentionEditViewModel(Int32)
+  nameWithType: IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetBabyDiapersRetentionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets a new BabyDiaperRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetentionEditViewModel GetBabyDiapersRetentionEditViewModel(int retentionTestId)
+    content.vb: Function GetBabyDiapersRetentionEditViewModel(retentionTestId As Integer) As BabyDiaperRetentionEditViewModel
+    parameters:
+    - id: retentionTestId
+      type: System.Int32
+      description: The Id of the Babydiaper retention test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: The BabyDiaperRetentionEditViewModel
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel*
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(System.Int32)
+  id: GetNewBabyDiapersRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetNewBabyDiapersRetentionEditViewModel(Int32)
+  nameWithType: IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewBabyDiapersRetentionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the BabyDiaperRetentionEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: BabyDiaperRetentionEditViewModel GetNewBabyDiapersRetentionEditViewModel(int testSheetId)
+    content.vb: Function GetNewBabyDiapersRetentionEditViewModel(testSheetId As Integer) As BabyDiaperRetentionEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Babydiaper retention test is for
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: The BabyDiaperRetentionEditViewModel
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel*
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionService.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Save(BabyDiaperRetentionEditViewModel)
+  nameWithType: IBabyDiaperRetentionService.Save(BabyDiaperRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves or updates the BabyDiaperRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: TestValue Save(BabyDiaperRetentionEditViewModel babyDiaperRetentionEditViewModel)
+    content.vb: Function Save(babyDiaperRetentionEditViewModel As BabyDiaperRetentionEditViewModel) As TestValue
+    parameters:
+    - id: babyDiaperRetentionEditViewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionService.Save*
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: IBabyDiaperRetentionService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionService.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: TestValue Delete(int testValueId)
+    content.vb: Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel
+  isExternal: false
+  name: GetBabyDiapersRetentionEditViewModel
+  nameWithType: IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetentionEditViewModel
+  nameWithType: BabyDiaperRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel
+  isExternal: false
+  name: GetNewBabyDiapersRetentionEditViewModel
+  nameWithType: IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.Save*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionService.Save
+  isExternal: false
+  name: Save
+  nameWithType: IBabyDiaperRetentionService.Save
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.Save
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: IBabyDiaperRetentionService.Delete
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionService.Delete

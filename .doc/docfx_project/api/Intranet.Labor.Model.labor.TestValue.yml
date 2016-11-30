@@ -1,0 +1,1119 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  id: TestValue
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.TestValue.ArticleTestType
+  - Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+  - Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+  - Intranet.Labor.Model.labor.TestValue.CreatedPerson
+  - Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+  - Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+  - Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+  - Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+  - Intranet.Labor.Model.labor.TestValue.TestSheet
+  - Intranet.Labor.Model.labor.TestValue.TestSheetRefId
+  - Intranet.Labor.Model.labor.TestValue.TestValueId
+  - Intranet.Labor.Model.labor.TestValue.TestValueNote
+  - Intranet.Labor.Model.labor.TestValue.TestValueType
+  langs:
+  - csharp
+  - vb
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValue
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nClass representing the test value\n"
+  example: []
+  syntax:
+    content: public class TestValue
+    content.vb: Public Class TestValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueId
+  commentId: P:Intranet.Labor.Model.labor.TestValue.TestValueId
+  id: TestValueId
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: TestValueId
+  nameWithType: TestValue.TestValueId
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueId
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the id of the test value\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int TestValueId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property TestValueId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'the test value id '
+  overload: Intranet.Labor.Model.labor.TestValue.TestValueId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+  commentId: P:Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+  id: CreatedDateTime
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: CreatedDateTime
+  nameWithType: TestValue.CreatedDateTime
+  fullName: Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreatedDateTime
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the date and time of the creation\n"
+  example: []
+  syntax:
+    content: public DateTime CreatedDateTime { get; set; }
+    content.vb: Public Property CreatedDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: the created date and time
+  overload: Intranet.Labor.Model.labor.TestValue.CreatedDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+  commentId: P:Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+  id: DayInYearOfArticleCreation
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: DayInYearOfArticleCreation
+  nameWithType: TestValue.DayInYearOfArticleCreation
+  fullName: Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DayInYearOfArticleCreation
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 32
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the day in the year of the article creation\n"
+  example: []
+  syntax:
+    content: public int DayInYearOfArticleCreation { get; set; }
+    content.vb: Public Property DayInYearOfArticleCreation As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the day in the year
+  overload: Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.CreatedPerson
+  commentId: P:Intranet.Labor.Model.labor.TestValue.CreatedPerson
+  id: CreatedPerson
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: CreatedPerson
+  nameWithType: TestValue.CreatedPerson
+  fullName: Intranet.Labor.Model.labor.TestValue.CreatedPerson
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreatedPerson
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the person who created the test value\n"
+  example: []
+  syntax:
+    content: public string CreatedPerson { get; set; }
+    content.vb: Public Property CreatedPerson As String
+    parameters: []
+    return:
+      type: System.String
+  overload: Intranet.Labor.Model.labor.TestValue.CreatedPerson*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+  commentId: P:Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+  id: LastEditedDateTime
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: LastEditedDateTime
+  nameWithType: TestValue.LastEditedDateTime
+  fullName: Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LastEditedDateTime
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the date and time of the last edit\n"
+  example: []
+  syntax:
+    content: public DateTime LastEditedDateTime { get; set; }
+    content.vb: Public Property LastEditedDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: the date and time of the last edit
+  overload: Intranet.Labor.Model.labor.TestValue.LastEditedDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+  commentId: P:Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+  id: LastEditedPerson
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: LastEditedPerson
+  nameWithType: TestValue.LastEditedPerson
+  fullName: Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LastEditedPerson
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 49
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the person who last edited the test value\n"
+  example: []
+  syntax:
+    content: public string LastEditedPerson { get; set; }
+    content.vb: Public Property LastEditedPerson As String
+    parameters: []
+    return:
+      type: System.String
+      description: the person who last edited the test value
+  overload: Intranet.Labor.Model.labor.TestValue.LastEditedPerson*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.ArticleTestType
+  commentId: P:Intranet.Labor.Model.labor.TestValue.ArticleTestType
+  id: ArticleTestType
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: ArticleTestType
+  nameWithType: TestValue.ArticleTestType
+  fullName: Intranet.Labor.Model.labor.TestValue.ArticleTestType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleTestType
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nThe article type of the test for the testvalue\n"
+  example: []
+  syntax:
+    content: public ArticleType ArticleTestType { get; set; }
+    content.vb: Public Property ArticleTestType As ArticleType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.ArticleType
+      description: the article type of the test
+  overload: Intranet.Labor.Model.labor.TestValue.ArticleTestType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueNote
+  commentId: P:Intranet.Labor.Model.labor.TestValue.TestValueNote
+  id: TestValueNote
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: TestValueNote
+  nameWithType: TestValue.TestValueNote
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueNote
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueNote
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the notes to the testvalues\n"
+  example: []
+  syntax:
+    content: public virtual ICollection<TestValueNote> TestValueNote { get; set; }
+    content.vb: Public Overridable Property TestValueNote As ICollection(Of TestValueNote)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
+      description: notes for the testvalue
+  overload: Intranet.Labor.Model.labor.TestValue.TestValueNote*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+  commentId: P:Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+  id: BabyDiaperTestValue
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValue
+  nameWithType: TestValue.BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValue
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 67
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the baby diaper test value\n"
+  example: []
+  syntax:
+    content: public virtual BabyDiaperTestValue BabyDiaperTestValue { get; set; }
+    content.vb: Public Overridable Property BabyDiaperTestValue As BabyDiaperTestValue
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.BabyDiaperTestValue
+      description: the baby diaper test value
+  overload: Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+  commentId: P:Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+  id: IncontinencePadTestValue
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTestValue
+  nameWithType: TestValue.IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTestValue
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 73
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the incontinence pad test value\n"
+  example: []
+  syntax:
+    content: public virtual IncontinencePadTestValue IncontinencePadTestValue { get; set; }
+    content.vb: Public Overridable Property IncontinencePadTestValue As IncontinencePadTestValue
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the incontinence pad test value
+  overload: Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueType
+  commentId: P:Intranet.Labor.Model.labor.TestValue.TestValueType
+  id: TestValueType
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: TestValueType
+  nameWithType: TestValue.TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueType
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 79
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the type of the test value\n"
+  example: []
+  syntax:
+    content: public virtual TestValueType TestValueType { get; set; }
+    content.vb: Public Overridable Property TestValueType As TestValueType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestValueType
+      description: the type of the test value
+  overload: Intranet.Labor.Model.labor.TestValue.TestValueType*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValue.TestSheet
+  commentId: P:Intranet.Labor.Model.labor.TestValue.TestSheet
+  id: TestSheet
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: TestSheet
+  nameWithType: TestValue.TestSheet
+  fullName: Intranet.Labor.Model.labor.TestValue.TestSheet
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheet
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 85
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test sheet\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("TestSheetRefId")]
+
+      public virtual TestSheet TestSheet { get; set; }
+    content.vb: >-
+      <ForeignKey("TestSheetRefId")>
+
+      Public Overridable Property TestSheet As TestSheet
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the test sheet
+  overload: Intranet.Labor.Model.labor.TestValue.TestSheet*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: TestSheetRefId
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValue.TestSheetRefId
+  commentId: P:Intranet.Labor.Model.labor.TestValue.TestSheetRefId
+  id: TestSheetRefId
+  parent: Intranet.Labor.Model.labor.TestValue
+  langs:
+  - csharp
+  - vb
+  name: TestSheetRefId
+  nameWithType: TestValue.TestSheetRefId
+  fullName: Intranet.Labor.Model.labor.TestValue.TestSheetRefId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestSheetRefId
+    path: .src/Intranet/Labor/Model/labor/TestValue.cs
+    startLine: 92
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the ref id of the test sheet\n"
+  example: []
+  syntax:
+    content: public int TestSheetRefId { get; set; }
+    content.vb: Public Property TestSheetRefId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the ref id of the test sheet
+  overload: Intranet.Labor.Model.labor.TestValue.TestSheetRefId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueId*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.TestValueId
+  isExternal: false
+  name: TestValueId
+  nameWithType: TestValue.TestValueId
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue.CreatedDateTime*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+  isExternal: false
+  name: CreatedDateTime
+  nameWithType: TestValue.CreatedDateTime
+  fullName: Intranet.Labor.Model.labor.TestValue.CreatedDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+  isExternal: false
+  name: DayInYearOfArticleCreation
+  nameWithType: TestValue.DayInYearOfArticleCreation
+  fullName: Intranet.Labor.Model.labor.TestValue.DayInYearOfArticleCreation
+- uid: Intranet.Labor.Model.labor.TestValue.CreatedPerson*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.CreatedPerson
+  isExternal: false
+  name: CreatedPerson
+  nameWithType: TestValue.CreatedPerson
+  fullName: Intranet.Labor.Model.labor.TestValue.CreatedPerson
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor.TestValue.LastEditedDateTime*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+  isExternal: false
+  name: LastEditedDateTime
+  nameWithType: TestValue.LastEditedDateTime
+  fullName: Intranet.Labor.Model.labor.TestValue.LastEditedDateTime
+- uid: Intranet.Labor.Model.labor.TestValue.LastEditedPerson*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+  isExternal: false
+  name: LastEditedPerson
+  nameWithType: TestValue.LastEditedPerson
+  fullName: Intranet.Labor.Model.labor.TestValue.LastEditedPerson
+- uid: Intranet.Labor.Model.labor.TestValue.ArticleTestType*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.ArticleTestType
+  isExternal: false
+  name: ArticleTestType
+  nameWithType: TestValue.ArticleTestType
+  fullName: Intranet.Labor.Model.labor.TestValue.ArticleTestType
+- uid: Intranet.Labor.Model.ArticleType
+  commentId: T:Intranet.Labor.Model.ArticleType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ArticleType
+  nameWithType: ArticleType
+  fullName: Intranet.Labor.Model.ArticleType
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueNote*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.TestValueNote
+  isExternal: false
+  name: TestValueNote
+  nameWithType: TestValue.TestValueNote
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueNote
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestValueNote>
+  nameWithType: ICollection<TestValueNote>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValueNote>
+  nameWithType.vb: ICollection(Of TestValueNote)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValueNote)
+  name.vb: ICollection(Of TestValueNote)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValueNote
+    name: TestValueNote
+    nameWithType: TestValueNote
+    fullName: Intranet.Labor.Model.labor.TestValueNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+  isExternal: false
+  name: BabyDiaperTestValue
+  nameWithType: TestValue.BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.labor.TestValue.BabyDiaperTestValue
+- uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  commentId: T:Intranet.Labor.Model.labor.BabyDiaperTestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: BabyDiaperTestValue
+  nameWithType: BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+- uid: Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+  isExternal: false
+  name: IncontinencePadTestValue
+  nameWithType: TestValue.IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.labor.TestValue.IncontinencePadTestValue
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  commentId: T:Intranet.Labor.Model.labor.IncontinencePadTestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: IncontinencePadTestValue
+  nameWithType: IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+- uid: Intranet.Labor.Model.labor.TestValue.TestValueType*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.TestValueType
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValue.TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValue.TestValueType
+- uid: Intranet.Labor.Model.labor.TestValueType
+  commentId: T:Intranet.Labor.Model.labor.TestValueType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValueType
+- uid: Intranet.Labor.Model.labor.TestValue.TestSheet*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.TestSheet
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestValue.TestSheet
+  fullName: Intranet.Labor.Model.labor.TestValue.TestSheet
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.Model.labor.TestValue.TestSheetRefId*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValue.TestSheetRefId
+  isExternal: false
+  name: TestSheetRefId
+  nameWithType: TestValue.TestSheetRefId
+  fullName: Intranet.Labor.Model.labor.TestValue.TestSheetRefId

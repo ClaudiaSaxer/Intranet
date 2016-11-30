@@ -1,0 +1,971 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  id: ILogger
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.ILogger.Debug(System.Func{System.String})
+  - Intranet.Common.ILogger.Debug(System.String)
+  - Intranet.Common.ILogger.DefaultLevel
+  - Intranet.Common.ILogger.Error(System.Func{System.String})
+  - Intranet.Common.ILogger.Error(System.String)
+  - Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  - Intranet.Common.ILogger.Fatal(System.String)
+  - Intranet.Common.ILogger.Info(System.Func{System.String})
+  - Intranet.Common.ILogger.Info(System.String)
+  - Intranet.Common.ILogger.IsDebugEnabled
+  - Intranet.Common.ILogger.IsErrorEnabled
+  - Intranet.Common.ILogger.IsFatalEnabled
+  - Intranet.Common.ILogger.IsInfoEnabled
+  - Intranet.Common.ILogger.IsWarnEnabled
+  - Intranet.Common.ILogger.Log(System.Func{System.String})
+  - Intranet.Common.ILogger.Log(System.String)
+  - Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  - Intranet.Common.ILogger.Trace(System.Func{System.String})
+  - Intranet.Common.ILogger.Trace(System.String)
+  - Intranet.Common.ILogger.Warn(System.Func{System.String})
+  - Intranet.Common.ILogger.Warn(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILogger
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 11
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInterface representing a loggerFactory\n"
+  example: []
+  syntax:
+    content: public interface ILogger
+    content.vb: Public Interface ILogger
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Common.ILogger.DefaultLevel
+  commentId: P:Intranet.Common.ILogger.DefaultLevel
+  id: DefaultLevel
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: DefaultLevel
+  nameWithType: ILogger.DefaultLevel
+  fullName: Intranet.Common.ILogger.DefaultLevel
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DefaultLevel
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets or sets the default log level\n"
+  example: []
+  syntax:
+    content: LogLevel DefaultLevel { get; set; }
+    content.vb: Property DefaultLevel As LogLevel
+    parameters: []
+    return:
+      type: Intranet.Common.LogLevel
+      description: The default log level
+  overload: Intranet.Common.ILogger.DefaultLevel*
+  modifiers.csharp:
+  - get
+  - set
+- uid: Intranet.Common.ILogger.IsDebugEnabled
+  commentId: P:Intranet.Common.ILogger.IsDebugEnabled
+  id: IsDebugEnabled
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: IsDebugEnabled
+  nameWithType: ILogger.IsDebugEnabled
+  fullName: Intranet.Common.ILogger.IsDebugEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsDebugEnabled
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Debug level.\n"
+  example: []
+  syntax:
+    content: bool IsDebugEnabled { get; }
+    content.vb: ReadOnly Property IsDebugEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Debug level, otherwise it returns false.
+  overload: Intranet.Common.ILogger.IsDebugEnabled*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Intranet.Common.ILogger.IsErrorEnabled
+  commentId: P:Intranet.Common.ILogger.IsErrorEnabled
+  id: IsErrorEnabled
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: IsErrorEnabled
+  nameWithType: ILogger.IsErrorEnabled
+  fullName: Intranet.Common.ILogger.IsErrorEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsErrorEnabled
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Error level.\n"
+  example: []
+  syntax:
+    content: bool IsErrorEnabled { get; }
+    content.vb: ReadOnly Property IsErrorEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Error level, otherwise it returns false.
+  overload: Intranet.Common.ILogger.IsErrorEnabled*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Intranet.Common.ILogger.IsFatalEnabled
+  commentId: P:Intranet.Common.ILogger.IsFatalEnabled
+  id: IsFatalEnabled
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: IsFatalEnabled
+  nameWithType: ILogger.IsFatalEnabled
+  fullName: Intranet.Common.ILogger.IsFatalEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsFatalEnabled
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Fatal level.\n"
+  example: []
+  syntax:
+    content: bool IsFatalEnabled { get; }
+    content.vb: ReadOnly Property IsFatalEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Fatal level, otherwise it returns false.
+  overload: Intranet.Common.ILogger.IsFatalEnabled*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Intranet.Common.ILogger.IsInfoEnabled
+  commentId: P:Intranet.Common.ILogger.IsInfoEnabled
+  id: IsInfoEnabled
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: IsInfoEnabled
+  nameWithType: ILogger.IsInfoEnabled
+  fullName: Intranet.Common.ILogger.IsInfoEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsInfoEnabled
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Info level.\n"
+  example: []
+  syntax:
+    content: bool IsInfoEnabled { get; }
+    content.vb: ReadOnly Property IsInfoEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Info level, otherwise it returns false.
+  overload: Intranet.Common.ILogger.IsInfoEnabled*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Intranet.Common.ILogger.IsWarnEnabled
+  commentId: P:Intranet.Common.ILogger.IsWarnEnabled
+  id: IsWarnEnabled
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: IsWarnEnabled
+  nameWithType: ILogger.IsWarnEnabled
+  fullName: Intranet.Common.ILogger.IsWarnEnabled
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IsWarnEnabled
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 49
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a value indicating whether logging is enabled for the Warn level.\n"
+  example: []
+  syntax:
+    content: bool IsWarnEnabled { get; }
+    content.vb: ReadOnly Property IsWarnEnabled As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+      description: A value of true if logging is enabled for the Warn level, otherwise it returns false.
+  overload: Intranet.Common.ILogger.IsWarnEnabled*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Intranet.Common.ILogger.Log(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Log(System.Func{System.String})
+  id: Log(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Log(Func<String>)
+  nameWithType: ILogger.Log(Func<String>)
+  fullName: Intranet.Common.ILogger.Log(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 62
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the default level.\n"
+  example: []
+  syntax:
+    content: void Log(Func<string> messageFunc)
+    content.vb: Sub Log(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Log*
+  nameWithType.vb: ILogger.Log(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Log(System.Func(Of System.String))
+  name.vb: Log(Func(Of String))
+- uid: Intranet.Common.ILogger.Log(System.String)
+  commentId: M:Intranet.Common.ILogger.Log(System.String)
+  id: Log(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Log(String)
+  nameWithType: ILogger.Log(String)
+  fullName: Intranet.Common.ILogger.Log(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 68
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the default level.\n"
+  example: []
+  syntax:
+    content: void Log(string message)
+    content.vb: Sub Log(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log.
+  overload: Intranet.Common.ILogger.Log*
+- uid: Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  commentId: M:Intranet.Common.ILogger.Log(System.String,Intranet.Common.LogLevel)
+  id: Log(System.String,Intranet.Common.LogLevel)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Log(String, LogLevel)
+  nameWithType: ILogger.Log(String, LogLevel)
+  fullName: Intranet.Common.ILogger.Log(System.String, Intranet.Common.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Log
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 75
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the specified level.\n"
+  example: []
+  syntax:
+    content: void Log(string message, LogLevel level)
+    content.vb: Sub Log(message As String, level As LogLevel)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log.
+    - id: level
+      type: Intranet.Common.LogLevel
+      description: The log level.
+  overload: Intranet.Common.ILogger.Log*
+- uid: Intranet.Common.ILogger.Trace(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Trace(System.Func{System.String})
+  id: Trace(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Trace(Func<String>)
+  nameWithType: ILogger.Trace(Func<String>)
+  fullName: Intranet.Common.ILogger.Trace(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Trace
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 88
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Trace level.\n"
+  example: []
+  syntax:
+    content: void Trace(Func<string> messageFunc)
+    content.vb: Sub Trace(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Trace*
+  nameWithType.vb: ILogger.Trace(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Trace(System.Func(Of System.String))
+  name.vb: Trace(Func(Of String))
+- uid: Intranet.Common.ILogger.Trace(System.String)
+  commentId: M:Intranet.Common.ILogger.Trace(System.String)
+  id: Trace(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Trace(String)
+  nameWithType: ILogger.Trace(String)
+  fullName: Intranet.Common.ILogger.Trace(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Trace
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 94
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Trace level.\n"
+  example: []
+  syntax:
+    content: void Trace(string message)
+    content.vb: Sub Trace(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Trace*
+- uid: Intranet.Common.ILogger.Debug(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Debug(System.Func{System.String})
+  id: Debug(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Debug(Func<String>)
+  nameWithType: ILogger.Debug(Func<String>)
+  fullName: Intranet.Common.ILogger.Debug(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Debug
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Debug level.\n"
+  example: []
+  syntax:
+    content: void Debug(Func<string> messageFunc)
+    content.vb: Sub Debug(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Debug*
+  nameWithType.vb: ILogger.Debug(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Debug(System.Func(Of System.String))
+  name.vb: Debug(Func(Of String))
+- uid: Intranet.Common.ILogger.Debug(System.String)
+  commentId: M:Intranet.Common.ILogger.Debug(System.String)
+  id: Debug(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Debug(String)
+  nameWithType: ILogger.Debug(String)
+  fullName: Intranet.Common.ILogger.Debug(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Debug
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 113
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Debug level.\n"
+  example: []
+  syntax:
+    content: void Debug(string message)
+    content.vb: Sub Debug(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Debug*
+- uid: Intranet.Common.ILogger.Info(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Info(System.Func{System.String})
+  id: Info(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Info(Func<String>)
+  nameWithType: ILogger.Info(Func<String>)
+  fullName: Intranet.Common.ILogger.Info(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Info
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 126
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Info level.\n"
+  example: []
+  syntax:
+    content: void Info(Func<string> messageFunc)
+    content.vb: Sub Info(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Info*
+  nameWithType.vb: ILogger.Info(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Info(System.Func(Of System.String))
+  name.vb: Info(Func(Of String))
+- uid: Intranet.Common.ILogger.Info(System.String)
+  commentId: M:Intranet.Common.ILogger.Info(System.String)
+  id: Info(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Info(String)
+  nameWithType: ILogger.Info(String)
+  fullName: Intranet.Common.ILogger.Info(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Info
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 132
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Info level.\n"
+  example: []
+  syntax:
+    content: void Info(string message)
+    content.vb: Sub Info(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Info*
+- uid: Intranet.Common.ILogger.Warn(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Warn(System.Func{System.String})
+  id: Warn(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Warn(Func<String>)
+  nameWithType: ILogger.Warn(Func<String>)
+  fullName: Intranet.Common.ILogger.Warn(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Warn
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 145
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Warn level.\n"
+  example: []
+  syntax:
+    content: void Warn(Func<string> messageFunc)
+    content.vb: Sub Warn(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Warn*
+  nameWithType.vb: ILogger.Warn(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Warn(System.Func(Of System.String))
+  name.vb: Warn(Func(Of String))
+- uid: Intranet.Common.ILogger.Warn(System.String)
+  commentId: M:Intranet.Common.ILogger.Warn(System.String)
+  id: Warn(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Warn(String)
+  nameWithType: ILogger.Warn(String)
+  fullName: Intranet.Common.ILogger.Warn(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Warn
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 151
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Warn level.\n"
+  example: []
+  syntax:
+    content: void Warn(string message)
+    content.vb: Sub Warn(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Warn*
+- uid: Intranet.Common.ILogger.Error(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Error(System.Func{System.String})
+  id: Error(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Error(Func<String>)
+  nameWithType: ILogger.Error(Func<String>)
+  fullName: Intranet.Common.ILogger.Error(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 164
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Error level.\n"
+  example: []
+  syntax:
+    content: void Error(Func<string> messageFunc)
+    content.vb: Sub Error(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Error*
+  nameWithType.vb: ILogger.Error(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Error(System.Func(Of System.String))
+  name.vb: Error(Func(Of String))
+- uid: Intranet.Common.ILogger.Error(System.String)
+  commentId: M:Intranet.Common.ILogger.Error(System.String)
+  id: Error(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Error(String)
+  nameWithType: ILogger.Error(String)
+  fullName: Intranet.Common.ILogger.Error(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 170
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Error level.\n"
+  example: []
+  syntax:
+    content: void Error(string message)
+    content.vb: Sub Error(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Error*
+- uid: Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  commentId: M:Intranet.Common.ILogger.Fatal(System.Func{System.String})
+  id: Fatal(System.Func{System.String})
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Fatal(Func<String>)
+  nameWithType: ILogger.Fatal(Func<String>)
+  fullName: Intranet.Common.ILogger.Fatal(System.Func<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Fatal
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 183
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Fatal level.\n"
+  example: []
+  syntax:
+    content: void Fatal(Func<string> messageFunc)
+    content.vb: Sub Fatal(messageFunc As Func(Of String))
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: "\nA function returning message to be written. Function is not evaluated if logging is not\nenabled.\n"
+  overload: Intranet.Common.ILogger.Fatal*
+  nameWithType.vb: ILogger.Fatal(Func(Of String))
+  fullName.vb: Intranet.Common.ILogger.Fatal(System.Func(Of System.String))
+  name.vb: Fatal(Func(Of String))
+- uid: Intranet.Common.ILogger.Fatal(System.String)
+  commentId: M:Intranet.Common.ILogger.Fatal(System.String)
+  id: Fatal(System.String)
+  parent: Intranet.Common.ILogger
+  langs:
+  - csharp
+  - vb
+  name: Fatal(String)
+  nameWithType: ILogger.Fatal(String)
+  fullName: Intranet.Common.ILogger.Fatal(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Fatal
+    path: .src/Intranet/Common/Logging/Definition/ILogger.cs
+    startLine: 189
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nWrites the diagnostic message at the Fatal level.\n"
+  example: []
+  syntax:
+    content: void Fatal(string message)
+    content.vb: Sub Fatal(message As String)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message to log
+  overload: Intranet.Common.ILogger.Fatal*
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.ILogger.DefaultLevel*
+  commentId: Overload:Intranet.Common.ILogger.DefaultLevel
+  isExternal: false
+  name: DefaultLevel
+  nameWithType: ILogger.DefaultLevel
+  fullName: Intranet.Common.ILogger.DefaultLevel
+- uid: Intranet.Common.LogLevel
+  commentId: T:Intranet.Common.LogLevel
+  parent: Intranet.Common
+  isExternal: false
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Intranet.Common.LogLevel
+- uid: Intranet.Common.ILogger.IsDebugEnabled*
+  commentId: Overload:Intranet.Common.ILogger.IsDebugEnabled
+  isExternal: false
+  name: IsDebugEnabled
+  nameWithType: ILogger.IsDebugEnabled
+  fullName: Intranet.Common.ILogger.IsDebugEnabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.ILogger.IsErrorEnabled*
+  commentId: Overload:Intranet.Common.ILogger.IsErrorEnabled
+  isExternal: false
+  name: IsErrorEnabled
+  nameWithType: ILogger.IsErrorEnabled
+  fullName: Intranet.Common.ILogger.IsErrorEnabled
+- uid: Intranet.Common.ILogger.IsFatalEnabled*
+  commentId: Overload:Intranet.Common.ILogger.IsFatalEnabled
+  isExternal: false
+  name: IsFatalEnabled
+  nameWithType: ILogger.IsFatalEnabled
+  fullName: Intranet.Common.ILogger.IsFatalEnabled
+- uid: Intranet.Common.ILogger.IsInfoEnabled*
+  commentId: Overload:Intranet.Common.ILogger.IsInfoEnabled
+  isExternal: false
+  name: IsInfoEnabled
+  nameWithType: ILogger.IsInfoEnabled
+  fullName: Intranet.Common.ILogger.IsInfoEnabled
+- uid: Intranet.Common.ILogger.IsWarnEnabled*
+  commentId: Overload:Intranet.Common.ILogger.IsWarnEnabled
+  isExternal: false
+  name: IsWarnEnabled
+  nameWithType: ILogger.IsWarnEnabled
+  fullName: Intranet.Common.ILogger.IsWarnEnabled
+- uid: Intranet.Common.ILogger.Log*
+  commentId: Overload:Intranet.Common.ILogger.Log
+  isExternal: false
+  name: Log
+  nameWithType: ILogger.Log
+  fullName: Intranet.Common.ILogger.Log
+- uid: System.Func{System.String}
+  commentId: T:System.Func{System.String}
+  parent: System
+  definition: System.Func`1
+  name: Func<String>
+  nameWithType: Func<String>
+  fullName: System.Func<System.String>
+  nameWithType.vb: Func(Of String)
+  fullname.vb: System.Func(Of System.String)
+  name.vb: Func(Of String)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullname.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Common.ILogger.Trace*
+  commentId: Overload:Intranet.Common.ILogger.Trace
+  isExternal: false
+  name: Trace
+  nameWithType: ILogger.Trace
+  fullName: Intranet.Common.ILogger.Trace
+- uid: Intranet.Common.ILogger.Debug*
+  commentId: Overload:Intranet.Common.ILogger.Debug
+  isExternal: false
+  name: Debug
+  nameWithType: ILogger.Debug
+  fullName: Intranet.Common.ILogger.Debug
+- uid: Intranet.Common.ILogger.Info*
+  commentId: Overload:Intranet.Common.ILogger.Info
+  isExternal: false
+  name: Info
+  nameWithType: ILogger.Info
+  fullName: Intranet.Common.ILogger.Info
+- uid: Intranet.Common.ILogger.Warn*
+  commentId: Overload:Intranet.Common.ILogger.Warn
+  isExternal: false
+  name: Warn
+  nameWithType: ILogger.Warn
+  fullName: Intranet.Common.ILogger.Warn
+- uid: Intranet.Common.ILogger.Error*
+  commentId: Overload:Intranet.Common.ILogger.Error
+  isExternal: false
+  name: Error
+  nameWithType: ILogger.Error
+  fullName: Intranet.Common.ILogger.Error
+- uid: Intranet.Common.ILogger.Fatal*
+  commentId: Overload:Intranet.Common.ILogger.Fatal
+  isExternal: false
+  name: Fatal
+  nameWithType: ILogger.Fatal
+  fullName: Intranet.Common.ILogger.Fatal

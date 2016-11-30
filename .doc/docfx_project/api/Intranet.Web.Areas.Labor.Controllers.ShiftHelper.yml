@@ -1,0 +1,1245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  id: ShiftHelper
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule(System.Int32)
+  - Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+  langs:
+  - csharp
+  - vb
+  name: ShiftHelper
+  nameWithType: ShiftHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftHelper
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing a helper for shift\n"
+  example: []
+  syntax:
+    content: 'public class ShiftHelper : ServiceBase, IShiftHelper'
+    content.vb: >-
+      Public Class ShiftHelper
+
+          Inherits ServiceBase
+
+          Implements IShiftHelper
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+  id: ShiftScheduleRepository
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: ShiftScheduleRepository
+  nameWithType: ShiftHelper.ShiftScheduleRepository
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftScheduleRepository
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets the repository for the shift schuedule\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<ShiftSchedule> ShiftScheduleRepository { get; set; }
+    content.vb: Public Property ShiftScheduleRepository As IGenericRepository(Of ShiftSchedule)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.ShiftSchedule}
+      description: the shift shedule repository
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: ShiftHelper(ILoggerFactory)
+  nameWithType: ShiftHelper.ShiftHelper(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public ShiftHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  id: DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: DateExistsInShift(DateTime, ShiftSchedule)
+  nameWithType: ShiftHelper.DateExistsInShift(DateTime, ShiftSchedule)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift(System.DateTime, Intranet.Labor.Model.ShiftSchedule)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DateExistsInShift
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nCalculate if the acual date exists in the list of shifts\n"
+  example: []
+  syntax:
+    content: public bool DateExistsInShift(DateTime date, ShiftSchedule shift)
+    content.vb: Public Function DateExistsInShift(date As Date, shift As ShiftSchedule) As Boolean
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: the date to test
+    - id: shift
+      type: Intranet.Labor.Model.ShiftSchedule
+      description: the shift to test if the date exists in
+    return:
+      type: System.Boolean
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift*
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  id: DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: DateExistsInShifts(DateTime, List<ShiftSchedule>)
+  nameWithType: ShiftHelper.DateExistsInShifts(DateTime, List<ShiftSchedule>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts(System.DateTime, System.Collections.Generic.List<Intranet.Labor.Model.ShiftSchedule>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DateExistsInShifts
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 59
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nCalculate if the acual date exists in the list of shifts\n"
+  example: []
+  syntax:
+    content: public bool DateExistsInShifts(DateTime date, List<ShiftSchedule> shifts)
+    content.vb: Public Function DateExistsInShifts(date As Date, shifts As List(Of ShiftSchedule)) As Boolean
+    parameters:
+    - id: date
+      type: System.DateTime
+      description: the date to test
+    - id: shifts
+      type: System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+      description: the shift to test if the date exists in
+    return:
+      type: System.Boolean
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts*
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  nameWithType.vb: ShiftHelper.DateExistsInShifts(DateTime, List(Of ShiftSchedule))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts(System.DateTime, System.Collections.Generic.List(Of Intranet.Labor.Model.ShiftSchedule))
+  name.vb: DateExistsInShifts(DateTime, List(Of ShiftSchedule))
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift
+  id: GetCurrentShift
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentShift()
+  nameWithType: ShiftHelper.GetCurrentShift()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetCurrentShift
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 66
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets the current shift\n"
+  example: []
+  syntax:
+    content: public ShiftType? GetCurrentShift()
+    content.vb: Public Function GetCurrentShift As ShiftType?
+    return:
+      type: System.Nullable{Intranet.Labor.Model.ShiftType}
+      description: the current shift
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift*
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule
+  id: GetCurrentShiftShedule
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentShiftShedule()
+  nameWithType: ShiftHelper.GetCurrentShiftShedule()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetCurrentShiftShedule
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 74
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets the current shift shedule\n"
+  example: []
+  syntax:
+    content: public ShiftSchedule GetCurrentShiftShedule()
+    content.vb: Public Function GetCurrentShiftShedule As ShiftSchedule
+    return:
+      type: Intranet.Labor.Model.ShiftSchedule
+      description: the current shift shedule
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule*
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule(System.Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule(System.Int32)
+  id: GetLastXShiftSchedule(System.Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
+  langs:
+  - csharp
+  - vb
+  name: GetLastXShiftSchedule(Int32)
+  nameWithType: ShiftHelper.GetLastXShiftSchedule(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLastXShiftSchedule
+    path: .src/Intranet/Labor/Bll/ShiftHelper.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets the current shift shedule\n"
+  example: []
+  syntax:
+    content: public List<ShiftSchedule> GetLastXShiftSchedule(int quantity)
+    content.vb: Public Function GetLastXShiftSchedule(quantity As Integer) As List(Of ShiftSchedule)
+    parameters:
+    - id: quantity
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+      description: the current shift shedule
+  overload: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule*
+  implements:
+  - Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper
+  commentId: T:Intranet.Labor.Definition.Bll.IShiftHelper
+  parent: Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: IShiftHelper
+  nameWithType: IShiftHelper
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.Bll
+  commentId: N:Intranet.Labor.Definition.Bll
+  isExternal: false
+  name: Intranet.Labor.Definition.Bll
+  nameWithType: Intranet.Labor.Definition.Bll
+  fullName: Intranet.Labor.Definition.Bll
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+  isExternal: false
+  name: ShiftScheduleRepository
+  nameWithType: ShiftHelper.ShiftScheduleRepository
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftScheduleRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.ShiftSchedule}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.ShiftSchedule}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<ShiftSchedule>
+  nameWithType: IGenericRepository<ShiftSchedule>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.ShiftSchedule>
+  nameWithType.vb: IGenericRepository(Of ShiftSchedule)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.ShiftSchedule)
+  name.vb: IGenericRepository(Of ShiftSchedule)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.#ctor
+  isExternal: false
+  name: ShiftHelper
+  nameWithType: ShiftHelper.ShiftHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.ShiftHelper
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift
+  isExternal: false
+  name: DateExistsInShift
+  nameWithType: ShiftHelper.DateExistsInShift
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShift
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  commentId: M:Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+  parent: Intranet.Labor.Definition.Bll.IShiftHelper
+  isExternal: true
+  name: DateExistsInShift(DateTime, ShiftSchedule)
+  nameWithType: IShiftHelper.DateExistsInShift(DateTime, ShiftSchedule)
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime, Intranet.Labor.Model.ShiftSchedule)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+    name: DateExistsInShift
+    nameWithType: IShiftHelper.DateExistsInShift
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift(System.DateTime,Intranet.Labor.Model.ShiftSchedule)
+    name: DateExistsInShift
+    nameWithType: IShiftHelper.DateExistsInShift
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShift
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Intranet.Labor.Model.ShiftSchedule
+  commentId: T:Intranet.Labor.Model.ShiftSchedule
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ShiftSchedule
+  nameWithType: ShiftSchedule
+  fullName: Intranet.Labor.Model.ShiftSchedule
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts
+  isExternal: false
+  name: DateExistsInShifts
+  nameWithType: ShiftHelper.DateExistsInShifts
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.DateExistsInShifts
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  commentId: M:Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  parent: Intranet.Labor.Definition.Bll.IShiftHelper
+  isExternal: true
+  name: DateExistsInShifts(DateTime, List<ShiftSchedule>)
+  nameWithType: IShiftHelper.DateExistsInShifts(DateTime, List<ShiftSchedule>)
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime, System.Collections.Generic.List<Intranet.Labor.Model.ShiftSchedule>)
+  nameWithType.vb: IShiftHelper.DateExistsInShifts(DateTime, List(Of ShiftSchedule))
+  fullname.vb: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime, System.Collections.Generic.List(Of Intranet.Labor.Model.ShiftSchedule))
+  name.vb: DateExistsInShifts(DateTime, List(Of ShiftSchedule))
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+    name: DateExistsInShifts
+    nameWithType: IShiftHelper.DateExistsInShifts
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts(System.DateTime,System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+    name: DateExistsInShifts
+    nameWithType: IShiftHelper.DateExistsInShifts
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.DateExistsInShifts
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+  commentId: T:System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ShiftSchedule>
+  nameWithType: List<ShiftSchedule>
+  fullName: System.Collections.Generic.List<Intranet.Labor.Model.ShiftSchedule>
+  nameWithType.vb: List(Of ShiftSchedule)
+  fullname.vb: System.Collections.Generic.List(Of Intranet.Labor.Model.ShiftSchedule)
+  name.vb: List(Of ShiftSchedule)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift
+  isExternal: false
+  name: GetCurrentShift
+  nameWithType: ShiftHelper.GetCurrentShift
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShift
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+  commentId: M:Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+  parent: Intranet.Labor.Definition.Bll.IShiftHelper
+  isExternal: false
+  name: GetCurrentShift()
+  nameWithType: IShiftHelper.GetCurrentShift()
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift()
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+    name: GetCurrentShift
+    nameWithType: IShiftHelper.GetCurrentShift
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+    name: GetCurrentShift
+    nameWithType: IShiftHelper.GetCurrentShift
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShift
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{Intranet.Labor.Model.ShiftType}
+  commentId: T:System.Nullable{Intranet.Labor.Model.ShiftType}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<ShiftType>
+  nameWithType: Nullable<ShiftType>
+  fullName: System.Nullable<Intranet.Labor.Model.ShiftType>
+  nameWithType.vb: Nullable(Of ShiftType)
+  fullname.vb: System.Nullable(Of Intranet.Labor.Model.ShiftType)
+  name.vb: Nullable(Of ShiftType)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftType
+    name: ShiftType
+    nameWithType: ShiftType
+    fullName: Intranet.Labor.Model.ShiftType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftType
+    name: ShiftType
+    nameWithType: ShiftType
+    fullName: Intranet.Labor.Model.ShiftType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule
+  isExternal: false
+  name: GetCurrentShiftShedule
+  nameWithType: ShiftHelper.GetCurrentShiftShedule
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetCurrentShiftShedule
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+  commentId: M:Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+  parent: Intranet.Labor.Definition.Bll.IShiftHelper
+  isExternal: false
+  name: GetCurrentShiftShedule()
+  nameWithType: IShiftHelper.GetCurrentShiftShedule()
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule()
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+    name: GetCurrentShiftShedule
+    nameWithType: IShiftHelper.GetCurrentShiftShedule
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+    name: GetCurrentShiftShedule
+    nameWithType: IShiftHelper.GetCurrentShiftShedule
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetCurrentShiftShedule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule
+  isExternal: false
+  name: GetLastXShiftSchedule
+  nameWithType: ShiftHelper.GetLastXShiftSchedule
+  fullName: Intranet.Web.Areas.Labor.Controllers.ShiftHelper.GetLastXShiftSchedule
+- uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+  commentId: M:Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+  parent: Intranet.Labor.Definition.Bll.IShiftHelper
+  isExternal: true
+  name: GetLastXShiftSchedule(Int32)
+  nameWithType: IShiftHelper.GetLastXShiftSchedule(Int32)
+  fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+    name: GetLastXShiftSchedule
+    nameWithType: IShiftHelper.GetLastXShiftSchedule
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule(System.Int32)
+    name: GetLastXShiftSchedule
+    nameWithType: IShiftHelper.GetLastXShiftSchedule
+    fullName: Intranet.Labor.Definition.Bll.IShiftHelper.GetLastXShiftSchedule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

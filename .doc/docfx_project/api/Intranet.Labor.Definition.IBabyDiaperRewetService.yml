@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRewetService
+  id: IBabyDiaperRewetService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperRewetService.Delete(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRewetService.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperRewetService
+  nameWithType: IBabyDiaperRewetService
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperRewetService
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the BabyDiaperRewetService\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperRewetService
+    content.vb: Public Interface IBabyDiaperRewetService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: IBabyDiaperRewetService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: TestValue Delete(int testValueId)
+    content.vb: Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetService.Delete*
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(System.Int32)
+  id: GetBabyDiaperRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetBabyDiaperRewetEditViewModel(Int32)
+  nameWithType: IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetBabyDiaperRewetEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets a new BabyDiaperRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewetEditViewModel GetBabyDiaperRewetEditViewModel(int rewetTestId)
+    content.vb: Function GetBabyDiaperRewetEditViewModel(rewetTestId As Integer) As BabyDiaperRewetEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Babydiaper rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: The BabyDiaperRewetEditViewModel
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel*
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel(System.Int32)
+  id: GetNewBabyDiaperRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetNewBabyDiaperRewetEditViewModel(Int32)
+  nameWithType: IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewBabyDiaperRewetEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the BabyDiaperRewetEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: BabyDiaperRewetEditViewModel GetNewBabyDiaperRewetEditViewModel(int testSheetId)
+    content.vb: Function GetNewBabyDiaperRewetEditViewModel(testSheetId As Integer) As BabyDiaperRewetEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Babydiaper rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: The BabyDiaperRewetEditViewModel
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel*
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetService.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetService
+  langs:
+  - csharp
+  - vb
+  name: Save(BabyDiaperRewetEditViewModel)
+  nameWithType: IBabyDiaperRewetService.Save(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.Save(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetService.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves or updates the BabyDiaperRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: TestValue Save(BabyDiaperRewetEditViewModel babyDiaperRewetEditViewModel)
+    content.vb: Function Save(babyDiaperRewetEditViewModel As BabyDiaperRewetEditViewModel) As TestValue
+    parameters:
+    - id: babyDiaperRewetEditViewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetService.Save*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.Delete*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: IBabyDiaperRewetService.Delete
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel
+  isExternal: false
+  name: GetBabyDiaperRewetEditViewModel
+  nameWithType: IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.GetBabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewetEditViewModel
+  nameWithType: BabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel
+  isExternal: false
+  name: GetNewBabyDiaperRewetEditViewModel
+  nameWithType: IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.GetNewBabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetService.Save*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetService.Save
+  isExternal: false
+  name: Save
+  nameWithType: IBabyDiaperRewetService.Save
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetService.Save

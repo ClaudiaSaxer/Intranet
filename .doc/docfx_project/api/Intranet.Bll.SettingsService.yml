@@ -1,0 +1,700 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Bll.SettingsService
+  commentId: T:Intranet.Bll.SettingsService
+  id: SettingsService
+  parent: Intranet.Bll
+  children:
+  - Intranet.Bll.SettingsService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Bll.SettingsService.GetSettingsViewModel
+  - Intranet.Bll.SettingsService.SettingsBll
+  - Intranet.Bll.SettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  langs:
+  - csharp
+  - vb
+  name: SettingsService
+  nameWithType: SettingsService
+  fullName: Intranet.Bll.SettingsService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Bll/SettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SettingsService
+    path: .src/Intranet/Bll/SettingsService.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nClass representing the service for the settings\n"
+  example: []
+  syntax:
+    content: 'public class SettingsService : ServiceBase, ISettingsService'
+    content.vb: >-
+      Public Class SettingsService
+
+          Inherits ServiceBase
+
+          Implements ISettingsService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Definition.ISettingsService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Bll.SettingsService.SettingsBll
+  commentId: P:Intranet.Bll.SettingsService.SettingsBll
+  id: SettingsBll
+  parent: Intranet.Bll.SettingsService
+  langs:
+  - csharp
+  - vb
+  name: SettingsBll
+  nameWithType: SettingsService.SettingsBll
+  fullName: Intranet.Bll.SettingsService.SettingsBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Bll/SettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SettingsBll
+    path: .src/Intranet/Bll/SettingsService.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nGets or sets the bll for the settings.\n"
+  example: []
+  syntax:
+    content: public ISettingsBll SettingsBll { get; set; }
+    content.vb: Public Property SettingsBll As ISettingsBll
+    parameters: []
+    return:
+      type: Intranet.Definition.ISettingsBll
+  overload: Intranet.Bll.SettingsService.SettingsBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.SettingsService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Bll.SettingsService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Bll.SettingsService
+  langs:
+  - csharp
+  - vb
+  name: SettingsService(ILoggerFactory)
+  nameWithType: SettingsService.SettingsService(ILoggerFactory)
+  fullName: Intranet.Bll.SettingsService.SettingsService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Bll/SettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Bll/SettingsService.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Bll.SettingsService\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public SettingsService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Bll.SettingsService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.SettingsService.GetSettingsViewModel
+  commentId: M:Intranet.Bll.SettingsService.GetSettingsViewModel
+  id: GetSettingsViewModel
+  parent: Intranet.Bll.SettingsService
+  langs:
+  - csharp
+  - vb
+  name: GetSettingsViewModel()
+  nameWithType: SettingsService.GetSettingsViewModel()
+  fullName: Intranet.Bll.SettingsService.GetSettingsViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Bll/SettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetSettingsViewModel
+    path: .src/Intranet/Bll/SettingsService.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nGets the SettingsViewModel\n"
+  example: []
+  syntax:
+    content: public SettingsViewModel GetSettingsViewModel()
+    content.vb: Public Function GetSettingsViewModel As SettingsViewModel
+    return:
+      type: Intranet.ViewModel.SettingsViewModel
+      description: The SettingsViewModel
+  overload: Intranet.Bll.SettingsService.GetSettingsViewModel*
+  implements:
+  - Intranet.Definition.ISettingsService.GetSettingsViewModel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.SettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  commentId: M:Intranet.Bll.SettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  id: UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  parent: Intranet.Bll.SettingsService
+  langs:
+  - csharp
+  - vb
+  name: UpdateModuleSetting(ModuleSetting)
+  nameWithType: SettingsService.UpdateModuleSetting(ModuleSetting)
+  fullName: Intranet.Bll.SettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Bll/SettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateModuleSetting
+    path: .src/Intranet/Bll/SettingsService.cs
+    startLine: 68
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nUpdates the visibility for the module\n"
+  example: []
+  syntax:
+    content: public Module UpdateModuleSetting(ModuleSetting moduleSetting)
+    content.vb: 'Public Function UpdateModuleSetting(moduleSetting As ModuleSetting) As '
+    parameters:
+    - id: moduleSetting
+      type: Intranet.ViewModel.ModuleSetting
+      description: The ModuleSettings
+    return:
+      type: Intranet.Model.Module
+  overload: Intranet.Bll.SettingsService.UpdateModuleSetting*
+  implements:
+  - Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Bll
+  commentId: N:Intranet.Bll
+  isExternal: false
+  name: Intranet.Bll
+  nameWithType: Intranet.Bll
+  fullName: Intranet.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Definition.ISettingsService
+  commentId: T:Intranet.Definition.ISettingsService
+  parent: Intranet.Definition
+  isExternal: false
+  name: ISettingsService
+  nameWithType: ISettingsService
+  fullName: Intranet.Definition.ISettingsService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Bll.SettingsService.SettingsBll*
+  commentId: Overload:Intranet.Bll.SettingsService.SettingsBll
+  isExternal: false
+  name: SettingsBll
+  nameWithType: SettingsService.SettingsBll
+  fullName: Intranet.Bll.SettingsService.SettingsBll
+- uid: Intranet.Definition.ISettingsBll
+  commentId: T:Intranet.Definition.ISettingsBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: ISettingsBll
+  nameWithType: ISettingsBll
+  fullName: Intranet.Definition.ISettingsBll
+- uid: Intranet.Bll.SettingsService
+  commentId: T:Intranet.Bll.SettingsService
+  isExternal: false
+  name: SettingsService
+  nameWithType: SettingsService
+  fullName: Intranet.Bll.SettingsService
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Bll.SettingsService.#ctor*
+  commentId: Overload:Intranet.Bll.SettingsService.#ctor
+  isExternal: false
+  name: SettingsService
+  nameWithType: SettingsService.SettingsService
+  fullName: Intranet.Bll.SettingsService.SettingsService
+- uid: Intranet.Bll.SettingsService.GetSettingsViewModel*
+  commentId: Overload:Intranet.Bll.SettingsService.GetSettingsViewModel
+  isExternal: false
+  name: GetSettingsViewModel
+  nameWithType: SettingsService.GetSettingsViewModel
+  fullName: Intranet.Bll.SettingsService.GetSettingsViewModel
+- uid: Intranet.Definition.ISettingsService.GetSettingsViewModel
+  commentId: M:Intranet.Definition.ISettingsService.GetSettingsViewModel
+  parent: Intranet.Definition.ISettingsService
+  isExternal: false
+  name: GetSettingsViewModel()
+  nameWithType: ISettingsService.GetSettingsViewModel()
+  fullName: Intranet.Definition.ISettingsService.GetSettingsViewModel()
+  spec.csharp:
+  - uid: Intranet.Definition.ISettingsService.GetSettingsViewModel
+    name: GetSettingsViewModel
+    nameWithType: ISettingsService.GetSettingsViewModel
+    fullName: Intranet.Definition.ISettingsService.GetSettingsViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Definition.ISettingsService.GetSettingsViewModel
+    name: GetSettingsViewModel
+    nameWithType: ISettingsService.GetSettingsViewModel
+    fullName: Intranet.Definition.ISettingsService.GetSettingsViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.ViewModel.SettingsViewModel
+  commentId: T:Intranet.ViewModel.SettingsViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: SettingsViewModel
+  nameWithType: SettingsViewModel
+  fullName: Intranet.ViewModel.SettingsViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel
+- uid: Intranet.Bll.SettingsService.UpdateModuleSetting*
+  commentId: Overload:Intranet.Bll.SettingsService.UpdateModuleSetting
+  isExternal: false
+  name: UpdateModuleSetting
+  nameWithType: SettingsService.UpdateModuleSetting
+  fullName: Intranet.Bll.SettingsService.UpdateModuleSetting
+- uid: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  commentId: M:Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  parent: Intranet.Definition.ISettingsService
+  isExternal: false
+  name: UpdateModuleSetting(ModuleSetting)
+  nameWithType: ISettingsService.UpdateModuleSetting(ModuleSetting)
+  fullName: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  spec.csharp:
+  - uid: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+    name: UpdateModuleSetting
+    nameWithType: ISettingsService.UpdateModuleSetting
+    fullName: Intranet.Definition.ISettingsService.UpdateModuleSetting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.ViewModel.ModuleSetting
+    name: ModuleSetting
+    nameWithType: ModuleSetting
+    fullName: Intranet.ViewModel.ModuleSetting
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+    name: UpdateModuleSetting
+    nameWithType: ISettingsService.UpdateModuleSetting
+    fullName: Intranet.Definition.ISettingsService.UpdateModuleSetting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.ViewModel.ModuleSetting
+    name: ModuleSetting
+    nameWithType: ModuleSetting
+    fullName: Intranet.ViewModel.ModuleSetting
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.ViewModel.ModuleSetting
+  commentId: T:Intranet.ViewModel.ModuleSetting
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: ModuleSetting
+  nameWithType: ModuleSetting
+  fullName: Intranet.ViewModel.ModuleSetting
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

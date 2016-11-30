@@ -1,0 +1,1285 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.Article
+  commentId: T:Intranet.Labor.Model.Article
+  id: Article
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.Article.ArticleId
+  - Intranet.Labor.Model.Article.ArticleNr
+  - Intranet.Labor.Model.Article.ArticleType
+  - Intranet.Labor.Model.Article.MaxHyTec1
+  - Intranet.Labor.Model.Article.MaxHyTec2
+  - Intranet.Labor.Model.Article.MaxHyTec3
+  - Intranet.Labor.Model.Article.MaxInkoRewet
+  - Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+  - Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+  - Intranet.Labor.Model.Article.MaxRetention
+  - Intranet.Labor.Model.Article.MinInkoRetention
+  - Intranet.Labor.Model.Article.MinRetention
+  - Intranet.Labor.Model.Article.Name
+  - Intranet.Labor.Model.Article.ProductionOrders
+  - Intranet.Labor.Model.Article.ProductName
+  - Intranet.Labor.Model.Article.Rewet140Max
+  - Intranet.Labor.Model.Article.Rewet210Max
+  - Intranet.Labor.Model.Article.SizeName
+  langs:
+  - csharp
+  - vb
+  name: Article
+  nameWithType: Article
+  fullName: Intranet.Labor.Model.Article
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Article
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nThe class representing an article.\n"
+  example: []
+  syntax:
+    content: public class Article
+    content.vb: Public Class Article
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.Article.ArticleId
+  commentId: P:Intranet.Labor.Model.Article.ArticleId
+  id: ArticleId
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: ArticleId
+  nameWithType: Article.ArticleId
+  fullName: Intranet.Labor.Model.Article.ArticleId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleId
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the id of the article\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int ArticleId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property ArticleId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the id of the article
+  overload: Intranet.Labor.Model.Article.ArticleId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.ArticleNr
+  commentId: P:Intranet.Labor.Model.Article.ArticleNr
+  id: ArticleNr
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: ArticleNr
+  nameWithType: Article.ArticleNr
+  fullName: Intranet.Labor.Model.Article.ArticleNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleNr
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the number of the article\n"
+  example: []
+  syntax:
+    content: public string ArticleNr { get; set; }
+    content.vb: Public Property ArticleNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the number of the article
+  overload: Intranet.Labor.Model.Article.ArticleNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.Name
+  commentId: P:Intranet.Labor.Model.Article.Name
+  id: Name
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Article.Name
+  fullName: Intranet.Labor.Model.Article.Name
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Name
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 33
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the name of the article\n"
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    content.vb: Public Property Name As String
+    parameters: []
+    return:
+      type: System.String
+      description: the name of the article
+  overload: Intranet.Labor.Model.Article.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.ArticleType
+  commentId: P:Intranet.Labor.Model.Article.ArticleType
+  id: ArticleType
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: ArticleType
+  nameWithType: Article.ArticleType
+  fullName: Intranet.Labor.Model.Article.ArticleType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleType
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 39
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the type of the article <xref href=\"Intranet.Labor.Model.Article.ArticleType\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ArticleType ArticleType { get; set; }
+    content.vb: Public Property ArticleType As ArticleType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.ArticleType
+      description: the type of the article
+  overload: Intranet.Labor.Model.Article.ArticleType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.ProductionOrders
+  commentId: P:Intranet.Labor.Model.Article.ProductionOrders
+  id: ProductionOrders
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrders
+  nameWithType: Article.ProductionOrders
+  fullName: Intranet.Labor.Model.Article.ProductionOrders
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrders
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the production orders of the article <xref href=\"Intranet.Labor.Model.ProductionOrder\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ICollection<ProductionOrder> ProductionOrders { get; set; }
+    content.vb: Public Property ProductionOrders As ICollection(Of ProductionOrder)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.ProductionOrder}
+      description: 'the production orders of the article '
+  overload: Intranet.Labor.Model.Article.ProductionOrders*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.Rewet140Max
+  commentId: P:Intranet.Labor.Model.Article.Rewet140Max
+  id: Rewet140Max
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: Rewet140Max
+  nameWithType: Article.Rewet140Max
+  fullName: Intranet.Labor.Model.Article.Rewet140Max
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet140Max
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 50
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value of the rewet 140ml test for the babydiaper article\n"
+  example: []
+  syntax:
+    content: public double Rewet140Max { get; set; }
+    content.vb: Public Property Rewet140Max As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.Rewet140Max*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.Rewet210Max
+  commentId: P:Intranet.Labor.Model.Article.Rewet210Max
+  id: Rewet210Max
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: Rewet210Max
+  nameWithType: Article.Rewet210Max
+  fullName: Intranet.Labor.Model.Article.Rewet210Max
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet210Max
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value of the rewet 210ml test for the babydiaper article\n"
+  example: []
+  syntax:
+    content: public double Rewet210Max { get; set; }
+    content.vb: Public Property Rewet210Max As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.Rewet210Max*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MinRetention
+  commentId: P:Intranet.Labor.Model.Article.MinRetention
+  id: MinRetention
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MinRetention
+  nameWithType: Article.MinRetention
+  fullName: Intranet.Labor.Model.Article.MinRetention
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MinRetention
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 60
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the min value of the retention test for the babydiaper article\n"
+  example: []
+  syntax:
+    content: public double MinRetention { get; set; }
+    content.vb: Public Property MinRetention As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MinRetention*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxRetention
+  commentId: P:Intranet.Labor.Model.Article.MaxRetention
+  id: MaxRetention
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxRetention
+  nameWithType: Article.MaxRetention
+  fullName: Intranet.Labor.Model.Article.MaxRetention
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxRetention
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 65
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value of the retention test for the babydiaper article\n"
+  example: []
+  syntax:
+    content: public double MaxRetention { get; set; }
+    content.vb: Public Property MaxRetention As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxRetention*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+  commentId: P:Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+  id: MaxPenetrationAfter4Time
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxPenetrationAfter4Time
+  nameWithType: Article.MaxPenetrationAfter4Time
+  fullName: Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxPenetrationAfter4Time
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 70
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max time of the 4th penetration test for the babydiaper article\n"
+  example: []
+  syntax:
+    content: public double MaxPenetrationAfter4Time { get; set; }
+    content.vb: Public Property MaxPenetrationAfter4Time As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxPenetrationAfter4Time*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxInkoRewet
+  commentId: P:Intranet.Labor.Model.Article.MaxInkoRewet
+  id: MaxInkoRewet
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxInkoRewet
+  nameWithType: Article.MaxInkoRewet
+  fullName: Intranet.Labor.Model.Article.MaxInkoRewet
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxInkoRewet
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 75
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value for the rewet frei 70 test for the inko article\n"
+  example: []
+  syntax:
+    content: public double MaxInkoRewet { get; set; }
+    content.vb: Public Property MaxInkoRewet As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxInkoRewet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MinInkoRetention
+  commentId: P:Intranet.Labor.Model.Article.MinInkoRetention
+  id: MinInkoRetention
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MinInkoRetention
+  nameWithType: Article.MinInkoRetention
+  fullName: Intranet.Labor.Model.Article.MinInkoRetention
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MinInkoRetention
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 80
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the min value for the retention test for the inko article\n"
+  example: []
+  syntax:
+    content: public double MinInkoRetention { get; set; }
+    content.vb: Public Property MinInkoRetention As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MinInkoRetention*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxHyTec1
+  commentId: P:Intranet.Labor.Model.Article.MaxHyTec1
+  id: MaxHyTec1
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxHyTec1
+  nameWithType: Article.MaxHyTec1
+  fullName: Intranet.Labor.Model.Article.MaxHyTec1
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxHyTec1
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 85
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value for the aquisitionszeit hytec 1 test for the inko article\n"
+  example: []
+  syntax:
+    content: public double MaxHyTec1 { get; set; }
+    content.vb: Public Property MaxHyTec1 As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxHyTec1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxHyTec2
+  commentId: P:Intranet.Labor.Model.Article.MaxHyTec2
+  id: MaxHyTec2
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxHyTec2
+  nameWithType: Article.MaxHyTec2
+  fullName: Intranet.Labor.Model.Article.MaxHyTec2
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxHyTec2
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 90
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value for the aquisitionszeit hytec 2 test for the inko article\n"
+  example: []
+  syntax:
+    content: public double MaxHyTec2 { get; set; }
+    content.vb: Public Property MaxHyTec2 As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxHyTec2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxHyTec3
+  commentId: P:Intranet.Labor.Model.Article.MaxHyTec3
+  id: MaxHyTec3
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxHyTec3
+  nameWithType: Article.MaxHyTec3
+  fullName: Intranet.Labor.Model.Article.MaxHyTec3
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxHyTec3
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value for the aquisitionszeit hytec 3 test for the inko article\n"
+  example: []
+  syntax:
+    content: public double MaxHyTec3 { get; set; }
+    content.vb: Public Property MaxHyTec3 As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxHyTec3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+  commentId: P:Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+  id: MaxInkoRewetAfterAquisition
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: MaxInkoRewetAfterAquisition
+  nameWithType: Article.MaxInkoRewetAfterAquisition
+  fullName: Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MaxInkoRewetAfterAquisition
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 100
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the max value for the rewet test after Aqusitionstime for the inko article\n"
+  example: []
+  syntax:
+    content: public double MaxInkoRewetAfterAquisition { get; set; }
+    content.vb: Public Property MaxInkoRewetAfterAquisition As Double
+    parameters: []
+    return:
+      type: System.Double
+  overload: Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.ProductName
+  commentId: P:Intranet.Labor.Model.Article.ProductName
+  id: ProductName
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: ProductName
+  nameWithType: Article.ProductName
+  fullName: Intranet.Labor.Model.Article.ProductName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductName
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 105
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the product name\n"
+  example: []
+  syntax:
+    content: public string ProductName { get; set; }
+    content.vb: Public Property ProductName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: Intranet.Labor.Model.Article.ProductName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Article.SizeName
+  commentId: P:Intranet.Labor.Model.Article.SizeName
+  id: SizeName
+  parent: Intranet.Labor.Model.Article
+  langs:
+  - csharp
+  - vb
+  name: SizeName
+  nameWithType: Article.SizeName
+  fullName: Intranet.Labor.Model.Article.SizeName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/Article.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SizeName
+    path: .src/Intranet/Labor/Model/intigena/Article.cs
+    startLine: 110
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the size name\n"
+  example: []
+  syntax:
+    content: public string SizeName { get; set; }
+    content.vb: Public Property SizeName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: Intranet.Labor.Model.Article.SizeName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.Article.ArticleId*
+  commentId: Overload:Intranet.Labor.Model.Article.ArticleId
+  isExternal: false
+  name: ArticleId
+  nameWithType: Article.ArticleId
+  fullName: Intranet.Labor.Model.Article.ArticleId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.Article.ArticleNr*
+  commentId: Overload:Intranet.Labor.Model.Article.ArticleNr
+  isExternal: false
+  name: ArticleNr
+  nameWithType: Article.ArticleNr
+  fullName: Intranet.Labor.Model.Article.ArticleNr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.Article.Name*
+  commentId: Overload:Intranet.Labor.Model.Article.Name
+  isExternal: false
+  name: Name
+  nameWithType: Article.Name
+  fullName: Intranet.Labor.Model.Article.Name
+- uid: Intranet.Labor.Model.Article.ArticleType
+  commentId: P:Intranet.Labor.Model.Article.ArticleType
+- uid: Intranet.Labor.Model.Article.ArticleType*
+  commentId: Overload:Intranet.Labor.Model.Article.ArticleType
+  isExternal: false
+  name: ArticleType
+  nameWithType: Article.ArticleType
+  fullName: Intranet.Labor.Model.Article.ArticleType
+- uid: Intranet.Labor.Model.ArticleType
+  commentId: T:Intranet.Labor.Model.ArticleType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ArticleType
+  nameWithType: ArticleType
+  fullName: Intranet.Labor.Model.ArticleType
+- uid: Intranet.Labor.Model.ProductionOrder
+  commentId: T:Intranet.Labor.Model.ProductionOrder
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ProductionOrder
+  nameWithType: ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrder
+- uid: Intranet.Labor.Model.Article.ProductionOrders*
+  commentId: Overload:Intranet.Labor.Model.Article.ProductionOrders
+  isExternal: false
+  name: ProductionOrders
+  nameWithType: Article.ProductionOrders
+  fullName: Intranet.Labor.Model.Article.ProductionOrders
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.ProductionOrder}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.ProductionOrder}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<ProductionOrder>
+  nameWithType: ICollection<ProductionOrder>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.ProductionOrder>
+  nameWithType.vb: ICollection(Of ProductionOrder)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.ProductionOrder)
+  name.vb: ICollection(Of ProductionOrder)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ProductionOrder
+    name: ProductionOrder
+    nameWithType: ProductionOrder
+    fullName: Intranet.Labor.Model.ProductionOrder
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Model.Article.Rewet140Max*
+  commentId: Overload:Intranet.Labor.Model.Article.Rewet140Max
+  isExternal: false
+  name: Rewet140Max
+  nameWithType: Article.Rewet140Max
+  fullName: Intranet.Labor.Model.Article.Rewet140Max
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.Model.Article.Rewet210Max*
+  commentId: Overload:Intranet.Labor.Model.Article.Rewet210Max
+  isExternal: false
+  name: Rewet210Max
+  nameWithType: Article.Rewet210Max
+  fullName: Intranet.Labor.Model.Article.Rewet210Max
+- uid: Intranet.Labor.Model.Article.MinRetention*
+  commentId: Overload:Intranet.Labor.Model.Article.MinRetention
+  isExternal: false
+  name: MinRetention
+  nameWithType: Article.MinRetention
+  fullName: Intranet.Labor.Model.Article.MinRetention
+- uid: Intranet.Labor.Model.Article.MaxRetention*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxRetention
+  isExternal: false
+  name: MaxRetention
+  nameWithType: Article.MaxRetention
+  fullName: Intranet.Labor.Model.Article.MaxRetention
+- uid: Intranet.Labor.Model.Article.MaxPenetrationAfter4Time*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+  isExternal: false
+  name: MaxPenetrationAfter4Time
+  nameWithType: Article.MaxPenetrationAfter4Time
+  fullName: Intranet.Labor.Model.Article.MaxPenetrationAfter4Time
+- uid: Intranet.Labor.Model.Article.MaxInkoRewet*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxInkoRewet
+  isExternal: false
+  name: MaxInkoRewet
+  nameWithType: Article.MaxInkoRewet
+  fullName: Intranet.Labor.Model.Article.MaxInkoRewet
+- uid: Intranet.Labor.Model.Article.MinInkoRetention*
+  commentId: Overload:Intranet.Labor.Model.Article.MinInkoRetention
+  isExternal: false
+  name: MinInkoRetention
+  nameWithType: Article.MinInkoRetention
+  fullName: Intranet.Labor.Model.Article.MinInkoRetention
+- uid: Intranet.Labor.Model.Article.MaxHyTec1*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxHyTec1
+  isExternal: false
+  name: MaxHyTec1
+  nameWithType: Article.MaxHyTec1
+  fullName: Intranet.Labor.Model.Article.MaxHyTec1
+- uid: Intranet.Labor.Model.Article.MaxHyTec2*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxHyTec2
+  isExternal: false
+  name: MaxHyTec2
+  nameWithType: Article.MaxHyTec2
+  fullName: Intranet.Labor.Model.Article.MaxHyTec2
+- uid: Intranet.Labor.Model.Article.MaxHyTec3*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxHyTec3
+  isExternal: false
+  name: MaxHyTec3
+  nameWithType: Article.MaxHyTec3
+  fullName: Intranet.Labor.Model.Article.MaxHyTec3
+- uid: Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition*
+  commentId: Overload:Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+  isExternal: false
+  name: MaxInkoRewetAfterAquisition
+  nameWithType: Article.MaxInkoRewetAfterAquisition
+  fullName: Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition
+- uid: Intranet.Labor.Model.Article.ProductName*
+  commentId: Overload:Intranet.Labor.Model.Article.ProductName
+  isExternal: false
+  name: ProductName
+  nameWithType: Article.ProductName
+  fullName: Intranet.Labor.Model.Article.ProductName
+- uid: Intranet.Labor.Model.Article.SizeName*
+  commentId: Overload:Intranet.Labor.Model.Article.SizeName
+  isExternal: false
+  name: SizeName
+  nameWithType: Article.SizeName
+  fullName: Intranet.Labor.Model.Article.SizeName

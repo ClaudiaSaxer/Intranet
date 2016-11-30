@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  id: IncontinencePadAcquisitionTime
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  - Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadAcquisitionTime
+  nameWithType: IncontinencePadAcquisitionTime
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadAcquisitionTime
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model of the acquisation time\n"
+  example: []
+  syntax:
+    content: public class IncontinencePadAcquisitionTime
+    content.vb: Public Class IncontinencePadAcquisitionTime
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  id: AcquisitionTimeAdditionFirst
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionFirst
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionFirst
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the acquisition time of the first addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeAdditionFirst { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionFirst As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: acquisition time value for the first addition
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  id: AcquisitionTimeAdditionSecond
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionSecond
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionSecond
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the acquisition time of the second addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeAdditionSecond { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionSecond As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: acquisition time value for the second addition
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  id: AcquisitionTimeAdditionThird
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionThird
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionThird
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value of the acquisition time of the third addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeAdditionThird { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionThird As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: acquisition time value for the third addition
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  id: AcquisitionTimeAdditionFirstRW
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionFirstRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionFirstRW
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW type\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeAdditionFirstRW { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionFirstRW As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW type
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  id: AcquisitionTimeAdditionSecondRW
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionSecondRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionSecondRW
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW type\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeAdditionSecondRW { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionSecondRW As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW type
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  id: AcquisitionTimeAdditionThirdRW
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeAdditionThirdRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeAdditionThirdRW
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW type\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeAdditionThirdRW { get; set; }
+    content.vb: Public Property AcquisitionTimeAdditionThirdRW As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW type
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight
+  commentId: P:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight
+  id: Weight
+  parent: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: IncontinencePadAcquisitionTime.Weight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Weight
+    path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the weight the diaper has if it is dry\n"
+  example: []
+  syntax:
+    content: public double Weight { get; set; }
+    content.vb: Public Property Weight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of the dry diaper
+  overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  isExternal: false
+  name: AcquisitionTimeAdditionFirst
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirst
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  isExternal: false
+  name: AcquisitionTimeAdditionSecond
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecond
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  isExternal: false
+  name: AcquisitionTimeAdditionThird
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThird
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  isExternal: false
+  name: AcquisitionTimeAdditionFirstRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  isExternal: false
+  name: AcquisitionTimeAdditionSecondRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  isExternal: false
+  name: AcquisitionTimeAdditionThirdRW
+  nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight*
+  commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight
+  isExternal: false
+  name: Weight
+  nameWithType: IncontinencePadAcquisitionTime.Weight
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.Weight

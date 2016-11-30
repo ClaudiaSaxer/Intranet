@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  id: IBabyDiaperLaborCreatorBll
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperLaborCreatorBll
+  nameWithType: IBabyDiaperLaborCreatorBll
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperLaborCreatorBll
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nInterface representing the labor creator bll\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperLaborCreatorBll
+    content.vb: Public Interface IBabyDiaperLaborCreatorBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId(System.Int32)
+  id: GetTestSheetForId(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForId(Int32)
+  nameWithType: IBabyDiaperLaborCreatorBll.GetTestSheetForId(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForId
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the testsheet for the given id from the database\n"
+  example: []
+  syntax:
+    content: TestSheet GetTestSheetForId(int id)
+    content.vb: Function GetTestSheetForId(id As Integer) As TestSheet
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the unique identifier for the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: a testsheet with the given data, or null if not found
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId
+  isExternal: false
+  name: GetTestSheetForId
+  nameWithType: IBabyDiaperLaborCreatorBll.GetTestSheetForId
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor

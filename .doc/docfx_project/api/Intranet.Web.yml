@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  id: Intranet.Web
+  children:
+  - Intranet.Web.AutofacConfig
+  - Intranet.Web.BundleConfig
+  - Intranet.Web.FilterConfig
+  - Intranet.Web.MvcApplication
+  - Intranet.Web.RouteConfig
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+  type: Namespace
+  assemblies:
+  - Intranet.Web
+references:
+- uid: Intranet.Web.BundleConfig
+  commentId: T:Intranet.Web.BundleConfig
+  isExternal: false
+  name: BundleConfig
+  nameWithType: BundleConfig
+  fullName: Intranet.Web.BundleConfig
+- uid: Intranet.Web.FilterConfig
+  commentId: T:Intranet.Web.FilterConfig
+  isExternal: false
+  name: FilterConfig
+  nameWithType: FilterConfig
+  fullName: Intranet.Web.FilterConfig
+- uid: Intranet.Web.AutofacConfig
+  commentId: T:Intranet.Web.AutofacConfig
+  isExternal: false
+  name: AutofacConfig
+  nameWithType: AutofacConfig
+  fullName: Intranet.Web.AutofacConfig
+- uid: Intranet.Web.RouteConfig
+  commentId: T:Intranet.Web.RouteConfig
+  isExternal: false
+  name: RouteConfig
+  nameWithType: RouteConfig
+  fullName: Intranet.Web.RouteConfig
+- uid: Intranet.Web.MvcApplication
+  commentId: T:Intranet.Web.MvcApplication
+  isExternal: false
+  name: MvcApplication
+  nameWithType: MvcApplication
+  fullName: Intranet.Web.MvcApplication

@@ -113,6 +113,8 @@ namespace Intranet.Labor.Bll
                 ProductionCode = TestServiceHelper.CreateProductionCode(testSheet),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
                 ProductionCodeTime = incontinencePadTestValue.IncontinencePadTime,
+                ExpireMonth = incontinencePadTestValue.ExpireMonth,
+                ExpireYear = incontinencePadTestValue.ExpireYear,
                 InkoWeight = incontinencePadTestValue.RetentionWeight,
                 InkoWeightWet = incontinencePadTestValue.RetentionWetValue,
                 InkoWeightAfterZentrifuge = incontinencePadTestValue.RetentionAfterZentrifuge,
@@ -158,6 +160,8 @@ namespace Intranet.Labor.Bll
                 viewModel.TestPerson = oldTestValue.LastEditedPerson;
                 viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
                 viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
+                viewModel.ExpireMonth = oldTestValue.IncontinencePadTestValue.ExpireMonth;
+                viewModel.ExpireYear = oldTestValue.IncontinencePadTestValue.ExpireYear;
             }
 
             return viewModel;

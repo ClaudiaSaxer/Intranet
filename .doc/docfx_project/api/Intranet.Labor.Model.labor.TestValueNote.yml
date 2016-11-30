@@ -1,0 +1,693 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.TestValueNote
+  commentId: T:Intranet.Labor.Model.labor.TestValueNote
+  id: TestValueNote
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.TestValueNote.Error
+  - Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+  - Intranet.Labor.Model.labor.TestValueNote.Message
+  - Intranet.Labor.Model.labor.TestValueNote.TestValue
+  - Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+  - Intranet.Labor.Model.labor.TestValueNote.TestValueRefId
+  langs:
+  - csharp
+  - vb
+  name: TestValueNote
+  nameWithType: TestValueNote
+  fullName: Intranet.Labor.Model.labor.TestValueNote
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueNote
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nClass representing notes for a test value\n"
+  example: []
+  syntax:
+    content: public class TestValueNote
+    content.vb: Public Class TestValueNote
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+  id: TestValueNoteId
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: TestValueNoteId
+  nameWithType: TestValueNote.TestValueNoteId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueNoteId
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the id of the test note\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int TestValueNoteId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property TestValueNoteId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'the test note id '
+  overload: Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValueNote.Message
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.Message
+  id: Message
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: TestValueNote.Message
+  fullName: Intranet.Labor.Model.labor.TestValueNote.Message
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Message
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the message for the test note\n"
+  example: []
+  syntax:
+    content: public string Message { get; set; }
+    content.vb: Public Property Message As String
+    parameters: []
+    return:
+      type: System.String
+      description: the message for the test note
+  overload: Intranet.Labor.Model.labor.TestValueNote.Message*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValueNote.Error
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.Error
+  id: Error
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: TestValueNote.Error
+  fullName: Intranet.Labor.Model.labor.TestValueNote.Error
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Error
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the error of the test note\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("ErrorRefId")]
+
+      public virtual Error Error { get; set; }
+    content.vb: "<ForeignKey(\"ErrorRefId\")>\nPublic Overridable Property Error As "
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.Error
+      description: the error of the test note
+  overload: Intranet.Labor.Model.labor.TestValueNote.Error*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ErrorRefId
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+  id: ErrorRefId
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: ErrorRefId
+  nameWithType: TestValueNote.ErrorRefId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ErrorRefId
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 38
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the ref id of the error\n"
+  example: []
+  syntax:
+    content: public int ErrorRefId { get; set; }
+    content.vb: Public Property ErrorRefId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the ref id of the error
+  overload: Intranet.Labor.Model.labor.TestValueNote.ErrorRefId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValue
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.TestValue
+  id: TestValue
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: TestValue
+  nameWithType: TestValueNote.TestValue
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValue
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test value for the error\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("TestValueRefId")]
+
+      public virtual TestValue TestValue { get; set; }
+    content.vb: >-
+      <ForeignKey("TestValueRefId")>
+
+      Public Overridable Property TestValue As TestValue
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the test value
+  overload: Intranet.Labor.Model.labor.TestValueNote.TestValue*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: TestValueRefId
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValueRefId
+  commentId: P:Intranet.Labor.Model.labor.TestValueNote.TestValueRefId
+  id: TestValueRefId
+  parent: Intranet.Labor.Model.labor.TestValueNote
+  langs:
+  - csharp
+  - vb
+  name: TestValueRefId
+  nameWithType: TestValueNote.TestValueRefId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValueRefId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValueRefId
+    path: .src/Intranet/Labor/Model/labor/TestValueNote.cs
+    startLine: 51
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the ref id of the test value\n"
+  example: []
+  syntax:
+    content: public int TestValueRefId { get; set; }
+    content.vb: Public Property TestValueRefId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the ref id of the test value
+  overload: Intranet.Labor.Model.labor.TestValueNote.TestValueRefId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+  isExternal: false
+  name: TestValueNoteId
+  nameWithType: TestValueNote.TestValueNoteId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValueNoteId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValueNote.Message*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.Message
+  isExternal: false
+  name: Message
+  nameWithType: TestValueNote.Message
+  fullName: Intranet.Labor.Model.labor.TestValueNote.Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor.TestValueNote.Error*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.Error
+  isExternal: false
+  name: Error
+  nameWithType: TestValueNote.Error
+  fullName: Intranet.Labor.Model.labor.TestValueNote.Error
+- uid: Intranet.Labor.Model.Error
+  commentId: T:Intranet.Labor.Model.Error
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: Error
+  nameWithType: Error
+  fullName: Intranet.Labor.Model.Error
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Model.labor.TestValueNote.ErrorRefId*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+  isExternal: false
+  name: ErrorRefId
+  nameWithType: TestValueNote.ErrorRefId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.ErrorRefId
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValue*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.TestValue
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValueNote.TestValue
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValue
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor.TestValueNote.TestValueRefId*
+  commentId: Overload:Intranet.Labor.Model.labor.TestValueNote.TestValueRefId
+  isExternal: false
+  name: TestValueRefId
+  nameWithType: TestValueNote.TestValueRefId
+  fullName: Intranet.Labor.Model.labor.TestValueNote.TestValueRefId

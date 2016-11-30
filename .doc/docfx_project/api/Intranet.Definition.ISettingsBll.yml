@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition.ISettingsBll
+  commentId: T:Intranet.Definition.ISettingsBll
+  id: ISettingsBll
+  parent: Intranet.Definition
+  children:
+  - Intranet.Definition.ISettingsBll.AllVisibleMainModules
+  - Intranet.Definition.ISettingsBll.UpdateModuleVisability(System.Int32,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ISettingsBll
+  nameWithType: ISettingsBll
+  fullName: Intranet.Definition.ISettingsBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ISettingsBll
+    path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nInterface representing the bll for the settings\n"
+  example: []
+  syntax:
+    content: public interface ISettingsBll
+    content.vb: Public Interface ISettingsBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Definition.ISettingsBll.AllVisibleMainModules
+  commentId: M:Intranet.Definition.ISettingsBll.AllVisibleMainModules
+  id: AllVisibleMainModules
+  parent: Intranet.Definition.ISettingsBll
+  langs:
+  - csharp
+  - vb
+  name: AllVisibleMainModules()
+  nameWithType: ISettingsBll.AllVisibleMainModules()
+  fullName: Intranet.Definition.ISettingsBll.AllVisibleMainModules()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AllVisibleMainModules
+    path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nQuery for all main modules to edit their settings.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Module> AllVisibleMainModules()
+    content.vb: Function AllVisibleMainModules As IEnumerable(Of  Module)
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+      description: All modules with type main o
+  overload: Intranet.Definition.ISettingsBll.AllVisibleMainModules*
+- uid: Intranet.Definition.ISettingsBll.UpdateModuleVisability(System.Int32,System.Boolean)
+  commentId: M:Intranet.Definition.ISettingsBll.UpdateModuleVisability(System.Int32,System.Boolean)
+  id: UpdateModuleVisability(System.Int32,System.Boolean)
+  parent: Intranet.Definition.ISettingsBll
+  langs:
+  - csharp
+  - vb
+  name: UpdateModuleVisability(Int32, Boolean)
+  nameWithType: ISettingsBll.UpdateModuleVisability(Int32, Boolean)
+  fullName: Intranet.Definition.ISettingsBll.UpdateModuleVisability(System.Int32, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateModuleVisability
+    path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nUpdates the Module visability in the db\n"
+  example: []
+  syntax:
+    content: Module UpdateModuleVisability(int id, bool visability)
+    content.vb: 'Function UpdateModuleVisability(id As Integer, visability As Boolean) As '
+    parameters:
+    - id: id
+      type: System.Int32
+      description: the id of the module
+    - id: visability
+      type: System.Boolean
+      description: the visability of the module
+    return:
+      type: Intranet.Model.Module
+  overload: Intranet.Definition.ISettingsBll.UpdateModuleVisability*
+references:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Definition.ISettingsBll.AllVisibleMainModules*
+  commentId: Overload:Intranet.Definition.ISettingsBll.AllVisibleMainModules
+  isExternal: false
+  name: AllVisibleMainModules
+  nameWithType: ISettingsBll.AllVisibleMainModules
+  fullName: Intranet.Definition.ISettingsBll.AllVisibleMainModules
+- uid: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Module>
+  nameWithType: IEnumerable<Module>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Model.Module>
+  nameWithType.vb: IEnumerable(Of Module)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Model.Module)
+  name.vb: IEnumerable(Of Module)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Definition.ISettingsBll.UpdateModuleVisability*
+  commentId: Overload:Intranet.Definition.ISettingsBll.UpdateModuleVisability
+  isExternal: false
+  name: UpdateModuleVisability
+  nameWithType: ISettingsBll.UpdateModuleVisability
+  fullName: Intranet.Definition.ISettingsBll.UpdateModuleVisability
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

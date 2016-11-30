@@ -1,0 +1,2180 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository
+  commentId: T:Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository
+  id: BabyDiaperTestValueRepository
+  parent: Intranet.Labor.Dal.Repositories
+  children:
+  - Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext},Intranet.Common.ILoggerFactory)
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValueRepository
+  nameWithType: BabyDiaperTestValueRepository
+  fullName: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/Repositories/BabyDiaperTestValueRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperTestValueRepository
+    path: .src/Intranet/Labor/Dal/Repositories/BabyDiaperTestValueRepository.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal.Repositories
+  summary: "\nThe Repository for the BabyDiaperTestValueRepository\n"
+  example: []
+  syntax:
+    content: 'public class BabyDiaperTestValueRepository : GenericRepository<LaborContext, BabyDiaperTestValue>, IGenericRepository<BabyDiaperTestValue>, IDisposable'
+    content.vb: >-
+      Public Class BabyDiaperTestValueRepository
+
+          Inherits GenericRepository(Of LaborContext, BabyDiaperTestValue)
+
+          Implements IGenericRepository(Of BabyDiaperTestValue), IDisposable
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.DisposableBase
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  implements:
+  - Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  - System.IDisposable
+  inheritedMembers:
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Context
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DatabaseFactory
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DbCommit
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Disposed
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.GetAll
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.Boolean}})
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Add(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.BabyDiaperTestValue})
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Remove(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SetModified(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Attach(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChanges
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Entry``1({TAnyEntity})
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecords
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecordsAsync
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.FindAsync(System.Object[])
+  - Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SqlQuery(System.String,System.Object[])
+  - Intranet.Common.DisposableBase.Dispose
+  - Intranet.Common.DisposableBase.Disposed
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext},Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor(Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext},Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext},Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext>, ILoggerFactory)
+  nameWithType: BabyDiaperTestValueRepository.BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext>, ILoggerFactory)
+  fullName: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.BabyDiaperTestValueRepository(Intranet.Common.IDatabaseFactory<Intranet.Labor.Dal.LaborContext>, Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Dal/Repositories/BabyDiaperTestValueRepository.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Dal/Repositories/BabyDiaperTestValueRepository.cs
+    startLine: 21
+  assemblies:
+  - Intranet.Labor.Dal
+  namespace: Intranet.Labor.Dal.Repositories
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.GenericRepository%602\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(databaseFactory As IDatabaseFactory(Of LaborContext), loggerFactory As ILoggerFactory)
+    parameters:
+    - id: databaseFactory
+      type: Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext}
+      description: A <xref href="Intranet.Common.IDatabaseFactory%601" data-throw-if-not-resolved="false"></xref>.
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor*
+  nameWithType.vb: BabyDiaperTestValueRepository.BabyDiaperTestValueRepository(IDatabaseFactory(Of LaborContext), ILoggerFactory)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.BabyDiaperTestValueRepository(Intranet.Common.IDatabaseFactory(Of Intranet.Labor.Dal.LaborContext), Intranet.Common.ILoggerFactory)
+  name.vb: BabyDiaperTestValueRepository(IDatabaseFactory(Of LaborContext), ILoggerFactory)
+references:
+- uid: Intranet.Labor.Dal.Repositories
+  commentId: N:Intranet.Labor.Dal.Repositories
+  isExternal: false
+  name: Intranet.Labor.Dal.Repositories
+  nameWithType: Intranet.Labor.Dal.Repositories
+  fullName: Intranet.Labor.Dal.Repositories
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  commentId: T:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  parent: Intranet.Common
+  definition: Intranet.Common.GenericRepository`2
+  name: GenericRepository<LaborContext, BabyDiaperTestValue>
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  name.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Dal.LaborContext
+    name: LaborContext
+    nameWithType: LaborContext
+    fullName: Intranet.Labor.Dal.LaborContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Dal.LaborContext
+    name: LaborContext
+    nameWithType: LaborContext
+    fullName: Intranet.Labor.Dal.LaborContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<BabyDiaperTestValue>
+  nameWithType: IGenericRepository<BabyDiaperTestValue>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.BabyDiaperTestValue>
+  nameWithType.vb: IGenericRepository(Of BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  name.vb: IGenericRepository(Of BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Context
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Context
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Context
+  name: Context
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Context
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Context
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Context
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Context
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DatabaseFactory
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DatabaseFactory
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.DatabaseFactory
+  name: DatabaseFactory
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.DatabaseFactory
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.DatabaseFactory
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).DatabaseFactory
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).DatabaseFactory
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DbCommit
+  commentId: P:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.DbCommit
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.DbCommit
+  name: DbCommit
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.DbCommit
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.DbCommit
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).DbCommit
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).DbCommit
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Disposed
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Disposed
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Disposed
+  name: Disposed()
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Disposed()
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Disposed()
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Disposed()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Disposed
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Disposed
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.GetAll
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.GetAll
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.GetAll
+  name: GetAll()
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.GetAll()
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.GetAll()
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).GetAll()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).GetAll()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.GetAll
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).GetAll
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.Boolean}})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Where(System.Linq.Expressions.Expression{System.Func{Intranet.Labor.Model.labor.BabyDiaperTestValue,System.Boolean}})
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  name: Where(Expression<Func<BabyDiaperTestValue, Boolean>>)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Where(Expression<Func<BabyDiaperTestValue, Boolean>>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Where(System.Linq.Expressions.Expression<System.Func<Intranet.Labor.Model.labor.BabyDiaperTestValue, System.Boolean>>)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Where(Expression(Of Func(Of BabyDiaperTestValue, Boolean)))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Where(System.Linq.Expressions.Expression(Of System.Func(Of Intranet.Labor.Model.labor.BabyDiaperTestValue, System.Boolean)))
+  name.vb: Where(Expression(Of Func(Of BabyDiaperTestValue, Boolean)))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Where
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Where
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Add(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Add(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Add(`1)
+  name: Add(BabyDiaperTestValue)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Add(BabyDiaperTestValue)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Add(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Add(BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Add(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Add
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Add
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.BabyDiaperTestValue})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.AddRange(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.BabyDiaperTestValue})
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  name: AddRange(IEnumerable<BabyDiaperTestValue>)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.AddRange(IEnumerable<BabyDiaperTestValue>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.AddRange(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.BabyDiaperTestValue>)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).AddRange(IEnumerable(Of BabyDiaperTestValue))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).AddRange(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.BabyDiaperTestValue))
+  name.vb: AddRange(IEnumerable(Of BabyDiaperTestValue))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.AddRange
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).AddRange
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Remove(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Remove(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Remove(`1)
+  name: Remove(BabyDiaperTestValue)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Remove(BabyDiaperTestValue)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Remove(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Remove(BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Remove(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Remove
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Remove
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SetModified(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SetModified(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.SetModified(`1)
+  name: SetModified(BabyDiaperTestValue)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SetModified(BabyDiaperTestValue)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SetModified(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).SetModified(BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SetModified(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SetModified
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).SetModified
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Attach(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Attach(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Attach(`1)
+  name: Attach(BabyDiaperTestValue)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Attach(BabyDiaperTestValue)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Attach(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Attach(BabyDiaperTestValue)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Attach(Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Attach
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Attach
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    name: BabyDiaperTestValue
+    nameWithType: BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChanges
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChanges
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.SaveChanges
+  name: SaveChanges()
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SaveChanges()
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SaveChanges()
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).SaveChanges()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SaveChanges()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SaveChanges
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).SaveChanges
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  name: SaveChangesAsync(Nullable<CancellationToken>)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SaveChangesAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SaveChangesAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).SaveChangesAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SaveChangesAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: SaveChangesAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Entry``1({TAnyEntity})
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.Entry``1(``0)
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.Entry``1(``0)
+  name: Entry<TAnyEntity>(TAnyEntity)
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Entry<TAnyEntity>(TAnyEntity)
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Entry<TAnyEntity>(TAnyEntity)
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).Entry(Of TAnyEntity)(TAnyEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Entry(Of TAnyEntity)(TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)(TAnyEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry<TAnyEntity>
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.Entry<TAnyEntity>
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.Entry<TAnyEntity>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry(Of TAnyEntity)
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).Entry(Of TAnyEntity)
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).Entry(Of TAnyEntity)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecords
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecords
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.CountRecords
+  name: CountRecords()
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.CountRecords()
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.CountRecords()
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).CountRecords()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).CountRecords()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.CountRecords
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).CountRecords
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecordsAsync
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.CountRecordsAsync
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.CountRecordsAsync
+  name: CountRecordsAsync()
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.CountRecordsAsync()
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.CountRecordsAsync()
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).CountRecordsAsync()
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).CountRecordsAsync()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.FindAsync(System.Object[])
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.FindAsync(System.Object[])
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  name: FindAsync(Object[])
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.FindAsync(Object[])
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.FindAsync(System.Object[])
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).FindAsync(Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).FindAsync(System.Object())
+  name.vb: FindAsync(Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.FindAsync
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).FindAsync
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SqlQuery(System.String,System.Object[])
+  commentId: M:Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}.SqlQuery(System.String,System.Object[])
+  parent: Intranet.Common.GenericRepository{Intranet.Labor.Dal.LaborContext,Intranet.Labor.Model.labor.BabyDiaperTestValue}
+  definition: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  name: SqlQuery(String, Object[])
+  nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SqlQuery(String, Object[])
+  fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SqlQuery(System.String, System.Object[])
+  nameWithType.vb: GenericRepository(Of LaborContext, BabyDiaperTestValue).SqlQuery(String, Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SqlQuery(System.String, System.Object())
+  name.vb: SqlQuery(String, Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository<LaborContext, BabyDiaperTestValue>.SqlQuery
+    fullName: Intranet.Common.GenericRepository<Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue>.SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository(Of LaborContext, BabyDiaperTestValue).SqlQuery
+    fullName: Intranet.Common.GenericRepository(Of Intranet.Labor.Dal.LaborContext, Intranet.Labor.Model.labor.BabyDiaperTestValue).SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Dispose
+  commentId: M:Intranet.Common.DisposableBase.Dispose
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Dispose()
+  nameWithType: DisposableBase.Dispose()
+  fullName: Intranet.Common.DisposableBase.Dispose()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Dispose
+    name: Dispose
+    nameWithType: DisposableBase.Dispose
+    fullName: Intranet.Common.DisposableBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Disposed
+  commentId: M:Intranet.Common.DisposableBase.Disposed
+  parent: Intranet.Common.DisposableBase
+  isExternal: false
+  name: Disposed()
+  nameWithType: DisposableBase.Disposed()
+  fullName: Intranet.Common.DisposableBase.Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.DisposableBase.Disposed
+    name: Disposed
+    nameWithType: DisposableBase.Disposed
+    fullName: Intranet.Common.DisposableBase.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.GenericRepository`2
+  commentId: T:Intranet.Common.GenericRepository`2
+  isExternal: false
+  name: GenericRepository<TContext, TEntity>
+  nameWithType: GenericRepository<TContext, TEntity>
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>
+  nameWithType.vb: GenericRepository(Of TContext, TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity)
+  name.vb: GenericRepository(Of TContext, TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Context
+  commentId: P:Intranet.Common.GenericRepository`2.Context
+  isExternal: false
+  name: Context
+  nameWithType: GenericRepository<TContext, TEntity>.Context
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Context
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Context
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Context
+- uid: Intranet.Common.GenericRepository`2.DatabaseFactory
+  commentId: P:Intranet.Common.GenericRepository`2.DatabaseFactory
+  isExternal: false
+  name: DatabaseFactory
+  nameWithType: GenericRepository<TContext, TEntity>.DatabaseFactory
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.DatabaseFactory
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).DatabaseFactory
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).DatabaseFactory
+- uid: Intranet.Common.GenericRepository`2.DbCommit
+  commentId: P:Intranet.Common.GenericRepository`2.DbCommit
+  isExternal: false
+  name: DbCommit
+  nameWithType: GenericRepository<TContext, TEntity>.DbCommit
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.DbCommit
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).DbCommit
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).DbCommit
+- uid: Intranet.Common.GenericRepository`2.Disposed
+  commentId: M:Intranet.Common.GenericRepository`2.Disposed
+  isExternal: false
+  name: Disposed()
+  nameWithType: GenericRepository<TContext, TEntity>.Disposed()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Disposed()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Disposed()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Disposed()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository<TContext, TEntity>.Disposed
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Disposed
+    name: Disposed
+    nameWithType: GenericRepository(Of TContext, TEntity).Disposed
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Disposed
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.GetAll
+  commentId: M:Intranet.Common.GenericRepository`2.GetAll
+  isExternal: false
+  name: GetAll()
+  nameWithType: GenericRepository<TContext, TEntity>.GetAll()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.GetAll()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).GetAll()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).GetAll()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository<TContext, TEntity>.GetAll
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.GetAll
+    name: GetAll
+    nameWithType: GenericRepository(Of TContext, TEntity).GetAll
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).GetAll
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  commentId: M:Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+  isExternal: true
+  name: Where(Expression<Func<TEntity, Boolean>>)
+  nameWithType: GenericRepository<TContext, TEntity>.Where(Expression<Func<TEntity, Boolean>>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Where(System.Linq.Expressions.Expression<System.Func<TEntity, System.Boolean>>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Where(Expression(Of Func(Of TEntity, Boolean)))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Where(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, System.Boolean)))
+  name.vb: Where(Expression(Of Func(Of TEntity, Boolean)))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository<TContext, TEntity>.Where
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Where(System.Linq.Expressions.Expression{System.Func{`1,System.Boolean}})
+    name: Where
+    nameWithType: GenericRepository(Of TContext, TEntity).Where
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Where
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Linq.Expressions.Expression`1
+    name: Expression
+    nameWithType: Expression
+    fullName: System.Linq.Expressions.Expression
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Add(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Add(`1)
+  isExternal: false
+  name: Add(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Add(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Add(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Add(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Add(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository<TContext, TEntity>.Add
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Add(`1)
+    name: Add
+    nameWithType: GenericRepository(Of TContext, TEntity).Add
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Add
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  commentId: M:Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+  isExternal: true
+  name: AddRange(IEnumerable<TEntity>)
+  nameWithType: GenericRepository<TContext, TEntity>.AddRange(IEnumerable<TEntity>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.AddRange(System.Collections.Generic.IEnumerable<TEntity>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).AddRange(IEnumerable(Of TEntity))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).AddRange(System.Collections.Generic.IEnumerable(Of TEntity))
+  name.vb: AddRange(IEnumerable(Of TEntity))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository<TContext, TEntity>.AddRange
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.AddRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddRange
+    nameWithType: GenericRepository(Of TContext, TEntity).AddRange
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).AddRange
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Remove(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Remove(`1)
+  isExternal: false
+  name: Remove(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Remove(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Remove(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Remove(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Remove(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository<TContext, TEntity>.Remove
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Remove(`1)
+    name: Remove
+    nameWithType: GenericRepository(Of TContext, TEntity).Remove
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.SetModified(`1)
+  isExternal: false
+  name: SetModified(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.SetModified(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SetModified(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SetModified(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SetModified(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository<TContext, TEntity>.SetModified
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SetModified(`1)
+    name: SetModified
+    nameWithType: GenericRepository(Of TContext, TEntity).SetModified
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SetModified
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Attach(`1)
+  commentId: M:Intranet.Common.GenericRepository`2.Attach(`1)
+  isExternal: false
+  name: Attach(TEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Attach(TEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Attach(TEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Attach(TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Attach(TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository<TContext, TEntity>.Attach
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Attach(`1)
+    name: Attach
+    nameWithType: GenericRepository(Of TContext, TEntity).Attach
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Attach
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SaveChanges
+  commentId: M:Intranet.Common.GenericRepository`2.SaveChanges
+  isExternal: false
+  name: SaveChanges()
+  nameWithType: GenericRepository<TContext, TEntity>.SaveChanges()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChanges()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SaveChanges()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChanges()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository<TContext, TEntity>.SaveChanges
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChanges
+    name: SaveChanges
+    nameWithType: GenericRepository(Of TContext, TEntity).SaveChanges
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChanges
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  commentId: M:Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+  isExternal: true
+  name: SaveChangesAsync(Nullable<CancellationToken>)
+  nameWithType: GenericRepository<TContext, TEntity>.SaveChangesAsync(Nullable<CancellationToken>)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChangesAsync(System.Nullable<System.Threading.CancellationToken>)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SaveChangesAsync(Nullable(Of CancellationToken))
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChangesAsync(System.Nullable(Of System.Threading.CancellationToken))
+  name.vb: SaveChangesAsync(Nullable(Of CancellationToken))
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository<TContext, TEntity>.SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SaveChangesAsync(System.Nullable{System.Threading.CancellationToken})
+    name: SaveChangesAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).SaveChangesAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SaveChangesAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+  commentId: M:Intranet.Common.GenericRepository`2.Entry``1(``0)
+  isExternal: false
+  name: Entry<TAnyEntity>(TAnyEntity)
+  nameWithType: GenericRepository<TContext, TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Entry<TAnyEntity>(TAnyEntity)
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)(TAnyEntity)
+  name.vb: Entry(Of TAnyEntity)(TAnyEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry<TAnyEntity>
+    nameWithType: GenericRepository<TContext, TEntity>.Entry<TAnyEntity>
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.Entry<TAnyEntity>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.Entry``1(``0)
+    name: Entry(Of TAnyEntity)
+    nameWithType: GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).Entry(Of TAnyEntity)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TAnyEntity
+    nameWithType: TAnyEntity
+    fullName: TAnyEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.CountRecords
+  commentId: M:Intranet.Common.GenericRepository`2.CountRecords
+  isExternal: false
+  name: CountRecords()
+  nameWithType: GenericRepository<TContext, TEntity>.CountRecords()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecords()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).CountRecords()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecords()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository<TContext, TEntity>.CountRecords
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecords
+    name: CountRecords
+    nameWithType: GenericRepository(Of TContext, TEntity).CountRecords
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecords
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+  commentId: M:Intranet.Common.GenericRepository`2.CountRecordsAsync
+  isExternal: false
+  name: CountRecordsAsync()
+  nameWithType: GenericRepository<TContext, TEntity>.CountRecordsAsync()
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecordsAsync()
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).CountRecordsAsync()
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecordsAsync()
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository<TContext, TEntity>.CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.CountRecordsAsync
+    name: CountRecordsAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).CountRecordsAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).CountRecordsAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  commentId: M:Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+  isExternal: true
+  name: FindAsync(Object[])
+  nameWithType: GenericRepository<TContext, TEntity>.FindAsync(Object[])
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.FindAsync(System.Object[])
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).FindAsync(Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).FindAsync(System.Object())
+  name.vb: FindAsync(Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository<TContext, TEntity>.FindAsync
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.FindAsync(System.Object[])
+    name: FindAsync
+    nameWithType: GenericRepository(Of TContext, TEntity).FindAsync
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).FindAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  commentId: M:Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+  isExternal: true
+  name: SqlQuery(String, Object[])
+  nameWithType: GenericRepository<TContext, TEntity>.SqlQuery(String, Object[])
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SqlQuery(System.String, System.Object[])
+  nameWithType.vb: GenericRepository(Of TContext, TEntity).SqlQuery(String, Object())
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity).SqlQuery(System.String, System.Object())
+  name.vb: SqlQuery(String, Object())
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository<TContext, TEntity>.SqlQuery
+    fullName: Intranet.Common.GenericRepository<TContext, TEntity>.SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2.SqlQuery(System.String,System.Object[])
+    name: SqlQuery
+    nameWithType: GenericRepository(Of TContext, TEntity).SqlQuery
+    fullName: Intranet.Common.GenericRepository(Of TContext, TEntity).SqlQuery
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  isExternal: false
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor*
+  commentId: Overload:Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.#ctor
+  isExternal: false
+  name: BabyDiaperTestValueRepository
+  nameWithType: BabyDiaperTestValueRepository.BabyDiaperTestValueRepository
+  fullName: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository.BabyDiaperTestValueRepository
+- uid: Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext}
+  commentId: T:Intranet.Common.IDatabaseFactory{Intranet.Labor.Dal.LaborContext}
+  parent: Intranet.Common
+  definition: Intranet.Common.IDatabaseFactory`1
+  name: IDatabaseFactory<LaborContext>
+  nameWithType: IDatabaseFactory<LaborContext>
+  fullName: Intranet.Common.IDatabaseFactory<Intranet.Labor.Dal.LaborContext>
+  nameWithType.vb: IDatabaseFactory(Of LaborContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of Intranet.Labor.Dal.LaborContext)
+  name.vb: IDatabaseFactory(Of LaborContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Dal.LaborContext
+    name: LaborContext
+    nameWithType: LaborContext
+    fullName: Intranet.Labor.Dal.LaborContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Dal.LaborContext
+    name: LaborContext
+    nameWithType: LaborContext
+    fullName: Intranet.Labor.Dal.LaborContext
+  - name: )
+    nameWithType: )
+    fullName: )

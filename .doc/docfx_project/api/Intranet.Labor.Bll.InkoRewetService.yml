@@ -1,0 +1,985 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.InkoRewetService
+  commentId: T:Intranet.Labor.Bll.InkoRewetService
+  id: InkoRewetService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.InkoRewetService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.InkoRewetService.Delete(System.Int32)
+  - Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  - Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+  - Intranet.Labor.Bll.InkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  - Intranet.Labor.Bll.InkoRewetService.TestBll
+  - Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: InkoRewetService
+  nameWithType: InkoRewetService
+  fullName: Intranet.Labor.Bll.InkoRewetService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRewetService
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the inko rewet service\n"
+  example: []
+  syntax:
+    content: 'public class InkoRewetService : ServiceBase, IInkoRewetService'
+    content.vb: >-
+      Public Class InkoRewetService
+
+          Inherits ServiceBase
+
+          Implements IInkoRewetService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IInkoRewetService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.InkoRewetService.TestBll
+  commentId: P:Intranet.Labor.Bll.InkoRewetService.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: InkoRewetService.TestBll
+  fullName: Intranet.Labor.Bll.InkoRewetService.TestBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the incontinence rewet test.\n"
+  example: []
+  syntax:
+    content: public ITestBll TestBll { get; set; }
+    content.vb: Public Property TestBll As ITestBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestBll
+  overload: Intranet.Labor.Bll.InkoRewetService.TestBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+  commentId: P:Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+  id: InkoRewetServiceHelper
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: InkoRewetServiceHelper
+  nameWithType: InkoRewetService.InkoRewetServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRewetServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the incontinence rewet service helper.\n"
+  example: []
+  syntax:
+    content: public IInkoRewetServiceHelper InkoRewetServiceHelper { get; set; }
+    content.vb: Public Property InkoRewetServiceHelper As IInkoRewetServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  overload: Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+  commentId: P:Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+  id: TestServiceHelper
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper
+  nameWithType: InkoRewetService.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the test service helper.\n"
+  example: []
+  syntax:
+    content: public ITestServiceHelper TestServiceHelper { get; set; }
+    content.vb: Public Property TestServiceHelper As ITestServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestServiceHelper
+  overload: Intranet.Labor.Bll.InkoRewetService.TestServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.InkoRewetService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: InkoRewetService(ILoggerFactory)
+  nameWithType: InkoRewetService.InkoRewetService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.InkoRewetService.InkoRewetService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InkoRewetService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.InkoRewetService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRewetService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: InkoRewetService.Delete(Int32)
+  fullName: Intranet.Labor.Bll.InkoRewetService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: public TestValue Delete(int testValueId)
+    content.vb: Public Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Bll.InkoRewetService.Delete*
+  implements:
+  - Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  id: GetInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetInkoRewetEditViewModel(Int32)
+  nameWithType: InkoRewetService.GetInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetInkoRewetEditViewModel
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 73
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets a new InkoRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: public InkoRewetEditViewModel GetInkoRewetEditViewModel(int rewetTestId)
+    content.vb: Public Function GetInkoRewetEditViewModel(rewetTestId As Integer) As InkoRewetEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Inko rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel*
+  implements:
+  - Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  id: GetNewInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: GetNewInkoRewetEditViewModel(Int32)
+  nameWithType: InkoRewetService.GetNewInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewInkoRewetEditViewModel
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 128
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets the InkoRewetEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: public InkoRewetEditViewModel GetNewInkoRewetEditViewModel(int testSheetId)
+    content.vb: Public Function GetNewInkoRewetEditViewModel(testSheetId As Integer) As InkoRewetEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Inko rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel*
+  implements:
+  - Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Labor.Bll.InkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Labor.Bll.InkoRewetService
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoRewetEditViewModel)
+  nameWithType: InkoRewetService.Save(InkoRewetEditViewModel)
+  fullName: Intranet.Labor.Bll.InkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Bll/InkoRewetService.cs
+    startLine: 169
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nSaves or updates the InkoRewetEditViewModel\n"
+  example: []
+  syntax:
+    content: public TestValue Save(InkoRewetEditViewModel viewModel)
+    content.vb: Public Function Save(viewModel As InkoRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Bll.InkoRewetService.Save*
+  implements:
+  - Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IInkoRewetService
+  commentId: T:Intranet.Labor.Definition.IInkoRewetService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoRewetService
+  nameWithType: IInkoRewetService
+  fullName: Intranet.Labor.Definition.IInkoRewetService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.InkoRewetService.TestBll*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.TestBll
+  isExternal: false
+  name: TestBll
+  nameWithType: InkoRewetService.TestBll
+  fullName: Intranet.Labor.Bll.InkoRewetService.TestBll
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+  isExternal: false
+  name: InkoRewetServiceHelper
+  nameWithType: InkoRewetService.InkoRewetServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRewetService.InkoRewetServiceHelper
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoRewetServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoRewetServiceHelper
+  nameWithType: IInkoRewetServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper
+- uid: Intranet.Labor.Bll.InkoRewetService.TestServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+  isExternal: false
+  name: TestServiceHelper
+  nameWithType: InkoRewetService.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRewetService.TestServiceHelper
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.InkoRewetService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.#ctor
+  isExternal: false
+  name: InkoRewetService
+  nameWithType: InkoRewetService.InkoRewetService
+  fullName: Intranet.Labor.Bll.InkoRewetService.InkoRewetService
+- uid: Intranet.Labor.Bll.InkoRewetService.Delete*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: InkoRewetService.Delete
+  fullName: Intranet.Labor.Bll.InkoRewetService.Delete
+- uid: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  isExternal: true
+  name: Delete(Int32)
+  nameWithType: IInkoRewetService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+    name: Delete
+    nameWithType: IInkoRewetService.Delete
+    fullName: Intranet.Labor.Definition.IInkoRewetService.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.Delete(System.Int32)
+    name: Delete
+    nameWithType: IInkoRewetService.Delete
+    fullName: Intranet.Labor.Definition.IInkoRewetService.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel
+  isExternal: false
+  name: GetInkoRewetEditViewModel
+  nameWithType: InkoRewetService.GetInkoRewetEditViewModel
+  fullName: Intranet.Labor.Bll.InkoRewetService.GetInkoRewetEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  isExternal: true
+  name: GetInkoRewetEditViewModel(Int32)
+  nameWithType: IInkoRewetService.GetInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+    name: GetInkoRewetEditViewModel
+    nameWithType: IInkoRewetService.GetInkoRewetEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel(System.Int32)
+    name: GetInkoRewetEditViewModel
+    nameWithType: IInkoRewetService.GetInkoRewetEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRewetService.GetInkoRewetEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRewetEditViewModel
+  nameWithType: InkoRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel
+  isExternal: false
+  name: GetNewInkoRewetEditViewModel
+  nameWithType: InkoRewetService.GetNewInkoRewetEditViewModel
+  fullName: Intranet.Labor.Bll.InkoRewetService.GetNewInkoRewetEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  isExternal: true
+  name: GetNewInkoRewetEditViewModel(Int32)
+  nameWithType: IInkoRewetService.GetNewInkoRewetEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+    name: GetNewInkoRewetEditViewModel
+    nameWithType: IInkoRewetService.GetNewInkoRewetEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel(System.Int32)
+    name: GetNewInkoRewetEditViewModel
+    nameWithType: IInkoRewetService.GetNewInkoRewetEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRewetService.GetNewInkoRewetEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.InkoRewetService.Save*
+  commentId: Overload:Intranet.Labor.Bll.InkoRewetService.Save
+  isExternal: false
+  name: Save
+  nameWithType: InkoRewetService.Save
+  fullName: Intranet.Labor.Bll.InkoRewetService.Save
+- uid: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRewetService
+  isExternal: false
+  name: Save(InkoRewetEditViewModel)
+  nameWithType: IInkoRewetService.Save(InkoRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+    name: Save
+    nameWithType: IInkoRewetService.Save
+    fullName: Intranet.Labor.Definition.IInkoRewetService.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+    name: InkoRewetEditViewModel
+    nameWithType: InkoRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRewetService.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+    name: Save
+    nameWithType: IInkoRewetService.Save
+    fullName: Intranet.Labor.Definition.IInkoRewetService.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+    name: InkoRewetEditViewModel
+    nameWithType: InkoRewetEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )

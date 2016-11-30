@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoAquisitionService
+  commentId: T:Intranet.Labor.Definition.IInkoAquisitionService
+  id: IInkoAquisitionService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoAquisitionService.Delete(System.Int32)
+  - Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoAquisitionService.Save(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoAquisitionService
+  nameWithType: IInkoAquisitionService
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoAquisitionService
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the InkoAquisitionService\n"
+  example: []
+  syntax:
+    content: public interface IInkoAquisitionService
+    content.vb: Public Interface IInkoAquisitionService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoAquisitionService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: IInkoAquisitionService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: TestValue Delete(int testValueId)
+    content.vb: Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Definition.IInkoAquisitionService.Delete*
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel(System.Int32)
+  id: GetInkoAquisitionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoAquisitionService
+  langs:
+  - csharp
+  - vb
+  name: GetInkoAquisitionEditViewModel(Int32)
+  nameWithType: IInkoAquisitionService.GetInkoAquisitionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetInkoAquisitionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets a new InkoAquisitionEditViewModel\n"
+  example: []
+  syntax:
+    content: InkoAquisitionEditViewModel GetInkoAquisitionEditViewModel(int rewetTestId)
+    content.vb: Function GetInkoAquisitionEditViewModel(rewetTestId As Integer) As InkoAquisitionEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Inko rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: The InkoAquisitionEditViewModel
+  overload: Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel(System.Int32)
+  id: GetNewInkoAquisitionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoAquisitionService
+  langs:
+  - csharp
+  - vb
+  name: GetNewInkoAquisitionEditViewModel(Int32)
+  nameWithType: IInkoAquisitionService.GetNewInkoAquisitionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewInkoAquisitionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the InkoAquisitionEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: InkoAquisitionEditViewModel GetNewInkoAquisitionEditViewModel(int testSheetId)
+    content.vb: Function GetNewInkoAquisitionEditViewModel(testSheetId As Integer) As InkoAquisitionEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Inko rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: The InkoAquisitionEditViewModel
+  overload: Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.Save(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionService.Save(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoAquisitionService
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoAquisitionEditViewModel)
+  nameWithType: IInkoAquisitionService.Save(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.Save(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionService.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves or updates the InkoAquisitionEditViewModel\n"
+  example: []
+  syntax:
+    content: TestValue Save(InkoAquisitionEditViewModel viewModel)
+    content.vb: Function Save(viewModel As InkoAquisitionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Definition.IInkoAquisitionService.Save*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.Delete*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: IInkoAquisitionService.Delete
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel
+  isExternal: false
+  name: GetInkoAquisitionEditViewModel
+  nameWithType: IInkoAquisitionService.GetInkoAquisitionEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.GetInkoAquisitionEditViewModel
+- uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoAquisitionEditViewModel
+  nameWithType: InkoAquisitionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel
+  isExternal: false
+  name: GetNewInkoAquisitionEditViewModel
+  nameWithType: IInkoAquisitionService.GetNewInkoAquisitionEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.GetNewInkoAquisitionEditViewModel
+- uid: Intranet.Labor.Definition.IInkoAquisitionService.Save*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionService.Save
+  isExternal: false
+  name: Save
+  nameWithType: IInkoAquisitionService.Save
+  fullName: Intranet.Labor.Definition.IInkoAquisitionService.Save

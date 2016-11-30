@@ -62,6 +62,8 @@ namespace Intranet.Labor.Bll
             var incontinencePadTestValue = new IncontinencePadTestValue
             {
                 IncontinencePadTime = viewModel.ProductionCodeTime,
+                ExpireMonth = viewModel.ExpireMonth,
+                ExpireYear = viewModel.ExpireYear,
                 RetentionWeight = viewModel.InkoWeight,
                 RetentionWetValue = viewModel.InkoWeightWet,
                 RetentionAfterZentrifuge = viewModel.InkoWeightAfterZentrifuge,
@@ -118,6 +120,8 @@ namespace Intranet.Labor.Bll
             testValue.LastEditedPerson = viewModel.TestPerson;
             testValue.DayInYearOfArticleCreation = viewModel.ProductionCodeDay;
             testValue.IncontinencePadTestValue.IncontinencePadTime = viewModel.ProductionCodeTime;
+            testValue.IncontinencePadTestValue.ExpireMonth = viewModel.ExpireMonth;
+            testValue.IncontinencePadTestValue.ExpireYear = viewModel.ExpireYear;
             testValue.IncontinencePadTestValue.RetentionWeight = viewModel.InkoWeight;
             testValue.IncontinencePadTestValue.RetentionWetValue = viewModel.InkoWeightWet;
             testValue.IncontinencePadTestValue.RetentionAfterZentrifuge = viewModel.InkoWeightAfterZentrifuge;

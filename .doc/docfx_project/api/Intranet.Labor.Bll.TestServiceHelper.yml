@@ -1,0 +1,1007 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.TestServiceHelper
+  commentId: T:Intranet.Labor.Bll.TestServiceHelper
+  id: TestServiceHelper
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.TestServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  - Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  - Intranet.Labor.Bll.TestServiceHelper.TestBll
+  - Intranet.Labor.Bll.TestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper
+  nameWithType: TestServiceHelper
+  fullName: Intranet.Labor.Bll.TestServiceHelper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestServiceHelper
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\n"
+  example: []
+  syntax:
+    content: 'public class TestServiceHelper : ServiceBase, ITestServiceHelper'
+    content.vb: >-
+      Public Class TestServiceHelper
+
+          Inherits ServiceBase
+
+          Implements ITestServiceHelper
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.ITestServiceHelper
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.TestServiceHelper.TestBll
+  commentId: P:Intranet.Labor.Bll.TestServiceHelper.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: TestServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.TestServiceHelper.TestBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the baby diapers retention test.\n"
+  example: []
+  syntax:
+    content: public ITestBll TestBll { get; set; }
+    content.vb: Public Property TestBll As ITestBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestBll
+  overload: Intranet.Labor.Bll.TestServiceHelper.TestBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.TestServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper(ILoggerFactory)
+  nameWithType: TestServiceHelper.TestServiceHelper(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.TestServiceHelper.TestServiceHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 35
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TestServiceHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.TestServiceHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  commentId: M:Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  id: CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  parent: Intranet.Labor.Bll.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateProductionCode(TestSheet)
+  nameWithType: TestServiceHelper.CreateProductionCode(TestSheet)
+  fullName: Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateProductionCode
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 50
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nCreates the Production code string from the testsheet\n"
+  example: []
+  syntax:
+    content: public string CreateProductionCode(TestSheet testSheet)
+    content.vb: Public Function CreateProductionCode(testSheet As TestSheet) As String
+    parameters:
+    - id: testSheet
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the testSheet
+    return:
+      type: System.String
+      description: the production code
+  overload: Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode*
+  implements:
+  - Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Bll.TestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  id: UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Bll.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateNotes(IList<TestNote>, TestValue)
+  nameWithType: TestServiceHelper.UpdateNotes(IList<TestNote>, TestValue)
+  fullName: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes(System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>, Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateNotes
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nConverts the notes from the viewmodel to the dbmodel.\nDeletes notes which were deleted in the view\nadds new notes to the db\nupdates notes\n"
+  example: []
+  syntax:
+    content: public void UpdateNotes(IList<TestNote> vmNotes, TestValue testValue)
+    content.vb: Public Sub UpdateNotes(vmNotes As IList(Of TestNote), testValue As TestValue)
+    parameters:
+    - id: vmNotes
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+      description: the List of Notes from the ViewModel
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the testvalue where the notes are for
+  overload: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes*
+  implements:
+  - Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  nameWithType.vb: TestServiceHelper.UpdateNotes(IList(Of TestNote), TestValue)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes(System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote), Intranet.Labor.Model.labor.TestValue)
+  name.vb: UpdateNotes(IList(Of TestNote), TestValue)
+- uid: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  commentId: M:Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  id: CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  parent: Intranet.Labor.Bll.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  nameWithType: TestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  fullName: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateNewTestValue
+    path: .src/Intranet/Labor/Bll/TestServiceHelper.cs
+    startLine: 92
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nCreates a new testvalue initialized with following values\n"
+  example: []
+  syntax:
+    content: public TestValue CreateNewTestValue(int testSheetId, string testPerson, int productionCodeDay, IList<TestNote> notes)
+    content.vb: Public Function CreateNewTestValue(testSheetId As Integer, testPerson As String, productionCodeDay As Integer, notes As IList(Of TestNote)) As TestValue
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: ID of the testsheet
+    - id: testPerson
+      type: System.String
+      description: the Testperson
+    - id: productionCodeDay
+      type: System.Int32
+      description: the production-day of the diaper
+    - id: notes
+      type: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+      description: the notes for the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the created testvalue
+  overload: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue*
+  implements:
+  - Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  nameWithType.vb: TestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote))
+  name.vb: CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.TestServiceHelper.TestBll*
+  commentId: Overload:Intranet.Labor.Bll.TestServiceHelper.TestBll
+  isExternal: false
+  name: TestBll
+  nameWithType: TestServiceHelper.TestBll
+  fullName: Intranet.Labor.Bll.TestServiceHelper.TestBll
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.TestServiceHelper.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.TestServiceHelper.#ctor
+  isExternal: false
+  name: TestServiceHelper
+  nameWithType: TestServiceHelper.TestServiceHelper
+  fullName: Intranet.Labor.Bll.TestServiceHelper.TestServiceHelper
+- uid: Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode*
+  commentId: Overload:Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode
+  isExternal: false
+  name: CreateProductionCode
+  nameWithType: TestServiceHelper.CreateProductionCode
+  fullName: Intranet.Labor.Bll.TestServiceHelper.CreateProductionCode
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  isExternal: false
+  name: CreateProductionCode(TestSheet)
+  nameWithType: ITestServiceHelper.CreateProductionCode(TestSheet)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+    name: CreateProductionCode
+    nameWithType: ITestServiceHelper.CreateProductionCode
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode(Intranet.Labor.Model.labor.TestSheet)
+    name: CreateProductionCode
+    nameWithType: ITestServiceHelper.CreateProductionCode
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateProductionCode
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes*
+  commentId: Overload:Intranet.Labor.Bll.TestServiceHelper.UpdateNotes
+  isExternal: false
+  name: UpdateNotes
+  nameWithType: TestServiceHelper.UpdateNotes
+  fullName: Intranet.Labor.Bll.TestServiceHelper.UpdateNotes
+- uid: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  isExternal: true
+  name: UpdateNotes(IList<TestNote>, TestValue)
+  nameWithType: ITestServiceHelper.UpdateNotes(IList<TestNote>, TestValue)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>, Intranet.Labor.Model.labor.TestValue)
+  nameWithType.vb: ITestServiceHelper.UpdateNotes(IList(Of TestNote), TestValue)
+  fullname.vb: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote), Intranet.Labor.Model.labor.TestValue)
+  name.vb: UpdateNotes(IList(Of TestNote), TestValue)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+    name: UpdateNotes
+    nameWithType: ITestServiceHelper.UpdateNotes
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes(System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote},Intranet.Labor.Model.labor.TestValue)
+    name: UpdateNotes
+    nameWithType: ITestServiceHelper.UpdateNotes
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.UpdateNotes
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  commentId: T:System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IList`1
+  name: IList<TestNote>
+  nameWithType: IList<TestNote>
+  fullName: System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>
+  nameWithType.vb: IList(Of TestNote)
+  fullname.vb: System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote)
+  name.vb: IList(Of TestNote)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System.Collections.Generic.IList`1
+  commentId: T:System.Collections.Generic.IList`1
+  isExternal: true
+  name: IList<T>
+  nameWithType: IList<T>
+  fullName: System.Collections.Generic.IList<T>
+  nameWithType.vb: IList(Of T)
+  fullname.vb: System.Collections.Generic.IList(Of T)
+  name.vb: IList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue*
+  commentId: Overload:Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue
+  isExternal: false
+  name: CreateNewTestValue
+  nameWithType: TestServiceHelper.CreateNewTestValue
+  fullName: Intranet.Labor.Bll.TestServiceHelper.CreateNewTestValue
+- uid: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  commentId: M:Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+  parent: Intranet.Labor.Definition.ITestServiceHelper
+  isExternal: true
+  name: CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  nameWithType: ITestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList<TestNote>)
+  fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList<Intranet.Labor.ViewModel.TestNote>)
+  nameWithType.vb: ITestServiceHelper.CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+  fullname.vb: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32, System.String, System.Int32, System.Collections.Generic.IList(Of Intranet.Labor.ViewModel.TestNote))
+  name.vb: CreateNewTestValue(Int32, String, Int32, IList(Of TestNote))
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+    name: CreateNewTestValue
+    nameWithType: ITestServiceHelper.CreateNewTestValue
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue(System.Int32,System.String,System.Int32,System.Collections.Generic.IList{Intranet.Labor.ViewModel.TestNote})
+    name: CreateNewTestValue
+    nameWithType: ITestServiceHelper.CreateNewTestValue
+    fullName: Intranet.Labor.Definition.ITestServiceHelper.CreateNewTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    nameWithType: IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.TestNote
+    name: TestNote
+    nameWithType: TestNote
+    fullName: Intranet.Labor.ViewModel.TestNote
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

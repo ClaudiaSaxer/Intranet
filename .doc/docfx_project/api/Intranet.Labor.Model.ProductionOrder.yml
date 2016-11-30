@@ -1,0 +1,843 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.ProductionOrder
+  commentId: T:Intranet.Labor.Model.ProductionOrder
+  id: ProductionOrder
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.ProductionOrder.Article
+  - Intranet.Labor.Model.ProductionOrder.ArticleRefId
+  - Intranet.Labor.Model.ProductionOrder.Component
+  - Intranet.Labor.Model.ProductionOrder.EndDateTime
+  - Intranet.Labor.Model.ProductionOrder.FaId
+  - Intranet.Labor.Model.ProductionOrder.FaNr
+  - Intranet.Labor.Model.ProductionOrder.Machine
+  - Intranet.Labor.Model.ProductionOrder.MachineRefId
+  - Intranet.Labor.Model.ProductionOrder.StartDateTime
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrder
+  nameWithType: ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrder
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrder
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nThe Class representing the production order\n"
+  example: []
+  syntax:
+    content: public class ProductionOrder
+    content.vb: Public Class ProductionOrder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.ProductionOrder.FaId
+  commentId: P:Intranet.Labor.Model.ProductionOrder.FaId
+  id: FaId
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: FaId
+  nameWithType: ProductionOrder.FaId
+  fullName: Intranet.Labor.Model.ProductionOrder.FaId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaId
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 17
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the id of the production order\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int FaId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property FaId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the id of the production order
+  overload: Intranet.Labor.Model.ProductionOrder.FaId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrder.FaNr
+  commentId: P:Intranet.Labor.Model.ProductionOrder.FaNr
+  id: FaNr
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: FaNr
+  nameWithType: ProductionOrder.FaNr
+  fullName: Intranet.Labor.Model.ProductionOrder.FaNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaNr
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the number of the production order\n"
+  example: []
+  syntax:
+    content: public string FaNr { get; set; }
+    content.vb: Public Property FaNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the number of the production order
+  overload: Intranet.Labor.Model.ProductionOrder.FaNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrder.StartDateTime
+  commentId: P:Intranet.Labor.Model.ProductionOrder.StartDateTime
+  id: StartDateTime
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: StartDateTime
+  nameWithType: ProductionOrder.StartDateTime
+  fullName: Intranet.Labor.Model.ProductionOrder.StartDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StartDateTime
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the start Date and Time of the production order\n"
+  example: []
+  syntax:
+    content: public DateTime StartDateTime { get; set; }
+    content.vb: Public Property StartDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: The start date and time of the production order
+  overload: Intranet.Labor.Model.ProductionOrder.StartDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrder.EndDateTime
+  commentId: P:Intranet.Labor.Model.ProductionOrder.EndDateTime
+  id: EndDateTime
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: EndDateTime
+  nameWithType: ProductionOrder.EndDateTime
+  fullName: Intranet.Labor.Model.ProductionOrder.EndDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: EndDateTime
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the end Data and Time of the production order\n"
+  example: []
+  syntax:
+    content: public DateTime EndDateTime { get; set; }
+    content.vb: Public Property EndDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: The end date and time of the production order
+  overload: Intranet.Labor.Model.ProductionOrder.EndDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrder.Article
+  commentId: P:Intranet.Labor.Model.ProductionOrder.Article
+  id: Article
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: Article
+  nameWithType: ProductionOrder.Article
+  fullName: Intranet.Labor.Model.ProductionOrder.Article
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Article
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 43
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the article for this production order <xref href=\"Intranet.Labor.Model.ProductionOrder.Article\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("ArticleRefId")]
+
+      public virtual Article Article { get; set; }
+    content.vb: >-
+      <ForeignKey("ArticleRefId")>
+
+      Public Overridable Property Article As Article
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.Article
+      description: the article for the production order
+  overload: Intranet.Labor.Model.ProductionOrder.Article*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ArticleRefId
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.ProductionOrder.Component
+  commentId: P:Intranet.Labor.Model.ProductionOrder.Component
+  id: Component
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: Component
+  nameWithType: ProductionOrder.Component
+  fullName: Intranet.Labor.Model.ProductionOrder.Component
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Component
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 50
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the component for the production order\n"
+  example: []
+  syntax:
+    content: public virtual ProductionOrderComponent Component { get; set; }
+    content.vb: Public Overridable Property Component As ProductionOrderComponent
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.ProductionOrderComponent
+      description: the component for the production order
+  overload: Intranet.Labor.Model.ProductionOrder.Component*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.ProductionOrder.Machine
+  commentId: P:Intranet.Labor.Model.ProductionOrder.Machine
+  id: Machine
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: Machine
+  nameWithType: ProductionOrder.Machine
+  fullName: Intranet.Labor.Model.ProductionOrder.Machine
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Machine
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 56
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the machine for the production order\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("MachineRefId")]
+
+      public virtual Machine Machine { get; set; }
+    content.vb: >-
+      <ForeignKey("MachineRefId")>
+
+      Public Overridable Property Machine As Machine
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.Machine
+      description: the machine for the production order
+  overload: Intranet.Labor.Model.ProductionOrder.Machine*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: MachineRefId
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.ProductionOrder.ArticleRefId
+  commentId: P:Intranet.Labor.Model.ProductionOrder.ArticleRefId
+  id: ArticleRefId
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: ArticleRefId
+  nameWithType: ProductionOrder.ArticleRefId
+  fullName: Intranet.Labor.Model.ProductionOrder.ArticleRefId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ArticleRefId
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 63
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the article ref id\n"
+  example: []
+  syntax:
+    content: public int ArticleRefId { get; set; }
+    content.vb: Public Property ArticleRefId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the ref id of the article
+  overload: Intranet.Labor.Model.ProductionOrder.ArticleRefId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrder.MachineRefId
+  commentId: P:Intranet.Labor.Model.ProductionOrder.MachineRefId
+  id: MachineRefId
+  parent: Intranet.Labor.Model.ProductionOrder
+  langs:
+  - csharp
+  - vb
+  name: MachineRefId
+  nameWithType: ProductionOrder.MachineRefId
+  fullName: Intranet.Labor.Model.ProductionOrder.MachineRefId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: MachineRefId
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrder.cs
+    startLine: 69
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the machine ref id\n"
+  example: []
+  syntax:
+    content: public int MachineRefId { get; set; }
+    content.vb: Public Property MachineRefId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the ref id of the machine
+  overload: Intranet.Labor.Model.ProductionOrder.MachineRefId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.ProductionOrder.FaId*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.FaId
+  isExternal: false
+  name: FaId
+  nameWithType: ProductionOrder.FaId
+  fullName: Intranet.Labor.Model.ProductionOrder.FaId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.ProductionOrder.FaNr*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.FaNr
+  isExternal: false
+  name: FaNr
+  nameWithType: ProductionOrder.FaNr
+  fullName: Intranet.Labor.Model.ProductionOrder.FaNr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.ProductionOrder.StartDateTime*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.StartDateTime
+  isExternal: false
+  name: StartDateTime
+  nameWithType: ProductionOrder.StartDateTime
+  fullName: Intranet.Labor.Model.ProductionOrder.StartDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Intranet.Labor.Model.ProductionOrder.EndDateTime*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.EndDateTime
+  isExternal: false
+  name: EndDateTime
+  nameWithType: ProductionOrder.EndDateTime
+  fullName: Intranet.Labor.Model.ProductionOrder.EndDateTime
+- uid: Intranet.Labor.Model.ProductionOrder.Article
+  commentId: P:Intranet.Labor.Model.ProductionOrder.Article
+- uid: Intranet.Labor.Model.ProductionOrder.Article*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.Article
+  isExternal: false
+  name: Article
+  nameWithType: ProductionOrder.Article
+  fullName: Intranet.Labor.Model.ProductionOrder.Article
+- uid: Intranet.Labor.Model.Article
+  commentId: T:Intranet.Labor.Model.Article
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: Article
+  nameWithType: Article
+  fullName: Intranet.Labor.Model.Article
+- uid: Intranet.Labor.Model.ProductionOrder.Component*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.Component
+  isExternal: false
+  name: Component
+  nameWithType: ProductionOrder.Component
+  fullName: Intranet.Labor.Model.ProductionOrder.Component
+- uid: Intranet.Labor.Model.ProductionOrderComponent
+  commentId: T:Intranet.Labor.Model.ProductionOrderComponent
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ProductionOrderComponent
+  nameWithType: ProductionOrderComponent
+  fullName: Intranet.Labor.Model.ProductionOrderComponent
+- uid: Intranet.Labor.Model.ProductionOrder.Machine*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.Machine
+  isExternal: false
+  name: Machine
+  nameWithType: ProductionOrder.Machine
+  fullName: Intranet.Labor.Model.ProductionOrder.Machine
+- uid: Intranet.Labor.Model.Machine
+  commentId: T:Intranet.Labor.Model.Machine
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: Machine
+  nameWithType: Machine
+  fullName: Intranet.Labor.Model.Machine
+- uid: Intranet.Labor.Model.ProductionOrder.ArticleRefId*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.ArticleRefId
+  isExternal: false
+  name: ArticleRefId
+  nameWithType: ProductionOrder.ArticleRefId
+  fullName: Intranet.Labor.Model.ProductionOrder.ArticleRefId
+- uid: Intranet.Labor.Model.ProductionOrder.MachineRefId*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrder.MachineRefId
+  isExternal: false
+  name: MachineRefId
+  nameWithType: ProductionOrder.MachineRefId
+  fullName: Intranet.Labor.Model.ProductionOrder.MachineRefId

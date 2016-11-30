@@ -1,0 +1,985 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.InkoRetentionService
+  commentId: T:Intranet.Labor.Bll.InkoRetentionService
+  id: InkoRetentionService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.InkoRetentionService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.InkoRetentionService.Delete(System.Int32)
+  - Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+  - Intranet.Labor.Bll.InkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  - Intranet.Labor.Bll.InkoRetentionService.TestBll
+  - Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionService
+  nameWithType: InkoRetentionService
+  fullName: Intranet.Labor.Bll.InkoRetentionService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRetentionService
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the inko retention service\n"
+  example: []
+  syntax:
+    content: 'public class InkoRetentionService : ServiceBase, IInkoRetentionService'
+    content.vb: >-
+      Public Class InkoRetentionService
+
+          Inherits ServiceBase
+
+          Implements IInkoRetentionService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.IInkoRetentionService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.InkoRetentionService.TestBll
+  commentId: P:Intranet.Labor.Bll.InkoRetentionService.TestBll
+  id: TestBll
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: TestBll
+  nameWithType: InkoRetentionService.TestBll
+  fullName: Intranet.Labor.Bll.InkoRetentionService.TestBll
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestBll
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the incontinence retention test.\n"
+  example: []
+  syntax:
+    content: public ITestBll TestBll { get; set; }
+    content.vb: Public Property TestBll As ITestBll
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestBll
+  overload: Intranet.Labor.Bll.InkoRetentionService.TestBll*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+  commentId: P:Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+  id: InkoRetentionServiceHelper
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionServiceHelper
+  nameWithType: InkoRetentionService.InkoRetentionServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRetentionServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the incontinence retention service helper.\n"
+  example: []
+  syntax:
+    content: public IInkoRetentionServiceHelper InkoRetentionServiceHelper { get; set; }
+    content.vb: Public Property InkoRetentionServiceHelper As IInkoRetentionServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  overload: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+  commentId: P:Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+  id: TestServiceHelper
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: TestServiceHelper
+  nameWithType: InkoRetentionService.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestServiceHelper
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the test service helper.\n"
+  example: []
+  syntax:
+    content: public ITestServiceHelper TestServiceHelper { get; set; }
+    content.vb: Public Property TestServiceHelper As ITestServiceHelper
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ITestServiceHelper
+  overload: Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.InkoRetentionService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionService(ILoggerFactory)
+  nameWithType: InkoRetentionService.InkoRetentionService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InkoRetentionService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.InkoRetentionService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRetentionService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: InkoRetentionService.Delete(Int32)
+  fullName: Intranet.Labor.Bll.InkoRetentionService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 61
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: public TestValue Delete(int testValueId)
+    content.vb: Public Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Bll.InkoRetentionService.Delete*
+  implements:
+  - Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  id: GetInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetInkoRetentionEditViewModel(Int32)
+  nameWithType: InkoRetentionService.GetInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetInkoRetentionEditViewModel
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 73
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets a new InkoRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: public InkoRetentionEditViewModel GetInkoRetentionEditViewModel(int rewetTestId)
+    content.vb: Public Function GetInkoRetentionEditViewModel(rewetTestId As Integer) As InkoRetentionEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Inko rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel*
+  implements:
+  - Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  id: GetNewInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetNewInkoRetentionEditViewModel(Int32)
+  nameWithType: InkoRetentionService.GetNewInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewInkoRetentionEditViewModel
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 129
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets the InkoRetentionEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: public InkoRetentionEditViewModel GetNewInkoRetentionEditViewModel(int testSheetId)
+    content.vb: Public Function GetNewInkoRetentionEditViewModel(testSheetId As Integer) As InkoRetentionEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Inko rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel*
+  implements:
+  - Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.InkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Bll.InkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Labor.Bll.InkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoRetentionEditViewModel)
+  nameWithType: InkoRetentionService.Save(InkoRetentionEditViewModel)
+  fullName: Intranet.Labor.Bll.InkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Bll/InkoRetentionService.cs
+    startLine: 170
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nSaves or updates the InkoRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: public TestValue Save(InkoRetentionEditViewModel viewModel)
+    content.vb: Public Function Save(viewModel As InkoRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Bll.InkoRetentionService.Save*
+  implements:
+  - Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.IInkoRetentionService
+  commentId: T:Intranet.Labor.Definition.IInkoRetentionService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoRetentionService
+  nameWithType: IInkoRetentionService
+  fullName: Intranet.Labor.Definition.IInkoRetentionService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.InkoRetentionService.TestBll*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.TestBll
+  isExternal: false
+  name: TestBll
+  nameWithType: InkoRetentionService.TestBll
+  fullName: Intranet.Labor.Bll.InkoRetentionService.TestBll
+- uid: Intranet.Labor.Definition.ITestBll
+  commentId: T:Intranet.Labor.Definition.ITestBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestBll
+  nameWithType: ITestBll
+  fullName: Intranet.Labor.Definition.ITestBll
+- uid: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+  isExternal: false
+  name: InkoRetentionServiceHelper
+  nameWithType: InkoRetentionService.InkoRetentionServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionServiceHelper
+- uid: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoRetentionServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoRetentionServiceHelper
+  nameWithType: IInkoRetentionServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+- uid: Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+  isExternal: false
+  name: TestServiceHelper
+  nameWithType: InkoRetentionService.TestServiceHelper
+  fullName: Intranet.Labor.Bll.InkoRetentionService.TestServiceHelper
+- uid: Intranet.Labor.Definition.ITestServiceHelper
+  commentId: T:Intranet.Labor.Definition.ITestServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ITestServiceHelper
+  nameWithType: ITestServiceHelper
+  fullName: Intranet.Labor.Definition.ITestServiceHelper
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.InkoRetentionService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.#ctor
+  isExternal: false
+  name: InkoRetentionService
+  nameWithType: InkoRetentionService.InkoRetentionService
+  fullName: Intranet.Labor.Bll.InkoRetentionService.InkoRetentionService
+- uid: Intranet.Labor.Bll.InkoRetentionService.Delete*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: InkoRetentionService.Delete
+  fullName: Intranet.Labor.Bll.InkoRetentionService.Delete
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  isExternal: true
+  name: Delete(Int32)
+  nameWithType: IInkoRetentionService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+    name: Delete
+    nameWithType: IInkoRetentionService.Delete
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+    name: Delete
+    nameWithType: IInkoRetentionService.Delete
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.Delete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel
+  isExternal: false
+  name: GetInkoRetentionEditViewModel
+  nameWithType: InkoRetentionService.GetInkoRetentionEditViewModel
+  fullName: Intranet.Labor.Bll.InkoRetentionService.GetInkoRetentionEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  isExternal: true
+  name: GetInkoRetentionEditViewModel(Int32)
+  nameWithType: IInkoRetentionService.GetInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+    name: GetInkoRetentionEditViewModel
+    nameWithType: IInkoRetentionService.GetInkoRetentionEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+    name: GetInkoRetentionEditViewModel
+    nameWithType: IInkoRetentionService.GetInkoRetentionEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRetentionEditViewModel
+  nameWithType: InkoRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel
+  isExternal: false
+  name: GetNewInkoRetentionEditViewModel
+  nameWithType: InkoRetentionService.GetNewInkoRetentionEditViewModel
+  fullName: Intranet.Labor.Bll.InkoRetentionService.GetNewInkoRetentionEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  isExternal: true
+  name: GetNewInkoRetentionEditViewModel(Int32)
+  nameWithType: IInkoRetentionService.GetNewInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+    name: GetNewInkoRetentionEditViewModel
+    nameWithType: IInkoRetentionService.GetNewInkoRetentionEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+    name: GetNewInkoRetentionEditViewModel
+    nameWithType: IInkoRetentionService.GetNewInkoRetentionEditViewModel
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.InkoRetentionService.Save*
+  commentId: Overload:Intranet.Labor.Bll.InkoRetentionService.Save
+  isExternal: false
+  name: Save
+  nameWithType: InkoRetentionService.Save
+  fullName: Intranet.Labor.Bll.InkoRetentionService.Save
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  isExternal: false
+  name: Save(InkoRetentionEditViewModel)
+  nameWithType: IInkoRetentionService.Save(InkoRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+    name: Save
+    nameWithType: IInkoRetentionService.Save
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+    name: InkoRetentionEditViewModel
+    nameWithType: InkoRetentionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+    name: Save
+    nameWithType: IInkoRetentionService.Save
+    fullName: Intranet.Labor.Definition.IInkoRetentionService.Save
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+    name: InkoRetentionEditViewModel
+    nameWithType: InkoRetentionEditViewModel
+    fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  - name: )
+    nameWithType: )
+    fullName: )

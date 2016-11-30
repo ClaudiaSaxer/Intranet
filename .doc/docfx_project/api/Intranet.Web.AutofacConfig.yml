@@ -1,0 +1,102 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.AutofacConfig
+  commentId: T:Intranet.Web.AutofacConfig
+  id: AutofacConfig
+  parent: Intranet.Web
+  children:
+  - Intranet.Web.AutofacConfig.ConfigureContainer
+  langs:
+  - csharp
+  - vb
+  name: AutofacConfig
+  nameWithType: AutofacConfig
+  fullName: Intranet.Web.AutofacConfig
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/AutofacConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AutofacConfig
+    path: .src/Intranet/Web/App_Start/AutofacConfig.cs
+    startLine: 6
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\n"
+  example: []
+  syntax:
+    content: 'public class AutofacConfig : object'
+    content.vb: >-
+      Public Class AutofacConfig
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.AutofacConfig.ConfigureContainer
+  commentId: M:Intranet.Web.AutofacConfig.ConfigureContainer
+  id: ConfigureContainer
+  parent: Intranet.Web.AutofacConfig
+  langs:
+  - csharp
+  - vb
+  name: ConfigureContainer()
+  nameWithType: AutofacConfig.ConfigureContainer()
+  fullName: Intranet.Web.AutofacConfig.ConfigureContainer()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/AutofacConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ConfigureContainer
+    path: .src/Intranet/Web/App_Start/AutofacConfig.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\n"
+  example: []
+  syntax:
+    content: public static void ConfigureContainer()
+    content.vb: Public Shared Sub ConfigureContainer
+  overload: Intranet.Web.AutofacConfig.ConfigureContainer*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  isExternal: false
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.AutofacConfig.ConfigureContainer*
+  commentId: Overload:Intranet.Web.AutofacConfig.ConfigureContainer
+  isExternal: false
+  name: ConfigureContainer
+  nameWithType: AutofacConfig.ConfigureContainer
+  fullName: Intranet.Web.AutofacConfig.ConfigureContainer

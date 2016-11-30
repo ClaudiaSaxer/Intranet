@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.ShiftType
+  commentId: T:Intranet.Labor.Model.ShiftType
+  id: ShiftType
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.ShiftType.Late
+  - Intranet.Labor.Model.ShiftType.Morning
+  - Intranet.Labor.Model.ShiftType.Night
+  langs:
+  - csharp
+  - vb
+  name: ShiftType
+  nameWithType: ShiftType
+  fullName: Intranet.Labor.Model.ShiftType
+  type: Enum
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ShiftType
+    path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nEnum representing the shift type\n"
+  example: []
+  syntax:
+    content: public enum ShiftType
+    content.vb: Public Enum ShiftType
+  extensionMethods:
+  - Intranet.Labor.Model.ShiftType.Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Intranet.Labor.Model.ShiftType.Night
+  commentId: F:Intranet.Labor.Model.ShiftType.Night
+  id: Night
+  parent: Intranet.Labor.Model.ShiftType
+  langs:
+  - csharp
+  - vb
+  name: Night
+  nameWithType: ShiftType.Night
+  fullName: Intranet.Labor.Model.ShiftType.Night
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Night
+    path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nThe night shift, Nacht\n"
+  example: []
+  syntax:
+    content: Night = 0
+    return:
+      type: Intranet.Labor.Model.ShiftType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.ShiftType.Morning
+  commentId: F:Intranet.Labor.Model.ShiftType.Morning
+  id: Morning
+  parent: Intranet.Labor.Model.ShiftType
+  langs:
+  - csharp
+  - vb
+  name: Morning
+  nameWithType: ShiftType.Morning
+  fullName: Intranet.Labor.Model.ShiftType.Morning
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Morning
+    path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nThe morning shift, Morgen\n"
+  example: []
+  syntax:
+    content: Morning = 1
+    return:
+      type: Intranet.Labor.Model.ShiftType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Intranet.Labor.Model.ShiftType.Late
+  commentId: F:Intranet.Labor.Model.ShiftType.Late
+  id: Late
+  parent: Intranet.Labor.Model.ShiftType
+  langs:
+  - csharp
+  - vb
+  name: Late
+  nameWithType: ShiftType.Late
+  fullName: Intranet.Labor.Model.ShiftType.Late
+  type: Field
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Late
+    path: .src/Intranet/Labor/Model/intigena/ShiftType.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nThe late shift, Spät\n"
+  example: []
+  syntax:
+    content: Late = 2
+    return:
+      type: Intranet.Labor.Model.ShiftType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Model.ShiftType.Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  commentId: M:Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+  parent: Intranet.Labor.Bll.ShiftTypeExtension
+  definition: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+  name: ToFriendlyString()
+  nameWithType: ShiftTypeExtension.ToFriendlyString()
+  fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString()
+  spec.csharp:
+  - uid: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+    name: ToFriendlyString
+    nameWithType: ShiftTypeExtension.ToFriendlyString
+    fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+    name: ToFriendlyString
+    nameWithType: ShiftTypeExtension.ToFriendlyString
+    fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+  commentId: M:Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+  isExternal: false
+  name: ToFriendlyString(ShiftType)
+  nameWithType: ShiftTypeExtension.ToFriendlyString(ShiftType)
+  fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+  spec.csharp:
+  - uid: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+    name: ToFriendlyString
+    nameWithType: ShiftTypeExtension.ToFriendlyString
+    fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.ShiftType
+    name: ShiftType
+    nameWithType: ShiftType
+    fullName: Intranet.Labor.Model.ShiftType
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString(Intranet.Labor.Model.ShiftType)
+    name: ToFriendlyString
+    nameWithType: ShiftTypeExtension.ToFriendlyString
+    fullName: Intranet.Labor.Bll.ShiftTypeExtension.ToFriendlyString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.ShiftType
+    name: ShiftType
+    nameWithType: ShiftType
+    fullName: Intranet.Labor.Model.ShiftType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Bll.ShiftTypeExtension
+  commentId: T:Intranet.Labor.Bll.ShiftTypeExtension
+  parent: Intranet.Labor.Bll
+  isExternal: false
+  name: ShiftTypeExtension
+  nameWithType: ShiftTypeExtension
+  fullName: Intranet.Labor.Bll.ShiftTypeExtension
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: Intranet.Labor.Model.ShiftType
+  commentId: T:Intranet.Labor.Model.ShiftType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ShiftType
+  nameWithType: ShiftType
+  fullName: Intranet.Labor.Model.ShiftType

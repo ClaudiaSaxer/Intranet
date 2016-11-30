@@ -1,0 +1,1616 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  commentId: T:Intranet.Labor.Model.labor.IncontinencePadTestValue
+  id: IncontinencePadTestValue
+  parent: Intranet.Labor.Model.labor
+  children:
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+  - Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTestValue
+  nameWithType: IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTestValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nClass representing incontinence pad test value\n"
+  example: []
+  syntax:
+    content: public class IncontinencePadTestValue
+    content.vb: Public Class IncontinencePadTestValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+  id: IncontinencePadTestValueId
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTestValueId
+  nameWithType: IncontinencePadTestValue.IncontinencePadTestValueId
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTestValueId
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the id of the incontinence pad test value\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("TestValue")]
+
+      public int IncontinencePadTestValueId { get; set; }
+    content.vb: >-
+      <ForeignKey("TestValue")>
+
+      Public Property IncontinencePadTestValueId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: 'the incontinence pad test value id '
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: TestValue
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+  id: IncontinencePadTime
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: IncontinencePadTime
+  nameWithType: IncontinencePadTestValue.IncontinencePadTime
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IncontinencePadTime
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the time the  incontinence pad was created\n"
+  example: []
+  syntax:
+    content: public TimeSpan IncontinencePadTime { get; set; }
+    content.vb: Public Property IncontinencePadTime As TimeSpan
+    parameters: []
+    return:
+      type: System.TimeSpan
+      description: the time the  incontinence pad was created
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+  id: ExpireMonth
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: ExpireMonth
+  nameWithType: IncontinencePadTestValue.ExpireMonth
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireMonth
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the month the incontinence pad expires\n"
+  example: []
+  syntax:
+    content: public int ExpireMonth { get; set; }
+    content.vb: Public Property ExpireMonth As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the expire montn
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+  id: ExpireYear
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: ExpireYear
+  nameWithType: IncontinencePadTestValue.ExpireYear
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ExpireYear
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 35
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the year the incontinence pad expires\n"
+  example: []
+  syntax:
+    content: public int ExpireYear { get; set; }
+    content.vb: Public Property ExpireYear As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: the expire year
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+  id: RewetFreeDryValue
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetFreeDryValue
+  nameWithType: IncontinencePadTestValue.RewetFreeDryValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetFreeDryValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for the rewet dry\n"
+  example: []
+  syntax:
+    content: public double RewetFreeDryValue { get; set; }
+    content.vb: Public Property RewetFreeDryValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the rewet dry
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+  id: RewetFreeRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetFreeRw
+  nameWithType: IncontinencePadTestValue.RewetFreeRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetFreeRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 47
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW for the rewet\n"
+  example: []
+  syntax:
+    content: public RwType RewetFreeRw { get; set; }
+    content.vb: Public Property RewetFreeRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW for the rewet
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+  id: RewetFreeWetValue
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetFreeWetValue
+  nameWithType: IncontinencePadTestValue.RewetFreeWetValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetFreeWetValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for the rewet wet\n"
+  example: []
+  syntax:
+    content: public double RewetFreeWetValue { get; set; }
+    content.vb: Public Property RewetFreeWetValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the rewet wet
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+  id: RewetFreeDifference
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetFreeDifference
+  nameWithType: IncontinencePadTestValue.RewetFreeDifference
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetFreeDifference
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 59
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the difference of the rewet wet and dry\n"
+  example: []
+  syntax:
+    content: public double RewetFreeDifference { get; set; }
+    content.vb: Public Property RewetFreeDifference As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the difference of the rewet
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+  id: RetentionWeight
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionWeight
+  nameWithType: IncontinencePadTestValue.RetentionWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionWeight
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 65
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight of the retention\n"
+  example: []
+  syntax:
+    content: public double RetentionWeight { get; set; }
+    content.vb: Public Property RetentionWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention weight
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+  id: RetentionWetValue
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionWetValue
+  nameWithType: IncontinencePadTestValue.RetentionWetValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionWetValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 71
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight of the retention wet\n"
+  example: []
+  syntax:
+    content: public double RetentionWetValue { get; set; }
+    content.vb: Public Property RetentionWetValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of the retention wet
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+  id: RetentionAfterZentrifuge
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionAfterZentrifuge
+  nameWithType: IncontinencePadTestValue.RetentionAfterZentrifuge
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAfterZentrifuge
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 77
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the value for the rentention after the zentrifuge\n"
+  example: []
+  syntax:
+    content: public double RetentionAfterZentrifuge { get; set; }
+    content.vb: Public Property RetentionAfterZentrifuge As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention value after zentrifuge
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+  id: RetentionAbsorbtion
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionAbsorbtion
+  nameWithType: IncontinencePadTestValue.RetentionAbsorbtion
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionAbsorbtion
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 83
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the retention absorbation value\n"
+  example: []
+  syntax:
+    content: public double RetentionAbsorbtion { get; set; }
+    content.vb: Public Property RetentionAbsorbtion As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention absorbation value
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+  id: RetentionEndValue
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionEndValue
+  nameWithType: IncontinencePadTestValue.RetentionEndValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionEndValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 89
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the retention end value\n"
+  example: []
+  syntax:
+    content: public double RetentionEndValue { get; set; }
+    content.vb: Public Property RetentionEndValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the retention end value
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+  id: RetentionRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RetentionRw
+  nameWithType: IncontinencePadTestValue.RetentionRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RetentionRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the RW for the retention\n"
+  example: []
+  syntax:
+    content: public RwType RetentionRw { get; set; }
+    content.vb: Public Property RetentionRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW for the retention
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+  id: AcquisitionWeight
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionWeight
+  nameWithType: IncontinencePadTestValue.AcquisitionWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionWeight
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 101
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight of the pad for the acquisition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionWeight { get; set; }
+    content.vb: Public Property AcquisitionWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of the acquisition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+  id: AcquisitionTimeFirst
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeFirst
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeFirst
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeFirst
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition after the first addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeFirst { get; set; }
+    content.vb: Public Property AcquisitionTimeFirst As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the acquisition after the first addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+  id: AcquisitionTimeSecond
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeSecond
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeSecond
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeSecond
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 113
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition after the second addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeSecond { get; set; }
+    content.vb: Public Property AcquisitionTimeSecond As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the acquisition after the second addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+  id: AcquisitionTimeThird
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeThird
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeThird
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeThird
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 119
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition after the third addition\n"
+  example: []
+  syntax:
+    content: public double AcquisitionTimeThird { get; set; }
+    content.vb: Public Property AcquisitionTimeThird As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the acquisition after the third addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+  id: AcquisitionTimeFirstRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeFirstRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeFirstRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeFirstRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 125
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition RW after the first addition\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeFirstRw { get; set; }
+    content.vb: Public Property AcquisitionTimeFirstRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the acquisition RW after the first addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+  id: AcquisitionTimeSecondRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeSecondRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeSecondRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeSecondRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 131
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition RW after the second addition\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeSecondRw { get; set; }
+    content.vb: Public Property AcquisitionTimeSecondRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the acquisition  RW after the second addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+  id: AcquisitionTimeThirdRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: AcquisitionTimeThirdRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeThirdRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AcquisitionTimeThirdRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 137
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the acquisition  RW after the third addition\n"
+  example: []
+  syntax:
+    content: public RwType AcquisitionTimeThirdRw { get; set; }
+    content.vb: Public Property AcquisitionTimeThirdRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the acquisition RW after the third addition
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  id: RewetAfterAcquisitionTimeWetWeight
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeWetWeight
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeWetWeight
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 143
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight of a wet pad for the rewet after the acquisition time\n"
+  example: []
+  syntax:
+    content: public double RewetAfterAcquisitionTimeWetWeight { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeWetWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of a wet pad for the rewet after the acquisition time
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  id: RewetAfterAcquisitionTimeDryWeight
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeDryWeight
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeDryWeight
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 149
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight of a dry pad for the rewet after the acquisition time\n"
+  example: []
+  syntax:
+    content: public double RewetAfterAcquisitionTimeDryWeight { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeDryWeight As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight of a dry pad for the rewet after the acquisition time
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  id: RewetAfterAcquisitionTimeWeightDifference
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeWeightDifference
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeWeightDifference
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 155
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the weight difference of a  pad for the rewet after the acquisition time\n"
+  example: []
+  syntax:
+    content: public double RewetAfterAcquisitionTimeWeightDifference { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeWeightDifference As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the weight difference of a  pad for the rewet after the acquisition time
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  id: RewetAfterAcquisitionTimeRw
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: RewetAfterAcquisitionTimeRw
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RewetAfterAcquisitionTimeRw
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 161
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the rw of a pad for the rewet after the acquisition time\n"
+  example: []
+  syntax:
+    content: public RwType RewetAfterAcquisitionTimeRw { get; set; }
+    content.vb: Public Property RewetAfterAcquisitionTimeRw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the rw of a pad for the rewet after the acquisition time
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+  id: TestValue
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: TestValue
+  nameWithType: IncontinencePadTestValue.TestValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestValue
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 167
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test value of the incontinence pad test value\n"
+  example: []
+  syntax:
+    content: public virtual TestValue TestValue { get; set; }
+    content.vb: Public Overridable Property TestValue As TestValue
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the test value
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+  commentId: P:Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+  id: TestType
+  parent: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  langs:
+  - csharp
+  - vb
+  name: TestType
+  nameWithType: IncontinencePadTestValue.TestType
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestType
+    path: .src/Intranet/Labor/Model/labor/IncontinencePadTestValue.cs
+    startLine: 173
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model.labor
+  summary: "\nGets or sets the test type of the incontinence pad test value\n"
+  example: []
+  syntax:
+    content: public TestTypeIncontinencePad TestType { get; set; }
+    content.vb: Public Property TestType As TestTypeIncontinencePad
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+      description: the test typof the incontinence pad test value
+  overload: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+  isExternal: false
+  name: IncontinencePadTestValueId
+  nameWithType: IncontinencePadTestValue.IncontinencePadTestValueId
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTestValueId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+  isExternal: false
+  name: IncontinencePadTime
+  nameWithType: IncontinencePadTestValue.IncontinencePadTime
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.IncontinencePadTime
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+  isExternal: false
+  name: ExpireMonth
+  nameWithType: IncontinencePadTestValue.ExpireMonth
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireMonth
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+  isExternal: false
+  name: ExpireYear
+  nameWithType: IncontinencePadTestValue.ExpireYear
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.ExpireYear
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+  isExternal: false
+  name: RewetFreeDryValue
+  nameWithType: IncontinencePadTestValue.RewetFreeDryValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDryValue
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+  isExternal: false
+  name: RewetFreeRw
+  nameWithType: IncontinencePadTestValue.RewetFreeRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeRw
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+  isExternal: false
+  name: RewetFreeWetValue
+  nameWithType: IncontinencePadTestValue.RewetFreeWetValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeWetValue
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+  isExternal: false
+  name: RewetFreeDifference
+  nameWithType: IncontinencePadTestValue.RewetFreeDifference
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetFreeDifference
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+  isExternal: false
+  name: RetentionWeight
+  nameWithType: IncontinencePadTestValue.RetentionWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWeight
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+  isExternal: false
+  name: RetentionWetValue
+  nameWithType: IncontinencePadTestValue.RetentionWetValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionWetValue
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+  isExternal: false
+  name: RetentionAfterZentrifuge
+  nameWithType: IncontinencePadTestValue.RetentionAfterZentrifuge
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAfterZentrifuge
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+  isExternal: false
+  name: RetentionAbsorbtion
+  nameWithType: IncontinencePadTestValue.RetentionAbsorbtion
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionAbsorbtion
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+  isExternal: false
+  name: RetentionEndValue
+  nameWithType: IncontinencePadTestValue.RetentionEndValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionEndValue
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+  isExternal: false
+  name: RetentionRw
+  nameWithType: IncontinencePadTestValue.RetentionRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RetentionRw
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+  isExternal: false
+  name: AcquisitionWeight
+  nameWithType: IncontinencePadTestValue.AcquisitionWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionWeight
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+  isExternal: false
+  name: AcquisitionTimeFirst
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeFirst
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirst
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+  isExternal: false
+  name: AcquisitionTimeSecond
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeSecond
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecond
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+  isExternal: false
+  name: AcquisitionTimeThird
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeThird
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThird
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+  isExternal: false
+  name: AcquisitionTimeFirstRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeFirstRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeFirstRw
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+  isExternal: false
+  name: AcquisitionTimeSecondRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeSecondRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeSecondRw
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+  isExternal: false
+  name: AcquisitionTimeThirdRw
+  nameWithType: IncontinencePadTestValue.AcquisitionTimeThirdRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.AcquisitionTimeThirdRw
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  isExternal: false
+  name: RewetAfterAcquisitionTimeWetWeight
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  isExternal: false
+  name: RewetAfterAcquisitionTimeDryWeight
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  isExternal: false
+  name: RewetAfterAcquisitionTimeWeightDifference
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  isExternal: false
+  name: RewetAfterAcquisitionTimeRw
+  nameWithType: IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+  isExternal: false
+  name: TestValue
+  nameWithType: IncontinencePadTestValue.TestValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestValue
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType*
+  commentId: Overload:Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+  isExternal: false
+  name: TestType
+  nameWithType: IncontinencePadTestValue.TestType
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue.TestType
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  commentId: T:Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeIncontinencePad
+  nameWithType: TestTypeIncontinencePad
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad

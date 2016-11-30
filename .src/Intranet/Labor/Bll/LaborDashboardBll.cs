@@ -91,7 +91,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
                       .ToList()
                       .ForEach(sheet =>
                       {
-                          if (ShiftHelper.DateExistsInShifts(sheet.CreatedDateTime, shifts))
+                          if (DateTime.Now.AddDays(-shifts.Count) <= sheet.CreatedDateTime && ShiftHelper.DateExistsInShifts(sheet.CreatedDateTime, shifts))
                               sheets.Add(sheet);
                       });
             return sheets;

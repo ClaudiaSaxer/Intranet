@@ -1,0 +1,824 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.NLogLoggerFactory
+  commentId: T:Intranet.Common.NLogLoggerFactory
+  id: NLogLoggerFactory
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.NLogLoggerFactory.CreateLogger(System.String)
+  - Intranet.Common.NLogLoggerFactory.CreateLogger(System.Type)
+  - Intranet.Common.NLogLoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  langs:
+  - csharp
+  - vb
+  name: NLogLoggerFactory
+  nameWithType: NLogLoggerFactory
+  fullName: Intranet.Common.NLogLoggerFactory
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: NLogLoggerFactory
+    path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+    startLine: 9
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nA NLog loggerFactory factory.\n"
+  example: []
+  syntax:
+    content: 'public class NLogLoggerFactory : ILoggerFactory'
+    content.vb: >-
+      Public Class NLogLoggerFactory
+
+          Implements ILoggerFactory
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Common.ILoggerFactory
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Common.NLogLoggerFactory.CreateLogger(System.String)
+  commentId: M:Intranet.Common.NLogLoggerFactory.CreateLogger(System.String)
+  id: CreateLogger(System.String)
+  parent: Intranet.Common.NLogLoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateLogger(String)
+  nameWithType: NLogLoggerFactory.CreateLogger(String)
+  fullName: Intranet.Common.NLogLoggerFactory.CreateLogger(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateLogger
+    path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a loggerFactory with the specified name.\n"
+  example: []
+  syntax:
+    content: public ILogger CreateLogger(string loggerName)
+    content.vb: Public Function CreateLogger(loggerName As String) As ILogger
+    parameters:
+    - id: loggerName
+      type: System.String
+      description: The name of the loggerFactory.
+    return:
+      type: Intranet.Common.ILogger
+      description: A loggerFactory with specified name.
+  overload: Intranet.Common.NLogLoggerFactory.CreateLogger*
+  implements:
+  - Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLoggerFactory.CreateLogger(System.Type)
+  commentId: M:Intranet.Common.NLogLoggerFactory.CreateLogger(System.Type)
+  id: CreateLogger(System.Type)
+  parent: Intranet.Common.NLogLoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateLogger(Type)
+  nameWithType: NLogLoggerFactory.CreateLogger(Type)
+  fullName: Intranet.Common.NLogLoggerFactory.CreateLogger(System.Type)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateLogger
+    path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a loggerFactory for the specified type.\n"
+  example: []
+  syntax:
+    content: public ILogger CreateLogger(Type t)
+    content.vb: Public Function CreateLogger(t As Type) As ILogger
+    parameters:
+    - id: t
+      type: System.Type
+      description: The type of the logging class.
+    return:
+      type: Intranet.Common.ILogger
+      description: A loggerFactory for the specified type.
+  overload: Intranet.Common.NLogLoggerFactory.CreateLogger*
+  implements:
+  - Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.NLogLoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  commentId: M:Intranet.Common.NLogLoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  id: SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  parent: Intranet.Common.NLogLoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  nameWithType: NLogLoggerFactory.SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  fullName: Intranet.Common.NLogLoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SetDynamicParameters
+    path: .src/Intranet/Common/Logging/NLogLoggerFactory.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAdds the given parameter to the current context of the logging framework.\n"
+  remarks: "\nUse this feature to add dynamic parameters to your log.\nYou can access the parameters using the following syntax: ${gdc:item=myVariableName}\n"
+  example: []
+  syntax:
+    content: public void SetDynamicParameters(IEnumerable<KeyValuePair<string, string>> parameters)
+    content.vb: Public Sub SetDynamicParameters(parameters As IEnumerable(Of KeyValuePair(Of String, String)))
+    parameters:
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+      description: The parameters to add.
+  overload: Intranet.Common.NLogLoggerFactory.SetDynamicParameters*
+  implements:
+  - Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  nameWithType.vb: NLogLoggerFactory.SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Common.NLogLoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  name.vb: SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.NLogLoggerFactory.CreateLogger*
+  commentId: Overload:Intranet.Common.NLogLoggerFactory.CreateLogger
+  isExternal: false
+  name: CreateLogger
+  nameWithType: NLogLoggerFactory.CreateLogger
+  fullName: Intranet.Common.NLogLoggerFactory.CreateLogger
+- uid: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  commentId: M:Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  parent: Intranet.Common.ILoggerFactory
+  isExternal: true
+  name: CreateLogger(String)
+  nameWithType: ILoggerFactory.CreateLogger(String)
+  fullName: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  spec.csharp:
+  - uid: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+    name: CreateLogger
+    nameWithType: ILoggerFactory.CreateLogger
+    fullName: Intranet.Common.ILoggerFactory.CreateLogger
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+    name: CreateLogger
+    nameWithType: ILoggerFactory.CreateLogger
+    fullName: Intranet.Common.ILoggerFactory.CreateLogger
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  commentId: M:Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  parent: Intranet.Common.ILoggerFactory
+  isExternal: true
+  name: CreateLogger(Type)
+  nameWithType: ILoggerFactory.CreateLogger(Type)
+  fullName: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  spec.csharp:
+  - uid: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+    name: CreateLogger
+    nameWithType: ILoggerFactory.CreateLogger
+    fullName: Intranet.Common.ILoggerFactory.CreateLogger
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+    name: CreateLogger
+    nameWithType: ILoggerFactory.CreateLogger
+    fullName: Intranet.Common.ILoggerFactory.CreateLogger
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Type
+    name: Type
+    nameWithType: Type
+    fullName: System.Type
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Intranet.Common.NLogLoggerFactory.SetDynamicParameters*
+  commentId: Overload:Intranet.Common.NLogLoggerFactory.SetDynamicParameters
+  isExternal: false
+  name: SetDynamicParameters
+  nameWithType: NLogLoggerFactory.SetDynamicParameters
+  fullName: Intranet.Common.NLogLoggerFactory.SetDynamicParameters
+- uid: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  commentId: M:Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  parent: Intranet.Common.ILoggerFactory
+  isExternal: true
+  name: SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  nameWithType: ILoggerFactory.SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  fullName: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  nameWithType.vb: ILoggerFactory.SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+  fullname.vb: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  name.vb: SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+  spec.csharp:
+  - uid: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+    name: SetDynamicParameters
+    nameWithType: ILoggerFactory.SetDynamicParameters
+    fullName: Intranet.Common.ILoggerFactory.SetDynamicParameters
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+    name: SetDynamicParameters
+    nameWithType: ILoggerFactory.SetDynamicParameters
+    fullName: Intranet.Common.ILoggerFactory.SetDynamicParameters
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<String, String>>
+  nameWithType: IEnumerable<KeyValuePair<String, String>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, String))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String))
+  name.vb: IEnumerable(Of KeyValuePair(Of String, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

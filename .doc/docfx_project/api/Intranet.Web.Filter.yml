@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Filter
+  commentId: N:Intranet.Web.Filter
+  id: Intranet.Web.Filter
+  children:
+  - Intranet.Web.Filter.CheckDisableAttribute
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Web.Filter
+  nameWithType: Intranet.Web.Filter
+  fullName: Intranet.Web.Filter
+  type: Namespace
+  assemblies:
+  - Intranet.Web
+references:
+- uid: Intranet.Web.Filter.CheckDisableAttribute
+  commentId: T:Intranet.Web.Filter.CheckDisableAttribute
+  isExternal: false
+  name: CheckDisableAttribute
+  nameWithType: CheckDisableAttribute
+  fullName: Intranet.Web.Filter.CheckDisableAttribute

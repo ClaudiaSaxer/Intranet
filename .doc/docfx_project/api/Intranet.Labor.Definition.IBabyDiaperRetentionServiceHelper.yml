@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  id: IBabyDiaperRetentionServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  - Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperRetentionServiceHelper
+  nameWithType: IBabyDiaperRetentionServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperRetentionServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the baby diaper retention service helper\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperRetentionServiceHelper
+    content.vb: Public Interface IBabyDiaperRetentionServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  id: SaveNewRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewRetentionTest(BabyDiaperRetentionEditViewModel)
+  nameWithType: IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest(BabyDiaperRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewRetentionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewRetentionTest(BabyDiaperRetentionEditViewModel viewModel)
+    content.vb: Function SaveNewRetentionTest(viewModel As BabyDiaperRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest*
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  id: UpdateRetentionAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRetentionAverageAndStv(Int32)
+  nameWithType: IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRetentionAverageAndStv
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for retention values\n"
+  example: []
+  syntax:
+    content: TestSheet UpdateRetentionAverageAndStv(int testSheetId)
+    content.vb: Function UpdateRetentionAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv*
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  id: UpdateRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRetentionTest(BabyDiaperRetentionEditViewModel)
+  nameWithType: IBabyDiaperRetentionServiceHelper.UpdateRetentionTest(BabyDiaperRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRetentionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRetentionServiceHelper.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue UpdateRetentionTest(BabyDiaperRetentionEditViewModel viewModel)
+    content.vb: Function UpdateRetentionTest(viewModel As BabyDiaperRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest
+  isExternal: false
+  name: SaveNewRetentionTest
+  nameWithType: IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.SaveNewRetentionTest
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetentionEditViewModel
+  nameWithType: BabyDiaperRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv
+  isExternal: false
+  name: UpdateRetentionAverageAndStv
+  nameWithType: IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest
+  isExternal: false
+  name: UpdateRetentionTest
+  nameWithType: IBabyDiaperRetentionServiceHelper.UpdateRetentionTest
+  fullName: Intranet.Labor.Definition.IBabyDiaperRetentionServiceHelper.UpdateRetentionTest
