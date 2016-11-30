@@ -1,0 +1,857 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  id: ILaborDashboardHelper
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType(Intranet.Labor.Model.labor.RwType,System.Nullable{Intranet.Labor.Model.labor.RwType})
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers(Intranet.Labor.Model.labor.TestValue)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad(Intranet.Labor.Model.labor.TestValue)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem(Intranet.Labor.Model.labor.TestSheet)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet})
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  langs:
+  - csharp
+  - vb
+  name: ILaborDashboardHelper
+  nameWithType: ILaborDashboardHelper
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborDashboardHelper
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInteraface representing Labor Dashboard Helper\n"
+  example: []
+  syntax:
+    content: public interface ILaborDashboardHelper
+    content.vb: Public Interface ILaborDashboardHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType(Intranet.Labor.Model.labor.RwType,System.Nullable{Intranet.Labor.Model.labor.RwType})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType(Intranet.Labor.Model.labor.RwType,System.Nullable{Intranet.Labor.Model.labor.RwType})
+  id: CalcRwType(Intranet.Labor.Model.labor.RwType,System.Nullable{Intranet.Labor.Model.labor.RwType})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: CalcRwType(RwType, Nullable<RwType>)
+  nameWithType: ILaborDashboardHelper.CalcRwType(RwType, Nullable<RwType>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType(Intranet.Labor.Model.labor.RwType, System.Nullable<Intranet.Labor.Model.labor.RwType>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CalcRwType
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nCalculates the rwtype to get the more important of the before or actual\n"
+  example: []
+  syntax:
+    content: RwType CalcRwType(RwType before, RwType? rwType)
+    content.vb: Function CalcRwType(before As RwType, rwType As RwType?) As RwType
+    parameters:
+    - id: before
+      type: Intranet.Labor.Model.labor.RwType
+      description: the rwtype before
+    - id: rwType
+      type: System.Nullable{Intranet.Labor.Model.labor.RwType}
+      description: the rwtype at the moment
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the rwtype that is more important
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType*
+  nameWithType.vb: ILaborDashboardHelper.CalcRwType(RwType, Nullable(Of RwType))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType(Intranet.Labor.Model.labor.RwType, System.Nullable(Of Intranet.Labor.Model.labor.RwType))
+  name.vb: CalcRwType(RwType, Nullable(Of RwType))
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToDashboardInfos(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToDashboardInfos(IEnumerable<TestValue>)
+  nameWithType: ILaborDashboardHelper.ToDashboardInfos(IEnumerable<TestValue>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToDashboardInfos
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGenerates Dashboard infos with the given testvalues\n"
+  example: []
+  syntax:
+    content: List<DashboardInfo> ToDashboardInfos(IEnumerable<TestValue> testValues)
+    content.vb: Function ToDashboardInfos(testValues As IEnumerable(Of TestValue)) As List(Of DashboardInfo)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing infos
+    return:
+      type: System.Collections.Generic.List{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+      description: a list of dashboard infos with the information from the given testvalues
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos*
+  nameWithType.vb: ILaborDashboardHelper.ToDashboardInfos(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToDashboardInfos(IEnumerable(Of TestValue))
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers(Intranet.Labor.Model.labor.TestValue)
+  id: ToDashboardInfosBabyDiapers(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToDashboardInfosBabyDiapers(TestValue)
+  nameWithType: ILaborDashboardHelper.ToDashboardInfosBabyDiapers(TestValue)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers(Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToDashboardInfosBabyDiapers
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 37
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\ngenerates a list of dashboard infos which are from the testvalue of baby diaper\n"
+  example: []
+  syntax:
+    content: List<DashboardInfo> ToDashboardInfosBabyDiapers(TestValue testValue)
+    content.vb: Function ToDashboardInfosBabyDiapers(testValue As TestValue) As List(Of DashboardInfo)
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the testvalues containing baby diapers test value
+    return:
+      type: System.Collections.Generic.List{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+      description: a list of dashboard infos from the testvalue
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad(Intranet.Labor.Model.labor.TestValue)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad(Intranet.Labor.Model.labor.TestValue)
+  id: ToDashboardInfosIncontinencePad(Intranet.Labor.Model.labor.TestValue)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToDashboardInfosIncontinencePad(TestValue)
+  nameWithType: ILaborDashboardHelper.ToDashboardInfosIncontinencePad(TestValue)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad(Intranet.Labor.Model.labor.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToDashboardInfosIncontinencePad
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\ngenerates a list of dashboard infos which are from the testvalue of  incontinenec pad\n"
+  example: []
+  syntax:
+    content: List<DashboardInfo> ToDashboardInfosIncontinencePad(TestValue testValue)
+    content.vb: Function ToDashboardInfosIncontinencePad(testValue As TestValue) As List(Of DashboardInfo)
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the testvalues containing incontinence pod test value
+    return:
+      type: System.Collections.Generic.List{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+      description: a list of dashboard infos from the testvalue
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToDashboardNote(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToDashboardNote(IEnumerable<TestValue>)
+  nameWithType: ILaborDashboardHelper.ToDashboardNote(IEnumerable<TestValue>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToDashboardNote
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 50
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGenerates a list od dashboard notes with the information from the given test values\n"
+  example: []
+  syntax:
+    content: List<DashboardNote> ToDashboardNote(IEnumerable<TestValue> testValues)
+    content.vb: Function ToDashboardNote(testValues As IEnumerable(Of TestValue)) As List(Of DashboardNote)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: a list of testvalues containing attributes for the notes
+    return:
+      type: System.Collections.Generic.List{Intranet.Labor.ViewModel.DashboardNote}
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote*
+  nameWithType.vb: ILaborDashboardHelper.ToDashboardNote(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToDashboardNote(IEnumerable(Of TestValue))
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRwTypeAll(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRwTypeAll(IEnumerable<TestValue>)
+  nameWithType: ILaborDashboardHelper.ToRwTypeAll(IEnumerable<TestValue>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRwTypeAll
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 57
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\ncollectes all rw data from the testvalues to a production order and calculates the most important one for the whole\n"
+  example: []
+  syntax:
+    content: RwType ToRwTypeAll(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRwTypeAll(testValues As IEnumerable(Of TestValue)) As RwType
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: a list of testvalues
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: a rw type representing the whole lot of testvalues
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll*
+  nameWithType.vb: ILaborDashboardHelper.ToRwTypeAll(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRwTypeAll(IEnumerable(Of TestValue))
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem(Intranet.Labor.Model.labor.TestSheet)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem(Intranet.Labor.Model.labor.TestSheet)
+  id: ToProductionOrderItem(Intranet.Labor.Model.labor.TestSheet)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToProductionOrderItem(TestSheet)
+  nameWithType: ILaborDashboardHelper.ToProductionOrderItem(TestSheet)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem(Intranet.Labor.Model.labor.TestSheet)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToProductionOrderItem
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 64
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nCreates a productionOrder item with the values from the testsheet\n"
+  example: []
+  syntax:
+    content: ProductionOrderItem ToProductionOrderItem(TestSheet testSheet)
+    content.vb: Function ToProductionOrderItem(testSheet As TestSheet) As ProductionOrderItem
+    parameters:
+    - id: testSheet
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the testsheet
+    return:
+      type: Intranet.Labor.ViewModel.ProductionOrderItem
+      description: a production order item
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet})
+  id: ToProductionOrderItems(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
+  langs:
+  - csharp
+  - vb
+  name: ToProductionOrderItems(ICollection<TestSheet>)
+  nameWithType: ILaborDashboardHelper.ToProductionOrderItems(ICollection<TestSheet>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems(System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestSheet>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToProductionOrderItems
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardHelper.cs
+    startLine: 71
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nCreates a list of production order items from a collection of test sheets\n"
+  example: []
+  syntax:
+    content: ICollection<ProductionOrderItem> ToProductionOrderItems(ICollection<TestSheet> testSheets)
+    content.vb: Function ToProductionOrderItems(testSheets As ICollection(Of TestSheet)) As ICollection(Of ProductionOrderItem)
+    parameters:
+    - id: testSheets
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+      description: a collection of test sheets
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.ProductionOrderItem}
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems*
+  nameWithType.vb: ILaborDashboardHelper.ToProductionOrderItems(ICollection(Of TestSheet))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems(System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestSheet))
+  name.vb: ToProductionOrderItems(ICollection(Of TestSheet))
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType
+  isExternal: false
+  name: CalcRwType
+  nameWithType: ILaborDashboardHelper.CalcRwType
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.CalcRwType
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: System.Nullable{Intranet.Labor.Model.labor.RwType}
+  commentId: T:System.Nullable{Intranet.Labor.Model.labor.RwType}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<RwType>
+  nameWithType: Nullable<RwType>
+  fullName: System.Nullable<Intranet.Labor.Model.labor.RwType>
+  nameWithType.vb: Nullable(Of RwType)
+  fullname.vb: System.Nullable(Of Intranet.Labor.Model.labor.RwType)
+  name.vb: Nullable(Of RwType)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.RwType
+    name: RwType
+    nameWithType: RwType
+    fullName: Intranet.Labor.Model.labor.RwType
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.RwType
+    name: RwType
+    nameWithType: RwType
+    fullName: Intranet.Labor.Model.labor.RwType
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos
+  isExternal: false
+  name: ToDashboardInfos
+  nameWithType: ILaborDashboardHelper.ToDashboardInfos
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfos
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TestValue>
+  nameWithType: IEnumerable<TestValue>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: IEnumerable(Of TestValue)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: IEnumerable(Of TestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+  commentId: T:System.Collections.Generic.List{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DashboardInfo>
+  nameWithType: List<DashboardInfo>
+  fullName: System.Collections.Generic.List<Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo>
+  nameWithType.vb: List(Of DashboardInfo)
+  fullname.vb: System.Collections.Generic.List(Of Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo)
+  name.vb: List(Of DashboardInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+    name: DashboardInfo
+    nameWithType: DashboardInfo
+    fullName: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+    name: DashboardInfo
+    nameWithType: DashboardInfo
+    fullName: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers
+  isExternal: false
+  name: ToDashboardInfosBabyDiapers
+  nameWithType: ILaborDashboardHelper.ToDashboardInfosBabyDiapers
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosBabyDiapers
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad
+  isExternal: false
+  name: ToDashboardInfosIncontinencePad
+  nameWithType: ILaborDashboardHelper.ToDashboardInfosIncontinencePad
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardInfosIncontinencePad
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote
+  isExternal: false
+  name: ToDashboardNote
+  nameWithType: ILaborDashboardHelper.ToDashboardNote
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToDashboardNote
+- uid: System.Collections.Generic.List{Intranet.Labor.ViewModel.DashboardNote}
+  commentId: T:System.Collections.Generic.List{Intranet.Labor.ViewModel.DashboardNote}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DashboardNote>
+  nameWithType: List<DashboardNote>
+  fullName: System.Collections.Generic.List<Intranet.Labor.ViewModel.DashboardNote>
+  nameWithType.vb: List(Of DashboardNote)
+  fullname.vb: System.Collections.Generic.List(Of Intranet.Labor.ViewModel.DashboardNote)
+  name.vb: List(Of DashboardNote)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.DashboardNote
+    name: DashboardNote
+    nameWithType: DashboardNote
+    fullName: Intranet.Labor.ViewModel.DashboardNote
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.DashboardNote
+    name: DashboardNote
+    nameWithType: DashboardNote
+    fullName: Intranet.Labor.ViewModel.DashboardNote
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll
+  isExternal: false
+  name: ToRwTypeAll
+  nameWithType: ILaborDashboardHelper.ToRwTypeAll
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToRwTypeAll
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem
+  isExternal: false
+  name: ToProductionOrderItem
+  nameWithType: ILaborDashboardHelper.ToProductionOrderItem
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItem
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: Intranet.Labor.ViewModel.ProductionOrderItem
+  commentId: T:Intranet.Labor.ViewModel.ProductionOrderItem
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: ProductionOrderItem
+  nameWithType: ProductionOrderItem
+  fullName: Intranet.Labor.ViewModel.ProductionOrderItem
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems
+  isExternal: false
+  name: ToProductionOrderItems
+  nameWithType: ILaborDashboardHelper.ToProductionOrderItems
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper.ToProductionOrderItems
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestSheet>
+  nameWithType: ICollection<TestSheet>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: ICollection(Of TestSheet)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: ICollection(Of TestSheet)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.ProductionOrderItem}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.ProductionOrderItem}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<ProductionOrderItem>
+  nameWithType: ICollection<ProductionOrderItem>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.ProductionOrderItem>
+  nameWithType.vb: ICollection(Of ProductionOrderItem)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.ProductionOrderItem)
+  name.vb: ICollection(Of ProductionOrderItem)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.ProductionOrderItem
+    name: ProductionOrderItem
+    nameWithType: ProductionOrderItem
+    fullName: Intranet.Labor.ViewModel.ProductionOrderItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.ProductionOrderItem
+    name: ProductionOrderItem
+    nameWithType: ProductionOrderItem
+    fullName: Intranet.Labor.ViewModel.ProductionOrderItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

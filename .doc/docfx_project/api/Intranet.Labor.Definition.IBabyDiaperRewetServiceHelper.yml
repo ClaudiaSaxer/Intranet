@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  id: IBabyDiaperRewetServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  - Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperRewetServiceHelper
+  nameWithType: IBabyDiaperRewetServiceHelper
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperRewetServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the baby diaper rewet service helper\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperRewetServiceHelper
+    content.vb: Public Interface IBabyDiaperRewetServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: IBabyDiaperRewetServiceHelper.SaveNewRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewRewetTest
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewRewetTest(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Function SaveNewRewetTest(viewModel As BabyDiaperRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest*
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  id: UpdateRewetAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetAverageAndStv(Int32)
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetAverageAndStv
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for retention values\n"
+  example: []
+  syntax:
+    content: TestSheet UpdateRewetAverageAndStv(int testSheetId)
+    content.vb: Function UpdateRewetAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv*
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  id: UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetTest(BabyDiaperRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetTest
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperRewetServiceHelper.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue UpdateRewetTest(BabyDiaperRewetEditViewModel viewModel)
+    content.vb: Function UpdateRewetTest(viewModel As BabyDiaperRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+  isExternal: false
+  name: SaveNewRewetTest
+  nameWithType: IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.SaveNewRewetTest
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRewetEditViewModel
+  nameWithType: BabyDiaperRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  isExternal: false
+  name: UpdateRewetAverageAndStv
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetAverageAndStv
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest
+  isExternal: false
+  name: UpdateRewetTest
+  nameWithType: IBabyDiaperRewetServiceHelper.UpdateRewetTest
+  fullName: Intranet.Labor.Definition.IBabyDiaperRewetServiceHelper.UpdateRewetTest

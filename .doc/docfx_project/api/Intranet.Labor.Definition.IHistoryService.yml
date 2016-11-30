@@ -1,0 +1,111 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IHistoryService
+  commentId: T:Intranet.Labor.Definition.IHistoryService
+  id: IHistoryService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IHistoryService
+  nameWithType: IHistoryService
+  fullName: Intranet.Labor.Definition.IHistoryService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IHistoryService
+    path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the HistoryService\n"
+  example: []
+  syntax:
+    content: public interface IHistoryService
+    content.vb: Public Interface IHistoryService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  commentId: M:Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  id: GetHistoryViewModel(System.String)
+  parent: Intranet.Labor.Definition.IHistoryService
+  langs:
+  - csharp
+  - vb
+  name: GetHistoryViewModel(String)
+  nameWithType: IHistoryService.GetHistoryViewModel(String)
+  fullName: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetHistoryViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ngets the HistoryViewModel\n"
+  example: []
+  syntax:
+    content: HistoryViewModel GetHistoryViewModel(string faNr)
+    content.vb: Function GetHistoryViewModel(faNr As String) As HistoryViewModel
+    parameters:
+    - id: faNr
+      type: System.String
+      description: the FaNr
+    return:
+      type: Intranet.Labor.ViewModel.HistoryViewModel
+      description: The HistoryViewModel
+  overload: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel
+  isExternal: false
+  name: GetHistoryViewModel
+  nameWithType: IHistoryService.GetHistoryViewModel
+  fullName: Intranet.Labor.Definition.IHistoryService.GetHistoryViewModel
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.ViewModel.HistoryViewModel
+  commentId: T:Intranet.Labor.ViewModel.HistoryViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: HistoryViewModel
+  nameWithType: HistoryViewModel
+  fullName: Intranet.Labor.ViewModel.HistoryViewModel
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

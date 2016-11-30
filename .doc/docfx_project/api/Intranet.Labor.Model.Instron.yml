@@ -1,0 +1,656 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.Instron
+  commentId: T:Intranet.Labor.Model.Instron
+  id: Instron
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.Instron.FaNr
+  - Intranet.Labor.Model.Instron.InstronValues
+  - Intranet.Labor.Model.Instron.IntstronId
+  - Intranet.Labor.Model.Instron.TestDateTime
+  langs:
+  - csharp
+  - vb
+  name: Instron
+  nameWithType: Instron
+  fullName: Intranet.Labor.Model.Instron
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/instron/Instron.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Instron
+    path: .src/Intranet/Labor/Model/instron/Instron.cs
+    startLine: 10
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nClass representing Instron\n"
+  example: []
+  syntax:
+    content: public class Instron
+    content.vb: Public Class Instron
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.Instron.IntstronId
+  commentId: P:Intranet.Labor.Model.Instron.IntstronId
+  id: IntstronId
+  parent: Intranet.Labor.Model.Instron
+  langs:
+  - csharp
+  - vb
+  name: IntstronId
+  nameWithType: Instron.IntstronId
+  fullName: Intranet.Labor.Model.Instron.IntstronId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/instron/Instron.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IntstronId
+    path: .src/Intranet/Labor/Model/instron/Instron.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the Id of Instron\n"
+  example: []
+  syntax:
+    content: >-
+      [Key]
+
+      [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+      public int IntstronId { get; set; }
+    content.vb: >-
+      <Key>
+
+      <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
+
+      Public Property IntstronId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+      description: The Id for Instron
+  overload: Intranet.Labor.Model.Instron.IntstronId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
+  - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedAttribute.#ctor(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption)
+    arguments:
+    - type: System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption
+      value: 1
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Instron.FaNr
+  commentId: P:Intranet.Labor.Model.Instron.FaNr
+  id: FaNr
+  parent: Intranet.Labor.Model.Instron
+  langs:
+  - csharp
+  - vb
+  name: FaNr
+  nameWithType: Instron.FaNr
+  fullName: Intranet.Labor.Model.Instron.FaNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/instron/Instron.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: FaNr
+    path: .src/Intranet/Labor/Model/instron/Instron.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the ProductionOrder Number\n"
+  example: []
+  syntax:
+    content: public string FaNr { get; set; }
+    content.vb: Public Property FaNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: The ProductionOrder Number of Instron.
+  overload: Intranet.Labor.Model.Instron.FaNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Instron.TestDateTime
+  commentId: P:Intranet.Labor.Model.Instron.TestDateTime
+  id: TestDateTime
+  parent: Intranet.Labor.Model.Instron
+  langs:
+  - csharp
+  - vb
+  name: TestDateTime
+  nameWithType: Instron.TestDateTime
+  fullName: Intranet.Labor.Model.Instron.TestDateTime
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/instron/Instron.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: TestDateTime
+    path: .src/Intranet/Labor/Model/instron/Instron.cs
+    startLine: 33
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the DateTime from the Instron Test\n"
+  example: []
+  syntax:
+    content: public DateTime TestDateTime { get; set; }
+    content.vb: Public Property TestDateTime As Date
+    parameters: []
+    return:
+      type: System.DateTime
+      description: The Date and Time from the Test
+  overload: Intranet.Labor.Model.Instron.TestDateTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.Instron.InstronValues
+  commentId: P:Intranet.Labor.Model.Instron.InstronValues
+  id: InstronValues
+  parent: Intranet.Labor.Model.Instron
+  langs:
+  - csharp
+  - vb
+  name: InstronValues
+  nameWithType: Instron.InstronValues
+  fullName: Intranet.Labor.Model.Instron.InstronValues
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/instron/Instron.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InstronValues
+    path: .src/Intranet/Labor/Model/instron/Instron.cs
+    startLine: 39
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets a Collection from Instron Values <xref href=\"Intranet.Labor.Model.Instron.InstronValues\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public virtual ICollection<InstronValue> InstronValues { get; set; }
+    content.vb: Public Overridable Property InstronValues As ICollection(Of InstronValue)
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.InstronValue}
+      description: The Values for the Instron
+  overload: Intranet.Labor.Model.Instron.InstronValues*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.Instron.IntstronId*
+  commentId: Overload:Intranet.Labor.Model.Instron.IntstronId
+  isExternal: false
+  name: IntstronId
+  nameWithType: Instron.IntstronId
+  fullName: Intranet.Labor.Model.Instron.IntstronId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.Instron.FaNr*
+  commentId: Overload:Intranet.Labor.Model.Instron.FaNr
+  isExternal: false
+  name: FaNr
+  nameWithType: Instron.FaNr
+  fullName: Intranet.Labor.Model.Instron.FaNr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.Instron.TestDateTime*
+  commentId: Overload:Intranet.Labor.Model.Instron.TestDateTime
+  isExternal: false
+  name: TestDateTime
+  nameWithType: Instron.TestDateTime
+  fullName: Intranet.Labor.Model.Instron.TestDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: Intranet.Labor.Model.Instron.InstronValues
+  commentId: P:Intranet.Labor.Model.Instron.InstronValues
+- uid: Intranet.Labor.Model.Instron.InstronValues*
+  commentId: Overload:Intranet.Labor.Model.Instron.InstronValues
+  isExternal: false
+  name: InstronValues
+  nameWithType: Instron.InstronValues
+  fullName: Intranet.Labor.Model.Instron.InstronValues
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.InstronValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.InstronValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<InstronValue>
+  nameWithType: ICollection<InstronValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.InstronValue>
+  nameWithType.vb: ICollection(Of InstronValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.InstronValue)
+  name.vb: ICollection(Of InstronValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.InstronValue
+    name: InstronValue
+    nameWithType: InstronValue
+    fullName: Intranet.Labor.Model.InstronValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.InstronValue
+    name: InstronValue
+    nameWithType: InstronValue
+    fullName: Intranet.Labor.Model.InstronValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

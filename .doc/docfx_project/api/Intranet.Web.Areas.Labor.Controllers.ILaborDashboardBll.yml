@@ -1,0 +1,356 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  id: ILaborDashboardBll
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr(System.Int32,System.String)
+  - Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts(System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  langs:
+  - csharp
+  - vb
+  name: ILaborDashboardBll
+  nameWithType: ILaborDashboardBll
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborDashboardBll
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInteraface representing Labor Dashboard Bll\n"
+  example: []
+  syntax:
+    content: public interface ILaborDashboardBll
+    content.vb: Public Interface ILaborDashboardBll
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+  id: GetTestSheetForActualAndLastThreeShifts
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForActualAndLastThreeShifts()
+  nameWithType: ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts()
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForActualAndLastThreeShifts
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGet the testsheets for the actual shift and the last 3 shifts\n"
+  example: []
+  syntax:
+    content: ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts()
+    content.vb: Function GetTestSheetForActualAndLastThreeShifts As ICollection(Of TestSheet)
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+      description: the testsheets for the actual and last three shifts
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr(System.Int32,System.String)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr(System.Int32,System.String)
+  id: GetTestSheetForMinusXShiftPerMachineNr(System.Int32,System.String)
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForMinusXShiftPerMachineNr(Int32, String)
+  nameWithType: ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr(Int32, String)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr(System.Int32, System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForMinusXShiftPerMachineNr
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGet the testsheets for the last shift\n"
+  example: []
+  syntax:
+    content: ICollection<TestSheet> GetTestSheetForMinusXShiftPerMachineNr(int lastCounter, string machineNr)
+    content.vb: Function GetTestSheetForMinusXShiftPerMachineNr(lastCounter As Integer, machineNr As String) As ICollection(Of TestSheet)
+    parameters:
+    - id: lastCounter
+      type: System.Int32
+    - id: machineNr
+      type: System.String
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+      description: the testsheets for the last shift
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr*
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts(System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts(System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  id: GetTestSheetForShifts(System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule})
+  parent: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
+  langs:
+  - csharp
+  - vb
+  name: GetTestSheetForShifts(List<ShiftSchedule>)
+  nameWithType: ILaborDashboardBll.GetTestSheetForShifts(List<ShiftSchedule>)
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts(System.Collections.Generic.List<Intranet.Labor.Model.ShiftSchedule>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetTestSheetForShifts
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborDashboardBll.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGet the testsheets for the given shift\n"
+  example: []
+  syntax:
+    content: ICollection<TestSheet> GetTestSheetForShifts(List<ShiftSchedule> shifts)
+    content.vb: Function GetTestSheetForShifts(shifts As List(Of ShiftSchedule)) As ICollection(Of TestSheet)
+    parameters:
+    - id: shifts
+      type: System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+      description: the testsheets for the given shift
+  overload: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts*
+  nameWithType.vb: ILaborDashboardBll.GetTestSheetForShifts(List(Of ShiftSchedule))
+  fullName.vb: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts(System.Collections.Generic.List(Of Intranet.Labor.Model.ShiftSchedule))
+  name.vb: GetTestSheetForShifts(List(Of ShiftSchedule))
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+  isExternal: false
+  name: GetTestSheetForActualAndLastThreeShifts
+  nameWithType: ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForActualAndLastThreeShifts
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestSheet}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestSheet>
+  nameWithType: ICollection<TestSheet>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestSheet>
+  nameWithType.vb: ICollection(Of TestSheet)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestSheet)
+  name.vb: ICollection(Of TestSheet)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestSheet
+    name: TestSheet
+    nameWithType: TestSheet
+    fullName: Intranet.Labor.Model.labor.TestSheet
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr
+  isExternal: false
+  name: GetTestSheetForMinusXShiftPerMachineNr
+  nameWithType: ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForMinusXShiftPerMachineNr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts
+  isExternal: false
+  name: GetTestSheetForShifts
+  nameWithType: ILaborDashboardBll.GetTestSheetForShifts
+  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll.GetTestSheetForShifts
+- uid: System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+  commentId: T:System.Collections.Generic.List{Intranet.Labor.Model.ShiftSchedule}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ShiftSchedule>
+  nameWithType: List<ShiftSchedule>
+  fullName: System.Collections.Generic.List<Intranet.Labor.Model.ShiftSchedule>
+  nameWithType.vb: List(Of ShiftSchedule)
+  fullname.vb: System.Collections.Generic.List(Of Intranet.Labor.Model.ShiftSchedule)
+  name.vb: List(Of ShiftSchedule)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.ShiftSchedule
+    name: ShiftSchedule
+    nameWithType: ShiftSchedule
+    fullName: Intranet.Labor.Model.ShiftSchedule
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

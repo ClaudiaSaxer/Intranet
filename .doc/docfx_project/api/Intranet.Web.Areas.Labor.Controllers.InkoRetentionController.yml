@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  id: InkoRetentionController
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit(Int32)
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+  - Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionController
+  nameWithType: InkoRetentionController
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRetentionController
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing the InkoRetentionController\n"
+  example: []
+  syntax:
+    content: 'public class InkoRetentionController : BaseController'
+    content.vb: >-
+      Public Class InkoRetentionController
+
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+  id: InkoRetentionService
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionService
+  nameWithType: InkoRetentionController.InkoRetentionService
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: InkoRetentionService
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Labor.Definition.IInkoRetentionService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public IInkoRetentionService InkoRetentionService { get; set; }
+    content.vb: Public Property InkoRetentionService As IInkoRetentionService
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.IInkoRetentionService
+      description: "\n<xref href=\"Intranet.Labor.Definition.IInkoRetentionService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: InkoRetentionController(ILoggerFactory)
+  nameWithType: InkoRetentionController.InkoRetentionController(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Areas.Labor.Controllers.InkoRetentionController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public InkoRetentionController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: AddNote(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: AddNote(InkoRetentionEditViewModel)
+  nameWithType: InkoRetentionController.AddNote(InkoRetentionEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AddNote
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 54
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nadds a new note to the test\n"
+  example: []
+  syntax:
+    content: public ActionResult AddNote(InkoRetentionEditViewModel viewModel)
+    content.vb: Public Function AddNote(viewModel As InkoRetentionEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: ''
+    return:
+      type: ActionResult
+      description: The Edit View
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create(Int32)
+  id: Create(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: Create(Int32)
+  nameWithType: InkoRetentionController.Create(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Create
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 69
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the InkoRetension Edit View with a new Item for the Test-Sheet\n"
+  example: []
+  syntax:
+    content: public ActionResult Create(Int32 id = null)
+    content.vb: Public Function Create(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Edit View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete(Int32)
+  id: Delete(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: InkoRetentionController.Delete(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 84
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nDeletes the Testvalue\n"
+  example: []
+  syntax:
+    content: public ActionResult Delete(Int32 id)
+    content.vb: Public Function Delete(id As Int32) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the TestValue
+    return:
+      type: ActionResult
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit(Int32)
+  id: Edit(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: Edit(Int32)
+  nameWithType: InkoRetentionController.Edit(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Edit
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 96
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the InkoRetension Edit View with an Item form the Test-Sheet which will be edited\n"
+  example: []
+  syntax:
+    content: public ActionResult Edit(Int32 id = null)
+    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoRetentionEditViewModel)
+  nameWithType: InkoRetentionController.Save(InkoRetentionEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRetentionController.cs
+    startLine: 112
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nSaves the new test or update it\n"
+  example: []
+  syntax:
+    content: public ActionResult Save(InkoRetentionEditViewModel viewModel)
+    content.vb: Public Function Save(viewModel As InkoRetentionEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: the testdata whicht will be saved
+    return:
+      type: ActionResult
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.IInkoRetentionService
+  commentId: T:Intranet.Labor.Definition.IInkoRetentionService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IInkoRetentionService
+  nameWithType: IInkoRetentionService
+  fullName: Intranet.Labor.Definition.IInkoRetentionService
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+  isExternal: false
+  name: InkoRetentionService
+  nameWithType: InkoRetentionController.InkoRetentionService
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionService
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+  isExternal: false
+  name: InkoRetentionController
+  nameWithType: InkoRetentionController
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.#ctor
+  isExternal: false
+  name: InkoRetentionController
+  nameWithType: InkoRetentionController.InkoRetentionController
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.InkoRetentionController
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote
+  isExternal: false
+  name: AddNote
+  nameWithType: InkoRetentionController.AddNote
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.AddNote
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRetentionEditViewModel
+  nameWithType: InkoRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create
+  isExternal: false
+  name: Create
+  nameWithType: InkoRetentionController.Create
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Create
+- uid: Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: Int32
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: InkoRetentionController.Delete
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Delete
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit
+  isExternal: false
+  name: Edit
+  nameWithType: InkoRetentionController.Edit
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Edit
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save
+  isExternal: false
+  name: Save
+  nameWithType: InkoRetentionController.Save
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController.Save

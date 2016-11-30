@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.IoC
+  commentId: N:Intranet.Web.IoC
+  id: Intranet.Web.IoC
+  children:
+  - Intranet.Web.IoC.Bootstrapper
+  - Intranet.Web.IoC.DefaultModule
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Web.IoC
+  nameWithType: Intranet.Web.IoC
+  fullName: Intranet.Web.IoC
+  type: Namespace
+  assemblies:
+  - Intranet.Web
+references:
+- uid: Intranet.Web.IoC.Bootstrapper
+  commentId: T:Intranet.Web.IoC.Bootstrapper
+  isExternal: false
+  name: Bootstrapper
+  nameWithType: Bootstrapper
+  fullName: Intranet.Web.IoC.Bootstrapper
+- uid: Intranet.Web.IoC.DefaultModule
+  commentId: T:Intranet.Web.IoC.DefaultModule
+  isExternal: false
+  name: DefaultModule
+  nameWithType: DefaultModule
+  fullName: Intranet.Web.IoC.DefaultModule

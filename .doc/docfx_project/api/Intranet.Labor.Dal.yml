@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Dal
+  commentId: N:Intranet.Labor.Dal
+  id: Intranet.Labor.Dal
+  children:
+  - Intranet.Labor.Dal.LaborContext
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Labor.Dal
+  nameWithType: Intranet.Labor.Dal
+  fullName: Intranet.Labor.Dal
+  type: Namespace
+  assemblies:
+  - Intranet.Labor.Dal
+references:
+- uid: Intranet.Labor.Dal.LaborContext
+  commentId: T:Intranet.Labor.Dal.LaborContext
+  isExternal: false
+  name: LaborContext
+  nameWithType: LaborContext
+  fullName: Intranet.Labor.Dal.LaborContext

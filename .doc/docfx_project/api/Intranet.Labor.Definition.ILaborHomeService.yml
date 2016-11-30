@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.ILaborHomeService
+  commentId: T:Intranet.Labor.Definition.ILaborHomeService
+  id: ILaborHomeService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  langs:
+  - csharp
+  - vb
+  name: ILaborHomeService
+  nameWithType: ILaborHomeService
+  fullName: Intranet.Labor.Definition.ILaborHomeService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILaborHomeService
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeService.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the LaborHomeService\n"
+  example: []
+  syntax:
+    content: public interface ILaborHomeService
+    content.vb: Public Interface ILaborHomeService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  commentId: M:Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  id: GetLaborHomeViewModel
+  parent: Intranet.Labor.Definition.ILaborHomeService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborHomeViewModel()
+  nameWithType: ILaborHomeService.GetLaborHomeViewModel()
+  fullName: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborHomeViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the LaborHomeViewModel\n"
+  example: []
+  syntax:
+    content: LaborHomeViewModel GetLaborHomeViewModel()
+    content.vb: Function GetLaborHomeViewModel As LaborHomeViewModel
+    return:
+      type: Intranet.Labor.ViewModel.LaborHomeViewModel
+      description: The LaborHomeViewModel
+  overload: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel*
+  commentId: Overload:Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  isExternal: false
+  name: GetLaborHomeViewModel
+  nameWithType: ILaborHomeService.GetLaborHomeViewModel
+  fullName: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+- uid: Intranet.Labor.ViewModel.LaborHomeViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborHomeViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborHomeViewModel
+  nameWithType: LaborHomeViewModel
+  fullName: Intranet.Labor.ViewModel.LaborHomeViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

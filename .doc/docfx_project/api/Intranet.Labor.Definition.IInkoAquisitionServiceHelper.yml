@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  id: IInkoAquisitionServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  - Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoAquisitionServiceHelper
+  nameWithType: IInkoAquisitionServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoAquisitionServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the incontinence acquisition service helper\n"
+  example: []
+  syntax:
+    content: public interface IInkoAquisitionServiceHelper
+    content.vb: Public Interface IInkoAquisitionServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  id: SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: IInkoAquisitionServiceHelper.SaveNewAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewAquisitionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewAquisitionTest(InkoAquisitionEditViewModel viewModel)
+    content.vb: Function SaveNewAquisitionTest(viewModel As InkoAquisitionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest*
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  id: UpdateAquisitionAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateAquisitionAverageAndStv(Int32)
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateAquisitionAverageAndStv
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for aquisition values\n"
+  example: []
+  syntax:
+    content: TestSheet UpdateAquisitionAverageAndStv(int testSheetId)
+    content.vb: Function UpdateAquisitionAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  id: UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionTest(InkoAquisitionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest(Intranet.Labor.ViewModel.InkoAquisitionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateAquisitionTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoAquisitionServiceHelper.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue UpdateAquisitionTest(InkoAquisitionEditViewModel viewModel)
+    content.vb: Function UpdateAquisitionTest(viewModel As InkoAquisitionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+  isExternal: false
+  name: SaveNewAquisitionTest
+  nameWithType: IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.SaveNewAquisitionTest
+- uid: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoAquisitionEditViewModel
+  nameWithType: InkoAquisitionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  isExternal: false
+  name: UpdateAquisitionAverageAndStv
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest
+  isExternal: false
+  name: UpdateAquisitionTest
+  nameWithType: IInkoAquisitionServiceHelper.UpdateAquisitionTest
+  fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper.UpdateAquisitionTest

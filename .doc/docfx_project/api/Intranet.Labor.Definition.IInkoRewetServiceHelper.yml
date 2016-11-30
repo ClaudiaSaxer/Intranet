@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  commentId: T:Intranet.Labor.Definition.IInkoRewetServiceHelper
+  id: IInkoRewetServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  - Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  - Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoRewetServiceHelper
+  nameWithType: IInkoRewetServiceHelper
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoRewetServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the incontinence rewet service helper\n"
+  example: []
+  syntax:
+    content: public interface IInkoRewetServiceHelper
+    content.vb: Public Interface IInkoRewetServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  id: SaveNewRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: SaveNewRewetTest(InkoRewetEditViewModel)
+  nameWithType: IInkoRewetServiceHelper.SaveNewRewetTest(InkoRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewRewetTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates an new TestValue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewRewetTest(InkoRewetEditViewModel viewModel)
+    content.vb: Function SaveNewRewetTest(viewModel As InkoRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The created test value
+  overload: Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest*
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  id: UpdateRewetAverageAndStv(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetAverageAndStv(Int32)
+  nameWithType: IInkoRewetServiceHelper.UpdateRewetAverageAndStv(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetAverageAndStv
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the Average and standard deviation values of the testsheet for retention values\n"
+  example: []
+  syntax:
+    content: TestSheet UpdateRewetAverageAndStv(int testSheetId)
+    content.vb: Function UpdateRewetAverageAndStv(testSheetId As Integer) As TestSheet
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: id of the test sheet
+    return:
+      type: Intranet.Labor.Model.labor.TestSheet
+      description: the updated test sheet
+  overload: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv*
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  id: UpdateRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRewetServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: UpdateRewetTest(InkoRewetEditViewModel)
+  nameWithType: IInkoRewetServiceHelper.UpdateRewetTest(InkoRewetEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateRewetTest
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRewetServiceHelper.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates an given Testvalue from the view model\n"
+  example: []
+  syntax:
+    content: TestValue UpdateRewetTest(InkoRewetEditViewModel viewModel)
+    content.vb: Function UpdateRewetTest(viewModel As InkoRewetEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: the data from the view
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: the updated test value
+  overload: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest
+  isExternal: false
+  name: SaveNewRewetTest
+  nameWithType: IInkoRewetServiceHelper.SaveNewRewetTest
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.SaveNewRewetTest
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRewetEditViewModel
+  nameWithType: InkoRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv
+  isExternal: false
+  name: UpdateRewetAverageAndStv
+  nameWithType: IInkoRewetServiceHelper.UpdateRewetAverageAndStv
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetAverageAndStv
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestSheet
+  commentId: T:Intranet.Labor.Model.labor.TestSheet
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.labor.TestSheet
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest
+  isExternal: false
+  name: UpdateRewetTest
+  nameWithType: IInkoRewetServiceHelper.UpdateRewetTest
+  fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper.UpdateRewetTest

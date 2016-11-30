@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.RouteConfig
+  commentId: T:Intranet.Web.RouteConfig
+  id: RouteConfig
+  parent: Intranet.Web
+  children:
+  - Intranet.Web.RouteConfig.RegisterRoutes(RouteCollection)
+  langs:
+  - csharp
+  - vb
+  name: RouteConfig
+  nameWithType: RouteConfig
+  fullName: Intranet.Web.RouteConfig
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/RouteConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RouteConfig
+    path: .src/Intranet/Web/App_Start/RouteConfig.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nRoute Configuration\n"
+  example: []
+  syntax:
+    content: 'public class RouteConfig : object'
+    content.vb: >-
+      Public Class RouteConfig
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.RouteConfig.RegisterRoutes(RouteCollection)
+  commentId: M:Intranet.Web.RouteConfig.RegisterRoutes(RouteCollection)
+  id: RegisterRoutes(RouteCollection)
+  parent: Intranet.Web.RouteConfig
+  langs:
+  - csharp
+  - vb
+  name: RegisterRoutes(RouteCollection)
+  nameWithType: RouteConfig.RegisterRoutes(RouteCollection)
+  fullName: Intranet.Web.RouteConfig.RegisterRoutes(RouteCollection)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/App_Start/RouteConfig.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RegisterRoutes
+    path: .src/Intranet/Web/App_Start/RouteConfig.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web
+  summary: "\nRegisters Routes\n"
+  example: []
+  syntax:
+    content: public static void RegisterRoutes(RouteCollection routes)
+    content.vb: Public Shared Sub RegisterRoutes(routes As RouteCollection)
+    parameters:
+    - id: routes
+      type: RouteCollection
+      description: ''
+  overload: Intranet.Web.RouteConfig.RegisterRoutes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Intranet.Web
+  commentId: N:Intranet.Web
+  isExternal: false
+  name: Intranet.Web
+  nameWithType: Intranet.Web
+  fullName: Intranet.Web
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.RouteConfig.RegisterRoutes*
+  commentId: Overload:Intranet.Web.RouteConfig.RegisterRoutes
+  isExternal: false
+  name: RegisterRoutes
+  nameWithType: RouteConfig.RegisterRoutes
+  fullName: Intranet.Web.RouteConfig.RegisterRoutes
+- uid: RouteCollection
+  commentId: '!:RouteCollection'
+  isExternal: true
+  name: RouteCollection
+  nameWithType: RouteCollection
+  fullName: RouteCollection

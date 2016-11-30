@@ -1,0 +1,590 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Bll.LaborHomeService
+  commentId: T:Intranet.Labor.Bll.LaborHomeService
+  id: LaborHomeService
+  parent: Intranet.Labor.Bll
+  children:
+  - Intranet.Labor.Bll.LaborHomeService.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel
+  - Intranet.Labor.Bll.LaborHomeService.LaborHome
+  langs:
+  - csharp
+  - vb
+  name: LaborHomeService
+  nameWithType: LaborHomeService
+  fullName: Intranet.Labor.Bll.LaborHomeService
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborHomeService
+    path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nClass representing the labor home service\n"
+  example: []
+  syntax:
+    content: 'public class LaborHomeService : ServiceBase, ILaborHomeService'
+    content.vb: >-
+      Public Class LaborHomeService
+
+          Inherits ServiceBase
+
+          Implements ILaborHomeService
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.ServiceBase
+  implements:
+  - Intranet.Labor.Definition.ILaborHomeService
+  inheritedMembers:
+  - Intranet.Common.ServiceBase.Roles
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Bll.LaborHomeService.LaborHome
+  commentId: P:Intranet.Labor.Bll.LaborHomeService.LaborHome
+  id: LaborHome
+  parent: Intranet.Labor.Bll.LaborHomeService
+  langs:
+  - csharp
+  - vb
+  name: LaborHome
+  nameWithType: LaborHomeService.LaborHome
+  fullName: Intranet.Labor.Bll.LaborHomeService.LaborHome
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborHome
+    path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nGets or sets the bll for the labor home.\n"
+  example: []
+  syntax:
+    content: public ILaborHome LaborHome { get; set; }
+    content.vb: Public Property LaborHome As ILaborHome
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ILaborHome
+  overload: Intranet.Labor.Bll.LaborHomeService.LaborHome*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.LaborHomeService.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.LaborHomeService.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.LaborHomeService
+  langs:
+  - csharp
+  - vb
+  name: LaborHomeService(ILoggerFactory)
+  nameWithType: LaborHomeService.LaborHomeService(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.LaborHomeService.LaborHomeService(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborHomeService(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.LaborHomeService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel
+  commentId: M:Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel
+  id: GetLaborHomeViewModel
+  parent: Intranet.Labor.Bll.LaborHomeService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborHomeViewModel()
+  nameWithType: LaborHomeService.GetLaborHomeViewModel()
+  fullName: Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborHomeViewModel
+    path: .src/Intranet/Labor/Bll/LaborHomeService.cs
+    startLine: 44
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nAll labor submodules that the current User is allowed to see.\n"
+  example: []
+  syntax:
+    content: public LaborHomeViewModel GetLaborHomeViewModel()
+    content.vb: Public Function GetLaborHomeViewModel As LaborHomeViewModel
+    return:
+      type: Intranet.Labor.ViewModel.LaborHomeViewModel
+      description: The ViewModel for the home
+  overload: Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel*
+  implements:
+  - Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.Bll
+  commentId: N:Intranet.Labor.Bll
+  isExternal: false
+  name: Intranet.Labor.Bll
+  nameWithType: Intranet.Labor.Bll
+  fullName: Intranet.Labor.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Labor.Definition.ILaborHomeService
+  commentId: T:Intranet.Labor.Definition.ILaborHomeService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborHomeService
+  nameWithType: ILaborHomeService
+  fullName: Intranet.Labor.Definition.ILaborHomeService
+- uid: Intranet.Common.ServiceBase.Roles
+  commentId: P:Intranet.Common.ServiceBase.Roles
+  parent: Intranet.Common.ServiceBase
+  isExternal: false
+  name: Roles
+  nameWithType: ServiceBase.Roles
+  fullName: Intranet.Common.ServiceBase.Roles
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Bll.LaborHomeService.LaborHome*
+  commentId: Overload:Intranet.Labor.Bll.LaborHomeService.LaborHome
+  isExternal: false
+  name: LaborHome
+  nameWithType: LaborHomeService.LaborHome
+  fullName: Intranet.Labor.Bll.LaborHomeService.LaborHome
+- uid: Intranet.Labor.Definition.ILaborHome
+  commentId: T:Intranet.Labor.Definition.ILaborHome
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborHome
+  nameWithType: ILaborHome
+  fullName: Intranet.Labor.Definition.ILaborHome
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.LaborHomeService.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.LaborHomeService.#ctor
+  isExternal: false
+  name: LaborHomeService
+  nameWithType: LaborHomeService.LaborHomeService
+  fullName: Intranet.Labor.Bll.LaborHomeService.LaborHomeService
+- uid: Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel*
+  commentId: Overload:Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel
+  isExternal: false
+  name: GetLaborHomeViewModel
+  nameWithType: LaborHomeService.GetLaborHomeViewModel
+  fullName: Intranet.Labor.Bll.LaborHomeService.GetLaborHomeViewModel
+- uid: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  commentId: M:Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  parent: Intranet.Labor.Definition.ILaborHomeService
+  isExternal: false
+  name: GetLaborHomeViewModel()
+  nameWithType: ILaborHomeService.GetLaborHomeViewModel()
+  fullName: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel()
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+    name: GetLaborHomeViewModel
+    nameWithType: ILaborHomeService.GetLaborHomeViewModel
+    fullName: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+    name: GetLaborHomeViewModel
+    nameWithType: ILaborHomeService.GetLaborHomeViewModel
+    fullName: Intranet.Labor.Definition.ILaborHomeService.GetLaborHomeViewModel
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.ViewModel.LaborHomeViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborHomeViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: LaborHomeViewModel
+  nameWithType: LaborHomeViewModel
+  fullName: Intranet.Labor.ViewModel.LaborHomeViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

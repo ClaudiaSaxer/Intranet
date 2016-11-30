@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Bll
+  commentId: N:Intranet.Bll
+  id: Intranet.Bll
+  children:
+  - Intranet.Bll.CheckDisableBll
+  - Intranet.Bll.CheckDisableService
+  - Intranet.Bll.HomeBll
+  - Intranet.Bll.HomeService
+  - Intranet.Bll.NavigationBll
+  - Intranet.Bll.NavigationService
+  - Intranet.Bll.SettingsBll
+  - Intranet.Bll.SettingsService
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Bll
+  nameWithType: Intranet.Bll
+  fullName: Intranet.Bll
+  type: Namespace
+  assemblies:
+  - Intranet.Bll
+references:
+- uid: Intranet.Bll.CheckDisableBll
+  commentId: T:Intranet.Bll.CheckDisableBll
+  isExternal: false
+  name: CheckDisableBll
+  nameWithType: CheckDisableBll
+  fullName: Intranet.Bll.CheckDisableBll
+- uid: Intranet.Bll.CheckDisableService
+  commentId: T:Intranet.Bll.CheckDisableService
+  isExternal: false
+  name: CheckDisableService
+  nameWithType: CheckDisableService
+  fullName: Intranet.Bll.CheckDisableService
+- uid: Intranet.Bll.SettingsBll
+  commentId: T:Intranet.Bll.SettingsBll
+  isExternal: false
+  name: SettingsBll
+  nameWithType: SettingsBll
+  fullName: Intranet.Bll.SettingsBll
+- uid: Intranet.Bll.SettingsService
+  commentId: T:Intranet.Bll.SettingsService
+  isExternal: false
+  name: SettingsService
+  nameWithType: SettingsService
+  fullName: Intranet.Bll.SettingsService
+- uid: Intranet.Bll.HomeService
+  commentId: T:Intranet.Bll.HomeService
+  isExternal: false
+  name: HomeService
+  nameWithType: HomeService
+  fullName: Intranet.Bll.HomeService
+- uid: Intranet.Bll.HomeBll
+  commentId: T:Intranet.Bll.HomeBll
+  isExternal: false
+  name: HomeBll
+  nameWithType: HomeBll
+  fullName: Intranet.Bll.HomeBll
+- uid: Intranet.Bll.NavigationBll
+  commentId: T:Intranet.Bll.NavigationBll
+  isExternal: false
+  name: NavigationBll
+  nameWithType: NavigationBll
+  fullName: Intranet.Bll.NavigationBll
+- uid: Intranet.Bll.NavigationService
+  commentId: T:Intranet.Bll.NavigationService
+  isExternal: false
+  name: NavigationService
+  nameWithType: NavigationService
+  fullName: Intranet.Bll.NavigationService

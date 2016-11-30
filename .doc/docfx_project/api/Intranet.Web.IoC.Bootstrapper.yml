@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.IoC.Bootstrapper
+  commentId: T:Intranet.Web.IoC.Bootstrapper
+  id: Bootstrapper
+  parent: Intranet.Web.IoC
+  children:
+  - Intranet.Web.IoC.Bootstrapper.Run
+  langs:
+  - csharp
+  - vb
+  name: Bootstrapper
+  nameWithType: Bootstrapper
+  fullName: Intranet.Web.IoC.Bootstrapper
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/Bootstrapper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Bootstrapper
+    path: .src/Intranet/Web/IoC/Bootstrapper.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nClass initializing the IoC container for all project.\n"
+  example: []
+  syntax:
+    content: 'public class Bootstrapper : object'
+    content.vb: >-
+      Public Class Bootstrapper
+
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.IoC.Bootstrapper.Run
+  commentId: M:Intranet.Web.IoC.Bootstrapper.Run
+  id: Run
+  parent: Intranet.Web.IoC.Bootstrapper
+  langs:
+  - csharp
+  - vb
+  name: Run()
+  nameWithType: Bootstrapper.Run()
+  fullName: Intranet.Web.IoC.Bootstrapper.Run()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/IoC/Bootstrapper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Run
+    path: .src/Intranet/Web/IoC/Bootstrapper.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.IoC
+  summary: "\nRuns the bootstrapper.\n"
+  example: []
+  syntax:
+    content: public static IContainer Run()
+    content.vb: Public Shared Function Run As IContainer
+    return:
+      type: IContainer
+  overload: Intranet.Web.IoC.Bootstrapper.Run*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Intranet.Web.IoC
+  commentId: N:Intranet.Web.IoC
+  isExternal: false
+  name: Intranet.Web.IoC
+  nameWithType: Intranet.Web.IoC
+  fullName: Intranet.Web.IoC
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.IoC.Bootstrapper.Run*
+  commentId: Overload:Intranet.Web.IoC.Bootstrapper.Run
+  isExternal: false
+  name: Run
+  nameWithType: Bootstrapper.Run
+  fullName: Intranet.Web.IoC.Bootstrapper.Run
+- uid: IContainer
+  commentId: '!:IContainer'
+  isExternal: true
+  name: IContainer
+  nameWithType: IContainer
+  fullName: IContainer

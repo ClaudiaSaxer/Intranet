@@ -1,0 +1,318 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  id: ILoggerFactory
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  - Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  - Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  langs:
+  - csharp
+  - vb
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ILoggerFactory
+    path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nCreates a <xref href=\"Intranet.Common.ILogger\" data-throw-if-not-resolved=\"false\"></xref> Roles.GetRolesForUser()\n"
+  example: []
+  syntax:
+    content: public interface ILoggerFactory
+    content.vb: Public Interface ILoggerFactory
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  commentId: M:Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  id: CreateLogger(System.String)
+  parent: Intranet.Common.ILoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateLogger(String)
+  nameWithType: ILoggerFactory.CreateLogger(String)
+  fullName: Intranet.Common.ILoggerFactory.CreateLogger(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateLogger
+    path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a loggerFactory with the specified name.\n"
+  example: []
+  syntax:
+    content: ILogger CreateLogger(string loggerName)
+    content.vb: Function CreateLogger(loggerName As String) As ILogger
+    parameters:
+    - id: loggerName
+      type: System.String
+      description: The name of the loggerFactory.
+    return:
+      type: Intranet.Common.ILogger
+      description: A loggerFactory with specified name.
+  overload: Intranet.Common.ILoggerFactory.CreateLogger*
+- uid: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  commentId: M:Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  id: CreateLogger(System.Type)
+  parent: Intranet.Common.ILoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateLogger(Type)
+  nameWithType: ILoggerFactory.CreateLogger(Type)
+  fullName: Intranet.Common.ILoggerFactory.CreateLogger(System.Type)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CreateLogger
+    path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nGets a loggerFactory for the specified type.\n"
+  example: []
+  syntax:
+    content: ILogger CreateLogger(Type t)
+    content.vb: Function CreateLogger(t As Type) As ILogger
+    parameters:
+    - id: t
+      type: System.Type
+      description: The type of the logging class.
+    return:
+      type: Intranet.Common.ILogger
+      description: A loggerFactory for the specified type.
+  overload: Intranet.Common.ILoggerFactory.CreateLogger*
+- uid: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  commentId: M:Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  id: SetDynamicParameters(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})
+  parent: Intranet.Common.ILoggerFactory
+  langs:
+  - csharp
+  - vb
+  name: SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  nameWithType: ILoggerFactory.SetDynamicParameters(IEnumerable<KeyValuePair<String, String>>)
+  fullName: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SetDynamicParameters
+    path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAdds the given parameter to the current context of the logging framework.\n"
+  remarks: "\nUse this feature to add dynamic parameters to your log.\n"
+  example: []
+  syntax:
+    content: void SetDynamicParameters(IEnumerable<KeyValuePair<string, string>> parameters)
+    content.vb: Sub SetDynamicParameters(parameters As IEnumerable(Of KeyValuePair(Of String, String)))
+    parameters:
+    - id: parameters
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+      description: The parameters to add.
+  overload: Intranet.Common.ILoggerFactory.SetDynamicParameters*
+  nameWithType.vb: ILoggerFactory.SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+  fullName.vb: Intranet.Common.ILoggerFactory.SetDynamicParameters(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String)))
+  name.vb: SetDynamicParameters(IEnumerable(Of KeyValuePair(Of String, String)))
+references:
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.ILoggerFactory.CreateLogger*
+  commentId: Overload:Intranet.Common.ILoggerFactory.CreateLogger
+  isExternal: false
+  name: CreateLogger
+  nameWithType: ILoggerFactory.CreateLogger
+  fullName: Intranet.Common.ILoggerFactory.CreateLogger
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: Intranet.Common.ILoggerFactory.SetDynamicParameters*
+  commentId: Overload:Intranet.Common.ILoggerFactory.SetDynamicParameters
+  isExternal: false
+  name: SetDynamicParameters
+  nameWithType: ILoggerFactory.SetDynamicParameters
+  fullName: Intranet.Common.ILoggerFactory.SetDynamicParameters
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<KeyValuePair<String, String>>
+  nameWithType: IEnumerable<KeyValuePair<String, String>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<System.String, System.String>>
+  nameWithType.vb: IEnumerable(Of KeyValuePair(Of String, String))
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of System.String, System.String))
+  name.vb: IEnumerable(Of KeyValuePair(Of String, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

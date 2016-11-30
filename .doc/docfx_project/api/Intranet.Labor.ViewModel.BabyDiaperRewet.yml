@@ -1,0 +1,635 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRewet
+  id: BabyDiaperRewet
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+  - Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+  langs:
+  - csharp
+  - vb
+  name: BabyDiaperRewet
+  nameWithType: BabyDiaperRewet
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: BabyDiaperRewet
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the view model of the rewet\n"
+  example: []
+  syntax:
+    content: public class BabyDiaperRewet
+    content.vb: Public Class BabyDiaperRewet
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+  id: Rewet140Value
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: Rewet140Value
+  nameWithType: BabyDiaperRewet.Rewet140Value
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet140Value
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 16
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value for the revet after 140ml\n"
+  example: []
+  syntax:
+    content: public double Rewet140Value { get; set; }
+    content.vb: Public Property Rewet140Value As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the revet after 140ml
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+  id: Rewet210Value
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: Rewet210Value
+  nameWithType: BabyDiaperRewet.Rewet210Value
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet210Value
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value for revet after 120ml\n"
+  example: []
+  syntax:
+    content: public double Rewet210Value { get; set; }
+    content.vb: Public Property Rewet210Value As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value for the revet after 120ml
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+  id: StrikeThroughValue
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: StrikeThroughValue
+  nameWithType: BabyDiaperRewet.StrikeThroughValue
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: StrikeThroughValue
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the value after the strike trough (with 210ml in g)\n"
+  example: []
+  syntax:
+    content: public double StrikeThroughValue { get; set; }
+    content.vb: Public Property StrikeThroughValue As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value after the strike through
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+  id: DistributionOfTheStrikeTrough
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: DistributionOfTheStrikeTrough
+  nameWithType: BabyDiaperRewet.DistributionOfTheStrikeTrough
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DistributionOfTheStrikeTrough
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the distribution after the strikte trough (in mm)\n"
+  example: []
+  syntax:
+    content: public double DistributionOfTheStrikeTrough { get; set; }
+    content.vb: Public Property DistributionOfTheStrikeTrough As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the distribution after the strikte trough
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+  id: Rewet140Rw
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: Rewet140Rw
+  nameWithType: BabyDiaperRewet.Rewet140Rw
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet140Rw
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW of the revet for 140ml\n"
+  example: []
+  syntax:
+    content: public RwType Rewet140Rw { get; set; }
+    content.vb: Public Property Rewet140Rw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW of the revet for 140ml
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
+  commentId: P:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
+  id: Rewet210Rw
+  parent: Intranet.Labor.ViewModel.BabyDiaperRewet
+  langs:
+  - csharp
+  - vb
+  name: Rewet210Rw
+  nameWithType: BabyDiaperRewet.Rewet210Rw
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Rewet210Rw
+    path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets the RW of the revet for 210ml\n"
+  example: []
+  syntax:
+    content: public RwType Rewet210Rw { get; set; }
+    content.vb: Public Property Rewet210Rw As RwType
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.labor.RwType
+      description: the RW of the revet for 210ml
+  overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+  isExternal: false
+  name: Rewet140Value
+  nameWithType: BabyDiaperRewet.Rewet140Value
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Value
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+  isExternal: false
+  name: Rewet210Value
+  nameWithType: BabyDiaperRewet.Rewet210Value
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Value
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+  isExternal: false
+  name: StrikeThroughValue
+  nameWithType: BabyDiaperRewet.StrikeThroughValue
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.StrikeThroughValue
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+  isExternal: false
+  name: DistributionOfTheStrikeTrough
+  nameWithType: BabyDiaperRewet.DistributionOfTheStrikeTrough
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.DistributionOfTheStrikeTrough
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+  isExternal: false
+  name: Rewet140Rw
+  nameWithType: BabyDiaperRewet.Rewet140Rw
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
+- uid: Intranet.Labor.Model.labor.RwType
+  commentId: T:Intranet.Labor.Model.labor.RwType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.labor.RwType
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw*
+  commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
+  isExternal: false
+  name: Rewet210Rw
+  nameWithType: BabyDiaperRewet.Rewet210Rw
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw

@@ -1,0 +1,110 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  commentId: T:Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  id: IBabyDiaperLaborCreatorService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IBabyDiaperLaborCreatorService
+  nameWithType: IBabyDiaperLaborCreatorService
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IBabyDiaperLaborCreatorService
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorService.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nInterface representing the labor creator service\n"
+  example: []
+  syntax:
+    content: public interface IBabyDiaperLaborCreatorService
+    content.vb: Public Interface IBabyDiaperLaborCreatorService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  id: GetLaborCreatorViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService
+  langs:
+  - csharp
+  - vb
+  name: GetLaborCreatorViewModel(Int32)
+  nameWithType: IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetLaborCreatorViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorService.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGet the labor creator view model for a specific id.\n"
+  example: []
+  syntax:
+    content: BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel(int testSheetId)
+    content.vb: Function GetLaborCreatorViewModel(testSheetId As Integer) As BabyDiaperLaborCreatorViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+    return:
+      type: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+      description: the labor creator view model
+  overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  isExternal: false
+  name: GetLaborCreatorViewModel
+  nameWithType: IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+  fullName: Intranet.Labor.Definition.IBabyDiaperLaborCreatorService.GetLaborCreatorViewModel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperLaborCreatorViewModel
+  nameWithType: BabyDiaperLaborCreatorViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperLaborCreatorViewModel
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel

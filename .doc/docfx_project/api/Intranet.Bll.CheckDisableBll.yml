@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Bll.CheckDisableBll
+  commentId: T:Intranet.Bll.CheckDisableBll
+  id: CheckDisableBll
+  parent: Intranet.Bll
+  children:
+  - Intranet.Bll.CheckDisableBll.GetModule(System.String)
+  - Intranet.Bll.CheckDisableBll.ModuleRepository
+  langs:
+  - csharp
+  - vb
+  name: CheckDisableBll
+  nameWithType: CheckDisableBll
+  fullName: Intranet.Bll.CheckDisableBll
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Bll/CheckDisableBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CheckDisableBll
+    path: .src/Intranet/Bll/CheckDisableBll.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nClass representing the bll of the checkdisable.\n"
+  example: []
+  syntax:
+    content: 'public class CheckDisableBll : ICheckDisableBll'
+    content.vb: >-
+      Public Class CheckDisableBll
+
+          Implements ICheckDisableBll
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Definition.ICheckDisableBll
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Bll.CheckDisableBll.ModuleRepository
+  commentId: P:Intranet.Bll.CheckDisableBll.ModuleRepository
+  id: ModuleRepository
+  parent: Intranet.Bll.CheckDisableBll
+  langs:
+  - csharp
+  - vb
+  name: ModuleRepository
+  nameWithType: CheckDisableBll.ModuleRepository
+  fullName: Intranet.Bll.CheckDisableBll.ModuleRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Bll/CheckDisableBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ModuleRepository
+    path: .src/Intranet/Bll/CheckDisableBll.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nRepository for Modules\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<Module> ModuleRepository { get; set; }
+    content.vb: Public Property ModuleRepository As IGenericRepository(Of  Module)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  overload: Intranet.Bll.CheckDisableBll.ModuleRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.CheckDisableBll.GetModule(System.String)
+  commentId: M:Intranet.Bll.CheckDisableBll.GetModule(System.String)
+  id: GetModule(System.String)
+  parent: Intranet.Bll.CheckDisableBll
+  langs:
+  - csharp
+  - vb
+  name: GetModule(String)
+  nameWithType: CheckDisableBll.GetModule(String)
+  fullName: Intranet.Bll.CheckDisableBll.GetModule(System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Bll/CheckDisableBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetModule
+    path: .src/Intranet/Bll/CheckDisableBll.cs
+    startLine: 29
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nReturns the Module with the name if it exist.\nIf it doesnt exist, it will be null\n"
+  example: []
+  syntax:
+    content: public Module GetModule(string name)
+    content.vb: 'Public Function GetModule(name As String) As '
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the Modul
+    return:
+      type: Intranet.Model.Module
+      description: The Module if it exist (or null)
+  overload: Intranet.Bll.CheckDisableBll.GetModule*
+  implements:
+  - Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Bll
+  commentId: N:Intranet.Bll
+  isExternal: false
+  name: Intranet.Bll
+  nameWithType: Intranet.Bll
+  fullName: Intranet.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Definition.ICheckDisableBll
+  commentId: T:Intranet.Definition.ICheckDisableBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: ICheckDisableBll
+  nameWithType: ICheckDisableBll
+  fullName: Intranet.Definition.ICheckDisableBll
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Bll.CheckDisableBll.ModuleRepository*
+  commentId: Overload:Intranet.Bll.CheckDisableBll.ModuleRepository
+  isExternal: false
+  name: ModuleRepository
+  nameWithType: CheckDisableBll.ModuleRepository
+  fullName: Intranet.Bll.CheckDisableBll.ModuleRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Model.Module}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<Module>
+  nameWithType: IGenericRepository<Module>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Model.Module>
+  nameWithType.vb: IGenericRepository(Of Module)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Model.Module)
+  name.vb: IGenericRepository(Of Module)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Bll.CheckDisableBll.GetModule*
+  commentId: Overload:Intranet.Bll.CheckDisableBll.GetModule
+  isExternal: false
+  name: GetModule
+  nameWithType: CheckDisableBll.GetModule
+  fullName: Intranet.Bll.CheckDisableBll.GetModule
+- uid: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  commentId: M:Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  parent: Intranet.Definition.ICheckDisableBll
+  isExternal: true
+  name: GetModule(String)
+  nameWithType: ICheckDisableBll.GetModule(String)
+  fullName: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+  spec.csharp:
+  - uid: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+    name: GetModule
+    nameWithType: ICheckDisableBll.GetModule
+    fullName: Intranet.Definition.ICheckDisableBll.GetModule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Definition.ICheckDisableBll.GetModule(System.String)
+    name: GetModule
+    nameWithType: ICheckDisableBll.GetModule
+    fullName: Intranet.Definition.ICheckDisableBll.GetModule
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration
+  commentId: T:Intranet.Web.Areas.Labor.LaborAreaRegistration
+  id: LaborAreaRegistration
+  parent: Intranet.Web.Areas.Labor
+  children:
+  - Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+  - Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea(AreaRegistrationContext)
+  langs:
+  - csharp
+  - vb
+  name: LaborAreaRegistration
+  nameWithType: LaborAreaRegistration
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborAreaRegistration
+    path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor
+  summary: "\nRegistration for the Labor Area\n"
+  example: []
+  syntax:
+    content: 'public class LaborAreaRegistration : AreaRegistration'
+    content.vb: >-
+      Public Class LaborAreaRegistration
+
+          Inherits AreaRegistration
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+  commentId: P:Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+  id: AreaName
+  parent: Intranet.Web.Areas.Labor.LaborAreaRegistration
+  langs:
+  - csharp
+  - vb
+  name: AreaName
+  nameWithType: LaborAreaRegistration.AreaName
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AreaName
+    path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor
+  example: []
+  syntax:
+    content: public override String AreaName { get; }
+    content.vb: Public Overrides ReadOnly Property AreaName As String
+    parameters: []
+    return:
+      type: String
+  overload: Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName*
+  modifiers.csharp:
+  - public
+  - override
+  - get
+  modifiers.vb:
+  - Public
+  - Overrides
+  - ReadOnly
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea(AreaRegistrationContext)
+  commentId: M:Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea(AreaRegistrationContext)
+  id: RegisterArea(AreaRegistrationContext)
+  parent: Intranet.Web.Areas.Labor.LaborAreaRegistration
+  langs:
+  - csharp
+  - vb
+  name: RegisterArea(AreaRegistrationContext)
+  nameWithType: LaborAreaRegistration.RegisterArea(AreaRegistrationContext)
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea(AreaRegistrationContext)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RegisterArea
+    path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor
+  example: []
+  syntax:
+    content: public override void RegisterArea(AreaRegistrationContext context)
+    content.vb: Public Overrides Sub RegisterArea(context As AreaRegistrationContext)
+    parameters:
+    - id: context
+      type: AreaRegistrationContext
+  overload: Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Intranet.Web.Areas.Labor
+  commentId: N:Intranet.Web.Areas.Labor
+  isExternal: false
+  name: Intranet.Web.Areas.Labor
+  nameWithType: Intranet.Web.Areas.Labor
+  fullName: Intranet.Web.Areas.Labor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName*
+  commentId: Overload:Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+  isExternal: false
+  name: AreaName
+  nameWithType: LaborAreaRegistration.AreaName
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration.AreaName
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea*
+  commentId: Overload:Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea
+  isExternal: false
+  name: RegisterArea
+  nameWithType: LaborAreaRegistration.RegisterArea
+  fullName: Intranet.Web.Areas.Labor.LaborAreaRegistration.RegisterArea
+- uid: AreaRegistrationContext
+  commentId: '!:AreaRegistrationContext'
+  isExternal: true
+  name: AreaRegistrationContext
+  nameWithType: AreaRegistrationContext
+  fullName: AreaRegistrationContext

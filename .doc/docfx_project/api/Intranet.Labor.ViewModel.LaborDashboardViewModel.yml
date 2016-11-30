@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  commentId: T:Intranet.Labor.ViewModel.LaborDashboardViewModel
+  id: LaborDashboardViewModel
+  parent: Intranet.Labor.ViewModel
+  children:
+  - Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+  - Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+  - Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49
+  langs:
+  - csharp
+  - vb
+  name: LaborDashboardViewModel
+  nameWithType: LaborDashboardViewModel
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborDashboardViewModel
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+    startLine: 5
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nClass representing the viewmodel for the labor dashboard\n"
+  example: []
+  syntax:
+    content: public class LaborDashboardViewModel
+    content.vb: Public Class LaborDashboardViewModel
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+  commentId: P:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+  id: DashboardItemM11
+  parent: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  langs:
+  - csharp
+  - vb
+  name: DashboardItemM11
+  nameWithType: LaborDashboardViewModel.DashboardItemM11
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DashboardItemM11
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets a the Dashboard Item M11 for the view model\n"
+  example: []
+  syntax:
+    content: public DashboardItem DashboardItemM11 { get; set; }
+    content.vb: Public Property DashboardItemM11 As DashboardItem
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.DashboardItem
+      description: doashboard items
+  overload: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+  commentId: P:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+  id: DashboardItemM10
+  parent: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  langs:
+  - csharp
+  - vb
+  name: DashboardItemM10
+  nameWithType: LaborDashboardViewModel.DashboardItemM10
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DashboardItemM10
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets a the Dashboard Item M10 for the view model\n"
+  example: []
+  syntax:
+    content: public DashboardItem DashboardItemM10 { get; set; }
+    content.vb: Public Property DashboardItemM10 As DashboardItem
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.DashboardItem
+      description: doashboard items
+  overload: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49
+  commentId: P:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49
+  id: DashboardItemM49
+  parent: Intranet.Labor.ViewModel.LaborDashboardViewModel
+  langs:
+  - csharp
+  - vb
+  name: DashboardItemM49
+  nameWithType: LaborDashboardViewModel.DashboardItemM49
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DashboardItemM49
+    path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Labor.ViewModel
+  namespace: Intranet.Labor.ViewModel
+  summary: "\nGets or sets a the Dashboard Item M49 for the view model\n"
+  example: []
+  syntax:
+    content: public DashboardItem DashboardItemM49 { get; set; }
+    content.vb: Public Property DashboardItemM49 As DashboardItem
+    parameters: []
+    return:
+      type: Intranet.Labor.ViewModel.DashboardItem
+      description: doashboard items
+  overload: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+  isExternal: false
+  name: DashboardItemM11
+  nameWithType: LaborDashboardViewModel.DashboardItemM11
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM11
+- uid: Intranet.Labor.ViewModel.DashboardItem
+  commentId: T:Intranet.Labor.ViewModel.DashboardItem
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: DashboardItem
+  nameWithType: DashboardItem
+  fullName: Intranet.Labor.ViewModel.DashboardItem
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+  isExternal: false
+  name: DashboardItemM10
+  nameWithType: LaborDashboardViewModel.DashboardItemM10
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM10
+- uid: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49*
+  commentId: Overload:Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49
+  isExternal: false
+  name: DashboardItemM49
+  nameWithType: LaborDashboardViewModel.DashboardItemM49
+  fullName: Intranet.Labor.ViewModel.LaborDashboardViewModel.DashboardItemM49

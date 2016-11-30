@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.Role
+  commentId: N:Intranet.Common.Role
+  id: Intranet.Common.Role
+  children:
+  - Intranet.Common.Role.RoleSettings
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Common.Role
+  nameWithType: Intranet.Common.Role
+  fullName: Intranet.Common.Role
+  type: Namespace
+  assemblies:
+  - Intranet.Common
+references:
+- uid: Intranet.Common.Role.RoleSettings
+  commentId: T:Intranet.Common.Role.RoleSettings
+  isExternal: false
+  name: RoleSettings
+  nameWithType: RoleSettings
+  fullName: Intranet.Common.Role.RoleSettings

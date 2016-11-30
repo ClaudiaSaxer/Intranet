@@ -1,0 +1,586 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  id: DisposableBase
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.DisposableBase.#ctor(Intranet.Common.ILogger)
+  - Intranet.Common.DisposableBase.Dispose
+  - Intranet.Common.DisposableBase.Disposed
+  - Intranet.Common.DisposableBase.Finalize
+  langs:
+  - csharp
+  - vb
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: DisposableBase
+    path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nBase class for disposable Objects.\n"
+  example: []
+  syntax:
+    content: 'public abstract class DisposableBase : LoggingBase, IDisposable'
+    content.vb: >-
+      Public MustInherit Class DisposableBase
+
+          Inherits LoggingBase
+
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - Intranet.Common.LoggingBase
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - Intranet.Common.LoggingBase.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Intranet.Common.DisposableBase.#ctor(Intranet.Common.ILogger)
+  commentId: M:Intranet.Common.DisposableBase.#ctor(Intranet.Common.ILogger)
+  id: '#ctor(Intranet.Common.ILogger)'
+  parent: Intranet.Common.DisposableBase
+  langs:
+  - csharp
+  - vb
+  name: DisposableBase(ILogger)
+  nameWithType: DisposableBase.DisposableBase(ILogger)
+  fullName: Intranet.Common.DisposableBase.DisposableBase(Intranet.Common.ILogger)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+    startLine: 25
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.DisposableBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: protected DisposableBase(ILogger logger)
+    content.vb: Protected Sub New(logger As ILogger)
+    parameters:
+    - id: logger
+      type: Intranet.Common.ILogger
+      description: A <xref href="Intranet.Common.ILogger" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Common.DisposableBase.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Intranet.Common.DisposableBase.Finalize
+  commentId: M:Intranet.Common.DisposableBase.Finalize
+  id: Finalize
+  parent: Intranet.Common.DisposableBase
+  langs:
+  - csharp
+  - vb
+  name: Finalize()
+  nameWithType: DisposableBase.Finalize()
+  fullName: Intranet.Common.DisposableBase.Finalize()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Finalize
+    path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nDestructs the instance.\n"
+  example: []
+  syntax:
+    content: protected void Finalize()
+    content.vb: Protected Sub Finalize
+  overload: Intranet.Common.DisposableBase.Finalize*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Intranet.Common.DisposableBase.Dispose
+  commentId: M:Intranet.Common.DisposableBase.Dispose
+  id: Dispose
+  parent: Intranet.Common.DisposableBase
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DisposableBase.Dispose()
+  fullName: Intranet.Common.DisposableBase.Dispose()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Dispose
+    path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+    startLine: 54
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nDispose the current instance.\n"
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Intranet.Common.DisposableBase.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Common.DisposableBase.Disposed
+  commentId: M:Intranet.Common.DisposableBase.Disposed
+  id: Disposed
+  parent: Intranet.Common.DisposableBase
+  langs:
+  - csharp
+  - vb
+  name: Disposed()
+  nameWithType: DisposableBase.Disposed()
+  fullName: Intranet.Common.DisposableBase.Disposed()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Disposed
+    path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
+    startLine: 77
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nMethod invoked when the instance gets disposed.\n"
+  example: []
+  syntax:
+    content: protected abstract void Disposed()
+    content.vb: Protected MustOverride Sub Disposed
+  overload: Intranet.Common.DisposableBase.Disposed*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: Intranet.Common.LoggingBase.Logger
+  commentId: F:Intranet.Common.LoggingBase.Logger
+  parent: Intranet.Common.LoggingBase
+  isExternal: false
+  name: Logger
+  nameWithType: LoggingBase.Logger
+  fullName: Intranet.Common.LoggingBase.Logger
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: Intranet.Common.DisposableBase.#ctor*
+  commentId: Overload:Intranet.Common.DisposableBase.#ctor
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase.DisposableBase
+  fullName: Intranet.Common.DisposableBase.DisposableBase
+- uid: Intranet.Common.DisposableBase.Finalize*
+  commentId: Overload:Intranet.Common.DisposableBase.Finalize
+  isExternal: false
+  name: Finalize
+  nameWithType: DisposableBase.Finalize
+  fullName: Intranet.Common.DisposableBase.Finalize
+- uid: Intranet.Common.DisposableBase.Dispose*
+  commentId: Overload:Intranet.Common.DisposableBase.Dispose
+  isExternal: false
+  name: Dispose
+  nameWithType: DisposableBase.Dispose
+  fullName: Intranet.Common.DisposableBase.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase.Disposed*
+  commentId: Overload:Intranet.Common.DisposableBase.Disposed
+  isExternal: false
+  name: Disposed
+  nameWithType: DisposableBase.Disposed
+  fullName: Intranet.Common.DisposableBase.Disposed

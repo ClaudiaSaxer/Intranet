@@ -1,0 +1,371 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  id: Intranet.Common
+  children:
+  - Intranet.Common.BaseController
+  - Intranet.Common.DbCommit`1
+  - Intranet.Common.DbFactory`1
+  - Intranet.Common.DisposableBase
+  - Intranet.Common.GenericRepository`2
+  - Intranet.Common.IDatabaseFactory`1
+  - Intranet.Common.IDbCommit`1
+  - Intranet.Common.IGenericRepository`1
+  - Intranet.Common.ILogger
+  - Intranet.Common.ILoggerFactory
+  - Intranet.Common.INavigationBll
+  - Intranet.Common.INavigationService
+  - Intranet.Common.IRoles
+  - Intranet.Common.LoggingBase
+  - Intranet.Common.LogLevel
+  - Intranet.Common.NLogExtensions
+  - Intranet.Common.NLogLogger
+  - Intranet.Common.NLogLoggerFactory
+  - Intranet.Common.ServiceBase
+  - Intranet.Common.SystemWebSecurityRoles
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+  type: Namespace
+  assemblies:
+  - Intranet.Common
+references:
+- uid: Intranet.Common.INavigationBll
+  commentId: T:Intranet.Common.INavigationBll
+  parent: Intranet.Common
+  isExternal: false
+  name: INavigationBll
+  nameWithType: INavigationBll
+  fullName: Intranet.Common.INavigationBll
+- uid: Intranet.Common.INavigationService
+  commentId: T:Intranet.Common.INavigationService
+  parent: Intranet.Common
+  isExternal: false
+  name: INavigationService
+  nameWithType: INavigationService
+  fullName: Intranet.Common.INavigationService
+- uid: Intranet.Common.IRoles
+  commentId: T:Intranet.Common.IRoles
+  parent: Intranet.Common
+  isExternal: false
+  name: IRoles
+  nameWithType: IRoles
+  fullName: Intranet.Common.IRoles
+- uid: Intranet.Common.SystemWebSecurityRoles
+  commentId: T:Intranet.Common.SystemWebSecurityRoles
+  isExternal: false
+  name: SystemWebSecurityRoles
+  nameWithType: SystemWebSecurityRoles
+  fullName: Intranet.Common.SystemWebSecurityRoles
+- uid: Intranet.Common.ServiceBase
+  commentId: T:Intranet.Common.ServiceBase
+  parent: Intranet.Common
+  isExternal: false
+  name: ServiceBase
+  nameWithType: ServiceBase
+  fullName: Intranet.Common.ServiceBase
+- uid: Intranet.Common.GenericRepository`2
+  commentId: T:Intranet.Common.GenericRepository`2
+  isExternal: false
+  name: GenericRepository<TContext, TEntity>
+  nameWithType: GenericRepository<TContext, TEntity>
+  fullName: Intranet.Common.GenericRepository<TContext, TEntity>
+  nameWithType.vb: GenericRepository(Of TContext, TEntity)
+  fullname.vb: Intranet.Common.GenericRepository(Of TContext, TEntity)
+  name.vb: GenericRepository(Of TContext, TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.GenericRepository`2
+    name: GenericRepository
+    nameWithType: GenericRepository
+    fullName: Intranet.Common.GenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbCommit`1
+  commentId: T:Intranet.Common.DbCommit`1
+  isExternal: false
+  name: DbCommit<TContext>
+  nameWithType: DbCommit<TContext>
+  fullName: Intranet.Common.DbCommit<TContext>
+  nameWithType.vb: DbCommit(Of TContext)
+  fullname.vb: Intranet.Common.DbCommit(Of TContext)
+  name.vb: DbCommit(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.DbCommit`1
+    name: DbCommit
+    nameWithType: DbCommit
+    fullName: Intranet.Common.DbCommit
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.DbCommit`1
+    name: DbCommit
+    nameWithType: DbCommit
+    fullName: Intranet.Common.DbCommit
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DbFactory`1
+  commentId: T:Intranet.Common.DbFactory`1
+  isExternal: false
+  name: DbFactory<TContext>
+  nameWithType: DbFactory<TContext>
+  fullName: Intranet.Common.DbFactory<TContext>
+  nameWithType.vb: DbFactory(Of TContext)
+  fullname.vb: Intranet.Common.DbFactory(Of TContext)
+  name.vb: DbFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.DbFactory`1
+    name: DbFactory
+    nameWithType: DbFactory
+    fullName: Intranet.Common.DbFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.DbFactory`1
+    name: DbFactory
+    nameWithType: DbFactory
+    fullName: Intranet.Common.DbFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDatabaseFactory`1
+  commentId: T:Intranet.Common.IDatabaseFactory`1
+  isExternal: false
+  name: IDatabaseFactory<TContext>
+  nameWithType: IDatabaseFactory<TContext>
+  fullName: Intranet.Common.IDatabaseFactory<TContext>
+  nameWithType.vb: IDatabaseFactory(Of TContext)
+  fullname.vb: Intranet.Common.IDatabaseFactory(Of TContext)
+  name.vb: IDatabaseFactory(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDatabaseFactory`1
+    name: IDatabaseFactory
+    nameWithType: IDatabaseFactory
+    fullName: Intranet.Common.IDatabaseFactory
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IDbCommit`1
+  commentId: T:Intranet.Common.IDbCommit`1
+  isExternal: false
+  name: IDbCommit<TContext>
+  nameWithType: IDbCommit<TContext>
+  fullName: Intranet.Common.IDbCommit<TContext>
+  nameWithType.vb: IDbCommit(Of TContext)
+  fullname.vb: Intranet.Common.IDbCommit(Of TContext)
+  name.vb: IDbCommit(Of TContext)
+  spec.csharp:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IDbCommit`1
+    name: IDbCommit
+    nameWithType: IDbCommit
+    fullName: Intranet.Common.IDbCommit
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TContext
+    nameWithType: TContext
+    fullName: TContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.DisposableBase
+  commentId: T:Intranet.Common.DisposableBase
+  parent: Intranet.Common
+  isExternal: false
+  name: DisposableBase
+  nameWithType: DisposableBase
+  fullName: Intranet.Common.DisposableBase
+- uid: Intranet.Common.LoggingBase
+  commentId: T:Intranet.Common.LoggingBase
+  parent: Intranet.Common
+  isExternal: false
+  name: LoggingBase
+  nameWithType: LoggingBase
+  fullName: Intranet.Common.LoggingBase
+- uid: Intranet.Common.ILogger
+  commentId: T:Intranet.Common.ILogger
+  parent: Intranet.Common
+  isExternal: false
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Intranet.Common.ILogger
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Common.LogLevel
+  commentId: T:Intranet.Common.LogLevel
+  parent: Intranet.Common
+  isExternal: false
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Intranet.Common.LogLevel
+- uid: Intranet.Common.NLogExtensions
+  commentId: T:Intranet.Common.NLogExtensions
+  parent: Intranet.Common
+  isExternal: false
+  name: NLogExtensions
+  nameWithType: NLogExtensions
+  fullName: Intranet.Common.NLogExtensions
+- uid: Intranet.Common.NLogLoggerFactory
+  commentId: T:Intranet.Common.NLogLoggerFactory
+  isExternal: false
+  name: NLogLoggerFactory
+  nameWithType: NLogLoggerFactory
+  fullName: Intranet.Common.NLogLoggerFactory
+- uid: Intranet.Common.NLogLogger
+  commentId: T:Intranet.Common.NLogLogger
+  isExternal: false
+  name: NLogLogger
+  nameWithType: NLogLogger
+  fullName: Intranet.Common.NLogLogger
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common

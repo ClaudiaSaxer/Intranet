@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  id: Intranet.Model
+  children:
+  - Intranet.Model.Module
+  - Intranet.Model.ModuleType
+  - Intranet.Model.Role
+  - Intranet.Model.UniqueKeyAttribute
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model
+  type: Namespace
+  assemblies:
+  - Intranet.Model
+references:
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: Intranet.Model.ModuleType
+  commentId: T:Intranet.Model.ModuleType
+  parent: Intranet.Model
+  isExternal: false
+  name: ModuleType
+  nameWithType: ModuleType
+  fullName: Intranet.Model.ModuleType
+- uid: Intranet.Model.Role
+  commentId: T:Intranet.Model.Role
+  isExternal: false
+  name: Role
+  nameWithType: Role
+  fullName: Intranet.Model.Role
+- uid: Intranet.Model.UniqueKeyAttribute
+  commentId: T:Intranet.Model.UniqueKeyAttribute
+  isExternal: false
+  name: UniqueKeyAttribute
+  nameWithType: UniqueKeyAttribute
+  fullName: Intranet.Model.UniqueKeyAttribute
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

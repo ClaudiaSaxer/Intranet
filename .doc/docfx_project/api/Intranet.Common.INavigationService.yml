@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Common.INavigationService
+  commentId: T:Intranet.Common.INavigationService
+  id: INavigationService
+  parent: Intranet.Common
+  children:
+  - Intranet.Common.INavigationService.GetNavigationViewModel
+  langs:
+  - csharp
+  - vb
+  name: INavigationService
+  nameWithType: INavigationService
+  fullName: Intranet.Common.INavigationService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Common/Bll/INavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: INavigationService
+    path: .src/Intranet/Common/Bll/INavigationService.cs
+    startLine: 7
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nInterface representing the service for the navigation\n"
+  example: []
+  syntax:
+    content: public interface INavigationService
+    content.vb: Public Interface INavigationService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Common.INavigationService.GetNavigationViewModel
+  commentId: M:Intranet.Common.INavigationService.GetNavigationViewModel
+  id: GetNavigationViewModel
+  parent: Intranet.Common.INavigationService
+  langs:
+  - csharp
+  - vb
+  name: GetNavigationViewModel()
+  nameWithType: INavigationService.GetNavigationViewModel()
+  fullName: Intranet.Common.INavigationService.GetNavigationViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Bll/INavigationService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNavigationViewModel
+    path: .src/Intranet/Common/Bll/INavigationService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nAll main models that the current User is allowed to see.\n"
+  example: []
+  syntax:
+    content: NavigationViewModel GetNavigationViewModel()
+    content.vb: Function GetNavigationViewModel As NavigationViewModel
+    return:
+      type: Intranet.ViewModel.NavigationViewModel
+      description: The ViewModel for the navigation
+  overload: Intranet.Common.INavigationService.GetNavigationViewModel*
+references:
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Common.INavigationService.GetNavigationViewModel*
+  commentId: Overload:Intranet.Common.INavigationService.GetNavigationViewModel
+  isExternal: false
+  name: GetNavigationViewModel
+  nameWithType: INavigationService.GetNavigationViewModel
+  fullName: Intranet.Common.INavigationService.GetNavigationViewModel
+- uid: Intranet.ViewModel.NavigationViewModel
+  commentId: T:Intranet.ViewModel.NavigationViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: NavigationViewModel
+  nameWithType: NavigationViewModel
+  fullName: Intranet.ViewModel.NavigationViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel

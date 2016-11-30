@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Filter.CheckDisableAttribute
+  commentId: T:Intranet.Web.Filter.CheckDisableAttribute
+  id: CheckDisableAttribute
+  parent: Intranet.Web.Filter
+  children:
+  - Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+  - Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+  - Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting(ActionExecutingContext)
+  langs:
+  - csharp
+  - vb
+  name: CheckDisableAttribute
+  nameWithType: CheckDisableAttribute
+  fullName: Intranet.Web.Filter.CheckDisableAttribute
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CheckDisableAttribute
+    path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Filter
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: 'public class CheckDisableAttribute : ActionFilterAttribute'
+    content.vb: >-
+      Public Class CheckDisableAttribute
+
+          Inherits ActionFilterAttribute
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+  commentId: P:Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+  id: ModuleName
+  parent: Intranet.Web.Filter.CheckDisableAttribute
+  langs:
+  - csharp
+  - vb
+  name: ModuleName
+  nameWithType: CheckDisableAttribute.ModuleName
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ModuleName
+    path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+    startLine: 18
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Filter
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public String ModuleName { get; set; }
+    content.vb: Public Property ModuleName As String
+    parameters: []
+    return:
+      type: String
+  overload: Intranet.Web.Filter.CheckDisableAttribute.ModuleName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+  commentId: P:Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+  id: CheckDisableService
+  parent: Intranet.Web.Filter.CheckDisableAttribute
+  langs:
+  - csharp
+  - vb
+  name: CheckDisableService
+  nameWithType: CheckDisableAttribute.CheckDisableService
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CheckDisableService
+    path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+    startLine: 23
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Filter
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: public ICheckDisableService CheckDisableService { get; set; }
+    content.vb: Public Property CheckDisableService As ICheckDisableService
+    parameters: []
+    return:
+      type: Intranet.Definition.ICheckDisableService
+  overload: Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting(ActionExecutingContext)
+  commentId: M:Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting(ActionExecutingContext)
+  id: OnActionExecuting(ActionExecutingContext)
+  parent: Intranet.Web.Filter.CheckDisableAttribute
+  langs:
+  - csharp
+  - vb
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: CheckDisableAttribute.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting(ActionExecutingContext)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: OnActionExecuting
+    path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Filter
+  example: []
+  syntax:
+    content: public override void OnActionExecuting(ActionExecutingContext filterContext)
+    content.vb: Public Overrides Sub OnActionExecuting(filterContext As ActionExecutingContext)
+    parameters:
+    - id: filterContext
+      type: ActionExecutingContext
+  overload: Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Intranet.Web.Filter
+  commentId: N:Intranet.Web.Filter
+  isExternal: false
+  name: Intranet.Web.Filter
+  nameWithType: Intranet.Web.Filter
+  fullName: Intranet.Web.Filter
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Web.Filter.CheckDisableAttribute.ModuleName*
+  commentId: Overload:Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+  isExternal: false
+  name: ModuleName
+  nameWithType: CheckDisableAttribute.ModuleName
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.ModuleName
+- uid: String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: String
+- uid: Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService*
+  commentId: Overload:Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+  isExternal: false
+  name: CheckDisableService
+  nameWithType: CheckDisableAttribute.CheckDisableService
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.CheckDisableService
+- uid: Intranet.Definition.ICheckDisableService
+  commentId: T:Intranet.Definition.ICheckDisableService
+  parent: Intranet.Definition
+  isExternal: false
+  name: ICheckDisableService
+  nameWithType: ICheckDisableService
+  fullName: Intranet.Definition.ICheckDisableService
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting*
+  commentId: Overload:Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting
+  isExternal: false
+  name: OnActionExecuting
+  nameWithType: CheckDisableAttribute.OnActionExecuting
+  fullName: Intranet.Web.Filter.CheckDisableAttribute.OnActionExecuting
+- uid: ActionExecutingContext
+  commentId: '!:ActionExecutingContext'
+  isExternal: true
+  name: ActionExecutingContext
+  nameWithType: ActionExecutingContext
+  fullName: ActionExecutingContext

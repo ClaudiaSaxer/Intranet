@@ -1,0 +1,155 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Definition.ISettingsService
+  commentId: T:Intranet.Definition.ISettingsService
+  id: ISettingsService
+  parent: Intranet.Definition
+  children:
+  - Intranet.Definition.ISettingsService.GetSettingsViewModel
+  - Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  langs:
+  - csharp
+  - vb
+  name: ISettingsService
+  nameWithType: ISettingsService
+  fullName: Intranet.Definition.ISettingsService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ISettingsService
+    path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nThe Interface for the SettingsController\n"
+  example: []
+  syntax:
+    content: public interface ISettingsService
+    content.vb: Public Interface ISettingsService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Definition.ISettingsService.GetSettingsViewModel
+  commentId: M:Intranet.Definition.ISettingsService.GetSettingsViewModel
+  id: GetSettingsViewModel
+  parent: Intranet.Definition.ISettingsService
+  langs:
+  - csharp
+  - vb
+  name: GetSettingsViewModel()
+  nameWithType: ISettingsService.GetSettingsViewModel()
+  fullName: Intranet.Definition.ISettingsService.GetSettingsViewModel()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetSettingsViewModel
+    path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+    startLine: 14
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nGets the SettingsViewModel\n"
+  example: []
+  syntax:
+    content: SettingsViewModel GetSettingsViewModel()
+    content.vb: Function GetSettingsViewModel As SettingsViewModel
+    return:
+      type: Intranet.ViewModel.SettingsViewModel
+      description: The SettingsViewModel
+  overload: Intranet.Definition.ISettingsService.GetSettingsViewModel*
+- uid: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  commentId: M:Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  id: UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  parent: Intranet.Definition.ISettingsService
+  langs:
+  - csharp
+  - vb
+  name: UpdateModuleSetting(ModuleSetting)
+  nameWithType: ISettingsService.UpdateModuleSetting(ModuleSetting)
+  fullName: Intranet.Definition.ISettingsService.UpdateModuleSetting(Intranet.ViewModel.ModuleSetting)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateModuleSetting
+    path: .src/Intranet/Definitions/Bll/ISettingsService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Definition
+  namespace: Intranet.Definition
+  summary: "\nUpdates the settings for the module\n"
+  example: []
+  syntax:
+    content: Module UpdateModuleSetting(ModuleSetting moduleSetting)
+    content.vb: 'Function UpdateModuleSetting(moduleSetting As ModuleSetting) As '
+    parameters:
+    - id: moduleSetting
+      type: Intranet.ViewModel.ModuleSetting
+      description: The ModuleSettings
+    return:
+      type: Intranet.Model.Module
+  overload: Intranet.Definition.ISettingsService.UpdateModuleSetting*
+references:
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Definition.ISettingsService.GetSettingsViewModel*
+  commentId: Overload:Intranet.Definition.ISettingsService.GetSettingsViewModel
+  isExternal: false
+  name: GetSettingsViewModel
+  nameWithType: ISettingsService.GetSettingsViewModel
+  fullName: Intranet.Definition.ISettingsService.GetSettingsViewModel
+- uid: Intranet.ViewModel.SettingsViewModel
+  commentId: T:Intranet.ViewModel.SettingsViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: SettingsViewModel
+  nameWithType: SettingsViewModel
+  fullName: Intranet.ViewModel.SettingsViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel
+- uid: Intranet.Definition.ISettingsService.UpdateModuleSetting*
+  commentId: Overload:Intranet.Definition.ISettingsService.UpdateModuleSetting
+  isExternal: false
+  name: UpdateModuleSetting
+  nameWithType: ISettingsService.UpdateModuleSetting
+  fullName: Intranet.Definition.ISettingsService.UpdateModuleSetting
+- uid: Intranet.ViewModel.ModuleSetting
+  commentId: T:Intranet.ViewModel.ModuleSetting
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: ModuleSetting
+  nameWithType: ModuleSetting
+  fullName: Intranet.ViewModel.ModuleSetting
+- uid: Intranet.Model.Module
+  commentId: T:Intranet.Model.Module
+  parent: Intranet.Model
+  isExternal: false
+  name: Module
+  nameWithType: Module
+  fullName: Intranet.Model.Module
+- uid: Intranet.Model
+  commentId: N:Intranet.Model
+  isExternal: false
+  name: Intranet.Model
+  nameWithType: Intranet.Model
+  fullName: Intranet.Model

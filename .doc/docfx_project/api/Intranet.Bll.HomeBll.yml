@@ -1,0 +1,736 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Bll.HomeBll
+  commentId: T:Intranet.Bll.HomeBll
+  id: HomeBll
+  parent: Intranet.Bll
+  children:
+  - Intranet.Bll.HomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  - Intranet.Bll.HomeBll.RoleRepository
+  langs:
+  - csharp
+  - vb
+  name: HomeBll
+  nameWithType: HomeBll
+  fullName: Intranet.Bll.HomeBll
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Bll/HomeBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: HomeBll
+    path: .src/Intranet/Bll/HomeBll.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nClass representing the bll of the home.\n"
+  example: []
+  syntax:
+    content: 'public class HomeBll : IHomeBll'
+    content.vb: >-
+      Public Class HomeBll
+
+          Implements IHomeBll
+  inheritance:
+  - System.Object
+  implements:
+  - Intranet.Definition.IHomeBll
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Bll.HomeBll.RoleRepository
+  commentId: P:Intranet.Bll.HomeBll.RoleRepository
+  id: RoleRepository
+  parent: Intranet.Bll.HomeBll
+  langs:
+  - csharp
+  - vb
+  name: RoleRepository
+  nameWithType: HomeBll.RoleRepository
+  fullName: Intranet.Bll.HomeBll.RoleRepository
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Bll/HomeBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: RoleRepository
+    path: .src/Intranet/Bll/HomeBll.cs
+    startLine: 19
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nRepository for Roles\n"
+  example: []
+  syntax:
+    content: public IGenericRepository<Role> RoleRepository { get; set; }
+    content.vb: Public Property RoleRepository As IGenericRepository(Of Role)
+    parameters: []
+    return:
+      type: Intranet.Common.IGenericRepository{Intranet.Model.Role}
+  overload: Intranet.Bll.HomeBll.RoleRepository*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Bll.HomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Intranet.Bll.HomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  id: AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  parent: Intranet.Bll.HomeBll
+  langs:
+  - csharp
+  - vb
+  name: AllVisibleModulesForRoles(IEnumerable<String>)
+  nameWithType: HomeBll.AllVisibleModulesForRoles(IEnumerable<String>)
+  fullName: Intranet.Bll.HomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Bll/HomeBll.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AllVisibleModulesForRoles
+    path: .src/Intranet/Bll/HomeBll.cs
+    startLine: 30
+  assemblies:
+  - Intranet.Bll
+  namespace: Intranet.Bll
+  summary: "\nQuery for all modules for a given roles. Modules with type main or settings\n"
+  example: []
+  syntax:
+    content: public IEnumerable<Module> AllVisibleModulesForRoles(IEnumerable<string> rolenames)
+    content.vb: Public Function AllVisibleModulesForRoles(rolenames As IEnumerable(Of String)) As IEnumerable(Of  Module)
+    parameters:
+    - id: rolenames
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The name of the roles the user has.
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+      description: All modules with type main or settings for the given roles
+  overload: Intranet.Bll.HomeBll.AllVisibleModulesForRoles*
+  implements:
+  - Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  nameWithType.vb: HomeBll.AllVisibleModulesForRoles(IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Intranet.Bll.HomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: AllVisibleModulesForRoles(IEnumerable(Of String))
+references:
+- uid: Intranet.Bll
+  commentId: N:Intranet.Bll
+  isExternal: false
+  name: Intranet.Bll
+  nameWithType: Intranet.Bll
+  fullName: Intranet.Bll
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Definition.IHomeBll
+  commentId: T:Intranet.Definition.IHomeBll
+  parent: Intranet.Definition
+  isExternal: false
+  name: IHomeBll
+  nameWithType: IHomeBll
+  fullName: Intranet.Definition.IHomeBll
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Definition
+  commentId: N:Intranet.Definition
+  isExternal: false
+  name: Intranet.Definition
+  nameWithType: Intranet.Definition
+  fullName: Intranet.Definition
+- uid: Intranet.Bll.HomeBll.RoleRepository*
+  commentId: Overload:Intranet.Bll.HomeBll.RoleRepository
+  isExternal: false
+  name: RoleRepository
+  nameWithType: HomeBll.RoleRepository
+  fullName: Intranet.Bll.HomeBll.RoleRepository
+- uid: Intranet.Common.IGenericRepository{Intranet.Model.Role}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Model.Role}
+  parent: Intranet.Common
+  definition: Intranet.Common.IGenericRepository`1
+  name: IGenericRepository<Role>
+  nameWithType: IGenericRepository<Role>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Model.Role>
+  nameWithType.vb: IGenericRepository(Of Role)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Model.Role)
+  name.vb: IGenericRepository(Of Role)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Role
+    name: Role
+    nameWithType: Role
+    fullName: Intranet.Model.Role
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Role
+    name: Role
+    nameWithType: Role
+    fullName: Intranet.Model.Role
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common.IGenericRepository`1
+  commentId: T:Intranet.Common.IGenericRepository`1
+  isExternal: false
+  name: IGenericRepository<TEntity>
+  nameWithType: IGenericRepository<TEntity>
+  fullName: Intranet.Common.IGenericRepository<TEntity>
+  nameWithType.vb: IGenericRepository(Of TEntity)
+  fullname.vb: Intranet.Common.IGenericRepository(Of TEntity)
+  name.vb: IGenericRepository(Of TEntity)
+  spec.csharp:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Intranet.Common.IGenericRepository`1
+    name: IGenericRepository
+    nameWithType: IGenericRepository
+    fullName: Intranet.Common.IGenericRepository
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEntity
+    nameWithType: TEntity
+    fullName: TEntity
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Bll.HomeBll.AllVisibleModulesForRoles*
+  commentId: Overload:Intranet.Bll.HomeBll.AllVisibleModulesForRoles
+  isExternal: false
+  name: AllVisibleModulesForRoles
+  nameWithType: HomeBll.AllVisibleModulesForRoles
+  fullName: Intranet.Bll.HomeBll.AllVisibleModulesForRoles
+- uid: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  parent: Intranet.Definition.IHomeBll
+  isExternal: true
+  name: AllVisibleModulesForRoles(IEnumerable<String>)
+  nameWithType: IHomeBll.AllVisibleModulesForRoles(IEnumerable<String>)
+  fullName: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable<System.String>)
+  nameWithType.vb: IHomeBll.AllVisibleModulesForRoles(IEnumerable(Of String))
+  fullname.vb: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: AllVisibleModulesForRoles(IEnumerable(Of String))
+  spec.csharp:
+  - uid: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+    name: AllVisibleModulesForRoles
+    nameWithType: IHomeBll.AllVisibleModulesForRoles
+    fullName: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+    name: AllVisibleModulesForRoles
+    nameWithType: IHomeBll.AllVisibleModulesForRoles
+    fullName: Intranet.Definition.IHomeBll.AllVisibleModulesForRoles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Module>
+  nameWithType: IEnumerable<Module>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Model.Module>
+  nameWithType.vb: IEnumerable(Of Module)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Model.Module)
+  name.vb: IEnumerable(Of Module)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Model.Module
+    name: Module
+    nameWithType: Module
+    fullName: Intranet.Model.Module
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

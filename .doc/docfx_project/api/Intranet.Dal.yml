@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Dal
+  commentId: N:Intranet.Dal
+  id: Intranet.Dal
+  children:
+  - Intranet.Dal.IntranetContext
+  - Intranet.Dal.ModuleRepository
+  - Intranet.Dal.RoleRepository
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Dal
+  nameWithType: Intranet.Dal
+  fullName: Intranet.Dal
+  type: Namespace
+  assemblies:
+  - Intranet.Dal
+references:
+- uid: Intranet.Dal.IntranetContext
+  commentId: T:Intranet.Dal.IntranetContext
+  isExternal: false
+  name: IntranetContext
+  nameWithType: IntranetContext
+  fullName: Intranet.Dal.IntranetContext
+- uid: Intranet.Dal.ModuleRepository
+  commentId: T:Intranet.Dal.ModuleRepository
+  isExternal: false
+  name: ModuleRepository
+  nameWithType: ModuleRepository
+  fullName: Intranet.Dal.ModuleRepository
+- uid: Intranet.Dal.RoleRepository
+  commentId: T:Intranet.Dal.RoleRepository
+  isExternal: false
+  name: RoleRepository
+  nameWithType: RoleRepository
+  fullName: Intranet.Dal.RoleRepository

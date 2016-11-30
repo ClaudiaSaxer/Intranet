@@ -1,0 +1,2121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  id: IIncontinencePadLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeIncontinencePad,Intranet.Labor.Model.labor.TestValueType)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo(System.String,System.String,System.Int32)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad},System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,``0})
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  - Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: IIncontinencePadLaborCreatorServiceHelper
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IIncontinencePadLaborCreatorServiceHelper
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 12
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nClass representing a interface for IncontinencePadLaborCreatorServiceHelper\n"
+  example: []
+  syntax:
+    content: public interface IIncontinencePadLaborCreatorServiceHelper
+    content.vb: Public Interface IIncontinencePadLaborCreatorServiceHelper
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeIncontinencePad,Intranet.Labor.Model.labor.TestValueType)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeIncontinencePad,Intranet.Labor.Model.labor.TestValueType)
+  id: GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestTypeIncontinencePad,Intranet.Labor.Model.labor.TestValueType)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: GetIncontinencePadTestValueForType(IEnumerable<TestValue>, TestTypeIncontinencePad, TestValueType)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(IEnumerable<TestValue>, TestTypeIncontinencePad, TestValueType)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>, Intranet.Labor.Model.labor.TestTypeIncontinencePad, Intranet.Labor.Model.labor.TestValueType)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetIncontinencePadTestValueForType
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the IncontinencePadTestValue out of a list of testvalues for the correct <xref href=\"Intranet.Labor.Model.labor.TestTypeIncontinencePad\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"Intranet.Labor.Model.labor.TestValueType\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: IncontinencePadTestValue GetIncontinencePadTestValueForType(IEnumerable<TestValue> testValues, TestTypeIncontinencePad testTypeIncontinencePad, TestValueType testValueType)
+    content.vb: Function GetIncontinencePadTestValueForType(testValues As IEnumerable(Of TestValue), testTypeIncontinencePad As TestTypeIncontinencePad, testValueType As TestValueType) As IncontinencePadTestValue
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the test values containing the wanted item
+    - id: testTypeIncontinencePad
+      type: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+      description: the type of the invontinence pad. <xref href="Intranet.Labor.Model.labor.TestTypeIncontinencePad" data-throw-if-not-resolved="false"></xref>
+    - id: testValueType
+      type: Intranet.Labor.Model.labor.TestValueType
+      description: the value type of the incontinence pad. <xref href="Intranet.Labor.Model.labor.TestValueType" data-throw-if-not-resolved="false"></xref>
+    return:
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: ''
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(IEnumerable(Of TestValue), TestTypeIncontinencePad, TestValueType)
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue), Intranet.Labor.Model.labor.TestTypeIncontinencePad, Intranet.Labor.Model.labor.TestValueType)
+  name.vb: GetIncontinencePadTestValueForType(IEnumerable(Of TestValue), TestTypeIncontinencePad, TestValueType)
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  id: ToAcquisitionTime(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToAcquisitionTime(IncontinencePadTestValue)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime(IncontinencePadTestValue)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToAcquisitionTime
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 31
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the acquisition Time View Model out of the IncontinencePadTestValue Model\n"
+  example: []
+  syntax:
+    content: IncontinencePadAcquisitionTime ToAcquisitionTime(IncontinencePadTestValue penetrationTime)
+    content.vb: Function ToAcquisitionTime(penetrationTime As IncontinencePadTestValue) As IncontinencePadAcquisitionTime
+    parameters:
+    - id: penetrationTime
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the Incontinence Pad Test value with the acquisition time data
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+      description: The Acquisiiton Time View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToAcquisitionTimeAverage(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToAcquisitionTimeAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 38
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a acquisition time Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadAcquisitionTime ToAcquisitionTimeAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToAcquisitionTimeAverage(testValues As IEnumerable(Of TestValue)) As IncontinencePadAcquisitionTime
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+      description: a class representing the acquisition time with the average
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToAcquisitionTimeAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToAcquisitionTimeStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToAcquisitionTimeStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 45
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a acquisition time Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadAcquisitionTime ToAcquisitionTimeStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToAcquisitionTimeStandardDeviation(testValues As IEnumerable(Of TestValue)) As IncontinencePadAcquisitionTime
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+      description: a class representing the acquisition time with the standard deviation
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToAcquisitionTimeStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  id: ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToAcquisitionTimeTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToAcquisitionTimeTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 55
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the PenetrationTime TestValue from diffrent input data\n"
+  example: []
+  syntax:
+    content: IncontinencePadAcquisitionTimeTestValue ToAcquisitionTimeTestValue(IncontinencePadTestValue acquisitionTime, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToAcquisitionTimeTestValue(acquisitionTime As IncontinencePadTestValue, testPerson As String, prodCode As String, testValueId As Integer) As IncontinencePadAcquisitionTimeTestValue
+    parameters:
+    - id: acquisitionTime
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the incontinence pad test value containing the penetration time data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the testvalue
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+      description: a Penetration Time test value
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToAcquisitionTimeTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToAcquisitionTimeTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 62
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the acquisition time test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<IncontinencePadAcquisitionTimeTestValue> ToAcquisitionTimeTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToAcquisitionTimeTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the acquisition time tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+      description: a collection for all acquisition time tests
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToAcquisitionTimeTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  id: ToRetention(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetention(IncontinencePadTestValue)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetention(IncontinencePadTestValue)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetention
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 69
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the retention View Model out of the TestValue Model\n"
+  example: []
+  syntax:
+    content: IncontinencePadRetention ToRetention(IncontinencePadTestValue retention)
+    content.vb: Function ToRetention(retention As IncontinencePadTestValue) As IncontinencePadRetention
+    parameters:
+    - id: retention
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the Test value with the retention data
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetention
+      description: The View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionAverage(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 76
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a retention Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRetention ToRetentionAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionAverage(testValues As IEnumerable(Of TestValue)) As IncontinencePadRetention
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetention
+      description: a class representing the retention with the average
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 83
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rRetention Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRetention ToRetentionStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionStandardDeviation(testValues As IEnumerable(Of TestValue)) As IncontinencePadRetention
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetention
+      description: a class representing the retention with the standard deviation
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  id: ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 93
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the RetentionTestValues from diffrent input data\n"
+  example: []
+  syntax:
+    content: IncontinencePadRetentionTestValue ToRetentionTestValue(IncontinencePadTestValue retention, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToRetentionTestValue(retention As IncontinencePadTestValue, testPerson As String, prodCode As String, testValueId As Integer) As IncontinencePadRetentionTestValue
+    parameters:
+    - id: retention
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the test value containing the retention data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the test value
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+      description: a test value for the retention test
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRetentionTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRetentionTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 100
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the retention  test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<IncontinencePadRetentionTestValue> ToRetentionTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRetentionTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of IncontinencePadRetentionTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the retention tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+      description: a collection for all retention tests
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRetentionTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  id: ToRewet(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewet(IncontinencePadTestValue)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewet(IncontinencePadTestValue)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet(Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewet
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 107
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSets the values for the rewet View Model out of the IncontinencePadTestValue Model\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewet ToRewet(IncontinencePadTestValue rewet)
+    content.vb: Function ToRewet(rewet As IncontinencePadTestValue) As IncontinencePadRewet
+    parameters:
+    - id: rewet
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the Incontinence Pad Test value with the rewet data
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: The rewet View Model with the data collected from the model
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetAverage(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 114
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rewet Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewet ToRewetAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetAverage(testValues As IEnumerable(Of TestValue)) As IncontinencePadRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: a class representing the rewet with the average
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 121
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rewet Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewet ToRewetStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetStandardDeviation(testValues As IEnumerable(Of TestValue)) As IncontinencePadRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: a class representing the rewet with the standard deviation
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetAfterAcquisitionTimeAverage(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetAfterAcquisitionTimeAverage
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 128
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rewet after acquisition  Average with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewet ToRewetAfterAcquisitionTimeAverage(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetAfterAcquisitionTimeAverage(testValues As IEnumerable(Of TestValue)) As IncontinencePadRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the average
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: a class representing the rewet after acquisition with the average
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetAfterAcquisitionTimeAverage(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetAfterAcquisitionTimeStandardDeviation
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 135
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a rewet after acquisition Standard Deviation with the data from the test values\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewet ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetAfterAcquisitionTimeStandardDeviation(testValues As IEnumerable(Of TestValue)) As IncontinencePadRewet
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: testvalues containing a item representing data for the standard deviation
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewet
+      description: a class representing the rewet after acquisition with the standard deviation
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  id: ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 146
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the TestValue from diffrent input data\n"
+  example: []
+  syntax:
+    content: IncontinencePadRewetTestValue ToRewetTestValue(IncontinencePadTestValue rewet, string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToRewetTestValue(rewet As IncontinencePadTestValue, testPerson As String, prodCode As String, testValueId As Integer) As IncontinencePadRewetTestValue
+    parameters:
+    - id: rewet
+      type: Intranet.Labor.Model.labor.IncontinencePadTestValue
+      description: the incontinence pad test value containing the rewet data
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the diaper production code
+    - id: testValueId
+      type: System.Int32
+      description: the id of the test value
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+      description: the test value for the rewet test
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  id: ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToRewetTestValuesCollection(IEnumerable<TestValue>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(IEnumerable<TestValue>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToRewetTestValuesCollection
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 153
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates the rewet test value collection for all singe tests\n"
+  example: []
+  syntax:
+    content: ICollection<IncontinencePadRewetTestValue> ToRewetTestValuesCollection(IEnumerable<TestValue> testValues)
+    content.vb: Function ToRewetTestValuesCollection(testValues As IEnumerable(Of TestValue)) As ICollection(Of IncontinencePadRewetTestValue)
+    parameters:
+    - id: testValues
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues containing the rewet tests
+    return:
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+      description: a collection for all rewet tests
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(IEnumerable(Of TestValue))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue))
+  name.vb: ToRewetTestValuesCollection(IEnumerable(Of TestValue))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo(System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo(System.String,System.String,System.Int32)
+  id: ToTestInfo(System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToTestInfo(String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToTestInfo(String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo(System.String, System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToTestInfo
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 162
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates to  IncontinencePadTestInfo from diffrent input data\n"
+  example: []
+  syntax:
+    content: IncontinencePadTestInfo ToTestInfo(string testPerson, string prodCode, int testValueId)
+    content.vb: Function ToTestInfo(testPerson As String, prodCode As String, testValueId As Integer) As IncontinencePadTestInfo
+    parameters:
+    - id: testPerson
+      type: System.String
+      description: the person who did the test
+    - id: prodCode
+      type: System.String
+      description: the prodcution code from the diaper
+    - id: testValueId
+      type: System.Int32
+      description: the id of the testvalue
+    return:
+      type: Intranet.Labor.ViewModel.IncontinencePadTestInfo
+      description: a Incontinence Pad TestInfo
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo*
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad},System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,``0})
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad},System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,``0})
+  id: ToTestValuesCollectionByTestType``1(System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue},Intranet.Labor.Model.labor.TestValueType,System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad},System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,``0})
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue>, TestValueType, ICollection<TestTypeIncontinencePad>, Func<IncontinencePadTestValue, String, String, Int32, T>)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue>, TestValueType, ICollection<TestTypeIncontinencePad>, Func<IncontinencePadTestValue, String, String, Int32, T>)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>(System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>, Intranet.Labor.Model.labor.TestValueType, System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestTypeIncontinencePad>, System.Func<Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32, T>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ToTestValuesCollectionByTestType
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 183
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nCreates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input\nparameter\n"
+  example: []
+  syntax:
+    content: Collection<T> ToTestValuesCollectionByTestType<T>(IEnumerable<TestValue> testValue, TestValueType testValueType, ICollection<TestTypeIncontinencePad> testTypeIncontinencePad, Func<IncontinencePadTestValue, string, string, int, T> toTestTypeTestValueAction)
+    content.vb: Function ToTestValuesCollectionByTestType(Of T)(testValue As IEnumerable(Of TestValue), testValueType As TestValueType, testTypeIncontinencePad As ICollection(Of TestTypeIncontinencePad), toTestTypeTestValueAction As Func(Of IncontinencePadTestValue, String, String, Integer, T)) As Collection(Of T)
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalues that contain the data
+    - id: testValueType
+      type: Intranet.Labor.Model.labor.TestValueType
+      description: the value type of the test. <xref href="Intranet.Labor.Model.labor.TestValueType" data-throw-if-not-resolved="false"></xref>
+    - id: testTypeIncontinencePad
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad}
+      description: the type of the incontinence pad. <xref href="Intranet.Labor.Model.labor.TestTypeIncontinencePad" data-throw-if-not-resolved="false"></xref>
+    - id: toTestTypeTestValueAction
+      type: System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,{T}}
+      description: "\nthe action the get the correct data for a collection item. For example:\n<xref href=\"Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue%2cSystem.String%2cSystem.String%2cSystem.Int32)\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    typeParameters:
+    - id: T
+      description: "\nthe collection type. For example: <xref href=\"Intranet.Labor.ViewModel.IncontinencePadRewetTestValue\" data-throw-if-not-resolved=\"false\"></xref>,\n<xref href=\"Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue\" data-throw-if-not-resolved=\"false\"></xref>,<xref href=\"Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue\" data-throw-if-not-resolved=\"false\"></xref>\n"
+    return:
+      type: System.Collections.ObjectModel.Collection{{T}}
+      description: "\nA Collection with the Type of the output from the <em>toTestTypeTestValueAction</em> given as a\ninput action\n"
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)(IEnumerable(Of TestValue), TestValueType, ICollection(Of TestTypeIncontinencePad), Func(Of IncontinencePadTestValue, String, String, Int32, T))
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)(System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue), Intranet.Labor.Model.labor.TestValueType, System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestTypeIncontinencePad), System.Func(Of Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32, T))
+  name.vb: ToTestValuesCollectionByTestType(Of T)(IEnumerable(Of TestValue), TestValueType, ICollection(Of TestTypeIncontinencePad), Func(Of IncontinencePadTestValue, String, String, Int32, T))
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  id: ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue},System.String,System.String)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue>, String, String)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue>, String, String)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValue>, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ValidateTestValueOnlyExactlyOneHasToExist
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 197
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nValidates the test value where only one item is allowed to exists for the given input parameter. Throws a\n<xref href=\"System.IO.InvalidDataException\" data-throw-if-not-resolved=\"false\"></xref> if more than one or none is found.\nUsed for example as average or standard deviation.\n"
+  example: []
+  syntax:
+    content: TestValue ValidateTestValueOnlyExactlyOneHasToExist(ICollection<TestValue> testValue, string testType, string valueType)
+    content.vb: Function ValidateTestValueOnlyExactlyOneHasToExist(testValue As ICollection(Of TestValue), testType As String, valueType As String) As TestValue
+    parameters:
+    - id: testValue
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+      description: the testvalue collection to validate.
+    - id: testType
+      type: System.String
+      description: the testtype that is validate
+    - id: valueType
+      type: System.String
+      description: the valuetype that is validated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: ''
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist*
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(ICollection(Of TestValue), String, String)
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist(System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValue), System.String, System.String)
+  name.vb: ValidateTestValueOnlyExactlyOneHasToExist(ICollection(Of TestValue), String, String)
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem``1(``0,System.String)
+  id: ValidateRequiredItem``1(``0,System.String)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: ValidateRequiredItem<T>(T, String)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem<T>(T, String)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem<T>(T, System.String)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ValidateRequiredItem
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 206
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nValidates a required item\n"
+  example: []
+  syntax:
+    content: void ValidateRequiredItem<T>(T item, string name)
+    content.vb: Sub ValidateRequiredItem(Of T)(item As T, name As String)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: the idtem to be validated
+    - id: name
+      type: System.String
+      description: the name of the item
+    typeParameters:
+    - id: T
+      description: the type of the item
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem*
+  exceptions:
+  - type: System.IO.InvalidDataException
+    commentId: T:System.IO.InvalidDataException
+    description: a Invalid Data Exception because the item must be set
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem(Of T)(T, String)
+  fullName.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem(Of T)(T, System.String)
+  name.vb: ValidateRequiredItem(Of T)(T, String)
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+  id: CanUserEdit
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: CanUserEdit()
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.CanUserEdit()
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CanUserEdit
+    path: .src/Intranet/Labor/Definitions/Bll/IIncontinencePadLaborCreatorServiceHelper.cs
+    startLine: 212
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nComputes if the user can Edit the Incontinence Pad\n"
+  example: []
+  syntax:
+    content: bool CanUserEdit()
+    content.vb: Function CanUserEdit As Boolean
+    return:
+      type: System.Boolean
+      description: ''
+  overload: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  commentId: T:Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestTypeIncontinencePad
+  nameWithType: TestTypeIncontinencePad
+  fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+- uid: Intranet.Labor.Model.labor.TestValueType
+  commentId: T:Intranet.Labor.Model.labor.TestValueType
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.labor.TestValueType
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType
+  isExternal: false
+  name: GetIncontinencePadTestValueForType
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.GetIncontinencePadTestValueForType
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<TestValue>
+  nameWithType: IEnumerable<TestValue>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: IEnumerable(Of TestValue)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: IEnumerable(Of TestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  commentId: T:Intranet.Labor.Model.labor.IncontinencePadTestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: IncontinencePadTestValue
+  nameWithType: IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime
+  isExternal: false
+  name: ToAcquisitionTime
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTime
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadAcquisitionTime
+  nameWithType: IncontinencePadAcquisitionTime
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage
+  isExternal: false
+  name: ToAcquisitionTimeAverage
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeAverage
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation
+  isExternal: false
+  name: ToAcquisitionTimeStandardDeviation
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeStandardDeviation
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+  isExternal: false
+  name: ToAcquisitionTimeTestValue
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadAcquisitionTimeTestValue
+  nameWithType: IncontinencePadAcquisitionTimeTestValue
+  fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection
+  isExternal: false
+  name: ToAcquisitionTimeTestValuesCollection
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadAcquisitionTimeTestValue>
+  nameWithType: ICollection<IncontinencePadAcquisitionTimeTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue)
+  name.vb: ICollection(Of IncontinencePadAcquisitionTimeTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+    name: IncontinencePadAcquisitionTimeTestValue
+    nameWithType: IncontinencePadAcquisitionTimeTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+    name: IncontinencePadAcquisitionTimeTestValue
+    nameWithType: IncontinencePadAcquisitionTimeTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTimeTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullname.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention
+  isExternal: false
+  name: ToRetention
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetention
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetention
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetention
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRetention
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRetention
+  nameWithType: IncontinencePadRetention
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetention
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage
+  isExternal: false
+  name: ToRetentionAverage
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionAverage
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation
+  isExternal: false
+  name: ToRetentionStandardDeviation
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionStandardDeviation
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+  isExternal: false
+  name: ToRetentionTestValue
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+- uid: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRetentionTestValue
+  nameWithType: IncontinencePadRetentionTestValue
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+  isExternal: false
+  name: ToRetentionTestValuesCollection
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadRetentionTestValue>
+  nameWithType: ICollection<IncontinencePadRetentionTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadRetentionTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue)
+  name.vb: ICollection(Of IncontinencePadRetentionTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+    name: IncontinencePadRetentionTestValue
+    nameWithType: IncontinencePadRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+    name: IncontinencePadRetentionTestValue
+    nameWithType: IncontinencePadRetentionTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRetentionTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet
+  isExternal: false
+  name: ToRewet
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewet
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewet
+- uid: Intranet.Labor.ViewModel.IncontinencePadRewet
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRewet
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRewet
+  nameWithType: IncontinencePadRewet
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRewet
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage
+  isExternal: false
+  name: ToRewetAverage
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAverage
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation
+  isExternal: false
+  name: ToRewetStandardDeviation
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetStandardDeviation
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage
+  isExternal: false
+  name: ToRewetAfterAcquisitionTimeAverage
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeAverage
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation
+  isExternal: false
+  name: ToRewetAfterAcquisitionTimeStandardDeviation
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetAfterAcquisitionTimeStandardDeviation
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+  isExternal: false
+  name: ToRewetTestValue
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+- uid: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadRewetTestValue
+  nameWithType: IncontinencePadRewetTestValue
+  fullName: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection
+  isExternal: false
+  name: ToRewetTestValuesCollection
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValuesCollection
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.IncontinencePadRewetTestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<IncontinencePadRewetTestValue>
+  nameWithType: ICollection<IncontinencePadRewetTestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.IncontinencePadRewetTestValue>
+  nameWithType.vb: ICollection(Of IncontinencePadRewetTestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.IncontinencePadRewetTestValue)
+  name.vb: ICollection(Of IncontinencePadRewetTestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+    name: IncontinencePadRewetTestValue
+    nameWithType: IncontinencePadRewetTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+    name: IncontinencePadRewetTestValue
+    nameWithType: IncontinencePadRewetTestValue
+    fullName: Intranet.Labor.ViewModel.IncontinencePadRewetTestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo
+  isExternal: false
+  name: ToTestInfo
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToTestInfo
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestInfo
+- uid: Intranet.Labor.ViewModel.IncontinencePadTestInfo
+  commentId: T:Intranet.Labor.ViewModel.IncontinencePadTestInfo
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: IncontinencePadTestInfo
+  nameWithType: IncontinencePadTestInfo
+  fullName: Intranet.Labor.ViewModel.IncontinencePadTestInfo
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  isExternal: true
+  name: ToRewetTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToRewetTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToRewetTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRewetTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  isExternal: true
+  name: ToRetentionTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToRetentionTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToRetentionTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToRetentionTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  commentId: M:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+  parent: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  isExternal: true
+  name: ToAcquisitionTimeTestValue(IncontinencePadTestValue, String, String, Int32)
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(IncontinencePadTestValue, String, String, Int32)
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32)
+  spec.csharp:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToAcquisitionTimeTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue(Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32)
+    name: ToAcquisitionTimeTestValue
+    nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+    fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToAcquisitionTimeTestValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType
+  isExternal: false
+  name: ToTestValuesCollectionByTestType<T>
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType<T>
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)
+  fullname.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ToTestValuesCollectionByTestType(Of T)
+  name.vb: ToTestValuesCollectionByTestType(Of T)
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestTypeIncontinencePad}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestTypeIncontinencePad>
+  nameWithType: ICollection<TestTypeIncontinencePad>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestTypeIncontinencePad>
+  nameWithType.vb: ICollection(Of TestTypeIncontinencePad)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestTypeIncontinencePad)
+  name.vb: ICollection(Of TestTypeIncontinencePad)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+    name: TestTypeIncontinencePad
+    nameWithType: TestTypeIncontinencePad
+    fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+    name: TestTypeIncontinencePad
+    nameWithType: TestTypeIncontinencePad
+    fullName: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,{T}}
+  commentId: T:System.Func{Intranet.Labor.Model.labor.IncontinencePadTestValue,System.String,System.String,System.Int32,``0}
+  parent: System
+  definition: System.Func`5
+  name: Func<IncontinencePadTestValue, String, String, Int32, T>
+  nameWithType: Func<IncontinencePadTestValue, String, String, Int32, T>
+  fullName: System.Func<Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32, T>
+  nameWithType.vb: Func(Of IncontinencePadTestValue, String, String, Int32, T)
+  fullname.vb: System.Func(Of Intranet.Labor.Model.labor.IncontinencePadTestValue, System.String, System.String, System.Int32, T)
+  name.vb: Func(Of IncontinencePadTestValue, String, String, Int32, T)
+  spec.csharp:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    name: IncontinencePadTestValue
+    nameWithType: IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.Collection{{T}}
+  commentId: T:System.Collections.ObjectModel.Collection{``0}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.Collection`1
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullname.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IIncontinencePadLaborCreatorServiceHelper
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper
+- uid: System.Func`5
+  commentId: T:System.Func`5
+  isExternal: true
+  name: Func<T1, T2, T3, T4, TResult>
+  nameWithType: Func<T1, T2, T3, T4, TResult>
+  fullName: System.Func<T1, T2, T3, T4, TResult>
+  nameWithType.vb: Func(Of T1, T2, T3, T4, TResult)
+  fullname.vb: System.Func(Of T1, T2, T3, T4, TResult)
+  name.vb: Func(Of T1, T2, T3, T4, TResult)
+  spec.csharp:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`5
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel.Collection`1
+  commentId: T:System.Collections.ObjectModel.Collection`1
+  isExternal: true
+  name: Collection<T>
+  nameWithType: Collection<T>
+  fullName: System.Collections.ObjectModel.Collection<T>
+  nameWithType.vb: Collection(Of T)
+  fullname.vb: System.Collections.ObjectModel.Collection(Of T)
+  name.vb: Collection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.Collection`1
+    name: Collection
+    nameWithType: Collection
+    fullName: System.Collections.ObjectModel.Collection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: false
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+- uid: System.IO.InvalidDataException
+  commentId: T:System.IO.InvalidDataException
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+  isExternal: false
+  name: ValidateTestValueOnlyExactlyOneHasToExist
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateTestValueOnlyExactlyOneHasToExist
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  name: ICollection<TestValue>
+  nameWithType: ICollection<TestValue>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValue>
+  nameWithType.vb: ICollection(Of TestValue)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValue)
+  name.vb: ICollection(Of TestValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    nameWithType: ICollection
+    fullName: System.Collections.Generic.ICollection
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Intranet.Labor.Model.labor.TestValue
+    name: TestValue
+    nameWithType: TestValue
+    fullName: Intranet.Labor.Model.labor.TestValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem
+  isExternal: false
+  name: ValidateRequiredItem<T>
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem<T>
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem<T>
+  nameWithType.vb: IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem(Of T)
+  fullname.vb: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.ValidateRequiredItem(Of T)
+  name.vb: ValidateRequiredItem(Of T)
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit*
+  commentId: Overload:Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+  isExternal: false
+  name: CanUserEdit
+  nameWithType: IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+  fullName: Intranet.Labor.Definition.IIncontinencePadLaborCreatorServiceHelper.CanUserEdit
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

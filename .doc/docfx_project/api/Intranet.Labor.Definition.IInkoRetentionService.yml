@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Definition.IInkoRetentionService
+  commentId: T:Intranet.Labor.Definition.IInkoRetentionService
+  id: IInkoRetentionService
+  parent: Intranet.Labor.Definition
+  children:
+  - Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  - Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  - Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  langs:
+  - csharp
+  - vb
+  name: IInkoRetentionService
+  nameWithType: IInkoRetentionService
+  fullName: Intranet.Labor.Definition.IInkoRetentionService
+  type: Interface
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: IInkoRetentionService
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+    startLine: 13
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nThe Interface for the InkoRetentionService\n"
+  example: []
+  syntax:
+    content: public interface IInkoRetentionService
+    content.vb: Public Interface IInkoRetentionService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  id: Delete(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Delete(Int32)
+  nameWithType: IInkoRetentionService.Delete(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Delete(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Delete
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+    startLine: 20
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\ndeletes the testvalue\n"
+  example: []
+  syntax:
+    content: TestValue Delete(int testValueId)
+    content.vb: Function Delete(testValueId As Integer) As TestValue
+    parameters:
+    - id: testValueId
+      type: System.Int32
+      description: id of the testvalue
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The deleted testvalue
+  overload: Intranet.Labor.Definition.IInkoRetentionService.Delete*
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  id: GetInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetInkoRetentionEditViewModel(Int32)
+  nameWithType: IInkoRetentionService.GetInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetInkoRetentionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets a new InkoRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: InkoRetentionEditViewModel GetInkoRetentionEditViewModel(int rewetTestId)
+    content.vb: Function GetInkoRetentionEditViewModel(rewetTestId As Integer) As InkoRetentionEditViewModel
+    parameters:
+    - id: rewetTestId
+      type: System.Int32
+      description: The Id of the Inko rewet test which will be edited
+    return:
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  id: GetNewInkoRetentionEditViewModel(System.Int32)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: GetNewInkoRetentionEditViewModel(Int32)
+  nameWithType: IInkoRetentionService.GetNewInkoRetentionEditViewModel(Int32)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetNewInkoRetentionEditViewModel
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nGets the InkoRetentionEditViewModel for edit\n"
+  example: []
+  syntax:
+    content: InkoRetentionEditViewModel GetNewInkoRetentionEditViewModel(int testSheetId)
+    content.vb: Function GetNewInkoRetentionEditViewModel(testSheetId As Integer) As InkoRetentionEditViewModel
+    parameters:
+    - id: testSheetId
+      type: System.Int32
+      description: The Id of the test sheet where the Inko rewet test is for
+    return:
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The InkoRewetEditViewModel
+  overload: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel*
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  commentId: M:Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  id: Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  parent: Intranet.Labor.Definition.IInkoRetentionService
+  langs:
+  - csharp
+  - vb
+  name: Save(InkoRetentionEditViewModel)
+  nameWithType: IInkoRetentionService.Save(InkoRetentionEditViewModel)
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Save(Intranet.Labor.ViewModel.InkoRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Save
+    path: .src/Intranet/Labor/Definitions/Bll/IInkoRetentionService.cs
+    startLine: 41
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves or updates the InkoRetentionEditViewModel\n"
+  example: []
+  syntax:
+    content: TestValue Save(InkoRetentionEditViewModel viewModel)
+    content.vb: Function Save(viewModel As InkoRetentionEditViewModel) As TestValue
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+      description: The viewmodel which will be saved or updated
+    return:
+      type: Intranet.Labor.Model.labor.TestValue
+      description: The saved or updated TestValue
+  overload: Intranet.Labor.Definition.IInkoRetentionService.Save*
+references:
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Delete*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionService.Delete
+  isExternal: false
+  name: Delete
+  nameWithType: IInkoRetentionService.Delete
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Delete
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.labor.TestValue
+  commentId: T:Intranet.Labor.Model.labor.TestValue
+  parent: Intranet.Labor.Model.labor
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.labor.TestValue
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.labor
+  commentId: N:Intranet.Labor.Model.labor
+  isExternal: false
+  name: Intranet.Labor.Model.labor
+  nameWithType: Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel
+  isExternal: false
+  name: GetInkoRetentionEditViewModel
+  nameWithType: IInkoRetentionService.GetInkoRetentionEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetInkoRetentionEditViewModel
+- uid: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRetentionEditViewModel
+  nameWithType: InkoRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRetentionEditViewModel
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
+- uid: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel
+  isExternal: false
+  name: GetNewInkoRetentionEditViewModel
+  nameWithType: IInkoRetentionService.GetNewInkoRetentionEditViewModel
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.GetNewInkoRetentionEditViewModel
+- uid: Intranet.Labor.Definition.IInkoRetentionService.Save*
+  commentId: Overload:Intranet.Labor.Definition.IInkoRetentionService.Save
+  isExternal: false
+  name: Save
+  nameWithType: IInkoRetentionService.Save
+  fullName: Intranet.Labor.Definition.IInkoRetentionService.Save

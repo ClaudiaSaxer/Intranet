@@ -1,0 +1,293 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  id: LaborHomeController
+  parent: Intranet.Web.Areas.Labor.Controllers
+  children:
+  - Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor(Intranet.Common.ILoggerFactory)
+  - Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index
+  - Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+  langs:
+  - csharp
+  - vb
+  name: LaborHomeController
+  nameWithType: LaborHomeController
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborHomeController
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+    startLine: 11
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nClass representing Labor Home Controller\n"
+  example: []
+  syntax:
+    content: 'public class LaborHomeController : BaseController'
+    content.vb: >-
+      Public Class LaborHomeController
+
+          Inherits BaseController
+  inheritance:
+  - System.Object
+  - Intranet.Common.BaseController
+  inheritedMembers:
+  - Intranet.Common.BaseController.Logger
+  - Intranet.Common.BaseController.NavigationService
+  - Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+  commentId: P:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+  id: LaborHomeService
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  langs:
+  - csharp
+  - vb
+  name: LaborHomeService
+  nameWithType: LaborHomeController.LaborHomeService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: LaborHomeService
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+    startLine: 26
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nGets or sets a <xref href=\"Intranet.Labor.Definition.ILaborHomeService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ILaborHomeService LaborHomeService { get; set; }
+    content.vb: Public Property LaborHomeService As ILaborHomeService
+    parameters: []
+    return:
+      type: Intranet.Labor.Definition.ILaborHomeService
+      description: "\n<xref href=\"Intranet.Labor.Definition.ILaborHomeService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  langs:
+  - csharp
+  - vb
+  name: LaborHomeController(ILoggerFactory)
+  nameWithType: LaborHomeController.LaborHomeController(ILoggerFactory)
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeController(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+    startLine: 36
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Web.Areas.Labor.Controllers.LaborHomeController\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborHomeController(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index
+  id: Index
+  parent: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  langs:
+  - csharp
+  - vb
+  name: Index()
+  nameWithType: LaborHomeController.Index()
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Index
+    path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
+    startLine: 48
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the index page of the LaborHomeController\n"
+  example: []
+  syntax:
+    content: public ActionResult Index()
+    content.vb: Public Function Index As ActionResult
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Intranet.Web.Areas.Labor.Controllers
+  commentId: N:Intranet.Web.Areas.Labor.Controllers
+  isExternal: false
+  name: Intranet.Web.Areas.Labor.Controllers
+  nameWithType: Intranet.Web.Areas.Labor.Controllers
+  fullName: Intranet.Web.Areas.Labor.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Intranet.Common.BaseController
+  commentId: T:Intranet.Common.BaseController
+  parent: Intranet.Common
+  isExternal: false
+  name: BaseController
+  nameWithType: BaseController
+  fullName: Intranet.Common.BaseController
+- uid: Intranet.Common.BaseController.Logger
+  commentId: F:Intranet.Common.BaseController.Logger
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: Logger
+  nameWithType: BaseController.Logger
+  fullName: Intranet.Common.BaseController.Logger
+- uid: Intranet.Common.BaseController.NavigationService
+  commentId: P:Intranet.Common.BaseController.NavigationService
+  parent: Intranet.Common.BaseController
+  isExternal: false
+  name: NavigationService
+  nameWithType: BaseController.NavigationService
+  fullName: Intranet.Common.BaseController.NavigationService
+- uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  commentId: M:Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  parent: Intranet.Common.BaseController
+  isExternal: true
+  name: OnActionExecuting(ActionExecutingContext)
+  nameWithType: BaseController.OnActionExecuting(ActionExecutingContext)
+  fullName: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+  spec.csharp:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Intranet.Common.BaseController.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)
+    name: OnActionExecuting
+    nameWithType: BaseController.OnActionExecuting
+    fullName: Intranet.Common.BaseController.OnActionExecuting
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Web.Mvc.ActionExecutingContext
+    name: ActionExecutingContext
+    nameWithType: ActionExecutingContext
+    fullName: System.Web.Mvc.ActionExecutingContext
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Common
+  commentId: N:Intranet.Common
+  isExternal: false
+  name: Intranet.Common
+  nameWithType: Intranet.Common
+  fullName: Intranet.Common
+- uid: Intranet.Labor.Definition.ILaborHomeService
+  commentId: T:Intranet.Labor.Definition.ILaborHomeService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborHomeService
+  nameWithType: ILaborHomeService
+  fullName: Intranet.Labor.Definition.ILaborHomeService
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+  isExternal: false
+  name: LaborHomeService
+  nameWithType: LaborHomeController.LaborHomeService
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeService
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+  isExternal: false
+  name: LaborHomeController
+  nameWithType: LaborHomeController
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.#ctor
+  isExternal: false
+  name: LaborHomeController
+  nameWithType: LaborHomeController.LaborHomeController
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.LaborHomeController
+- uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index
+  isExternal: false
+  name: Index
+  nameWithType: LaborHomeController.Index
+  fullName: Intranet.Web.Areas.Labor.Controllers.LaborHomeController.Index
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult

@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Web.Controllers
+  commentId: N:Intranet.Web.Controllers
+  id: Intranet.Web.Controllers
+  children:
+  - Intranet.Web.Controllers.HomeController
+  - Intranet.Web.Controllers.SettingsController
+  langs:
+  - csharp
+  - vb
+  name: Intranet.Web.Controllers
+  nameWithType: Intranet.Web.Controllers
+  fullName: Intranet.Web.Controllers
+  type: Namespace
+  assemblies:
+  - Intranet.Web
+references:
+- uid: Intranet.Web.Controllers.HomeController
+  commentId: T:Intranet.Web.Controllers.HomeController
+  isExternal: false
+  name: HomeController
+  nameWithType: HomeController
+  fullName: Intranet.Web.Controllers.HomeController
+- uid: Intranet.Web.Controllers.SettingsController
+  commentId: T:Intranet.Web.Controllers.SettingsController
+  isExternal: false
+  name: SettingsController
+  nameWithType: SettingsController
+  fullName: Intranet.Web.Controllers.SettingsController

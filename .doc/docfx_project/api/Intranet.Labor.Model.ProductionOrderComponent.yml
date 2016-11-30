@@ -1,0 +1,746 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.Labor.Model.ProductionOrderComponent
+  commentId: T:Intranet.Labor.Model.ProductionOrderComponent
+  id: ProductionOrderComponent
+  parent: Intranet.Labor.Model
+  children:
+  - Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+  - Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+  - Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+  - Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+  - Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+  - Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+  - Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+  - Intranet.Labor.Model.ProductionOrderComponent.SAP
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrderComponent
+  nameWithType: ProductionOrderComponent
+  fullName: Intranet.Labor.Model.ProductionOrderComponent
+  type: Class
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrderComponent
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 8
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nClass representing a component\n"
+  example: []
+  syntax:
+    content: public class ProductionOrderComponent
+    content.vb: Public Class ProductionOrderComponent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+  id: ProductionOrderComponentId
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrderComponentId
+  nameWithType: ProductionOrderComponent.ProductionOrderComponentId
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrderComponentId
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 15
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the production order ref id\n"
+  example: []
+  syntax:
+    content: >-
+      [ForeignKey("ProductionOrder")]
+
+      public int ProductionOrderComponentId { get; set; }
+    content.vb: >-
+      <ForeignKey("ProductionOrder")>
+
+      Public Property ProductionOrderComponentId As Integer
+    parameters: []
+    return:
+      type: System.Int32
+  overload: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ProductionOrder
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.SAP
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.SAP
+  id: SAP
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: SAP
+  nameWithType: ProductionOrderComponent.SAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.SAP
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SAP
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the SAP\n"
+  example: []
+  syntax:
+    content: public double SAP { get; set; }
+    content.vb: Public Property SAP As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the SAP value of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.SAP*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+  id: PillowRetentWithoutSAP
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: PillowRetentWithoutSAP
+  nameWithType: ProductionOrderComponent.PillowRetentWithoutSAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PillowRetentWithoutSAP
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 28
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the value of Pillow Retent without SAP of the component\n"
+  example: []
+  syntax:
+    content: public double PillowRetentWithoutSAP { get; set; }
+    content.vb: Public Property PillowRetentWithoutSAP As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value without SAP of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+  id: PillowWeightWithoutSAP
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: PillowWeightWithoutSAP
+  nameWithType: ProductionOrderComponent.PillowWeightWithoutSAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: PillowWeightWithoutSAP
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 34
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the value of Pillow Weight without SAP of the component\n"
+  example: []
+  syntax:
+    content: public double PillowWeightWithoutSAP { get; set; }
+    content.vb: Public Property PillowWeightWithoutSAP As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value without SAP of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+  id: CelluloseRetention
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: CelluloseRetention
+  nameWithType: ProductionOrderComponent.CelluloseRetention
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: CelluloseRetention
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 40
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the value of Cellulose Retention of the component\n"
+  example: []
+  syntax:
+    content: public double CelluloseRetention { get; set; }
+    content.vb: Public Property CelluloseRetention As Double
+    parameters: []
+    return:
+      type: System.Double
+      description: the value Cellulose Retention of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+  id: ComponentType
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: ComponentType
+  nameWithType: ProductionOrderComponent.ComponentType
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ComponentType
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 46
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the type of the component\n"
+  example: []
+  syntax:
+    content: public string ComponentType { get; set; }
+    content.vb: Public Property ComponentType As String
+    parameters: []
+    return:
+      type: System.String
+      description: the type of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.ComponentType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+  id: ComponentNr
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: ComponentNr
+  nameWithType: ProductionOrderComponent.ComponentNr
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ComponentNr
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 52
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the number of the component\n"
+  example: []
+  syntax:
+    content: public string ComponentNr { get; set; }
+    content.vb: Public Property ComponentNr As String
+    parameters: []
+    return:
+      type: System.String
+      description: the number of the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+  commentId: P:Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+  id: ProductionOrder
+  parent: Intranet.Labor.Model.ProductionOrderComponent
+  langs:
+  - csharp
+  - vb
+  name: ProductionOrder
+  nameWithType: ProductionOrderComponent.ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+  type: Property
+  source:
+    remote:
+      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+      branch: f_doc
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: ProductionOrder
+    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
+    startLine: 58
+  assemblies:
+  - Intranet.Labor.Model
+  namespace: Intranet.Labor.Model
+  summary: "\nGets or sets the production order for the component\n"
+  example: []
+  syntax:
+    content: public virtual ProductionOrder ProductionOrder { get; set; }
+    content.vb: Public Overridable Property ProductionOrder As ProductionOrder
+    parameters: []
+    return:
+      type: Intranet.Labor.Model.ProductionOrder
+      description: the production order for the component
+  overload: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
+  isExternal: false
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+  isExternal: false
+  name: ProductionOrderComponentId
+  nameWithType: ProductionOrderComponent.ProductionOrderComponentId
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrderComponentId
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Intranet.Labor.Model.ProductionOrderComponent.SAP*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.SAP
+  isExternal: false
+  name: SAP
+  nameWithType: ProductionOrderComponent.SAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.SAP
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+  isExternal: false
+  name: PillowRetentWithoutSAP
+  nameWithType: ProductionOrderComponent.PillowRetentWithoutSAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.PillowRetentWithoutSAP
+- uid: Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+  isExternal: false
+  name: PillowWeightWithoutSAP
+  nameWithType: ProductionOrderComponent.PillowWeightWithoutSAP
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.PillowWeightWithoutSAP
+- uid: Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+  isExternal: false
+  name: CelluloseRetention
+  nameWithType: ProductionOrderComponent.CelluloseRetention
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.CelluloseRetention
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ComponentType*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+  isExternal: false
+  name: ComponentType
+  nameWithType: ProductionOrderComponent.ComponentType
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ComponentType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+  isExternal: false
+  name: ComponentNr
+  nameWithType: ProductionOrderComponent.ComponentNr
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr
+- uid: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder*
+  commentId: Overload:Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+  isExternal: false
+  name: ProductionOrder
+  nameWithType: ProductionOrderComponent.ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrderComponent.ProductionOrder
+- uid: Intranet.Labor.Model.ProductionOrder
+  commentId: T:Intranet.Labor.Model.ProductionOrder
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: ProductionOrder
+  nameWithType: ProductionOrder
+  fullName: Intranet.Labor.Model.ProductionOrder

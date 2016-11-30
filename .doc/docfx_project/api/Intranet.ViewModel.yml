@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  id: Intranet.ViewModel
+  children:
+  - Intranet.ViewModel.HomeViewModel
+  - Intranet.ViewModel.ModuleSetting
+  - Intranet.ViewModel.NavigationViewModel
+  - Intranet.ViewModel.SettingsViewModel
+  langs:
+  - csharp
+  - vb
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel
+  type: Namespace
+  assemblies:
+  - Intranet.ViewModel
+references:
+- uid: Intranet.ViewModel.HomeViewModel
+  commentId: T:Intranet.ViewModel.HomeViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: HomeViewModel
+  nameWithType: HomeViewModel
+  fullName: Intranet.ViewModel.HomeViewModel
+- uid: Intranet.ViewModel.ModuleSetting
+  commentId: T:Intranet.ViewModel.ModuleSetting
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: ModuleSetting
+  nameWithType: ModuleSetting
+  fullName: Intranet.ViewModel.ModuleSetting
+- uid: Intranet.ViewModel.NavigationViewModel
+  commentId: T:Intranet.ViewModel.NavigationViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: NavigationViewModel
+  nameWithType: NavigationViewModel
+  fullName: Intranet.ViewModel.NavigationViewModel
+- uid: Intranet.ViewModel.SettingsViewModel
+  commentId: T:Intranet.ViewModel.SettingsViewModel
+  parent: Intranet.ViewModel
+  isExternal: false
+  name: SettingsViewModel
+  nameWithType: SettingsViewModel
+  fullName: Intranet.ViewModel.SettingsViewModel
+- uid: Intranet.ViewModel
+  commentId: N:Intranet.ViewModel
+  isExternal: false
+  name: Intranet.ViewModel
+  nameWithType: Intranet.ViewModel
+  fullName: Intranet.ViewModel
