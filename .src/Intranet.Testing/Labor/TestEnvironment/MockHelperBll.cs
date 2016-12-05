@@ -132,6 +132,24 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
+        ///     A mock for HistoryBll
+        /// </summary>
+        /// <returns>a IHistoryBll moq</returns>
+        public static IHistoryBll GetHistoryBll( List<TestSheet> testSheets )
+        {
+            var mock = new Mock<IHistoryBll>
+            {
+                Name = "MockHelper.GetHistoryBll",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.GetTestSheets( It.IsAny<String>() ) )
+                .Returns( testSheets );
+
+            return mock.Object;
+        }
+
+        /// <summary>
         ///     A mock for LaborCreatorBll
         /// </summary>
         /// <param name="testSheet">the testsheet</param>
@@ -257,7 +275,8 @@ namespace Intranet.Labor.TestEnvironment
                             It.IsAny<List<ShiftSchedule>>() ) )
                 .Returns( true );
 
-            mock.Setup( x => x.DateExistsInShift( It.Is<DateTime>( time => time != null && dateExistsInShift( time )), It.IsAny<ShiftSchedule>()  ) ).Returns( true );
+            mock.Setup( x => x.DateExistsInShift( It.Is<DateTime>( time => time != null && dateExistsInShift( time ) ), It.IsAny<ShiftSchedule>() ) )
+                .Returns( true );
 
             return mock.Object;
         }
@@ -302,6 +321,24 @@ namespace Intranet.Labor.TestEnvironment
         }
 
         /// <summary>
+        ///     A mock for TestBll
+        /// </summary>
+        /// <returns>a IloaborHomebll moq</returns>
+        public static ITestBll GetTestBllForDeletingNotes()
+        {
+            var mock = new Mock<ITestBll>
+            {
+                Name = "MockHelper.GetTestBllForDeletingNotes",
+                DefaultValue = DefaultValue.Mock
+            };
+
+            mock.Setup( x => x.DeleteNote( It.IsAny<Int32>() ) )
+                .Returns( ( Int32 testValueNoteId ) => new TestValueNote { TestValueNoteId = testValueNoteId } );
+
+            return mock.Object;
+        }
+
+        /// <summary>
         ///     A mock for BabyDiaperRetentionBll for Save methods
         /// </summary>
         /// <param name="testSheet">testSheet data which would be in the db</param>
@@ -328,9 +365,26 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns( testValue );
             mock.Setup( x => x.UpdateTestSheet() )
                 .Returns( 0 );
-            mock.Setup(x => x.DeleteNote(It.IsAny<Int32>()))
-                .Returns(new TestValueNote());
+            mock.Setup( x => x.DeleteNote( It.IsAny<Int32>() ) )
+                .Returns( new TestValueNote() );
 
+            return mock.Object;
+        }
+
+        /// <summary>
+        ///     A mock for test sheets Repository for HistoryBll tests
+        /// </summary>
+        /// <param name="testSheets">Queryable test sheets returned by GetAll</param>
+        /// <returns>a moq repository for test sheets</returns>
+        public static IGenericRepository<TestSheet> GetTestSheetRepositoryForHistory( IQueryable<TestSheet> testSheets )
+        {
+            var mock = new Mock<IGenericRepository<TestSheet>>
+            {
+                Name = "MockHelper.GetTestSheetRepositoryForHistory",
+                DefaultValue = DefaultValue.Mock
+            };
+            mock.Setup( x => x.GetAll() )
+                .Returns( testSheets );
             return mock.Object;
         }
 
@@ -352,62 +406,6 @@ namespace Intranet.Labor.TestEnvironment
                 .Returns( testSheets.First() );
             mock.Setup( x => x.SaveChanges() )
                 .Returns( 1 );
-            return mock.Object;
-        }
-
-
-        /// <summary>
-        ///     A mock for TestBll
-        /// </summary>
-        /// <returns>a IloaborHomebll moq</returns>
-        public static ITestBll GetTestBllForDeletingNotes()
-        {
-            var mock = new Mock<ITestBll>
-            {
-                Name = "MockHelper.GetTestBllForDeletingNotes",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup(x => x.DeleteNote(It.IsAny<Int32>()))
-                .Returns((Int32 testValueNoteId) => new TestValueNote { TestValueNoteId = testValueNoteId });
-
-            return mock.Object;
-        }
-
-        /// <summary>
-        ///     A mock for test sheets Repository for HistoryBll tests
-        /// </summary>
-        /// <param name="testSheets">Queryable test sheets returned by GetAll</param>
-        /// <returns>a moq repository for test sheets</returns>
-        public static IGenericRepository<TestSheet> GetTestSheetRepositoryForHistory(IQueryable<TestSheet> testSheets)
-        {
-            var mock = new Mock<IGenericRepository<TestSheet>>
-            {
-                Name = "MockHelper.GetTestSheetRepositoryForHistory",
-                DefaultValue = DefaultValue.Mock
-            };
-            mock.Setup(x => x.GetAll())
-                .Returns(testSheets);
-            return mock.Object;
-        }
-
-
-        /// <summary>
-        ///     A mock for HistoryBll
-        /// </summary>
-        /// <returns>a IHistoryBll moq</returns>
-        public static IHistoryBll GetHistoryBll(List<TestSheet> testSheets)
-        {
-            var mock = new Mock<IHistoryBll>
-            {
-                Name = "MockHelper.GetHistoryBll",
-                DefaultValue = DefaultValue.Mock
-            };
-
-            mock.Setup(x => x.GetTestSheets(It.IsAny<String>()))
-                .Returns(testSheets);
-
-
             return mock.Object;
         }
     }
