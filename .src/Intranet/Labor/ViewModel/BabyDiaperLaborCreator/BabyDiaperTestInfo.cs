@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -9,11 +7,14 @@ namespace Intranet.Labor.ViewModel
     /// </summary>
     public class BabyDiaperTestInfo
     {
+        #region Properties
+
         /// <summary>
-        /// Gets or sets the Person who did the test
+        ///     Gets or sets the Person who did the test
         /// </summary>
         /// <value>the test person</value>
         public String TestPerson { get; set; }
+
         /// <summary>
         ///     Gets or sets the production code from the diaper
         /// </summary>
@@ -27,9 +28,11 @@ namespace Intranet.Labor.ViewModel
         public Double WeightyDiaperDry { get; set; }
 
         /// <summary>
-        /// Gets or setst the testvalue id
+        ///     Gets or setst the testvalue id
         /// </summary>
         /// <value>the testvalue id</value>
         public Int32 TestValueId { get; set; }
+
+        #endregion
     }
 }

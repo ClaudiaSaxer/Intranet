@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using Intranet.Labor.ViewModel.LaborCreator;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -32,7 +31,7 @@ namespace Intranet.Labor.ViewModel
         public String ChosenPo { get; set; }
 
         /// <summary>
-        /// Message for User Help Information, Empty if no message available
+        ///     Message for User Help Information, Empty if no message available
         /// </summary>
         public String Message { get; set; }
 

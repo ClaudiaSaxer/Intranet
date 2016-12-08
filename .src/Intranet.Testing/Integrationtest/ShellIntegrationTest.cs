@@ -1,5 +1,4 @@
-﻿using Intranet.Integrationtest.Base;
-using Xunit;
+﻿using Xunit;
 
 namespace Intranet.Integrationtest
 {

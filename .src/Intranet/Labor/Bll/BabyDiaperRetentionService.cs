@@ -7,7 +7,6 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -62,33 +61,33 @@ namespace Intranet.Labor.Bll
         public BabyDiaperRetentionEditViewModel GetBabyDiapersRetentionEditViewModel( Int32 retentionTestId )
         {
             var testValue = TestBll.GetTestValue( retentionTestId );
-            if (testValue.IsNull())
+            if ( testValue.IsNull() )
             {
-                Logger.Error("TestValue mit id " + retentionTestId + "existiert nicht in DB!");
+                Logger.Error( "TestValue mit id " + retentionTestId + "existiert nicht in DB!" );
                 return null;
             }
             var babyDiapersTestValue = testValue.BabyDiaperTestValue;
-            if (babyDiapersTestValue.IsNull())
+            if ( babyDiapersTestValue.IsNull() )
             {
-                Logger.Error("BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!");
+                Logger.Error( "BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!" );
                 return null;
             }
             if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Retention )
             {
-                Logger.Error("Requestet test was not an BabyDiaperRetention Test. Id " + testValue.TestValueId);
+                Logger.Error( "Requestet test was not an BabyDiaperRetention Test. Id " + testValue.TestValueId );
                 return null;
             }
             var testSheetInfo = testValue.TestSheet;
-            if (testSheetInfo.IsNull())
+            if ( testSheetInfo.IsNull() )
             {
-                Logger.Error("TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!");
+                Logger.Error( "TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!" );
                 return null;
             }
             var notes = testValue.TestValueNote;
             var errors = TestBll.GetAllNoteCodes();
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
-            if (notes.IsNull())
+            if ( notes.IsNull() )
                 notes = new List<TestValueNote>();
             var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
                                  .ToList();
@@ -125,19 +124,20 @@ namespace Intranet.Labor.Bll
             }
 
             var errors = TestBll.GetAllNoteCodes();
-            var errorCodes = errors.Select(error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value })
+            var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
             var viewModel = new BabyDiaperRetentionEditViewModel
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
-                ProductionCode = TestServiceHelper.CreateProductionCode(testSheetInfo),
+                ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
                 NoteCodes = errorCodes,
                 Notes = new List<TestNote>()
             };
 
-            var oldTestValue = testSheetInfo.TestValues.Where(t => t.TestValueType == TestValueType.Single)
-                                          .ToList().LastOrDefault();
+            var oldTestValue = testSheetInfo.TestValues.Where( t => t.TestValueType == TestValueType.Single )
+                                            .ToList()
+                                            .LastOrDefault();
             if ( oldTestValue != null )
             {
                 viewModel.TestPerson = oldTestValue.LastEditedPerson;
@@ -159,13 +159,13 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? BabyDiaperRetentionServiceHelper.SaveNewRetentionTest(viewModel)
-                    : BabyDiaperRetentionServiceHelper.UpdateRetentionTest(viewModel);
-                var testSheet = BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv(viewModel.TestSheetId);
+                    ? BabyDiaperRetentionServiceHelper.SaveNewRetentionTest( viewModel )
+                    : BabyDiaperRetentionServiceHelper.UpdateRetentionTest( viewModel );
+                var testSheet = BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( viewModel.TestSheetId );
             }
-            catch (Exception e)
+            catch ( Exception e )
             {
-                Logger.Error("Update oder Create new Test Value ist fehlgeschlagen: " + e.Message);
+                Logger.Error( "Update oder Create new Test Value ist fehlgeschlagen: " + e.Message );
                 testValue = null;
             }
             return testValue;

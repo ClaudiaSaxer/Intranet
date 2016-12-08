@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using Intranet.Dal;
 
-namespace IntranetTestEnvironment
+namespace Intranet.TestEnvironment
 {
     /// <summary>
     ///     Helper for the test environment
@@ -43,6 +43,14 @@ namespace IntranetTestEnvironment
             command.ExecuteNonQuery();
         }
 
+        private static void GetModule()
+        {
+            var command = new SqlCommand();
+            command.CommandText = "SELECT * FROM Module";
+            var modules = command.ExecuteNonQuery();
+            command.CommandType = CommandType.Text;
+        }
+
         private static void InsertModule( SqlCommand command )
         {
             command.CommandText =
@@ -54,16 +62,6 @@ namespace IntranetTestEnvironment
 
             command.ExecuteNonQuery();
         }
-
-        private static void GetModule()
-        {
-            var command = new SqlCommand();
-            command.CommandText = "SELECT * FROM Module";
-            var modules = command.ExecuteNonQuery();
-            command.CommandType = CommandType.Text;
-        }
-
-
 
         private static void SetAutoIncrementOnTable( SqlConnection connection, String table, Boolean autoIncrementIsOn )
         {

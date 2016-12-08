@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
-using Intranet.Model;
-using Intranet.TestEnvironment;
-using Intranet.Web.Areas.Labor.Controllers;
+using Intranet.Labor.TestEnvironment;
 using Xunit;
-using MockHelperBll = Intranet.Labor.TestEnvironment.MockHelperBll;
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -19,14 +13,14 @@ namespace Intranet.Labor.Bll.Test
     public class LaborCreatorServiceTest
     {
         /// <summary>
-        ///    Normal Passing Test for GetLaborCreatorViewModel
+        ///     Normal Passing Test for GetLaborCreatorViewModel
         /// </summary>
         [Fact]
         public void GetLaborCreatorViewModelTest()
         {
-            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll(new TestSheet(), new List<TestSheet> {new TestSheet(),new TestSheet()});
+            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll( new TestSheet(), new List<TestSheet> { new TestSheet(), new TestSheet() } );
 
-            var target = new LaborCreatorService(new NLogLoggerFactory())
+            var target = new LaborCreatorService( new NLogLoggerFactory() )
             {
                 LaborCreatorBll = serviceHelperBllMoq
             };
@@ -38,69 +32,64 @@ namespace Intranet.Labor.Bll.Test
                   .BeNullOrEmpty( "because it is for error messages" );
             actual.ProductionOrders.Count.Should()
                   .Be( 2 );
-           
         }
 
         /// <summary>
-        ///    Normal Passing Test for GetLaborCreatorViewModel
+        ///     Normal Passing Test for GetLaborCreatorViewModel
         /// </summary>
         [Fact]
         public void GetLaborCreatorViewModelTestNotExisting()
         {
-            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll(null,null);
+            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll( null, null );
 
-            var target = new LaborCreatorService(new NLogLoggerFactory())
+            var target = new LaborCreatorService( new NLogLoggerFactory() )
             {
                 LaborCreatorBll = serviceHelperBllMoq
             };
 
             var actual = target.GetLaborCreatorViewModel();
             actual.ChosenPo.Should()
-                  .BeNullOrEmpty("because it will be filled by user");
+                  .BeNullOrEmpty( "because it will be filled by user" );
             actual.Message.Should()
-                  .BeNullOrEmpty("because it is for error messages");
-            actual.ProductionOrders.Should().BeNullOrEmpty("because there are no existing");
-
+                  .BeNullOrEmpty( "because it is for error messages" );
+            actual.ProductionOrders.Should()
+                  .BeNullOrEmpty( "because there are no existing" );
         }
 
         /// <summary>
-        /// Normal Passing Test for GetTestSheetId
+        ///     Normal Passing Test for GetTestSheetId
         /// </summary>
         [Fact]
         public void GetTestSheetIdTest()
         {
-            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll(new TestSheet {FaNr ="666"}, new List<TestSheet> ());
+            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll( new TestSheet { FaNr = "666" }, new List<TestSheet>() );
 
-            var target = new LaborCreatorService(new NLogLoggerFactory())
+            var target = new LaborCreatorService( new NLogLoggerFactory() )
             {
                 LaborCreatorBll = serviceHelperBllMoq
             };
 
-            var actual = target.GetTestSheetId("666");
+            var actual = target.GetTestSheetId( "666" );
             actual.FaNr.Should()
                   .Be( "666" );
         }
 
-
         /// <summary>
-        ///  Test for GetTestSheetId
+        ///     Test for GetTestSheetId
         /// </summary>
         [Fact]
         public void GetTestSheetIdTestNotExisting()
         {
-            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll(null, new List<TestSheet>());
+            var serviceHelperBllMoq = MockHelperBll.GetLaborCreatorsBll( null, new List<TestSheet>() );
 
-            var target = new LaborCreatorService(new NLogLoggerFactory())
+            var target = new LaborCreatorService( new NLogLoggerFactory() )
             {
                 LaborCreatorBll = serviceHelperBllMoq
             };
 
-            var actual = target.GetTestSheetId("666");
+            var actual = target.GetTestSheetId( "666" );
             actual.Should()
                   .BeNull( "because it is not found" );
         }
-
     }
-
- 
 }

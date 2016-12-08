@@ -1,5 +1,4 @@
-﻿@using Intranet.Labor.Model.labor
-@model Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
+﻿@model Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel
 @{
     ViewBag.Title = "Babywindeln Rewet - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -12,42 +11,44 @@
     <h2>Höschenwindeln - Rewet - Test</h2>
 
     <div class="intigena-line"></div>
-    @using (Html.BeginForm("Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm"}))
+    @using ( Html.BeginForm( "Save", "BabyDiaperRewet", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" } ) )
     {
-        @Html.ValidationSummary(true)
+        @Html.ValidationSummary( true )
         @Html.AntiForgeryToken()
-        @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
-        @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);
+        @Html.HiddenFor( m => m.TestValueId, Model.TestValueId )
+        ;
+        @Html.HiddenFor( m => m.TestSheetId, Model.TestSheetId )
+        ;
         <div class="form-group">
             <p class="error-message">
-                @Html.ValidationMessageFor(m => m.TestPerson)
+                @Html.ValidationMessageFor( m => m.TestPerson )
             </p>
             <label class="col-sm-2 control-label">Testperson:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" } )
+                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = Model.TestPerson, @class = "form-control", type = "text", required = "required" } )
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Produktions Code:</label>
             <div class="col-sm-10 form-inline">
                 <label class="control-label">
-                    @Html.HiddenFor(m => m.ProductionCode)
+                    @Html.HiddenFor( m => m.ProductionCode )
                     @Model.ProductionCode
                 </label>
-                @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = Model.ProductionCodeDay, @class = "form-control", style = "width:60px;", type = "text", required = "required" } )
                 <label class="control-label">/</label>
-                @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
-                <div class="error-message">@Html.ValidationMessageFor(m => m.ProductionCodeDay)</div>
+                @Html.TextBoxFor( m => m.ProductionCodeTime, new { placeholder = Model.ProductionCodeTime, @class = "form-control", type = "time", required = "required" } )
+                <div class="error-message">@Html.ValidationMessageFor( m => m.ProductionCodeDay )</div>
             </div>
         </div>
         <div class="intigena-line"></div>
         <div class="form-group">
             <div class="error-message">
-                @Html.ValidationMessageFor( m => m.DiaperWeight)
+                @Html.ValidationMessageFor( m => m.DiaperWeight )
             </div>
             <label class="col-sm-2 control-label">Gewicht [g]:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = @Model.DiaperWeight, @class = "form-control", type = "text", @required = "required" } )
+                @Html.TextBoxFor( m => m.DiaperWeight, new { placeholder = Model.DiaperWeight, @class = "form-control", type = "text", required = "required" } )
             </div>
         </div>
         <div class="intigena-line"></div>
@@ -55,39 +56,40 @@
         <div class="form-group">
             <h4>BabyDiaperRewet (g)</h4>
             <div class="error-message">
-                @Html.ValidationMessageFor(m => m.RewetAfter140)
-                @Html.ValidationMessageFor(m => m.RewetAfter210)
-                @Html.ValidationMessageFor(m => m.StrikeThrough)
-                @Html.ValidationMessageFor(m => m.Distribution)
+                @Html.ValidationMessageFor( m => m.RewetAfter140 )
+                @Html.ValidationMessageFor( m => m.RewetAfter210 )
+                @Html.ValidationMessageFor( m => m.StrikeThrough )
+                @Html.ValidationMessageFor( m => m.Distribution )
             </div>
 
             <label class="col-sm-2 control-label">140 ml:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.RewetAfter140, new { placeholder = @Model.RewetAfter140, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.RewetAfter140, new { placeholder = Model.RewetAfter140, @class = "form-control", type = "text", required = "required" } )
             </div>
             <label class="col-sm-2 control-label">210 ml:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.RewetAfter210, new { placeholder = @Model.RewetAfter210, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.RewetAfter210, new { placeholder = Model.RewetAfter210, @class = "form-control", type = "text", required = "required" } )
             </div>
             <label class="col-sm-2 control-label">Strike Through:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.StrikeThrough, new { placeholder = @Model.StrikeThrough, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.StrikeThrough, new { placeholder = Model.StrikeThrough, @class = "form-control", type = "text", required = "required" } )
             </div>
             <label class="col-sm-2 control-label">Verteilung [mm]:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.Distribution, new { placeholder = @Model.Distribution, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.Distribution, new { placeholder = Model.Distribution, @class = "form-control", type = "text", required = "required" } )
             </div>
         </div>
 
         <div class="intigena-line"></div>
 
         <div class="form-group">
-            @Html.HiddenFor(model => model.TestType)
-            <h4>Penetration:
+            @Html.HiddenFor( model => model.TestType )
+            <h4>
+                Penetration:
                 <a class="btn btn-primary btn-lg" id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
                     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 </a>
-                <a class="btn btn-danger btn-lg" id ="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" >
+                <a class="btn btn-danger btn-lg" id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
                 <!--
@@ -101,26 +103,26 @@
             </h4>
             <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
                 <div class="error-message">
-                    @Html.ValidationMessageFor(m => m.PenetrationTime1)
-                    @Html.ValidationMessageFor(m => m.PenetrationTime2)
-                    @Html.ValidationMessageFor(m => m.PenetrationTime3)
-                    @Html.ValidationMessageFor(m => m.PenetrationTime4)
+                    @Html.ValidationMessageFor( m => m.PenetrationTime1 )
+                    @Html.ValidationMessageFor( m => m.PenetrationTime2 )
+                    @Html.ValidationMessageFor( m => m.PenetrationTime3 )
+                    @Html.ValidationMessageFor( m => m.PenetrationTime4 )
                 </div>
                 <label class="col-sm-2 control-label">Zugabe 1 [s]:</label>
                 <div class="col-sm-10">
-                    @Html.TextBoxFor( m => m.PenetrationTime1, new { placeholder = @Model.PenetrationTime1, @class = "form-control", type = "text", @required = "required" } )
+                    @Html.TextBoxFor( m => m.PenetrationTime1, new { placeholder = Model.PenetrationTime1, @class = "form-control", type = "text", required = "required" } )
                 </div>
                 <label class="col-sm-2 control-label">Zugabe 2 [s]:</label>
                 <div class="col-sm-10">
-                    @Html.TextBoxFor( m => m.PenetrationTime2, new { placeholder = @Model.PenetrationTime2, @class = "form-control", type = "text", @required = "required" } )
+                    @Html.TextBoxFor( m => m.PenetrationTime2, new { placeholder = Model.PenetrationTime2, @class = "form-control", type = "text", required = "required" } )
                 </div>
                 <label class="col-sm-2 control-label">Zugabe 3 [s]:</label>
                 <div class="col-sm-10">
-                    @Html.TextBoxFor( m => m.PenetrationTime3, new { placeholder = @Model.PenetrationTime3, @class = "form-control", type = "text", @required = "required" } )
+                    @Html.TextBoxFor( m => m.PenetrationTime3, new { placeholder = Model.PenetrationTime3, @class = "form-control", type = "text", required = "required" } )
                 </div>
                 <label class="col-sm-2 control-label">Zugabe 4 [s]:</label>
                 <div class="col-sm-10">
-                    @Html.TextBoxFor( m => m.PenetrationTime4, new { placeholder = @Model.PenetrationTime4, @class = "form-control", type = "text", @required = "required" } )
+                    @Html.TextBoxFor( m => m.PenetrationTime4, new { placeholder = Model.PenetrationTime4, @class = "form-control", type = "text", required = "required" } )
                 </div>
             </div>
         </div>
@@ -129,15 +131,15 @@
 
         <div class="form-group" id="notes">
             <h4>Notizen:</h4>
-            @for (var i = 0; i < Model.NoteCodes.Count(); i++)
+            @for ( var i = 0; i < Model.NoteCodes.Count(); i++ )
             {
-                @Html.HiddenFor(model => Model.NoteCodes[i].Name)
-                @Html.HiddenFor(model => Model.NoteCodes[i].ErrorId)
+                @Html.HiddenFor( model => Model.NoteCodes[i].Name )
+                @Html.HiddenFor( model => Model.NoteCodes[i].ErrorId )
             }
 
-            @if (Model.Notes != null)
+            @if ( Model.Notes != null )
             {
-                for (var i = 0; i < Model.Notes.Count; i++)
+                for ( var i = 0; i < Model.Notes.Count; i++ )
                 {
                     <div class="form-group row" id="Note-@i">
                         <div class="col-sm-10">
@@ -145,16 +147,16 @@
                             <div class="col-sm-9">
                                 @Html.DropDownListFor(
                                     m => m.Notes[i].ErrorCodeId,
-                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    new SelectList( Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId ),
                                     "Error Code auswählen",
                                     new { @class = "form-control" }
                                      )
                             </div>
                             <label class="col-sm-3 control-label">Message:</label>
                             <div class="col-sm-9">
-                                @Html.HiddenFor(m => m.Notes[i].Id)
-                                @Html.TextAreaFor(m => m.Notes[i]
-                                                      .Message, new { @class = "form-control", type = "text" })
+                                @Html.HiddenFor( m => m.Notes[i].Id )
+                                @Html.TextAreaFor( m => m.Notes[i]
+                                                       .Message, new { @class = "form-control", type = "text" } )
                             </div>
                         </div>
                         <div class="col-sm-2">
@@ -172,6 +174,3 @@
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
     }
 </div>
-
-
-

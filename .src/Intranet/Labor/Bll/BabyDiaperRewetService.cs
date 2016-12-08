@@ -6,7 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -84,7 +84,7 @@ namespace Intranet.Labor.Bll
                 Logger.Error( "BabyDiaperRetentionTestValue mit id " + testValue.TestValueId + "existiert nicht in DB!" );
                 return null;
             }
-            if ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Rewet && babyDiapersTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime)
+            if ( ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.Rewet ) && ( babyDiapersTestValue.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ) )
             {
                 Logger.Error( "Requestet test was not an BabyDiaperRetention Test. Id " + testValue.TestValueId );
                 return null;
@@ -155,9 +155,10 @@ namespace Intranet.Labor.Bll
                 Notes = new List<TestNote>()
             };
 
-            var oldTestValue = testSheetInfo.TestValues.Where(t => t.TestValueType == TestValueType.Single)
-                                          .ToList().LastOrDefault();
-            if (oldTestValue != null)
+            var oldTestValue = testSheetInfo.TestValues.Where( t => t.TestValueType == TestValueType.Single )
+                                            .ToList()
+                                            .LastOrDefault();
+            if ( oldTestValue != null )
             {
                 viewModel.TestPerson = oldTestValue.LastEditedPerson;
                 viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;

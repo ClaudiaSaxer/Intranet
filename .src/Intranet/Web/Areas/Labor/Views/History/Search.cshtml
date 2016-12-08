@@ -11,7 +11,7 @@
 <div class="jumbotron">
     <div class="container">
 
-        @using (Html.BeginForm("Search", "History", FormMethod.Post))
+        @using ( Html.BeginForm( "Search", "History", FormMethod.Post ) )
         {
             <p>@Model.Message</p>
 
@@ -19,24 +19,24 @@
 
             <p>
                 <label for="Productionnumber">Fertigungsnummer:</label>
-                @Html.EditorFor(m => m.FaNr)
+                @Html.EditorFor( m => m.FaNr )
             </p>
             <p>
-                @Html.ValidationMessageFor(m => m.FaNr)
+                @Html.ValidationMessageFor( m => m.FaNr )
             </p>
 
-            <input class="btn btn-primary btn-lg" type="submit" name="Edit" value="Suchen" />
+            <input class="btn btn-primary btn-lg" type="submit" name="Edit" value="Suchen"/>
         }
 
     </div>
 </div>
 
 <div class="container">
-    @foreach (var item in Model.Sheets)
+    @foreach ( var item in Model.Sheets )
     {
         <a class="no-underline-hyperlink" href="@Url.Action( item.Action, item.Controller, new { area = "Labor", id = item.TestSheetId } )">
             <div class="dashboard-box-@item.RwType">
-                @item.FaNr @Html.Raw(" - ") @item.MachineNr @Html.Raw(" - ") @item.CreatedDateTime.ToString("ddd. d MMM yyyy") @Html.Raw(" - ") @item.Shift
+                @item.FaNr @Html.Raw( " - " ) @item.MachineNr @Html.Raw( " - " ) @item.CreatedDateTime.ToString( "ddd. d MMM yyyy" ) @Html.Raw( " - " ) @item.Shift
             </div>
         </a>
     }

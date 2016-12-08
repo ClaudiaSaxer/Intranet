@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing labor dashboard bll
@@ -48,7 +47,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Get the testsheets for the actual shift and the last 3 shifts
         /// </summary>
         /// <returns>the testsheets for the actual and last three shifts</returns>
-        public ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts() => GetTestSheetForShifts(ShiftHelper.GetLastXShiftSchedule(4));
+        public ICollection<TestSheet> GetTestSheetForActualAndLastThreeShifts() => GetTestSheetForShifts( ShiftHelper.GetLastXShiftSchedule( 4 ) );
 
         /// <summary>
         ///     Get the testsheets for the last shift
@@ -58,7 +57,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var sheets = new List<TestSheet>();
 
-            TestSheets.GetAll().Where( sheet => sheet.MachineNr.Equals( machineNr ))
+            TestSheets.GetAll()
+                      .Where( sheet => sheet.MachineNr.Equals( machineNr ) )
                       .ToList()
                       .ForEach( sheet =>
                                 {
@@ -69,14 +69,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        ///     Get the testsheets for the last shift. 
+        ///     Get the testsheets for the last shift.
         ///     Current = 0, Minus 1 shift = 1
         /// </summary>
         /// <returns>the testsheets for the last shift</returns>
-        public ICollection<TestSheet> GetTestSheetForMinusXShiftPerMachineNr( Int32 lastCounter,String machineNr )
+        public ICollection<TestSheet> GetTestSheetForMinusXShiftPerMachineNr( Int32 lastCounter, String machineNr )
         {
-            var shift = ShiftHelper.GetLastXShiftSchedule( lastCounter+1 );
-            return shift.Count < lastCounter+1 ? null : GetTestSheetForShiftPerMachineNr( shift[lastCounter] ,machineNr);
+            var shift = ShiftHelper.GetLastXShiftSchedule( lastCounter + 1 );
+            return shift.Count < lastCounter + 1 ? null : GetTestSheetForShiftPerMachineNr( shift[lastCounter], machineNr );
         }
 
         /// <summary>
@@ -85,15 +85,14 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the testsheets for the given shift</returns>
         public ICollection<TestSheet> GetTestSheetForShifts( List<ShiftSchedule> shifts )
         {
-
             var sheets = new List<TestSheet>();
             TestSheets.GetAll()
                       .ToList()
-                      .ForEach(sheet =>
-                      {
-                          if (DateTime.Now.AddDays(-shifts.Count) <= sheet.CreatedDateTime && ShiftHelper.DateExistsInShifts(sheet.CreatedDateTime, shifts))
-                              sheets.Add(sheet);
-                      });
+                      .ForEach( sheet =>
+                                {
+                                    if ( ( DateTime.Now.AddDays( -shifts.Count ) <= sheet.CreatedDateTime ) && ShiftHelper.DateExistsInShifts( sheet.CreatedDateTime, shifts ) )
+                                        sheets.Add( sheet );
+                                } );
             return sheets;
         }
 

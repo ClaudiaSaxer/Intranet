@@ -9,7 +9,6 @@ namespace Intranet.ViewModel
     {
         #region Properties
 
-
         /// <summary>
         ///     Gets or sets the id of the module
         /// </summary>

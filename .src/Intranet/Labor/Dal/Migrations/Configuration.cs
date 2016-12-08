@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Dal.Migrations
 {
@@ -88,7 +87,7 @@ namespace Intranet.Labor.Dal.Migrations
             };
 
             context.Articles.AddOrUpdate( a => a.ArticleId, article1 );
-            context.Articles.AddOrUpdate(a => a.ArticleId, article2);
+            context.Articles.AddOrUpdate( a => a.ArticleId, article2 );
 
             var productionOrderComponent1 = new ProductionOrderComponent
             {
@@ -113,17 +112,16 @@ namespace Intranet.Labor.Dal.Migrations
             var productionOrder3 = new ProductionOrder
             {
                 FaNr = "FA666",
-                StartDateTime = new DateTime(2016, 2, 2),
-                EndDateTime = new DateTime(2018, 2, 2),
+                StartDateTime = new DateTime( 2016, 2, 2 ),
+                EndDateTime = new DateTime( 2018, 2, 2 ),
                 Machine = machine2,
                 Article = article2
             };
             productionOrderComponent1.ProductionOrder = productionOrder1;
-  
 
             context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
-            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder3);
+            context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder3 );
 
             ////////////////////////////////////////////////////
 
@@ -142,13 +140,13 @@ namespace Intranet.Labor.Dal.Migrations
             var productionOrder2 = new ProductionOrder
             {
                 FaNr = "FA654321",
-                StartDateTime = new DateTime(2016, 1, 1),
-                EndDateTime = new DateTime(2018, 1, 1),
+                StartDateTime = new DateTime( 2016, 1, 1 ),
+                EndDateTime = new DateTime( 2018, 1, 1 ),
                 Machine = machine3,
                 Article = inkoArticle1
             };
-            context.Articles.AddOrUpdate(a => a.ArticleId, inkoArticle1);
-            context.ProductionOrders.AddOrUpdate(p => p.FaId, productionOrder2);
+            context.Articles.AddOrUpdate( a => a.ArticleId, inkoArticle1 );
+            context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder2 );
 
             ////////////////////////////////////////////////////
             var shift1 = new ShiftSchedule
@@ -663,7 +661,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId =2
+                TestSheetRefId = 2
             };
             var incontinencePadAcquisitionTimeTestValueStandardDeviation = new TestValue
             {
@@ -674,7 +672,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId =2
+                TestSheetRefId = 2
             };
 
             var incontinencePadRewetTest1 = new IncontinencePadTestValue

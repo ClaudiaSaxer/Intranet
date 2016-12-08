@@ -1,10 +1,9 @@
 ﻿#region Usings
 
 using System.Collections.Generic;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Definition;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborDashboard;
-using Intranet.Web.Areas.Labor.Controllers;
 using Moq;
 
 #endregion
@@ -25,7 +24,11 @@ namespace Intranet.Labor.TestEnvironment
         /// <param name="productionOrderItem">production order item for toProductionOtderItem</param>
         /// <param name="productionOrderItems">collection of production order items for toProductionOrderItems</param>
         /// <returns>A mock for the labor dashboard helper</returns>
-        public static ILaborDashboardHelper GetLaborDashboardHelper( List<DashboardNote> notes = null, RwType rwType = RwType.Ok, List<DashboardInfo> dashboardInfos = null,ProductionOrderItem productionOrderItem = null, ICollection<ProductionOrderItem> productionOrderItems = null)
+        public static ILaborDashboardHelper GetLaborDashboardHelper( List<DashboardNote> notes = null,
+                                                                     RwType rwType = RwType.Ok,
+                                                                     List<DashboardInfo> dashboardInfos = null,
+                                                                     ProductionOrderItem productionOrderItem = null,
+                                                                     ICollection<ProductionOrderItem> productionOrderItems = null )
         {
             var mock = new Mock<ILaborDashboardHelper>
             {

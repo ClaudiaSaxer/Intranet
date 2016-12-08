@@ -21,16 +21,19 @@ namespace Intranet.Labor.ViewModel
         /// </summary>
         /// <value>the production order items</value>
         public ICollection<ProductionOrderItem> ShiftItemsCurrent { get; set; }
+
         /// <summary>
         ///     Gets or sets the production order items minus 1
         /// </summary>
         /// <value>the production order items</value>
         public ICollection<ProductionOrderItem> ShiftItemsMinus1 { get; set; }
+
         /// <summary>
         ///     Gets or sets the production order items minus 2
         /// </summary>
         /// <value>the production order items</value>
         public ICollection<ProductionOrderItem> ShiftItemsMinus2 { get; set; }
+
         /// <summary>
         ///     Gets or sets the production order items minus 3
         /// </summary>

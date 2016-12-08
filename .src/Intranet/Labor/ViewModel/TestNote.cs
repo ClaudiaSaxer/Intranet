@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -11,18 +7,20 @@ namespace Intranet.Labor.ViewModel
     /// </summary>
     public class TestNote
     {
+        #region Properties
+
         /// <summary>
-        /// 
         /// </summary>
         public Int32 Id { get; set; }
 
         /// <summary>
-        /// 
         /// </summary>
         public Int32 ErrorCodeId { get; set; }
+
         /// <summary>
-        /// 
         /// </summary>
         public String Message { get; set; }
+
+        #endregion
     }
 }

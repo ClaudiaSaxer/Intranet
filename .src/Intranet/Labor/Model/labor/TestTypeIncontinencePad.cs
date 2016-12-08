@@ -1,4 +1,4 @@
-﻿namespace Intranet.Labor.Model.labor
+﻿namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Enum representing the types of tests for incontinence pads

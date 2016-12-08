@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
@@ -60,7 +59,7 @@ namespace Intranet.Labor.Bll.Test
             TestPerson = "Hans",
             TestValueId = -1,
             TestSheetId = 1,
-            ProductionCodeTime = new TimeSpan(12, 34, 0),
+            ProductionCodeTime = new TimeSpan( 12, 34, 0 ),
             ProductionCodeDay = 123,
             InkoWeight = 30.21,
             InkoWeightWet = 430.15,
@@ -71,8 +70,8 @@ namespace Intranet.Labor.Bll.Test
         private TestValue GetTestValueTestData() => new TestValue
         {
             TestSheetRefId = 1,
-            CreatedDateTime = new DateTime(2016, 1, 2),
-            LastEditedDateTime = new DateTime(2016, 1, 2),
+            CreatedDateTime = new DateTime( 2016, 1, 2 ),
+            LastEditedDateTime = new DateTime( 2016, 1, 2 ),
             CreatedPerson = "Hans",
             LastEditedPerson = "Hans",
             DayInYearOfArticleCreation = 123,
@@ -95,18 +94,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRetentionTest(viewModel);
+            var actual = target.SaveNewRetentionTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromHelper, actual);
+            Assert.Equal( testValueReturnedFromHelper, actual );
         }
 
         /// <summary>
@@ -120,18 +119,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRetentionTest(viewModel);
+            var actual = target.SaveNewRetentionTest( viewModel );
 
-            Assert.Equal(RwType.Ok, actual.IncontinencePadTestValue.RetentionRw);
+            Assert.Equal( RwType.Ok, actual.IncontinencePadTestValue.RetentionRw );
         }
 
         /// <summary>
@@ -146,18 +145,18 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
-            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue(testValueReturnedFromHelper);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
+            var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperCreateNewTestValue( testValueReturnedFromHelper );
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.SaveNewRetentionTest(viewModel);
+            var actual = target.SaveNewRetentionTest( viewModel );
 
-            Assert.Equal(RwType.Worse, actual.IncontinencePadTestValue.RetentionRw);
+            Assert.Equal( RwType.Worse, actual.IncontinencePadTestValue.RetentionRw );
         }
 
         #endregion
@@ -170,15 +169,15 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void UpdateRetentionTestFailTest()
         {
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(null, null, null);
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( null, null, null );
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll
             };
 
-            var actual = target.UpdateRetentionTest(new InkoRetentionEditViewModel());
+            var actual = target.UpdateRetentionTest( new InkoRetentionEditViewModel() );
 
-            Assert.Equal(null, actual);
+            Assert.Equal( null, actual );
         }
 
         /// <summary>
@@ -200,27 +199,27 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb);
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, testValueReturnedFromDb );
 
             var testServiceHelper = MockHelperTestServiceHelper.GetTestServiceHelperForUpdating();
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = babyDiaperBll,
                 TestServiceHelper = testServiceHelper
             };
 
-            var actual = target.UpdateRetentionTest(viewModel);
+            var actual = target.UpdateRetentionTest( viewModel );
 
-            Assert.Equal(testValueReturnedFromDb, actual);
-            Assert.Equal(30.21, actual.IncontinencePadTestValue.RetentionWeight);
-            Assert.Equal(430.15, actual.IncontinencePadTestValue.RetentionWetValue);
-            Assert.Equal(212.11, actual.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(399.94, actual.IncontinencePadTestValue.RetentionAbsorbtion, 2);
-            Assert.Equal(181.9, actual.IncontinencePadTestValue.RetentionEndValue, 2);
-            Assert.Equal("Hans", actual.LastEditedPerson);
-            Assert.Equal("Fritz", actual.CreatedPerson);
-            Assert.NotEqual(new DateTime(2016, 1, 2), actual.LastEditedDateTime);
+            Assert.Equal( testValueReturnedFromDb, actual );
+            Assert.Equal( 30.21, actual.IncontinencePadTestValue.RetentionWeight );
+            Assert.Equal( 430.15, actual.IncontinencePadTestValue.RetentionWetValue );
+            Assert.Equal( 212.11, actual.IncontinencePadTestValue.RetentionAfterZentrifuge );
+            Assert.Equal( 399.94, actual.IncontinencePadTestValue.RetentionAbsorbtion, 2 );
+            Assert.Equal( 181.9, actual.IncontinencePadTestValue.RetentionEndValue, 2 );
+            Assert.Equal( "Hans", actual.LastEditedPerson );
+            Assert.Equal( "Fritz", actual.CreatedPerson );
+            Assert.NotEqual( new DateTime( 2016, 1, 2 ), actual.LastEditedDateTime );
         }
 
         #endregion
@@ -236,34 +235,35 @@ namespace Intranet.Labor.Bll.Test
             var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var babyDiaperBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = babyDiaperBll
             };
 
-            var actual = target.UpdateRetentionAverageAndStv(1);
+            var actual = target.UpdateRetentionAverageAndStv( 1 );
 
             var actualRetentionAvg =
-                actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
-            Assert.NotNull(actualRetentionAvg);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
-            Assert.Equal(RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw);
+                actual.TestValues.FirstOrDefault(
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention ) );
+            Assert.NotNull( actualRetentionAvg );
+            Assert.Equal( 0, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight );
+            Assert.Equal( 0, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue );
+            Assert.Equal( 0, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge );
+            Assert.Equal( 0, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion );
+            Assert.Equal( 0, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue );
+            Assert.Equal( RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw );
 
             var actualRetentionStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
-            Assert.NotNull(actualRetentionStDev);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue);
+                          tv => ( tv.TestValueType == TestValueType.StandardDeviation ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention ) );
+            Assert.NotNull( actualRetentionStDev );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue );
         }
 
         /// <summary>
@@ -288,37 +288,38 @@ namespace Intranet.Labor.Bll.Test
                 }
             };
             var testSheetDataFromDb = GetTestSheetTestDataWithAvgAndStDev();
-            testSheetDataFromDb.TestValues.Add(onlyTestValue);
+            testSheetDataFromDb.TestValues.Add( onlyTestValue );
             var productionOrderDataFromDb = GetProductionOrderTestData();
 
-            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating(testSheetDataFromDb, productionOrderDataFromDb, null);
+            var testBll = MockHelperBll.GetTestBllForSavingAndUpdating( testSheetDataFromDb, productionOrderDataFromDb, null );
 
-            var target = new InkoRetentionServiceHelper(new NLogLoggerFactory())
+            var target = new InkoRetentionServiceHelper( new NLogLoggerFactory() )
             {
                 TestBll = testBll
             };
 
-            var actual = target.UpdateRetentionAverageAndStv(1);
+            var actual = target.UpdateRetentionAverageAndStv( 1 );
 
             var actualRetentionAvg =
-                actual.TestValues.FirstOrDefault(tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
-            Assert.NotNull(actualRetentionAvg);
-            Assert.Equal(30.21, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight);
-            Assert.Equal(430.15, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue);
-            Assert.Equal(212.11, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(399.94, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(181.9, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue);
-            Assert.Equal(RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw);
+                actual.TestValues.FirstOrDefault(
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention ) );
+            Assert.NotNull( actualRetentionAvg );
+            Assert.Equal( 30.21, actualRetentionAvg.IncontinencePadTestValue.RetentionWeight );
+            Assert.Equal( 430.15, actualRetentionAvg.IncontinencePadTestValue.RetentionWetValue );
+            Assert.Equal( 212.11, actualRetentionAvg.IncontinencePadTestValue.RetentionAfterZentrifuge );
+            Assert.Equal( 399.94, actualRetentionAvg.IncontinencePadTestValue.RetentionAbsorbtion );
+            Assert.Equal( 181.9, actualRetentionAvg.IncontinencePadTestValue.RetentionEndValue );
+            Assert.Equal( RwType.Ok, actualRetentionAvg.IncontinencePadTestValue.RetentionRw );
 
             var actualRetentionStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention);
-            Assert.NotNull(actualRetentionStDev);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion);
-            Assert.Equal(0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue);
+                          tv => ( tv.TestValueType == TestValueType.StandardDeviation ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.Retention ) );
+            Assert.NotNull( actualRetentionStDev );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionWeight );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionWetValue );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionAfterZentrifuge );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionAbsorbtion );
+            Assert.Equal( 0, actualRetentionStDev.IncontinencePadTestValue.RetentionEndValue );
         }
 
         #endregion

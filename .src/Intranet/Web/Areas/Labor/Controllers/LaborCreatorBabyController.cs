@@ -4,7 +4,6 @@ using System;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
 

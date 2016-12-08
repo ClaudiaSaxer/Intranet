@@ -5,10 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Extend;
 using Intranet.Common;
-using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 
 #endregion
 
@@ -67,7 +65,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The test value with the given Id</returns>
         public TestValue GetTestValue( Int32 retentionTestId )
         {
-            var testValue = TestValueRepository.FindAsync(retentionTestId)
+            var testValue = TestValueRepository.FindAsync( retentionTestId )
                                                .Result;
             return testValue;
         }
@@ -110,7 +108,7 @@ namespace Intranet.Labor.Bll
         ///     update an testvalue
         /// </summary>
         /// <param name="testValue">the testvalue which will be updated</param>
-        public TestValue UpdateTestValue(TestValue testValue)
+        public TestValue UpdateTestValue( TestValue testValue )
         {
             TestSheetRepository.SaveChanges();
             return testValue;
@@ -128,7 +126,7 @@ namespace Intranet.Labor.Bll
         public ProductionOrder GetProductionOrder( String productionOrderFa )
         {
             var pO = ProductionOrderRepository.Where( p => p.FaNr == productionOrderFa )
-                                     .FirstOrDefault();
+                                              .FirstOrDefault();
             if ( pO != null )
                 return ProductionOrderRepository.FindAsync( pO.FaId )
                                                 .Result;
@@ -142,8 +140,8 @@ namespace Intranet.Labor.Bll
         public TestValue DeleteTestValue( Int32 testValueId )
         {
             var testValue = TestValueRepository.FindAsync( testValueId )
-                               .Result;
-            if ( testValue.IsNull() || testValue.TestValueType != TestValueType.Single )
+                                               .Result;
+            if ( testValue.IsNull() || ( testValue.TestValueType != TestValueType.Single ) )
                 return null;
             if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
             {
@@ -153,8 +151,8 @@ namespace Intranet.Labor.Bll
             }
             else
             {
-                IncontinencePadTestValueRepository.Attach(testValue.IncontinencePadTestValue);
-                IncontinencePadTestValueRepository.Remove(testValue.IncontinencePadTestValue);
+                IncontinencePadTestValueRepository.Attach( testValue.IncontinencePadTestValue );
+                IncontinencePadTestValueRepository.Remove( testValue.IncontinencePadTestValue );
                 IncontinencePadTestValueRepository.SaveChanges();
             }
             while ( !testValue.TestValueNote.IsNullOrEmpty() )
@@ -162,9 +160,9 @@ namespace Intranet.Labor.Bll
                 var firstOrDefault = testValue.TestValueNote.FirstOrDefault();
                 if ( firstOrDefault != null )
                     DeleteNote( firstOrDefault
-                                         .TestValueNoteId );
+                                    .TestValueNoteId );
             }
-            TestValueRepository.Attach(testValue);
+            TestValueRepository.Attach( testValue );
             var result = TestValueRepository.Remove( testValue );
             TestValueRepository.SaveChanges();
             return result;
@@ -178,7 +176,7 @@ namespace Intranet.Labor.Bll
         {
             var note = TestValueNoteRepository.FindAsync( testValueNoteId )
                                               .Result;
-            if (note.IsNull())
+            if ( note.IsNull() )
                 return null;
             var result = TestValueNoteRepository.Remove( note );
             TestValueNoteRepository.SaveChanges();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Definition
@@ -12,10 +12,15 @@ namespace Intranet.Labor.Definition
     /// </summary>
     public interface IIncontinencePadLaborCreatorServiceHelper
     {
-        
+        /// <summary>
+        ///     Computes if the user can Edit the Incontinence Pad
+        /// </summary>
+        /// <returns></returns>
+        Boolean CanUserEdit();
 
         /// <summary>
-        ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct <see cref="TestTypeIncontinencePad" /> and
+        ///     Gets the IncontinencePadTestValue out of a list of testvalues for the correct
+        ///     <see cref="TestTypeIncontinencePad" /> and
         ///     <see cref="TestValueType" />
         /// </summary>
         /// <param name="testValues">the test values containing the wanted item</param>
@@ -53,7 +58,7 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a Penetration Time test value</returns>
-        IncontinencePadAcquisitionTimeTestValue ToAcquisitionTimeTestValue( IncontinencePadTestValue acquisitionTime, String testPerson, String prodCode,Int32 testValueId );
+        IncontinencePadAcquisitionTimeTestValue ToAcquisitionTimeTestValue( IncontinencePadTestValue acquisitionTime, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the acquisition time test value collection for all singe tests
@@ -108,6 +113,20 @@ namespace Intranet.Labor.Definition
         IncontinencePadRewet ToRewet( IncontinencePadTestValue rewet );
 
         /// <summary>
+        ///     Creates a rewet after acquisition  Average with the data from the test values
+        /// </summary>
+        /// <param name="testValues">testvalues containing a item representing data for the average</param>
+        /// <returns>a class representing the rewet after acquisition with the average</returns>
+        IncontinencePadRewet ToRewetAfterAcquisitionTimeAverage( IEnumerable<TestValue> testValues );
+
+        /// <summary>
+        ///     Creates a rewet after acquisition Standard Deviation with the data from the test values
+        /// </summary>
+        /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
+        /// <returns>a class representing the rewet after acquisition with the standard deviation</returns>
+        IncontinencePadRewet ToRewetAfterAcquisitionTimeStandardDeviation( IEnumerable<TestValue> testValues );
+
+        /// <summary>
         ///     Creates a rewet Average with the data from the test values
         /// </summary>
         /// <param name="testValues">testvalues containing a item representing data for the average</param>
@@ -122,21 +141,6 @@ namespace Intranet.Labor.Definition
         IncontinencePadRewet ToRewetStandardDeviation( IEnumerable<TestValue> testValues );
 
         /// <summary>
-        ///     Creates a rewet after acquisition  Average with the data from the test values
-        /// </summary>
-        /// <param name="testValues">testvalues containing a item representing data for the average</param>
-        /// <returns>a class representing the rewet after acquisition with the average</returns>
-        IncontinencePadRewet ToRewetAfterAcquisitionTimeAverage(IEnumerable<TestValue> testValues);
-
-        /// <summary>
-        ///     Creates a rewet after acquisition Standard Deviation with the data from the test values
-        /// </summary>
-        /// <param name="testValues">testvalues containing a item representing data for the standard deviation</param>
-        /// <returns>a class representing the rewet after acquisition with the standard deviation</returns>
-        IncontinencePadRewet ToRewetAfterAcquisitionTimeStandardDeviation(IEnumerable<TestValue> testValues);
-
-
-        /// <summary>
         ///     Creates the TestValue from diffrent input data
         /// </summary>
         /// <param name="rewet">the incontinence pad test value containing the rewet data</param>
@@ -144,7 +148,7 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the test value</param>
         /// <returns>the test value for the rewet test</returns>
-        IncontinencePadRewetTestValue ToRewetTestValue( IncontinencePadTestValue rewet, String testPerson, String prodCode, Int32 testValueId);
+        IncontinencePadRewetTestValue ToRewetTestValue( IncontinencePadTestValue rewet, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the rewet test value collection for all singe tests
@@ -160,7 +164,7 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the prodcution code from the diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a Incontinence Pad TestInfo</returns>
-        IncontinencePadTestInfo ToTestInfo( String testPerson, String prodCode, Int32 testValueId);
+        IncontinencePadTestInfo ToTestInfo( String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
@@ -184,7 +188,16 @@ namespace Intranet.Labor.Definition
         Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
                                                            TestValueType testValueType,
                                                            ICollection<TestTypeIncontinencePad> testTypeIncontinencePad,
-                                                           Func<IncontinencePadTestValue, String, String,Int32, T> toTestTypeTestValueAction );
+                                                           Func<IncontinencePadTestValue, String, String, Int32, T> toTestTypeTestValueAction );
+
+        /// <summary>
+        ///     Validates a required item
+        /// </summary>
+        /// <param name="item">the idtem to be validated</param>
+        /// <param name="name">the name of the item</param>
+        /// <typeparam name="T">the type of the item</typeparam>
+        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
+        void ValidateRequiredItem<T>( T item, String name );
 
         /// <summary>
         ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a
@@ -196,22 +209,5 @@ namespace Intranet.Labor.Definition
         /// <param name="valueType">the valuetype that is validated</param>
         /// <returns></returns>
         TestValue ValidateTestValueOnlyExactlyOneHasToExist( ICollection<TestValue> testValue, String testType, String valueType );
-
-        /// <summary>
-        /// Validates a required item
-        /// </summary>
-        /// <param name="item">the idtem to be validated</param>
-        /// <param name="name">the name of the item</param>
-        /// <typeparam name="T">the type of the item</typeparam>
-        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
-        void ValidateRequiredItem<T>( T item, String name );
-
-        /// <summary>
-        ///     Computes if the user can Edit the Incontinence Pad
-        /// </summary>
-        /// <returns></returns>
-        Boolean CanUserEdit();
-
-
     }
 }

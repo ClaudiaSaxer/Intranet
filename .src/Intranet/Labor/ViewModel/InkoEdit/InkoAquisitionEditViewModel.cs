@@ -21,9 +21,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ExpireMonth
         /// </value>
-        [DisplayName("Ablauf-Monat")]
-        [Required(ErrorMessage = "Der Ablauf-Monat muss angegeben werden")]
-        [Range(1, 12, ErrorMessage = "Die Zahl muss zwischen 1 und 12 liegen.")]
+        [DisplayName( "Ablauf-Monat" )]
+        [Required( ErrorMessage = "Der Ablauf-Monat muss angegeben werden" )]
+        [Range( 1, 12, ErrorMessage = "Die Zahl muss zwischen 1 und 12 liegen." )]
         public Int32 ExpireMonth { get; set; }
 
         /// <summary>
@@ -32,9 +32,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The ExpireYear
         /// </value>
-        [DisplayName("Ablauf-Jahr")]
-        [Required(ErrorMessage = "Das Ablauf-Jahr muss angegeben werden")]
-        [Range(0, 9999, ErrorMessage = "Die Zahl muss zwischen 0 und 9999 liegen.")]
+        [DisplayName( "Ablauf-Jahr" )]
+        [Required( ErrorMessage = "Das Ablauf-Jahr muss angegeben werden" )]
+        [Range( 0, 9999, ErrorMessage = "Die Zahl muss zwischen 0 und 9999 liegen." )]
         public Int32 ExpireYear { get; set; }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition1
         /// </value>
         [DisplayName( "1. Zugabe" )]
-        [Required(ErrorMessage = "Der Wert der 1. Zugabe muss angegeben werden")]
+        [Required( ErrorMessage = "Der Wert der 1. Zugabe muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition1 { get; set; }
 
@@ -55,7 +55,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition2
         /// </value>
         [DisplayName( "2. Zugabe" )]
-        [Required(ErrorMessage = "Der Wert der 2. Zugabe muss angegeben werden")]
+        [Required( ErrorMessage = "Der Wert der 2. Zugabe muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition2 { get; set; }
 
@@ -66,7 +66,7 @@ namespace Intranet.Labor.ViewModel
         ///     The AquisitionAddition3
         /// </value>
         [DisplayName( "3. Zugabe" )]
-        [Required(ErrorMessage = "Der Wert der 3. Zugabe muss angegeben werden")]
+        [Required( ErrorMessage = "Der Wert der 3. Zugabe muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double AquisitionAddition3 { get; set; }
 
@@ -77,7 +77,7 @@ namespace Intranet.Labor.ViewModel
         ///     The InkoWeight
         /// </value>
         [DisplayName( "Prüflingsgewicht" )]
-        [Required(ErrorMessage = "Das Prüflingsgewicht muss angegeben werden")]
+        [Required( ErrorMessage = "Das Prüflingsgewicht muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double InkoWeight { get; set; }
 
@@ -88,7 +88,7 @@ namespace Intranet.Labor.ViewModel
         ///     The FPDry
         /// </value>
         [DisplayName( "FP trocken" )]
-        [Required(ErrorMessage = "Der FP trocken Wert muss angegeben werden")]
+        [Required( ErrorMessage = "Der FP trocken Wert muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double FPDry { get; set; }
 
@@ -99,7 +99,7 @@ namespace Intranet.Labor.ViewModel
         ///     The FPWet
         /// </value>
         [DisplayName( "FP feucht" )]
-        [Required(ErrorMessage = "Der FP feucht Wert muss angegeben werden")]
+        [Required( ErrorMessage = "Der FP feucht Wert muss angegeben werden" )]
         [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double FPWet { get; set; }
 

@@ -101,7 +101,6 @@ namespace Intranet.Labor.ViewModel
         /// <value>the standard deviation of the  aquisition  time</value>
         public IncontinencePadAcquisitionTime AcquisitionTimeStandardDeviation { get; set; }
 
-
         /// <summary>
         ///     Gets or sets the average of the aquisation time
         /// </summary>
@@ -121,7 +120,7 @@ namespace Intranet.Labor.ViewModel
         public Int32 TestSheetId { get; set; }
 
         /// <summary>
-        /// Gets or sets the boolean, if the current user is allowed to edit the incontinence pad
+        ///     Gets or sets the boolean, if the current user is allowed to edit the incontinence pad
         /// </summary>
         /// <value>true if the current user is allowed to edit theincontinence pad</value>
         public Boolean CanEdit { get; set; }

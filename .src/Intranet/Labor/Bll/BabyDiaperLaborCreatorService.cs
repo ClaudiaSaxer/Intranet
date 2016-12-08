@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Bll;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
@@ -50,21 +49,21 @@ namespace Intranet.Labor.Bll
         {
             try
             {
-                var testSheet = BabyDiaperLaborCreatorBll.GetTestSheetForId(testSheetId);
+                var testSheet = BabyDiaperLaborCreatorBll.GetTestSheetForId( testSheetId );
                 var babydiaper = testSheet.TestValues.ToList()
-                                          .Where(x => x.ArticleTestType == ArticleType.BabyDiaper)
+                                          .Where( x => x.ArticleTestType == ArticleType.BabyDiaper )
                                           .ToList();
-                var rewets = Helper.ToRewetTestValuesCollection(babydiaper);
-                var rewetAverage = Helper.ToRewetAverage(babydiaper);
-                var rewetStandardDeviation = Helper.ToRewetStandardDeviation(babydiaper);
+                var rewets = Helper.ToRewetTestValuesCollection( babydiaper );
+                var rewetAverage = Helper.ToRewetAverage( babydiaper );
+                var rewetStandardDeviation = Helper.ToRewetStandardDeviation( babydiaper );
 
-                var retentions = Helper.ToRetentionTestValuesCollection(babydiaper);
-                var retentionAverage = Helper.ToRetentionAverage(babydiaper);
-                var retentionStandardDeviation = Helper.ToRetentionStandardDeviation(babydiaper);
+                var retentions = Helper.ToRetentionTestValuesCollection( babydiaper );
+                var retentionAverage = Helper.ToRetentionAverage( babydiaper );
+                var retentionStandardDeviation = Helper.ToRetentionStandardDeviation( babydiaper );
 
-                var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection(babydiaper);
-                var penetrationTimeAverage = Helper.ToPenetrationTimeAverage(babydiaper);
-                var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation(babydiaper);
+                var penetrationTimes = Helper.ToPenetrationTimeTestValuesCollection( babydiaper );
+                var penetrationTimeAverage = Helper.ToPenetrationTimeAverage( babydiaper );
+                var penetrationTimeStandardDeviation = Helper.ToPenetrationTimeStandardDeviation( babydiaper );
 
                 var canEdit = Helper.CanUserEdit();
                 var vm = new BabyDiaperLaborCreatorViewModel
@@ -74,7 +73,7 @@ namespace Intranet.Labor.Bll
                     FaNr = testSheet.FaNr,
                     ProductName = testSheet.ProductName,
                     SizeName = testSheet.SizeName,
-                    CreatedDate = testSheet.CreatedDateTime.ToString("dd.MM.yyyy"),
+                    CreatedDate = testSheet.CreatedDateTime.ToString( "dd.MM.yyyy" ),
                     Rewets = rewets,
                     BabyDiaperRewetAverage = rewetAverage,
                     BabyDiaperRewetStandardDeviation = rewetStandardDeviation,
@@ -84,20 +83,18 @@ namespace Intranet.Labor.Bll
                     PenetrationTimes = penetrationTimes,
                     BabyDiaperPenetrationTimeStandardDeviation = penetrationTimeStandardDeviation,
                     BabyDiaperPenetrationTimeAverage = penetrationTimeAverage,
-                    WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll(babydiaper),
-                    WeigthAverageAll = Helper.ComputeWeightAverageAll(babydiaper),
+                    WeightStandardDeviationAll = Helper.ComputeWeightStandardDeviationAll( babydiaper ),
+                    WeigthAverageAll = Helper.ComputeWeightAverageAll( babydiaper ),
                     TestSheetId = testSheetId,
-                    CanEdit = canEdit 
+                    CanEdit = canEdit
                 };
                 return vm;
             }
-            catch ( Exception exception)
+            catch ( Exception exception )
             {
-
-                Logger.Error( "a exception acured: "+exception.Message );
+                Logger.Error( "a exception acured: " + exception.Message );
                 return null;
             }
-          
         }
     }
 }

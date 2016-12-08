@@ -24,7 +24,6 @@ namespace Intranet.Dal
         /// </summary>
         public DbSet<Module> Modules { get; set; }
 
-
         #endregion
 
         #region Overrides of DbContext
@@ -46,7 +45,6 @@ namespace Intranet.Dal
         /// <param name="modelBuilder"> The builder that defines the model for the context being created. </param>
         protected override void OnModelCreating( DbModelBuilder modelBuilder )
         {
-           
             //Module Role
             modelBuilder.Entity<Module>()
                         .HasMany( r => r.Roles )
@@ -57,14 +55,12 @@ namespace Intranet.Dal
                                   mr.MapRightKey( "RoleRefId" );
                                   mr.ToTable( "ModuleRole" );
                               } );
-                           
-    
+
             //SubModule Submodule
             modelBuilder.Entity<Module>()
                         .HasMany( s => s.Submodules )
                         .WithOptional()
                         .Map( ss => ss.MapKey( "SubModulRefId" ) );
-
         }
 
         #endregion

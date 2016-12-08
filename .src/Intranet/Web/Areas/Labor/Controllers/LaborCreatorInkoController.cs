@@ -4,7 +4,6 @@ using System;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
 
@@ -16,10 +15,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
     ///     Class representing the controller for the labor creator
     /// </summary>
     [CheckDisable( ModuleName = "Labor" )]
-    [Authorize(Roles =
+    [Authorize( Roles =
          RoleSettings.LaborAdmin + "," +
          RoleSettings.LaborUser + "," +
-         RoleSettings.LaborViewer)]
+         RoleSettings.LaborViewer )]
     public class LaborCreatorInkoController : BaseController
     {
         #region Properties

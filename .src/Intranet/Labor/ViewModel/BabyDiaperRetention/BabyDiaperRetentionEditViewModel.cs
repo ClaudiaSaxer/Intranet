@@ -21,9 +21,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The DiaperWeight value
         /// </value>
-        [DisplayName("Windeln Gewicht")]
-        [Required(ErrorMessage = "Das Windeln Gewicht muss angegeben werden")]
-        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+        [DisplayName( "Windeln Gewicht" )]
+        [Required( ErrorMessage = "Das Windeln Gewicht muss angegeben werden" )]
+        [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double DiaperWeight { get; set; }
 
         /// <summary>
@@ -32,9 +32,9 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The WeightRetentionWet value
         /// </value>
-        [DisplayName("Windeln Gewicht Nass")]
-        [Required(ErrorMessage = "Das nasse Windeln Gewicht muss angegeben werden")]
-        [Range(0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein")]
+        [DisplayName( "Windeln Gewicht Nass" )]
+        [Required( ErrorMessage = "Das nasse Windeln Gewicht muss angegeben werden" )]
+        [Range( 0, Double.MaxValue, ErrorMessage = "Die Zahl muss eine Positive Kommazahl sein" )]
         public Double WeightRetentionWet { get; set; }
 
         #endregion

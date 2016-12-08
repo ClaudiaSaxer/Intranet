@@ -15,7 +15,7 @@ namespace Intranet.Bll
         #region Properties
 
         /// <summary>
-        /// Repository for Modules
+        ///     Repository for Modules
         /// </summary>
         public IGenericRepository<Module> ModuleRepository { get; set; }
 

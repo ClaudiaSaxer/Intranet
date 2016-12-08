@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Intranet.Labor.Definition.Bll
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interface representing Labor Creator Service Helper

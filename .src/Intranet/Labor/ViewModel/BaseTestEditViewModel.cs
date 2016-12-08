@@ -38,11 +38,11 @@ namespace Intranet.Labor.ViewModel
         /// <value>
         ///     The TestPerson
         /// </value>
-        [DisplayName("Test Person")]
-        [Required(ErrorMessage = "Der Name darf nicht leer sein")]
-        [DataType(DataType.Text, ErrorMessage = "Name muss ein Text sein")]
-        [StringLength(1024, ErrorMessage = "Der Name darf nicht länger als 1024 Zeichen sein")]
-        [MinLength(2, ErrorMessage = "Der Name muss mindestens 2 Zeichen lang sein")]
+        [DisplayName( "Test Person" )]
+        [Required( ErrorMessage = "Der Name darf nicht leer sein" )]
+        [DataType( DataType.Text, ErrorMessage = "Name muss ein Text sein" )]
+        [StringLength( 1024, ErrorMessage = "Der Name darf nicht länger als 1024 Zeichen sein" )]
+        [MinLength( 2, ErrorMessage = "Der Name muss mindestens 2 Zeichen lang sein" )]
         public String TestPerson { get; set; }
 
         /// <summary>

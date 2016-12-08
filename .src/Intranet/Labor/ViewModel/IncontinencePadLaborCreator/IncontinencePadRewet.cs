@@ -1,5 +1,5 @@
 ﻿using System;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -10,7 +10,6 @@ namespace Intranet.Labor.ViewModel
     {
         #region Properties
 
-      
         /// <summary>
         ///     Gets or sets the wet weight value
         /// </summary>
@@ -29,12 +28,12 @@ namespace Intranet.Labor.ViewModel
         /// <value>the weight diff value </value>
         public Double WeightDiff { get; set; }
 
-
         /// <summary>
         ///     Gets or sets the RW type
         /// </summary>
         /// <value>the RW type</value>
         public RwType RewetRW { get; set; }
+
         #endregion
     }
 }

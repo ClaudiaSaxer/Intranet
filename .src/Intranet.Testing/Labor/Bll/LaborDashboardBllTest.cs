@@ -4,9 +4,7 @@ using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
-using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -37,7 +35,7 @@ namespace Intranet.Labor.Bll.Test
                 Name = "The One",
                 ShiftType = ShiftType.Late,
                 EndTime = new TimeSpan( now.Hour + 2, now.Minute + 10, now.Second ),
-                StartTime = new TimeSpan( now.Hour - 2, now.Minute -10 , now.Second ),
+                StartTime = new TimeSpan( now.Hour - 2, now.Minute - 10, now.Second ),
                 StartDay = now.DayOfWeek,
                 EndDay = now.AddDays( 1 )
                             .DayOfWeek
@@ -45,7 +43,8 @@ namespace Intranet.Labor.Bll.Test
 
             var shiftSheduleListQuery = new List<ShiftSchedule>
             {
-                shift,shift
+                shift,
+                shift
             };
             var testSheetListQuery = new List<TestSheet>
             {
@@ -53,7 +52,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetListQuery.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late, shift, lastXShiftSchedules: shiftSheduleListQuery  );
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late, shift, shiftSheduleListQuery );
 
             var target = new LaborDashboardBll( new NLogLoggerFactory() )
             {
@@ -62,7 +61,8 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var actual = target.GetTestSheetForActualAndLastThreeShifts();
-            actual.Count.Should().Be( 1 );
+            actual.Count.Should()
+                  .Be( 1 );
         }
 
         /// <summary>
@@ -81,7 +81,6 @@ namespace Intranet.Labor.Bll.Test
                 CreatedDateTime = now
             };
 
-
             var testsheet2 = new TestSheet
             {
                 FaNr = "666",
@@ -94,36 +93,37 @@ namespace Intranet.Labor.Bll.Test
             {
                 Name = "The One",
                 ShiftType = ShiftType.Late,
-                EndTime = new TimeSpan(now.Hour + 2, now.Minute + 10, now.Second),
-                StartTime = new TimeSpan(now.Hour - 2, now.Minute - 10, now.Second),
+                EndTime = new TimeSpan( now.Hour + 2, now.Minute + 10, now.Second ),
+                StartTime = new TimeSpan( now.Hour - 2, now.Minute - 10, now.Second ),
                 StartDay = now.DayOfWeek,
-                EndDay = now.AddDays(1)
+                EndDay = now.AddDays( 1 )
                             .DayOfWeek
             };
 
             var shiftSheduleListQuery = new List<ShiftSchedule>
             {
-                shift,shift
+                shift,
+                shift
             };
             var testSheetListQuery = new List<TestSheet>
             {
-                testsheet,testsheet2
+                testsheet,
+                testsheet2
             };
 
-            var testSheetRepository = MockHelperBll.TestSheetRepository(testSheetListQuery.AsQueryable());
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late, shift, lastXShiftSchedules: shiftSheduleListQuery);
+            var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetListQuery.AsQueryable() );
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late, shift, shiftSheduleListQuery );
 
-            var target = new LaborDashboardBll(new NLogLoggerFactory())
+            var target = new LaborDashboardBll( new NLogLoggerFactory() )
             {
                 ShiftHelper = shifthelper,
                 TestSheets = testSheetRepository
             };
 
             var actual = target.GetTestSheetForActualAndLastThreeShifts();
-            actual.Count.Should().Be(1);
+            actual.Count.Should()
+                  .Be( 1 );
         }
-
-
 
         /// <summary>
         ///     Normal Passing Test with one matching module and role
@@ -145,33 +145,35 @@ namespace Intranet.Labor.Bll.Test
             {
                 Name = "The One",
                 ShiftType = ShiftType.Late,
-                EndTime = new TimeSpan(now.Hour + 2, now.Minute + 10, now.Second),
-                StartTime = new TimeSpan(now.Hour - 2, now.Minute - 10, now.Second),
+                EndTime = new TimeSpan( now.Hour + 2, now.Minute + 10, now.Second ),
+                StartTime = new TimeSpan( now.Hour - 2, now.Minute - 10, now.Second ),
                 StartDay = now.DayOfWeek,
-                EndDay = now.AddDays(1)
+                EndDay = now.AddDays( 1 )
                             .DayOfWeek
             };
 
             var shiftSheduleListQuery = new List<ShiftSchedule>
             {
-                shift,shift
+                shift,
+                shift
             };
             var testSheetListQuery = new List<TestSheet>
             {
                 testsheet
             };
 
-            var testSheetRepository = MockHelperBll.TestSheetRepository(testSheetListQuery.AsQueryable());
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late, shift, lastXShiftSchedules: shiftSheduleListQuery);
+            var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetListQuery.AsQueryable() );
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late, shift, shiftSheduleListQuery );
 
-            var target = new LaborDashboardBll(new NLogLoggerFactory())
+            var target = new LaborDashboardBll( new NLogLoggerFactory() )
             {
                 ShiftHelper = shifthelper,
                 TestSheets = testSheetRepository
             };
 
             var actual = target.GetTestSheetForActualAndLastThreeShifts();
-            actual.Count.Should().Be(0);
+            actual.Count.Should()
+                  .Be( 0 );
         }
     }
 }

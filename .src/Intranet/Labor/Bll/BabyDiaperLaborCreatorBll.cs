@@ -1,7 +1,7 @@
 ﻿using System;
 using Intranet.Common;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.Bll
 {

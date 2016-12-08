@@ -5,8 +5,6 @@ using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
-using Intranet.Labor.Test;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
@@ -18,10 +16,27 @@ namespace Intranet.Labor.Bll.Test
     /// </summary>
     public class IncontinencePadLaborCreatorServiceHelperTest
     {
-      
+        /// <summary>
+        ///     Testing GetIncontinencePadTestValueForType Empty Acquisition Time 2
+        /// </summary>
+        [Fact]
+        public
+            void GetIncontinencePadTestValueForTypeEmptyAcquisitionTimeTest2()
+        {
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
+            Exception ex =
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType(
+                        IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyAcquisition2(),
+                        TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                        TestValueType.Single ) );
 
-
+            Assert.Equal
+            ( "No Single for AcquisitionTimeAndRewet per Testsheet existing",
+              ex.Message
+            );
+        }
 
         /// <summary>
         ///     Testing GetIncontinencePadTestValueForType Empty Acquisition Time
@@ -40,29 +55,7 @@ namespace Intranet.Labor.Bll.Test
                         TestValueType.Single ) );
 
             Assert.Equal
-            ("No Single for AcquisitionTimeAndRewet per Testsheet existing",
-              ex.Message
-            );
-        }
-
-        /// <summary>
-        ///     Testing GetIncontinencePadTestValueForType Empty Acquisition Time 2
-        /// </summary>
-        [Fact]
-        public
-            void GetIncontinencePadTestValueForTypeEmptyAcquisitionTimeTest2()
-        {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-
-            Exception ex =
-                Assert.Throws<InvalidDataException>(
-                    () => serviceHelper.GetIncontinencePadTestValueForType(
-                        IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyAcquisition2(),
-                        TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                        TestValueType.Single ) );
-
-            Assert.Equal
-            ("No Single for AcquisitionTimeAndRewet per Testsheet existing",
+            ( "No Single for AcquisitionTimeAndRewet per Testsheet existing",
               ex.Message
             );
         }
@@ -76,7 +69,8 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetIncontinencePadTestValueForType( new List<TestValue>(), TestTypeIncontinencePad.Retention, TestValueType.Single ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType( new List<TestValue>(), TestTypeIncontinencePad.Retention, TestValueType.Single ) );
 
             Assert.Equal( "No Single for Retention per Testsheet existing", ex.Message );
         }
@@ -145,7 +139,7 @@ namespace Intranet.Labor.Bll.Test
                                                          TestTypeIncontinencePad.AcquisitionTimeAndRewet,
                                                          TestValueType.Single ) );
 
-            Assert.Equal("Only one Single for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one Single for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -159,10 +153,10 @@ namespace Intranet.Labor.Bll.Test
             Exception ex =
                 Assert.Throws<InvalidDataException>(
                     () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyAcquisitionTimeAverage(),
-                                                                       TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                                                                       TestValueType.Average ) );
+                                                                            TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                                                                            TestValueType.Average ) );
 
-            Assert.Equal("Only one Average for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one Average for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -176,10 +170,10 @@ namespace Intranet.Labor.Bll.Test
             Exception ex =
                 Assert.Throws<InvalidDataException>(
                     () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyAcquisitionTimeStandardDeviation(),
-                                                                       TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                                                                       TestValueType.StandardDeviation ) );
+                                                                            TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                                                                            TestValueType.StandardDeviation ) );
 
-            Assert.Equal("Only one StandardDeviation for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one StandardDeviation for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -191,9 +185,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRententionSingle(),
-                                                                                                        TestTypeIncontinencePad.Retention,
-                                                                                                        TestValueType.Single ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRententionSingle(),
+                                                                            TestTypeIncontinencePad.Retention,
+                                                                            TestValueType.Single ) );
 
             Assert.Equal( "Only one Single for Retention per Testsheet allowed", ex.Message );
         }
@@ -207,9 +202,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRetentionAverage(),
-                                                                                                        TestTypeIncontinencePad.Retention,
-                                                                                                        TestValueType.Average ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRetentionAverage(),
+                                                                            TestTypeIncontinencePad.Retention,
+                                                                            TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for Retention per Testsheet allowed", ex.Message );
         }
@@ -225,8 +221,8 @@ namespace Intranet.Labor.Bll.Test
             Exception ex =
                 Assert.Throws<InvalidDataException>(
                     () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRetentionStandardDeviation(),
-                                                                       TestTypeIncontinencePad.Retention,
-                                                                       TestValueType.StandardDeviation ) );
+                                                                            TestTypeIncontinencePad.Retention,
+                                                                            TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for Retention per Testsheet allowed", ex.Message );
         }
@@ -240,9 +236,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetSingle(),
-                                                                                                        TestTypeIncontinencePad.RewetFree,
-                                                                                                        TestValueType.Single ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetSingle(),
+                                                                            TestTypeIncontinencePad.RewetFree,
+                                                                            TestValueType.Single ) );
 
             Assert.Equal( "Only one Single for RewetFree per Testsheet allowed", ex.Message );
         }
@@ -256,9 +253,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetAverage(),
-                                                                                                        TestTypeIncontinencePad.RewetFree,
-                                                                                                        TestValueType.Average ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetAverage(),
+                                                                            TestTypeIncontinencePad.RewetFree,
+                                                                            TestValueType.Average ) );
 
             Assert.Equal( "Only one Average for RewetFree per Testsheet allowed", ex.Message );
         }
@@ -274,8 +272,8 @@ namespace Intranet.Labor.Bll.Test
             Exception ex =
                 Assert.Throws<InvalidDataException>(
                     () => serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation(),
-                                                                       TestTypeIncontinencePad.RewetFree,
-                                                                       TestValueType.StandardDeviation ) );
+                                                                            TestTypeIncontinencePad.RewetFree,
+                                                                            TestValueType.StandardDeviation ) );
 
             Assert.Equal( "Only one StandardDeviation for RewetFree per Testsheet allowed", ex.Message );
         }
@@ -290,8 +288,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkAcquisitionTimeSingle( expected ),
-                                                                      TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                                                                      TestValueType.Single );
+                                                                           TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                                                                           TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -307,8 +305,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkAcquisitionTimeAverage( expected ),
-                                                                      TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                                                                      TestValueType.Average );
+                                                                           TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                                                                           TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -324,8 +322,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOKAcquisitionTimeStandardDeviation( expected ),
-                                                                      TestTypeIncontinencePad.AcquisitionTimeAndRewet,
-                                                                      TestValueType.StandardDeviation );
+                                                                           TestTypeIncontinencePad.AcquisitionTimeAndRewet,
+                                                                           TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
@@ -341,8 +339,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.Retention };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRetentionTimeSingle( expected ),
-                                                                      TestTypeIncontinencePad.Retention,
-                                                                      TestValueType.Single );
+                                                                           TestTypeIncontinencePad.Retention,
+                                                                           TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -358,8 +356,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.Retention };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRetentionAverage( expected ),
-                                                                      TestTypeIncontinencePad.Retention,
-                                                                      TestValueType.Average );
+                                                                           TestTypeIncontinencePad.Retention,
+                                                                           TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -375,8 +373,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.Retention };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRetentionStandardDeviation( expected ),
-                                                                      TestTypeIncontinencePad.Retention,
-                                                                      TestValueType.StandardDeviation );
+                                                                           TestTypeIncontinencePad.Retention,
+                                                                           TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
@@ -392,8 +390,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.RewetFree };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRewetSingle( expected ),
-                                                                      TestTypeIncontinencePad.RewetFree,
-                                                                      TestValueType.Single );
+                                                                           TestTypeIncontinencePad.RewetFree,
+                                                                           TestValueType.Single );
 
             actual.Should()
                   .Be( expected );
@@ -409,8 +407,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.RewetFree };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRewetAverage( expected ),
-                                                                      TestTypeIncontinencePad.RewetFree,
-                                                                      TestValueType.Average );
+                                                                           TestTypeIncontinencePad.RewetFree,
+                                                                           TestValueType.Average );
 
             actual.Should()
                   .Be( expected );
@@ -426,8 +424,8 @@ namespace Intranet.Labor.Bll.Test
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.RewetFree };
             var
                 actual = serviceHelper.GetIncontinencePadTestValueForType( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRewetStandardDeviation( expected ),
-                                                                      TestTypeIncontinencePad.RewetFree,
-                                                                      TestValueType.StandardDeviation );
+                                                                           TestTypeIncontinencePad.RewetFree,
+                                                                           TestValueType.StandardDeviation );
 
             actual.Should()
                   .Be( expected );
@@ -442,9 +440,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.ToAcquisitionTimeAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyAcquisitionTimeAverage() ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ToAcquisitionTimeAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyAcquisitionTimeAverage() ) );
 
-            Assert.Equal("Only one Average for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one Average for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -458,7 +457,7 @@ namespace Intranet.Labor.Bll.Test
             Exception ex =
                 Assert.Throws<InvalidDataException>( () => serviceHelper.ToAcquisitionTimeAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyAcquisition2() ) );
 
-            Assert.Equal("No Average for AcquisitionTimeAndRewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No Average for AcquisitionTimeAndRewet per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -485,7 +484,7 @@ namespace Intranet.Labor.Bll.Test
                 Assert.Throws<InvalidDataException>(
                     () => serviceHelper.ToAcquisitionTimeStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyAcquisitionTimeStandardDeviation() ) );
 
-            Assert.Equal("Only one StandardDeviation for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
+            Assert.Equal( "Only one StandardDeviation for AcquisitionTimeAndRewet per Testsheet allowed", ex.Message );
         }
 
         /// <summary>
@@ -497,9 +496,10 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.ToAcquisitionTimeStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyAcquisition2() ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ToAcquisitionTimeStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesEmptyAcquisition2() ) );
 
-            Assert.Equal("No StandardDeviation for AcquisitionTimeAndRewet per Testsheet existing", ex.Message );
+            Assert.Equal( "No StandardDeviation for AcquisitionTimeAndRewet per Testsheet existing", ex.Message );
         }
 
         /// <summary>
@@ -534,12 +534,12 @@ namespace Intranet.Labor.Bll.Test
             var actual = serviceHelper.ToAcquisitionTime(
                 new IncontinencePadTestValue
                 {
-                    
                     AcquisitionTimeFirst = 1.0,
                     AcquisitionTimeSecond = 2.0,
                     AcquisitionTimeThird = 3.0,
-AcquisitionTimeFirstRw = RwType.Better,
-AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
+                    AcquisitionTimeFirstRw = RwType.Better,
+                    AcquisitionTimeThirdRw = RwType.Better,
+                    AcquisitionTimeSecondRw = RwType.Better
                 } );
 
             actual.ShouldBeEquivalentTo( expected );
@@ -552,7 +552,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToAcquisitionTimeTestValueCollectionTest()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToAcquisitionTimeTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -651,13 +651,47 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToRetentionTestValueCollectionTest()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToRetentionTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
                   .Be( 2 );
         }
 
+        /// <summary>
+        ///     Testing to ToRewetAfterAcquisition ok
+        /// </summary>
+        [Fact]
+        public void ToRewetAfterAcquisitionTestOk()
+        {
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
+            var expected = new IncontinencePadRewet
+            {
+                RewetRW = RwType.Ok,
+                WeightDry = 1.0,
+                WeightWet = 2.0,
+                WeightDiff = 1.0
+            };
+            var actual = serviceHelper.ToRewetAfterAcquisitionTime(
+                new IncontinencePadTestValue
+                {
+                    RewetAfterAcquisitionTimeRw = RwType.Ok,
+                    RewetAfterAcquisitionTimeDryWeight = 1.0,
+                    RewetAfterAcquisitionTimeWetWeight = 2.0,
+                    RewetAfterAcquisitionTimeWeightDifference = 1.0
+                } );
+
+            actual.RewetRW.Should()
+                  .Be( expected.RewetRW );
+            actual.WeightDiff.Should()
+                  .Be( expected.WeightDiff );
+            actual.WeightDry.Should()
+                  .Be( expected.WeightDry );
+            actual.WeightWet.Should()
+                  .Be( expected.WeightWet );
+
+            actual.ShouldBeEquivalentTo( expected );
+        }
 
         /// <summary>
         ///     Testing ToRewetAverage many
@@ -694,7 +728,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToRewetAverageTestOk()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.RewetFree, RewetFreeRw = RwType.Better, };
+            var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.RewetFree, RewetFreeRw = RwType.Better };
 
             var actual = serviceHelper.ToRewetAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkRewetAverage( expected ) );
             actual.RewetRW.Should()
@@ -710,7 +744,8 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
             Exception ex =
-                Assert.Throws<InvalidDataException>( () => serviceHelper.ToRewetStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation() ) );
+                Assert.Throws<InvalidDataException>(
+                    () => serviceHelper.ToRewetStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesManyRewetStandardDeviation() ) );
 
             Assert.Equal( "Only one StandardDeviation for RewetFree per Testsheet allowed", ex.Message );
         }
@@ -753,7 +788,9 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
             var expected = new IncontinencePadRewet
             {
                 RewetRW = RwType.Ok,
-                WeightDry = 1.0,WeightWet = 2.0,WeightDiff = 1.0
+                WeightDry = 1.0,
+                WeightWet = 2.0,
+                WeightDiff = 1.0
             };
             var actual = serviceHelper.ToRewet(
                 new IncontinencePadTestValue
@@ -764,7 +801,6 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
                     RewetFreeDifference = 1.0
                 } );
 
-           
             actual.RewetRW.Should()
                   .Be( expected.RewetRW );
             actual.WeightDiff.Should()
@@ -773,45 +809,10 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
                   .Be( expected.WeightDry );
             actual.WeightWet.Should()
                   .Be( expected.WeightWet );
-          
+
             actual.ShouldBeEquivalentTo( expected );
         }
 
-        /// <summary>
-        ///     Testing to ToRewetAfterAcquisition ok
-        /// </summary>
-        [Fact]
-        public void ToRewetAfterAcquisitionTestOk()
-        {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
-            var expected = new IncontinencePadRewet
-            {
-                RewetRW = RwType.Ok,
-                WeightDry = 1.0,
-                WeightWet = 2.0,
-                WeightDiff = 1.0
-            };
-            var actual = serviceHelper.ToRewetAfterAcquisitionTime(
-                new IncontinencePadTestValue
-                {
-                    RewetAfterAcquisitionTimeRw = RwType.Ok,
-                    RewetAfterAcquisitionTimeDryWeight = 1.0,
-                    RewetAfterAcquisitionTimeWetWeight = 2.0,
-                    RewetAfterAcquisitionTimeWeightDifference = 1.0
-                });
-
-
-            actual.RewetRW.Should()
-                  .Be(expected.RewetRW);
-            actual.WeightDiff.Should()
-                  .Be(expected.WeightDiff);
-            actual.WeightDry.Should()
-                  .Be(expected.WeightDry);
-            actual.WeightWet.Should()
-                  .Be(expected.WeightWet);
-
-            actual.ShouldBeEquivalentTo(expected);
-        }
         /// <summary>
         ///     Testing ToRewetTestValueCollection ok
         /// </summary>
@@ -819,7 +820,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToRewetTestValueCollectionTest()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToRewetTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -844,7 +845,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
                 }
             };
 
-            var actual = serviceHelper.ToRewetTestValue( new IncontinencePadTestValue {  RewetFreeRw = RwType.Better },
+            var actual = serviceHelper.ToRewetTestValue( new IncontinencePadTestValue { RewetFreeRw = RwType.Better },
                                                          "test person",
                                                          "theprodcode",
                                                          1 );
@@ -879,7 +880,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToTestValuesCollectionByTestTypeTest1()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -896,7 +897,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToTestValuesCollectionByTestTypeTest2()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
@@ -913,7 +914,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToTestValuesCollectionByTestTypeTest3()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.AcquisitionTimeAndRewet },
@@ -930,7 +931,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToTestValuesCollectionByTestTypeTest4()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Average,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -947,7 +948,7 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         public void ToTestValuesCollectionByTestTypeTest5()
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.StandardDeviation,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -963,15 +964,15 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest6()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
-            var actual = serviceHelper.ToTestValuesCollectionByTestType(IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Average,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
-                                                                         serviceHelper.ToRewetTestValue)
+                                                                         serviceHelper.ToRewetTestValue )
                                       .ToList();
             actual.Count.Should()
-                  .Be(1);
+                  .Be( 1 );
         }
 
         /// <summary>
@@ -980,15 +981,15 @@ AcquisitionTimeThirdRw = RwType.Better,AcquisitionTimeSecondRw = RwType.Better
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest7()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper(new NLogLoggerFactory());
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper("123");
-            var actual = serviceHelper.ToTestValuesCollectionByTestType(IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
+            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.StandardDeviation,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
-                                                                         serviceHelper.ToRewetTestValue)
+                                                                         serviceHelper.ToRewetTestValue )
                                       .ToList();
             actual.Count.Should()
-                  .Be(1);
+                  .Be( 1 );
         }
 
         /// <summary>

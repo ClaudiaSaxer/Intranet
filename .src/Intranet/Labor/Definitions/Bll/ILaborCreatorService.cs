@@ -1,8 +1,8 @@
 ﻿using System;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interaface representing Labor Creator Service
@@ -21,7 +21,5 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="faNr">the production order number</param>
         /// <returns>the id of the testsheet or null if no exists</returns>
         TestSheet GetTestSheetId( String faNr );
-
-     
     }
 }

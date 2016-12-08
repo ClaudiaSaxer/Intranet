@@ -1,11 +1,11 @@
 ﻿#region Usings
 
 using Intranet.Common;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 #endregion
 
-namespace Intranet.Labor.Dal.Repositories
+namespace Intranet.Labor.Dal
 {
     /// <summary>
     ///     The Repository for the BabyDiaperTestValueRepository
@@ -19,8 +19,8 @@ namespace Intranet.Labor.Dal.Repositories
         /// </summary>
         /// <param name="databaseFactory">A <see cref="IDatabaseFactory{TContext}" />.</param>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperTestValueRepository(IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory)
-            : base(databaseFactory, loggerFactory)
+        public BabyDiaperTestValueRepository( IDatabaseFactory<LaborContext> databaseFactory, ILoggerFactory loggerFactory )
+            : base( databaseFactory, loggerFactory )
         {
         }
 

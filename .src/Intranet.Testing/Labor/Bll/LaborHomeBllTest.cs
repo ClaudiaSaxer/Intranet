@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Intranet.Labor.TestEnvironment;
 using Intranet.Model;
-using Intranet.TestEnvironment;
 using Xunit;
-using MockHelperBll = Intranet.Labor.TestEnvironment.MockHelperBll;
 
 namespace Intranet.Labor.Bll.Test
 {

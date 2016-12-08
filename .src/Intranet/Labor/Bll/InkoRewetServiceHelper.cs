@@ -1,13 +1,11 @@
 ﻿#region Usings
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -86,15 +84,15 @@ namespace Intranet.Labor.Bll
             var inkoRewetTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
-                                 tv.ArticleTestType == ArticleType.IncontinencePad
+                                 ( tv.ArticleTestType == ArticleType.IncontinencePad )
                                  && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree )
-                                 && tv.TestValueType == TestValueType.Average );
+                                 && ( tv.TestValueType == TestValueType.Average ) );
             var inkoRewetTestStDev =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
-                                 tv.ArticleTestType == ArticleType.IncontinencePad
+                                 ( tv.ArticleTestType == ArticleType.IncontinencePad )
                                  && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree )
-                                 && tv.TestValueType == TestValueType.StandardDeviation );
+                                 && ( tv.TestValueType == TestValueType.StandardDeviation ) );
             UpdateInkoRewetAvg( testSheet, inkoRewetTestAvg );
             UpdateInkoRewetStDev( testSheet, inkoRewetTestAvg, inkoRewetTestStDev );
 
@@ -110,7 +108,8 @@ namespace Intranet.Labor.Bll
         public TestValue UpdateRewetTest( InkoRewetEditViewModel viewModel )
         {
             var testValue = TestBll.GetTestValue( viewModel.TestValueId );
-            if ( testValue.IsNull() || testValue.ArticleTestType != ArticleType.IncontinencePad || testValue.IncontinencePadTestValue.TestType != TestTypeIncontinencePad.RewetFree )
+            if ( testValue.IsNull() || ( testValue.ArticleTestType != ArticleType.IncontinencePad )
+                 || ( testValue.IncontinencePadTestValue.TestType != TestTypeIncontinencePad.RewetFree ) )
             {
                 Logger.Error( "Old Test not found in DB" );
                 return null;
@@ -125,7 +124,7 @@ namespace Intranet.Labor.Bll
             testValue.IncontinencePadTestValue.RewetFreeWetValue = viewModel.FPWet;
             testValue.IncontinencePadTestValue.TestType = TestTypeIncontinencePad.RewetFree;
 
-            TestServiceHelper.UpdateNotes(viewModel.Notes, testValue);
+            TestServiceHelper.UpdateNotes( viewModel.Notes, testValue );
 
             testValue.IncontinencePadTestValue = CalculateInkoRewetValues( testValue.IncontinencePadTestValue, viewModel.TestSheetId );
 
@@ -171,8 +170,8 @@ namespace Intranet.Labor.Bll
                 var testValue in
                 testSheet.TestValues.Where(
                              testValue =>
-                                 testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree )
+                                 ( testValue.TestValueType == TestValueType.Single )
+                                 && ( testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) )
             )
             {
                 tempInko.RewetFreeDryValue += testValue.IncontinencePadTestValue.RewetFreeDryValue;
@@ -187,7 +186,7 @@ namespace Intranet.Labor.Bll
             rewetTestAvg.IncontinencePadTestValue.RewetFreeDryValue = tempInko.RewetFreeDryValue / counter;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeWetValue = tempInko.RewetFreeWetValue / counter;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference = tempInko.RewetFreeDifference / counter;
-            if (GetRewetFreeRwType(rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference, productionOrder) == RwType.Worse)
+            if ( GetRewetFreeRwType( rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference, productionOrder ) == RwType.Worse )
                 tempInko.RewetFreeRw = RwType.Worse;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeRw = tempInko.RewetFreeRw;
             return rewetTestAvg;
@@ -201,8 +200,8 @@ namespace Intranet.Labor.Bll
                 var testValue in
                 testSheet.TestValues.Where(
                              testValue =>
-                                 testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree )
+                                 ( testValue.TestValueType == TestValueType.Single )
+                                 && ( testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) )
             )
             {
                 tempInko.RewetFreeDryValue += Math.Pow( testValue.IncontinencePadTestValue.RewetFreeDryValue - rewetTestAvg.IncontinencePadTestValue.RewetFreeDryValue, 2 );
@@ -219,9 +218,9 @@ namespace Intranet.Labor.Bll
             else
             {
                 counter--;
-                rewetTestStDev.IncontinencePadTestValue.RewetFreeDryValue = Math.Sqrt(tempInko.RewetFreeDryValue / counter);
-                rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = Math.Sqrt(tempInko.RewetFreeWetValue / counter);
-                rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = Math.Sqrt(tempInko.RewetFreeDifference / counter);
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDryValue = Math.Sqrt( tempInko.RewetFreeDryValue / counter );
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = Math.Sqrt( tempInko.RewetFreeWetValue / counter );
+                rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = Math.Sqrt( tempInko.RewetFreeDifference / counter );
             }
             return rewetTestStDev;
         }

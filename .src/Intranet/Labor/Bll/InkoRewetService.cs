@@ -7,7 +7,6 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -62,7 +61,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue( testValueId );
-            InkoRewetServiceHelper.UpdateRewetAverageAndStv(result.TestSheetRefId);
+            InkoRewetServiceHelper.UpdateRewetAverageAndStv( result.TestSheetRefId );
             return result;
         }
 
@@ -132,7 +131,7 @@ namespace Intranet.Labor.Bll
         {
             var testSheet = TestBll.GetTestSheetInfo( testSheetId );
 
-            if ( testSheet.IsNull() || testSheet.ArticleType != ArticleType.IncontinencePad)
+            if ( testSheet.IsNull() || ( testSheet.ArticleType != ArticleType.IncontinencePad ) )
             {
                 Logger.Error( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
@@ -177,9 +176,9 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? InkoRewetServiceHelper.SaveNewRewetTest(viewModel)
-                    : InkoRewetServiceHelper.UpdateRewetTest(viewModel);
-                var testSheet = InkoRewetServiceHelper.UpdateRewetAverageAndStv(viewModel.TestSheetId);
+                    ? InkoRewetServiceHelper.SaveNewRewetTest( viewModel )
+                    : InkoRewetServiceHelper.UpdateRewetTest( viewModel );
+                var testSheet = InkoRewetServiceHelper.UpdateRewetAverageAndStv( viewModel.TestSheetId );
             }
             catch ( Exception e )
             {

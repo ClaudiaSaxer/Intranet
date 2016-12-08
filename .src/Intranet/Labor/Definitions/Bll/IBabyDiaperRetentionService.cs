@@ -1,7 +1,7 @@
 ﻿#region Usings
 
 using System;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -13,6 +13,13 @@ namespace Intranet.Labor.Definition
     /// </summary>
     public interface IBabyDiaperRetentionService
     {
+        /// <summary>
+        ///     deletes the testvalue
+        /// </summary>
+        /// <param name="testValueId">id of the testvalue</param>
+        /// <returns>The deleted testvalue</returns>
+        TestValue Delete( Int32 testValueId );
+
         /// <summary>
         ///     Gets a new BabyDiaperRetentionEditViewModel
         /// </summary>
@@ -33,12 +40,5 @@ namespace Intranet.Labor.Definition
         /// <param name="babyDiaperRetentionEditViewModel">The viewmodel which will be saved or updated</param>
         /// <returns>The saved or updated TestValue</returns>
         TestValue Save( BabyDiaperRetentionEditViewModel babyDiaperRetentionEditViewModel );
-
-        /// <summary>
-        ///     deletes the testvalue
-        /// </summary>
-        /// <param name="testValueId">id of the testvalue</param>
-        /// <returns>The deleted testvalue</returns>
-        TestValue Delete(Int32 testValueId);
     }
 }

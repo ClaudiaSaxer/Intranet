@@ -7,7 +7,7 @@ using Intranet.ViewModel;
 using Intranet.Web.Controllers;
 using Xunit;
 
-namespace Intranet.Web.Test.Controllers
+namespace Intranet.Web.Test
 {
     /// <summary>
     ///     A test class for the home controller
@@ -44,7 +44,7 @@ namespace Intranet.Web.Test.Controllers
 
             var result = homeController.Index() as ViewResult;
             var homeViewModel = (HomeViewModel) result?.ViewData.Model;
-            Assert.Equal(expectedHomeViewModel,homeViewModel);
+            Assert.Equal( expectedHomeViewModel, homeViewModel );
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Intranet.Web.Test.Controllers
             };
 
             var result = homeController.Index() as ViewResult;
-            Assert.Equal("Index", result?.ViewName);
+            Assert.Equal( "Index", result?.ViewName );
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
 
@@ -33,12 +32,11 @@ namespace Intranet.Labor.Bll.Test
                 {
                     ShiftType = shiftType,
                     FaNr = faNr,
-                    ProductName =productName ,
+                    ProductName = productName,
                     SizeName = sizeName,
                     CreatedDateTime = createdDateTime,
                     TestValues = new List<TestValue>(),
                     TestSheetId = 1
-                    
                 } );
 
             var target = new BabyDiaperLaborCreatorService( new NLogLoggerFactory() )
@@ -65,22 +63,21 @@ namespace Intranet.Labor.Bll.Test
             actual.Rewets.Should()
                   .NotBeNull( "because it is initialized" );
             actual.BabyDiaperRewetAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.BabyDiaperRewetStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.Retentions.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.BabyDiaperRewetAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.BabyDiaperRetentionStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.PenetrationTimes.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.BabyDiaperPenetrationTimeAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.BabyDiaperPenetrationTimeStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
-
+                  .NotBeNull( "because it is initialized" );
         }
     }
 }

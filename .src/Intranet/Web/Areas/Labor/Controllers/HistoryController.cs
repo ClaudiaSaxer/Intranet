@@ -3,7 +3,6 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;

@@ -1,5 +1,5 @@
 ﻿using System;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.ViewModel
 {

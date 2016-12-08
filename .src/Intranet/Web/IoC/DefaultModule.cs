@@ -9,10 +9,7 @@ using Intranet.Dal;
 using Intranet.Definition;
 using Intranet.Labor.Bll;
 using Intranet.Labor.Dal;
-using Intranet.Labor.Dal.Repositories;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Definition.Bll;
-using Intranet.Web.Areas.Labor.Controllers;
 
 #endregion
 
@@ -221,9 +218,9 @@ namespace Intranet.Web.IoC
 
             builder.RegisterType<CheckDisableBll>()
                    .As<ICheckDisableBll>()
-				   .PropertiesAutowired()
+                   .PropertiesAutowired()
                    .InstancePerRequest();
-				   
+
             builder.RegisterType<LaborDashboardService>()
                    .As<ILaborDashboardService>()
                    .PropertiesAutowired()

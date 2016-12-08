@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Extend;
 using Intranet.Definition;
 
@@ -33,7 +29,7 @@ namespace Intranet.Bll
         public Boolean IsVisible( String modulName )
         {
             var module = CheckDisableBll.GetModule( modulName );
-            if ( module.IsNull() || module.Visible.IsNull())
+            if ( module.IsNull() || module.Visible.IsNull() )
                 return false;
 
             return module.Visible ?? false;

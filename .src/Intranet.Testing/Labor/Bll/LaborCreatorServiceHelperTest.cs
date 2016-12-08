@@ -6,7 +6,7 @@ using Xunit;
 namespace Intranet.Labor.Bll.Test
 {
     /// <summary>
-    /// Class representing tests for labor creator service helper
+    ///     Class representing tests for labor creator service helper
     /// </summary>
     public class LaborCreatorServiceHelperTest
     {
@@ -32,7 +32,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             const String expected = "IT/11/16/158/23:58";
-            var actual = serviceHelper.GenerateProdCode("M11", 16, 158, new TimeSpan( 23, 58, 0 ) );
+            var actual = serviceHelper.GenerateProdCode( "M11", 16, 158, new TimeSpan( 23, 58, 0 ) );
 
             actual.Should()
                   .Be( expected );
@@ -46,7 +46,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new LaborCreatorServiceHelper( new NLogLoggerFactory() );
             const String expected = "IT/11/06/158/23:00";
-            var actual = serviceHelper.GenerateProdCode("M11", 2006, 158, new TimeSpan( 23, 00, 0 ) );
+            var actual = serviceHelper.GenerateProdCode( "M11", 2006, 158, new TimeSpan( 23, 00, 0 ) );
 
             actual.Should()
                   .Be( expected );
@@ -65,7 +65,5 @@ namespace Intranet.Labor.Bll.Test
             actual.Should()
                   .Be( expected );
         }
-
-
     }
 }

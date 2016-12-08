@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.labor
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing the baby diaper test value
@@ -53,7 +53,6 @@ namespace Intranet.Labor.Model.labor
         /// <value>the distribution after the strikte trough</value>
         public Double DistributionOfTheStrikeTrough { get; set; }
 
-    
         /// <summary>
         ///     Gets or sets the RW of the revet for 140ml
         /// </summary>
@@ -83,12 +82,13 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the retention percent after the zentrifuge</value>
         public Double RetentionAfterZentrifugePercent { get; set; }
+
         /// <summary>
-        /// Gets or sets the retention wet weight of the diaper
+        ///     Gets or sets the retention wet weight of the diaper
         /// </summary>
         /// <value>the wet weight of the diaper</value>
         public Double RetentionWetWeight { get; set; }
-        
+
         /// <summary>
         ///     Gets or sets the value for the SAP g/Höwi
         /// </summary>

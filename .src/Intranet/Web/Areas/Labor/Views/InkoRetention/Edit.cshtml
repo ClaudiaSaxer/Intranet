@@ -11,39 +11,41 @@
 
     <div class="intigena-line"></div>
 
-    @using (Html.BeginForm("Save", "InkoRetention", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" }))
+    @using ( Html.BeginForm( "Save", "InkoRetention", FormMethod.Post, new { @class = "form-horizontal", id = "submitForm" } ) )
     {
-        @Html.ValidationSummary(true)
+        @Html.ValidationSummary( true )
         @Html.AntiForgeryToken()
-        @Html.HiddenFor(m => m.TestValueId, @Model.TestValueId);
-        @Html.HiddenFor(m => m.TestSheetId, @Model.TestSheetId);
+        @Html.HiddenFor( m => m.TestValueId, Model.TestValueId )
+        ;
+        @Html.HiddenFor( m => m.TestSheetId, Model.TestSheetId )
+        ;
         <div class="form-group">
             <p class="error-message">
-                @Html.ValidationMessageFor(m => m.TestPerson)
+                @Html.ValidationMessageFor( m => m.TestPerson )
             </p>
             <label class="col-sm-2 control-label">Testperson:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = @Model.TestPerson, @class = "form-control", type = "text", @required = "required" } )
+                @Html.TextBoxFor( m => m.TestPerson, new { placeholder = Model.TestPerson, @class = "form-control", type = "text", required = "required" } )
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Produktions Code:</label>
             <div class="col-sm-10 form-inline">
                 <label class="control-label">
-                    @Html.HiddenFor(m => m.ProductionCode)
+                    @Html.HiddenFor( m => m.ProductionCode )
                     @Model.ProductionCode
                 </label>
-                @Html.TextBoxFor(m => m.ProductionCodeDay, new { placeholder = @Model.ProductionCodeDay, @class = "form-control", style = "width: 60px;", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.ProductionCodeDay, new { placeholder = Model.ProductionCodeDay, @class = "form-control", style = "width:60px;", type = "text", required = "required" } )
                 <label class="control-label">/</label>
-                @Html.TextBoxFor(m => m.ProductionCodeTime, new { placeholder = @Model.ProductionCodeTime, @class = "form-control", type = "time", @required = "required" })
+                @Html.TextBoxFor( m => m.ProductionCodeTime, new { placeholder = Model.ProductionCodeTime, @class = "form-control", type = "time", required = "required" } )
                 <label class="control-label">/EXP</label>
-                @Html.TextBoxFor(m => m.ExpireMonth, new { placeholder = @Model.ExpireMonth, @class = "form-control", style = "width: 50px;", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.ExpireMonth, new { placeholder = Model.ExpireMonth, @class = "form-control", style = "width:50px;", type = "text", required = "required" } )
                 <label class="control-label">/</label>
-                @Html.TextBoxFor(m => m.ExpireYear, new { placeholder = @Model.ExpireYear, @class = "form-control", style = "width: 100px;", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.ExpireYear, new { placeholder = Model.ExpireYear, @class = "form-control", style = "width:100px;", type = "text", required = "required" } )
                 <div class="error-message">
-                    @Html.ValidationMessageFor(m => m.ProductionCodeDay)
-                    @Html.ValidationMessageFor(m => m.ExpireMonth)
-                    @Html.ValidationMessageFor(m => m.ExpireYear)
+                    @Html.ValidationMessageFor( m => m.ProductionCodeDay )
+                    @Html.ValidationMessageFor( m => m.ExpireMonth )
+                    @Html.ValidationMessageFor( m => m.ExpireYear )
                 </div>
 
             </div>
@@ -54,36 +56,36 @@
         <div class="form-group">
             <h4>Retention Hytec (g):</h4>
             <p class="error-message">
-                @Html.ValidationMessageFor(m => m.InkoWeight)
-                @Html.ValidationMessageFor(m => m.InkoWeightWet)
-                @Html.ValidationMessageFor(m => m.InkoWeightAfterZentrifuge)
+                @Html.ValidationMessageFor( m => m.InkoWeight )
+                @Html.ValidationMessageFor( m => m.InkoWeightWet )
+                @Html.ValidationMessageFor( m => m.InkoWeightAfterZentrifuge )
             </p>
             <label class="col-sm-2 control-label">Prüflingsgewicht:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.InkoWeight, new { placeholder = @Model.InkoWeight, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.InkoWeight, new { placeholder = Model.InkoWeight, @class = "form-control", type = "text", required = "required" } )
             </div>
             <label class="col-sm-2 control-label">Prüfling naß:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.InkoWeightWet, new { placeholder = @Model.InkoWeightWet, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.InkoWeightWet, new { placeholder = Model.InkoWeightWet, @class = "form-control", type = "text", required = "required" } )
             </div>
             <label class="col-sm-2 control-label">Prüfling n. Zentrifuge:</label>
             <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.InkoWeightAfterZentrifuge, new { placeholder = @Model.InkoWeightAfterZentrifuge, @class = "form-control", type = "text", @required = "required" })
+                @Html.TextBoxFor( m => m.InkoWeightAfterZentrifuge, new { placeholder = Model.InkoWeightAfterZentrifuge, @class = "form-control", type = "text", required = "required" } )
             </div>
         </div>
         <div class="intigena-line"></div>
 
         <div class="form-group" id="notes">
             <h4>Notizen:</h4>
-            @for (var i = 0; i < Model.NoteCodes.Count(); i++)
+            @for ( var i = 0; i < Model.NoteCodes.Count(); i++ )
             {
-                @Html.HiddenFor(model => Model.NoteCodes[i].Name)
-                @Html.HiddenFor(model => Model.NoteCodes[i].ErrorId)
+                @Html.HiddenFor( model => Model.NoteCodes[i].Name )
+                @Html.HiddenFor( model => Model.NoteCodes[i].ErrorId )
             }
 
-            @if (Model.Notes != null)
+            @if ( Model.Notes != null )
             {
-                for (var i = 0; i < Model.Notes.Count; i++)
+                for ( var i = 0; i < Model.Notes.Count; i++ )
                 {
                     <div class="form-group row" id="Note-@i">
                         <div class="col-sm-10">
@@ -91,16 +93,16 @@
                             <div class="col-sm-9">
                                 @Html.DropDownListFor(
                                     m => m.Notes[i].ErrorCodeId,
-                                    new SelectList(Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId),
+                                    new SelectList( Model.NoteCodes, "ErrorID", "Name", Model.Notes[i].ErrorCodeId ),
                                     "Error Code auswählen",
                                     new { @class = "form-control" }
                                      )
                             </div>
                             <label class="col-sm-3 control-label">Message:</label>
                             <div class="col-sm-9">
-                                @Html.HiddenFor(m => m.Notes[i].Id)
-                                @Html.TextAreaFor(m => m.Notes[i]
-                                                      .Message, new { @class = "form-control", type = "text" })
+                                @Html.HiddenFor( m => m.Notes[i].Id )
+                                @Html.TextAreaFor( m => m.Notes[i]
+                                                       .Message, new { @class = "form-control", type = "text" } )
                             </div>
                         </div>
                         <div class="col-sm-2">
@@ -118,6 +120,3 @@
         <button type="submit" value="Save" class="btn btn-primary btn-block" id="submitButton">Speichern</button>
     }
 </div>
-
-
-

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
-using Intranet.Common.Role;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
@@ -12,8 +12,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing Labor Creator
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
-    [Authorize(Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser)]
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser )]
     public class LaborCreatorController : BaseController
     {
         #region Properties
@@ -67,13 +67,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
                                              id = testSheet.TestSheetId
                                          } ) );
         }
-        /// <summary>
-        ///     Loads the index page of the LaborCreatorController
-        /// </summary>
-        /// <returns>The Index View filled with the viewModel</returns>
-        public
-            ActionResult Index()
-            => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
 
         /// <summary>
         ///     Loads the index page of the LaborCreatorController
@@ -81,11 +74,19 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public
-          ActionResult Home( String message  = "")
+            ActionResult Home( String message = "" )
         {
             var vm = LaborCreatorService.GetLaborCreatorViewModel();
             vm.Message = message;
             return View( "Index", vm );
         }
+
+        /// <summary>
+        ///     Loads the index page of the LaborCreatorController
+        /// </summary>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public
+            ActionResult Index()
+            => View( "Index", LaborCreatorService.GetLaborCreatorViewModel() );
     }
 }

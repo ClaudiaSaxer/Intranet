@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
@@ -299,7 +298,8 @@ namespace Intranet.Labor.Bll.Test
             var actual = target.UpdateRewetAverageAndStv( 1 );
 
             var actualRewetAvg =
-                actual.TestValues.FirstOrDefault( tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+                actual.TestValues.FirstOrDefault(
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) );
             Assert.NotNull( actualRewetAvg );
             Assert.Equal( 0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue );
             Assert.Equal( 0, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue );
@@ -308,7 +308,7 @@ namespace Intranet.Labor.Bll.Test
 
             var actualRewetStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+                          tv => ( tv.TestValueType == TestValueType.StandardDeviation ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) );
             Assert.NotNull( actualRewetStDev );
             Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue );
             Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue );
@@ -348,7 +348,8 @@ namespace Intranet.Labor.Bll.Test
             var actual = target.UpdateRewetAverageAndStv( 1 );
 
             var actualRewetAvg =
-                actual.TestValues.FirstOrDefault( tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+                actual.TestValues.FirstOrDefault(
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) );
             Assert.NotNull( actualRewetAvg );
             Assert.Equal( 20.0, actualRewetAvg.IncontinencePadTestValue.RewetFreeDryValue );
             Assert.Equal( 20.2, actualRewetAvg.IncontinencePadTestValue.RewetFreeWetValue );
@@ -357,7 +358,7 @@ namespace Intranet.Labor.Bll.Test
 
             var actualRewetStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree );
+                          tv => ( tv.TestValueType == TestValueType.StandardDeviation ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.RewetFree ) );
             Assert.NotNull( actualRewetStDev );
             Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeDryValue );
             Assert.Equal( 0, actualRewetStDev.IncontinencePadTestValue.RewetFreeWetValue );

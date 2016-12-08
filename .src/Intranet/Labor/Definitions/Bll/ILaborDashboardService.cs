@@ -1,6 +1,6 @@
 ﻿using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Definition
 {
     /// <summary>
     ///     Interaface representing Labor Dashboard Service

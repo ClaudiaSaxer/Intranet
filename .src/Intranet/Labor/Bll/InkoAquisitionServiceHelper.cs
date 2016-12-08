@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Bll
@@ -37,10 +33,10 @@ namespace Intranet.Labor.Bll
         ///     Initialize a new instance of the <see cref="ServiceBase" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public InkoAquisitionServiceHelper(ILoggerFactory loggerFactory)
+        public InkoAquisitionServiceHelper( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(InkoAquisitionServiceHelper) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
@@ -54,7 +50,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The created test value</returns>
         public TestValue SaveNewAquisitionTest( InkoAquisitionEditViewModel viewModel )
         {
-            var testValue = TestServiceHelper.CreateNewTestValue(viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes);
+            var testValue = TestServiceHelper.CreateNewTestValue( viewModel.TestSheetId, viewModel.TestPerson, viewModel.ProductionCodeDay, viewModel.Notes );
             testValue.ArticleTestType = ArticleType.IncontinencePad;
 
             var incontinencePadTestValue = new IncontinencePadTestValue
@@ -70,10 +66,10 @@ namespace Intranet.Labor.Bll
                 RewetAfterAcquisitionTimeWetWeight = viewModel.FPWet,
                 TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet
             };
-            incontinencePadTestValue = CalculateInkoAquisitionValues(incontinencePadTestValue, viewModel.TestSheetId);
+            incontinencePadTestValue = CalculateInkoAquisitionValues( incontinencePadTestValue, viewModel.TestSheetId );
             testValue.IncontinencePadTestValue = incontinencePadTestValue;
 
-            TestBll.SaveNewTestValue(testValue);
+            TestBll.SaveNewTestValue( testValue );
             return testValue;
         }
 
@@ -84,21 +80,21 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test sheet</returns>
         public TestSheet UpdateAquisitionAverageAndStv( Int32 testSheetId )
         {
-            var testSheet = TestBll.GetTestSheetInfo(testSheetId);
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
             var inkoAquisitionTestAvg =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
-                                 tv.ArticleTestType == ArticleType.IncontinencePad
-                                 && (tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet)
-                                 && tv.TestValueType == TestValueType.Average);
+                                 ( tv.ArticleTestType == ArticleType.IncontinencePad )
+                                 && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet )
+                                 && ( tv.TestValueType == TestValueType.Average ) );
             var inkoAquisitionTestStDev =
                 testSheet.TestValues.FirstOrDefault(
                              tv =>
-                                 tv.ArticleTestType == ArticleType.IncontinencePad
-                                 && (tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet)
-                                 && tv.TestValueType == TestValueType.StandardDeviation);
-            UpdateInkoAquisitionAvg(testSheet, inkoAquisitionTestAvg);
-            UpdateInkoAquisitionStDev(testSheet, inkoAquisitionTestAvg, inkoAquisitionTestStDev);
+                                 ( tv.ArticleTestType == ArticleType.IncontinencePad )
+                                 && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet )
+                                 && ( tv.TestValueType == TestValueType.StandardDeviation ) );
+            UpdateInkoAquisitionAvg( testSheet, inkoAquisitionTestAvg );
+            UpdateInkoAquisitionStDev( testSheet, inkoAquisitionTestAvg, inkoAquisitionTestStDev );
 
             TestBll.UpdateTestSheet();
             return testSheet;
@@ -111,10 +107,11 @@ namespace Intranet.Labor.Bll
         /// <returns>the updated test value</returns>
         public TestValue UpdateAquisitionTest( InkoAquisitionEditViewModel viewModel )
         {
-            var testValue = TestBll.GetTestValue(viewModel.TestValueId);
-            if (testValue.IsNull() || testValue.ArticleTestType != ArticleType.IncontinencePad || testValue.IncontinencePadTestValue.TestType != TestTypeIncontinencePad.AcquisitionTimeAndRewet)
+            var testValue = TestBll.GetTestValue( viewModel.TestValueId );
+            if ( testValue.IsNull() || ( testValue.ArticleTestType != ArticleType.IncontinencePad )
+                 || ( testValue.IncontinencePadTestValue.TestType != TestTypeIncontinencePad.AcquisitionTimeAndRewet ) )
             {
-                Logger.Error("Old Test not found in DB");
+                Logger.Error( "Old Test not found in DB" );
                 return null;
             }
             testValue.LastEditedDateTime = DateTime.Now;
@@ -133,9 +130,9 @@ namespace Intranet.Labor.Bll
 
             TestServiceHelper.UpdateNotes( viewModel.Notes, testValue );
 
-            testValue.IncontinencePadTestValue = CalculateInkoAquisitionValues(testValue.IncontinencePadTestValue, viewModel.TestSheetId);
+            testValue.IncontinencePadTestValue = CalculateInkoAquisitionValues( testValue.IncontinencePadTestValue, viewModel.TestSheetId );
 
-            TestBll.UpdateTestValue(testValue);
+            TestBll.UpdateTestValue( testValue );
             return testValue;
         }
 
@@ -149,18 +146,20 @@ namespace Intranet.Labor.Bll
         /// <param name="incontinencePadTestValue">the test value</param>
         /// <param name="testSheetId">the test sheet id</param>
         /// <returns></returns>
-        private IncontinencePadTestValue CalculateInkoAquisitionValues(IncontinencePadTestValue incontinencePadTestValue,
-                                                                   Int32 testSheetId)
+        private IncontinencePadTestValue CalculateInkoAquisitionValues( IncontinencePadTestValue incontinencePadTestValue,
+                                                                        Int32 testSheetId )
         {
-            var testSheet = TestBll.GetTestSheetInfo(testSheetId);
-            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
+            var testSheet = TestBll.GetTestSheetInfo( testSheetId );
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
 
             incontinencePadTestValue.AcquisitionTimeFirstRw = GetMaxRw( incontinencePadTestValue.AcquisitionTimeFirst, productionOrder.Article.MaxHyTec1 );
-            incontinencePadTestValue.AcquisitionTimeSecondRw = GetMaxRw(incontinencePadTestValue.AcquisitionTimeSecond, productionOrder.Article.MaxHyTec2 );
-            incontinencePadTestValue.AcquisitionTimeThirdRw = GetMaxRw(incontinencePadTestValue.AcquisitionTimeThird, productionOrder.Article.MaxHyTec3 );
+            incontinencePadTestValue.AcquisitionTimeSecondRw = GetMaxRw( incontinencePadTestValue.AcquisitionTimeSecond, productionOrder.Article.MaxHyTec2 );
+            incontinencePadTestValue.AcquisitionTimeThirdRw = GetMaxRw( incontinencePadTestValue.AcquisitionTimeThird, productionOrder.Article.MaxHyTec3 );
 
-            incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = incontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight - incontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight;
-            incontinencePadTestValue.RewetAfterAcquisitionTimeRw = GetMaxRw(incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, productionOrder.Article.MaxInkoRewetAfterAquisition);
+            incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = incontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight
+                                                                                 - incontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight;
+            incontinencePadTestValue.RewetAfterAcquisitionTimeRw = GetMaxRw( incontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference,
+                                                                             productionOrder.Article.MaxInkoRewetAfterAquisition );
             return incontinencePadTestValue;
         }
 
@@ -170,19 +169,19 @@ namespace Intranet.Labor.Bll
         /// <param name="value">the tested Value</param>
         /// <param name="articleMaxValue">the Article max value</param>
         /// <returns>The RwType</returns>
-        private static RwType GetMaxRw(Double value, Double articleMaxValue) => articleMaxValue > value ? RwType.Ok : RwType.Worse;
+        private static RwType GetMaxRw( Double value, Double articleMaxValue ) => articleMaxValue > value ? RwType.Ok : RwType.Worse;
 
-        private TestValue UpdateInkoAquisitionAvg(TestSheet testSheet, TestValue aquisitionTestAvg)
+        private TestValue UpdateInkoAquisitionAvg( TestSheet testSheet, TestValue aquisitionTestAvg )
         {
-            var productionOrder = TestBll.GetProductionOrder(testSheet.FaNr);
+            var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempInko = new IncontinencePadTestValue { RewetFreeRw = RwType.Ok };
             var counter = 0;
             foreach (
                 var testValue in
                 testSheet.TestValues.Where(
                              testValue =>
-                                 testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet)
+                                 ( testValue.TestValueType == TestValueType.Single )
+                                 && ( testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) )
             )
             {
                 tempInko.AcquisitionTimeFirst += testValue.IncontinencePadTestValue.AcquisitionTimeFirst;
@@ -193,17 +192,17 @@ namespace Intranet.Labor.Bll
                 tempInko.RewetAfterAcquisitionTimeDryWeight += testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight;
                 tempInko.RewetAfterAcquisitionTimeWetWeight += testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight;
                 tempInko.RewetAfterAcquisitionTimeWeightDifference += testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference;
-                if (testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw == RwType.Worse)
+                if ( testValue.IncontinencePadTestValue.AcquisitionTimeFirstRw == RwType.Worse )
                     tempInko.AcquisitionTimeFirstRw = RwType.SomethingWorse;
-                if (testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw == RwType.Worse)
+                if ( testValue.IncontinencePadTestValue.AcquisitionTimeSecondRw == RwType.Worse )
                     tempInko.AcquisitionTimeSecondRw = RwType.SomethingWorse;
-                if (testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw == RwType.Worse)
+                if ( testValue.IncontinencePadTestValue.AcquisitionTimeThirdRw == RwType.Worse )
                     tempInko.AcquisitionTimeThirdRw = RwType.SomethingWorse;
-                if (testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw == RwType.Worse)
+                if ( testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw == RwType.Worse )
                     tempInko.RewetAfterAcquisitionTimeRw = RwType.SomethingWorse;
                 counter++;
             }
-            if (counter == 0)
+            if ( counter == 0 )
                 counter = 1;
             aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirst = tempInko.AcquisitionTimeFirst / counter;
             aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecond = tempInko.AcquisitionTimeSecond / counter;
@@ -213,25 +212,26 @@ namespace Intranet.Labor.Bll
             aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight = tempInko.RewetAfterAcquisitionTimeWetWeight / counter;
             aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = tempInko.RewetAfterAcquisitionTimeWeightDifference / counter;
 
-            if (GetMaxRw(aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirst, productionOrder.Article.MaxHyTec1) == RwType.Worse)
+            if ( GetMaxRw( aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirst, productionOrder.Article.MaxHyTec1 ) == RwType.Worse )
                 tempInko.AcquisitionTimeFirstRw = RwType.Worse;
             aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirstRw = tempInko.AcquisitionTimeFirstRw;
 
-            if (GetMaxRw(aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecond, productionOrder.Article.MaxHyTec2) == RwType.Worse)
+            if ( GetMaxRw( aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecond, productionOrder.Article.MaxHyTec2 ) == RwType.Worse )
                 tempInko.AcquisitionTimeSecondRw = RwType.Worse;
             aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecondRw = tempInko.AcquisitionTimeSecondRw;
 
-            if (GetMaxRw(aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeThird, productionOrder.Article.MaxHyTec3) == RwType.Worse)
+            if ( GetMaxRw( aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeThird, productionOrder.Article.MaxHyTec3 ) == RwType.Worse )
                 tempInko.AcquisitionTimeThirdRw = RwType.Worse;
             aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeThirdRw = tempInko.AcquisitionTimeThirdRw;
 
-            if (GetMaxRw(aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, productionOrder.Article.MaxInkoRewetAfterAquisition) == RwType.Worse)
+            if ( GetMaxRw( aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, productionOrder.Article.MaxInkoRewetAfterAquisition )
+                 == RwType.Worse )
                 tempInko.RewetAfterAcquisitionTimeRw = RwType.Worse;
             aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw = tempInko.RewetAfterAcquisitionTimeRw;
             return aquisitionTestAvg;
         }
 
-        private static TestValue UpdateInkoAquisitionStDev(TestSheet testSheet, TestValue aquisitionTestAvg, TestValue aquisitionTestStDev)
+        private static TestValue UpdateInkoAquisitionStDev( TestSheet testSheet, TestValue aquisitionTestAvg, TestValue aquisitionTestStDev )
         {
             var tempInko = new IncontinencePadTestValue();
             var counter = 0;
@@ -239,17 +239,32 @@ namespace Intranet.Labor.Bll
                 var testValue in
                 testSheet.TestValues.Where(
                              testValue =>
-                                 testValue.TestValueType == TestValueType.Single
-                                 && testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet)
+                                 ( testValue.TestValueType == TestValueType.Single )
+                                 && ( testValue.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) )
             )
             {
-                tempInko.AcquisitionTimeFirst += Math.Pow(testValue.IncontinencePadTestValue.AcquisitionTimeFirst - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirst, 2);
-                tempInko.AcquisitionTimeSecond += Math.Pow(testValue.IncontinencePadTestValue.AcquisitionTimeSecond - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecond, 2);
-                tempInko.AcquisitionTimeThird += Math.Pow(testValue.IncontinencePadTestValue.AcquisitionTimeThird - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeThird, 2);
-                tempInko.AcquisitionWeight += Math.Pow(testValue.IncontinencePadTestValue.AcquisitionWeight - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionWeight, 2);
-                tempInko.RewetAfterAcquisitionTimeDryWeight += Math.Pow(testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight, 2);
-                tempInko.RewetAfterAcquisitionTimeWetWeight += Math.Pow(testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight, 2);
-                tempInko.RewetAfterAcquisitionTimeWeightDifference += Math.Pow(testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference, 2);
+                tempInko.AcquisitionTimeFirst += Math.Pow(
+                    testValue.IncontinencePadTestValue.AcquisitionTimeFirst - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeFirst,
+                    2 );
+                tempInko.AcquisitionTimeSecond +=
+                    Math.Pow( testValue.IncontinencePadTestValue.AcquisitionTimeSecond - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeSecond, 2 );
+                tempInko.AcquisitionTimeThird += Math.Pow(
+                    testValue.IncontinencePadTestValue.AcquisitionTimeThird - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionTimeThird,
+                    2 );
+                tempInko.AcquisitionWeight += Math.Pow( testValue.IncontinencePadTestValue.AcquisitionWeight - aquisitionTestAvg.IncontinencePadTestValue.AcquisitionWeight, 2 );
+                tempInko.RewetAfterAcquisitionTimeDryWeight +=
+                    Math.Pow(
+                        testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight,
+                        2 );
+                tempInko.RewetAfterAcquisitionTimeWetWeight +=
+                    Math.Pow(
+                        testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight,
+                        2 );
+                tempInko.RewetAfterAcquisitionTimeWeightDifference +=
+                    Math.Pow(
+                        testValue.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference
+                        - aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference,
+                        2 );
                 counter++;
             }
             if ( counter < 2 )
@@ -265,13 +280,13 @@ namespace Intranet.Labor.Bll
             else
             {
                 counter--;
-                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeFirst = Math.Sqrt(tempInko.AcquisitionTimeFirst / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeSecond = Math.Sqrt(tempInko.AcquisitionTimeSecond / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeThird = Math.Sqrt(tempInko.AcquisitionTimeThird / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionWeight = Math.Sqrt(tempInko.AcquisitionWeight / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight = Math.Sqrt(tempInko.RewetAfterAcquisitionTimeDryWeight / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight = Math.Sqrt(tempInko.RewetAfterAcquisitionTimeWetWeight / counter);
-                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = Math.Sqrt(tempInko.RewetAfterAcquisitionTimeWeightDifference / counter);
+                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeFirst = Math.Sqrt( tempInko.AcquisitionTimeFirst / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeSecond = Math.Sqrt( tempInko.AcquisitionTimeSecond / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionTimeThird = Math.Sqrt( tempInko.AcquisitionTimeThird / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.AcquisitionWeight = Math.Sqrt( tempInko.AcquisitionWeight / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeDryWeight = Math.Sqrt( tempInko.RewetAfterAcquisitionTimeDryWeight / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight = Math.Sqrt( tempInko.RewetAfterAcquisitionTimeWetWeight / counter );
+                aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = Math.Sqrt( tempInko.RewetAfterAcquisitionTimeWeightDifference / counter );
             }
             return aquisitionTestStDev;
         }

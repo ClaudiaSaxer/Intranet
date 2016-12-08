@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Intranet.Common;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.Bll
 {

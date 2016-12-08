@@ -7,11 +7,8 @@ using FluentAssertions;
 using FluentAssertions.Common;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborDashboard;
-using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
 
 #endregion
@@ -31,7 +28,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet> { new TestSheet { MachineNr = "M10"} }
+                    new List<TestSheet> { new TestSheet { MachineNr = "M10" } }
                 );
             var shifthelpermock =
                 MockHelperBll.GetShiftHelper(
@@ -42,13 +39,14 @@ namespace Intranet.Labor.Bll.Test
                         new ShiftSchedule(),
                         new ShiftSchedule()
                     }
-                    ,dateExistsInShift:time => false
+                    ,
+                    dateExistsInShift: time => false
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
                     new List<DashboardNote>(),
                     productionOrderItems: new List<ProductionOrderItem>()
-                    );
+                );
 
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
@@ -124,7 +122,7 @@ namespace Intranet.Labor.Bll.Test
 
             var labordashboardbllmock =
                 MockHelperBll.GetLaborDashboardBll(
-                    new List<TestSheet> { new TestSheet { MachineNr = "M10",CreatedDateTime = now} }
+                    new List<TestSheet> { new TestSheet { MachineNr = "M10", CreatedDateTime = now } }
                 );
             var labordashboardhelpermock =
                 MockHelperLaborDashboardHelper.GetLaborDashboardHelper(
@@ -139,14 +137,18 @@ namespace Intranet.Labor.Bll.Test
                     lastXShiftSchedules:
                     new List<ShiftSchedule>
                     {
-                        new ShiftSchedule {ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay },
+                        new ShiftSchedule { ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay },
                         new ShiftSchedule(),
                         new ShiftSchedule(),
                         new ShiftSchedule()
                     }
-                    ,shiftType: ShiftType.Morning
-                    ,shiftScheduleCurrent: new ShiftSchedule { ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay }
-                    , dateExistsInShift: time => now.IsSameOrEqualTo( time )
+                    ,
+                    shiftType: ShiftType.Morning
+                    ,
+                    shiftScheduleCurrent:
+                    new ShiftSchedule { ShiftType = ShiftType.Morning, StartDay = now.DayOfWeek, EndDay = now.DayOfWeek, StartTime = now.TimeOfDay, EndTime = now.TimeOfDay }
+                    ,
+                    dateExistsInShift: time => now.IsSameOrEqualTo( time )
                 );
             var target = new LaborDashboardService( new NLogLoggerFactory() )
             {
@@ -175,7 +177,7 @@ namespace Intranet.Labor.Bll.Test
             actual.DashboardItemM11.ShiftItemsCurrent.Count.Should()
                   .Be( 0 );
             actual.DashboardItemM11.ShiftItemsMinus1.Count.Should()
-                  .Be( 0);
+                  .Be( 0 );
             actual.DashboardItemM11.ShiftItemsMinus2.Count.Should()
                   .Be( 0 );
             actual.DashboardItemM11.ShiftItemsMinus3.Count.Should()

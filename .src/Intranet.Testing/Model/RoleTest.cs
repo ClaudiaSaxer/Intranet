@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using Extend;
+﻿using System.Collections.Generic;
 using FluentAssertions;
-using Intranet.Labor.ViewModel;
 using Xunit;
 
 namespace Intranet.Model.Test
@@ -19,24 +15,18 @@ namespace Intranet.Model.Test
         [Fact]
         public void SetPropertiesTest()
         {
-
             var Role = new Role
             {
                 Modules = new List<Module>(),
                 Name = "Frankenstein",
                 RoleId = 666
-
             };
             Role.Name.Should()
-                .Be("Frankenstein");
+                .Be( "Frankenstein" );
             Role.RoleId.Should()
                 .Be( 666 );
             Role.Modules.Should()
                 .NotBeNull( "is initialized" );
-
-
         }
-
-       
     }
 }

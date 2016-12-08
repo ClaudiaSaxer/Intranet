@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Extend;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Model;
 using Xunit;
@@ -12,10 +10,8 @@ namespace Intranet.ViewModel.Test
     /// </summary>
     public class NavigationViewModelTest
     {
-       
-
         /// <summary>
-        ///     Test Init with nothing 
+        ///     Test Init with nothing
         /// </summary>
         [Fact]
         public void InitTestWithNothing()
@@ -29,10 +25,9 @@ namespace Intranet.ViewModel.Test
             actual.Should()
                   .NotBeNull( "is initialized" );
             actual.MainModules.Should()
-                  .NotBeNull("is initialized");
+                  .NotBeNull( "is initialized" );
             actual.SettingModules.Should()
-                  .NotBeNull("is initialized");
-
+                  .NotBeNull( "is initialized" );
         }
     }
 }

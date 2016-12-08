@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;

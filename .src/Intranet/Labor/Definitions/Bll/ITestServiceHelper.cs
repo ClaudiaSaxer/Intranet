@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -31,7 +31,6 @@ namespace Intranet.Labor.Definition
         /// <returns>the production code</returns>
         String CreateProductionCode( TestSheet testSheet );
 
-
         /// <summary>
         ///     Converts the notes from the viewmodel to the dbmodel.
         ///     Deletes notes which were deleted in the view
@@ -41,6 +40,6 @@ namespace Intranet.Labor.Definition
         /// <param name="vmNotes">the List of Notes from the ViewModel</param>
         /// <param name="testValue">the testvalue where the notes are for</param>
         /// <returns>the production code</returns>
-        void UpdateNotes(IList<TestNote> vmNotes, TestValue testValue);
+        void UpdateNotes( IList<TestNote> vmNotes, TestValue testValue );
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
@@ -13,8 +12,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the BabyWindelnRetentionController
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
-    [Authorize(Roles = RoleSettings.LaborAdmin+","+RoleSettings.LaborUser)]
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser )]
     public class BabyDiaperRetentionController : BaseController
     {
         #region Properties
@@ -35,43 +34,43 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Initialize a new instance of the <see cref="BabyDiaperRetentionController" /> class.
         /// </summary>
         /// <param name="loggerFactory">A <see cref="ILoggerFactory" />.</param>
-        public BabyDiaperRetentionController(ILoggerFactory loggerFactory)
+        public BabyDiaperRetentionController( ILoggerFactory loggerFactory )
             : base( loggerFactory.CreateLogger( typeof(BabyDiaperRetentionController) ) )
         {
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion
 
         /// <summary>
-        ///     Loads the BabywindelnRetetion Edit View with a new Item for the Test-Sheet
+        ///     adds a new note to the test
         /// </summary>
-        /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
-        /// <returns>The Edit View filled with the viewModel</returns>
-        public ActionResult Create(Int32 id = 0)
+        /// <param name="viewModel"></param>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult AddNote( BabyDiaperRetentionEditViewModel viewModel )
         {
-            if (id.IsNull())
-                return HttpNotFound();
-
-            var viewModel = BabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel(id);
-            if(viewModel.IsNull()) return new HttpNotFoundResult("Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht.");
-            return View("Edit", viewModel);
+            if ( viewModel.Notes.IsNull() )
+                viewModel.Notes = new List<TestNote>();
+            viewModel.Notes.Add( new TestNote() );
+            return View( "Edit", viewModel );
         }
 
         /// <summary>
-        ///     Loads the BabywindelnRetetion Edit View with an Item form the Test-Sheet which will be edited 
+        ///     Loads the BabywindelnRetetion Edit View with a new Item for the Test-Sheet
         /// </summary>
-        /// /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
-        /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Edit(Int32 id = 0)
+        /// ///
+        /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
+        /// <returns>The Edit View filled with the viewModel</returns>
+        public ActionResult Create( Int32 id = 0 )
         {
-            if (id.IsNull())
+            if ( id.IsNull() )
                 return HttpNotFound();
 
-            var viewModel = BabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel(id);
-            if (viewModel.IsNull())
-                return new HttpNotFoundResult("Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test.");
-            return View("Edit", viewModel);
+            var viewModel = BabyDiaperRetentionService.GetNewBabyDiapersRetentionEditViewModel( id );
+            if ( viewModel.IsNull() )
+                return new HttpNotFoundResult( "Das TestSheet ist entweder kein Baby Windel Testsheet oder existiert nicht." );
+            return View( "Edit", viewModel );
         }
 
         /// <summary>
@@ -82,7 +81,24 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = BabyDiaperRetentionService.Delete( id );
-            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId });
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+        }
+
+        /// <summary>
+        ///     Loads the BabywindelnRetetion Edit View with an Item form the Test-Sheet which will be edited
+        /// </summary>
+        /// ///
+        /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
+        /// <returns>The Index View filled with the viewModel</returns>
+        public ActionResult Edit( Int32 id = 0 )
+        {
+            if ( id.IsNull() )
+                return HttpNotFound();
+
+            var viewModel = BabyDiaperRetentionService.GetBabyDiapersRetentionEditViewModel( id );
+            if ( viewModel.IsNull() )
+                return new HttpNotFoundResult( "Der Angeforderte Test existiert entweder nicht oder war kein BabyDiaperRetention Test." );
+            return View( "Edit", viewModel );
         }
 
         /// <summary>
@@ -95,21 +111,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
         {
             var savedModel = BabyDiaperRetentionService.Save( viewModel );
-            return RedirectToAction("Edit", "LaborCreatorBaby", new { area = "Labor", id=savedModel.TestSheetRefId });
-        }
-
-        /// <summary>
-        ///     adds a new note to the test
-        /// </summary>
-        /// <param name="viewModel"></param>
-        /// <returns></returns>
-        [HttpPost]
-        public ActionResult AddNote(BabyDiaperRetentionEditViewModel viewModel)
-        {
-            if(viewModel.Notes.IsNull())
-                viewModel.Notes = new List<TestNote>();
-            viewModel.Notes.Add( new TestNote() );
-            return View("Edit", viewModel);
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
         }
     }
 }

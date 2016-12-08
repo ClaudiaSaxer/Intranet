@@ -7,7 +7,6 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -48,7 +47,8 @@ namespace Intranet.Labor.Bll
         /// </summary>
         /// <param name="testSheet">the testSheet</param>
         /// <returns>the production code</returns>
-        public String CreateProductionCode( TestSheet testSheet ) => "IT/" + testSheet.MachineNr.Substring(1) + "/" + testSheet.CreatedDateTime.Year.ToString().Substring(2) + "/";
+        public String CreateProductionCode( TestSheet testSheet ) => "IT/" + testSheet.MachineNr.Substring( 1 ) + "/" + testSheet.CreatedDateTime.Year.ToString()
+                                                                                                                                 .Substring( 2 ) + "/";
 
         /// <summary>
         ///     Converts the notes from the viewmodel to the dbmodel.
@@ -61,25 +61,25 @@ namespace Intranet.Labor.Bll
         /// <returns>the production code</returns>
         public void UpdateNotes( IList<TestNote> vmNotes, TestValue testValue )
         {
-            if (vmNotes.IsNull())
+            if ( vmNotes.IsNull() )
                 vmNotes = new List<TestNote>();
 
-            foreach (var note in vmNotes.Where(vmNote => vmNote.ErrorCodeId == 0)
-                                           .Select(vmNote => testValue.TestValueNote.FirstOrDefault(n => n.TestValueNoteId == vmNote.Id))
-                                           .Where(note => note.IsNotNull()))
+            foreach ( var note in vmNotes.Where( vmNote => vmNote.ErrorCodeId == 0 )
+                                         .Select( vmNote => testValue.TestValueNote.FirstOrDefault( n => n.TestValueNoteId == vmNote.Id ) )
+                                         .Where( note => note.IsNotNull() ) )
             {
-                testValue.TestValueNote.Remove(note);
-                TestBll.DeleteNote(note.TestValueNoteId);
+                testValue.TestValueNote.Remove( note );
+                TestBll.DeleteNote( note.TestValueNoteId );
             }
 
-            foreach (var note in testValue.TestValueNote)
-                foreach (var vmNote in vmNotes.Where(vmNote => note.TestValueNoteId == vmNote.Id))
+            foreach ( var note in testValue.TestValueNote )
+                foreach ( var vmNote in vmNotes.Where( vmNote => note.TestValueNoteId == vmNote.Id ) )
                 {
                     note.Message = vmNote.Message;
                     note.ErrorRefId = vmNote.ErrorCodeId;
                 }
-            foreach (var vmNote in vmNotes.Where(n => n.Id == 0 && n.ErrorCodeId != 0))
-                testValue.TestValueNote.Add(new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue });
+            foreach ( var vmNote in vmNotes.Where( n => ( n.Id == 0 ) && ( n.ErrorCodeId != 0 ) ) )
+                testValue.TestValueNote.Add( new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue } );
         }
 
         /// <summary>
@@ -103,10 +103,10 @@ namespace Intranet.Labor.Bll
             };
             if ( notes.IsNotNull() )
             {
-                notes = notes.Where(n => n.ErrorCodeId != 0)
-                         .ToList();
-                testValue.TestValueNote = notes.Select(error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue })
-                                                   .ToList();
+                notes = notes.Where( n => n.ErrorCodeId != 0 )
+                             .ToList();
+                testValue.TestValueNote = notes.Select( error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue } )
+                                               .ToList();
             }
             return testValue;
         }

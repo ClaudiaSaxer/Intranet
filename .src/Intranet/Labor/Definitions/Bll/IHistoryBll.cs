@@ -2,7 +2,7 @@
 
 using System;
 using System.Collections.Generic;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 #endregion
 

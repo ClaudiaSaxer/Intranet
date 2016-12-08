@@ -15,7 +15,7 @@ namespace Intranet.Bll
         #region Properties
 
         /// <summary>
-        /// Repository for Roles
+        ///     Repository for Roles
         /// </summary>
         public IGenericRepository<Role> RoleRepository { get; set; }
 

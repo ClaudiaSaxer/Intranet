@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Intranet.Labor.Model.labor;
-using Intranet.Labor.ViewModel.LaborDashboard;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -36,7 +35,7 @@ namespace Intranet.Labor.ViewModel
         public Boolean HasNotes { get; set; }
 
         /// <summary>
-        /// Gets or sets a Collection of Notes
+        ///     Gets or sets a Collection of Notes
         /// </summary>
         /// <value>the notes</value>
         public ICollection<DashboardNote> Notes { get; set; }
@@ -54,7 +53,7 @@ namespace Intranet.Labor.ViewModel
         public String Action { get; set; }
 
         /// <summary>
-        /// Gets or sets the additional dashboard infor
+        ///     Gets or sets the additional dashboard infor
         /// </summary>
         /// <value>the dashboard info</value>
         public ICollection<DashboardInfo> DashboardInfos { get; set; }

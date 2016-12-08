@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborCreator;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing labor creator service

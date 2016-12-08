@@ -3,12 +3,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -58,9 +56,9 @@ namespace Intranet.Labor.Bll
                 Sheets = new List<HistoryItem>()
             };
             var dbTestSheets = HistoryBll.GetTestSheets( faNr );
-            if (dbTestSheets.IsNull() )
+            if ( dbTestSheets.IsNull() )
             {
-                Logger.Error("Datenbankproblem beim suchen nach Testsheets mit FaNr. " +faNr);
+                Logger.Error( "Datenbankproblem beim suchen nach Testsheets mit FaNr. " + faNr );
                 viewModel.Message = "Es ist ein Problem aufgetreten. Bitte wenden Sie sich an ihren Administrator";
                 return viewModel;
             }
@@ -92,7 +90,7 @@ namespace Intranet.Labor.Bll
                     historyItem.RwType = GetRwTypeInko( testSheet );
                 }
 
-                viewModel.Sheets.Add(historyItem);     
+                viewModel.Sheets.Add( historyItem );
             }
 
             return viewModel;
@@ -102,28 +100,30 @@ namespace Intranet.Labor.Bll
 
         #region Private Methods
 
-        private static RwType GetRwTypeBaby(TestSheet testSheet)
+        private static RwType GetRwTypeBaby( TestSheet testSheet )
         {
             var result = RwType.Ok;
-            foreach ( var babyDiaper in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Average ).Select( testValue => testValue.BabyDiaperTestValue ) )
-                switch (babyDiaper.TestType )
+            foreach ( var babyDiaper in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Average )
+                                                 .Select( testValue => testValue.BabyDiaperTestValue ) )
+                switch ( babyDiaper.TestType )
                 {
                     case TestTypeBabyDiaper.Retention:
-                        if (babyDiaper.RetentionRw == RwType.Worse )
+                        if ( babyDiaper.RetentionRw == RwType.Worse )
                             return RwType.Worse;
                         if ( babyDiaper.RetentionRw == RwType.SomethingWorse )
                             result = RwType.SomethingWorse;
                         break;
                     case TestTypeBabyDiaper.Rewet:
-                        if (babyDiaper.Rewet140Rw == RwType.Worse || babyDiaper.Rewet210Rw == RwType.Worse)
+                        if ( ( babyDiaper.Rewet140Rw == RwType.Worse ) || ( babyDiaper.Rewet210Rw == RwType.Worse ) )
                             return RwType.Worse;
-                        if (babyDiaper.Rewet140Rw == RwType.SomethingWorse || babyDiaper.Rewet210Rw == RwType.SomethingWorse)
+                        if ( ( babyDiaper.Rewet140Rw == RwType.SomethingWorse ) || ( babyDiaper.Rewet210Rw == RwType.SomethingWorse ) )
                             result = RwType.SomethingWorse;
                         break;
                     case TestTypeBabyDiaper.RewetAndPenetrationTime:
-                        if (babyDiaper.Rewet140Rw == RwType.Worse || babyDiaper.Rewet210Rw == RwType.Worse || babyDiaper.PenetrationRwType == RwType.Worse)
+                        if ( ( babyDiaper.Rewet140Rw == RwType.Worse ) || ( babyDiaper.Rewet210Rw == RwType.Worse ) || ( babyDiaper.PenetrationRwType == RwType.Worse ) )
                             return RwType.Worse;
-                        if (babyDiaper.Rewet140Rw == RwType.SomethingWorse || babyDiaper.Rewet210Rw == RwType.SomethingWorse || babyDiaper.PenetrationRwType == RwType.SomethingWorse)
+                        if ( ( babyDiaper.Rewet140Rw == RwType.SomethingWorse ) || ( babyDiaper.Rewet210Rw == RwType.SomethingWorse )
+                             || ( babyDiaper.PenetrationRwType == RwType.SomethingWorse ) )
                             result = RwType.SomethingWorse;
                         break;
                 }
@@ -131,28 +131,31 @@ namespace Intranet.Labor.Bll
             return result;
         }
 
-        private static RwType GetRwTypeInko(TestSheet testSheet)
+        private static RwType GetRwTypeInko( TestSheet testSheet )
         {
             var result = RwType.Ok;
-            foreach (var inko in testSheet.TestValues.Where(testValue => testValue.TestValueType == TestValueType.Average).Select(testValue => testValue.IncontinencePadTestValue))
-                switch (inko.TestType)
+            foreach ( var inko in testSheet.TestValues.Where( testValue => testValue.TestValueType == TestValueType.Average )
+                                           .Select( testValue => testValue.IncontinencePadTestValue ) )
+                switch ( inko.TestType )
                 {
                     case TestTypeIncontinencePad.RewetFree:
-                        if (inko.RewetFreeRw == RwType.Worse)
+                        if ( inko.RewetFreeRw == RwType.Worse )
                             return RwType.Worse;
-                        if (inko.RewetFreeRw == RwType.SomethingWorse)
+                        if ( inko.RewetFreeRw == RwType.SomethingWorse )
                             result = RwType.SomethingWorse;
                         break;
                     case TestTypeIncontinencePad.Retention:
-                        if (inko.RetentionRw == RwType.Worse)
+                        if ( inko.RetentionRw == RwType.Worse )
                             return RwType.Worse;
-                        if (inko.RetentionRw == RwType.SomethingWorse)
+                        if ( inko.RetentionRw == RwType.SomethingWorse )
                             result = RwType.SomethingWorse;
                         break;
                     case TestTypeIncontinencePad.AcquisitionTimeAndRewet:
-                        if (inko.RewetAfterAcquisitionTimeRw == RwType.Worse || inko.AcquisitionTimeFirstRw == RwType.Worse || inko.AcquisitionTimeSecondRw == RwType.Worse || inko.AcquisitionTimeThirdRw == RwType.Worse)
+                        if ( ( inko.RewetAfterAcquisitionTimeRw == RwType.Worse ) || ( inko.AcquisitionTimeFirstRw == RwType.Worse )
+                             || ( inko.AcquisitionTimeSecondRw == RwType.Worse ) || ( inko.AcquisitionTimeThirdRw == RwType.Worse ) )
                             return RwType.Worse;
-                        if (inko.RewetAfterAcquisitionTimeRw == RwType.SomethingWorse || inko.AcquisitionTimeFirstRw == RwType.SomethingWorse || inko.AcquisitionTimeSecondRw == RwType.SomethingWorse || inko.AcquisitionTimeThirdRw == RwType.SomethingWorse)
+                        if ( ( inko.RewetAfterAcquisitionTimeRw == RwType.SomethingWorse ) || ( inko.AcquisitionTimeFirstRw == RwType.SomethingWorse )
+                             || ( inko.AcquisitionTimeSecondRw == RwType.SomethingWorse ) || ( inko.AcquisitionTimeThirdRw == RwType.SomethingWorse ) )
                             result = RwType.SomethingWorse;
                         break;
                 }

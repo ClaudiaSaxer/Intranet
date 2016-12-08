@@ -34,7 +34,7 @@ namespace Intranet.Common
         protected BaseController( ILogger logger )
         {
             Logger = logger;
-            Logger.Trace("Enter Ctor - Exit.");
+            Logger.Trace( "Enter Ctor - Exit." );
         }
 
         #endregion

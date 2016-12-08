@@ -26,8 +26,6 @@ namespace Intranet.Labor.Bll.Test
             ShiftType.Morning.ToFriendlyString()
                      .Should()
                      .Be( "Morgen" );
-
         }
     }
 }
-

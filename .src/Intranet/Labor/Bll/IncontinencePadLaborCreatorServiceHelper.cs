@@ -6,8 +6,7 @@ using System.Linq;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Definition.Bll;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Bll

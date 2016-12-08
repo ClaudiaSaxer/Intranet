@@ -5,7 +5,6 @@ using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
-using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -65,7 +64,8 @@ namespace Intranet.Labor.Bll.Test
                 EndTime = new TimeSpan( now.Hour - 1, now.Minute, now.Second ),
                 StartTime = new TimeSpan( now.Hour + 2, now.Minute, now.Second ),
                 StartDay = now.DayOfWeek,
-                EndDay = now.AddDays( 1 ).DayOfWeek
+                EndDay = now.AddDays( 1 )
+                            .DayOfWeek
             };
 
             var shiftSheduleListQuery = new List<ShiftSchedule>

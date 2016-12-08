@@ -2,11 +2,10 @@
 
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 
 #endregion
 
-namespace Intranet.Labor.Dal.Repositories
+namespace Intranet.Labor.Dal
 {
     /// <summary>
     ///     The Repository for the ShiftSchedule

@@ -2,18 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing labor creator bll
     /// </summary>
     public class LaborCreatorBll : ServiceBase, ILaborCreatorBll
     {
-
         #region Properties
 
         /// <summary>
@@ -22,7 +20,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <value>the production order repository</value>
         public IGenericRepository<TestSheet> TestSheetRepository { get; set; }
 
-
         /// <summary>
         ///     Gets or sets the repository for the production order
         /// </summary>
@@ -30,11 +27,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public IGenericRepository<ProductionOrder> ProductionOrderRepository { get; set; }
 
         /// <summary>
-        /// Gets or sets the shifthelper
+        ///     Gets or sets the shifthelper
         /// </summary>
         /// <value>the shifthelper</value>
         public IShiftHelper ShiftHelper { get; set; }
-    
+
         #endregion
 
         #region Ctor
@@ -111,7 +108,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var shift = ShiftHelper.GetCurrentShift();
             if ( shift == null )
                 return null;
-            return TestSheetRepository.GetAll().Where( sheet => sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
+            return TestSheetRepository.GetAll()
+                                      .Where( sheet => sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
                                       .ToList();
         }
 
@@ -126,7 +124,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var shift = ShiftHelper.GetCurrentShift();
             if ( shift == null )
                 return null;
-            var testsheet = TestSheetRepository.GetAll().Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
+            var testsheet = TestSheetRepository.GetAll()
+                                               .Where( sheet => sheet.FaNr.Equals( faNr ) && sheet.DayInYear.Equals( today.DayOfYear ) && ( sheet.ShiftType == shift ) )
                                                .ToList();
             return testsheet.ToList()
                             .Count == 1
@@ -141,7 +140,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <returns>the initialized testsheet</returns>
         public TestSheet InitTestSheetForFaNr( String faNr )
         {
-            var productionOrder = ProductionOrderRepository.GetAll(  ).FirstOrDefault(order => order.FaNr == faNr);
+            var productionOrder = ProductionOrderRepository.GetAll()
+                                                           .FirstOrDefault( order => order.FaNr == faNr );
 
             if ( productionOrder == null )
             {

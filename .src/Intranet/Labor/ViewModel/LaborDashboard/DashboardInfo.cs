@@ -1,7 +1,7 @@
 ﻿using System;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
-namespace Intranet.Labor.ViewModel.LaborDashboard
+namespace Intranet.Labor.ViewModel
 {
     /// <summary>
     ///     Class representing the dashboard information

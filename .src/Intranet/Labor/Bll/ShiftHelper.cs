@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing a helper for shift
@@ -65,7 +65,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// </summary>
         /// <returns>the current shift</returns>
         public ShiftType? GetCurrentShift()
-            => GetCurrentShiftShedule()?
+            => GetCurrentShiftShedule()
+                ?
                 .ShiftType;
 
         /// <summary>

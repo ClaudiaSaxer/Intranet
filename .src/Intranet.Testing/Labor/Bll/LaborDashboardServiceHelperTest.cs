@@ -5,11 +5,7 @@ using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
-using Intranet.Web.Areas.Labor.Controllers;
-using Microsoft.Build.Tasks;
 using Xunit;
-using Error = Intranet.Labor.Model.Error;
 
 #endregion
 
@@ -361,10 +357,15 @@ namespace Intranet.Labor.Bll.Test
             var note = new TestValueNote
             {
                 Error = new Error { Value = "Fehler Bla bla", ErrorCode = "666" },
-                Message = "eifach kaputt gange",
+                Message = "eifach kaputt gange"
             };
-            var target = new LaborDashboardHelper(new NLogLoggerFactory());
-            var actual = target.ToDashboardNote(new List<TestValue> {new TestValue {TestValueNote = new List<TestValueNote>{note,note}},new TestValue {TestValueNote = new List<TestValueNote> {note} }});
+            var target = new LaborDashboardHelper( new NLogLoggerFactory() );
+            var actual =
+                target.ToDashboardNote( new List<TestValue>
+                                        {
+                                            new TestValue { TestValueNote = new List<TestValueNote> { note, note } },
+                                            new TestValue { TestValueNote = new List<TestValueNote> { note } }
+                                        } );
             actual.Count.Should()
                   .Be( 3 );
             actual.ToList()[0].Code.Should()
@@ -373,8 +374,8 @@ namespace Intranet.Labor.Bll.Test
                   .Be( note.Error.Value );
             actual.ToList()[0].Message.Should()
                   .Be( note.Message );
-
         }
+
         /// <summary>
         ///     ToProductionOrderItem test
         /// </summary>

@@ -5,7 +5,7 @@ namespace Intranet.Definition
     /// <summary>
     ///     The Interface for the HomeService
     /// </summary>
-    public interface IHomeService 
+    public interface IHomeService
     {
         /// <summary>
         ///     Gets the HomeViewModel

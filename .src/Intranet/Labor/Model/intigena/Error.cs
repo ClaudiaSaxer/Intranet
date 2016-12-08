@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Intranet.Labor.Model.labor;
 
 namespace Intranet.Labor.Model
 {
@@ -18,7 +17,7 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the id of the error</value>
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
         public Int32 ErrorId { get; set; }
 
         /// <summary>

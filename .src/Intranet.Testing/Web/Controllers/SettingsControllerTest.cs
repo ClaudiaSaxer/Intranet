@@ -6,7 +6,7 @@ using Intranet.ViewModel;
 using Intranet.Web.Controllers;
 using Xunit;
 
-namespace Intranet.Web.Test.Controllers
+namespace Intranet.Web.Test
 {
     /// <summary>
     ///     A test class for the settings controller
@@ -85,7 +85,7 @@ namespace Intranet.Web.Test.Controllers
                 SettingsService = settingsService
             };
             var result = settingsController.Update( null );
-            Assert.IsType(typeof(HttpNotFoundResult), result);
+            Assert.IsType( typeof(HttpNotFoundResult), result );
         }
     }
 }

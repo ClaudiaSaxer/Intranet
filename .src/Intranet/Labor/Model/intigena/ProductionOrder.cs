@@ -69,7 +69,6 @@ namespace Intranet.Labor.Model
         /// <value>the ref id of the machine</value>
         public Int32 MachineRefId { get; set; }
 
-       
         #endregion
     }
 }

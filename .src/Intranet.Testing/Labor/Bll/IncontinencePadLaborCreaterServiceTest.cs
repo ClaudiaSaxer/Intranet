@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
 
@@ -37,11 +36,10 @@ namespace Intranet.Labor.Bll.Test
                 TestValues = new List<TestValue>(),
                 TestSheetId = 1,
                 ArticleType = ArticleType.IncontinencePad
-
             };
             var laborCreatorBllMoq = MockHelperBll.GetIncontinencePadLaborCreatorBll(
                 testSheet
-              );
+            );
 
             var target = new IncontinencePadLaborCreatorService( new NLogLoggerFactory() )
             {
@@ -67,26 +65,25 @@ namespace Intranet.Labor.Bll.Test
             actual.Rewets.Should()
                   .NotBeNull( "because it is initialized" );
             actual.RewetAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.RewetStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.RewetAfterAcquisitionTimeAverage.Should()
-                .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.RewetAfterAcquisitionTimeStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.Retentions.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.RewetAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.RetentionStandardDeviation.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.AcquisitionTimes.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.AcquisitionTimeAverage.Should()
-                 .NotBeNull("because it is initialized");
+                  .NotBeNull( "because it is initialized" );
             actual.AcquisitionTimeAverage.Should()
-                 .NotBeNull("because it is initialized");
-
+                  .NotBeNull( "because it is initialized" );
         }
     }
 }

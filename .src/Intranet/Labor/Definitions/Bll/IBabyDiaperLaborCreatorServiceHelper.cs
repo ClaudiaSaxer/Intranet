@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
 namespace Intranet.Labor.Definition
@@ -12,7 +12,21 @@ namespace Intranet.Labor.Definition
     /// </summary>
     public interface IBabyDiaperLaborCreatorServiceHelper
     {
-      
+        /// <summary>
+        ///     Computes if the user can Edit the Baby Diaper
+        /// </summary>
+        /// <returns></returns>
+        Boolean CanUserEdit();
+
+        /// <summary>
+        ///     gets the average weight for all tests
+        /// </summary>
+        Double ComputeWeightAverageAll( IEnumerable<TestValue> testValue );
+
+        /// <summary>
+        ///     gets the weight for the standard deviation for all tests
+        /// </summary>
+        Double ComputeWeightStandardDeviationAll( IEnumerable<TestValue> testValue );
 
         /// <summary>
         ///     Gets the BabyDiaperTestValue out of a list of testvalues for the correct <see cref="TestTypeBabyDiaper" /> and
@@ -53,7 +67,7 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a Penetration Time test value</returns>
-        BabyDiaperPenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode,Int32 testValueId );
+        BabyDiaperPenetrationTimeTestValue ToPenetrationTimeTestValue( BabyDiaperTestValue penetrationTime, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the penetration time test value collection for all singe tests
@@ -129,7 +143,7 @@ namespace Intranet.Labor.Definition
         /// <param name="prodCode">the diaper production code</param>
         /// <param name="testValueId">the id of the test value</param>
         /// <returns>the test value for the rewet test</returns>
-        BabyDiaperRewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId);
+        BabyDiaperRewetTestValue ToRewetTestValue( BabyDiaperTestValue rewet, String testPerson, String prodCode, Int32 testValueId );
 
         /// <summary>
         ///     Creates the rewet test value collection for all singe tests
@@ -146,7 +160,7 @@ namespace Intranet.Labor.Definition
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a BabyDiaperTestInfo</returns>
-        BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId);
+        BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId );
 
         /// <summary>
         ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input
@@ -170,7 +184,16 @@ namespace Intranet.Labor.Definition
         Collection<T> ToTestValuesCollectionByTestType<T>( IEnumerable<TestValue> testValue,
                                                            TestValueType testValueType,
                                                            ICollection<TestTypeBabyDiaper> testTypeBabyDiaper,
-                                                           Func<BabyDiaperTestValue, String, String,Int32, T> toTestTypeTestValueAction );
+                                                           Func<BabyDiaperTestValue, String, String, Int32, T> toTestTypeTestValueAction );
+
+        /// <summary>
+        ///     Validates a required item
+        /// </summary>
+        /// <param name="item">the idtem to be validated</param>
+        /// <param name="name">the name of the item</param>
+        /// <typeparam name="T">the type of the item</typeparam>
+        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
+        void ValidateRequiredItem<T>( T item, String name );
 
         /// <summary>
         ///     Validates the test value where only one item is allowed to exists for the given input parameter. Throws a
@@ -182,30 +205,5 @@ namespace Intranet.Labor.Definition
         /// <param name="valueType">the valuetype that is validated</param>
         /// <returns></returns>
         TestValue ValidateTestValueOnlyExactlyOneHasToExist( ICollection<TestValue> testValue, String testType, String valueType );
-
-        /// <summary>
-        /// Validates a required item
-        /// </summary>
-        /// <param name="item">the idtem to be validated</param>
-        /// <param name="name">the name of the item</param>
-        /// <typeparam name="T">the type of the item</typeparam>
-        /// <exception cref="InvalidDataException">a Invalid Data Exception because the item must be set</exception>
-        void ValidateRequiredItem<T>( T item, String name );
-
-       /// <summary>
-       /// gets the weight for the standard deviation for all tests
-       /// </summary>
-        Double ComputeWeightStandardDeviationAll(IEnumerable<TestValue> testValue);
-
-        /// <summary>
-        /// gets the average weight for all tests
-        /// </summary>
-        Double ComputeWeightAverageAll(IEnumerable<TestValue> testValue);
-
-        /// <summary>
-        /// Computes if the user can Edit the Baby Diaper
-        /// </summary>
-        /// <returns></returns>
-        Boolean CanUserEdit();
     }
 }

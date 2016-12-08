@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
-using Intranet.Labor.Definition.Bll;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing labor dashboard service
@@ -61,7 +60,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             var dashboardItemM11 = new DashboardItem { MachineName = "M11" };
             var dashboardItemM49 = new DashboardItem { MachineName = "M49" };
 
-            var shifts = ShiftHelper.GetLastXShiftSchedule( 4 );        
+            var shifts = ShiftHelper.GetLastXShiftSchedule( 4 );
             var items = LaborDashboardBll.GetTestSheetForShifts( shifts );
 
             var dictionary = items.GroupBy( sheet => sheet.MachineNr )
@@ -98,11 +97,10 @@ namespace Intranet.Web.Areas.Labor.Controllers
             {
                 var sheets = dictionary[machine].Where( sheet => ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shift ) )
                                                 .ToList();
-                if(sheets.Count!=0)
+                if ( sheets.Count != 0 )
                     return LaborDashboardHelper.ToProductionOrderItems( sheets );
             }
-             return new List<ProductionOrderItem>();                                                              
-        } 
-                
+            return new List<ProductionOrderItem>();
+        }
     }
 }

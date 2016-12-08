@@ -4,9 +4,7 @@ using System.Linq;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
-using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
 
 namespace Intranet.Labor.Bll.Test
@@ -107,7 +105,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetList.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -159,7 +157,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetList.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -205,7 +203,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules( shiftSheduleListQuery.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var testSheetList = new List<TestSheet>
             {
@@ -260,7 +258,7 @@ namespace Intranet.Labor.Bll.Test
             var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules( shiftSheduleListQuery.AsQueryable() );
 
             var productionOrderRepository = MockHelperBll.GetAllProductionOrders( productionOrderListQuery.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -308,7 +306,7 @@ namespace Intranet.Labor.Bll.Test
             var shiftSheduleRepository = MockHelperBll.GetAllShiftSchedules( shiftSheduleListQuery.AsQueryable() );
 
             var productionOrderRepository = MockHelperBll.GetAllProductionOrders( productionOrderListQuery.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(null);
+            var shifthelper = MockHelperBll.GetShiftHelper( null );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -381,7 +379,7 @@ namespace Intranet.Labor.Bll.Test
             var productionOrderRepository = MockHelperBll.GetAllProductionOrders( productionOrderListQuery.AsQueryable() );
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetList.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -470,7 +468,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetList.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {
@@ -560,7 +558,7 @@ namespace Intranet.Labor.Bll.Test
             };
 
             var testSheetRepository = MockHelperBll.TestSheetRepository( testSheetList.AsQueryable() );
-            var shifthelper = MockHelperBll.GetShiftHelper(ShiftType.Late);
+            var shifthelper = MockHelperBll.GetShiftHelper( ShiftType.Late );
 
             var target = new LaborCreatorBll( new NLogLoggerFactory() )
             {

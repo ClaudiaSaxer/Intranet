@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.labor
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing notes for a test value

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Linq;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 namespace Intranet.Labor.Definition
 {

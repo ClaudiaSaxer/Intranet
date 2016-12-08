@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.labor
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing the sheet for a test
@@ -31,7 +31,6 @@ namespace Intranet.Labor.Model.labor
         /// </summary>
         /// <value>the shift of the test sheet</value>
         public ShiftType ShiftType { get; set; }
-
 
         /// <summary>
         ///     Gets or sets the timestamp of the creation of the test sheet
@@ -82,7 +81,7 @@ namespace Intranet.Labor.Model.labor
         public virtual ICollection<TestValue> TestValues { get; set; }
 
         /// <summary>
-        /// Gets or sets the day in year of the test sheet
+        ///     Gets or sets the day in year of the test sheet
         /// </summary>
         /// <value>the day in the year</value>
         public Int32 DayInYear { get; set; }

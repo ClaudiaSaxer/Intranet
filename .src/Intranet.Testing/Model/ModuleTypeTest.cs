@@ -14,7 +14,8 @@ namespace Intranet.Model.Test
         /// </summary>
         [Fact]
         public void MainTypeTest()
-            => ModuleType.Main.ToInt32().Should()
+            => ModuleType.Main.ToInt32()
+                         .Should()
                          .Be( 0 );
 
         /// <summary>
@@ -22,7 +23,8 @@ namespace Intranet.Model.Test
         /// </summary>
         [Fact]
         public void SettingTypeTest()
-            => ModuleType.Setting.ToInt32().Should()
+            => ModuleType.Setting.ToInt32()
+                         .Should()
                          .Be( 2 );
 
         /// <summary>
@@ -30,7 +32,8 @@ namespace Intranet.Model.Test
         /// </summary>
         [Fact]
         public void SubTypeTest()
-            => ModuleType.Sub.ToInt32().Should()
+            => ModuleType.Sub.ToInt32()
+                         .Should()
                          .Be( 1 );
     }
 }

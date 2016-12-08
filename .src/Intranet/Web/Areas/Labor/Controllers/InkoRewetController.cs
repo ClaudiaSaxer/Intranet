@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
@@ -17,8 +16,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing the InkoRewetController
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
-    [Authorize(Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser)]
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser )]
     public class InkoRewetController : BaseController
     {
         #region Properties
@@ -48,6 +47,20 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #endregion
 
         /// <summary>
+        ///     adds a new note to the test
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <returns>The Edit View</returns>
+        [HttpPost]
+        public ActionResult AddNote( InkoRewetEditViewModel viewModel )
+        {
+            if ( viewModel.Notes.IsNull() )
+                viewModel.Notes = new List<TestNote>();
+            viewModel.Notes.Add( new TestNote() );
+            return View( "Edit", viewModel );
+        }
+
+        /// <summary>
         ///     Loads the InkoRewet Edit View with a new Item for the Test-Sheet
         /// </summary>
         /// ///
@@ -61,6 +74,17 @@ namespace Intranet.Web.Areas.Labor.Controllers
             if ( viewModel.IsNull() )
                 return new HttpNotFoundResult( "Das TestSheet ist entweder kein Inko Testsheet oder existiert nicht." );
             return View( "Edit", viewModel );
+        }
+
+        /// <summary>
+        ///     Deletes the Testvalue
+        /// </summary>
+        /// <param name="id">The Id of the TestValue</param>
+        /// <returns></returns>
+        public ActionResult Delete( Int32 id )
+        {
+            var deletedTest = InkoRewetService.Delete( id );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetRefId } );
         }
 
         /// <summary>
@@ -81,17 +105,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        ///     Deletes the Testvalue
-        /// </summary>
-        /// <param name="id">The Id of the TestValue</param>
-        /// <returns></returns>
-        public ActionResult Delete( Int32 id )
-        {
-            var deletedTest = InkoRewetService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetRefId } );
-        }
-
-        /// <summary>
         ///     Saves the new test or update it
         /// </summary>
         /// <param name="viewModel">the testdata whicht will be saved</param>
@@ -102,20 +115,6 @@ namespace Intranet.Web.Areas.Labor.Controllers
         {
             var savedModel = InkoRewetService.Save( viewModel );
             return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = savedModel.TestSheetRefId } );
-        }
-
-        /// <summary>
-        ///     adds a new note to the test
-        /// </summary>
-        /// <param name="viewModel"></param>
-        /// <returns>The Edit View</returns>
-        [HttpPost]
-        public ActionResult AddNote( InkoRewetEditViewModel viewModel )
-        {
-            if ( viewModel.Notes.IsNull() )
-                viewModel.Notes = new List<TestNote>();
-            viewModel.Notes.Add( new TestNote() );
-            return View( "Edit", viewModel );
         }
     }
 }

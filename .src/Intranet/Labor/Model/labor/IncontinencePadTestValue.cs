@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Intranet.Labor.Model.labor
+namespace Intranet.Labor.Model
 {
     /// <summary>
     ///     Class representing incontinence pad test value

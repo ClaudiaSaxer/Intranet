@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
 namespace Intranet.Model.Test
 {
     /// <summary>
-    /// Class representing Module Test
+    ///     Class representing Module Test
     /// </summary>
     public class ModuleTest
     {
@@ -19,10 +15,18 @@ namespace Intranet.Model.Test
         [Fact]
         public void SetPropertiesTest()
         {
-
-            var module = new Module()
+            var module = new Module
             {
-                Visible = true,Name = "Heidi",Roles = new List<Role>(),Type = ModuleType.Main,ModuleId = 666,ControllerName = "thecontroller",ActionName = "theaction",Submodules = new List<Module>(),AreaName = "thearea",Description = "blabla blub"
+                Visible = true,
+                Name = "Heidi",
+                Roles = new List<Role>(),
+                Type = ModuleType.Main,
+                ModuleId = 666,
+                ControllerName = "thecontroller",
+                ActionName = "theaction",
+                Submodules = new List<Module>(),
+                AreaName = "thearea",
+                Description = "blabla blub"
             };
             module.Should()
                   .NotBeNull( "is initialized" );
@@ -46,7 +50,6 @@ namespace Intranet.Model.Test
                   .Be( ModuleType.Main );
             module.ModuleId.Should()
                   .Be( 666 );
-
         }
     }
 }

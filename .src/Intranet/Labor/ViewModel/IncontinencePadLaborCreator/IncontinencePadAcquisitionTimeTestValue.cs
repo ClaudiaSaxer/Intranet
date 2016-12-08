@@ -6,6 +6,7 @@
     public class IncontinencePadAcquisitionTimeTestValue
     {
         #region Properties
+
         /// <summary>
         ///     Gets or sets the test info
         /// </summary>
@@ -23,7 +24,6 @@
         /// </summary>
         /// <value>the rewet afteracquisition time data</value>
         public IncontinencePadRewet RewetAfterAcquisitionTime { get; set; }
-
 
         #endregion
     }

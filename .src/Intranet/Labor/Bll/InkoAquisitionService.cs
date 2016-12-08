@@ -7,7 +7,6 @@ using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
 
 #endregion
@@ -136,7 +135,7 @@ namespace Intranet.Labor.Bll
         {
             var testSheet = TestBll.GetTestSheetInfo( testSheetId );
 
-            if ( testSheet.IsNull() || testSheet.ArticleType != ArticleType.IncontinencePad )
+            if ( testSheet.IsNull() || ( testSheet.ArticleType != ArticleType.IncontinencePad ) )
             {
                 Logger.Error( "TestBlatt mit id " + testSheetId + "existiert nicht in DB!" );
                 return null;
@@ -146,7 +145,7 @@ namespace Intranet.Labor.Bll
             var errorCodes = errors.Select( error => new ErrorCode { ErrorId = error.ErrorId, Name = error.ErrorCode + " - " + error.Value } )
                                    .ToList();
 
-            var viewModel = new InkoAquisitionEditViewModel()
+            var viewModel = new InkoAquisitionEditViewModel
             {
                 TestSheetId = testSheetId,
                 TestValueId = -1,
@@ -181,13 +180,13 @@ namespace Intranet.Labor.Bll
             try
             {
                 testValue = viewModel.TestValueId <= 0
-                    ? InkoAquisitionServiceHelper.SaveNewAquisitionTest(viewModel)
-                    : InkoAquisitionServiceHelper.UpdateAquisitionTest(viewModel);
-                var testSheet = InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv(viewModel.TestSheetId);
+                    ? InkoAquisitionServiceHelper.SaveNewAquisitionTest( viewModel )
+                    : InkoAquisitionServiceHelper.UpdateAquisitionTest( viewModel );
+                var testSheet = InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv( viewModel.TestSheetId );
             }
-            catch (Exception e)
+            catch ( Exception e )
             {
-                Logger.Error("Update oder Create new Test Value ist fehlgeschlagen: " + e.Message);
+                Logger.Error( "Update oder Create new Test Value ist fehlgeschlagen: " + e.Message );
                 testValue = null;
             }
             return testValue;

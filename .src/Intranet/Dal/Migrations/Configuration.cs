@@ -103,7 +103,7 @@ namespace Intranet.Dal
                 Roles = rolesadmin
             };
 
-            context.Modules.AddOrUpdate( m => m.Name, labor, adminshell, creator, dashboard, history);
+            context.Modules.AddOrUpdate( m => m.Name, labor, adminshell, creator, dashboard, history );
         }
     }
 }

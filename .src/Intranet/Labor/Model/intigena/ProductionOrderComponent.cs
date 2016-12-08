@@ -58,7 +58,6 @@ namespace Intranet.Labor.Model
         /// <value>the production order for the component</value>
         public virtual ProductionOrder ProductionOrder { get; set; }
 
-
         #endregion
     }
 }

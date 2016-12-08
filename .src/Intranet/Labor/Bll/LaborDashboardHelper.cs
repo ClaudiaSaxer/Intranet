@@ -5,12 +5,11 @@ using System.Globalization;
 using System.Linq;
 using Extend;
 using Intranet.Common;
+using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.ViewModel;
-using Intranet.Labor.ViewModel.LaborDashboard;
 
-namespace Intranet.Web.Areas.Labor.Controllers
+namespace Intranet.Labor.Bll
 {
     /// <summary>
     ///     Class representing labor dashboard helper
@@ -89,7 +88,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
             else if ( testValue.BabyDiaperTestValue.TestType == TestTypeBabyDiaper.Retention )
             {
                 infos.Add( ToDashboardInfo( "Retention - Nach Zentrifuge (g)",
-                                            Round( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue)
+                                            Round( testValue.BabyDiaperTestValue.RetentionAfterZentrifugeValue )
                                                 .ToString( CultureInfo.InvariantCulture ),
                                             testValue.BabyDiaperTestValue.RetentionRw.GetValueOrDefault() ) );
             }
@@ -175,8 +174,8 @@ namespace Intranet.Web.Areas.Labor.Controllers
                 SheetId = testSheet.TestSheetId,
                 HasNotes = testSheet.TestValues?.ToList()
                                     .Exists( value => value.TestValueNote.Count > 0 ) ?? false,
-                Notes = testSheet.TestValues != null ? ToDashboardNote( testSheet.TestValues ):null,
-                DashboardInfos = testSheet.TestValues != null ? ToDashboardInfos( testSheet.TestValues ):null,
+                Notes = testSheet.TestValues != null ? ToDashboardNote( testSheet.TestValues ) : null,
+                DashboardInfos = testSheet.TestValues != null ? ToDashboardInfos( testSheet.TestValues ) : null,
                 ProductionOrderName = testSheet.FaNr,
                 RwType = testSheet.TestValues != null ? ToRwTypeAll( testSheet.TestValues.ToList() ) : RwType.Ok,
                 Action = "Edit",
@@ -227,6 +226,13 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
+        ///     Round double to value to show on viewmodel
+        /// </summary>
+        /// <param name="value">the double before round</param>
+        /// <returns>the double after Round</returns>
+        private static Double Round( Double value ) => Math.Round( value, 2 );
+
+        /// <summary>
         ///     Generates a Dashboard Info with the given param values
         /// </summary>
         /// <param name="key">the key for the info as a explaining text</param>
@@ -234,13 +240,5 @@ namespace Intranet.Web.Areas.Labor.Controllers
         /// <param name="rw">the rw type for the info</param>
         /// <returns></returns>
         private DashboardInfo ToDashboardInfo( String key, String value, RwType rw ) => new DashboardInfo { InfoValue = value, InfoKey = key, RwType = rw };
-
-
-        /// <summary>
-        ///     Round double to value to show on viewmodel
-        /// </summary>
-        /// <param name="value">the double before round</param>
-        /// <returns>the double after Round</returns>
-        private static Double Round(Double value) => Math.Round(value, 2);
     }
 }

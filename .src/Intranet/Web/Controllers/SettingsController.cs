@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Definition;
 using Intranet.ViewModel;
 
@@ -9,7 +8,7 @@ namespace Intranet.Web.Controllers
     /// <summary>
     ///     Class representing the SettingsController
     /// </summary>
-    [Authorize( Roles = RoleSettings.LaborAdmin)]
+    [Authorize( Roles = RoleSettings.LaborAdmin )]
     public class SettingsController : BaseController
     {
         #region Properties

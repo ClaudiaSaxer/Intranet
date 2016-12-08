@@ -18,6 +18,6 @@ namespace Intranet.Definition
         ///     Updates the settings for the module
         /// </summary>
         /// <param name="moduleSetting">The ModuleSettings</param>
-        Module UpdateModuleSetting(ModuleSetting moduleSetting);
+        Module UpdateModuleSetting( ModuleSetting moduleSetting );
     }
 }

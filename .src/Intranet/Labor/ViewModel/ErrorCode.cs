@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Intranet.Labor.ViewModel
 {
@@ -11,6 +7,8 @@ namespace Intranet.Labor.ViewModel
     /// </summary>
     public class ErrorCode
     {
+        #region Properties
+
         /// <summary>
         ///     Gets or sets the ID of the Error
         /// </summary>
@@ -20,5 +18,7 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the Name of the Error
         /// </summary>
         public String Name { get; set; }
+
+        #endregion
     }
 }

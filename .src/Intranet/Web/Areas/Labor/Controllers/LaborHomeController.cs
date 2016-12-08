@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using Intranet.Common;
-using Intranet.Common.Role;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
 
@@ -9,11 +8,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
     /// <summary>
     ///     Class representing Labor Home Controller
     /// </summary>
-    [CheckDisable(ModuleName = "Labor")]
-    [Authorize(Roles =
+    [CheckDisable( ModuleName = "Labor" )]
+    [Authorize( Roles =
          RoleSettings.LaborAdmin + "," +
          RoleSettings.LaborUser + "," +
-         RoleSettings.LaborViewer)]
+         RoleSettings.LaborViewer )]
     public class LaborHomeController : BaseController
     {
         #region Properties

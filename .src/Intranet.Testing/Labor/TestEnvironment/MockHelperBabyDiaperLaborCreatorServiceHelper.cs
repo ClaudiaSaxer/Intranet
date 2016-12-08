@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 using Intranet.Labor.Definition;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 using Moq;
 
@@ -47,14 +47,14 @@ namespace Intranet.Labor.TestEnvironment
             mock.Setup( x => x.ToRetentionStandardDeviation( It.IsAny<List<TestValue>>() ) )
                 .Returns( new BabyDiaperRetention() );
 
-            mock.Setup(x => x.ToPenetrationTimeTestValuesCollection(It.IsAny<List<TestValue>>()))
-         .Returns(new List<BabyDiaperPenetrationTimeTestValue>());
+            mock.Setup( x => x.ToPenetrationTimeTestValuesCollection( It.IsAny<List<TestValue>>() ) )
+                .Returns( new List<BabyDiaperPenetrationTimeTestValue>() );
 
-            mock.Setup(x => x.ToPenetrationTimeAverage(It.IsAny<List<TestValue>>()))
-                .Returns(new BabyDiaperPenetrationTime());
+            mock.Setup( x => x.ToPenetrationTimeAverage( It.IsAny<List<TestValue>>() ) )
+                .Returns( new BabyDiaperPenetrationTime() );
 
-            mock.Setup(x => x.ToPenetrationTimeStandardDeviation(It.IsAny<List<TestValue>>()))
-                .Returns(new BabyDiaperPenetrationTime());
+            mock.Setup( x => x.ToPenetrationTimeStandardDeviation( It.IsAny<List<TestValue>>() ) )
+                .Returns( new BabyDiaperPenetrationTime() );
 
             return mock.Object;
         }

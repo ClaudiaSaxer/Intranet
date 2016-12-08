@@ -1,11 +1,11 @@
 ﻿#region Usings
 
 using Intranet.Common;
-using Intranet.Labor.Model.labor;
+using Intranet.Labor.Model;
 
 #endregion
 
-namespace Intranet.Labor.Dal.Repositories
+namespace Intranet.Labor.Dal
 {
     /// <summary>
     ///     The Repository for the TestSheet

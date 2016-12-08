@@ -101,28 +101,29 @@ namespace Intranet.Labor.ViewModel
         public BabyDiaperPenetrationTime BabyDiaperPenetrationTimeStandardDeviation { get; set; }
 
         /// <summary>
-        /// Gets or sets the average of all tests
+        ///     Gets or sets the average of all tests
         /// </summary>
         /// <value>the average of all tests</value>
-        public Double WeigthAverageAll { get; set; }        
-        
+        public Double WeigthAverageAll { get; set; }
+
         /// <summary>
-        /// Gets or sets the standard Deviation of all tests
+        ///     Gets or sets the standard Deviation of all tests
         /// </summary>
         /// <value>the standard deviation of all tests</value>
         public Double WeightStandardDeviationAll { get; set; }
 
         /// <summary>
-        /// Gets or sets the id for the test sheet
+        ///     Gets or sets the id for the test sheet
         /// </summary>
         /// <value>the testsheet id</value>
         public Int32 TestSheetId { get; set; }
 
         /// <summary>
-        /// Gets or sets the boolean, if the current user is allowed to edit the baby diaper
+        ///     Gets or sets the boolean, if the current user is allowed to edit the baby diaper
         /// </summary>
         /// <value>true if the current user is allowed to edit the baby diaper</value>
         public Boolean CanEdit { get; set; }
+
         #endregion
     }
 }

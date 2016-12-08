@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Model;
-using Intranet.Labor.Model.labor;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
@@ -272,7 +271,7 @@ namespace Intranet.Labor.Bll.Test
 
             var actualAquisitionAvg =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) );
             Assert.NotNull( actualAquisitionAvg );
             Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionWeight );
             Assert.Equal( 0, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirst );
@@ -288,7 +287,9 @@ namespace Intranet.Labor.Bll.Test
 
             var actualAquisitionStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+                          tv =>
+                              ( tv.TestValueType == TestValueType.StandardDeviation )
+                              && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) );
             Assert.NotNull( actualAquisitionStDev );
             Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionWeight );
             Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeFirst );
@@ -340,7 +341,7 @@ namespace Intranet.Labor.Bll.Test
 
             var actualAquisitionAvg =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.Average && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+                          tv => ( tv.TestValueType == TestValueType.Average ) && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) );
             Assert.NotNull( actualAquisitionAvg );
             Assert.Equal( 21.15, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionWeight );
             Assert.Equal( 17.12, actualAquisitionAvg.IncontinencePadTestValue.AcquisitionTimeFirst );
@@ -356,7 +357,9 @@ namespace Intranet.Labor.Bll.Test
 
             var actualAquisitionStDev =
                 actual.TestValues.FirstOrDefault(
-                          tv => tv.TestValueType == TestValueType.StandardDeviation && tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet );
+                          tv =>
+                              ( tv.TestValueType == TestValueType.StandardDeviation )
+                              && ( tv.IncontinencePadTestValue.TestType == TestTypeIncontinencePad.AcquisitionTimeAndRewet ) );
             Assert.NotNull( actualAquisitionStDev );
             Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionWeight );
             Assert.Equal( 0, actualAquisitionStDev.IncontinencePadTestValue.AcquisitionTimeFirst );

@@ -13,9 +13,8 @@ namespace Intranet.Bll
     {
         #region Properties
 
-  
         /// <summary>
-        /// Repository for Roles
+        ///     Repository for Roles
         /// </summary>
         public IGenericRepository<Role> RoleRepository { get; set; }
 
@@ -47,7 +46,7 @@ namespace Intranet.Bll
             var modules = RoleRepository.GetAll()
                                         .Where( role => roleNames.Any( n => n.Contains( role.Name ) ) )
                                         .SelectMany( role => role.Modules )
-                                        .Where( module => module.Visible==true && module.Type == ModuleType.Main )
+                                        .Where( module => ( module.Visible == true ) && ( module.Type == ModuleType.Main ) )
                                         .Distinct()
                                         .ToList();
             return modules;

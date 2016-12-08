@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Extend;
 using FluentAssertions;
 using Xunit;
@@ -87,7 +86,7 @@ namespace Intranet.ViewModel.Test
         }
 
         /// <summary>
-        /// Test Properties 4
+        ///     Test Properties 4
         /// </summary>
         [Fact]
         public void PropertiesTest4()
