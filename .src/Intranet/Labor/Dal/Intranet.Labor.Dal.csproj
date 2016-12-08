@@ -83,10 +83,6 @@
       <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
       <Name>Intranet.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Definitions\Intranet.Definition.csproj">
-      <Project>{095033FB-4C81-4556-A7BB-F0C69D7617EE}</Project>
-      <Name>Intranet.Definition</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

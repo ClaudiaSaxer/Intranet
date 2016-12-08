@@ -91,10 +91,6 @@
     <Compile Include="Web\BaseController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Definitions\Intranet.Definition.csproj">
-      <Project>{095033fb-4c81-4556-a7bb-f0c69d7617ee}</Project>
-      <Name>Intranet.Definition</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Model\Intranet.Model.csproj">
       <Project>{0BF2D570-E789-4D08-9A98-8F019BB03DA5}</Project>
       <Name>Intranet.Model</Name>
