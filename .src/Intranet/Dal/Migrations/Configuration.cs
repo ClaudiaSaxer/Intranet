@@ -37,6 +37,7 @@ namespace Intranet.Dal
             var laborviewer = new Role { Name = "LaborViewer" };
 
             var roles = new Collection<Role> { admin, laboruser, laborviewer };
+            var rolesWrite = new Collection<Role> { admin, laboruser };
             var rolesadmin = new Collection<Role> { admin };
 
             context.Roles.AddOrUpdate( m => m.Name, admin, laboruser, laborviewer );
@@ -50,7 +51,7 @@ namespace Intranet.Dal
                 AreaName = "Labor",
                 Type = ModuleType.Sub,
                 Visible = null,
-                Roles = roles
+                Roles = rolesWrite
             };
 
             var dashboard = new Module
