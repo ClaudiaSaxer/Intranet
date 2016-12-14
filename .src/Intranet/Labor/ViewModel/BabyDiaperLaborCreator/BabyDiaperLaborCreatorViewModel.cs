@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    ///     Class representing the view model for the labor creator
+    ///     Class representing the view model for the babydiaper labor creator
     /// </summary>
     public class BabyDiaperLaborCreatorViewModel
     {
