@@ -394,7 +394,6 @@
     <Content Include="Areas\Labor\Views\InkoAquisition\Edit.cshtml" />
     <Content Include="Areas\Labor\Views\LaborDashboard\DashboardPartial.cshtml" />
     <Content Include="Areas\Labor\Views\History\Search.cshtml" />
-    <None Include="Properties\PublishProfiles\Test.pubxml" />
     <None Include="resources\js\jquery-1.10.2.intellisense.js" />
     <Content Include="resources\js\intigena\TestEditCreate.js" />
     <Content Include="resources\js\jquery-1.10.2.js" />
