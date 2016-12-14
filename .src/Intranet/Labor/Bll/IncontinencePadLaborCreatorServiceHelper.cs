@@ -12,7 +12,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the labor creator service
+    ///     Class representing the incontinence pad labor creator service helper
     /// </summary>
     public class IncontinencePadLaborCreatorServiceHelper : ServiceBase, IIncontinencePadLaborCreatorServiceHelper
     {

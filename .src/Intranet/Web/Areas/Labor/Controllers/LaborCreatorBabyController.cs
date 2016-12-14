@@ -12,7 +12,7 @@ using Intranet.Web.Filter;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     Class representing the controller for the labor creator
+    ///     Class representing the controller for the labor creator baby
     /// </summary>
     [CheckDisable( ModuleName = "Labor" )]
     [Authorize( Roles =
@@ -56,7 +56,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #endregion
 
         /// <summary>
-        ///     GET: Labor/LaborCreatorBaby/5
+        ///     
         /// </summary>
         /// <param name="id">the id of the testsheet</param>
         /// <returns>the actionresult to edit a existing testsheet</returns>

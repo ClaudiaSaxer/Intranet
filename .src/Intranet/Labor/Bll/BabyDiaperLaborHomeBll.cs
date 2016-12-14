@@ -8,7 +8,7 @@ using Intranet.Model;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the bll of the labor home.
+    ///     Class representing the bll of the babydiaper labor home.
     /// </summary>
     public class BabyDiaperLaborHomeBll : ILaborHome
     {

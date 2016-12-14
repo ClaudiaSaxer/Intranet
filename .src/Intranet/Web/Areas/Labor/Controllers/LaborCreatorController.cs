@@ -10,7 +10,7 @@ using Intranet.Web.Filter;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     Class representing Labor Creator
+    ///     Class representing Labor Creator Controller
     /// </summary>
     [CheckDisable( ModuleName = "Labor" )]
     [Authorize( Roles = RoleSettings.LaborAdmin + "," + RoleSettings.LaborUser )]

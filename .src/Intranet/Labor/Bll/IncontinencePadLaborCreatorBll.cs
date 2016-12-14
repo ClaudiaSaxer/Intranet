@@ -6,7 +6,7 @@ using Intranet.Labor.Model;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing Labro creator bll
+    ///     Class representing Labor creator bll for incontinence pads
     /// </summary>
     public class IncontinencePadLaborCreatorBll : IIncontinencePadLaborCreatorBll
     {

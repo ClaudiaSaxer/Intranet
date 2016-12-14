@@ -14,6 +14,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
+    ///     Class representing the test service helper for all labor tests
     /// </summary>
     public class TestServiceHelper : ServiceBase, ITestServiceHelper
     {
