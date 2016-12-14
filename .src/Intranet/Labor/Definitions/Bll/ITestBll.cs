@@ -5,7 +5,7 @@ using Intranet.Labor.Model;
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the bll for the babydiapers value edit/create
+    ///     Interface representing the bll for for all tests edit/create
     /// </summary>
     public interface ITestBll
     {

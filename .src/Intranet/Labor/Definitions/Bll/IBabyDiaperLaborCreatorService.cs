@@ -4,7 +4,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the labor creator service
+    ///     Interface representing the babydiaper labor creator service
     /// </summary>
     public interface IBabyDiaperLaborCreatorService
     {

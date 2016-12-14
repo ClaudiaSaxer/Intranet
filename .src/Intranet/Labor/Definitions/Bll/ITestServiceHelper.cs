@@ -10,7 +10,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     The Interface for the baby diaper service helper
+    ///     The Interface for the testt service helper for all edit/create tests
     /// </summary>
     public interface ITestServiceHelper
     {
