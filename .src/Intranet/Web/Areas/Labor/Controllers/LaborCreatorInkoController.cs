@@ -56,7 +56,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         #endregion
 
         /// <summary>
-        ///     
+        ///     Loads the inko testsheet
         /// </summary>
         /// <param name="id">the id of the testsheet</param>
         /// <returns>the actionresult to edit a existing testsheet</returns>

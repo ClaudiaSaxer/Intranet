@@ -93,14 +93,6 @@
                 <a class="btn btn-danger btn-lg" id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
                     <span class="glyphicon glyphicon-trash"></span>
                 </a>
-                <!--
-                <span><a id="addPenetration" style="@(Model.TestType != TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
-                    Aktivieren
-                </a>
-                <a id="removePenetration" style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")">
-                    Entfernen
-                </a></span>    
-                -->
             </h4>
             <div style="@(Model.TestType == TestTypeBabyDiaper.RewetAndPenetrationTime ? "display:block" : "display:none")" id="penetration-test">
                 <div class="error-message">
