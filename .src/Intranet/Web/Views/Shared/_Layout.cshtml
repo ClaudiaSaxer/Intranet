@@ -3,11 +3,16 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - INtranet</title>
     @Styles.Render( "~/bundles/css" )
     @Scripts.Render( "~/bundles/jquery" )
     @Scripts.Render( "~/bundles/jqueryval" )
     @Scripts.Render( "~/bundles/bootstrap" )
+    <script type="text/javascript">
+        var globalConfig = {
+            updateSettingsUrl: '@Url.Action("Update", "Settings")'
+        };
+    </script>
 </head>
 <body>
 @{ Html.RenderPartial( "_HeaderNavBar" ); }

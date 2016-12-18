@@ -1,7 +1,7 @@
 /// <reference path="jquery.d.ts" />
 function sendForm(id, name, visibleStatus) {
     $.ajax({
-        url: '/Settings/Update',
+        url: globalConfig.updateSettingsUrl,
         type: 'POST',
         contentType: 'application/json',
         data: JSON.stringify({
