@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Labor.ViewModel;
@@ -6,6 +8,8 @@ using Intranet.Model;
 using Intranet.TestEnvironment;
 using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Web.Test
 {

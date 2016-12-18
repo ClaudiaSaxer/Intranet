@@ -1,7 +1,11 @@
-﻿using System.Web.Mvc;
+﻿#region Usings
+
+using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
+
+#endregion
 
 namespace Intranet.Web.Controllers
 {

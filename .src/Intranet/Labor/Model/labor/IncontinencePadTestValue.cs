@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {

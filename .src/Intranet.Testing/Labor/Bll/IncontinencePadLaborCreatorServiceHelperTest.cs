@@ -1,3 +1,5 @@
+#region Usings
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +10,8 @@ using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -551,8 +555,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToAcquisitionTimeTestValueCollectionTest()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToAcquisitionTimeTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -650,8 +653,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToRetentionTestValueCollectionTest()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToRetentionTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -819,8 +821,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToRewetTestValueCollectionTest()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToRewetTestValuesCollection( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -879,8 +880,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest1()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -896,8 +896,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest2()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
@@ -913,8 +912,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest3()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.AcquisitionTimeAndRewet },
@@ -930,8 +928,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest4()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Average,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -947,8 +944,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest5()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.StandardDeviation,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.Retention },
@@ -964,8 +960,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest6()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Average,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },
@@ -981,8 +976,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest7()
         {
-            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( IncontinencePadLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.StandardDeviation,
                                                                          new List<TestTypeIncontinencePad> { TestTypeIncontinencePad.RewetFree },

@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using FluentAssertions;
 using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {

@@ -1,7 +1,11 @@
+#region Usings
+
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.Dal.Migrations
 {

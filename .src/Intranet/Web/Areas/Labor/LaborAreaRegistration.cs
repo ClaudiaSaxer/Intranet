@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Web.Mvc;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor
 {

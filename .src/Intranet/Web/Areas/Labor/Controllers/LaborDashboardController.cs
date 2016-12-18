@@ -1,7 +1,11 @@
-﻿using System.Web.Mvc;
+﻿#region Usings
+
+using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {

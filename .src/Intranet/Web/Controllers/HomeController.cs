@@ -1,6 +1,10 @@
+#region Usings
+
 using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Definition;
+
+#endregion
 
 namespace Intranet.Web.Controllers
 {
@@ -41,9 +45,5 @@ namespace Intranet.Web.Controllers
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
         public ActionResult Index() => View( "Index", HomeService.GetHomeViewModel() );
-
-        #region Overrides of BaseController
-
-        #endregion
     }
 }

@@ -1,4 +1,8 @@
-﻿using System.Web.Optimization;
+﻿#region Usings
+
+using System.Web.Optimization;
+
+#endregion
 
 namespace Intranet.Web
 {
@@ -18,7 +22,7 @@ namespace Intranet.Web
                              "~/resources/js/jquery-{version}.js",
                              "~/resources/js/bootstrap.min.js",
                              "~/resources/js/moment.min.js",
-                            "~/resources/js/bootstrap-sortable.js") );
+                             "~/resources/js/bootstrap-sortable.js" ) );
 
             bundles.Add( new ScriptBundle( "~/bundles/jqueryval" ).Include(
                              "~/resources/js/jquery.validate*" ) );

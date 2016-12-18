@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {

@@ -1,4 +1,8 @@
-﻿using Intranet.Web.IoC;
+﻿#region Usings
+
+using Intranet.Web.IoC;
+
+#endregion
 
 namespace Intranet.Web
 {

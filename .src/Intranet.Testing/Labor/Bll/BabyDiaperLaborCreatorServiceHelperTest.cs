@@ -1,3 +1,5 @@
+#region Usings
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,6 +10,8 @@ using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -721,8 +725,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToPenetrationTimeTestValueCollectionTest()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
 
             var actual = serviceHelper.ToPenetrationTimeTestValuesCollection( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
@@ -821,8 +824,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToRetentionTestValueCollectionTest()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToRetentionTestValuesCollection( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType() );
             serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
             actual.Count.Should()
@@ -965,8 +967,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToRewetTestValueCollectionTest()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToRewetTestValuesCollection( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType() );
 
             actual.Count.Should()
@@ -1027,8 +1028,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest1()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
@@ -1044,8 +1044,10 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest2()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() )
+            {
+                LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" )
+            };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Rewet },
@@ -1061,8 +1063,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest3()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Single,
                                                                          new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.RewetAndPenetrationTime },
@@ -1078,8 +1079,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest4()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.Average,
                                                                          new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },
@@ -1095,8 +1095,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void ToTestValuesCollectionByTestTypeTest5()
         {
-            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
-            serviceHelper.LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" );
+            var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() ) { LaborCreatorServiceHelper = MockHelperLaborCreatorServiceHelper.GetLaborCreatorServiceHelper( "123" ) };
             var actual = serviceHelper.ToTestValuesCollectionByTestType( BabyDiaperLaborCreatorServiceHelperData.TwoTestValuePerType(),
                                                                          TestValueType.StandardDeviation,
                                                                          new List<TestTypeBabyDiaper> { TestTypeBabyDiaper.Retention },

@@ -1,6 +1,10 @@
-﻿using Extend;
+﻿#region Usings
+
+using Extend;
 using FluentAssertions;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Model.Test
 {

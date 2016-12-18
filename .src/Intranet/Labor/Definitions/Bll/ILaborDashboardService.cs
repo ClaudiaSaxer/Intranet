@@ -1,4 +1,8 @@
-﻿using Intranet.Labor.ViewModel;
+﻿#region Usings
+
+using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {

@@ -9,21 +9,21 @@
 <div class="container">
     <table class="table intigena-settings-table">
         <thead>
-            <tr class="intigena-table-header">
-                <th>Modul</th>
-                <th>Sichtbar</th>
-            </tr>
+        <tr class="intigena-table-header">
+            <th>Modul</th>
+            <th>Sichtbar</th>
+        </tr>
         </thead>
         <tbody>
-            @foreach (var item in Model.ModuleSettings)
-            {
-                <tr class="intigena-table-item">
-                    <td>@item.Name</td>
-                    <td>
-                        <input type="checkbox" checked="@item.Visible" data-toggle="toggle" name="@item.Name" id="@item.Id" data-on="Aktiviert" data-off="Deaktiviert" class="visible-toggle">
-                    </td>
-                </tr>
-            }
+        @foreach ( var item in Model.ModuleSettings )
+        {
+            <tr class="intigena-table-item">
+                <td>@item.Name</td>
+                <td>
+                    <input type="checkbox" checked="@item.Visible" data-toggle="toggle" name="@item.Name" id="@item.Id" data-on="Aktiviert" data-off="Deaktiviert" class="visible-toggle">
+                </td>
+            </tr>
+        }
         </tbody>
     </table>
 </div>

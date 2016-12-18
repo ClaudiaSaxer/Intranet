@@ -1,6 +1,10 @@
-﻿using FluentAssertions;
+﻿#region Usings
+
+using FluentAssertions;
 using Intranet.Labor.Model;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
