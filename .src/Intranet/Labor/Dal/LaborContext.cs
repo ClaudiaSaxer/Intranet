@@ -1,5 +1,9 @@
-﻿using System.Data.Entity;
+﻿#region Usings
+
+using System.Data.Entity;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.Dal
 {

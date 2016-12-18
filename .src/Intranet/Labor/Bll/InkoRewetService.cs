@@ -61,7 +61,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue( testValueId );
-            InkoRewetServiceHelper.UpdateRewetAverageAndStv( result.TestSheetRefId );
+            InkoRewetServiceHelper.UpdateRewetAverageAndStv( result.TestSheetId);
             return result;
         }
 
@@ -92,7 +92,7 @@ namespace Intranet.Labor.Bll
             var testSheet = testValue.TestSheet;
             if ( testSheet.IsNull() )
             {
-                Logger.Error( "TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!" );
+                Logger.Error( "TestBlatt mit id " + testValue.TestSheetId + "existiert nicht in DB!" );
                 return null;
             }
             var notes = testValue.TestValueNote;
@@ -101,13 +101,13 @@ namespace Intranet.Labor.Bll
                                    .ToList();
             if ( notes.IsNull() )
                 notes = new List<TestValueNote>();
-            var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
+            var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorId, Message = note.Message } )
                                  .ToList();
 
             var viewModel = new InkoRewetEditViewModel
             {
                 TestValueId = rewetTestId,
-                TestSheetId = testValue.TestSheetRefId,
+                TestSheetId = testValue.TestSheetId,
                 TestPerson = testValue.LastEditedPerson,
                 ProductionCode = TestServiceHelper.CreateProductionCode( testSheet ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
@@ -153,14 +153,13 @@ namespace Intranet.Labor.Bll
             var oldTestValue = testSheet.TestValues.Where( t => t.TestValueType == TestValueType.Single )
                                         .ToList()
                                         .LastOrDefault();
-            if ( oldTestValue != null )
-            {
-                viewModel.TestPerson = oldTestValue.LastEditedPerson;
-                viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
-                viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
-                viewModel.ExpireMonth = oldTestValue.IncontinencePadTestValue.ExpireMonth;
-                viewModel.ExpireYear = oldTestValue.IncontinencePadTestValue.ExpireYear;
-            }
+            if ( oldTestValue == null )
+                return viewModel;
+            viewModel.TestPerson = oldTestValue.LastEditedPerson;
+            viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
+            viewModel.ProductionCodeTime = oldTestValue.IncontinencePadTestValue.IncontinencePadTime;
+            viewModel.ExpireMonth = oldTestValue.IncontinencePadTestValue.ExpireMonth;
+            viewModel.ExpireYear = oldTestValue.IncontinencePadTestValue.ExpireYear;
 
             return viewModel;
         }
@@ -172,13 +171,13 @@ namespace Intranet.Labor.Bll
         /// <returns>The saved or updated TestValue</returns>
         public TestValue Save( InkoRewetEditViewModel viewModel )
         {
-            TestValue testValue = null;
+            TestValue testValue;
             try
             {
                 testValue = viewModel.TestValueId <= 0
                     ? InkoRewetServiceHelper.SaveNewRewetTest( viewModel )
                     : InkoRewetServiceHelper.UpdateRewetTest( viewModel );
-                var testSheet = InkoRewetServiceHelper.UpdateRewetAverageAndStv( viewModel.TestSheetId );
+                InkoRewetServiceHelper.UpdateRewetAverageAndStv( viewModel.TestSheetId );
             }
             catch ( Exception e )
             {

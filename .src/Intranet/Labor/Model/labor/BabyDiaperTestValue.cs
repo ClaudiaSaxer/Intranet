@@ -1,5 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {
@@ -15,6 +20,7 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the baby diaper test value id </value>
         [ForeignKey( "TestValue" )]
+        [Key]
         public Int32 BabyDiaperTestValueId { get; set; }
 
         /// <summary>
@@ -99,19 +105,18 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the sap type
         /// </summary>
         /// <value>the sap type</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String SapType { get; set; }
 
         /// <summary>
         ///     Gets or sets the sap number
         /// </summary>
         /// <value>the sap number</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String SapNr { get; set; }
 
-        /// <summary>
-        ///     Gets or sets the test value of the baby diaper test value
-        /// </summary>
-        /// <value>the test value</value>
-        public virtual TestValue TestValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the value of the penetrationTime of the first addition
@@ -148,6 +153,12 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the test type of the baby diaper test value</value>
         public TestTypeBabyDiaper TestType { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the test value of the baby diaper test value
+        /// </summary>
+        /// <value>the test value</value>
+        public virtual TestValue TestValue { get; set; }
 
         #endregion
     }

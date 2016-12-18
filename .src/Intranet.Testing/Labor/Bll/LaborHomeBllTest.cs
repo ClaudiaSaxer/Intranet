@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Model;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -18,8 +22,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void AllLaborModulesForRolesMatchingRoleButNotSubmoduleTest()
         {
-            var roleItem = new Role();
-            roleItem.Name = "TestRole";
+            var roleItem = new Role { Name = "TestRole" };
             roleItem.Modules = new List<Module>
             {
                 new Module { Type = ModuleType.Sub, AreaName = "NotLabor", Roles = new List<Role> { roleItem } }
@@ -56,8 +59,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void AllLaborModulesForRolesMatchingSubmoduleNotRoleTest()
         {
-            var roleItem = new Role();
-            roleItem.Name = "WrongRole";
+            var roleItem = new Role { Name = "WrongRole" };
             roleItem.Modules = new List<Module>
             {
                 new Module { Type = ModuleType.Sub, AreaName = "Labor", Roles = new List<Role> { roleItem } }
@@ -123,8 +125,7 @@ namespace Intranet.Labor.Bll.Test
         [Fact]
         public void AllLaborModulesForRolesOneMatchTest()
         {
-            var roleItem = new Role();
-            roleItem.Name = "TestRole";
+            var roleItem = new Role { Name = "TestRole" };
             roleItem.Modules = new List<Module>
             {
                 new Module { Type = ModuleType.Sub, AreaName = "Labor", Roles = new List<Role> { roleItem } }

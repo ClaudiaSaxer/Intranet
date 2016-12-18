@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using Intranet.Model;
+
+#endregion
 
 namespace Intranet.ViewModel
 {

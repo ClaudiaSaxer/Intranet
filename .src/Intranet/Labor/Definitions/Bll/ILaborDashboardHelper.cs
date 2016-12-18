@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {

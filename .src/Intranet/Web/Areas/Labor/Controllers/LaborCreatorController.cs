@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Intranet.Common;
@@ -6,6 +8,8 @@ using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
@@ -6,6 +8,8 @@ using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -44,9 +48,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .Be( ShiftType.Morning );
+            target.GetCurrentShift()
+                  .Should()
+                  .Be( ShiftType.Morning );
         }
 
         /// <summary>
@@ -80,9 +84,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>
@@ -116,9 +120,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>
@@ -152,9 +156,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>

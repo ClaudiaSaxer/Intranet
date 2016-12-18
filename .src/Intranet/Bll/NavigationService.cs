@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Linq;
 using Intranet.Common;
 using Intranet.ViewModel;
+
+#endregion
 
 namespace Intranet.Bll
 {

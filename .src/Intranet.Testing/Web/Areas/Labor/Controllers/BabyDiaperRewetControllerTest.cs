@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Labor.Model;
@@ -6,6 +8,8 @@ using Intranet.Labor.ViewModel;
 using Intranet.TestEnvironment;
 using Intranet.Web.Areas.Labor.Controllers;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Web.Test
 {
@@ -110,7 +114,7 @@ namespace Intranet.Web.Test
             var testVaule = new TestValue
             {
                 TestValueId = 4,
-                TestSheetRefId = 5
+                TestSheetId = 5
             };
             var babyDiaperRewetService = MockHelperLaborControllerService.GetBabyDiaperRewetServiceForDeleteAndSave( testVaule );
             var controller = new BabyDiaperRewetController( new NLogLoggerFactory() )
@@ -191,7 +195,7 @@ namespace Intranet.Web.Test
             var testVaule = new TestValue
             {
                 TestValueId = 4,
-                TestSheetRefId = 5
+                TestSheetId = 5
             };
             var babyDiaperRewetService = MockHelperLaborControllerService.GetBabyDiaperRewetServiceForDeleteAndSave( testVaule );
             var controller = new BabyDiaperRewetController( new NLogLoggerFactory() )

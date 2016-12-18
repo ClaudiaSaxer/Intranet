@@ -11,7 +11,7 @@
                         @po.ProductionOrderName
 
 
-                        @if ( po.HasNotes && ( po.Notes != null ) )
+                        @if ( po.HasNotes &&  po.Notes != null  )
                         {
                             <button class="note-button" data-toggle="collapse" href="#collapseNotes-@po.SheetId" aria-expanded="false" aria-controls="#collapseNotes-@po.SheetId">
                                 <span class="glyphicon glyphicon-comment" aria-hidden="true"></span> @po.Notes.Count
@@ -25,19 +25,17 @@
                                             <th>Code </th>
                                             <th>Meldung</th>
                                             <th>Nachricht</th>
-
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ( var note in po?.Notes )
-                                        {
-                                            <tr>
-                                                <td>@note.Code</td>
-                                                <td>@note.ErrorMessage</td>
-                                                <td>@note.Message</td>
-
-                                            </tr>
-                                        }
+                                            @foreach (var note in po.Notes)
+                                            {
+                                                <tr>
+                                                    <td>@note.Code</td>
+                                                    <td>@note.ErrorMessage</td>
+                                                    <td>@note.Message</td>
+                                                </tr>
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
@@ -59,7 +57,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    @foreach ( var info in po?.DashboardInfos )
+                                    @foreach ( var info in po.DashboardInfos )
                                     {
                                         <tr class="laborcreatorcolor-@info.RwType">
                                             <td>@info.InfoKey</td>

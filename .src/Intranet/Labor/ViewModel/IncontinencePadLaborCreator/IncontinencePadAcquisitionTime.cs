@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel
 {
@@ -32,18 +36,21 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the RW type
         /// </summary>
         /// <value>the RW type</value>
+        // ReSharper disable once InconsistentNaming
         public RwType AcquisitionTimeAdditionFirstRW { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW type
         /// </summary>
         /// <value>the RW type</value>
+        // ReSharper disable once InconsistentNaming
         public RwType AcquisitionTimeAdditionSecondRW { get; set; }
 
         /// <summary>
         ///     Gets or sets the RW type
         /// </summary>
         /// <value>the RW type</value>
+        // ReSharper disable once InconsistentNaming
         public RwType AcquisitionTimeAdditionThirdRW { get; set; }
 
         /// <summary>

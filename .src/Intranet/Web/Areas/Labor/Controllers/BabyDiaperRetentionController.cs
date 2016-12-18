@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Extend;
@@ -6,6 +8,8 @@ using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.ViewModel;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -81,7 +85,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = BabyDiaperRetentionService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetId } );
         }
 
         /// <summary>
@@ -111,7 +115,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
         {
             var savedModel = BabyDiaperRetentionService.Save( viewModel );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetId } );
         }
     }
 }

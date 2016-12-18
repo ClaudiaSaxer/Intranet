@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
@@ -6,6 +8,8 @@ using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -22,13 +26,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( expectedTestValue.CreatedPerson, actual.LastEditedPerson );
         }
@@ -41,13 +45,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( ArticleType.BabyDiaper, actual.ArticleTestType );
         }
@@ -60,13 +64,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( actual.CreatedPerson, actual.LastEditedPerson );
         }
@@ -79,13 +83,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( expectedTestValue.CreatedPerson, actual.CreatedPerson );
         }
@@ -98,13 +102,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( expectedTestValue.DayInYearOfArticleCreation, actual.DayInYearOfArticleCreation );
         }
@@ -117,13 +121,13 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
             Assert.Equal( null, actual.TestValueNote );
         }
@@ -136,15 +140,15 @@ namespace Intranet.Labor.Bll.Test
         {
             var expectedTestValue = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedPerson = "Hans",
                 DayInYearOfArticleCreation = 123
             };
             var testServiceHelper = new TestServiceHelper( new NLogLoggerFactory() );
 
-            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetRefId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
+            var actual = testServiceHelper.CreateNewTestValue( expectedTestValue.TestSheetId, expectedTestValue.CreatedPerson, expectedTestValue.DayInYearOfArticleCreation, null );
 
-            Assert.Equal( expectedTestValue.TestSheetRefId, actual.TestSheetRefId );
+            Assert.Equal( expectedTestValue.TestSheetId, actual.TestSheetId);
         }
 
         /// <summary>
@@ -243,7 +247,7 @@ namespace Intranet.Labor.Bll.Test
                 {
                     new TestValueNote
                     {
-                        ErrorRefId = 2,
+                        ErrorId = 2,
                         TestValueNoteId = 1,
                         Message = "Old Message"
                     }
@@ -259,7 +263,7 @@ namespace Intranet.Labor.Bll.Test
                                    .Message );
             Assert.Equal( 1,
                           testValue.TestValueNote.First()
-                                   .ErrorRefId );
+                                   .ErrorId );
         }
 
         /// <summary>
@@ -279,7 +283,7 @@ namespace Intranet.Labor.Bll.Test
                 {
                     new TestValueNote
                     {
-                        ErrorRefId = 2,
+                        ErrorId = 2,
                         TestValueNoteId = 1,
                         Message = "TestMessage"
                     }

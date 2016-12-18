@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {
@@ -23,32 +27,37 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the number of the production order
         /// </summary>
         /// <value>the number of the production order</value>
+        [Column( TypeName = "varchar" )]
+        [StringLength( 255 )]
         public String FaNr { get; set; }
 
         /// <summary>
         ///     Gets or sets the start Date and Time of the production order
         /// </summary>
         /// <value>The start date and time of the production order</value>
+        [Column( TypeName = "datetime2" )]
         public DateTime StartDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the end Data and Time of the production order
         /// </summary>
         /// <value>The end date and time of the production order</value>
+        [Column( TypeName = "datetime2" )]
         public DateTime EndDateTime { get; set; }
 
         /// <summary>
         ///     Gets or sets the article for this production order <see cref="Article" />
         /// </summary>
         /// <value>the article for the production order</value>
-        [ForeignKey( "ArticleRefId" )]
         public virtual Article Article { get; set; }
 
         /// <summary>
-        ///     Gets or sets the component for the production order
+        ///     Gets or sets the article ref id
         /// </summary>
-        /// <value>the component for the production order</value>
-        public virtual ProductionOrderComponent Component { get; set; }
+        /// <value>the ref id of the article</value>
+        [ForeignKey( "Article" )]
+        [Index( "IX_ProductionOrder_ArticleId" )]
+        public Int32 ArticleId { get; set; }
 
         /// <summary>
         ///     Gets or sets the machine for the production order
@@ -58,16 +67,18 @@ namespace Intranet.Labor.Model
         public virtual Machine Machine { get; set; }
 
         /// <summary>
-        ///     Gets or sets the article ref id
-        /// </summary>
-        /// <value>the ref id of the article</value>
-        public Int32 ArticleRefId { get; set; }
-
-        /// <summary>
         ///     Gets or sets the machine ref id
         /// </summary>
         /// <value>the ref id of the machine</value>
-        public Int32 MachineRefId { get; set; }
+        [ForeignKey( "Machine" )]
+        [Index( "IX_ProductionOrder_MachineId" )]
+        public Int32 MachineId { get; set; }
+
+        /// <summary>
+        ///     Gets or sets the component for the production order
+        /// </summary>
+        /// <value>the component for the production order</value>
+        public virtual ProductionOrderComponent Component { get; set; }
 
         #endregion
     }

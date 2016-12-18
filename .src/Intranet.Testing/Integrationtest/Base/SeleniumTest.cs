@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Diagnostics;
 using System.IO;
 using OpenQA.Selenium.IE;
+
+#endregion
 
 namespace Intranet.Integrationtest
 {
@@ -76,7 +80,7 @@ namespace Intranet.Integrationtest
         {
             if ( !relativeUrl.StartsWith( "/", StringComparison.Ordinal ) )
                 relativeUrl = "/" + relativeUrl;
-            return String.Format( "http://localhost:{0}{1}", IisPort, relativeUrl );
+            return $"http://localhost:{IisPort}{relativeUrl}";
         }
 
         /// <summary>
@@ -88,10 +92,15 @@ namespace Intranet.Integrationtest
                              + "\\.vs\\config\\applicationhost.config";
             var programFiles = Environment.GetFolderPath( Environment.SpecialFolder.ProgramFiles );
 
-            _iisProcess = new Process();
-            _iisProcess.StartInfo.FileName = programFiles + "\\IIS Express\\iisexpress.exe";
-            _iisProcess.StartInfo.Arguments = String.Format( "/config:{0} /site:{1}", configPath, WebApplicationName );
-            _iisProcess.StartInfo.UseShellExecute = true;
+            _iisProcess = new Process
+            {
+                StartInfo =
+                {
+                    FileName = programFiles + "\\IIS Express\\iisexpress.exe",
+                    Arguments = $"/config:{configPath} /site:{WebApplicationName}",
+                    UseShellExecute = true
+                }
+            };
             _iisProcess.Start();
         }
     }
