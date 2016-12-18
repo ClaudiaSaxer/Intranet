@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
@@ -6,6 +8,8 @@ using Intranet.Common;
 using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -358,8 +362,8 @@ namespace Intranet.Labor.Bll.Test
                 EndDateTime = now,
                 StartDateTime = now,
                 FaId = 1,
-                ArticleRefId = 1,
-                MachineRefId = 1
+                ArticleId = 1,
+                MachineId = 1
             };
             var productionOrderListQuery = new List<ProductionOrder>
             {

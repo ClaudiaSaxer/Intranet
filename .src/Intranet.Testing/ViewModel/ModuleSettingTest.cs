@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Extend;
 using FluentAssertions;
 using Xunit;
+
+#endregion
 
 namespace Intranet.ViewModel.Test
 {

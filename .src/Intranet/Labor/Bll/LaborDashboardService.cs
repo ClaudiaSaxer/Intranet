@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Bll
 {
@@ -93,14 +97,11 @@ namespace Intranet.Labor.Bll
 
         private ICollection<ProductionOrderItem> DictionaryToProductionOrderItem( String machine, ShiftSchedule shift, Dictionary<String, List<TestSheet>> dictionary )
         {
-            if ( dictionary.ContainsKey( machine ) )
-            {
-                var sheets = dictionary[machine].Where( sheet => ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shift ) )
-                                                .ToList();
-                if ( sheets.Count != 0 )
-                    return LaborDashboardHelper.ToProductionOrderItems( sheets );
-            }
-            return new List<ProductionOrderItem>();
+            if ( !dictionary.ContainsKey( machine ) )
+                return new List<ProductionOrderItem>();
+            var sheets = dictionary[machine].Where( sheet => ShiftHelper.DateExistsInShift( sheet.CreatedDateTime, shift ) )
+                                            .ToList();
+            return sheets.Count != 0 ? LaborDashboardHelper.ToProductionOrderItems( sheets ) : new List<ProductionOrderItem>();
         }
     }
 }

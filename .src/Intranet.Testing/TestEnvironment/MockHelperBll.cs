@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Definition;
 using Intranet.Model;
 using Moq;
+
+#endregion
 
 namespace Intranet.TestEnvironment
 {

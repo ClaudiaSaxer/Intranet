@@ -18,7 +18,8 @@
             @Html.AntiForgeryToken()
 
             <p>
-                <label for="Productionnumber">Fertigungsnummer:</label>
+                @* ReSharper disable once Html.IdNotResolved *@
+                <label for="FaNr">Fertigungsnummer:</label>
                 @Html.EditorFor( m => m.FaNr )
             </p>
             <p>

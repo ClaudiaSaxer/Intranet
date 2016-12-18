@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using Intranet.Dal;
+
+#endregion
 
 namespace Intranet.TestEnvironment
 {
@@ -45,8 +49,7 @@ namespace Intranet.TestEnvironment
 
         private static void GetModule()
         {
-            var command = new SqlCommand();
-            command.CommandText = "SELECT * FROM Module";
+            var command = new SqlCommand { CommandText = "SELECT * FROM Module" };
             var modules = command.ExecuteNonQuery();
             command.CommandType = CommandType.Text;
         }

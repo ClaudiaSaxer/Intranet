@@ -1,7 +1,11 @@
-﻿using System.Web;
+﻿#region Usings
+
+using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+
+#endregion
 
 namespace Intranet.Web
 {
@@ -20,6 +24,7 @@ namespace Intranet.Web
             FilterConfig.RegisterGlobalFilters( GlobalFilters.Filters );
             RouteConfig.RegisterRoutes( RouteTable.Routes );
             BundleConfig.RegisterBundles( BundleTable.Bundles );
+            ResourceConfig.Configurate();
         }
     }
 }

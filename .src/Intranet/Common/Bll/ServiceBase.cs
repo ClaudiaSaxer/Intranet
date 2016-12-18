@@ -1,4 +1,8 @@
-﻿using Extend;
+﻿#region Usings
+
+using Extend;
+
+#endregion
 
 namespace Intranet.Common
 {

@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Extend;
 using Intranet.Definition;
+
+#endregion
 
 namespace Intranet.Bll
 {

@@ -1,7 +1,11 @@
+#region Usings
+
 using System;
 using FluentAssertions;
 using Intranet.Common;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {

@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using NLog;
+
+#endregion
 
 namespace Intranet.Common
 {

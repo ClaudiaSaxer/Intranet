@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿#region Usings
+
+using System.Collections.Generic;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.TestEnvironment
 {

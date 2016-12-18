@@ -1,5 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {
@@ -14,6 +19,7 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the production order ref id
         /// </summary>
         [ForeignKey( "ProductionOrder" )]
+        [Key]
         public Int32 ProductionOrderComponentId { get; set; }
 
         /// <summary>
@@ -44,12 +50,16 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the type of the component
         /// </summary>
         /// <value>the type of the component</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String ComponentType { get; set; }
 
         /// <summary>
         ///     Gets or sets the number of the component
         /// </summary>
         /// <value>the number of the component</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String ComponentNr { get; set; }
 
         /// <summary>

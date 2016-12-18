@@ -1,7 +1,11 @@
-﻿using System.Web.Mvc;
+﻿#region Usings
+
+using System.Web.Mvc;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Web.Filter;
+
+#endregion
 
 namespace Intranet.Web.Areas.Labor.Controllers
 {
@@ -45,6 +49,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Loads the index page of the LaborDashboardController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View( "Index", LaborDashboardService.GetLaborDashboardViewModel() );
+        public ActionResult Index() 
+            => View( "Index", LaborDashboardService.GetLaborDashboardViewModel() );
     }
 }

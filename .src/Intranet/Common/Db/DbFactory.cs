@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Data.Entity;
+
+#endregion
 
 namespace Intranet.Common
 

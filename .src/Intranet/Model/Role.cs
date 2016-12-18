@@ -29,12 +29,15 @@ namespace Intranet.Model
         ///     Gets or sets the name of the role
         /// </summary>
         /// <value>The name of the Role.</value>
+        [Column( TypeName = "varchar" )]
+        [StringLength( 255 )]
+        [Index( "IX_Module_Name", IsUnique = true )]
         public String Name { get; set; }
 
         /// <summary>
         ///     Gets or sets a collection of modules for the role
         /// </summary>
-        /// <value>The roletypes of the Role.</value>
+        /// <value>The modules of the Role.</value>
         public virtual ICollection<Module> Modules { get; set; }
 
         #endregion

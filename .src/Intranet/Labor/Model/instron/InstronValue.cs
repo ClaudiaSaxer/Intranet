@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {
@@ -23,6 +27,8 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the name of the instron value
         /// </summary>
         /// <value>The name of the instron value</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String Name { get; set; }
 
         /// <summary>
@@ -41,14 +47,15 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the Instron for the Value.
         /// </summary>
         /// <value>the instron for the value</value>
-        [ForeignKey( "InstronRefId" )]
-        public Instron Instron { get; set; }
+        public virtual Instron Instron { get; set; }
 
         /// <summary>
         ///     Gets or sets the Instron ref id
         /// </summary>
         /// <value>the instron ref id </value>
-        public Int32 InstronRefId { get; set; }
+        [ForeignKey("Instron")]
+        [Index("IX_InstronValue_InstronId")]
+        public Int32 IntstronId { get; set; }
 
         #endregion
     }

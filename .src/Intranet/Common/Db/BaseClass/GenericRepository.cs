@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -7,6 +9,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
+
+#endregion
 
 namespace Intranet.Common
 {
@@ -45,11 +49,11 @@ namespace Intranet.Common
         {
             get
             {
-                if ( _context == null )
-                {
-                    Logger.Debug( "Request DbContext form database factory." );
-                    _context = DatabaseFactory.GetDb();
-                }
+                if ( _context != null )
+                    return _context;
+
+                Logger.Debug( "Request DbContext form database factory." );
+                _context = DatabaseFactory.GetDb();
                 return _context;
             }
         }

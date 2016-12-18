@@ -1,5 +1,9 @@
-﻿using System.Web.Mvc;
+﻿#region Usings
+
+using System.Web.Mvc;
 using System.Web.Routing;
+
+#endregion
 
 namespace Intranet.Web
 {

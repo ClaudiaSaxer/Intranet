@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Model;
+
+#endregion
 
 namespace Intranet.Bll
 {

@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {
