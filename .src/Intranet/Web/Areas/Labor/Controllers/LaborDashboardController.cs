@@ -49,6 +49,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         ///     Loads the index page of the LaborDashboardController
         /// </summary>
         /// <returns>The Index View filled with the viewModel</returns>
-        public ActionResult Index() => View( "Index", LaborDashboardService.GetLaborDashboardViewModel() );
+        public ActionResult Index() 
+            => View( "Index", LaborDashboardService.GetLaborDashboardViewModel() );
     }
 }

@@ -35,8 +35,8 @@
     <DocumentationFile>bin\Release\Intranet.Labor.Bll.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.11.58, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Extend.1.1.11.58\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -82,9 +82,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Common\Intranet.Common.csproj">
       <Project>{9AED7002-C17B-437B-8599-9C0430E19B60}</Project>
       <Name>Intranet.Common</Name>
@@ -105,6 +102,9 @@
       <Project>{E569D010-8ACF-406E-8021-6FEC422960AD}</Project>
       <Name>Intranet.Labor.ViewModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
