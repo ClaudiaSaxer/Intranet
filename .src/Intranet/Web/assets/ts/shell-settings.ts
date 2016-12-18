@@ -12,6 +12,9 @@ function sendForm(id, name, visibleStatus) {
             Name: name,
             Visible: visibleStatus
         }),
+        success() {
+            location.reload();
+        },
         error() {
             alert('Interner Server Error - Sichtbarkeitsänderung wurde nicht ausgeführt.');
         }
@@ -21,8 +24,9 @@ function sendForm(id, name, visibleStatus) {
 $(() => {
         $('.visible-toggle')
             .change(function () {
-                console.log('Toggle: ' + $(this).prop('checked'));
-                sendForm($(this).prop('id'), $(this).prop('name'), $(this).prop('checked'));
+                const $this : JQuery = $(this);
+                console.log('Toggle: ' + $this.prop('checked'));
+                sendForm($this.prop('id'), $this.prop('name'), $this.prop('checked'));
             });
     }
 );
