@@ -23,20 +23,7 @@ namespace Intranet.Labor.Dal.Migrations
 
         protected override void Seed( LaborContext context )
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-
-            var error1 = new Error
+           var error1 = new Error
             {
                 ErrorCode = "080",
                 Value = "Fixtape fehlt"
@@ -113,20 +100,11 @@ namespace Intranet.Labor.Dal.Migrations
                 Component = productionOrderComponent1,
                 Article = article1
             };
-
-            var productionOrder3 = new ProductionOrder
-            {
-                FaNr = "FA666",
-                StartDateTime = new DateTime( 2016, 2, 2 ),
-                EndDateTime = new DateTime( 2018, 2, 2 ),
-                Machine = machine2,
-                Article = article2
-            };
+ 
             productionOrderComponent1.ProductionOrder = productionOrder1;
 
             context.ProductionOrderComponent.AddOrUpdate( p => p.ProductionOrderComponentId, productionOrderComponent1 );
             context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder1 );
-            context.ProductionOrders.AddOrUpdate( p => p.FaId, productionOrder3 );
 
             ////////////////////////////////////////////////////
 
@@ -329,10 +307,6 @@ namespace Intranet.Labor.Dal.Migrations
                 ProductName = "Babydream",
                 SizeName = "Maxi-Plus",
                 ArticleType = ArticleType.BabyDiaper
-                /*TestValues = new List<TestValue>
-                {
-                    babyDiapersRetentionTestValue1
-                }*/
             };
 
             var babyDiapersRewetTestValue1 = new TestValue
@@ -541,21 +515,14 @@ namespace Intranet.Labor.Dal.Migrations
             };
 
             babyDiapersRewetTestValue1.BabyDiaperTestValue = babyDiapersRewetTest1;
-            //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
 
-            //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
             babyDiapersRewetTestValueAverage.BabyDiaperTestValue = babyDiapersRewetTestAverage;
-            //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
             babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRewetTestStandardDeviation;
 
-            //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
             babyDiapersRetentionTestValueAverage.BabyDiaperTestValue = babyDiapersRetentionTestAverage;
-            //babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
             babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersRetentionTestStandardDeviation;
 
-            //babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
             babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValue = babyDiapersPenetrationTimeTestAverage;
-            //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValue = babyDiapersPenetrationTimeTestStandardDeviation;
 
             testSheet.TestValues = new List<TestValue>
@@ -589,19 +556,7 @@ namespace Intranet.Labor.Dal.Migrations
             context.BabyDiaperTestValues.AddOrUpdate( m => m.BabyDiaperTestValueId, babyDiapersPenetrationTimeTestAverage );
 
             //------------------Incontinence Pad -----------------
-            var testSheet2 = new TestSheet
-            {
-                TestSheetId = 2,
-                FaNr = "FA666",
-                CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
-                ShiftType = ShiftType.Night,
-                MachineNr = "M11",
-                ProductName = "Cresta Extra",
-                SizeName = "Inko Extra",
-                ArticleType = ArticleType.IncontinencePad
-            };
-
-            var incontinencePadRewetTestValue1 = new TestValue
+           var incontinencePadRewetTestValue1 = new TestValue
             {
                 TestValueId = 21,
                 CreatedDateTime = new DateTime( 2016, 11, 2, 1, 50, 0 ),
@@ -839,21 +794,14 @@ namespace Intranet.Labor.Dal.Migrations
             incontinencePadAcquisitionTimeTestValue1.IncontinencePadTestValue = incontinencePadAcquisitionTimeTest1;
 
             incontinencePadRewetTestValue1.IncontinencePadTestValue = incontinencePadRewetTest1;
-            //babyDiapersRewetTestValue1.BabyDiaperTestValueRefId = 1;
 
-            //babyDiapersRewetTestValueAverage.BabyDiaperTestValueRefId = 2;
             incontinencePadRewetTestValueAverage.IncontinencePadTestValue = incontinencePadRewetTestAverage;
-            //babyDiapersRewetTestValueStandardDeviation.BabyDiaperTestValueRefId = 3;
             incontinencePadRewetTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRewetTestStandardDeviation;
 
-            //babyDiapersRetentionTestValueAverage.BabyDiaperTestValueRefId = 4;
             incontinencePadRetentionTestValueAverage.IncontinencePadTestValue = incontinencePadRetentionTestAverage;
-            //babyDiapersRetentionTestValueStandardDeviation.BabyDiaperTestValueRefId = 5;
             incontinencePadRetentionTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadRetentionTestStandardDeviation;
 
-            //babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValueRefId = 6;
             babyDiapersPenetrationTimeTestValueAverage.BabyDiaperTestValue = babyDiapersPenetrationTimeTestAverage;
-            //babyDiapersPenetrationTimeTestValueStandardDeviation.BabyDiaperTestValueRefId = 7;
             incontinencePadAcquisitionTimeTestValueStandardDeviation.IncontinencePadTestValue = incontinencePadAcquisitionTimeTestStandardDeviation;
 
             testSheet2.TestValues = new List<TestValue>
