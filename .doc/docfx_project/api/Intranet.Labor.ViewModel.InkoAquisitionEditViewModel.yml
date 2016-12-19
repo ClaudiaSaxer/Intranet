@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoAquisitionEditViewModel
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -77,7 +77,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireMonth
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -144,7 +144,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireYear
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -211,7 +211,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AquisitionAddition1
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -278,7 +278,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AquisitionAddition2
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -345,7 +345,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AquisitionAddition3
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -412,7 +412,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeight
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -479,7 +479,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FPDry
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
@@ -546,7 +546,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FPWet
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoAquisitionEditViewModel.cs

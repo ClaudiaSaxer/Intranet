@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ICheckDisableBll
     path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetModule
     path: .src/Intranet/Definitions/Bll/ICheckDisableBll.cs

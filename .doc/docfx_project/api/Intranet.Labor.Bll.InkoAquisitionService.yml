@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoAquisitionService
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -75,11 +75,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestBll
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 26
+    startLine: 25
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -112,11 +112,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoAquisitionServiceHelper
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 31
+    startLine: 30
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -149,11 +149,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestServiceHelper
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -186,11 +186,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 46
+    startLine: 45
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -222,11 +222,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Delete
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 61
+    startLine: 60
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -240,7 +240,7 @@ items:
       type: System.Int32
       description: id of the testvalue
     return:
-      type: Intranet.Labor.Model.labor.TestValue
+      type: Intranet.Labor.Model.TestValue
       description: The deleted testvalue
   overload: Intranet.Labor.Bll.InkoAquisitionService.Delete*
   implements:
@@ -263,11 +263,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetInkoAquisitionEditViewModel
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 73
+    startLine: 72
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -304,11 +304,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetNewInkoAquisitionEditViewModel
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 134
+    startLine: 133
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -345,11 +345,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Save
     path: .src/Intranet/Labor/Bll/InkoAquisitionService.cs
-    startLine: 177
+    startLine: 175
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -363,7 +363,7 @@ items:
       type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
       description: The viewmodel which will be saved or updated
     return:
-      type: Intranet.Labor.Model.labor.TestValue
+      type: Intranet.Labor.Model.TestValue
       description: The saved or updated TestValue
   overload: Intranet.Labor.Bll.InkoAquisitionService.Save*
   implements:
@@ -822,19 +822,19 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Intranet.Labor.Model.labor.TestValue
-  commentId: T:Intranet.Labor.Model.labor.TestValue
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestValue
+  commentId: T:Intranet.Labor.Model.TestValue
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestValue
   nameWithType: TestValue
-  fullName: Intranet.Labor.Model.labor.TestValue
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.TestValue
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.Bll.InkoAquisitionService.GetInkoAquisitionEditViewModel*
   commentId: Overload:Intranet.Labor.Bll.InkoAquisitionService.GetInkoAquisitionEditViewModel
   isExternal: false

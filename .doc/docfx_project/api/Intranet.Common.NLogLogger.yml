@@ -37,11 +37,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NLogLogger
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -84,11 +84,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -120,11 +120,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DefaultLevel
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -160,11 +160,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsDebugEnabled
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -200,11 +200,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsErrorEnabled
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -240,11 +240,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsFatalEnabled
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 61
+    startLine: 65
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -280,11 +280,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsInfoEnabled
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 70
+    startLine: 74
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -320,11 +320,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsWarnEnabled
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 79
+    startLine: 83
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -360,11 +360,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 93
+    startLine: 97
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -401,11 +401,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 100
+    startLine: 104
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -439,11 +439,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 108
+    startLine: 112
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -480,11 +480,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Trace
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 122
+    startLine: 126
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -521,11 +521,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Trace
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 129
+    startLine: 133
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -559,11 +559,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Debug
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 143
+    startLine: 147
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -600,11 +600,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Debug
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 150
+    startLine: 154
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -638,11 +638,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Info
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 164
+    startLine: 168
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -679,11 +679,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Info
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 171
+    startLine: 175
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -717,11 +717,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Warn
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 185
+    startLine: 189
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -758,11 +758,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Warn
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 192
+    startLine: 196
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -796,11 +796,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 206
+    startLine: 210
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -837,11 +837,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 213
+    startLine: 217
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -875,11 +875,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Fatal
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 227
+    startLine: 231
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -916,11 +916,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogLogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Fatal
     path: .src/Intranet/Common/Logging/NLogLogger.cs
-    startLine: 234
+    startLine: 238
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ILaborHome
     path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllLaborModulesForRoles
     path: .src/Intranet/Labor/Definitions/Bll/ILaborHomeBll.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition

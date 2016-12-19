@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryViewModel
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FaNr
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
@@ -154,7 +154,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Message
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
@@ -192,7 +192,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Sheets
     path: .src/Intranet/Labor/ViewModel/History/HistoryViewModel.cs

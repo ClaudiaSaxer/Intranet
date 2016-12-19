@@ -8,6 +8,7 @@ items:
   - Intranet.Web.BundleConfig
   - Intranet.Web.FilterConfig
   - Intranet.Web.MvcApplication
+  - Intranet.Web.ResourceConfig
   - Intranet.Web.RouteConfig
   langs:
   - csharp
@@ -37,6 +38,12 @@ references:
   name: AutofacConfig
   nameWithType: AutofacConfig
   fullName: Intranet.Web.AutofacConfig
+- uid: Intranet.Web.ResourceConfig
+  commentId: T:Intranet.Web.ResourceConfig
+  isExternal: false
+  name: ResourceConfig
+  nameWithType: ResourceConfig
+  fullName: Intranet.Web.ResourceConfig
 - uid: Intranet.Web.RouteConfig
   commentId: T:Intranet.Web.RouteConfig
   isExternal: false

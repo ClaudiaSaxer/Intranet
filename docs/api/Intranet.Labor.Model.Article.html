@@ -113,10 +113,10 @@
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L19">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L23">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_ArticleId_" data-uid="Intranet.Labor.Model.Article.ArticleId*"></a>
               <h4 id="Intranet_Labor_Model_Article_ArticleId" data-uid="Intranet.Labor.Model.Article.ArticleId">ArticleId</h4>
@@ -147,10 +147,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleNr.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleNr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleNr.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleNr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L27">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L31">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_ArticleNr_" data-uid="Intranet.Labor.Model.Article.ArticleNr*"></a>
               <h4 id="Intranet_Labor_Model_Article_ArticleNr" data-uid="Intranet.Labor.Model.Article.ArticleNr">ArticleNr</h4>
@@ -159,7 +159,10 @@ public int ArticleId { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ArticleNr { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+[Index(&quot;IX_Article_ArticleNr&quot;, IsUnique = true)]
+public string ArticleNr { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -179,10 +182,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleType.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ArticleType.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ArticleType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L40">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L48">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_ArticleType_" data-uid="Intranet.Labor.Model.Article.ArticleType*"></a>
               <h4 id="Intranet_Labor_Model_Article_ArticleType" data-uid="Intranet.Labor.Model.Article.ArticleType">ArticleType</h4>
@@ -211,10 +214,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec1.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec1.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec1%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L86">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L94">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxHyTec1_" data-uid="Intranet.Labor.Model.Article.MaxHyTec1*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxHyTec1" data-uid="Intranet.Labor.Model.Article.MaxHyTec1">MaxHyTec1</h4>
@@ -242,10 +245,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec2.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec2.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec2%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L91">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L99">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxHyTec2_" data-uid="Intranet.Labor.Model.Article.MaxHyTec2*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxHyTec2" data-uid="Intranet.Labor.Model.Article.MaxHyTec2">MaxHyTec2</h4>
@@ -273,10 +276,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec3.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec3%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxHyTec3.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxHyTec3%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L96">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L104">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxHyTec3_" data-uid="Intranet.Labor.Model.Article.MaxHyTec3*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxHyTec3" data-uid="Intranet.Labor.Model.Article.MaxHyTec3">MaxHyTec3</h4>
@@ -304,10 +307,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxInkoRewet.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxInkoRewet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxInkoRewet.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxInkoRewet%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L76">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L84">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxInkoRewet_" data-uid="Intranet.Labor.Model.Article.MaxInkoRewet*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxInkoRewet" data-uid="Intranet.Labor.Model.Article.MaxInkoRewet">MaxInkoRewet</h4>
@@ -335,10 +338,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxInkoRewetAfterAquisition.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxInkoRewetAfterAquisition.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L101">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L109">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxInkoRewetAfterAquisition_" data-uid="Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxInkoRewetAfterAquisition" data-uid="Intranet.Labor.Model.Article.MaxInkoRewetAfterAquisition">MaxInkoRewetAfterAquisition</h4>
@@ -366,10 +369,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxPenetrationAfter4Time.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxPenetrationAfter4Time%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxPenetrationAfter4Time.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxPenetrationAfter4Time%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L71">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L79">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxPenetrationAfter4Time_" data-uid="Intranet.Labor.Model.Article.MaxPenetrationAfter4Time*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxPenetrationAfter4Time" data-uid="Intranet.Labor.Model.Article.MaxPenetrationAfter4Time">MaxPenetrationAfter4Time</h4>
@@ -397,10 +400,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MaxRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MaxRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L66">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L74">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MaxRetention_" data-uid="Intranet.Labor.Model.Article.MaxRetention*"></a>
               <h4 id="Intranet_Labor_Model_Article_MaxRetention" data-uid="Intranet.Labor.Model.Article.MaxRetention">MaxRetention</h4>
@@ -428,10 +431,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MinInkoRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MinInkoRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MinInkoRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MinInkoRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L81">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L89">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MinInkoRetention_" data-uid="Intranet.Labor.Model.Article.MinInkoRetention*"></a>
               <h4 id="Intranet_Labor_Model_Article_MinInkoRetention" data-uid="Intranet.Labor.Model.Article.MinInkoRetention">MinInkoRetention</h4>
@@ -459,10 +462,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MinRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MinRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_MinRetention.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.MinRetention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L61">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L69">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_MinRetention_" data-uid="Intranet.Labor.Model.Article.MinRetention*"></a>
               <h4 id="Intranet_Labor_Model_Article_MinRetention" data-uid="Intranet.Labor.Model.Article.MinRetention">MinRetention</h4>
@@ -490,10 +493,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Name.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Name.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L34">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L40">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_Name_" data-uid="Intranet.Labor.Model.Article.Name*"></a>
               <h4 id="Intranet_Labor_Model_Article_Name" data-uid="Intranet.Labor.Model.Article.Name">Name</h4>
@@ -502,7 +505,9 @@ public int ArticleId { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+public string Name { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -522,10 +527,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ProductionOrders.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ProductionOrders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ProductionOrders.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ProductionOrders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L46">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L54">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_ProductionOrders_" data-uid="Intranet.Labor.Model.Article.ProductionOrders*"></a>
               <h4 id="Intranet_Labor_Model_Article_ProductionOrders" data-uid="Intranet.Labor.Model.Article.ProductionOrders">ProductionOrders</h4>
@@ -554,10 +559,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ProductName.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ProductName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_ProductName.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.ProductName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L106">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L114">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_ProductName_" data-uid="Intranet.Labor.Model.Article.ProductName*"></a>
               <h4 id="Intranet_Labor_Model_Article_ProductName" data-uid="Intranet.Labor.Model.Article.ProductName">ProductName</h4>
@@ -566,7 +571,9 @@ public int ArticleId { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string ProductName { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+public string ProductName { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -585,10 +592,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Rewet140Max.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Rewet140Max%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Rewet140Max.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Rewet140Max%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L51">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L59">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_Rewet140Max_" data-uid="Intranet.Labor.Model.Article.Rewet140Max*"></a>
               <h4 id="Intranet_Labor_Model_Article_Rewet140Max" data-uid="Intranet.Labor.Model.Article.Rewet140Max">Rewet140Max</h4>
@@ -616,10 +623,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Rewet210Max.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Rewet210Max%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_Rewet210Max.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.Rewet210Max%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L56">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L64">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_Rewet210Max_" data-uid="Intranet.Labor.Model.Article.Rewet210Max*"></a>
               <h4 id="Intranet_Labor_Model_Article_Rewet210Max" data-uid="Intranet.Labor.Model.Article.Rewet210Max">Rewet210Max</h4>
@@ -647,10 +654,10 @@ public int ArticleId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_SizeName.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.SizeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article_SizeName.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article.SizeName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L111">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L121">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_Article_SizeName_" data-uid="Intranet.Labor.Model.Article.SizeName*"></a>
               <h4 id="Intranet_Labor_Model_Article_SizeName" data-uid="Intranet.Labor.Model.Article.SizeName">SizeName</h4>
@@ -659,7 +666,9 @@ public int ArticleId { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string SizeName { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+public string SizeName { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -684,10 +693,10 @@ public int ArticleId { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_Article.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.Article%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/Article.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/Article.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

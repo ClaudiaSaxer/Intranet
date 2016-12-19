@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/NavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NavigationBll
     path: .src/Intranet/Bll/NavigationBll.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -65,11 +65,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/NavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RoleRepository
     path: .src/Intranet/Bll/NavigationBll.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/NavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllSettingsForRoles
     path: .src/Intranet/Bll/NavigationBll.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -146,11 +146,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/NavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllVisibleMainModulesForRoles
     path: .src/Intranet/Bll/NavigationBll.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

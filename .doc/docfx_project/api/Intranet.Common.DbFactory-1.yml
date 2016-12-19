@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DbFactory
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -78,11 +78,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 32
+    startLine: 36
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -116,11 +116,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 42
+    startLine: 46
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -154,11 +154,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetDb
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 56
+    startLine: 60
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -193,11 +193,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CreateContext
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 77
+    startLine: 81
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -236,11 +236,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Disposed
     path: .src/Intranet/Common/Db/DbFactory.cs
-    startLine: 87
+    startLine: 91
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

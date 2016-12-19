@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Role.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Role
     path: .src/Intranet/Model/Role.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Role.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RoleId
     path: .src/Intranet/Model/Role.cs
@@ -130,7 +130,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Role.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
     path: .src/Intranet/Model/Role.cs
@@ -141,13 +141,49 @@ items:
   summary: "\nGets or sets the name of the role\n"
   example: []
   syntax:
-    content: public string Name { get; set; }
-    content.vb: Public Property Name As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      [Index("IX_Module_Name", IsUnique = true)]
+
+      public string Name { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      <Index("IX_Module_Name", IsUnique:=True)>
+
+      Public Property Name As String
     parameters: []
     return:
       type: System.String
       description: The name of the Role.
   overload: Intranet.Model.Role.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Module_Name
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: true
   modifiers.csharp:
   - public
   - get
@@ -168,11 +204,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Role.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Modules
     path: .src/Intranet/Model/Role.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
@@ -184,7 +220,7 @@ items:
     parameters: []
     return:
       type: System.Collections.Generic.ICollection{Intranet.Model.Module}
-      description: The roletypes of the Role.
+      description: The modules of the Role.
   overload: Intranet.Model.Role.Modules*
   modifiers.csharp:
   - public

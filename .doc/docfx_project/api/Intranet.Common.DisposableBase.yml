@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DisposableBase
     path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -71,11 +71,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -107,11 +107,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Finalize
     path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -139,11 +139,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Dispose
     path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-    startLine: 54
+    startLine: 58
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -173,11 +173,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Disposed
     path: .src/Intranet/Common/Disposable/BaseClass/DisposableBase.cs
-    startLine: 77
+    startLine: 81
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

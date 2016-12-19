@@ -22,6 +22,7 @@ items:
   - Intranet.Common.NLogExtensions
   - Intranet.Common.NLogLogger
   - Intranet.Common.NLogLoggerFactory
+  - Intranet.Common.RoleSettings
   - Intranet.Common.ServiceBase
   - Intranet.Common.SystemWebSecurityRoles
   langs:
@@ -55,6 +56,12 @@ references:
   name: IRoles
   nameWithType: IRoles
   fullName: Intranet.Common.IRoles
+- uid: Intranet.Common.RoleSettings
+  commentId: T:Intranet.Common.RoleSettings
+  isExternal: false
+  name: RoleSettings
+  nameWithType: RoleSettings
+  fullName: Intranet.Common.RoleSettings
 - uid: Intranet.Common.SystemWebSecurityRoles
   commentId: T:Intranet.Common.SystemWebSecurityRoles
   isExternal: false

@@ -4,7 +4,15 @@ items:
   commentId: N:Intranet.Labor.Dal
   id: Intranet.Labor.Dal
   children:
+  - Intranet.Labor.Dal.BabyDiaperTestValueRepository
+  - Intranet.Labor.Dal.ErrorRepository
+  - Intranet.Labor.Dal.IncontinencePadTestValueRepository
   - Intranet.Labor.Dal.LaborContext
+  - Intranet.Labor.Dal.ProductionOrderRepository
+  - Intranet.Labor.Dal.ShiftScheduleRepository
+  - Intranet.Labor.Dal.TestSheetRepository
+  - Intranet.Labor.Dal.TestValueNoteRepository
+  - Intranet.Labor.Dal.TestValueRepository
   langs:
   - csharp
   - vb
@@ -21,3 +29,51 @@ references:
   name: LaborContext
   nameWithType: LaborContext
   fullName: Intranet.Labor.Dal.LaborContext
+- uid: Intranet.Labor.Dal.BabyDiaperTestValueRepository
+  commentId: T:Intranet.Labor.Dal.BabyDiaperTestValueRepository
+  isExternal: false
+  name: BabyDiaperTestValueRepository
+  nameWithType: BabyDiaperTestValueRepository
+  fullName: Intranet.Labor.Dal.BabyDiaperTestValueRepository
+- uid: Intranet.Labor.Dal.ErrorRepository
+  commentId: T:Intranet.Labor.Dal.ErrorRepository
+  isExternal: false
+  name: ErrorRepository
+  nameWithType: ErrorRepository
+  fullName: Intranet.Labor.Dal.ErrorRepository
+- uid: Intranet.Labor.Dal.IncontinencePadTestValueRepository
+  commentId: T:Intranet.Labor.Dal.IncontinencePadTestValueRepository
+  isExternal: false
+  name: IncontinencePadTestValueRepository
+  nameWithType: IncontinencePadTestValueRepository
+  fullName: Intranet.Labor.Dal.IncontinencePadTestValueRepository
+- uid: Intranet.Labor.Dal.ProductionOrderRepository
+  commentId: T:Intranet.Labor.Dal.ProductionOrderRepository
+  isExternal: false
+  name: ProductionOrderRepository
+  nameWithType: ProductionOrderRepository
+  fullName: Intranet.Labor.Dal.ProductionOrderRepository
+- uid: Intranet.Labor.Dal.TestSheetRepository
+  commentId: T:Intranet.Labor.Dal.TestSheetRepository
+  isExternal: false
+  name: TestSheetRepository
+  nameWithType: TestSheetRepository
+  fullName: Intranet.Labor.Dal.TestSheetRepository
+- uid: Intranet.Labor.Dal.TestValueNoteRepository
+  commentId: T:Intranet.Labor.Dal.TestValueNoteRepository
+  isExternal: false
+  name: TestValueNoteRepository
+  nameWithType: TestValueNoteRepository
+  fullName: Intranet.Labor.Dal.TestValueNoteRepository
+- uid: Intranet.Labor.Dal.ShiftScheduleRepository
+  commentId: T:Intranet.Labor.Dal.ShiftScheduleRepository
+  isExternal: false
+  name: ShiftScheduleRepository
+  nameWithType: ShiftScheduleRepository
+  fullName: Intranet.Labor.Dal.ShiftScheduleRepository
+- uid: Intranet.Labor.Dal.TestValueRepository
+  commentId: T:Intranet.Labor.Dal.TestValueRepository
+  isExternal: false
+  name: TestValueRepository
+  nameWithType: TestValueRepository
+  fullName: Intranet.Labor.Dal.TestValueRepository

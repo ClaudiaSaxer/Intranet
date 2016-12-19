@@ -113,10 +113,10 @@
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Article.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Article%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Article.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Article%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L44">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L52">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_Article_" data-uid="Intranet.Labor.Model.ProductionOrder.Article*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_Article" data-uid="Intranet.Labor.Model.ProductionOrder.Article">Article</h4>
@@ -125,8 +125,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">[ForeignKey(&quot;ArticleRefId&quot;)]
-public virtual Article Article { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">public virtual Article Article { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -146,19 +145,21 @@ public virtual Article Article { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_ArticleRefId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.ArticleRefId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_ArticleId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.ArticleId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L64">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L58">View Source</a>
               </span>
-              <a id="Intranet_Labor_Model_ProductionOrder_ArticleRefId_" data-uid="Intranet.Labor.Model.ProductionOrder.ArticleRefId*"></a>
-              <h4 id="Intranet_Labor_Model_ProductionOrder_ArticleRefId" data-uid="Intranet.Labor.Model.ProductionOrder.ArticleRefId">ArticleRefId</h4>
+              <a id="Intranet_Labor_Model_ProductionOrder_ArticleId_" data-uid="Intranet.Labor.Model.ProductionOrder.ArticleId*"></a>
+              <h4 id="Intranet_Labor_Model_ProductionOrder_ArticleId" data-uid="Intranet.Labor.Model.ProductionOrder.ArticleId">ArticleId</h4>
               <div class="markdown level1 summary"><p>Gets or sets the article ref id</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int ArticleRefId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Article&quot;)]
+[Index(&quot;IX_ProductionOrder_ArticleId&quot;)]
+public int ArticleId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -178,10 +179,10 @@ public virtual Article Article { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Component.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Component%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Component.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Component%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L51">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L81">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_Component_" data-uid="Intranet.Labor.Model.ProductionOrder.Component*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_Component" data-uid="Intranet.Labor.Model.ProductionOrder.Component">Component</h4>
@@ -210,10 +211,10 @@ public virtual Article Article { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_EndDateTime.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.EndDateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_EndDateTime.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.EndDateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L38">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L45">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_EndDateTime_" data-uid="Intranet.Labor.Model.ProductionOrder.EndDateTime*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_EndDateTime" data-uid="Intranet.Labor.Model.ProductionOrder.EndDateTime">EndDateTime</h4>
@@ -222,7 +223,8 @@ public virtual Article Article { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DateTime EndDateTime { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;datetime2&quot;)]
+public DateTime EndDateTime { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -242,10 +244,10 @@ public virtual Article Article { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_FaId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.FaId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_FaId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.FaId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L18">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L22">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_FaId_" data-uid="Intranet.Labor.Model.ProductionOrder.FaId*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_FaId" data-uid="Intranet.Labor.Model.ProductionOrder.FaId">FaId</h4>
@@ -276,10 +278,10 @@ public int FaId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_FaNr.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.FaNr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_FaNr.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.FaNr%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L26">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L30">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_FaNr_" data-uid="Intranet.Labor.Model.ProductionOrder.FaNr*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_FaNr" data-uid="Intranet.Labor.Model.ProductionOrder.FaNr">FaNr</h4>
@@ -288,7 +290,9 @@ public int FaId { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string FaNr { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+public string FaNr { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -308,10 +312,10 @@ public int FaId { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Machine.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Machine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_Machine.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.Machine%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L57">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L66">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_Machine_" data-uid="Intranet.Labor.Model.ProductionOrder.Machine*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_Machine" data-uid="Intranet.Labor.Model.ProductionOrder.Machine">Machine</h4>
@@ -341,19 +345,21 @@ public virtual Machine Machine { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_MachineRefId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.MachineRefId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_MachineId.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.MachineId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L70">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L73">View Source</a>
               </span>
-              <a id="Intranet_Labor_Model_ProductionOrder_MachineRefId_" data-uid="Intranet.Labor.Model.ProductionOrder.MachineRefId*"></a>
-              <h4 id="Intranet_Labor_Model_ProductionOrder_MachineRefId" data-uid="Intranet.Labor.Model.ProductionOrder.MachineRefId">MachineRefId</h4>
+              <a id="Intranet_Labor_Model_ProductionOrder_MachineId_" data-uid="Intranet.Labor.Model.ProductionOrder.MachineId*"></a>
+              <h4 id="Intranet_Labor_Model_ProductionOrder_MachineId" data-uid="Intranet.Labor.Model.ProductionOrder.MachineId">MachineId</h4>
               <div class="markdown level1 summary"><p>Gets or sets the machine ref id</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public int MachineRefId { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Machine&quot;)]
+[Index(&quot;IX_ProductionOrder_MachineId&quot;)]
+public int MachineId { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -373,10 +379,10 @@ public virtual Machine Machine { get; set; }</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_StartDateTime.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.StartDateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder_StartDateTime.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder.StartDateTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L32">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L38">View Source</a>
               </span>
               <a id="Intranet_Labor_Model_ProductionOrder_StartDateTime_" data-uid="Intranet.Labor.Model.ProductionOrder.StartDateTime*"></a>
               <h4 id="Intranet_Labor_Model_ProductionOrder_StartDateTime" data-uid="Intranet.Labor.Model.ProductionOrder.StartDateTime">StartDateTime</h4>
@@ -385,7 +391,8 @@ public virtual Machine Machine { get; set; }</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public DateTime StartDateTime { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;datetime2&quot;)]
+public DateTime StartDateTime { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -411,10 +418,10 @@ public virtual Machine Machine { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Labor_Model_ProductionOrder.md&amp;value=---%0Auid%3A%20Intranet.Labor.Model.ProductionOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Labor/Model/intigena/ProductionOrder.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Labor/Model/Intigena/ProductionOrder.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

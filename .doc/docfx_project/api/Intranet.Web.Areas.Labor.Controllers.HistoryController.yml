@@ -19,15 +19,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryController
     path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nClass representing the InkoAquisitionController\n"
+  summary: "\nClass representing the HistoryController\n"
   example: []
   syntax:
     content: 'public class HistoryController : BaseController'
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryService
     path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-    startLine: 42
+    startLine: 41
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -135,11 +135,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Index
     path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-    startLine: 54
+    startLine: 53
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -170,11 +170,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Search
     path: .src/Intranet/Web/Areas/Labor/Controllers/HistoryController.cs
-    startLine: 68
+    startLine: 67
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers

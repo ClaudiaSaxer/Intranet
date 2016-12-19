@@ -18,15 +18,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CheckDisableAttribute
     path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Filter
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: 'public class CheckDisableAttribute : ActionFilterAttribute'
@@ -55,7 +55,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleName
     path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
@@ -63,7 +63,7 @@ items:
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Filter
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: public String ModuleName { get; set; }
@@ -92,15 +92,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CheckDisableService
     path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-    startLine: 23
+    startLine: 22
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Filter
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: public ICheckDisableService CheckDisableService { get; set; }
@@ -129,11 +129,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: OnActionExecuting
     path: .src/Intranet/Web/Filter/CheckDisableAttribute.cs
-    startLine: 26
+    startLine: 27
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Filter

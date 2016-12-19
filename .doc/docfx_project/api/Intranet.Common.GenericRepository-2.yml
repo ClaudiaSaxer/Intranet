@@ -34,11 +34,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GenericRepository
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -97,11 +97,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Context
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -139,11 +139,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DatabaseFactory
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 60
+    startLine: 64
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -181,11 +181,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DbCommit
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 67
+    startLine: 71
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -221,11 +221,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 87
+    startLine: 91
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -263,11 +263,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Disposed
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 101
+    startLine: 105
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -300,11 +300,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetAll
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 112
+    startLine: 116
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -341,11 +341,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Where
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 124
+    startLine: 128
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -387,11 +387,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Add
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 137
+    startLine: 141
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -432,11 +432,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AddRange
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 151
+    startLine: 155
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -478,11 +478,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Remove
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 163
+    startLine: 167
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -523,11 +523,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SetModified
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 174
+    startLine: 178
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -565,11 +565,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Attach
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 187
+    startLine: 191
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -610,11 +610,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SaveChanges
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 198
+    startLine: 202
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -651,11 +651,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SaveChangesAsync
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 213
+    startLine: 217
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -697,11 +697,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Entry
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 230
+    startLine: 234
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -746,11 +746,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CountRecords
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 241
+    startLine: 245
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -787,11 +787,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CountRecordsAsync
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 252
+    startLine: 256
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -828,11 +828,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FindAsync
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 276
+    startLine: 280
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -875,11 +875,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SqlQuery
     path: .src/Intranet/Common/Db/BaseClass/GenericRepository.cs
-    startLine: 313
+    startLine: 317
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

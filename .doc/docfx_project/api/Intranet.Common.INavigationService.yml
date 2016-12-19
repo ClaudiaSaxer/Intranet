@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/INavigationService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: INavigationService
     path: .src/Intranet/Common/Bll/INavigationService.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/INavigationService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetNavigationViewModel
     path: .src/Intranet/Common/Bll/INavigationService.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

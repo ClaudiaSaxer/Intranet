@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborCreatorViewModel
     path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrders
     path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -76,7 +76,7 @@ items:
     content.vb: Public Property ProductionOrders As ICollection(Of RunningProductionOrder)
     parameters: []
     return:
-      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder}
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.RunningProductionOrder}
       description: running production orders
   overload: Intranet.Labor.ViewModel.LaborCreatorViewModel.ProductionOrders*
   modifiers.csharp:
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ChosenPo
     path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -203,11 +203,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Message
     path: .src/Intranet/Labor/ViewModel/LaborCreator/LaborCreatorViewModel.cs
-    startLine: 36
+    startLine: 39
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -531,15 +531,15 @@ references:
   name: ProductionOrders
   nameWithType: LaborCreatorViewModel.ProductionOrders
   fullName: Intranet.Labor.ViewModel.LaborCreatorViewModel.ProductionOrders
-- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder}
-  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder}
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.RunningProductionOrder}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.RunningProductionOrder}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.ICollection`1
   name: ICollection<RunningProductionOrder>
   nameWithType: ICollection<RunningProductionOrder>
-  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.RunningProductionOrder>
   nameWithType.vb: ICollection(Of RunningProductionOrder)
-  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.RunningProductionOrder)
   name.vb: ICollection(Of RunningProductionOrder)
   spec.csharp:
   - uid: System.Collections.Generic.ICollection`1
@@ -550,10 +550,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  - uid: Intranet.Labor.ViewModel.RunningProductionOrder
     name: RunningProductionOrder
     nameWithType: RunningProductionOrder
-    fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+    fullName: Intranet.Labor.ViewModel.RunningProductionOrder
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -566,10 +566,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+  - uid: Intranet.Labor.ViewModel.RunningProductionOrder
     name: RunningProductionOrder
     nameWithType: RunningProductionOrder
-    fullName: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
+    fullName: Intranet.Labor.ViewModel.RunningProductionOrder
   - name: )
     nameWithType: )
     fullName: )

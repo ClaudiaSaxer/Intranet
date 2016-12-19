@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoRewetController
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoRewetService
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 31
+    startLine: 30
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 41
+    startLine: 40
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -120,6 +120,45 @@ items:
       type: Intranet.Common.ILoggerFactory
       description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
   overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  id: AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRewetController
+  langs:
+  - csharp
+  - vb
+  name: AddNote(InkoRewetEditViewModel)
+  nameWithType: InkoRewetController.AddNote(InkoRewetEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AddNote
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nadds a new note to the test\n"
+  example: []
+  syntax:
+    content: public ActionResult AddNote(InkoRewetEditViewModel viewModel)
+    content.vb: Public Function AddNote(viewModel As InkoRewetEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+      description: ''
+    return:
+      type: ActionResult
+      description: The Edit View
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -138,11 +177,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Create
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 55
+    startLine: 68
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -163,45 +202,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
-  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
-  id: Edit(Int32)
-  parent: Intranet.Web.Areas.Labor.Controllers.InkoRewetController
-  langs:
-  - csharp
-  - vb
-  name: Edit(Int32)
-  nameWithType: InkoRewetController.Edit(Int32)
-  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: Edit
-    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 71
-  assemblies:
-  - Intranet.Web
-  namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nLoads the InkoRewet Edit View with an Item form the Test-Sheet which will be edited\n"
-  example: []
-  syntax:
-    content: public ActionResult Edit(Int32 id = null)
-    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
-    parameters:
-    - id: id
-      type: Int32
-      description: The Id of the test-sheet which this Test-Data is for
-    return:
-      type: ActionResult
-      description: The Index View filled with the viewModel
-  overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Delete(Int32)
   commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Delete(Int32)
   id: Delete(Int32)
@@ -216,11 +216,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Delete
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 87
+    startLine: 83
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -241,6 +241,45 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
+  id: Edit(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.InkoRewetController
+  langs:
+  - csharp
+  - vb
+  name: Edit(Int32)
+  nameWithType: InkoRewetController.Edit(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Edit
+    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
+    startLine: 95
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the InkoRewet Edit View with an Item form the Test-Sheet which will be edited\n"
+  example: []
+  syntax:
+    content: public ActionResult Edit(Int32 id = null)
+    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
   commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
   id: Save(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
@@ -255,11 +294,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Save
     path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 98
+    startLine: 111
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -276,45 +315,6 @@ items:
       type: ActionResult
       description: ''
   overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
-  commentId: M:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
-  id: AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
-  parent: Intranet.Web.Areas.Labor.Controllers.InkoRewetController
-  langs:
-  - csharp
-  - vb
-  name: AddNote(InkoRewetEditViewModel)
-  nameWithType: InkoRewetController.AddNote(InkoRewetEditViewModel)
-  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote(Intranet.Labor.ViewModel.InkoRewetEditViewModel)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: AddNote
-    path: .src/Intranet/Web/Areas/Labor/Controllers/InkoRewetController.cs
-    startLine: 111
-  assemblies:
-  - Intranet.Web
-  namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nadds a new note to the test\n"
-  example: []
-  syntax:
-    content: public ActionResult AddNote(InkoRewetEditViewModel viewModel)
-    content.vb: Public Function AddNote(viewModel As InkoRewetEditViewModel) As ActionResult
-    parameters:
-    - id: viewModel
-      type: Intranet.Labor.ViewModel.InkoRewetEditViewModel
-      description: ''
-    return:
-      type: ActionResult
-      description: The Edit View
-  overload: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -443,6 +443,30 @@ references:
   name: InkoRewetController
   nameWithType: InkoRewetController.InkoRewetController
   fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.InkoRewetController
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote
+  isExternal: false
+  name: AddNote
+  nameWithType: InkoRewetController.AddNote
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote
+- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: InkoRewetEditViewModel
+  nameWithType: InkoRewetEditViewModel
+  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
 - uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Create*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Create
   isExternal: false
@@ -454,45 +478,21 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: Int32
-- uid: ActionResult
-  isExternal: true
-  name: ActionResult
-  nameWithType: ActionResult
-  fullName: ActionResult
-- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit*
-  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit
-  isExternal: false
-  name: Edit
-  nameWithType: InkoRewetController.Edit
-  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit
 - uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Delete*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Delete
   isExternal: false
   name: Delete
   nameWithType: InkoRewetController.Delete
   fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Delete
+- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit
+  isExternal: false
+  name: Edit
+  nameWithType: InkoRewetController.Edit
+  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Edit
 - uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save
   isExternal: false
   name: Save
   nameWithType: InkoRewetController.Save
   fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.Save
-- uid: Intranet.Labor.ViewModel.InkoRewetEditViewModel
-  commentId: T:Intranet.Labor.ViewModel.InkoRewetEditViewModel
-  parent: Intranet.Labor.ViewModel
-  isExternal: false
-  name: InkoRewetEditViewModel
-  nameWithType: InkoRewetEditViewModel
-  fullName: Intranet.Labor.ViewModel.InkoRewetEditViewModel
-- uid: Intranet.Labor.ViewModel
-  commentId: N:Intranet.Labor.ViewModel
-  isExternal: false
-  name: Intranet.Labor.ViewModel
-  nameWithType: Intranet.Labor.ViewModel
-  fullName: Intranet.Labor.ViewModel
-- uid: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote*
-  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote
-  isExternal: false
-  name: AddNote
-  nameWithType: InkoRewetController.AddNote
-  fullName: Intranet.Web.Areas.Labor.Controllers.InkoRewetController.AddNote

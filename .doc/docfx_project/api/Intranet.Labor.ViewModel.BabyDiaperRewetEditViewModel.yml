@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewetEditViewModel
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -79,7 +79,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DiaperWeight
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -146,7 +146,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RewetAfter140
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -213,7 +213,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RewetAfter210
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -280,7 +280,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: StrikeThrough
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -347,7 +347,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Distribution
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PenetrationTime1
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -481,7 +481,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PenetrationTime2
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -548,7 +548,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PenetrationTime3
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -615,7 +615,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PenetrationTime4
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -682,7 +682,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestType
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRewet/BabyDiaperRewetEditViewModel.cs
@@ -697,7 +697,7 @@ items:
     content.vb: Public Property TestType As TestTypeBabyDiaper
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+      type: Intranet.Labor.Model.TestTypeBabyDiaper
       description: "\nThe TestType value\n"
   overload: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType*
   modifiers.csharp:
@@ -1135,16 +1135,16 @@ references:
   name: TestType
   nameWithType: BabyDiaperRewetEditViewModel.TestType
   fullName: Intranet.Labor.ViewModel.BabyDiaperRewetEditViewModel.TestType
-- uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
-  commentId: T:Intranet.Labor.Model.labor.TestTypeBabyDiaper
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestTypeBabyDiaper
   nameWithType: TestTypeBabyDiaper
-  fullName: Intranet.Labor.Model.labor.TestTypeBabyDiaper
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.TestTypeBabyDiaper
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model

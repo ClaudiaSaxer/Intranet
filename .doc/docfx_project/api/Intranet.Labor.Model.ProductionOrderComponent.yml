@@ -22,12 +22,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrderComponent
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 8
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 13
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -65,12 +65,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrderComponentId
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 15
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 20
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -80,9 +80,13 @@ items:
     content: >-
       [ForeignKey("ProductionOrder")]
 
+      [Key]
+
       public int ProductionOrderComponentId { get; set; }
     content.vb: >-
       <ForeignKey("ProductionOrder")>
+
+      <Key>
 
       Public Property ProductionOrderComponentId As Integer
     parameters: []
@@ -95,6 +99,9 @@ items:
     arguments:
     - type: System.String
       value: ProductionOrder
+  - type: System.ComponentModel.DataAnnotations.KeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
+    arguments: []
   modifiers.csharp:
   - public
   - get
@@ -114,12 +121,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SAP
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 22
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 28
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -152,12 +159,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PillowRetentWithoutSAP
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 28
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 34
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -190,12 +197,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PillowWeightWithoutSAP
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 34
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 40
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -228,12 +235,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CelluloseRetention
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 40
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 46
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -266,25 +273,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ComponentType
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 46
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 52
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the type of the component\n"
   example: []
   syntax:
-    content: public string ComponentType { get; set; }
-    content.vb: Public Property ComponentType As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ComponentType { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ComponentType As String
     parameters: []
     return:
       type: System.String
       description: the type of the component
   overload: Intranet.Labor.Model.ProductionOrderComponent.ComponentType*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -304,25 +334,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ComponentNr
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 52
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 60
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the number of the component\n"
   example: []
   syntax:
-    content: public string ComponentNr { get; set; }
-    content.vb: Public Property ComponentNr As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ComponentNr { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ComponentNr As String
     parameters: []
     return:
       type: System.String
       description: the number of the component
   overload: Intranet.Labor.Model.ProductionOrderComponent.ComponentNr*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -342,12 +395,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrder
-    path: .src/Intranet/Labor/Model/intigena/ProductionOrderComponent.cs
-    startLine: 58
+    path: .src/Intranet/Labor/Model/Intigena/ProductionOrderComponent.cs
+    startLine: 68
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model

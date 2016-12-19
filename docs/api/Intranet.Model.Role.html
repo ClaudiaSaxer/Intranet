@@ -114,10 +114,10 @@ public class Role</code></pre>
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_Modules.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.Modules%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_Modules.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.Modules%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Model/Role.cs/#L38">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Model/Role.cs/#L41">View Source</a>
               </span>
               <a id="Intranet_Model_Role_Modules_" data-uid="Intranet.Model.Role.Modules*"></a>
               <h4 id="Intranet_Model_Role_Modules" data-uid="Intranet.Model.Role.Modules">Modules</h4>
@@ -139,17 +139,17 @@ public class Role</code></pre>
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Collections.Generic.ICollection</span>&lt;<a class="xref" href="Intranet.Model.Module.html">Module</a>&gt;</td>
-                    <td><p>The roletypes of the Role.</p>
+                    <td><p>The modules of the Role.</p>
 </td>
                   </tr>
                 </tbody>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_Name.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_Name.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Model/Role.cs/#L32">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Model/Role.cs/#L32">View Source</a>
               </span>
               <a id="Intranet_Model_Role_Name_" data-uid="Intranet.Model.Role.Name*"></a>
               <h4 id="Intranet_Model_Role_Name" data-uid="Intranet.Model.Role.Name">Name</h4>
@@ -158,7 +158,10 @@ public class Role</code></pre>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+                <pre><code class="lang-csharp hljs">[Column(TypeName = &quot;varchar&quot;)]
+[StringLength(255)]
+[Index(&quot;IX_Module_Name&quot;, IsUnique = true)]
+public string Name { get; set; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -178,10 +181,10 @@ public class Role</code></pre>
               </table>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_RoleId.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.RoleId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role_RoleId.md&amp;value=---%0Auid%3A%20Intranet.Model.Role.RoleId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Model/Role.cs/#L24">View Source</a>
+                <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Model/Role.cs/#L24">View Source</a>
               </span>
               <a id="Intranet_Model_Role_RoleId_" data-uid="Intranet.Model.Role.RoleId*"></a>
               <h4 id="Intranet_Model_Role_RoleId" data-uid="Intranet.Model.Role.RoleId">RoleId</h4>
@@ -218,10 +221,10 @@ public int RoleId { get; set; }</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/f_doc/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role.md&amp;value=---%0Auid%3A%20Intranet.Model.Role%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/new/dev/.doc/docfx_project/apispec/new?filename=Intranet_Model_Role.md&amp;value=---%0Auid%3A%20Intranet.Model.Role%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/f_doc/.src/Intranet/Model/Role.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/ClaudiaSaxer/Intranet/blob/dev/.src/Intranet/Model/Role.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -25,7 +25,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Module
     path: .src/Intranet/Model/Module.cs
@@ -68,7 +68,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleId
     path: .src/Intranet/Model/Module.cs
@@ -125,7 +125,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
     path: .src/Intranet/Model/Module.cs
@@ -137,13 +137,49 @@ items:
   example:
   - "\nname example: Labor\n"
   syntax:
-    content: public string Name { get; set; }
-    content.vb: Public Property Name As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      [Index("IX_Module_Name", IsUnique = true)]
+
+      public string Name { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      <Index("IX_Module_Name", IsUnique:=True)>
+
+      Public Property Name As String
     parameters: []
     return:
       type: System.String
       description: The name of the module.
   overload: Intranet.Model.Module.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Module_Name
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: true
   modifiers.csharp:
   - public
   - get
@@ -164,24 +200,47 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Description
     path: .src/Intranet/Model/Module.cs
-    startLine: 40
+    startLine: 42
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
   summary: "\nGets or sets a description of the module\n"
   example: []
   syntax:
-    content: public string Description { get; set; }
-    content.vb: Public Property Description As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(1023)]
+
+      public string Description { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(1023)>
+
+      Public Property Description As String
     parameters: []
     return:
       type: System.String
       description: The description of the module.
   overload: Intranet.Model.Module.Description*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 1023
   modifiers.csharp:
   - public
   - get
@@ -202,24 +261,47 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ActionName
     path: .src/Intranet/Model/Module.cs
-    startLine: 46
+    startLine: 50
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
   summary: "\nGets or sets the path to the module start page\n"
   example: []
   syntax:
-    content: public string ActionName { get; set; }
-    content.vb: Public Property ActionName As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ActionName { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ActionName As String
     parameters: []
     return:
       type: System.String
       description: The path of the module.
   overload: Intranet.Model.Module.ActionName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -240,24 +322,47 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ControllerName
     path: .src/Intranet/Model/Module.cs
-    startLine: 52
+    startLine: 58
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
   summary: "\nGets or sets the path to the module start page\n"
   example: []
   syntax:
-    content: public string ControllerName { get; set; }
-    content.vb: Public Property ControllerName As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ControllerName { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ControllerName As String
     parameters: []
     return:
       type: System.String
       description: The path of the module.
   overload: Intranet.Model.Module.ControllerName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -278,24 +383,47 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AreaName
     path: .src/Intranet/Model/Module.cs
-    startLine: 58
+    startLine: 66
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
   summary: "\nGets or sets the are to the module\n"
   example: []
   syntax:
-    content: public string AreaName { get; set; }
-    content.vb: Public Property AreaName As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string AreaName { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property AreaName As String
     parameters: []
     return:
       type: System.String
       description: The are of the module.
   overload: Intranet.Model.Module.AreaName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -316,24 +444,40 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Visible
     path: .src/Intranet/Model/Module.cs
-    startLine: 64
+    startLine: 74
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
   summary: "\nIf Main Module is Visible in Shell or not\n"
   example: []
   syntax:
-    content: public bool ? Visible { get; set; }
-    content.vb: Public Property Visible As Boolean?
+    content: >-
+      [Index("IX_Module_Visible", IsUnique = false)]
+
+      public bool ? Visible { get; set; }
+    content.vb: >-
+      <Index("IX_Module_Visible", IsUnique:=False)>
+
+      Public Property Visible As Boolean?
     parameters: []
     return:
       type: System.Nullable{System.Boolean}
-      description: The visability of the module. Null if type is not main
+      description: The viability of the module. Null if type is not main
   overload: Intranet.Model.Module.Visible*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Module_Visible
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: false
   modifiers.csharp:
   - public
   - get
@@ -354,11 +498,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Type
     path: .src/Intranet/Model/Module.cs
-    startLine: 70
+    startLine: 81
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
@@ -392,11 +536,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Submodules
     path: .src/Intranet/Model/Module.cs
-    startLine: 76
+    startLine: 87
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model
@@ -432,11 +576,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Model/Module.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Roles
     path: .src/Intranet/Model/Module.cs
-    startLine: 82
+    startLine: 93
   assemblies:
   - Intranet.Model
   namespace: Intranet.Model

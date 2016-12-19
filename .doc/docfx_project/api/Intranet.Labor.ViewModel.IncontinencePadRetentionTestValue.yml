@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadRetentionTestValue
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadRetention
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadTestInfo
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetentionTestValue.cs

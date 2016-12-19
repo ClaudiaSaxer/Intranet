@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IDbCommit
     path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-    startLine: 9
+    startLine: 14
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Commit
     path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-    startLine: 15
+    startLine: 20
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -92,11 +92,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CommitAsync
     path: .src/Intranet/Common/Db/Definition/IDbCommit.cs
-    startLine: 21
+    startLine: 26
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

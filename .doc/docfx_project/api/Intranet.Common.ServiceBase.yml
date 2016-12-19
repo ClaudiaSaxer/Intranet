@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/ServiceBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ServiceBase
     path: .src/Intranet/Common/Bll/ServiceBase.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/ServiceBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Roles
     path: .src/Intranet/Common/Bll/ServiceBase.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/ServiceBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Bll/ServiceBase.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/Bootstrapper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Bootstrapper
     path: .src/Intranet/Web/IoC/Bootstrapper.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC
@@ -53,11 +53,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/Bootstrapper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Run
     path: .src/Intranet/Web/IoC/Bootstrapper.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC

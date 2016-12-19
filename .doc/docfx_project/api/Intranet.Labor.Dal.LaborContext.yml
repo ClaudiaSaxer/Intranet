@@ -29,11 +29,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborContext
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -95,11 +95,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Articles
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -133,11 +133,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrderComponent
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -171,11 +171,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Errors
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -209,11 +209,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrders
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -247,11 +247,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftSchedules
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -285,11 +285,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Machines
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 49
+    startLine: 52
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -323,11 +323,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Instrons
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 55
+    startLine: 58
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -361,11 +361,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InstronValues
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 61
+    startLine: 64
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -399,11 +399,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperTestValues
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 67
+    startLine: 70
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -414,7 +414,7 @@ items:
     content.vb: Public Property BabyDiaperTestValues As DbSet(Of BabyDiaperTestValue)
     parameters: []
     return:
-      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.BabyDiaperTestValue}
       description: the baby diaper test values
   overload: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues*
   modifiers.csharp:
@@ -437,11 +437,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadTestValues
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 73
+    startLine: 76
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -452,7 +452,7 @@ items:
     content.vb: Public Property IncontinencePadTestValues As DbSet(Of IncontinencePadTestValue)
     parameters: []
     return:
-      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.IncontinencePadTestValue}
       description: the incontinence pad test values
   overload: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues*
   modifiers.csharp:
@@ -475,11 +475,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestValues
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 79
+    startLine: 82
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -490,7 +490,7 @@ items:
     content.vb: Public Property TestValues As DbSet(Of TestValue)
     parameters: []
     return:
-      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.TestValue}
       description: the test values
   overload: Intranet.Labor.Dal.LaborContext.TestValues*
   modifiers.csharp:
@@ -513,11 +513,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestNotes
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 85
+    startLine: 88
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -528,7 +528,7 @@ items:
     content.vb: Public Property TestNotes As DbSet(Of TestValueNote)
     parameters: []
     return:
-      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.TestValueNote}
       description: the test notes
   overload: Intranet.Labor.Dal.LaborContext.TestNotes*
   modifiers.csharp:
@@ -551,11 +551,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestSheets
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -566,7 +566,7 @@ items:
     content.vb: Public Property TestSheets As DbSet(Of TestSheet)
     parameters: []
     return:
-      type: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
+      type: System.Data.Entity.DbSet{Intranet.Labor.Model.TestSheet}
       description: the test sheets
   overload: Intranet.Labor.Dal.LaborContext.TestSheets*
   modifiers.csharp:
@@ -589,11 +589,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Dal/LaborContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: OnModelCreating
     path: .src/Intranet/Labor/Dal/LaborContext.cs
-    startLine: 110
+    startLine: 113
   assemblies:
   - Intranet.Labor.Dal
   namespace: Intranet.Labor.Dal
@@ -1946,15 +1946,15 @@ references:
   name: BabyDiaperTestValues
   nameWithType: LaborContext.BabyDiaperTestValues
   fullName: Intranet.Labor.Dal.LaborContext.BabyDiaperTestValues
-- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
-  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.BabyDiaperTestValue}
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.BabyDiaperTestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.BabyDiaperTestValue}
   parent: System.Data.Entity
   definition: System.Data.Entity.DbSet`1
   name: DbSet<BabyDiaperTestValue>
   nameWithType: DbSet<BabyDiaperTestValue>
-  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.BabyDiaperTestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.BabyDiaperTestValue>
   nameWithType.vb: DbSet(Of BabyDiaperTestValue)
-  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.BabyDiaperTestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.BabyDiaperTestValue)
   name.vb: DbSet(Of BabyDiaperTestValue)
   spec.csharp:
   - uid: System.Data.Entity.DbSet`1
@@ -1965,10 +1965,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - uid: Intranet.Labor.Model.BabyDiaperTestValue
     name: BabyDiaperTestValue
     nameWithType: BabyDiaperTestValue
-    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.BabyDiaperTestValue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1981,10 +1981,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
+  - uid: Intranet.Labor.Model.BabyDiaperTestValue
     name: BabyDiaperTestValue
     nameWithType: BabyDiaperTestValue
-    fullName: Intranet.Labor.Model.labor.BabyDiaperTestValue
+    fullName: Intranet.Labor.Model.BabyDiaperTestValue
   - name: )
     nameWithType: )
     fullName: )
@@ -1994,15 +1994,15 @@ references:
   name: IncontinencePadTestValues
   nameWithType: LaborContext.IncontinencePadTestValues
   fullName: Intranet.Labor.Dal.LaborContext.IncontinencePadTestValues
-- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
-  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.IncontinencePadTestValue}
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.IncontinencePadTestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.IncontinencePadTestValue}
   parent: System.Data.Entity
   definition: System.Data.Entity.DbSet`1
   name: DbSet<IncontinencePadTestValue>
   nameWithType: DbSet<IncontinencePadTestValue>
-  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.IncontinencePadTestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.IncontinencePadTestValue>
   nameWithType.vb: DbSet(Of IncontinencePadTestValue)
-  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.IncontinencePadTestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.IncontinencePadTestValue)
   name.vb: DbSet(Of IncontinencePadTestValue)
   spec.csharp:
   - uid: System.Data.Entity.DbSet`1
@@ -2013,10 +2013,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - uid: Intranet.Labor.Model.IncontinencePadTestValue
     name: IncontinencePadTestValue
     nameWithType: IncontinencePadTestValue
-    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.IncontinencePadTestValue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2029,10 +2029,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
+  - uid: Intranet.Labor.Model.IncontinencePadTestValue
     name: IncontinencePadTestValue
     nameWithType: IncontinencePadTestValue
-    fullName: Intranet.Labor.Model.labor.IncontinencePadTestValue
+    fullName: Intranet.Labor.Model.IncontinencePadTestValue
   - name: )
     nameWithType: )
     fullName: )
@@ -2042,15 +2042,15 @@ references:
   name: TestValues
   nameWithType: LaborContext.TestValues
   fullName: Intranet.Labor.Dal.LaborContext.TestValues
-- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
-  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValue}
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.TestValue}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.TestValue}
   parent: System.Data.Entity
   definition: System.Data.Entity.DbSet`1
   name: DbSet<TestValue>
   nameWithType: DbSet<TestValue>
-  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestValue>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.TestValue>
   nameWithType.vb: DbSet(Of TestValue)
-  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestValue)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.TestValue)
   name.vb: DbSet(Of TestValue)
   spec.csharp:
   - uid: System.Data.Entity.DbSet`1
@@ -2061,10 +2061,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestValue
+  - uid: Intranet.Labor.Model.TestValue
     name: TestValue
     nameWithType: TestValue
-    fullName: Intranet.Labor.Model.labor.TestValue
+    fullName: Intranet.Labor.Model.TestValue
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2077,10 +2077,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestValue
+  - uid: Intranet.Labor.Model.TestValue
     name: TestValue
     nameWithType: TestValue
-    fullName: Intranet.Labor.Model.labor.TestValue
+    fullName: Intranet.Labor.Model.TestValue
   - name: )
     nameWithType: )
     fullName: )
@@ -2090,15 +2090,15 @@ references:
   name: TestNotes
   nameWithType: LaborContext.TestNotes
   fullName: Intranet.Labor.Dal.LaborContext.TestNotes
-- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
-  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestValueNote}
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.TestValueNote}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.TestValueNote}
   parent: System.Data.Entity
   definition: System.Data.Entity.DbSet`1
   name: DbSet<TestValueNote>
   nameWithType: DbSet<TestValueNote>
-  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestValueNote>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.TestValueNote>
   nameWithType.vb: DbSet(Of TestValueNote)
-  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestValueNote)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.TestValueNote)
   name.vb: DbSet(Of TestValueNote)
   spec.csharp:
   - uid: System.Data.Entity.DbSet`1
@@ -2109,10 +2109,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestValueNote
+  - uid: Intranet.Labor.Model.TestValueNote
     name: TestValueNote
     nameWithType: TestValueNote
-    fullName: Intranet.Labor.Model.labor.TestValueNote
+    fullName: Intranet.Labor.Model.TestValueNote
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2125,10 +2125,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestValueNote
+  - uid: Intranet.Labor.Model.TestValueNote
     name: TestValueNote
     nameWithType: TestValueNote
-    fullName: Intranet.Labor.Model.labor.TestValueNote
+    fullName: Intranet.Labor.Model.TestValueNote
   - name: )
     nameWithType: )
     fullName: )
@@ -2138,15 +2138,15 @@ references:
   name: TestSheets
   nameWithType: LaborContext.TestSheets
   fullName: Intranet.Labor.Dal.LaborContext.TestSheets
-- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
-  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.labor.TestSheet}
+- uid: System.Data.Entity.DbSet{Intranet.Labor.Model.TestSheet}
+  commentId: T:System.Data.Entity.DbSet{Intranet.Labor.Model.TestSheet}
   parent: System.Data.Entity
   definition: System.Data.Entity.DbSet`1
   name: DbSet<TestSheet>
   nameWithType: DbSet<TestSheet>
-  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.labor.TestSheet>
+  fullName: System.Data.Entity.DbSet<Intranet.Labor.Model.TestSheet>
   nameWithType.vb: DbSet(Of TestSheet)
-  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.labor.TestSheet)
+  fullname.vb: System.Data.Entity.DbSet(Of Intranet.Labor.Model.TestSheet)
   name.vb: DbSet(Of TestSheet)
   spec.csharp:
   - uid: System.Data.Entity.DbSet`1
@@ -2157,10 +2157,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -2173,10 +2173,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: )
     nameWithType: )
     fullName: )

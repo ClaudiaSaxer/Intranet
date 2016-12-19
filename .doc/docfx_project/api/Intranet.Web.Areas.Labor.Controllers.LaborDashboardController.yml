@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborDashboardController
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -60,23 +60,23 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborDashboardService
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-    startLine: 25
+    startLine: 29
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nGets or sets a <xref href=\"Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  summary: "\nGets or sets a <xref href=\"Intranet.Labor.Definition.ILaborDashboardService\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: public ILaborDashboardService LaborDashboardService { get; set; }
     content.vb: Public Property LaborDashboardService As ILaborDashboardService
     parameters: []
     return:
-      type: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
-      description: "\n<xref href=\"Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+      type: Intranet.Labor.Definition.ILaborDashboardService
+      description: "\n<xref href=\"Intranet.Labor.Definition.ILaborDashboardService\" data-throw-if-not-resolved=\"false\"></xref>\n"
   overload: Intranet.Web.Areas.Labor.Controllers.LaborDashboardController.LaborDashboardService*
   modifiers.csharp:
   - public
@@ -98,11 +98,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-    startLine: 35
+    startLine: 39
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -134,11 +134,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Index
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborDashboardController.cs
-    startLine: 47
+    startLine: 51
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -241,19 +241,25 @@ references:
   name: Intranet.Common
   nameWithType: Intranet.Common
   fullName: Intranet.Common
-- uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
-  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
-  parent: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Labor.Definition.ILaborDashboardService
+  commentId: T:Intranet.Labor.Definition.ILaborDashboardService
+  parent: Intranet.Labor.Definition
   isExternal: false
   name: ILaborDashboardService
   nameWithType: ILaborDashboardService
-  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
+  fullName: Intranet.Labor.Definition.ILaborDashboardService
 - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardController.LaborDashboardService*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.LaborDashboardController.LaborDashboardService
   isExternal: false
   name: LaborDashboardService
   nameWithType: LaborDashboardController.LaborDashboardService
   fullName: Intranet.Web.Areas.Labor.Controllers.LaborDashboardController.LaborDashboardService
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
+  isExternal: false
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
 - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardController
   commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborDashboardController
   isExternal: false

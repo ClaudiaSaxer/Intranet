@@ -19,15 +19,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborCreatorInkoController
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nClass representing the controller for the labor creator\n"
+  summary: "\nClass representing the controller for the labor creator inko\n"
   example: []
   syntax:
     content: 'public class LaborCreatorInkoController : BaseController'
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadLaborCreatorService
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborCreatorService
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-    startLine: 40
+    startLine: 39
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -114,7 +114,7 @@ items:
     content.vb: Public Property LaborCreatorService As ILaborCreatorService
     parameters: []
     return:
-      type: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+      type: Intranet.Labor.Definition.ILaborCreatorService
       description: "\n<xref href=\"Intranet.Labor.Definition.ILaborHomeService\" data-throw-if-not-resolved=\"false\"></xref>\n"
   overload: Intranet.Web.Areas.Labor.Controllers.LaborCreatorInkoController.LaborCreatorService*
   modifiers.csharp:
@@ -137,11 +137,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-    startLine: 50
+    startLine: 49
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -173,15 +173,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Edit
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborCreatorInkoController.cs
-    startLine: 63
+    startLine: 62
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nGET: Labor/LaborCreatorBaby/5\n"
+  summary: "\nLoads the inko testsheet\n"
   example: []
   syntax:
     content: public ActionResult Edit(Int32 id = null)
@@ -316,13 +316,13 @@ references:
   name: LaborCreatorService
   nameWithType: LaborCreatorInkoController.LaborCreatorService
   fullName: Intranet.Web.Areas.Labor.Controllers.LaborCreatorInkoController.LaborCreatorService
-- uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
-  commentId: T:Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
-  parent: Intranet.Web.Areas.Labor.Controllers
+- uid: Intranet.Labor.Definition.ILaborCreatorService
+  commentId: T:Intranet.Labor.Definition.ILaborCreatorService
+  parent: Intranet.Labor.Definition
   isExternal: false
   name: ILaborCreatorService
   nameWithType: ILaborCreatorService
-  fullName: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
+  fullName: Intranet.Labor.Definition.ILaborCreatorService
 - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorInkoController
   commentId: T:Intranet.Web.Areas.Labor.Controllers.LaborCreatorInkoController
   isExternal: false

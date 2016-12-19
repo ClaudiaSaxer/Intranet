@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborAreaRegistration
     path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor
@@ -54,11 +54,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AreaName
     path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor
@@ -92,11 +92,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RegisterArea
     path: .src/Intranet/Web/Areas/Labor/LaborAreaRegistration.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor

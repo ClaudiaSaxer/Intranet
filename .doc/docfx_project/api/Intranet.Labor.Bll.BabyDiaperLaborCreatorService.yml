@@ -19,15 +19,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperLaborCreatorService
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
-  summary: "\nClass representing the labor creator service\n"
+  summary: "\nClass representing the babydiaper labor creator service\n"
   example: []
   syntax:
     content: 'public class BabyDiaperLaborCreatorService : ServiceBase, IBabyDiaperLaborCreatorService'
@@ -71,11 +71,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperLaborCreatorBll
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -109,11 +109,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Helper
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -147,11 +147,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -183,15 +183,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetLaborCreatorViewModel
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorService.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
-  summary: "\nGet the labor creator view model for a specific id.\n"
+  summary: "\nGet the babydiaper labor creator view model for a specific id.\n"
   example: []
   syntax:
     content: public BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel(int testSheetId)

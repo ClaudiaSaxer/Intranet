@@ -34,15 +34,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperLaborCreatorViewModel
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
-  summary: "\nClass representing the view model for the labor creator\n"
+  summary: "\nClass representing the view model for the babydiaper labor creator\n"
   example: []
   syntax:
     content: public class BabyDiaperLaborCreatorViewModel
@@ -77,11 +77,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Producer
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -115,11 +115,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Shift
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -153,11 +153,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FaNr
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -191,11 +191,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CreatedDate
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 34
+    startLine: 38
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -229,11 +229,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductName
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -267,11 +267,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SizeName
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 46
+    startLine: 50
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -305,11 +305,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewets
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -343,11 +343,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewetAverage
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 58
+    startLine: 62
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -381,11 +381,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewetStandardDeviation
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 64
+    startLine: 68
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -419,11 +419,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Retentions
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 70
+    startLine: 74
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -457,11 +457,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRetentionAverage
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 76
+    startLine: 80
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -495,11 +495,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRetentionStandardDeviation
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 82
+    startLine: 86
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -533,11 +533,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: PenetrationTimes
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 88
+    startLine: 92
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -571,11 +571,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperPenetrationTimeAverage
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 94
+    startLine: 98
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -609,11 +609,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperPenetrationTimeStandardDeviation
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 100
+    startLine: 104
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -647,11 +647,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: WeigthAverageAll
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 106
+    startLine: 110
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -685,11 +685,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: WeightStandardDeviationAll
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 112
+    startLine: 116
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -723,11 +723,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestSheetId
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 118
+    startLine: 122
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -761,11 +761,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CanEdit
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperLaborCreatorViewModel.cs
-    startLine: 124
+    startLine: 128
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
