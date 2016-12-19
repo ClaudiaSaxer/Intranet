@@ -12,7 +12,7 @@ using Intranet.Web.Filter;
 namespace Intranet.Web.Areas.Labor.Controllers
 {
     /// <summary>
-    ///     Class representing the InkoAquisitionController
+    ///     Class representing the HistoryController
     /// </summary>
     [CheckDisable( ModuleName = "Labor" )]
     [Authorize( Roles =

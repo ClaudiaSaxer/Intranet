@@ -1,6 +1,10 @@
+#region Usings
+
 using System.Collections.ObjectModel;
 using System.Data.Entity.Migrations;
 using Intranet.Model;
+
+#endregion
 
 namespace Intranet.Dal
 {

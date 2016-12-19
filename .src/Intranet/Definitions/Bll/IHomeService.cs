@@ -1,4 +1,8 @@
-﻿using Intranet.ViewModel;
+﻿#region Usings
+
+using Intranet.ViewModel;
+
+#endregion
 
 namespace Intranet.Definition
 {

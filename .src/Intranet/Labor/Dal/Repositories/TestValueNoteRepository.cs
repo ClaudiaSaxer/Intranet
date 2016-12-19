@@ -4,6 +4,7 @@ using Intranet.Common;
 using Intranet.Labor.Model;
 
 #endregion
+
 namespace Intranet.Labor.Dal
 {
     /// <summary>

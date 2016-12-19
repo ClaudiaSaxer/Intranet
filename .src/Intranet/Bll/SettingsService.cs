@@ -1,9 +1,13 @@
-﻿using System.Collections.ObjectModel;
+﻿#region Usings
+
+using System.Collections.ObjectModel;
 using Extend;
 using Intranet.Common;
 using Intranet.Definition;
 using Intranet.Model;
 using Intranet.ViewModel;
+
+#endregion
 
 namespace Intranet.Bll
 {

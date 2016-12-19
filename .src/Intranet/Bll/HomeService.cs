@@ -1,6 +1,10 @@
-﻿using Intranet.Common;
+﻿#region Usings
+
+using Intranet.Common;
 using Intranet.Definition;
 using Intranet.ViewModel;
+
+#endregion
 
 namespace Intranet.Bll
 {

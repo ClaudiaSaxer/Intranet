@@ -37,8 +37,8 @@
     <DocumentationFile>bin\Release\Intranet.ViewModel.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Extend, Version=1.1.9.33, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Extend.1.1.9.33\lib\net45\Extend.dll</HintPath>
+    <Reference Include="Extend, Version=1.1.11.58, Culture=neutral, PublicKeyToken=869d4c589c0473ac, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Extend.1.1.11.58\lib\net45\Extend.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

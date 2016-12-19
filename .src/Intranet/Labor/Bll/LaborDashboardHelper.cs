@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -8,6 +10,8 @@ using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Bll
 {
@@ -202,26 +206,30 @@ namespace Intranet.Labor.Bll
         public RwType ToRwTypeAll( IEnumerable<TestValue> testValues )
         {
             var rwType = RwType.Ok;
-            if ( testValues != null )
-                foreach (
-                    var testValue in
-                    testValues.Where( testValue => ( testValue.TestValueType == TestValueType.Average ) || ( testValue.TestValueType == TestValueType.StandardDeviation ) ) )
-                    if ( testValue.ArticleTestType == ArticleType.BabyDiaper )
-                    {
-                        rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.RetentionRw );
-                        rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.PenetrationRwType );
-                        rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.Rewet140Rw );
-                        rwType = CalcRwType( rwType, testValue?.BabyDiaperTestValue?.Rewet210Rw );
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RetentionRw );
-                    }
-                    else
-                    {
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeFirstRw );
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeSecondRw );
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.AcquisitionTimeThirdRw );
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RewetAfterAcquisitionTimeRw );
-                        rwType = CalcRwType( rwType, testValue?.IncontinencePadTestValue?.RewetFreeRw );
-                    }
+            if ( testValues == null )
+                return rwType;
+
+            testValues
+                .Where( x => x.TestValueType == TestValueType.Average || x.TestValueType == TestValueType.StandardDeviation )
+                .ForEach( x =>
+                          {
+                              if (x.ArticleTestType == ArticleType.BabyDiaper)
+                              {
+                                  rwType = CalcRwType(rwType, x.BabyDiaperTestValue?.RetentionRw);
+                                  rwType = CalcRwType(rwType, x.BabyDiaperTestValue?.PenetrationRwType);
+                                  rwType = CalcRwType(rwType, x.BabyDiaperTestValue?.Rewet140Rw);
+                                  rwType = CalcRwType(rwType, x.BabyDiaperTestValue?.Rewet210Rw);
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.RetentionRw);
+                              }                               
+                              else                            
+                              {                               
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.AcquisitionTimeFirstRw);
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.AcquisitionTimeSecondRw);
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.AcquisitionTimeThirdRw);
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.RewetAfterAcquisitionTimeRw);
+                                  rwType = CalcRwType(rwType, x.IncontinencePadTestValue?.RewetFreeRw);
+                              }
+                          } );
             return rwType;
         }
 

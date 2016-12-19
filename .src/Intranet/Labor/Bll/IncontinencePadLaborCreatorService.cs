@@ -1,14 +1,18 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the labor creator service
+    ///     Class representing the incontinence pad labor creator service
     /// </summary>
     public class IncontinencePadLaborCreatorService : ServiceBase, IIncontinencePadLaborCreatorService
     {

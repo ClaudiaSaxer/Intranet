@@ -80,7 +80,7 @@ namespace Intranet.Labor.Bll
             var testSheetInfo = testValue.TestSheet;
             if ( testSheetInfo.IsNull() )
             {
-                Logger.Error( "TestBlatt mit id " + testValue.TestSheetRefId + "existiert nicht in DB!" );
+                Logger.Error( "TestBlatt mit id " + testValue.TestSheetId + "existiert nicht in DB!" );
                 return null;
             }
             var notes = testValue.TestValueNote;
@@ -89,13 +89,13 @@ namespace Intranet.Labor.Bll
                                    .ToList();
             if ( notes.IsNull() )
                 notes = new List<TestValueNote>();
-            var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorRefId, Message = note.Message } )
+            var testNotes = notes.Select( note => new TestNote { Id = note.TestValueNoteId, ErrorCodeId = note.ErrorId, Message = note.Message } )
                                  .ToList();
 
             var viewModel = new BabyDiaperRetentionEditViewModel
             {
                 TestValueId = retentionTestId,
-                TestSheetId = testValue.TestSheetRefId,
+                TestSheetId = testValue.TestSheetId,
                 TestPerson = testValue.LastEditedPerson,
                 ProductionCode = TestServiceHelper.CreateProductionCode( testSheetInfo ),
                 ProductionCodeDay = testValue.DayInYearOfArticleCreation,
@@ -138,12 +138,11 @@ namespace Intranet.Labor.Bll
             var oldTestValue = testSheetInfo.TestValues.Where( t => t.TestValueType == TestValueType.Single )
                                             .ToList()
                                             .LastOrDefault();
-            if ( oldTestValue != null )
-            {
-                viewModel.TestPerson = oldTestValue.LastEditedPerson;
-                viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
-                viewModel.ProductionCodeTime = oldTestValue.BabyDiaperTestValue.DiaperCreatedTime;
-            }
+            if ( oldTestValue == null )
+                return viewModel;
+            viewModel.TestPerson = oldTestValue.LastEditedPerson;
+            viewModel.ProductionCodeDay = oldTestValue.DayInYearOfArticleCreation;
+            viewModel.ProductionCodeTime = oldTestValue.BabyDiaperTestValue.DiaperCreatedTime;
 
             return viewModel;
         }
@@ -155,13 +154,13 @@ namespace Intranet.Labor.Bll
         /// <returns>The saved or updated BabyDiaperRetentionEditViewModel</returns>
         public TestValue Save( BabyDiaperRetentionEditViewModel viewModel )
         {
-            TestValue testValue = null;
+            TestValue testValue;
             try
             {
                 testValue = viewModel.TestValueId <= 0
                     ? BabyDiaperRetentionServiceHelper.SaveNewRetentionTest( viewModel )
                     : BabyDiaperRetentionServiceHelper.UpdateRetentionTest( viewModel );
-                var testSheet = BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( viewModel.TestSheetId );
+                BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( viewModel.TestSheetId );
             }
             catch ( Exception e )
             {
@@ -179,7 +178,7 @@ namespace Intranet.Labor.Bll
         public TestValue Delete( Int32 testValueId )
         {
             var result = TestBll.DeleteTestValue( testValueId );
-            BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( result.TestSheetRefId );
+            BabyDiaperRetentionServiceHelper.UpdateRetentionAverageAndStv( result.TestSheetId);
             return result;
         }
 

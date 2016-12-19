@@ -1,14 +1,18 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Model;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the bll of the labor home.
+    ///     Class representing the bll of the babydiaper labor home.
     /// </summary>
     public class BabyDiaperLaborHomeBll : ILaborHome
     {

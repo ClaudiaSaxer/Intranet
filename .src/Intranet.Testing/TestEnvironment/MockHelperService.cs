@@ -1,7 +1,11 @@
-﻿using Intranet.Definition;
+﻿#region Usings
+
+using Intranet.Definition;
 using Intranet.Model;
 using Intranet.ViewModel;
 using Moq;
+
+#endregion
 
 namespace Intranet.TestEnvironment
 {

@@ -167,7 +167,7 @@ namespace Intranet.Labor.Bll
             return value >= productOrder.Article.MaxRetention ? RwType.Better : RwType.Ok;
         }
 
-        private TestValue UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
+        private void UpdateRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
             var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempBabyDiaper = new BabyDiaperTestValue { RetentionRw = RwType.Ok };
@@ -198,10 +198,9 @@ namespace Intranet.Labor.Bll
                 tempBabyDiaper.RetentionRw = RwType.Worse;
             retentionTestAvg.BabyDiaperTestValue.RetentionRw = tempBabyDiaper.RetentionRw;
             retentionTestAvg.BabyDiaperTestValue.SapGHoewiValue = tempBabyDiaper.SapGHoewiValue / counter;
-            return retentionTestAvg;
         }
 
-        private static TestValue UpdateRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
+        private static void UpdateRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
         {
             var tempBabyDiaper = new BabyDiaperTestValue();
             var counter = 0;
@@ -237,7 +236,6 @@ namespace Intranet.Labor.Bll
                 retentionTestStDev.BabyDiaperTestValue.RetentionAfterZentrifugePercent = Math.Sqrt( tempBabyDiaper.RetentionAfterZentrifugePercent / counter );
                 retentionTestStDev.BabyDiaperTestValue.SapGHoewiValue = Math.Sqrt( tempBabyDiaper.SapGHoewiValue / counter );
             }
-            return retentionTestStDev;
         }
 
         #endregion

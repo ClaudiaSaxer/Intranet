@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Extend;
 using Intranet.Common;
 using Intranet.Labor.Definition;
+
+#endregion
 
 namespace Intranet.Labor.Bll
 {

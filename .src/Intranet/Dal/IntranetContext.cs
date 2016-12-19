@@ -51,8 +51,8 @@ namespace Intranet.Dal
                         .WithMany( s => s.Modules )
                         .Map( mr =>
                               {
-                                  mr.MapLeftKey( "ModulRefId" );
-                                  mr.MapRightKey( "RoleRefId" );
+                                  mr.MapLeftKey( "ModulId" );
+                                  mr.MapRightKey( "RoleId" );
                                   mr.ToTable( "ModuleRole" );
                               } );
 
@@ -60,7 +60,7 @@ namespace Intranet.Dal
             modelBuilder.Entity<Module>()
                         .HasMany( s => s.Submodules )
                         .WithOptional()
-                        .Map( ss => ss.MapKey( "SubModulRefId" ) );
+                        .Map( ss => ss.MapKey( "SubModulId" ) );
         }
 
         #endregion

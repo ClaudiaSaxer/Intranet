@@ -1,14 +1,18 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Linq;
 using Intranet.Common;
 using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the labor creator service
+    ///     Class representing the babydiaper labor creator service
     /// </summary>
     public class BabyDiaperLaborCreatorService : ServiceBase, IBabyDiaperLaborCreatorService
     {
@@ -42,7 +46,7 @@ namespace Intranet.Labor.Bll
         #endregion
 
         /// <summary>
-        ///     Get the labor creator view model for a specific id.
+        ///     Get the babydiaper labor creator view model for a specific id.
         /// </summary>
         /// <returns>the labor creator view model</returns>
         public BabyDiaperLaborCreatorViewModel GetLaborCreatorViewModel( Int32 testSheetId )

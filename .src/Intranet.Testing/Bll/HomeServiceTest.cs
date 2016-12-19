@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FluentAssertions;
@@ -6,6 +8,8 @@ using Intranet.Common;
 using Intranet.Model;
 using Intranet.TestEnvironment;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Bll.Test
 {

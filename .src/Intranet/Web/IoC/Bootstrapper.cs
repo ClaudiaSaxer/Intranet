@@ -1,9 +1,13 @@
-﻿using System.Web.Mvc;
+﻿#region Usings
+
+using System.Web.Mvc;
 using Autofac;
 using Autofac.Configuration;
 using Autofac.Integration.Mvc;
 using Intranet.Common;
 using Microsoft.Extensions.Configuration;
+
+#endregion
 
 namespace Intranet.Web.IoC
 {

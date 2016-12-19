@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -9,10 +11,12 @@ using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the labor creator service
+    ///     Class representing the incontinence pad labor creator service helper
     /// </summary>
     public class IncontinencePadLaborCreatorServiceHelper : ServiceBase, IIncontinencePadLaborCreatorServiceHelper
     {
@@ -320,22 +324,22 @@ namespace Intranet.Labor.Bll
                                                                   Func<IncontinencePadTestValue, String, String, Int32, T> toTestTypeTestValueAction )
         {
             var tests = new Collection<T>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x =>
-                                          ( x.TestValueType == testValueType )
-                                          && x.IncontinencePadTestValue.TestType.IsIn( testTypeIncontinencePad ) )
-                                  .ForEach(
-                                      x =>
-                                          tests.Add( toTestTypeTestValueAction(
-                                                         x.IncontinencePadTestValue,
-                                                         x.LastEditedPerson,
-                                                         LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                     x.TestSheet.CreatedDateTime.Year,
-                                                                                                     x.DayInYearOfArticleCreation,
-                                                                                                     x.IncontinencePadTestValue.IncontinencePadTime )
-                                                         ,
-                                                         x.TestValueId ) ) );
+            testValue.ToList()
+                     .Where(
+                         x =>
+                             ( x.TestValueType == testValueType )
+                             && x.IncontinencePadTestValue.TestType.IsIn( testTypeIncontinencePad ) )
+                     .ForEach(
+                         x =>
+                             tests.Add( toTestTypeTestValueAction(
+                                            x.IncontinencePadTestValue,
+                                            x.LastEditedPerson,
+                                            LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
+                                                                                        x.TestSheet.CreatedDateTime.Year,
+                                                                                        x.DayInYearOfArticleCreation,
+                                                                                        x.IncontinencePadTestValue.IncontinencePadTime )
+                                            ,
+                                            x.TestValueId ) ) );
             return tests;
         }
 
@@ -370,12 +374,10 @@ namespace Intranet.Labor.Bll
             }
 
             var item = testValue.FirstOrDefault();
-            if ( item == null )
-            {
-                Logger.Error( "No " + valueType + " for " + testType + " per Testsheet existing" );
-                throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
-            }
-            return item;
+            if ( item != null )
+                return item;
+            Logger.Error( "No " + valueType + " for " + testType + " per Testsheet existing" );
+            throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
         }
 
         /// <summary>

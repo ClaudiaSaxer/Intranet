@@ -1,5 +1,9 @@
-﻿using Intranet.Common;
+﻿#region Usings
+
+using Intranet.Common;
 using Intranet.Model;
+
+#endregion
 
 namespace Intranet.Dal
 {

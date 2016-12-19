@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
+#endregion
 
 namespace Intranet.Labor.Model
 {
@@ -23,33 +27,37 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the message for the test note
         /// </summary>
         /// <value>the message for the test note</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String Message { get; set; }
 
         /// <summary>
         ///     Gets or sets the error of the test note
         /// </summary>
         /// <value>the error of the test note</value>
-        [ForeignKey( "ErrorRefId" )]
         public virtual Error Error { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the error
         /// </summary>
         /// <value>the ref id of the error</value>
-        public Int32 ErrorRefId { get; set; }
+        [ForeignKey( "Error" )]
+        [Index( "IX_TestValueNote_ErrorId" )]
+        public Int32 ErrorId { get; set; }
 
         /// <summary>
         ///     Gets or sets the test value for the error
         /// </summary>
         /// <value>the test value</value>
-        [ForeignKey( "TestValueRefId" )]
         public virtual TestValue TestValue { get; set; }
 
         /// <summary>
         ///     Gets or sets the ref id of the test value
         /// </summary>
         /// <value>the ref id of the test value</value>
-        public Int32 TestValueRefId { get; set; }
+        [ForeignKey( "TestValue" )]
+        [Index( "IX_TestValueNote_TestValueId" )]
+        public Int32 TestValueId { get; set; }
 
         #endregion
     }

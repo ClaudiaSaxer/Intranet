@@ -1,11 +1,15 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the bll for the babydiapers value edit/create
+    ///     Interface representing the bll for for all tests edit/create
     /// </summary>
     public interface ITestBll
     {

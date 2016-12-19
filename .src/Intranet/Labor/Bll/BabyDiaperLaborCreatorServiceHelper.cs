@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -9,10 +11,12 @@ using Intranet.Labor.Definition;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
 
+#endregion
+
 namespace Intranet.Labor.Bll
 {
     /// <summary>
-    ///     Class representing the labor creator service
+    ///     Class representing the babydiaper labor creator service helper
     /// </summary>
     public class BabyDiaperLaborCreatorServiceHelper : ServiceBase, IBabyDiaperLaborCreatorServiceHelper
     {
@@ -141,7 +145,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperPenetrationTimeTestValue
             {
-                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = ToTestInfo( testPerson, prodCode, penetrationTime.WeightDiaperDry, testValueId ),
                 BabyDiaperPenetrationTime = ToPenetrationTime( penetrationTime )
             };
             return vm;
@@ -206,7 +210,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperRetentionTestValue
             {
-                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, retention.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = ToTestInfo( testPerson, prodCode, retention.WeightDiaperDry, testValueId ),
                 BabyDiaperRetention = ToRetention( retention )
             };
             return vm;
@@ -273,7 +277,7 @@ namespace Intranet.Labor.Bll
         {
             var vm = new BabyDiaperRewetTestValue
             {
-                BabyDiaperTestInfo = toTestInfo( testPerson, prodCode, rewet.WeightDiaperDry, testValueId ),
+                BabyDiaperTestInfo = ToTestInfo( testPerson, prodCode, rewet.WeightDiaperDry, testValueId ),
                 BabyDiaperRewet = ToRewet( rewet )
             };
             return vm;
@@ -298,7 +302,7 @@ namespace Intranet.Labor.Bll
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns></returns>
-        public BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId )
+        public BabyDiaperTestInfo ToTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId )
             => new BabyDiaperTestInfo
             {
                 TestPerson = testPerson,
@@ -332,21 +336,21 @@ namespace Intranet.Labor.Bll
                                                                   Func<BabyDiaperTestValue, String, String, Int32, T> toTestTypeTestValueAction )
         {
             var tests = new Collection<T>();
-            var values = testValue.ToList()
-                                  .Where(
-                                      x =>
-                                          ( x.TestValueType == testValueType )
-                                          && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
-                                  .ForEach(
-                                      x =>
-                                          tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
-                                                                                x.LastEditedPerson,
-                                                                                LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
-                                                                                                                            x.TestSheet.CreatedDateTime.Year,
-                                                                                                                            x.DayInYearOfArticleCreation,
-                                                                                                                            x.BabyDiaperTestValue.DiaperCreatedTime )
-                                                                                ,
-                                                                                x.TestValueId ) ) );
+            testValue.ToList()
+                     .Where(
+                         x =>
+                             ( x.TestValueType == testValueType )
+                             && x.BabyDiaperTestValue.TestType.IsIn( testTypeBabyDiaper ) )
+                     .ForEach(
+                         x =>
+                             tests.Add( toTestTypeTestValueAction( x.BabyDiaperTestValue,
+                                                                   x.LastEditedPerson,
+                                                                   LaborCreatorServiceHelper.GenerateProdCode( x.TestSheet.MachineNr,
+                                                                                                               x.TestSheet.CreatedDateTime.Year,
+                                                                                                               x.DayInYearOfArticleCreation,
+                                                                                                               x.BabyDiaperTestValue.DiaperCreatedTime )
+                                                                   ,
+                                                                   x.TestValueId ) ) );
             return tests;
         }
 
@@ -381,12 +385,10 @@ namespace Intranet.Labor.Bll
             }
 
             var item = testValue.FirstOrDefault();
-            if ( item == null )
-            {
-                Logger.Error( "No " + valueType + " for " + testType + " per Testsheet existing" );
-                throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
-            }
-            return item;
+            if ( item != null )
+                return item;
+            Logger.Error( "No " + valueType + " for " + testType + " per Testsheet existing" );
+            throw new InvalidDataException( "No " + valueType + " for " + testType + " per Testsheet existing" );
         }
 
         /// <summary>

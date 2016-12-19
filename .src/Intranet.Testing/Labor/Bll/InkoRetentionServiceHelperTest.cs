@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Intranet.Common;
@@ -6,6 +8,8 @@ using Intranet.Labor.Model;
 using Intranet.Labor.TestEnvironment;
 using Intranet.Labor.ViewModel;
 using Xunit;
+
+#endregion
 
 namespace Intranet.Labor.Bll.Test
 {
@@ -67,16 +71,16 @@ namespace Intranet.Labor.Bll.Test
             Notes = new List<TestNote> { new TestNote { ErrorCodeId = 1, Id = 1, Message = "Testnote" } }
         };
 
-        private TestValue GetTestValueTestData() => new TestValue
+        private static TestValue GetTestValueTestData() => new TestValue
         {
-            TestSheetRefId = 1,
+            TestSheetId = 1,
             CreatedDateTime = new DateTime( 2016, 1, 2 ),
             LastEditedDateTime = new DateTime( 2016, 1, 2 ),
             CreatedPerson = "Hans",
             LastEditedPerson = "Hans",
             DayInYearOfArticleCreation = 123,
             ArticleTestType = ArticleType.IncontinencePad,
-            TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
+            TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorId = 1, Message = "Testnote" } }
         };
 
         #endregion

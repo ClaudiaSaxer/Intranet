@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region Usings
+
+using System;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    ///     Class representing the ViewModel for the BabyDiapersRetentionController
+    ///     Class representing the TestNote model for all test viewmodels
     /// </summary>
     public class TestNote
     {

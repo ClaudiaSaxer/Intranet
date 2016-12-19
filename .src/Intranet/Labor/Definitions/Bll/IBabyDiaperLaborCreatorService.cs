@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the labor creator service
+    ///     Interface representing the babydiaper labor creator service
     /// </summary>
     public interface IBabyDiaperLaborCreatorService
     {

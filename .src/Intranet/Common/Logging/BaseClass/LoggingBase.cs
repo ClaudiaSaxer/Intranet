@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Extend;
+
+#endregion
 
 namespace Intranet.Common
 {

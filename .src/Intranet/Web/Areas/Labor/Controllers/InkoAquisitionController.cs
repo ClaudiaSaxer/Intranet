@@ -61,7 +61,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         }
 
         /// <summary>
-        ///     Loads the InkoRetension Edit View with a new Item for the Test-Sheet
+        ///     Loads the InkoAquisition Edit View with a new Item for the Test-Sheet
         /// </summary>
         /// ///
         /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
@@ -84,11 +84,11 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = InkoAquisitionService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = deletedTest.TestSheetId } );
         }
 
         /// <summary>
-        ///     Loads the InkoRetension Edit View with an Item form the Test-Sheet which will be edited
+        ///     Loads the InkoAquisition Edit View with an Item form the Test-Sheet which will be edited
         /// </summary>
         /// ///
         /// <param name="id">The Id of the test-sheet which this Test-Data is for</param>
@@ -114,7 +114,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( InkoAquisitionEditViewModel viewModel )
         {
             var savedModel = InkoAquisitionService.Save( viewModel );
-            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = savedModel.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorInko", new { area = "Labor", id = savedModel.TestSheetId } );
         }
     }
 }

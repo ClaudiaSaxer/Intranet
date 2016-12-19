@@ -164,7 +164,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The RwType</returns>
         private static RwType GetRetentionRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MinInkoRetention < value ? RwType.Ok : RwType.Worse;
 
-        private TestValue UpdateInkoRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
+        private void UpdateInkoRetentionAvg( TestSheet testSheet, TestValue retentionTestAvg )
         {
             var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempInko = new IncontinencePadTestValue { RetentionRw = RwType.Ok };
@@ -196,10 +196,9 @@ namespace Intranet.Labor.Bll
             if ( ( GetRetentionRwType( retentionTestAvg.IncontinencePadTestValue.RetentionEndValue, productionOrder ) == RwType.Worse ) && ( tempInko.RetentionRw != RwType.Ok ) )
                 tempInko.RetentionRw = RwType.Worse;
             retentionTestAvg.IncontinencePadTestValue.RetentionRw = tempInko.RetentionRw;
-            return retentionTestAvg;
         }
 
-        private static TestValue UpdateInkoRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
+        private static void UpdateInkoRetentionStDev( TestSheet testSheet, TestValue retentionTestAvg, TestValue retentionTestStDev )
         {
             var tempInko = new IncontinencePadTestValue();
             var counter = 0;
@@ -236,7 +235,6 @@ namespace Intranet.Labor.Bll
                 retentionTestStDev.IncontinencePadTestValue.RetentionAbsorbtion = Math.Sqrt( tempInko.RetentionAbsorbtion / counter );
                 retentionTestStDev.IncontinencePadTestValue.RetentionEndValue = Math.Sqrt( tempInko.RetentionEndValue / counter );
             }
-            return retentionTestStDev;
 
             #endregion
         }

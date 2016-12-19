@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using Intranet.Labor.Model;
 using Intranet.Labor.ViewModel;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {
@@ -160,7 +164,7 @@ namespace Intranet.Labor.Definition
         /// <param name="weightDiaperDry">the weight of the dry diaper</param>
         /// <param name="testValueId">the id of the testvalue</param>
         /// <returns>a BabyDiaperTestInfo</returns>
-        BabyDiaperTestInfo toTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId );
+        BabyDiaperTestInfo ToTestInfo( String testPerson, String prodCode, Double weightDiaperDry, Int32 testValueId );
 
         /// <summary>
         ///     Creates a collection of a TestValue Type and selects only the needed items from a Collection with help of the input

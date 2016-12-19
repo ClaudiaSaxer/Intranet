@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using Intranet.Labor.Model;
+
+#endregion
 
 namespace Intranet.Labor.Definition
 {
     /// <summary>
-    ///     Interface representing the labor creator bll
+    ///     Interface representing the inko labor creator bll
     /// </summary>
     public interface IIncontinencePadLaborCreatorBll
     {

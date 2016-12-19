@@ -1,10 +1,14 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
+
+#endregion
 
 namespace Intranet.Labor.ViewModel
 {
     /// <summary>
-    ///     Class representing the view model for the labor creator
+    ///     Class representing the view model for the incontinence pad labor creator
     /// </summary>
     public class IncontinencePadLaborCreatorViewModel
     {

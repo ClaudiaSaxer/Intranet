@@ -14,6 +14,7 @@ using Intranet.Labor.ViewModel;
 namespace Intranet.Labor.Bll
 {
     /// <summary>
+    ///     Class representing the test service helper for all labor tests
     /// </summary>
     public class TestServiceHelper : ServiceBase, ITestServiceHelper
     {
@@ -76,10 +77,10 @@ namespace Intranet.Labor.Bll
                 foreach ( var vmNote in vmNotes.Where( vmNote => note.TestValueNoteId == vmNote.Id ) )
                 {
                     note.Message = vmNote.Message;
-                    note.ErrorRefId = vmNote.ErrorCodeId;
+                    note.ErrorId = vmNote.ErrorCodeId;
                 }
             foreach ( var vmNote in vmNotes.Where( n => ( n.Id == 0 ) && ( n.ErrorCodeId != 0 ) ) )
-                testValue.TestValueNote.Add( new TestValueNote { ErrorRefId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue } );
+                testValue.TestValueNote.Add( new TestValueNote { ErrorId = vmNote.ErrorCodeId, Message = vmNote.Message, TestValue = testValue } );
         }
 
         /// <summary>
@@ -94,20 +95,19 @@ namespace Intranet.Labor.Bll
         {
             var testValue = new TestValue
             {
-                TestSheetRefId = testSheetId,
+                TestSheetId = testSheetId,
                 CreatedDateTime = DateTime.Now,
                 LastEditedDateTime = DateTime.Now,
                 CreatedPerson = testPerson,
                 LastEditedPerson = testPerson,
                 DayInYearOfArticleCreation = productionCodeDay
             };
-            if ( notes.IsNotNull() )
-            {
-                notes = notes.Where( n => n.ErrorCodeId != 0 )
-                             .ToList();
-                testValue.TestValueNote = notes.Select( error => new TestValueNote { ErrorRefId = error.ErrorCodeId, Message = error.Message, TestValue = testValue } )
-                                               .ToList();
-            }
+            if ( !notes.IsNotNull() )
+                return testValue;
+            notes = notes.Where( n => n.ErrorCodeId != 0 )
+                         .ToList();
+            testValue.TestValueNote = notes.Select( error => new TestValueNote { ErrorId = error.ErrorCodeId, Message = error.Message, TestValue = testValue } )
+                                           .ToList();
             return testValue;
         }
 

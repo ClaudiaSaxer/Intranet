@@ -1,4 +1,8 @@
-﻿using Xunit;
+﻿#region Usings
+
+using Xunit;
+
+#endregion
 
 namespace Intranet.Integrationtest
 {
