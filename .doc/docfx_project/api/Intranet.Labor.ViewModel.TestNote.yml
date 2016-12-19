@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/TestNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestNote
     path: .src/Intranet/Labor/ViewModel/TestNote.cs
@@ -26,7 +26,7 @@ items:
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
-  summary: "\nClass representing the ViewModel for the BabyDiapersRetentionController\n"
+  summary: "\nClass representing the TestNote model for all test viewmodels\n"
   example: []
   syntax:
     content: public class TestNote
@@ -61,15 +61,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/TestNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Id
     path: .src/Intranet/Labor/ViewModel/TestNote.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: public int Id { get; set; }
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/TestNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorCodeId
     path: .src/Intranet/Labor/ViewModel/TestNote.cs
@@ -106,7 +106,7 @@ items:
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: public int ErrorCodeId { get; set; }
@@ -135,7 +135,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/TestNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Message
     path: .src/Intranet/Labor/ViewModel/TestNote.cs
@@ -143,7 +143,7 @@ items:
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
-  summary: "\n\n"
+  summary: "\n"
   example: []
   syntax:
     content: public string Message { get; set; }

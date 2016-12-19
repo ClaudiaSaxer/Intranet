@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoRetentionEditViewModel
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
@@ -74,7 +74,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireMonth
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
@@ -141,7 +141,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireYear
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
@@ -208,7 +208,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeight
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
@@ -275,7 +275,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeightWet
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
@@ -342,7 +342,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoWeightAfterZentrifuge
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRetentionEditViewModel.cs

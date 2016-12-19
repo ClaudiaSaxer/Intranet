@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryBll
     path: .src/Intranet/Labor/Bll/HistoryBll.cs
-    startLine: 14
+    startLine: 16
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestSheetRepository
     path: .src/Intranet/Labor/Bll/HistoryBll.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -79,7 +79,7 @@ items:
     content.vb: Public Property TestSheetRepository As IGenericRepository(Of TestSheet)
     parameters: []
     return:
-      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
   overload: Intranet.Labor.Bll.HistoryBll.TestSheetRepository*
   modifiers.csharp:
   - public
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetTestSheets
     path: .src/Intranet/Labor/Bll/HistoryBll.cs
-    startLine: 32
+    startLine: 34
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -119,7 +119,7 @@ items:
       type: System.String
       description: the faNr for the testsheets
     return:
-      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
+      type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.TestSheet}
       description: a list of testsheets
   overload: Intranet.Labor.Bll.HistoryBll.GetTestSheets*
   implements:
@@ -446,15 +446,15 @@ references:
   name: TestSheetRepository
   nameWithType: HistoryBll.TestSheetRepository
   fullName: Intranet.Labor.Bll.HistoryBll.TestSheetRepository
-- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
-  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
   parent: Intranet.Common
   definition: Intranet.Common.IGenericRepository`1
   name: IGenericRepository<TestSheet>
   nameWithType: IGenericRepository<TestSheet>
-  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestSheet>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.TestSheet>
   nameWithType.vb: IGenericRepository(Of TestSheet)
-  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestSheet)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.TestSheet)
   name.vb: IGenericRepository(Of TestSheet)
   spec.csharp:
   - uid: Intranet.Common.IGenericRepository`1
@@ -464,10 +464,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -479,10 +479,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: )
     nameWithType: )
     fullName: )
@@ -581,15 +581,15 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
-  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.labor.TestSheet}
+- uid: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.TestSheet}
+  commentId: T:System.Collections.Generic.IEnumerable{Intranet.Labor.Model.TestSheet}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.IEnumerable`1
   name: IEnumerable<TestSheet>
   nameWithType: IEnumerable<TestSheet>
-  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.labor.TestSheet>
+  fullName: System.Collections.Generic.IEnumerable<Intranet.Labor.Model.TestSheet>
   nameWithType.vb: IEnumerable(Of TestSheet)
-  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.labor.TestSheet)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of Intranet.Labor.Model.TestSheet)
   name.vb: IEnumerable(Of TestSheet)
   spec.csharp:
   - uid: System.Collections.Generic.IEnumerable`1
@@ -600,10 +600,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -616,10 +616,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: )
     nameWithType: )
     fullName: )

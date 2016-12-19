@@ -36,7 +36,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ILogger
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -69,7 +69,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DefaultLevel
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsDebugEnabled
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsErrorEnabled
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -176,7 +176,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsFatalEnabled
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -212,7 +212,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsInfoEnabled
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -248,7 +248,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsWarnEnabled
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -284,7 +284,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -319,7 +319,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -351,7 +351,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Log
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -386,7 +386,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Trace
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -421,7 +421,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Trace
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -453,7 +453,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Debug
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -488,7 +488,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Debug
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -520,7 +520,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Info
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -555,7 +555,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Info
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -587,7 +587,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Warn
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -622,7 +622,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Warn
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -654,7 +654,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -689,7 +689,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -721,7 +721,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Fatal
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs
@@ -756,7 +756,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILogger.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Fatal
     path: .src/Intranet/Common/Logging/Definition/ILogger.cs

@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/DefaultModule.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DefaultModule
     path: .src/Intranet/Web/IoC/DefaultModule.cs
-    startLine: 23
+    startLine: 20
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC
@@ -57,11 +57,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/DefaultModule.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ApplicationAssemblyName
     path: .src/Intranet/Web/IoC/DefaultModule.cs
-    startLine: 31
+    startLine: 28
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC
@@ -95,11 +95,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/DefaultModule.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DefaultExceptionLogLevel
     path: .src/Intranet/Web/IoC/DefaultModule.cs
-    startLine: 37
+    startLine: 34
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC
@@ -133,11 +133,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/IoC/DefaultModule.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Load
     path: .src/Intranet/Web/IoC/DefaultModule.cs
-    startLine: 45
+    startLine: 42
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.IoC

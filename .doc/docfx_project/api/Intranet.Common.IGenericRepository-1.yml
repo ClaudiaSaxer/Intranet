@@ -29,11 +29,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IGenericRepository
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -72,11 +72,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Add
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 21
+    startLine: 25
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -109,11 +109,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AddRange
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -147,11 +147,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Attach
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -184,11 +184,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CountRecords
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -217,11 +217,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CountRecordsAsync
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 49
+    startLine: 53
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -250,11 +250,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Entry
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 59
+    startLine: 63
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -291,11 +291,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FindAsync
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 78
+    startLine: 82
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -330,11 +330,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetAll
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 84
+    startLine: 88
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -363,11 +363,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Remove
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 91
+    startLine: 95
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -400,11 +400,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SaveChanges
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 97
+    startLine: 101
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -433,11 +433,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SaveChangesAsync
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 107
+    startLine: 111
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -471,11 +471,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SetModified
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 113
+    startLine: 117
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -505,11 +505,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SqlQuery
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 145
+    startLine: 149
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -546,11 +546,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Where
     path: .src/Intranet/Common/Db/Definition/IGenericRepository.cs
-    startLine: 152
+    startLine: 156
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

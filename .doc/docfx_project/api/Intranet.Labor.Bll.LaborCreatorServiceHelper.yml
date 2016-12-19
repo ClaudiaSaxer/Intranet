@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborCreatorServiceHelper
     path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -38,7 +38,7 @@ items:
   - Intranet.Common.LoggingBase
   - Intranet.Common.ServiceBase
   implements:
-  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  - Intranet.Labor.Definition.ILaborCreatorServiceHelper
   inheritedMembers:
   - Intranet.Common.ServiceBase.Roles
   - Intranet.Common.LoggingBase.Logger
@@ -55,6 +55,42 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  commentId: M:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
+  id: '#ctor(Intranet.Common.ILoggerFactory)'
+  parent: Intranet.Labor.Bll.LaborCreatorServiceHelper
+  langs:
+  - csharp
+  - vb
+  name: LaborCreatorServiceHelper(ILoggerFactory)
+  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper(ILoggerFactory)
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper(Intranet.Common.ILoggerFactory)
+  type: Constructor
+  source:
+    remote:
+      path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: .ctor
+    path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
+    startLine: 22
+  assemblies:
+  - Intranet.Labor.Bll
+  namespace: Intranet.Labor.Bll
+  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public LaborCreatorServiceHelper(ILoggerFactory loggerFactory)
+    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
+    parameters:
+    - id: loggerFactory
+      type: Intranet.Common.ILoggerFactory
+      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
+  overload: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
   commentId: M:Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
   id: GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
@@ -69,11 +105,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GenerateProdCode
     path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-    startLine: 22
+    startLine: 37
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -100,43 +136,7 @@ items:
       description: A Production code for a single diaper
   overload: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode*
   implements:
-  - Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
-  commentId: M:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor(Intranet.Common.ILoggerFactory)
-  id: '#ctor(Intranet.Common.ILoggerFactory)'
-  parent: Intranet.Labor.Bll.LaborCreatorServiceHelper
-  langs:
-  - csharp
-  - vb
-  name: LaborCreatorServiceHelper(ILoggerFactory)
-  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper(ILoggerFactory)
-  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper(Intranet.Common.ILoggerFactory)
-  type: Constructor
-  source:
-    remote:
-      path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: .ctor
-    path: .src/Intranet/Labor/Bll/LaborCreatorServiceHelper.cs
-    startLine: 30
-  assemblies:
-  - Intranet.Labor.Bll
-  namespace: Intranet.Labor.Bll
-  summary: "\nInitialize a new instance of the <xref href=\"Intranet.Common.ServiceBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
-  example: []
-  syntax:
-    content: public LaborCreatorServiceHelper(ILoggerFactory loggerFactory)
-    content.vb: Public Sub New(loggerFactory As ILoggerFactory)
-    parameters:
-    - id: loggerFactory
-      type: Intranet.Common.ILoggerFactory
-      description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
-  overload: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
+  - Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -169,13 +169,13 @@ references:
   name: ServiceBase
   nameWithType: ServiceBase
   fullName: Intranet.Common.ServiceBase
-- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
-  commentId: T:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
-  parent: Intranet.Labor.Definition.Bll
+- uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.ILaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
   isExternal: false
   name: ILaborCreatorServiceHelper
   nameWithType: ILaborCreatorServiceHelper
-  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.ILaborCreatorServiceHelper
 - uid: Intranet.Common.ServiceBase.Roles
   commentId: P:Intranet.Common.ServiceBase.Roles
   parent: Intranet.Common.ServiceBase
@@ -481,30 +481,43 @@ references:
   name: Intranet.Common
   nameWithType: Intranet.Common
   fullName: Intranet.Common
-- uid: Intranet.Labor.Definition.Bll
-  commentId: N:Intranet.Labor.Definition.Bll
+- uid: Intranet.Labor.Definition
+  commentId: N:Intranet.Labor.Definition
   isExternal: false
-  name: Intranet.Labor.Definition.Bll
-  nameWithType: Intranet.Labor.Definition.Bll
-  fullName: Intranet.Labor.Definition.Bll
+  name: Intranet.Labor.Definition
+  nameWithType: Intranet.Labor.Definition
+  fullName: Intranet.Labor.Definition
+- uid: Intranet.Common.ILoggerFactory
+  commentId: T:Intranet.Common.ILoggerFactory
+  parent: Intranet.Common
+  isExternal: false
+  name: ILoggerFactory
+  nameWithType: ILoggerFactory
+  fullName: Intranet.Common.ILoggerFactory
+- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
+  commentId: Overload:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor
+  isExternal: false
+  name: LaborCreatorServiceHelper
+  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper
+  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper
 - uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode*
   commentId: Overload:Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode
   isExternal: false
   name: GenerateProdCode
   nameWithType: LaborCreatorServiceHelper.GenerateProdCode
   fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.GenerateProdCode
-- uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
-  commentId: M:Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
-  parent: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
+- uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  parent: Intranet.Labor.Definition.ILaborCreatorServiceHelper
   isExternal: true
   name: GenerateProdCode(String, Int32, Int32, TimeSpan)
   nameWithType: ILaborCreatorServiceHelper.GenerateProdCode(String, Int32, Int32, TimeSpan)
-  fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String, System.Int32, System.Int32, System.TimeSpan)
+  fullName: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String, System.Int32, System.Int32, System.TimeSpan)
   spec.csharp:
-  - uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  - uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
     name: GenerateProdCode
     nameWithType: ILaborCreatorServiceHelper.GenerateProdCode
-    fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+    fullName: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode
   - name: (
     nameWithType: (
     fullName: (
@@ -541,10 +554,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
+  - uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode(System.String,System.Int32,System.Int32,System.TimeSpan)
     name: GenerateProdCode
     nameWithType: ILaborCreatorServiceHelper.GenerateProdCode
-    fullName: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper.GenerateProdCode
+    fullName: Intranet.Labor.Definition.ILaborCreatorServiceHelper.GenerateProdCode
   - name: (
     nameWithType: (
     fullName: (
@@ -601,16 +614,3 @@ references:
   name: TimeSpan
   nameWithType: TimeSpan
   fullName: System.TimeSpan
-- uid: Intranet.Common.ILoggerFactory
-  commentId: T:Intranet.Common.ILoggerFactory
-  parent: Intranet.Common
-  isExternal: false
-  name: ILoggerFactory
-  nameWithType: ILoggerFactory
-  fullName: Intranet.Common.ILoggerFactory
-- uid: Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor*
-  commentId: Overload:Intranet.Labor.Bll.LaborCreatorServiceHelper.#ctor
-  isExternal: false
-  name: LaborCreatorServiceHelper
-  nameWithType: LaborCreatorServiceHelper.LaborCreatorServiceHelper
-  fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper.LaborCreatorServiceHelper

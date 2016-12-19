@@ -18,12 +18,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Error.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Error.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
-    path: .src/Intranet/Labor/Model/intigena/Error.cs
-    startLine: 11
+    path: .src/Intranet/Labor/Model/Intigena/Error.cs
+    startLine: 14
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -61,12 +61,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Error.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Error.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorId
-    path: .src/Intranet/Labor/Model/intigena/Error.cs
-    startLine: 19
+    path: .src/Intranet/Labor/Model/Intigena/Error.cs
+    startLine: 22
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -118,25 +118,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Error.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Error.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorCode
-    path: .src/Intranet/Labor/Model/intigena/Error.cs
-    startLine: 27
+    path: .src/Intranet/Labor/Model/Intigena/Error.cs
+    startLine: 30
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the value of the error Code\n"
   example: []
   syntax:
-    content: public string ErrorCode { get; set; }
-    content.vb: Public Property ErrorCode As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ErrorCode { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ErrorCode As String
     parameters: []
     return:
       type: System.String
       description: the value of the error code
   overload: Intranet.Labor.Model.Error.ErrorCode*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -156,25 +179,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Error.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Error.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Value
-    path: .src/Intranet/Labor/Model/intigena/Error.cs
-    startLine: 33
+    path: .src/Intranet/Labor/Model/Intigena/Error.cs
+    startLine: 38
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the value of the error\n"
   example: []
   syntax:
-    content: public string Value { get; set; }
-    content.vb: Public Property Value As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string Value { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property Value As String
     parameters: []
     return:
       type: System.String
       description: the value or a description of the error
   overload: Intranet.Labor.Model.Error.Value*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -194,12 +240,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Error.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Error.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestNotes
-    path: .src/Intranet/Labor/Model/intigena/Error.cs
-    startLine: 39
+    path: .src/Intranet/Labor/Model/Intigena/Error.cs
+    startLine: 46
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -210,7 +256,7 @@ items:
     content.vb: Public Property TestNotes As ICollection(Of TestValueNote)
     parameters: []
     return:
-      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
+      type: System.Collections.Generic.ICollection{Intranet.Labor.Model.TestValueNote}
       description: the test notes with this error
   overload: Intranet.Labor.Model.Error.TestNotes*
   modifiers.csharp:
@@ -556,15 +602,15 @@ references:
   name: TestNotes
   nameWithType: Error.TestNotes
   fullName: Intranet.Labor.Model.Error.TestNotes
-- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
-  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.labor.TestValueNote}
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.Model.TestValueNote}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.Model.TestValueNote}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.ICollection`1
   name: ICollection<TestValueNote>
   nameWithType: ICollection<TestValueNote>
-  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.labor.TestValueNote>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.Model.TestValueNote>
   nameWithType.vb: ICollection(Of TestValueNote)
-  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.labor.TestValueNote)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.Model.TestValueNote)
   name.vb: ICollection(Of TestValueNote)
   spec.csharp:
   - uid: System.Collections.Generic.ICollection`1
@@ -575,10 +621,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestValueNote
+  - uid: Intranet.Labor.Model.TestValueNote
     name: TestValueNote
     nameWithType: TestValueNote
-    fullName: Intranet.Labor.Model.labor.TestValueNote
+    fullName: Intranet.Labor.Model.TestValueNote
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -591,10 +637,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestValueNote
+  - uid: Intranet.Labor.Model.TestValueNote
     name: TestValueNote
     nameWithType: TestValueNote
-    fullName: Intranet.Labor.Model.labor.TestValueNote
+    fullName: Intranet.Labor.Model.TestValueNote
   - name: )
     nameWithType: )
     fullName: )

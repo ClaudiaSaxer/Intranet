@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadTestInfo
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestPerson
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionCode
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-    startLine: 20
+    startLine: 25
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -137,11 +137,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestValueId
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadTestInfo.cs
-    startLine: 27
+    startLine: 31
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

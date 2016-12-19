@@ -11,9 +11,9 @@ items:
   - Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
   - Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
   - Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
-  - Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
+  - Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.TestValue)
   - Intranet.Labor.Definition.ITestBll.UpdateTestSheet
-  - Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
+  - Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.TestValue)
   langs:
   - csharp
   - vb
@@ -24,15 +24,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ITestBll
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nInterface representing the bll for the babydiapers value edit/create\n"
+  summary: "\nInterface representing the bll for for all tests edit/create\n"
   example: []
   syntax:
     content: public interface ITestBll
@@ -43,76 +43,74 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
-  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
-  id: GetTestValue(System.Int32)
+- uid: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  id: DeleteNote(System.Int32)
   parent: Intranet.Labor.Definition.ITestBll
   langs:
   - csharp
   - vb
-  name: GetTestValue(Int32)
-  nameWithType: ITestBll.GetTestValue(Int32)
-  fullName: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  name: DeleteNote(Int32)
+  nameWithType: ITestBll.DeleteNote(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
   type: Method
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: GetTestValue
+    id: DeleteNote
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
     startLine: 19
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nQuery for a testvalue\n"
+  summary: "\nDelete TestvalueNote from DB\n"
   example: []
   syntax:
-    content: TestValue GetTestValue(int retentionTestId)
-    content.vb: Function GetTestValue(retentionTestId As Integer) As TestValue
+    content: TestValueNote DeleteNote(int testValueNoteId)
+    content.vb: Function DeleteNote(testValueNoteId As Integer) As TestValueNote
     parameters:
-    - id: retentionTestId
+    - id: testValueNoteId
       type: System.Int32
-      description: The ID of the testvalue
+      description: the Id of the Test value Note
     return:
-      type: Intranet.Labor.Model.labor.TestValue
-      description: The test value with the given Id
-  overload: Intranet.Labor.Definition.ITestBll.GetTestValue*
-- uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
-  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
-  id: GetTestSheetInfo(System.Int32)
+      type: Intranet.Labor.Model.TestValueNote
+  overload: Intranet.Labor.Definition.ITestBll.DeleteNote*
+- uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  id: DeleteTestValue(System.Int32)
   parent: Intranet.Labor.Definition.ITestBll
   langs:
   - csharp
   - vb
-  name: GetTestSheetInfo(Int32)
-  nameWithType: ITestBll.GetTestSheetInfo(Int32)
-  fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  name: DeleteTestValue(Int32)
+  nameWithType: ITestBll.DeleteTestValue(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
   type: Method
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: GetTestSheetInfo
+    id: DeleteTestValue
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 26
+    startLine: 25
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nQuery for the Test sheet info\n"
+  summary: "\nDelete Testvalue from DB\n"
   example: []
   syntax:
-    content: TestSheet GetTestSheetInfo(int testSheetId)
-    content.vb: Function GetTestSheetInfo(testSheetId As Integer) As TestSheet
+    content: TestValue DeleteTestValue(int testValueId)
+    content.vb: Function DeleteTestValue(testValueId As Integer) As TestValue
     parameters:
-    - id: testSheetId
+    - id: testValueId
       type: System.Int32
-      description: The ID of the test sheet
+      description: the Id of the Test value
     return:
-      type: Intranet.Labor.Model.labor.TestSheet
-      description: The test sheet
-  overload: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo*
+      type: Intranet.Labor.Model.TestValue
+  overload: Intranet.Labor.Definition.ITestBll.DeleteTestValue*
 - uid: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
   commentId: M:Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
   id: GetAllNoteCodes
@@ -127,11 +125,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetAllNoteCodes
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 32
+    startLine: 31
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
@@ -144,104 +142,6 @@ items:
       type: System.Collections.Generic.IEnumerable{Intranet.Labor.Model.Error}
       description: Collection of all Error Codes
   overload: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes*
-- uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
-  commentId: M:Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
-  id: SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
-  parent: Intranet.Labor.Definition.ITestBll
-  langs:
-  - csharp
-  - vb
-  name: SaveNewTestValue(TestValue)
-  nameWithType: ITestBll.SaveNewTestValue(TestValue)
-  fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.labor.TestValue)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: SaveNewTestValue
-    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 38
-  assemblies:
-  - Intranet.Labor.Definition
-  namespace: Intranet.Labor.Definition
-  summary: "\nSaves a new testvalue in the db\n"
-  example: []
-  syntax:
-    content: TestValue SaveNewTestValue(TestValue testValue)
-    content.vb: Function SaveNewTestValue(testValue As TestValue) As TestValue
-    parameters:
-    - id: testValue
-      type: Intranet.Labor.Model.labor.TestValue
-      description: the test value which will be saved
-    return:
-      type: Intranet.Labor.Model.labor.TestValue
-  overload: Intranet.Labor.Definition.ITestBll.SaveNewTestValue*
-- uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
-  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
-  id: UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
-  parent: Intranet.Labor.Definition.ITestBll
-  langs:
-  - csharp
-  - vb
-  name: UpdateTestValue(TestValue)
-  nameWithType: ITestBll.UpdateTestValue(TestValue)
-  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.labor.TestValue)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: UpdateTestValue
-    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 44
-  assemblies:
-  - Intranet.Labor.Definition
-  namespace: Intranet.Labor.Definition
-  summary: "\nupdate an testvalue\n"
-  example: []
-  syntax:
-    content: TestValue UpdateTestValue(TestValue testValue)
-    content.vb: Function UpdateTestValue(testValue As TestValue) As TestValue
-    parameters:
-    - id: testValue
-      type: Intranet.Labor.Model.labor.TestValue
-      description: the testvalue which will be updated
-    return:
-      type: Intranet.Labor.Model.labor.TestValue
-  overload: Intranet.Labor.Definition.ITestBll.UpdateTestValue*
-- uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
-  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestSheet
-  id: UpdateTestSheet
-  parent: Intranet.Labor.Definition.ITestBll
-  langs:
-  - csharp
-  - vb
-  name: UpdateTestSheet()
-  nameWithType: ITestBll.UpdateTestSheet()
-  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet()
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: UpdateTestSheet
-    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 49
-  assemblies:
-  - Intranet.Labor.Definition
-  namespace: Intranet.Labor.Definition
-  summary: "\nUpdates the TestSheet\n"
-  example: []
-  syntax:
-    content: int UpdateTestSheet()
-    content.vb: Function UpdateTestSheet As Integer
-    return:
-      type: System.Int32
-  overload: Intranet.Labor.Definition.ITestBll.UpdateTestSheet*
 - uid: Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
   commentId: M:Intranet.Labor.Definition.ITestBll.GetProductionOrder(System.String)
   id: GetProductionOrder(System.String)
@@ -256,11 +156,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetProductionOrder
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 55
+    startLine: 37
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
@@ -276,74 +176,174 @@ items:
     return:
       type: Intranet.Labor.Model.ProductionOrder
   overload: Intranet.Labor.Definition.ITestBll.GetProductionOrder*
-- uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
-  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
-  id: DeleteTestValue(System.Int32)
+- uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
+  id: GetTestSheetInfo(System.Int32)
   parent: Intranet.Labor.Definition.ITestBll
   langs:
   - csharp
   - vb
-  name: DeleteTestValue(Int32)
-  nameWithType: ITestBll.DeleteTestValue(Int32)
-  fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue(System.Int32)
+  name: GetTestSheetInfo(Int32)
+  nameWithType: ITestBll.GetTestSheetInfo(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo(System.Int32)
   type: Method
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: DeleteTestValue
+    id: GetTestSheetInfo
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 61
+    startLine: 44
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nDelete Testvalue from DB\n"
+  summary: "\nQuery for the Test sheet info\n"
   example: []
   syntax:
-    content: TestValue DeleteTestValue(int testValueId)
-    content.vb: Function DeleteTestValue(testValueId As Integer) As TestValue
+    content: TestSheet GetTestSheetInfo(int testSheetId)
+    content.vb: Function GetTestSheetInfo(testSheetId As Integer) As TestSheet
     parameters:
-    - id: testValueId
+    - id: testSheetId
       type: System.Int32
-      description: the Id of the Test value
+      description: The ID of the test sheet
     return:
-      type: Intranet.Labor.Model.labor.TestValue
-  overload: Intranet.Labor.Definition.ITestBll.DeleteTestValue*
-- uid: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
-  commentId: M:Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
-  id: DeleteNote(System.Int32)
+      type: Intranet.Labor.Model.TestSheet
+      description: The test sheet
+  overload: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo*
+- uid: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  commentId: M:Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
+  id: GetTestValue(System.Int32)
   parent: Intranet.Labor.Definition.ITestBll
   langs:
   - csharp
   - vb
-  name: DeleteNote(Int32)
-  nameWithType: ITestBll.DeleteNote(Int32)
-  fullName: Intranet.Labor.Definition.ITestBll.DeleteNote(System.Int32)
+  name: GetTestValue(Int32)
+  nameWithType: ITestBll.GetTestValue(Int32)
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestValue(System.Int32)
   type: Method
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: DeleteNote
+    id: GetTestValue
     path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
-    startLine: 67
+    startLine: 51
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nDelete TestvalueNote from DB\n"
+  summary: "\nQuery for a testvalue\n"
   example: []
   syntax:
-    content: TestValueNote DeleteNote(int testValueNoteId)
-    content.vb: Function DeleteNote(testValueNoteId As Integer) As TestValueNote
+    content: TestValue GetTestValue(int retentionTestId)
+    content.vb: Function GetTestValue(retentionTestId As Integer) As TestValue
     parameters:
-    - id: testValueNoteId
+    - id: retentionTestId
       type: System.Int32
-      description: the Id of the Test value Note
+      description: The ID of the testvalue
     return:
-      type: Intranet.Labor.Model.labor.TestValueNote
-  overload: Intranet.Labor.Definition.ITestBll.DeleteNote*
+      type: Intranet.Labor.Model.TestValue
+      description: The test value with the given Id
+  overload: Intranet.Labor.Definition.ITestBll.GetTestValue*
+- uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.TestValue)
+  id: SaveNewTestValue(Intranet.Labor.Model.TestValue)
+  parent: Intranet.Labor.Definition.ITestBll
+  langs:
+  - csharp
+  - vb
+  name: SaveNewTestValue(TestValue)
+  nameWithType: ITestBll.SaveNewTestValue(TestValue)
+  fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue(Intranet.Labor.Model.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: SaveNewTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+    startLine: 57
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nSaves a new testvalue in the db\n"
+  example: []
+  syntax:
+    content: TestValue SaveNewTestValue(TestValue testValue)
+    content.vb: Function SaveNewTestValue(testValue As TestValue) As TestValue
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.TestValue
+      description: the test value which will be saved
+    return:
+      type: Intranet.Labor.Model.TestValue
+  overload: Intranet.Labor.Definition.ITestBll.SaveNewTestValue*
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  id: UpdateTestSheet
+  parent: Intranet.Labor.Definition.ITestBll
+  langs:
+  - csharp
+  - vb
+  name: UpdateTestSheet()
+  nameWithType: ITestBll.UpdateTestSheet()
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateTestSheet
+    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+    startLine: 62
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nUpdates the TestSheet\n"
+  example: []
+  syntax:
+    content: int UpdateTestSheet()
+    content.vb: Function UpdateTestSheet As Integer
+    return:
+      type: System.Int32
+  overload: Intranet.Labor.Definition.ITestBll.UpdateTestSheet*
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.TestValue)
+  commentId: M:Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.TestValue)
+  id: UpdateTestValue(Intranet.Labor.Model.TestValue)
+  parent: Intranet.Labor.Definition.ITestBll
+  langs:
+  - csharp
+  - vb
+  name: UpdateTestValue(TestValue)
+  nameWithType: ITestBll.UpdateTestValue(TestValue)
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue(Intranet.Labor.Model.TestValue)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: UpdateTestValue
+    path: .src/Intranet/Labor/Definitions/Bll/ITestBll.cs
+    startLine: 68
+  assemblies:
+  - Intranet.Labor.Definition
+  namespace: Intranet.Labor.Definition
+  summary: "\nupdate an testvalue\n"
+  example: []
+  syntax:
+    content: TestValue UpdateTestValue(TestValue testValue)
+    content.vb: Function UpdateTestValue(testValue As TestValue) As TestValue
+    parameters:
+    - id: testValue
+      type: Intranet.Labor.Model.TestValue
+      description: the testvalue which will be updated
+    return:
+      type: Intranet.Labor.Model.TestValue
+  overload: Intranet.Labor.Definition.ITestBll.UpdateTestValue*
 references:
 - uid: Intranet.Labor.Definition
   commentId: N:Intranet.Labor.Definition
@@ -351,12 +351,12 @@ references:
   name: Intranet.Labor.Definition
   nameWithType: Intranet.Labor.Definition
   fullName: Intranet.Labor.Definition
-- uid: Intranet.Labor.Definition.ITestBll.GetTestValue*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.GetTestValue
+- uid: Intranet.Labor.Definition.ITestBll.DeleteNote*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.DeleteNote
   isExternal: false
-  name: GetTestValue
-  nameWithType: ITestBll.GetTestValue
-  fullName: Intranet.Labor.Definition.ITestBll.GetTestValue
+  name: DeleteNote
+  nameWithType: ITestBll.DeleteNote
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteNote
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System
@@ -364,38 +364,38 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Intranet.Labor.Model.labor.TestValue
-  commentId: T:Intranet.Labor.Model.labor.TestValue
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestValueNote
+  commentId: T:Intranet.Labor.Model.TestValueNote
+  parent: Intranet.Labor.Model
   isExternal: false
-  name: TestValue
-  nameWithType: TestValue
-  fullName: Intranet.Labor.Model.labor.TestValue
+  name: TestValueNote
+  nameWithType: TestValueNote
+  fullName: Intranet.Labor.Model.TestValueNote
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
-- uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
+- uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.DeleteTestValue
   isExternal: false
-  name: GetTestSheetInfo
-  nameWithType: ITestBll.GetTestSheetInfo
-  fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
-- uid: Intranet.Labor.Model.labor.TestSheet
-  commentId: T:Intranet.Labor.Model.labor.TestSheet
-  parent: Intranet.Labor.Model.labor
+  name: DeleteTestValue
+  nameWithType: ITestBll.DeleteTestValue
+  fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue
+- uid: Intranet.Labor.Model.TestValue
+  commentId: T:Intranet.Labor.Model.TestValue
+  parent: Intranet.Labor.Model
   isExternal: false
-  name: TestSheet
-  nameWithType: TestSheet
-  fullName: Intranet.Labor.Model.labor.TestSheet
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.TestValue
 - uid: Intranet.Labor.Definition.ITestBll.GetAllNoteCodes*
   commentId: Overload:Intranet.Labor.Definition.ITestBll.GetAllNoteCodes
   isExternal: false
@@ -489,24 +489,6 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.SaveNewTestValue
-  isExternal: false
-  name: SaveNewTestValue
-  nameWithType: ITestBll.SaveNewTestValue
-  fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue
-- uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.UpdateTestValue
-  isExternal: false
-  name: UpdateTestValue
-  nameWithType: ITestBll.UpdateTestValue
-  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue
-- uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.UpdateTestSheet
-  isExternal: false
-  name: UpdateTestSheet
-  nameWithType: ITestBll.UpdateTestSheet
-  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
 - uid: Intranet.Labor.Definition.ITestBll.GetProductionOrder*
   commentId: Overload:Intranet.Labor.Definition.ITestBll.GetProductionOrder
   isExternal: false
@@ -527,28 +509,40 @@ references:
   name: ProductionOrder
   nameWithType: ProductionOrder
   fullName: Intranet.Labor.Model.ProductionOrder
-- uid: Intranet.Labor.Model
-  commentId: N:Intranet.Labor.Model
+- uid: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
   isExternal: false
-  name: Intranet.Labor.Model
-  nameWithType: Intranet.Labor.Model
-  fullName: Intranet.Labor.Model
-- uid: Intranet.Labor.Definition.ITestBll.DeleteTestValue*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.DeleteTestValue
+  name: GetTestSheetInfo
+  nameWithType: ITestBll.GetTestSheetInfo
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestSheetInfo
+- uid: Intranet.Labor.Model.TestSheet
+  commentId: T:Intranet.Labor.Model.TestSheet
+  parent: Intranet.Labor.Model
   isExternal: false
-  name: DeleteTestValue
-  nameWithType: ITestBll.DeleteTestValue
-  fullName: Intranet.Labor.Definition.ITestBll.DeleteTestValue
-- uid: Intranet.Labor.Definition.ITestBll.DeleteNote*
-  commentId: Overload:Intranet.Labor.Definition.ITestBll.DeleteNote
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.TestSheet
+- uid: Intranet.Labor.Definition.ITestBll.GetTestValue*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.GetTestValue
   isExternal: false
-  name: DeleteNote
-  nameWithType: ITestBll.DeleteNote
-  fullName: Intranet.Labor.Definition.ITestBll.DeleteNote
-- uid: Intranet.Labor.Model.labor.TestValueNote
-  commentId: T:Intranet.Labor.Model.labor.TestValueNote
-  parent: Intranet.Labor.Model.labor
+  name: GetTestValue
+  nameWithType: ITestBll.GetTestValue
+  fullName: Intranet.Labor.Definition.ITestBll.GetTestValue
+- uid: Intranet.Labor.Definition.ITestBll.SaveNewTestValue*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.SaveNewTestValue
   isExternal: false
-  name: TestValueNote
-  nameWithType: TestValueNote
-  fullName: Intranet.Labor.Model.labor.TestValueNote
+  name: SaveNewTestValue
+  nameWithType: ITestBll.SaveNewTestValue
+  fullName: Intranet.Labor.Definition.ITestBll.SaveNewTestValue
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestSheet*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+  isExternal: false
+  name: UpdateTestSheet
+  nameWithType: ITestBll.UpdateTestSheet
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestSheet
+- uid: Intranet.Labor.Definition.ITestBll.UpdateTestValue*
+  commentId: Overload:Intranet.Labor.Definition.ITestBll.UpdateTestValue
+  isExternal: false
+  name: UpdateTestValue
+  nameWithType: ITestBll.UpdateTestValue
+  fullName: Intranet.Labor.Definition.ITestBll.UpdateTestValue

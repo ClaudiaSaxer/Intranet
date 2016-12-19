@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingsBll
     path: .src/Intranet/Bll/SettingsBll.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -66,11 +66,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleRepository
     path: .src/Intranet/Bll/SettingsBll.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -103,11 +103,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllVisibleMainModules
     path: .src/Intranet/Bll/SettingsBll.cs
-    startLine: 29
+    startLine: 33
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetModule
     path: .src/Intranet/Bll/SettingsBll.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -179,11 +179,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateModuleVisability
     path: .src/Intranet/Bll/SettingsBll.cs
-    startLine: 52
+    startLine: 56
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

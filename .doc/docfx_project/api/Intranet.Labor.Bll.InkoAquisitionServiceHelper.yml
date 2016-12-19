@@ -21,7 +21,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoAquisitionServiceHelper
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestBll
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -110,7 +110,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestServiceHelper
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -147,7 +147,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -183,7 +183,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SaveNewAquisitionTest
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -201,7 +201,7 @@ items:
       type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
       description: the data from the view
     return:
-      type: Intranet.Labor.Model.labor.TestValue
+      type: Intranet.Labor.Model.TestValue
       description: The created test value
   overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.SaveNewAquisitionTest*
   implements:
@@ -224,7 +224,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateAquisitionAverageAndStv
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -242,7 +242,7 @@ items:
       type: System.Int32
       description: id of the test sheet
     return:
-      type: Intranet.Labor.Model.labor.TestSheet
+      type: Intranet.Labor.Model.TestSheet
       description: the updated test sheet
   overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
   implements:
@@ -265,7 +265,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateAquisitionTest
     path: .src/Intranet/Labor/Bll/InkoAquisitionServiceHelper.cs
@@ -283,7 +283,7 @@ items:
       type: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
       description: the data from the view
     return:
-      type: Intranet.Labor.Model.labor.TestValue
+      type: Intranet.Labor.Model.TestValue
       description: the updated test value
   overload: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest*
   implements:
@@ -727,25 +727,25 @@ references:
   name: InkoAquisitionEditViewModel
   nameWithType: InkoAquisitionEditViewModel
   fullName: Intranet.Labor.ViewModel.InkoAquisitionEditViewModel
-- uid: Intranet.Labor.Model.labor.TestValue
-  commentId: T:Intranet.Labor.Model.labor.TestValue
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestValue
+  commentId: T:Intranet.Labor.Model.TestValue
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestValue
   nameWithType: TestValue
-  fullName: Intranet.Labor.Model.labor.TestValue
+  fullName: Intranet.Labor.Model.TestValue
 - uid: Intranet.Labor.ViewModel
   commentId: N:Intranet.Labor.ViewModel
   isExternal: false
   name: Intranet.Labor.ViewModel
   nameWithType: Intranet.Labor.ViewModel
   fullName: Intranet.Labor.ViewModel
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv*
   commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionAverageAndStv
   isExternal: false
@@ -798,13 +798,13 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Intranet.Labor.Model.labor.TestSheet
-  commentId: T:Intranet.Labor.Model.labor.TestSheet
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestSheet
+  commentId: T:Intranet.Labor.Model.TestSheet
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestSheet
   nameWithType: TestSheet
-  fullName: Intranet.Labor.Model.labor.TestSheet
+  fullName: Intranet.Labor.Model.TestSheet
 - uid: Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest*
   commentId: Overload:Intranet.Labor.Bll.InkoAquisitionServiceHelper.UpdateAquisitionTest
   isExternal: false

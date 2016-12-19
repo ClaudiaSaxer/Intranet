@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRetentionController
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 15
+    startLine: 18
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRetentionService
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 37
+    startLine: 40
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -120,6 +120,45 @@ items:
       type: Intranet.Common.ILoggerFactory
       description: A <xref href="Intranet.Common.ILoggerFactory" data-throw-if-not-resolved="false"></xref>.
   overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  id: AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController
+  langs:
+  - csharp
+  - vb
+  name: AddNote(BabyDiaperRetentionEditViewModel)
+  nameWithType: BabyDiaperRetentionController.AddNote(BabyDiaperRetentionEditViewModel)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AddNote
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
+    startLine: 53
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nadds a new note to the test\n"
+  example: []
+  syntax:
+    content: public ActionResult AddNote(BabyDiaperRetentionEditViewModel viewModel)
+    content.vb: Public Function AddNote(viewModel As BabyDiaperRetentionEditViewModel) As ActionResult
+    parameters:
+    - id: viewModel
+      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+      description: ''
+    return:
+      type: ActionResult
+      description: ''
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -138,11 +177,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Create
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 50
+    startLine: 68
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -163,45 +202,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
-  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
-  id: Edit(Int32)
-  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController
-  langs:
-  - csharp
-  - vb
-  name: Edit(Int32)
-  nameWithType: BabyDiaperRetentionController.Edit(Int32)
-  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: Edit
-    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 65
-  assemblies:
-  - Intranet.Web
-  namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nLoads the BabywindelnRetetion Edit View with an Item form the Test-Sheet which will be edited \n"
-  example: []
-  syntax:
-    content: public ActionResult Edit(Int32 id = null)
-    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
-    parameters:
-    - id: id
-      type: Int32
-      description: The Id of the test-sheet which this Test-Data is for
-    return:
-      type: ActionResult
-      description: The Index View filled with the viewModel
-  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 - uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Delete(Int32)
   commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Delete(Int32)
   id: Delete(Int32)
@@ -216,11 +216,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Delete
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 81
+    startLine: 84
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -241,6 +241,45 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
+  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
+  id: Edit(Int32)
+  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController
+  langs:
+  - csharp
+  - vb
+  name: Edit(Int32)
+  nameWithType: BabyDiaperRetentionController.Edit(Int32)
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit(Int32)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: Edit
+    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
+    startLine: 96
+  assemblies:
+  - Intranet.Web
+  namespace: Intranet.Web.Areas.Labor.Controllers
+  summary: "\nLoads the BabywindelnRetetion Edit View with an Item form the Test-Sheet which will be edited\n"
+  example: []
+  syntax:
+    content: public ActionResult Edit(Int32 id = null)
+    content.vb: Public Function Edit(id As Int32 = Nothing) As ActionResult
+    parameters:
+    - id: id
+      type: Int32
+      description: The Id of the test-sheet which this Test-Data is for
+    return:
+      type: ActionResult
+      description: The Index View filled with the viewModel
+  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
   commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
   id: Save(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
@@ -255,11 +294,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Save
     path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 92
+    startLine: 112
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -276,45 +315,6 @@ items:
       type: ActionResult
       description: ''
   overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
-  commentId: M:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
-  id: AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
-  parent: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController
-  langs:
-  - csharp
-  - vb
-  name: AddNote(BabyDiaperRetentionEditViewModel)
-  nameWithType: BabyDiaperRetentionController.AddNote(BabyDiaperRetentionEditViewModel)
-  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote(Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: AddNote
-    path: .src/Intranet/Web/Areas/Labor/Controllers/BabyDiaperRetentionController.cs
-    startLine: 105
-  assemblies:
-  - Intranet.Web
-  namespace: Intranet.Web.Areas.Labor.Controllers
-  summary: "\nadds a new note to the test\n"
-  example: []
-  syntax:
-    content: public ActionResult AddNote(BabyDiaperRetentionEditViewModel viewModel)
-    content.vb: Public Function AddNote(viewModel As BabyDiaperRetentionEditViewModel) As ActionResult
-    parameters:
-    - id: viewModel
-      type: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
-      description: ''
-    return:
-      type: ActionResult
-      description: ''
-  overload: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -443,6 +443,30 @@ references:
   name: BabyDiaperRetentionController
   nameWithType: BabyDiaperRetentionController.BabyDiaperRetentionController
   fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.BabyDiaperRetentionController
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote
+  isExternal: false
+  name: AddNote
+  nameWithType: BabyDiaperRetentionController.AddNote
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote
+- uid: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+  parent: Intranet.Labor.ViewModel
+  isExternal: false
+  name: BabyDiaperRetentionEditViewModel
+  nameWithType: BabyDiaperRetentionEditViewModel
+  fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
+- uid: ActionResult
+  isExternal: true
+  name: ActionResult
+  nameWithType: ActionResult
+  fullName: ActionResult
+- uid: Intranet.Labor.ViewModel
+  commentId: N:Intranet.Labor.ViewModel
+  isExternal: false
+  name: Intranet.Labor.ViewModel
+  nameWithType: Intranet.Labor.ViewModel
+  fullName: Intranet.Labor.ViewModel
 - uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Create*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Create
   isExternal: false
@@ -454,45 +478,21 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: Int32
-- uid: ActionResult
-  isExternal: true
-  name: ActionResult
-  nameWithType: ActionResult
-  fullName: ActionResult
-- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit*
-  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit
-  isExternal: false
-  name: Edit
-  nameWithType: BabyDiaperRetentionController.Edit
-  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit
 - uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Delete*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Delete
   isExternal: false
   name: Delete
   nameWithType: BabyDiaperRetentionController.Delete
   fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Delete
+- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit*
+  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit
+  isExternal: false
+  name: Edit
+  nameWithType: BabyDiaperRetentionController.Edit
+  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Edit
 - uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save*
   commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save
   isExternal: false
   name: Save
   nameWithType: BabyDiaperRetentionController.Save
   fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.Save
-- uid: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
-  commentId: T:Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
-  parent: Intranet.Labor.ViewModel
-  isExternal: false
-  name: BabyDiaperRetentionEditViewModel
-  nameWithType: BabyDiaperRetentionEditViewModel
-  fullName: Intranet.Labor.ViewModel.BabyDiaperRetentionEditViewModel
-- uid: Intranet.Labor.ViewModel
-  commentId: N:Intranet.Labor.ViewModel
-  isExternal: false
-  name: Intranet.Labor.ViewModel
-  nameWithType: Intranet.Labor.ViewModel
-  fullName: Intranet.Labor.ViewModel
-- uid: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote*
-  commentId: Overload:Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote
-  isExternal: false
-  name: AddNote
-  nameWithType: BabyDiaperRetentionController.AddNote
-  fullName: Intranet.Web.Areas.Labor.Controllers.BabyDiaperRetentionController.AddNote

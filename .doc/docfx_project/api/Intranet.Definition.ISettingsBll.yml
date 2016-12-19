@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ISettingsBll
     path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -50,11 +50,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllVisibleMainModules
     path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -81,11 +81,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateModuleVisability
     path: .src/Intranet/Definitions/Bll/ISettingsBll.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition

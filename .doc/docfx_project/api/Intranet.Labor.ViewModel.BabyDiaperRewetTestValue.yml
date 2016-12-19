@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewetTestValue
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs
@@ -60,7 +60,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewet
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs
@@ -98,7 +98,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperTestInfo
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewetTestValue.cs

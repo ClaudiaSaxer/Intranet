@@ -17,12 +17,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Machine.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Machine
-    path: .src/Intranet/Labor/Model/intigena/Machine.cs
-    startLine: 10
+    path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+    startLine: 14
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -60,12 +60,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Machine.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MachineId
-    path: .src/Intranet/Labor/Model/intigena/Machine.cs
-    startLine: 18
+    path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+    startLine: 22
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -117,25 +117,61 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Machine.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MachineNr
-    path: .src/Intranet/Labor/Model/intigena/Machine.cs
-    startLine: 26
+    path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+    startLine: 30
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the number of the machine\n"
   example: []
   syntax:
-    content: public string MachineNr { get; set; }
-    content.vb: Public Property MachineNr As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      [Index("IX_Machine_MachineNr", IsUnique = true)]
+
+      public string MachineNr { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      <Index("IX_Machine_MachineNr", IsUnique:=True)>
+
+      Public Property MachineNr As String
     parameters: []
     return:
       type: System.String
       description: the number of the machine
   overload: Intranet.Labor.Model.Machine.MachineNr*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Machine_MachineNr
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: true
   modifiers.csharp:
   - public
   - get
@@ -155,12 +191,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Machine.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrders
-    path: .src/Intranet/Labor/Model/intigena/Machine.cs
-    startLine: 33
+    path: .src/Intranet/Labor/Model/Intigena/Machine.cs
+    startLine: 39
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model

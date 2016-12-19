@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryService
     path: .src/Intranet/Labor/Bll/HistoryService.cs
-    startLine: 20
+    startLine: 18
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -70,11 +70,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HistoryBll
     path: .src/Intranet/Labor/Bll/HistoryService.cs
-    startLine: 27
+    startLine: 25
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -107,11 +107,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Labor/Bll/HistoryService.cs
-    startLine: 37
+    startLine: 35
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -143,11 +143,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/HistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetHistoryViewModel
     path: .src/Intranet/Labor/Bll/HistoryService.cs
-    startLine: 52
+    startLine: 50
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

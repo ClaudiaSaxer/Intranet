@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/IHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IHomeService
     path: .src/Intranet/Definitions/Bll/IHomeService.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/IHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetHomeViewModel
     path: .src/Intranet/Definitions/Bll/IHomeService.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition

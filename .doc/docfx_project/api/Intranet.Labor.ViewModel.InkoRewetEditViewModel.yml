@@ -19,7 +19,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InkoRewetEditViewModel
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
@@ -73,7 +73,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireMonth
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
@@ -140,7 +140,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ExpireYear
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
@@ -207,7 +207,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FPDry
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FPWet
     path: .src/Intranet/Labor/ViewModel/InkoEdit/InkoRewetEditViewModel.cs

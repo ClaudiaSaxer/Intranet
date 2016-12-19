@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LoggingBase
     path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -62,11 +62,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Logger
     path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -97,11 +97,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Logging/BaseClass/LoggingBase.cs
-    startLine: 26
+    startLine: 30
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

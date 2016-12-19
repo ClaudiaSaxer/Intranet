@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperLaborCreatorBll
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestSheets
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -79,7 +79,7 @@ items:
     content.vb: Public Property TestSheets As IGenericRepository(Of TestSheet)
     parameters: []
     return:
-      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+      type: Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
   overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorBll.TestSheets*
   modifiers.csharp:
   - public
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetTestSheetForId
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborCreatorBll.cs
-    startLine: 24
+    startLine: 28
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -119,7 +119,7 @@ items:
       type: System.Int32
       description: the unique identifier for the test sheet
     return:
-      type: Intranet.Labor.Model.labor.TestSheet
+      type: Intranet.Labor.Model.TestSheet
       description: a testsheet with the given data, or null if not found
   overload: Intranet.Labor.Bll.BabyDiaperLaborCreatorBll.GetTestSheetForId*
   implements:
@@ -446,15 +446,15 @@ references:
   name: TestSheets
   nameWithType: BabyDiaperLaborCreatorBll.TestSheets
   fullName: Intranet.Labor.Bll.BabyDiaperLaborCreatorBll.TestSheets
-- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
-  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.labor.TestSheet}
+- uid: Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
+  commentId: T:Intranet.Common.IGenericRepository{Intranet.Labor.Model.TestSheet}
   parent: Intranet.Common
   definition: Intranet.Common.IGenericRepository`1
   name: IGenericRepository<TestSheet>
   nameWithType: IGenericRepository<TestSheet>
-  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.labor.TestSheet>
+  fullName: Intranet.Common.IGenericRepository<Intranet.Labor.Model.TestSheet>
   nameWithType.vb: IGenericRepository(Of TestSheet)
-  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.labor.TestSheet)
+  fullname.vb: Intranet.Common.IGenericRepository(Of Intranet.Labor.Model.TestSheet)
   name.vb: IGenericRepository(Of TestSheet)
   spec.csharp:
   - uid: Intranet.Common.IGenericRepository`1
@@ -464,10 +464,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -479,10 +479,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
     nameWithType: TestSheet
-    fullName: Intranet.Labor.Model.labor.TestSheet
+    fullName: Intranet.Labor.Model.TestSheet
   - name: )
     nameWithType: )
     fullName: )
@@ -581,16 +581,16 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Intranet.Labor.Model.labor.TestSheet
-  commentId: T:Intranet.Labor.Model.labor.TestSheet
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestSheet
+  commentId: T:Intranet.Labor.Model.TestSheet
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestSheet
   nameWithType: TestSheet
-  fullName: Intranet.Labor.Model.labor.TestSheet
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.TestSheet
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model

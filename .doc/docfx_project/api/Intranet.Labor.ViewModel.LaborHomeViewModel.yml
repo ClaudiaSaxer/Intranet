@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborHomeViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborHomeViewModel
     path: .src/Intranet/Labor/ViewModel/LaborHomeViewModel.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborHomeViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Modules
     path: .src/Intranet/Labor/ViewModel/LaborHomeViewModel.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

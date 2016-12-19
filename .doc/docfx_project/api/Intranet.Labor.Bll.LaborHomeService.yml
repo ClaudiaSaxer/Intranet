@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborHomeService
     path: .src/Intranet/Labor/Bll/LaborHomeService.cs
@@ -70,7 +70,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborHome
     path: .src/Intranet/Labor/Bll/LaborHomeService.cs
@@ -107,7 +107,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Labor/Bll/LaborHomeService.cs
@@ -143,7 +143,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/LaborHomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetLaborHomeViewModel
     path: .src/Intranet/Labor/Bll/LaborHomeService.cs

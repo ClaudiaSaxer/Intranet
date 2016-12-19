@@ -23,7 +23,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BaseTestEditViewModel
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -66,7 +66,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestValueId
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -104,7 +104,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestSheetId
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -142,7 +142,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestPerson
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -233,7 +233,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionCode
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -271,7 +271,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionCodeDay
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -338,7 +338,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionCodeTime
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -376,7 +376,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Notes
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
@@ -414,7 +414,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NoteCodes
     path: .src/Intranet/Labor/ViewModel/BaseTestEditViewModel.cs

@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/SettingsController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingsController
     path: .src/Intranet/Web/Controllers/SettingsController.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/SettingsController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingsService
     path: .src/Intranet/Web/Controllers/SettingsController.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/SettingsController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Controllers/SettingsController.cs
-    startLine: 32
+    startLine: 35
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -135,11 +135,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/SettingsController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Index
     path: .src/Intranet/Web/Controllers/SettingsController.cs
-    startLine: 44
+    startLine: 47
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -170,11 +170,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/SettingsController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Update
     path: .src/Intranet/Web/Controllers/SettingsController.cs
-    startLine: 52
+    startLine: 55
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers

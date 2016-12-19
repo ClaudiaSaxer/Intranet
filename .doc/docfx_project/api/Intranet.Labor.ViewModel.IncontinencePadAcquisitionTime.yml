@@ -22,11 +22,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadAcquisitionTime
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -65,11 +65,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionFirst
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -103,11 +103,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionSecond
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -141,11 +141,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionThird
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -179,11 +179,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionFirstRW
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 34
+    startLine: 39
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -194,7 +194,7 @@ items:
     content.vb: Public Property AcquisitionTimeAdditionFirstRW As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW type
   overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW*
   modifiers.csharp:
@@ -217,11 +217,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionSecondRW
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 40
+    startLine: 46
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -232,7 +232,7 @@ items:
     content.vb: Public Property AcquisitionTimeAdditionSecondRW As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW type
   overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW*
   modifiers.csharp:
@@ -255,11 +255,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AcquisitionTimeAdditionThirdRW
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 46
+    startLine: 53
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -270,7 +270,7 @@ items:
     content.vb: Public Property AcquisitionTimeAdditionThirdRW As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW type
   overload: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionThirdRW*
   modifiers.csharp:
@@ -293,11 +293,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Weight
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadAcquisitionTime.cs
-    startLine: 52
+    startLine: 59
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -647,19 +647,19 @@ references:
   name: AcquisitionTimeAdditionFirstRW
   nameWithType: IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
   fullName: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionFirstRW
-- uid: Intranet.Labor.Model.labor.RwType
-  commentId: T:Intranet.Labor.Model.labor.RwType
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.RwType
+  commentId: T:Intranet.Labor.Model.RwType
+  parent: Intranet.Labor.Model
   isExternal: false
   name: RwType
   nameWithType: RwType
-  fullName: Intranet.Labor.Model.labor.RwType
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.RwType
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW*
   commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadAcquisitionTime.AcquisitionTimeAdditionSecondRW
   isExternal: false

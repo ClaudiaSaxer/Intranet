@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/Repositories/RoleRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RoleRepository
     path: .src/Intranet/Dal/Repositories/RoleRepository.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Dal
   namespace: Intranet.Dal
@@ -89,11 +89,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/Repositories/RoleRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Dal/Repositories/RoleRepository.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Intranet.Dal
   namespace: Intranet.Dal

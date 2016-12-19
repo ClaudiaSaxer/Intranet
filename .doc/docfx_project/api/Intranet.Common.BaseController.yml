@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Web/BaseController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BaseController
     path: .src/Intranet/Common/Web/BaseController.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -210,11 +210,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Web/BaseController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Logger
     path: .src/Intranet/Common/Web/BaseController.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -245,11 +245,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Web/BaseController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NavigationService
     path: .src/Intranet/Common/Web/BaseController.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -282,11 +282,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Web/BaseController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Web/BaseController.cs
-    startLine: 33
+    startLine: 37
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -318,11 +318,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Web/BaseController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: OnActionExecuting
     path: .src/Intranet/Common/Web/BaseController.cs
-    startLine: 42
+    startLine: 46
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

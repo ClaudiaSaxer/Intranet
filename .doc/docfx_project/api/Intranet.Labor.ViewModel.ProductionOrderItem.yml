@@ -23,11 +23,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrderItem
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -66,11 +66,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrderName
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -104,11 +104,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SheetId
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -141,11 +141,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RwType
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -156,7 +156,7 @@ items:
     content.vb: Public Property RwType As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: seths the type
   overload: Intranet.Labor.ViewModel.ProductionOrderItem.RwType*
   modifiers.csharp:
@@ -179,11 +179,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HasNotes
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 35
+    startLine: 38
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -217,11 +217,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Notes
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 41
+    startLine: 44
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -255,11 +255,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Controller
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -293,11 +293,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Action
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 53
+    startLine: 56
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -331,11 +331,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardInfos
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/ProductionOrderItem.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -346,7 +346,7 @@ items:
     content.vb: Public Property DashboardInfos As ICollection(Of DashboardInfo)
     parameters: []
     return:
-      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+      type: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.DashboardInfo}
       description: the dashboard info
   overload: Intranet.Labor.ViewModel.ProductionOrderItem.DashboardInfos*
   modifiers.csharp:
@@ -686,19 +686,19 @@ references:
   name: RwType
   nameWithType: ProductionOrderItem.RwType
   fullName: Intranet.Labor.ViewModel.ProductionOrderItem.RwType
-- uid: Intranet.Labor.Model.labor.RwType
-  commentId: T:Intranet.Labor.Model.labor.RwType
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.RwType
+  commentId: T:Intranet.Labor.Model.RwType
+  parent: Intranet.Labor.Model
   isExternal: false
   name: RwType
   nameWithType: RwType
-  fullName: Intranet.Labor.Model.labor.RwType
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.RwType
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.ViewModel.ProductionOrderItem.HasNotes*
   commentId: Overload:Intranet.Labor.ViewModel.ProductionOrderItem.HasNotes
   isExternal: false
@@ -823,15 +823,15 @@ references:
   name: DashboardInfos
   nameWithType: ProductionOrderItem.DashboardInfos
   fullName: Intranet.Labor.ViewModel.ProductionOrderItem.DashboardInfos
-- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
-  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo}
+- uid: System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.DashboardInfo}
+  commentId: T:System.Collections.Generic.ICollection{Intranet.Labor.ViewModel.DashboardInfo}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.ICollection`1
   name: ICollection<DashboardInfo>
   nameWithType: ICollection<DashboardInfo>
-  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo>
+  fullName: System.Collections.Generic.ICollection<Intranet.Labor.ViewModel.DashboardInfo>
   nameWithType.vb: ICollection(Of DashboardInfo)
-  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo)
+  fullname.vb: System.Collections.Generic.ICollection(Of Intranet.Labor.ViewModel.DashboardInfo)
   name.vb: ICollection(Of DashboardInfo)
   spec.csharp:
   - uid: System.Collections.Generic.ICollection`1
@@ -842,10 +842,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+  - uid: Intranet.Labor.ViewModel.DashboardInfo
     name: DashboardInfo
     nameWithType: DashboardInfo
-    fullName: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+    fullName: Intranet.Labor.ViewModel.DashboardInfo
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -858,10 +858,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+  - uid: Intranet.Labor.ViewModel.DashboardInfo
     name: DashboardInfo
     nameWithType: DashboardInfo
-    fullName: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
+    fullName: Intranet.Labor.ViewModel.DashboardInfo
   - name: )
     nameWithType: )
     fullName: )

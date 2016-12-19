@@ -16,15 +16,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/App_Start/AutofacConfig.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AutofacConfig
     path: .src/Intranet/Web/App_Start/AutofacConfig.cs
-    startLine: 6
+    startLine: 11
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web
-  summary: "\n"
+  summary: "\nAutofac IoC configuration.\n"
   example: []
   syntax:
     content: 'public class AutofacConfig : object'
@@ -53,15 +53,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/App_Start/AutofacConfig.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ConfigureContainer
     path: .src/Intranet/Web/App_Start/AutofacConfig.cs
-    startLine: 10
+    startLine: 16
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web
-  summary: "\n"
+  summary: "\nStarts the IoC bootstrapper.\n"
   example: []
   syntax:
     content: public static void ConfigureContainer()

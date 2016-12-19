@@ -22,8 +22,15 @@ items:
   - Intranet.Labor.Definition.IInkoRetentionServiceHelper
   - Intranet.Labor.Definition.IInkoRewetService
   - Intranet.Labor.Definition.IInkoRewetServiceHelper
+  - Intranet.Labor.Definition.ILaborCreatorBll
+  - Intranet.Labor.Definition.ILaborCreatorService
+  - Intranet.Labor.Definition.ILaborCreatorServiceHelper
+  - Intranet.Labor.Definition.ILaborDashboardBll
+  - Intranet.Labor.Definition.ILaborDashboardHelper
+  - Intranet.Labor.Definition.ILaborDashboardService
   - Intranet.Labor.Definition.ILaborHome
   - Intranet.Labor.Definition.ILaborHomeService
+  - Intranet.Labor.Definition.IShiftHelper
   - Intranet.Labor.Definition.ITestBll
   - Intranet.Labor.Definition.ITestServiceHelper
   langs:
@@ -106,6 +113,27 @@ references:
   name: IInkoAquisitionServiceHelper
   nameWithType: IInkoAquisitionServiceHelper
   fullName: Intranet.Labor.Definition.IInkoAquisitionServiceHelper
+- uid: Intranet.Labor.Definition.ILaborDashboardBll
+  commentId: T:Intranet.Labor.Definition.ILaborDashboardBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborDashboardBll
+  nameWithType: ILaborDashboardBll
+  fullName: Intranet.Labor.Definition.ILaborDashboardBll
+- uid: Intranet.Labor.Definition.ILaborDashboardHelper
+  commentId: T:Intranet.Labor.Definition.ILaborDashboardHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborDashboardHelper
+  nameWithType: ILaborDashboardHelper
+  fullName: Intranet.Labor.Definition.ILaborDashboardHelper
+- uid: Intranet.Labor.Definition.ILaborDashboardService
+  commentId: T:Intranet.Labor.Definition.ILaborDashboardService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborDashboardService
+  nameWithType: ILaborDashboardService
+  fullName: Intranet.Labor.Definition.ILaborDashboardService
 - uid: Intranet.Labor.Definition.IInkoRetentionService
   commentId: T:Intranet.Labor.Definition.IInkoRetentionService
   parent: Intranet.Labor.Definition
@@ -120,6 +148,20 @@ references:
   name: IInkoRetentionServiceHelper
   nameWithType: IInkoRetentionServiceHelper
   fullName: Intranet.Labor.Definition.IInkoRetentionServiceHelper
+- uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper
+  commentId: T:Intranet.Labor.Definition.ILaborCreatorServiceHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborCreatorServiceHelper
+  nameWithType: ILaborCreatorServiceHelper
+  fullName: Intranet.Labor.Definition.ILaborCreatorServiceHelper
+- uid: Intranet.Labor.Definition.IShiftHelper
+  commentId: T:Intranet.Labor.Definition.IShiftHelper
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: IShiftHelper
+  nameWithType: IShiftHelper
+  fullName: Intranet.Labor.Definition.IShiftHelper
 - uid: Intranet.Labor.Definition.ITestServiceHelper
   commentId: T:Intranet.Labor.Definition.ITestServiceHelper
   parent: Intranet.Labor.Definition
@@ -176,6 +218,20 @@ references:
   name: IInkoRewetServiceHelper
   nameWithType: IInkoRewetServiceHelper
   fullName: Intranet.Labor.Definition.IInkoRewetServiceHelper
+- uid: Intranet.Labor.Definition.ILaborCreatorBll
+  commentId: T:Intranet.Labor.Definition.ILaborCreatorBll
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborCreatorBll
+  nameWithType: ILaborCreatorBll
+  fullName: Intranet.Labor.Definition.ILaborCreatorBll
+- uid: Intranet.Labor.Definition.ILaborCreatorService
+  commentId: T:Intranet.Labor.Definition.ILaborCreatorService
+  parent: Intranet.Labor.Definition
+  isExternal: false
+  name: ILaborCreatorService
+  nameWithType: ILaborCreatorService
+  fullName: Intranet.Labor.Definition.ILaborCreatorService
 - uid: Intranet.Labor.Definition.ILaborHome
   commentId: T:Intranet.Labor.Definition.ILaborHome
   parent: Intranet.Labor.Definition

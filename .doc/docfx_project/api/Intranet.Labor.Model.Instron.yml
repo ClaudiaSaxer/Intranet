@@ -18,12 +18,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/Instron.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/Instron.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Instron
-    path: .src/Intranet/Labor/Model/instron/Instron.cs
-    startLine: 10
+    path: .src/Intranet/Labor/Model/Instron/Instron.cs
+    startLine: 14
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -61,12 +61,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/Instron.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/Instron.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IntstronId
-    path: .src/Intranet/Labor/Model/instron/Instron.cs
-    startLine: 18
+    path: .src/Intranet/Labor/Model/Instron/Instron.cs
+    startLine: 22
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -118,25 +118,61 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/Instron.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/Instron.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FaNr
-    path: .src/Intranet/Labor/Model/instron/Instron.cs
-    startLine: 26
+    path: .src/Intranet/Labor/Model/Instron/Instron.cs
+    startLine: 30
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the ProductionOrder Number\n"
   example: []
   syntax:
-    content: public string FaNr { get; set; }
-    content.vb: Public Property FaNr As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      [Index("IX_Instron_FaNr", IsUnique = true)]
+
+      public string FaNr { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      <Index("IX_Instron_FaNr", IsUnique:=True)>
+
+      Public Property FaNr As String
     parameters: []
     return:
       type: System.String
       description: The ProductionOrder Number of Instron.
   overload: Intranet.Labor.Model.Instron.FaNr*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Instron_FaNr
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: true
   modifiers.csharp:
   - public
   - get
@@ -156,25 +192,39 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/Instron.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/Instron.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: TestDateTime
-    path: .src/Intranet/Labor/Model/instron/Instron.cs
-    startLine: 33
+    path: .src/Intranet/Labor/Model/Instron/Instron.cs
+    startLine: 39
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the DateTime from the Instron Test\n"
   example: []
   syntax:
-    content: public DateTime TestDateTime { get; set; }
-    content.vb: Public Property TestDateTime As Date
+    content: >-
+      [Column(TypeName = "datetime2")]
+
+      public DateTime TestDateTime { get; set; }
+    content.vb: >-
+      <Column(TypeName:="datetime2")>
+
+      Public Property TestDateTime As Date
     parameters: []
     return:
       type: System.DateTime
       description: The Date and Time from the Test
   overload: Intranet.Labor.Model.Instron.TestDateTime*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: datetime2
   modifiers.csharp:
   - public
   - get
@@ -194,12 +244,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/Instron.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/Instron.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InstronValues
-    path: .src/Intranet/Labor/Model/instron/Instron.cs
-    startLine: 39
+    path: .src/Intranet/Labor/Model/Instron/Instron.cs
+    startLine: 46
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model

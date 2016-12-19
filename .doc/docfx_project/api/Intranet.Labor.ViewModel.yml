@@ -15,6 +15,7 @@ items:
   - Intranet.Labor.ViewModel.BabyDiaperRewetTestValue
   - Intranet.Labor.ViewModel.BabyDiaperTestInfo
   - Intranet.Labor.ViewModel.BaseTestEditViewModel
+  - Intranet.Labor.ViewModel.DashboardInfo
   - Intranet.Labor.ViewModel.DashboardItem
   - Intranet.Labor.ViewModel.DashboardNote
   - Intranet.Labor.ViewModel.ErrorCode
@@ -35,6 +36,7 @@ items:
   - Intranet.Labor.ViewModel.LaborDashboardViewModel
   - Intranet.Labor.ViewModel.LaborHomeViewModel
   - Intranet.Labor.ViewModel.ProductionOrderItem
+  - Intranet.Labor.ViewModel.RunningProductionOrder
   - Intranet.Labor.ViewModel.TestNote
   langs:
   - csharp
@@ -170,6 +172,18 @@ references:
   name: LaborCreatorViewModel
   nameWithType: LaborCreatorViewModel
   fullName: Intranet.Labor.ViewModel.LaborCreatorViewModel
+- uid: Intranet.Labor.ViewModel.RunningProductionOrder
+  commentId: T:Intranet.Labor.ViewModel.RunningProductionOrder
+  isExternal: false
+  name: RunningProductionOrder
+  nameWithType: RunningProductionOrder
+  fullName: Intranet.Labor.ViewModel.RunningProductionOrder
+- uid: Intranet.Labor.ViewModel.DashboardInfo
+  commentId: T:Intranet.Labor.ViewModel.DashboardInfo
+  isExternal: false
+  name: DashboardInfo
+  nameWithType: DashboardInfo
+  fullName: Intranet.Labor.ViewModel.DashboardInfo
 - uid: Intranet.Labor.ViewModel.DashboardItem
   commentId: T:Intranet.Labor.ViewModel.DashboardItem
   parent: Intranet.Labor.ViewModel

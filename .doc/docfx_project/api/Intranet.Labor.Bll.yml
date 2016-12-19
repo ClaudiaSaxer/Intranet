@@ -23,8 +23,14 @@ items:
   - Intranet.Labor.Bll.InkoRetentionServiceHelper
   - Intranet.Labor.Bll.InkoRewetService
   - Intranet.Labor.Bll.InkoRewetServiceHelper
+  - Intranet.Labor.Bll.LaborCreatorBll
+  - Intranet.Labor.Bll.LaborCreatorService
   - Intranet.Labor.Bll.LaborCreatorServiceHelper
+  - Intranet.Labor.Bll.LaborDashboardBll
+  - Intranet.Labor.Bll.LaborDashboardHelper
+  - Intranet.Labor.Bll.LaborDashboardService
   - Intranet.Labor.Bll.LaborHomeService
+  - Intranet.Labor.Bll.ShiftHelper
   - Intranet.Labor.Bll.ShiftTypeExtension
   - Intranet.Labor.Bll.TestBll
   - Intranet.Labor.Bll.TestServiceHelper
@@ -98,6 +104,24 @@ references:
   name: InkoAquisitionServiceHelper
   nameWithType: InkoAquisitionServiceHelper
   fullName: Intranet.Labor.Bll.InkoAquisitionServiceHelper
+- uid: Intranet.Labor.Bll.LaborDashboardHelper
+  commentId: T:Intranet.Labor.Bll.LaborDashboardHelper
+  isExternal: false
+  name: LaborDashboardHelper
+  nameWithType: LaborDashboardHelper
+  fullName: Intranet.Labor.Bll.LaborDashboardHelper
+- uid: Intranet.Labor.Bll.LaborDashboardService
+  commentId: T:Intranet.Labor.Bll.LaborDashboardService
+  isExternal: false
+  name: LaborDashboardService
+  nameWithType: LaborDashboardService
+  fullName: Intranet.Labor.Bll.LaborDashboardService
+- uid: Intranet.Labor.Bll.LaborDashboardBll
+  commentId: T:Intranet.Labor.Bll.LaborDashboardBll
+  isExternal: false
+  name: LaborDashboardBll
+  nameWithType: LaborDashboardBll
+  fullName: Intranet.Labor.Bll.LaborDashboardBll
 - uid: Intranet.Labor.Bll.InkoRetentionService
   commentId: T:Intranet.Labor.Bll.InkoRetentionService
   isExternal: false
@@ -116,6 +140,12 @@ references:
   name: LaborCreatorServiceHelper
   nameWithType: LaborCreatorServiceHelper
   fullName: Intranet.Labor.Bll.LaborCreatorServiceHelper
+- uid: Intranet.Labor.Bll.ShiftHelper
+  commentId: T:Intranet.Labor.Bll.ShiftHelper
+  isExternal: false
+  name: ShiftHelper
+  nameWithType: ShiftHelper
+  fullName: Intranet.Labor.Bll.ShiftHelper
 - uid: Intranet.Labor.Bll.TestServiceHelper
   commentId: T:Intranet.Labor.Bll.TestServiceHelper
   isExternal: false
@@ -177,6 +207,18 @@ references:
   name: InkoRewetServiceHelper
   nameWithType: InkoRewetServiceHelper
   fullName: Intranet.Labor.Bll.InkoRewetServiceHelper
+- uid: Intranet.Labor.Bll.LaborCreatorBll
+  commentId: T:Intranet.Labor.Bll.LaborCreatorBll
+  isExternal: false
+  name: LaborCreatorBll
+  nameWithType: LaborCreatorBll
+  fullName: Intranet.Labor.Bll.LaborCreatorBll
+- uid: Intranet.Labor.Bll.LaborCreatorService
+  commentId: T:Intranet.Labor.Bll.LaborCreatorService
+  isExternal: false
+  name: LaborCreatorService
+  nameWithType: LaborCreatorService
+  fullName: Intranet.Labor.Bll.LaborCreatorService
 - uid: Intranet.Labor.Bll.LaborHomeService
   commentId: T:Intranet.Labor.Bll.LaborHomeService
   isExternal: false

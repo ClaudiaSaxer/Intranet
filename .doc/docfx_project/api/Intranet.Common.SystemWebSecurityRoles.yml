@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SystemWebSecurityRoles
     path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetRolesForUser
     path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CanUserEditLabor
     path: .src/Intranet/Common/Role/SystemWebSecurityRoles.cs
-    startLine: 25
+    startLine: 28
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

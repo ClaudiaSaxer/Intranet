@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborHomeController
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborHomeService
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -98,11 +98,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-    startLine: 36
+    startLine: 39
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers
@@ -134,11 +134,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Index
     path: .src/Intranet/Web/Areas/Labor/Controllers/LaborHomeController.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Areas.Labor.Controllers

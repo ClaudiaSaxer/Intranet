@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRetentionEditViewModel
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs
@@ -71,7 +71,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DiaperWeight
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs
@@ -138,7 +138,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: WeightRetentionWet
     path: .src/Intranet/Labor/ViewModel/BabyDiaperRetention/BabyDiaperRetentionEditViewModel.cs

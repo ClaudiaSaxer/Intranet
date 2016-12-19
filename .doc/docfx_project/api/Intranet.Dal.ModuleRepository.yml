@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/Repositories/ModulRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleRepository
     path: .src/Intranet/Dal/Repositories/ModulRepository.cs
@@ -89,7 +89,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/Repositories/ModulRepository.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Dal/Repositories/ModulRepository.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CheckDisableService
     path: .src/Intranet/Bll/CheckDisableService.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CheckDisableBll
     path: .src/Intranet/Bll/CheckDisableService.cs
@@ -101,7 +101,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsVisible
     path: .src/Intranet/Bll/CheckDisableService.cs

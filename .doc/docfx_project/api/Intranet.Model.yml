@@ -7,7 +7,6 @@ items:
   - Intranet.Model.Module
   - Intranet.Model.ModuleType
   - Intranet.Model.Role
-  - Intranet.Model.UniqueKeyAttribute
   langs:
   - csharp
   - vb
@@ -38,12 +37,6 @@ references:
   name: Role
   nameWithType: Role
   fullName: Intranet.Model.Role
-- uid: Intranet.Model.UniqueKeyAttribute
-  commentId: T:Intranet.Model.UniqueKeyAttribute
-  isExternal: false
-  name: UniqueKeyAttribute
-  nameWithType: UniqueKeyAttribute
-  fullName: Intranet.Model.UniqueKeyAttribute
 - uid: Intranet.Model
   commentId: N:Intranet.Model
   isExternal: false

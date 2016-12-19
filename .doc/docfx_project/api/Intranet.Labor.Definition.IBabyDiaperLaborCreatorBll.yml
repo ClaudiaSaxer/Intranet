@@ -16,15 +16,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IBabyDiaperLaborCreatorBll
     path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
-  summary: "\nInterface representing the labor creator bll\n"
+  summary: "\nInterface representing the babydiaper labor creator bll\n"
   example: []
   syntax:
     content: public interface IBabyDiaperLaborCreatorBll
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetTestSheetForId
     path: .src/Intranet/Labor/Definitions/Bll/IBabyDiaperLaborCreatorBll.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - Intranet.Labor.Definition
   namespace: Intranet.Labor.Definition
@@ -67,7 +67,7 @@ items:
       type: System.Int32
       description: the unique identifier for the test sheet
     return:
-      type: Intranet.Labor.Model.labor.TestSheet
+      type: Intranet.Labor.Model.TestSheet
       description: a testsheet with the given data, or null if not found
   overload: Intranet.Labor.Definition.IBabyDiaperLaborCreatorBll.GetTestSheetForId*
 references:
@@ -90,22 +90,22 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Intranet.Labor.Model.labor.TestSheet
-  commentId: T:Intranet.Labor.Model.labor.TestSheet
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.TestSheet
+  commentId: T:Intranet.Labor.Model.TestSheet
+  parent: Intranet.Labor.Model
   isExternal: false
   name: TestSheet
   nameWithType: TestSheet
-  fullName: Intranet.Labor.Model.labor.TestSheet
+  fullName: Intranet.Labor.Model.TestSheet
 - uid: System
   commentId: N:System
   isExternal: false
   name: System
   nameWithType: System
   fullName: System
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model

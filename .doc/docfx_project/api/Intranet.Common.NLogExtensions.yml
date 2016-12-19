@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogExtesions.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NLogExtensions
     path: .src/Intranet/Common/Logging/NLogExtesions.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/NLogExtesions.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ToLogLevel
     path: .src/Intranet/Common/Logging/NLogExtesions.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

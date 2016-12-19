@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingsService
     path: .src/Intranet/Bll/SettingsService.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -71,11 +71,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingsBll
     path: .src/Intranet/Bll/SettingsService.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -108,11 +108,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Bll/SettingsService.cs
-    startLine: 29
+    startLine: 33
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -144,11 +144,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetSettingsViewModel
     path: .src/Intranet/Bll/SettingsService.cs
-    startLine: 43
+    startLine: 47
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -181,11 +181,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/SettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateModuleSetting
     path: .src/Intranet/Bll/SettingsService.cs
-    startLine: 68
+    startLine: 72
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

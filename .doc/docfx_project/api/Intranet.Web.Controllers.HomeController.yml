@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/HomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeController
     path: .src/Intranet/Web/Controllers/HomeController.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/HomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeService
     path: .src/Intranet/Web/Controllers/HomeController.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -98,11 +98,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/HomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Web/Controllers/HomeController.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers
@@ -134,11 +134,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/Controllers/HomeController.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Index
     path: .src/Intranet/Web/Controllers/HomeController.cs
-    startLine: 42
+    startLine: 46
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web.Controllers

@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Role/Definition/IRoles.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IRoles
     path: .src/Intranet/Common/Role/Definition/IRoles.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -36,37 +36,6 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: Intranet.Common.IRoles.GetRolesForUser
-  commentId: M:Intranet.Common.IRoles.GetRolesForUser
-  id: GetRolesForUser
-  parent: Intranet.Common.IRoles
-  langs:
-  - csharp
-  - vb
-  name: GetRolesForUser()
-  nameWithType: IRoles.GetRolesForUser()
-  fullName: Intranet.Common.IRoles.GetRolesForUser()
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Common/Role/Definition/IRoles.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: GetRolesForUser
-    path: .src/Intranet/Common/Role/Definition/IRoles.cs
-    startLine: 19
-  assemblies:
-  - Intranet.Common
-  namespace: Intranet.Common
-  summary: "\nThe Roles for the current User\n"
-  example: []
-  syntax:
-    content: IEnumerable<string> GetRolesForUser()
-    content.vb: Function GetRolesForUser As IEnumerable(Of String)
-    return:
-      type: System.Collections.Generic.IEnumerable{System.String}
-      description: the current user roles
-  overload: Intranet.Common.IRoles.GetRolesForUser*
 - uid: Intranet.Common.IRoles.CanUserEditLabor
   commentId: M:Intranet.Common.IRoles.CanUserEditLabor
   id: CanUserEditLabor
@@ -81,11 +50,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Role/Definition/IRoles.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CanUserEditLabor
     path: .src/Intranet/Common/Role/Definition/IRoles.cs
-    startLine: 25
+    startLine: 18
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -98,6 +67,37 @@ items:
       type: System.Boolean
       description: 'true: if the current user is allowed to edit the labor'
   overload: Intranet.Common.IRoles.CanUserEditLabor*
+- uid: Intranet.Common.IRoles.GetRolesForUser
+  commentId: M:Intranet.Common.IRoles.GetRolesForUser
+  id: GetRolesForUser
+  parent: Intranet.Common.IRoles
+  langs:
+  - csharp
+  - vb
+  name: GetRolesForUser()
+  nameWithType: IRoles.GetRolesForUser()
+  fullName: Intranet.Common.IRoles.GetRolesForUser()
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Role/Definition/IRoles.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: GetRolesForUser
+    path: .src/Intranet/Common/Role/Definition/IRoles.cs
+    startLine: 24
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nThe Roles for the current User\n"
+  example: []
+  syntax:
+    content: IEnumerable<string> GetRolesForUser()
+    content.vb: Function GetRolesForUser As IEnumerable(Of String)
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: the current user roles
+  overload: Intranet.Common.IRoles.GetRolesForUser*
 references:
 - uid: Intranet.Common
   commentId: N:Intranet.Common
@@ -105,6 +105,25 @@ references:
   name: Intranet.Common
   nameWithType: Intranet.Common
   fullName: Intranet.Common
+- uid: Intranet.Common.IRoles.CanUserEditLabor*
+  commentId: Overload:Intranet.Common.IRoles.CanUserEditLabor
+  isExternal: false
+  name: CanUserEditLabor
+  nameWithType: IRoles.CanUserEditLabor
+  fullName: Intranet.Common.IRoles.CanUserEditLabor
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: Intranet.Common.IRoles.GetRolesForUser*
   commentId: Overload:Intranet.Common.IRoles.GetRolesForUser
   isExternal: false
@@ -200,22 +219,3 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: Intranet.Common.IRoles.CanUserEditLabor*
-  commentId: Overload:Intranet.Common.IRoles.CanUserEditLabor
-  isExternal: false
-  name: CanUserEditLabor
-  nameWithType: IRoles.CanUserEditLabor
-  fullName: Intranet.Common.IRoles.CanUserEditLabor
-- uid: System.Boolean
-  commentId: T:System.Boolean
-  parent: System
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
-- uid: System
-  commentId: N:System
-  isExternal: false
-  name: System
-  nameWithType: System
-  fullName: System
