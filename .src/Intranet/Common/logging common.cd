@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Intranet.Common.NLogExtensions" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging\NLogExtesions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intranet.Common.NLogLogger" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAIAAAAAbAAAAAAAAAAQCgAABEAAAAEAEAEAAA=</HashCode>
+      <FileName>Logging\NLogLogger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Intranet.Common.NLogLoggerFactory" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Logging\NLogLoggerFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Intranet.Common.LoggingBase">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Logging\BaseClass\LoggingBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Logger" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Intranet.Common.ILogger">
+    <Position X="6.25" Y="4.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAbAAAAAAAAAAQCgAABEAAAAEAEAEAAA=</HashCode>
+      <FileName>Logging\Definition\ILogger.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DefaultLevel" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Intranet.Common.ILoggerFactory">
+    <Position X="9.25" Y="2.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Logging\Definition\ILoggerFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Intranet.Common.LogLevel">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAYAAAAAAAAAAAAAAABEAAAAAAEAEAAA=</HashCode>
+      <FileName>Logging\Definition\LogLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

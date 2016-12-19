@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Intranet.Bll.NavigationService">
+    <Position X="0.75" Y="4.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>NavigationService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="NavigationBll" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Intranet.Bll.NavigationBll">
+    <Position X="4.75" Y="7.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>NavigationBll.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoleRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Intranet.Common.ServiceBase">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="Roles" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Intranet.Common.BaseController">
+    <Position X="9" Y="4.25" Width="2.75" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="NavigationService" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Intranet.Common.INavigationBll">
+    <Position X="0.5" Y="7.75" Width="4" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Intranet.Common.IGenericRepository&lt;TEntity&gt;" Collapsed="true">
+    <Position X="10.25" Y="7.75" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Intranet.Common.IRoles">
+    <Position X="4.5" Y="2.75" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="Intranet.Common.INavigationService">
+    <Position X="4.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
