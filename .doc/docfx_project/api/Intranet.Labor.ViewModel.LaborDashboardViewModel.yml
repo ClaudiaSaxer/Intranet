@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LaborDashboardViewModel
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardItemM11
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
@@ -99,7 +99,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardItemM10
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
@@ -137,7 +137,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardItemM49
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/LaborDashboardViewModel.cs

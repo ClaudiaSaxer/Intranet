@@ -19,11 +19,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DbCommit
     path: .src/Intranet/Common/Db/DbCommit.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -78,11 +78,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Common/Db/DbCommit.cs
-    startLine: 56
+    startLine: 60
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -120,11 +120,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Disposed
     path: .src/Intranet/Common/Db/DbCommit.cs
-    startLine: 71
+    startLine: 75
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -157,11 +157,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Commit
     path: .src/Intranet/Common/Db/DbCommit.cs
-    startLine: 81
+    startLine: 85
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -196,11 +196,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/DbCommit.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CommitAsync
     path: .src/Intranet/Common/Db/DbCommit.cs
-    startLine: 92
+    startLine: 96
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

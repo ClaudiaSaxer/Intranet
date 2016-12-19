@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ILoggerFactory
     path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -51,11 +51,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CreateLogger
     path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -86,11 +86,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CreateLogger
     path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -121,11 +121,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SetDynamicParameters
     path: .src/Intranet/Common/Logging/Definition/ILoggerFactory.cs
-    startLine: 31
+    startLine: 35
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

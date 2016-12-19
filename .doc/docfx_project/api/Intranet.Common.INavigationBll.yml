@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/INavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: INavigationBll
     path: .src/Intranet/Common/Bll/INavigationBll.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -36,44 +36,6 @@ items:
   modifiers.vb:
   - Public
   - Interface
-- uid: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
-  commentId: M:Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
-  id: AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
-  parent: Intranet.Common.INavigationBll
-  langs:
-  - csharp
-  - vb
-  name: AllVisibleMainModulesForRoles(IEnumerable<String>)
-  nameWithType: INavigationBll.AllVisibleMainModulesForRoles(IEnumerable<String>)
-  fullName: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable<System.String>)
-  type: Method
-  source:
-    remote:
-      path: .src/Intranet/Common/Bll/INavigationBll.cs
-      branch: f_doc
-      repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: AllVisibleMainModulesForRoles
-    path: .src/Intranet/Common/Bll/INavigationBll.cs
-    startLine: 16
-  assemblies:
-  - Intranet.Common
-  namespace: Intranet.Common
-  summary: "\nQuery for all MainModules for a given roles.\n"
-  example: []
-  syntax:
-    content: IEnumerable<Module> AllVisibleMainModulesForRoles(IEnumerable<string> rolenames)
-    content.vb: Function AllVisibleMainModulesForRoles(rolenames As IEnumerable(Of String)) As IEnumerable(Of  Module)
-    parameters:
-    - id: rolenames
-      type: System.Collections.Generic.IEnumerable{System.String}
-      description: The name of the roles the user has.
-    return:
-      type: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
-      description: All MainModules for the given roles
-  overload: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles*
-  nameWithType.vb: INavigationBll.AllVisibleMainModulesForRoles(IEnumerable(Of String))
-  fullName.vb: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable(Of System.String))
-  name.vb: AllVisibleMainModulesForRoles(IEnumerable(Of String))
 - uid: Intranet.Common.INavigationBll.AllSettingsForRoles(System.Collections.Generic.IEnumerable{System.String})
   commentId: M:Intranet.Common.INavigationBll.AllSettingsForRoles(System.Collections.Generic.IEnumerable{System.String})
   id: AllSettingsForRoles(System.Collections.Generic.IEnumerable{System.String})
@@ -88,11 +50,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Bll/INavigationBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllSettingsForRoles
     path: .src/Intranet/Common/Bll/INavigationBll.cs
-    startLine: 23
+    startLine: 20
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -112,6 +74,44 @@ items:
   nameWithType.vb: INavigationBll.AllSettingsForRoles(IEnumerable(Of String))
   fullName.vb: Intranet.Common.INavigationBll.AllSettingsForRoles(System.Collections.Generic.IEnumerable(Of System.String))
   name.vb: AllSettingsForRoles(IEnumerable(Of String))
+- uid: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  id: AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable{System.String})
+  parent: Intranet.Common.INavigationBll
+  langs:
+  - csharp
+  - vb
+  name: AllVisibleMainModulesForRoles(IEnumerable<String>)
+  nameWithType: INavigationBll.AllVisibleMainModulesForRoles(IEnumerable<String>)
+  fullName: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: .src/Intranet/Common/Bll/INavigationBll.cs
+      branch: dev
+      repo: https://github.com/ClaudiaSaxer/Intranet.git
+    id: AllVisibleMainModulesForRoles
+    path: .src/Intranet/Common/Bll/INavigationBll.cs
+    startLine: 27
+  assemblies:
+  - Intranet.Common
+  namespace: Intranet.Common
+  summary: "\nQuery for all MainModules for a given roles.\n"
+  example: []
+  syntax:
+    content: IEnumerable<Module> AllVisibleMainModulesForRoles(IEnumerable<string> rolenames)
+    content.vb: Function AllVisibleMainModulesForRoles(rolenames As IEnumerable(Of String)) As IEnumerable(Of  Module)
+    parameters:
+    - id: rolenames
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The name of the roles the user has.
+    return:
+      type: System.Collections.Generic.IEnumerable{Intranet.Model.Module}
+      description: All MainModules for the given roles
+  overload: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles*
+  nameWithType.vb: INavigationBll.AllVisibleMainModulesForRoles(IEnumerable(Of String))
+  fullName.vb: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: AllVisibleMainModulesForRoles(IEnumerable(Of String))
 references:
 - uid: Intranet.Common
   commentId: N:Intranet.Common
@@ -119,12 +119,12 @@ references:
   name: Intranet.Common
   nameWithType: Intranet.Common
   fullName: Intranet.Common
-- uid: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles*
-  commentId: Overload:Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles
+- uid: Intranet.Common.INavigationBll.AllSettingsForRoles*
+  commentId: Overload:Intranet.Common.INavigationBll.AllSettingsForRoles
   isExternal: false
-  name: AllVisibleMainModulesForRoles
-  nameWithType: INavigationBll.AllVisibleMainModulesForRoles
-  fullName: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles
+  name: AllSettingsForRoles
+  nameWithType: INavigationBll.AllSettingsForRoles
+  fullName: Intranet.Common.INavigationBll.AllSettingsForRoles
 - uid: System.Collections.Generic.IEnumerable{System.String}
   commentId: T:System.Collections.Generic.IEnumerable{System.String}
   parent: System.Collections.Generic
@@ -256,9 +256,9 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: Intranet.Common.INavigationBll.AllSettingsForRoles*
-  commentId: Overload:Intranet.Common.INavigationBll.AllSettingsForRoles
+- uid: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles*
+  commentId: Overload:Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles
   isExternal: false
-  name: AllSettingsForRoles
-  nameWithType: INavigationBll.AllSettingsForRoles
-  fullName: Intranet.Common.INavigationBll.AllSettingsForRoles
+  name: AllVisibleMainModulesForRoles
+  nameWithType: INavigationBll.AllVisibleMainModulesForRoles
+  fullName: Intranet.Common.INavigationBll.AllVisibleMainModulesForRoles

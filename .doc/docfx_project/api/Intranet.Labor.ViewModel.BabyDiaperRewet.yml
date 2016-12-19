@@ -21,11 +21,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperRewet
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet140Value
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet210Value
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: StrikeThroughValue
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -178,11 +178,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DistributionOfTheStrikeTrough
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 34
+    startLine: 38
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -216,11 +216,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet140Rw
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -231,7 +231,7 @@ items:
     content.vb: Public Property Rewet140Rw As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW of the revet for 140ml
   overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw*
   modifiers.csharp:
@@ -254,11 +254,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet210Rw
     path: .src/Intranet/Labor/ViewModel/BabyDiaperLaborCreator/BabyDiaperRewet.cs
-    startLine: 46
+    startLine: 50
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -269,7 +269,7 @@ items:
     content.vb: Public Property Rewet210Rw As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW of the revet for 210ml
   overload: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw*
   modifiers.csharp:
@@ -614,19 +614,19 @@ references:
   name: Rewet140Rw
   nameWithType: BabyDiaperRewet.Rewet140Rw
   fullName: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet140Rw
-- uid: Intranet.Labor.Model.labor.RwType
-  commentId: T:Intranet.Labor.Model.labor.RwType
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.RwType
+  commentId: T:Intranet.Labor.Model.RwType
+  parent: Intranet.Labor.Model
   isExternal: false
   name: RwType
   nameWithType: RwType
-  fullName: Intranet.Labor.Model.labor.RwType
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.RwType
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw*
   commentId: Overload:Intranet.Labor.ViewModel.BabyDiaperRewet.Rewet210Rw
   isExternal: false

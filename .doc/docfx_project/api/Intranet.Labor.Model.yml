@@ -6,15 +6,23 @@ items:
   children:
   - Intranet.Labor.Model.Article
   - Intranet.Labor.Model.ArticleType
+  - Intranet.Labor.Model.BabyDiaperTestValue
   - Intranet.Labor.Model.Error
+  - Intranet.Labor.Model.IncontinencePadTestValue
   - Intranet.Labor.Model.Instron
   - Intranet.Labor.Model.InstronValue
   - Intranet.Labor.Model.Machine
   - Intranet.Labor.Model.ProductionOrder
   - Intranet.Labor.Model.ProductionOrderComponent
+  - Intranet.Labor.Model.RwType
   - Intranet.Labor.Model.ShiftSchedule
   - Intranet.Labor.Model.ShiftType
-  - Intranet.Labor.Model.UniqueKeyAttribute
+  - Intranet.Labor.Model.TestSheet
+  - Intranet.Labor.Model.TestTypeBabyDiaper
+  - Intranet.Labor.Model.TestTypeIncontinencePad
+  - Intranet.Labor.Model.TestValue
+  - Intranet.Labor.Model.TestValueNote
+  - Intranet.Labor.Model.TestValueType
   langs:
   - csharp
   - vb
@@ -94,12 +102,69 @@ references:
   name: ShiftType
   nameWithType: ShiftType
   fullName: Intranet.Labor.Model.ShiftType
-- uid: Intranet.Labor.Model.UniqueKeyAttribute
-  commentId: T:Intranet.Labor.Model.UniqueKeyAttribute
+- uid: Intranet.Labor.Model.BabyDiaperTestValue
+  commentId: T:Intranet.Labor.Model.BabyDiaperTestValue
+  parent: Intranet.Labor.Model
   isExternal: false
-  name: UniqueKeyAttribute
-  nameWithType: UniqueKeyAttribute
-  fullName: Intranet.Labor.Model.UniqueKeyAttribute
+  name: BabyDiaperTestValue
+  nameWithType: BabyDiaperTestValue
+  fullName: Intranet.Labor.Model.BabyDiaperTestValue
+- uid: Intranet.Labor.Model.IncontinencePadTestValue
+  commentId: T:Intranet.Labor.Model.IncontinencePadTestValue
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: IncontinencePadTestValue
+  nameWithType: IncontinencePadTestValue
+  fullName: Intranet.Labor.Model.IncontinencePadTestValue
+- uid: Intranet.Labor.Model.RwType
+  commentId: T:Intranet.Labor.Model.RwType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: RwType
+  nameWithType: RwType
+  fullName: Intranet.Labor.Model.RwType
+- uid: Intranet.Labor.Model.TestValueNote
+  commentId: T:Intranet.Labor.Model.TestValueNote
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestValueNote
+  nameWithType: TestValueNote
+  fullName: Intranet.Labor.Model.TestValueNote
+- uid: Intranet.Labor.Model.TestSheet
+  commentId: T:Intranet.Labor.Model.TestSheet
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestSheet
+  nameWithType: TestSheet
+  fullName: Intranet.Labor.Model.TestSheet
+- uid: Intranet.Labor.Model.TestTypeBabyDiaper
+  commentId: T:Intranet.Labor.Model.TestTypeBabyDiaper
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestTypeBabyDiaper
+  nameWithType: TestTypeBabyDiaper
+  fullName: Intranet.Labor.Model.TestTypeBabyDiaper
+- uid: Intranet.Labor.Model.TestTypeIncontinencePad
+  commentId: T:Intranet.Labor.Model.TestTypeIncontinencePad
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestTypeIncontinencePad
+  nameWithType: TestTypeIncontinencePad
+  fullName: Intranet.Labor.Model.TestTypeIncontinencePad
+- uid: Intranet.Labor.Model.TestValue
+  commentId: T:Intranet.Labor.Model.TestValue
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestValue
+  nameWithType: TestValue
+  fullName: Intranet.Labor.Model.TestValue
+- uid: Intranet.Labor.Model.TestValueType
+  commentId: T:Intranet.Labor.Model.TestValueType
+  parent: Intranet.Labor.Model
+  isExternal: false
+  name: TestValueType
+  nameWithType: TestValueType
+  fullName: Intranet.Labor.Model.TestValueType
 - uid: Intranet.Labor.Model
   commentId: N:Intranet.Labor.Model
   isExternal: false

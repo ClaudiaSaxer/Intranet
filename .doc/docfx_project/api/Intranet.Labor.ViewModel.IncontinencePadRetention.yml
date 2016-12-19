@@ -21,11 +21,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePadRetention
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RetentionRw
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -79,7 +79,7 @@ items:
     content.vb: Public Property RetentionRw As RwType
     parameters: []
     return:
-      type: Intranet.Labor.Model.labor.RwType
+      type: Intranet.Labor.Model.RwType
       description: the RW of the retention
   overload: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw*
   modifiers.csharp:
@@ -102,11 +102,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RetentionAfterZentrifugeValue
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -140,11 +140,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RetentionDiff
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -178,11 +178,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AbsorptionDiff
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 34
+    startLine: 38
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -216,11 +216,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RetentionWetWeight
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -254,11 +254,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RetentionDryWeight
     path: .src/Intranet/Labor/ViewModel/IncontinencePadLaborCreator/IncontinencePadRetention.cs
-    startLine: 46
+    startLine: 50
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -583,19 +583,19 @@ references:
   name: RetentionRw
   nameWithType: IncontinencePadRetention.RetentionRw
   fullName: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionRw
-- uid: Intranet.Labor.Model.labor.RwType
-  commentId: T:Intranet.Labor.Model.labor.RwType
-  parent: Intranet.Labor.Model.labor
+- uid: Intranet.Labor.Model.RwType
+  commentId: T:Intranet.Labor.Model.RwType
+  parent: Intranet.Labor.Model
   isExternal: false
   name: RwType
   nameWithType: RwType
-  fullName: Intranet.Labor.Model.labor.RwType
-- uid: Intranet.Labor.Model.labor
-  commentId: N:Intranet.Labor.Model.labor
+  fullName: Intranet.Labor.Model.RwType
+- uid: Intranet.Labor.Model
+  commentId: N:Intranet.Labor.Model
   isExternal: false
-  name: Intranet.Labor.Model.labor
-  nameWithType: Intranet.Labor.Model.labor
-  fullName: Intranet.Labor.Model.labor
+  name: Intranet.Labor.Model
+  nameWithType: Intranet.Labor.Model
+  fullName: Intranet.Labor.Model
 - uid: Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue*
   commentId: Overload:Intranet.Labor.ViewModel.IncontinencePadRetention.RetentionAfterZentrifugeValue
   isExternal: false

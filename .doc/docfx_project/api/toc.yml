@@ -63,15 +63,12 @@
     name: NLogLogger
   - uid: Intranet.Common.NLogLoggerFactory
     name: NLogLoggerFactory
+  - uid: Intranet.Common.RoleSettings
+    name: RoleSettings
   - uid: Intranet.Common.ServiceBase
     name: ServiceBase
   - uid: Intranet.Common.SystemWebSecurityRoles
     name: SystemWebSecurityRoles
-- uid: Intranet.Common.Role
-  name: Intranet.Common.Role
-  items:
-  - uid: Intranet.Common.Role.RoleSettings
-    name: RoleSettings
 - uid: Intranet.Dal
   name: Intranet.Dal
   items:
@@ -137,10 +134,22 @@
     name: InkoRewetService
   - uid: Intranet.Labor.Bll.InkoRewetServiceHelper
     name: InkoRewetServiceHelper
+  - uid: Intranet.Labor.Bll.LaborCreatorBll
+    name: LaborCreatorBll
+  - uid: Intranet.Labor.Bll.LaborCreatorService
+    name: LaborCreatorService
   - uid: Intranet.Labor.Bll.LaborCreatorServiceHelper
     name: LaborCreatorServiceHelper
+  - uid: Intranet.Labor.Bll.LaborDashboardBll
+    name: LaborDashboardBll
+  - uid: Intranet.Labor.Bll.LaborDashboardHelper
+    name: LaborDashboardHelper
+  - uid: Intranet.Labor.Bll.LaborDashboardService
+    name: LaborDashboardService
   - uid: Intranet.Labor.Bll.LaborHomeService
     name: LaborHomeService
+  - uid: Intranet.Labor.Bll.ShiftHelper
+    name: ShiftHelper
   - uid: Intranet.Labor.Bll.ShiftTypeExtension
     name: ShiftTypeExtension
   - uid: Intranet.Labor.Bll.TestBll
@@ -150,26 +159,23 @@
 - uid: Intranet.Labor.Dal
   name: Intranet.Labor.Dal
   items:
+  - uid: Intranet.Labor.Dal.BabyDiaperTestValueRepository
+    name: BabyDiaperTestValueRepository
+  - uid: Intranet.Labor.Dal.ErrorRepository
+    name: ErrorRepository
+  - uid: Intranet.Labor.Dal.IncontinencePadTestValueRepository
+    name: IncontinencePadTestValueRepository
   - uid: Intranet.Labor.Dal.LaborContext
     name: LaborContext
-- uid: Intranet.Labor.Dal.Repositories
-  name: Intranet.Labor.Dal.Repositories
-  items:
-  - uid: Intranet.Labor.Dal.Repositories.BabyDiaperTestValueRepository
-    name: BabyDiaperTestValueRepository
-  - uid: Intranet.Labor.Dal.Repositories.ErrorRepository
-    name: ErrorRepository
-  - uid: Intranet.Labor.Dal.Repositories.IncontinencePadTestValueRepository
-    name: IncontinencePadTestValueRepository
-  - uid: Intranet.Labor.Dal.Repositories.ProductionOrderRepository
+  - uid: Intranet.Labor.Dal.ProductionOrderRepository
     name: ProductionOrderRepository
-  - uid: Intranet.Labor.Dal.Repositories.ShiftScheduleRepository
+  - uid: Intranet.Labor.Dal.ShiftScheduleRepository
     name: ShiftScheduleRepository
-  - uid: Intranet.Labor.Dal.Repositories.TestSheetRepository
+  - uid: Intranet.Labor.Dal.TestSheetRepository
     name: TestSheetRepository
-  - uid: Intranet.Labor.Dal.Repositories.TestValueNoteRepository
+  - uid: Intranet.Labor.Dal.TestValueNoteRepository
     name: TestValueNoteRepository
-  - uid: Intranet.Labor.Dal.Repositories.TestValueRepository
+  - uid: Intranet.Labor.Dal.TestValueRepository
     name: TestValueRepository
 - uid: Intranet.Labor.Definition
   name: Intranet.Labor.Definition
@@ -210,21 +216,28 @@
     name: IInkoRewetService
   - uid: Intranet.Labor.Definition.IInkoRewetServiceHelper
     name: IInkoRewetServiceHelper
+  - uid: Intranet.Labor.Definition.ILaborCreatorBll
+    name: ILaborCreatorBll
+  - uid: Intranet.Labor.Definition.ILaborCreatorService
+    name: ILaborCreatorService
+  - uid: Intranet.Labor.Definition.ILaborCreatorServiceHelper
+    name: ILaborCreatorServiceHelper
+  - uid: Intranet.Labor.Definition.ILaborDashboardBll
+    name: ILaborDashboardBll
+  - uid: Intranet.Labor.Definition.ILaborDashboardHelper
+    name: ILaborDashboardHelper
+  - uid: Intranet.Labor.Definition.ILaborDashboardService
+    name: ILaborDashboardService
   - uid: Intranet.Labor.Definition.ILaborHome
     name: ILaborHome
   - uid: Intranet.Labor.Definition.ILaborHomeService
     name: ILaborHomeService
+  - uid: Intranet.Labor.Definition.IShiftHelper
+    name: IShiftHelper
   - uid: Intranet.Labor.Definition.ITestBll
     name: ITestBll
   - uid: Intranet.Labor.Definition.ITestServiceHelper
     name: ITestServiceHelper
-- uid: Intranet.Labor.Definition.Bll
-  name: Intranet.Labor.Definition.Bll
-  items:
-  - uid: Intranet.Labor.Definition.Bll.ILaborCreatorServiceHelper
-    name: ILaborCreatorServiceHelper
-  - uid: Intranet.Labor.Definition.Bll.IShiftHelper
-    name: IShiftHelper
 - uid: Intranet.Labor.Model
   name: Intranet.Labor.Model
   items:
@@ -232,8 +245,12 @@
     name: Article
   - uid: Intranet.Labor.Model.ArticleType
     name: ArticleType
+  - uid: Intranet.Labor.Model.BabyDiaperTestValue
+    name: BabyDiaperTestValue
   - uid: Intranet.Labor.Model.Error
     name: Error
+  - uid: Intranet.Labor.Model.IncontinencePadTestValue
+    name: IncontinencePadTestValue
   - uid: Intranet.Labor.Model.Instron
     name: Instron
   - uid: Intranet.Labor.Model.InstronValue
@@ -244,32 +261,23 @@
     name: ProductionOrder
   - uid: Intranet.Labor.Model.ProductionOrderComponent
     name: ProductionOrderComponent
+  - uid: Intranet.Labor.Model.RwType
+    name: RwType
   - uid: Intranet.Labor.Model.ShiftSchedule
     name: ShiftSchedule
   - uid: Intranet.Labor.Model.ShiftType
     name: ShiftType
-  - uid: Intranet.Labor.Model.UniqueKeyAttribute
-    name: UniqueKeyAttribute
-- uid: Intranet.Labor.Model.labor
-  name: Intranet.Labor.Model.labor
-  items:
-  - uid: Intranet.Labor.Model.labor.BabyDiaperTestValue
-    name: BabyDiaperTestValue
-  - uid: Intranet.Labor.Model.labor.IncontinencePadTestValue
-    name: IncontinencePadTestValue
-  - uid: Intranet.Labor.Model.labor.RwType
-    name: RwType
-  - uid: Intranet.Labor.Model.labor.TestSheet
+  - uid: Intranet.Labor.Model.TestSheet
     name: TestSheet
-  - uid: Intranet.Labor.Model.labor.TestTypeBabyDiaper
+  - uid: Intranet.Labor.Model.TestTypeBabyDiaper
     name: TestTypeBabyDiaper
-  - uid: Intranet.Labor.Model.labor.TestTypeIncontinencePad
+  - uid: Intranet.Labor.Model.TestTypeIncontinencePad
     name: TestTypeIncontinencePad
-  - uid: Intranet.Labor.Model.labor.TestValue
+  - uid: Intranet.Labor.Model.TestValue
     name: TestValue
-  - uid: Intranet.Labor.Model.labor.TestValueNote
+  - uid: Intranet.Labor.Model.TestValueNote
     name: TestValueNote
-  - uid: Intranet.Labor.Model.labor.TestValueType
+  - uid: Intranet.Labor.Model.TestValueType
     name: TestValueType
 - uid: Intranet.Labor.ViewModel
   name: Intranet.Labor.ViewModel
@@ -296,6 +304,8 @@
     name: BabyDiaperTestInfo
   - uid: Intranet.Labor.ViewModel.BaseTestEditViewModel
     name: BaseTestEditViewModel
+  - uid: Intranet.Labor.ViewModel.DashboardInfo
+    name: DashboardInfo
   - uid: Intranet.Labor.ViewModel.DashboardItem
     name: DashboardItem
   - uid: Intranet.Labor.ViewModel.DashboardNote
@@ -336,18 +346,10 @@
     name: LaborHomeViewModel
   - uid: Intranet.Labor.ViewModel.ProductionOrderItem
     name: ProductionOrderItem
+  - uid: Intranet.Labor.ViewModel.RunningProductionOrder
+    name: RunningProductionOrder
   - uid: Intranet.Labor.ViewModel.TestNote
     name: TestNote
-- uid: Intranet.Labor.ViewModel.LaborCreator
-  name: Intranet.Labor.ViewModel.LaborCreator
-  items:
-  - uid: Intranet.Labor.ViewModel.LaborCreator.RunningProductionOrder
-    name: RunningProductionOrder
-- uid: Intranet.Labor.ViewModel.LaborDashboard
-  name: Intranet.Labor.ViewModel.LaborDashboard
-  items:
-  - uid: Intranet.Labor.ViewModel.LaborDashboard.DashboardInfo
-    name: DashboardInfo
 - uid: Intranet.Model
   name: Intranet.Model
   items:
@@ -357,8 +359,6 @@
     name: ModuleType
   - uid: Intranet.Model.Role
     name: Role
-  - uid: Intranet.Model.UniqueKeyAttribute
-    name: UniqueKeyAttribute
 - uid: Intranet.ViewModel
   name: Intranet.ViewModel
   items:
@@ -381,6 +381,8 @@
     name: FilterConfig
   - uid: Intranet.Web.MvcApplication
     name: MvcApplication
+  - uid: Intranet.Web.ResourceConfig
+    name: ResourceConfig
   - uid: Intranet.Web.RouteConfig
     name: RouteConfig
 - uid: Intranet.Web.Areas.Labor
@@ -397,16 +399,6 @@
     name: BabyDiaperRewetController
   - uid: Intranet.Web.Areas.Labor.Controllers.HistoryController
     name: HistoryController
-  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorBll
-    name: ILaborCreatorBll
-  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborCreatorService
-    name: ILaborCreatorService
-  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardBll
-    name: ILaborDashboardBll
-  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardHelper
-    name: ILaborDashboardHelper
-  - uid: Intranet.Web.Areas.Labor.Controllers.ILaborDashboardService
-    name: ILaborDashboardService
   - uid: Intranet.Web.Areas.Labor.Controllers.InkoAquisitionController
     name: InkoAquisitionController
   - uid: Intranet.Web.Areas.Labor.Controllers.InkoRetentionController
@@ -415,26 +407,14 @@
     name: InkoRewetController
   - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorBabyController
     name: LaborCreatorBabyController
-  - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorBll
-    name: LaborCreatorBll
   - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorController
     name: LaborCreatorController
   - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorInkoController
     name: LaborCreatorInkoController
-  - uid: Intranet.Web.Areas.Labor.Controllers.LaborCreatorService
-    name: LaborCreatorService
-  - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardBll
-    name: LaborDashboardBll
   - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardController
     name: LaborDashboardController
-  - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardHelper
-    name: LaborDashboardHelper
-  - uid: Intranet.Web.Areas.Labor.Controllers.LaborDashboardService
-    name: LaborDashboardService
   - uid: Intranet.Web.Areas.Labor.Controllers.LaborHomeController
     name: LaborHomeController
-  - uid: Intranet.Web.Areas.Labor.Controllers.ShiftHelper
-    name: ShiftHelper
 - uid: Intranet.Web.Controllers
   name: Intranet.Web.Controllers
   items:

@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: CheckDisableBll
     path: .src/Intranet/Bll/CheckDisableBll.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleRepository
     path: .src/Intranet/Bll/CheckDisableBll.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/CheckDisableBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetModule
     path: .src/Intranet/Bll/CheckDisableBll.cs
-    startLine: 29
+    startLine: 34
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

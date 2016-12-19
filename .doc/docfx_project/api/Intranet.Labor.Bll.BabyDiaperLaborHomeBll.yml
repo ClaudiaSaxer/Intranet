@@ -17,15 +17,15 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaperLaborHomeBll
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
-  summary: "\nClass representing the bll of the labor home.\n"
+  summary: "\nClass representing the bll of the babydiaper labor home.\n"
   example: []
   syntax:
     content: 'public class BabyDiaperLaborHomeBll : ILaborHome'
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RoleRepository
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllLaborModulesForRoles
     path: .src/Intranet/Labor/Bll/BabyDiaperLaborHomeBll.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Intranet.Labor.Bll
   namespace: Intranet.Labor.Bll

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorCode
     path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorId
     path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -97,11 +97,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
     path: .src/Intranet/Labor/ViewModel/ErrorCode.cs
-    startLine: 21
+    startLine: 23
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

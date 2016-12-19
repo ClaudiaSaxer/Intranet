@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IHistoryService
     path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetHistoryViewModel
     path: .src/Intranet/Labor/Definitions/Bll/IHistoryService.cs

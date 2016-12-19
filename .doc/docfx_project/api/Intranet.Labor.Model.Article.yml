@@ -32,12 +32,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Article
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 10
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 14
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -75,12 +75,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ArticleId
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 18
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 22
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -132,25 +132,61 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ArticleNr
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 26
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 30
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the number of the article\n"
   example: []
   syntax:
-    content: public string ArticleNr { get; set; }
-    content.vb: Public Property ArticleNr As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      [Index("IX_Article_ArticleNr", IsUnique = true)]
+
+      public string ArticleNr { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      <Index("IX_Article_ArticleNr", IsUnique:=True)>
+
+      Public Property ArticleNr As String
     parameters: []
     return:
       type: System.String
       description: the number of the article
   overload: Intranet.Labor.Model.Article.ArticleNr*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_Article_ArticleNr
+    namedArguments:
+    - name: IsUnique
+      type: System.Boolean
+      value: true
   modifiers.csharp:
   - public
   - get
@@ -170,25 +206,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 33
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 39
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the name of the article\n"
   example: []
   syntax:
-    content: public string Name { get; set; }
-    content.vb: Public Property Name As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string Name { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property Name As String
     parameters: []
     return:
       type: System.String
       description: the name of the article
   overload: Intranet.Labor.Model.Article.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -208,12 +267,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ArticleType
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 39
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 47
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -246,12 +305,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductionOrders
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 45
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 53
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -284,12 +343,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet140Max
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 50
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 58
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -321,12 +380,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Rewet210Max
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 55
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 63
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -358,12 +417,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MinRetention
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 60
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 68
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -395,12 +454,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxRetention
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 65
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 73
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -432,12 +491,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxPenetrationAfter4Time
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 70
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 78
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -469,12 +528,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxInkoRewet
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 75
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 83
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -506,12 +565,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MinInkoRetention
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 80
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 88
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -543,12 +602,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxHyTec1
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 85
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 93
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -580,12 +639,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxHyTec2
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 90
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 98
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -617,12 +676,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxHyTec3
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 95
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 103
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -654,12 +713,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MaxInkoRewetAfterAquisition
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 100
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 108
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -691,24 +750,47 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ProductName
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 105
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 113
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the product name\n"
   example: []
   syntax:
-    content: public string ProductName { get; set; }
-    content.vb: Public Property ProductName As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string ProductName { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property ProductName As String
     parameters: []
     return:
       type: System.String
   overload: Intranet.Labor.Model.Article.ProductName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -728,24 +810,47 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/Article.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/Article.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SizeName
-    path: .src/Intranet/Labor/Model/intigena/Article.cs
-    startLine: 110
+    path: .src/Intranet/Labor/Model/Intigena/Article.cs
+    startLine: 120
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the size name\n"
   example: []
   syntax:
-    content: public string SizeName { get; set; }
-    content.vb: Public Property SizeName As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string SizeName { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property SizeName As String
     parameters: []
     return:
       type: System.String
   overload: Intranet.Labor.Model.Article.SizeName*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get

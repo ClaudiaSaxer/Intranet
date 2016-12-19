@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IDatabaseFactory
     path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common
@@ -58,11 +58,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetDb
     path: .src/Intranet/Common/Db/Definition/IDatabaseFactory.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Intranet.Common
   namespace: Intranet.Common

@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/IntranetContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IntranetContext
     path: .src/Intranet/Dal/IntranetContext.cs
@@ -84,7 +84,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/IntranetContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Roles
     path: .src/Intranet/Dal/IntranetContext.cs
@@ -121,7 +121,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/IntranetContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Modules
     path: .src/Intranet/Dal/IntranetContext.cs
@@ -158,11 +158,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Dal/IntranetContext.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: OnModelCreating
     path: .src/Intranet/Dal/IntranetContext.cs
-    startLine: 46
+    startLine: 45
   assemblies:
   - Intranet.Dal
   namespace: Intranet.Dal

@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/NavigationViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: NavigationViewModel
     path: .src/Intranet/ViewModel/NavigationViewModel.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -60,11 +60,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/NavigationViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MainModules
     path: .src/Intranet/ViewModel/NavigationViewModel.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -98,11 +98,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/NavigationViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: SettingModules
     path: .src/Intranet/ViewModel/NavigationViewModel.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel

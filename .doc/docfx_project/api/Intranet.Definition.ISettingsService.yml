@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ISettingsService
     path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -50,11 +50,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetSettingsViewModel
     path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-    startLine: 14
+    startLine: 18
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -81,11 +81,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: UpdateModuleSetting
     path: .src/Intranet/Definitions/Bll/ISettingsService.cs
-    startLine: 20
+    startLine: 24
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition

@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeService
     path: .src/Intranet/Bll/HomeService.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -70,11 +70,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeBll
     path: .src/Intranet/Bll/HomeService.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -107,11 +107,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: .ctor
     path: .src/Intranet/Bll/HomeService.cs
-    startLine: 26
+    startLine: 30
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -143,11 +143,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: GetHomeViewModel
     path: .src/Intranet/Bll/HomeService.cs
-    startLine: 40
+    startLine: 44
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

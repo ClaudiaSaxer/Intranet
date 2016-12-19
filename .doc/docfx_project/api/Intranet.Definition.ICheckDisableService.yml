@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/ICheckDisableService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ICheckDisableService
     path: .src/Intranet/Definitions/ICheckDisableService.cs
@@ -49,7 +49,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/ICheckDisableService.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IsVisible
     path: .src/Intranet/Definitions/ICheckDisableService.cs

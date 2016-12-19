@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardNote
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Message
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-    startLine: 14
+    startLine: 19
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Code
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-    startLine: 19
+    startLine: 25
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -137,11 +137,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ErrorMessage
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardNote.cs
-    startLine: 24
+    startLine: 31
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

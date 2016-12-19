@@ -7,8 +7,8 @@ items:
   children:
   - Intranet.Labor.Model.InstronValue.Average
   - Intranet.Labor.Model.InstronValue.Instron
-  - Intranet.Labor.Model.InstronValue.InstronRefId
   - Intranet.Labor.Model.InstronValue.InstronValueId
+  - Intranet.Labor.Model.InstronValue.IntstronId
   - Intranet.Labor.Model.InstronValue.Name
   - Intranet.Labor.Model.InstronValue.StandardDeviation
   langs:
@@ -20,12 +20,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InstronValue
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 9
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 13
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -63,12 +63,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: InstronValueId
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 17
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 21
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -120,25 +120,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 25
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 29
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the name of the instron value\n"
   example: []
   syntax:
-    content: public string Name { get; set; }
-    content.vb: Public Property Name As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string Name { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property Name As String
     parameters: []
     return:
       type: System.String
       description: The name of the instron value
   overload: Intranet.Labor.Model.InstronValue.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -158,12 +181,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Average
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 31
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 37
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -196,12 +219,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: StandardDeviation
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 37
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 43
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -234,75 +257,86 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Instron
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 43
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 49
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the Instron for the Value.\n"
   example: []
   syntax:
-    content: >-
-      [ForeignKey("InstronRefId")]
-
-      public Instron Instron { get; set; }
-    content.vb: >-
-      <ForeignKey("InstronRefId")>
-
-      Public Property Instron As Instron
+    content: public virtual Instron Instron { get; set; }
+    content.vb: Public Overridable Property Instron As Instron
     parameters: []
     return:
       type: Intranet.Labor.Model.Instron
       description: the instron for the value
   overload: Intranet.Labor.Model.InstronValue.Instron*
-  attributes:
-  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
-    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: InstronRefId
   modifiers.csharp:
   - public
+  - virtual
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Intranet.Labor.Model.InstronValue.InstronRefId
-  commentId: P:Intranet.Labor.Model.InstronValue.InstronRefId
-  id: InstronRefId
+  - Overridable
+- uid: Intranet.Labor.Model.InstronValue.IntstronId
+  commentId: P:Intranet.Labor.Model.InstronValue.IntstronId
+  id: IntstronId
   parent: Intranet.Labor.Model.InstronValue
   langs:
   - csharp
   - vb
-  name: InstronRefId
-  nameWithType: InstronValue.InstronRefId
-  fullName: Intranet.Labor.Model.InstronValue.InstronRefId
+  name: IntstronId
+  nameWithType: InstronValue.IntstronId
+  fullName: Intranet.Labor.Model.InstronValue.IntstronId
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: InstronRefId
-    path: .src/Intranet/Labor/Model/instron/InstronValue.cs
-    startLine: 50
+    id: IntstronId
+    path: .src/Intranet/Labor/Model/Instron/InstronValue.cs
+    startLine: 55
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the Instron ref id\n"
   example: []
   syntax:
-    content: public int InstronRefId { get; set; }
-    content.vb: Public Property InstronRefId As Integer
+    content: >-
+      [ForeignKey("Instron")]
+
+      [Index("IX_InstronValue_InstronId")]
+
+      public int IntstronId { get; set; }
+    content.vb: >-
+      <ForeignKey("Instron")>
+
+      <Index("IX_InstronValue_InstronId")>
+
+      Public Property IntstronId As Integer
     parameters: []
     return:
       type: System.Int32
       description: 'the instron ref id '
-  overload: Intranet.Labor.Model.InstronValue.InstronRefId*
+  overload: Intranet.Labor.Model.InstronValue.IntstronId*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ForeignKeyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Instron
+  - type: System.ComponentModel.DataAnnotations.Schema.IndexAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.IndexAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: IX_InstronValue_InstronId
   modifiers.csharp:
   - public
   - get
@@ -666,9 +700,9 @@ references:
   name: Instron
   nameWithType: Instron
   fullName: Intranet.Labor.Model.Instron
-- uid: Intranet.Labor.Model.InstronValue.InstronRefId*
-  commentId: Overload:Intranet.Labor.Model.InstronValue.InstronRefId
+- uid: Intranet.Labor.Model.InstronValue.IntstronId*
+  commentId: Overload:Intranet.Labor.Model.InstronValue.IntstronId
   isExternal: false
-  name: InstronRefId
-  nameWithType: InstronValue.InstronRefId
-  fullName: Intranet.Labor.Model.InstronValue.InstronRefId
+  name: IntstronId
+  nameWithType: InstronValue.IntstronId
+  fullName: Intranet.Labor.Model.InstronValue.IntstronId

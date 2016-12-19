@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/HomeViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeViewModel
     path: .src/Intranet/ViewModel/HomeViewModel.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -59,11 +59,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/HomeViewModel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Modules
     path: .src/Intranet/ViewModel/HomeViewModel.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel

@@ -16,11 +16,11 @@ items:
   type: Enum
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ArticleType
-    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
     startLine: 5
   assemblies:
   - Intranet.Labor.Model
@@ -49,11 +49,11 @@ items:
   type: Field
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: BabyDiaper
-    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
     startLine: 10
   assemblies:
   - Intranet.Labor.Model
@@ -83,11 +83,11 @@ items:
   type: Field
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IncontinencePad
-    path: .src/Intranet/Labor/Model/intigena/ArticleType.cs
+    path: .src/Intranet/Labor/Model/Intigena/ArticleType.cs
     startLine: 15
   assemblies:
   - Intranet.Labor.Model

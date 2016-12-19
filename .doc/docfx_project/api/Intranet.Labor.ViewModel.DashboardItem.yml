@@ -20,11 +20,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: DashboardItem
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 8
+    startLine: 12
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -63,11 +63,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: MachineName
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftItemsCurrent
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 22
+    startLine: 26
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -139,11 +139,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftItemsMinus1
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 27
+    startLine: 32
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -177,11 +177,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftItemsMinus2
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 32
+    startLine: 38
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel
@@ -215,11 +215,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftItemsMinus3
     path: .src/Intranet/Labor/ViewModel/LaborDashboard/DashboardItem.cs
-    startLine: 37
+    startLine: 44
   assemblies:
   - Intranet.Labor.ViewModel
   namespace: Intranet.Labor.ViewModel

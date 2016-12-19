@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: LogLevel
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -57,7 +57,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Trace
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Debug
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -127,7 +127,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Info
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -162,7 +162,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Warn
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -197,7 +197,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Error
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -232,7 +232,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Fatal
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
@@ -267,7 +267,7 @@ items:
   source:
     remote:
       path: .src/Intranet/Common/Logging/Definition/LogLevel.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Off
     path: .src/Intranet/Common/Logging/Definition/LogLevel.cs

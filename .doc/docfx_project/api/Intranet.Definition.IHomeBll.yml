@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/IHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: IHomeBll
     path: .src/Intranet/Definitions/Bll/IHomeBll.cs
-    startLine: 9
+    startLine: 13
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition
@@ -49,11 +49,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Definitions/Bll/IHomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllVisibleModulesForRoles
     path: .src/Intranet/Definitions/Bll/IHomeBll.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - Intranet.Definition
   namespace: Intranet.Definition

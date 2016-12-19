@@ -18,11 +18,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/ModuleSetting.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ModuleSetting
     path: .src/Intranet/ViewModel/ModuleSetting.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -61,11 +61,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/ModuleSetting.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Id
     path: .src/Intranet/ViewModel/ModuleSetting.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -99,11 +99,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/ModuleSetting.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
     path: .src/Intranet/ViewModel/ModuleSetting.cs
-    startLine: 22
+    startLine: 25
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel
@@ -137,11 +137,11 @@ items:
   source:
     remote:
       path: .src/Intranet/ViewModel/ModuleSetting.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Visible
     path: .src/Intranet/ViewModel/ModuleSetting.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - Intranet.ViewModel
   namespace: Intranet.ViewModel

@@ -8,7 +8,7 @@ items:
   - Intranet.Labor.Model.ShiftSchedule.EndDay
   - Intranet.Labor.Model.ShiftSchedule.EndTime
   - Intranet.Labor.Model.ShiftSchedule.Name
-  - Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  - Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
   - Intranet.Labor.Model.ShiftSchedule.ShiftType
   - Intranet.Labor.Model.ShiftSchedule.StartDay
   - Intranet.Labor.Model.ShiftSchedule.StartTime
@@ -21,12 +21,12 @@ items:
   type: Class
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftSchedule
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 9
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 13
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -51,25 +51,25 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
-  commentId: P:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
-  id: ShiftScheduleID
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
+  commentId: P:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
+  id: ShiftScheduleId
   parent: Intranet.Labor.Model.ShiftSchedule
   langs:
   - csharp
   - vb
-  name: ShiftScheduleID
-  nameWithType: ShiftSchedule.ShiftScheduleID
-  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  name: ShiftScheduleId
+  nameWithType: ShiftSchedule.ShiftScheduleId
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
-    id: ShiftScheduleID
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 17
+    id: ShiftScheduleId
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 21
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -81,18 +81,18 @@ items:
 
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-      public int ShiftScheduleID { get; set; }
+      public int ShiftScheduleId { get; set; }
     content.vb: >-
       <Key>
 
       <DatabaseGenerated(DatabaseGeneratedOption.Identity)>
 
-      Public Property ShiftScheduleID As Integer
+      Public Property ShiftScheduleId As Integer
     parameters: []
     return:
       type: System.Int32
       description: the id of the shift shedule
-  overload: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID*
+  overload: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId*
   attributes:
   - type: System.ComponentModel.DataAnnotations.KeyAttribute
     ctor: System.ComponentModel.DataAnnotations.KeyAttribute.#ctor
@@ -121,25 +121,48 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: Name
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 25
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 29
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
   summary: "\nGets or sets the name of the shift shedule\n"
   example: []
   syntax:
-    content: public string Name { get; set; }
-    content.vb: Public Property Name As String
+    content: >-
+      [Column(TypeName = "varchar")]
+
+      [StringLength(255)]
+
+      public string Name { get; set; }
+    content.vb: >-
+      <Column(TypeName:="varchar")>
+
+      <StringLength(255)>
+
+      Public Property Name As String
     parameters: []
     return:
       type: System.String
       description: the name of the shift shedule
   overload: Intranet.Labor.Model.ShiftSchedule.Name*
+  attributes:
+  - type: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute
+    ctor: System.ComponentModel.DataAnnotations.Schema.ColumnAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: TypeName
+      type: System.String
+      value: varchar
+  - type: System.ComponentModel.DataAnnotations.StringLengthAttribute
+    ctor: System.ComponentModel.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 255
   modifiers.csharp:
   - public
   - get
@@ -159,12 +182,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: StartDay
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 31
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 37
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -197,12 +220,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: EndDay
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 37
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 43
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -235,12 +258,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: StartTime
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 43
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 49
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -273,12 +296,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: EndTime
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 49
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 55
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -311,12 +334,12 @@ items:
   type: Property
   source:
     remote:
-      path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-      branch: f_doc
+      path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: ShiftType
-    path: .src/Intranet/Labor/Model/intigena/ShiftSchedule.cs
-    startLine: 55
+    path: .src/Intranet/Labor/Model/Intigena/ShiftSchedule.cs
+    startLine: 61
   assemblies:
   - Intranet.Labor.Model
   namespace: Intranet.Labor.Model
@@ -635,12 +658,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID*
-  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+- uid: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId*
+  commentId: Overload:Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
   isExternal: false
-  name: ShiftScheduleID
-  nameWithType: ShiftSchedule.ShiftScheduleID
-  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleID
+  name: ShiftScheduleId
+  nameWithType: ShiftSchedule.ShiftScheduleId
+  fullName: Intranet.Labor.Model.ShiftSchedule.ShiftScheduleId
 - uid: System.Int32
   commentId: T:System.Int32
   parent: System

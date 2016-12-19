@@ -17,11 +17,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: HomeBll
     path: .src/Intranet/Bll/HomeBll.cs
-    startLine: 12
+    startLine: 16
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -64,11 +64,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RoleRepository
     path: .src/Intranet/Bll/HomeBll.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll
@@ -101,11 +101,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Bll/HomeBll.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: AllVisibleModulesForRoles
     path: .src/Intranet/Bll/HomeBll.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Intranet.Bll
   namespace: Intranet.Bll

@@ -16,11 +16,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/App_Start/FilterConfig.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: FilterConfig
     path: .src/Intranet/Web/App_Start/FilterConfig.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web
@@ -54,11 +54,11 @@ items:
   source:
     remote:
       path: .src/Intranet/Web/App_Start/FilterConfig.cs
-      branch: f_doc
+      branch: dev
       repo: https://github.com/ClaudiaSaxer/Intranet.git
     id: RegisterGlobalFilters
     path: .src/Intranet/Web/App_Start/FilterConfig.cs
-    startLine: 13
+    startLine: 17
   assemblies:
   - Intranet.Web
   namespace: Intranet.Web
