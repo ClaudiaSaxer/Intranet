@@ -175,7 +175,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The RwType</returns>
         private static RwType GetMaxRw( Double value, Double articleMaxValue ) => articleMaxValue > value ? RwType.Ok : RwType.Worse;
 
-        private TestValue UpdateInkoAquisitionAvg( TestSheet testSheet, TestValue aquisitionTestAvg )
+        private void UpdateInkoAquisitionAvg( TestSheet testSheet, TestValue aquisitionTestAvg )
         {
             var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempInko = new IncontinencePadTestValue { RewetFreeRw = RwType.Ok };
@@ -232,10 +232,9 @@ namespace Intranet.Labor.Bll
                  == RwType.Worse )
                 tempInko.RewetAfterAcquisitionTimeRw = RwType.Worse;
             aquisitionTestAvg.IncontinencePadTestValue.RewetAfterAcquisitionTimeRw = tempInko.RewetAfterAcquisitionTimeRw;
-            return aquisitionTestAvg;
         }
 
-        private static TestValue UpdateInkoAquisitionStDev( TestSheet testSheet, TestValue aquisitionTestAvg, TestValue aquisitionTestStDev )
+        private static void UpdateInkoAquisitionStDev( TestSheet testSheet, TestValue aquisitionTestAvg, TestValue aquisitionTestStDev )
         {
             var tempInko = new IncontinencePadTestValue();
             var counter = 0;
@@ -292,7 +291,6 @@ namespace Intranet.Labor.Bll
                 aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWetWeight = Math.Sqrt( tempInko.RewetAfterAcquisitionTimeWetWeight / counter );
                 aquisitionTestStDev.IncontinencePadTestValue.RewetAfterAcquisitionTimeWeightDifference = Math.Sqrt( tempInko.RewetAfterAcquisitionTimeWeightDifference / counter );
             }
-            return aquisitionTestStDev;
         }
 
         #endregion

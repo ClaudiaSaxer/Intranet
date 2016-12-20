@@ -16,6 +16,7 @@ namespace Intranet.Labor.Dal.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         #endregion
@@ -344,7 +345,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersRetentionTestValueAverage = new TestValue
             {
@@ -355,7 +356,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersRetentionTestValueStandardDeviation = new TestValue
             {
@@ -366,7 +367,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersRewetTestValueAverage = new TestValue
             {
@@ -377,7 +378,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersRewetTestValueStandardDeviation = new TestValue
             {
@@ -388,7 +389,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersPenetrationTimeTestValueAverage = new TestValue
             {
@@ -399,7 +400,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
             var babyDiapersPenetrationTimeTestValueStandardDeviation = new TestValue
             {
@@ -410,7 +411,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 1
+                TestSheetId = 1
             };
 
             var babyDiapersRewetTest1 = new BabyDiaperTestValue
@@ -470,7 +471,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.BabyDiaper,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 TestValueNote = new List<TestValueNote> { testNote }
             };
             testNote.TestValue = babyDiapersRetentionTestValue1;
@@ -610,7 +611,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadRetentionTestValueAverage = new TestValue
             {
@@ -621,7 +622,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadRetentionTestValueStandardDeviation = new TestValue
             {
@@ -632,7 +633,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadRewetTestValueAverage = new TestValue
             {
@@ -643,7 +644,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadRewetTestValueStandardDeviation = new TestValue
             {
@@ -654,7 +655,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadAcquisitionTimeTestValueAverage = new TestValue
             {
@@ -665,7 +666,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Average,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
             var incontinencePadAcquisitionTimeTestValueStandardDeviation = new TestValue
             {
@@ -676,7 +677,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.StandardDeviation,
-                TestSheetRefId = 2
+                TestSheetId = 2
             };
 
             var incontinencePadRewetTest1 = new IncontinencePadTestValue
@@ -727,7 +728,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 2,
+                TestSheetId = 2,
                 TestValueNote = new List<TestValueNote> { testNote2 }
             };
             var incontinencePadAcquisitionTimeTestValue1 = new TestValue
@@ -740,7 +741,7 @@ namespace Intranet.Labor.Dal.Migrations
                 LastEditedPerson = "Hans",
                 ArticleTestType = ArticleType.IncontinencePad,
                 TestValueType = TestValueType.Single,
-                TestSheetRefId = 2,
+                TestSheetId = 2,
                 TestValueNote = new List<TestValueNote> { testNote2 }
             };
             testNote.TestValue = incontinencePadRetentionTestValue1;

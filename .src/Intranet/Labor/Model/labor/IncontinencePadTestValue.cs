@@ -1,6 +1,7 @@
 ﻿#region Usings
 
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #endregion
@@ -19,6 +20,7 @@ namespace Intranet.Labor.Model
         /// </summary>
         /// <value>the incontinence pad test value id </value>
         [ForeignKey( "TestValue" )]
+        [Key]
         public Int32 IncontinencePadTestValueId { get; set; }
 
         /// <summary>

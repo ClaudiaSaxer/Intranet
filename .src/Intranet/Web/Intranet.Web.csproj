@@ -256,9 +256,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\GlobalResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalResources.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\ResourceConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRetentionController.cs" />
     <Compile Include="Areas\Labor\Controllers\BabyDiaperRewetController.cs" />
@@ -532,6 +538,12 @@
   <ItemGroup>
     <Content Include="resources\js\jquery-3.1.1.min.map" />
     <Content Include="resources\js\jquery-3.1.1.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\GlobalResources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>GlobalResources.Designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

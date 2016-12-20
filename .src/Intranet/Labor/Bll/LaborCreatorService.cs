@@ -51,22 +51,22 @@ namespace Intranet.Labor.Bll
             var runningTestSheets = LaborCreatorBll.RunningTestSheets();
 
             if ( runningTestSheets != null )
-                LaborCreatorBll.RunningTestSheets()
-                               .ForEach( sheet => productionOrders.Add(
-                                             new RunningProductionOrder
-                                             {
-                                                 PoId = sheet.TestSheetId,
-                                                 PoName = sheet.FaNr,
-                                                 Description = sheet.ArticleType.ToString(),
-                                                 AreaName = "Labor",
-                                                 ControllerName =
-                                                     sheet.ArticleType == ArticleType.BabyDiaper
-                                                         ? "LaborCreatorBaby"
-                                                         : "LaborCreatorInko",
-                                                 ActionName = "Edit"
-                                             } ) );
-            else
-                runningTestSheets = new List<TestSheet>();
+                LaborCreatorBll
+                    .RunningTestSheets()
+                    .ForEach( x => productionOrders.Add(
+                                  new RunningProductionOrder
+                                  {
+                                      PoId = x.TestSheetId,
+                                      PoName = x.FaNr,
+                                      Description = x.ArticleType.ToString(),
+                                      AreaName = "Labor",
+                                      ControllerName =
+                                          x.ArticleType == ArticleType.BabyDiaper
+                                              ? "LaborCreatorBaby"
+                                              : "LaborCreatorInko",
+                                      ActionName = "Edit"
+                                  } ) );
+
             return new LaborCreatorViewModel
             {
                 ProductionOrders = productionOrders

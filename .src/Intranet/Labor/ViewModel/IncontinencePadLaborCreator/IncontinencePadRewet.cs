@@ -36,6 +36,7 @@ namespace Intranet.Labor.ViewModel
         ///     Gets or sets the RW type
         /// </summary>
         /// <value>the RW type</value>
+        // ReSharper disable once InconsistentNaming
         public RwType RewetRW { get; set; }
 
         #endregion

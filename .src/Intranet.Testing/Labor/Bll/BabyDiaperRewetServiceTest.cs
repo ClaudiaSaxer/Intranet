@@ -53,7 +53,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1, BabyDiaperTestValue = new BabyDiaperTestValue() }
+                new TestValue { TestValueId = 1, TestSheetId = 1, BabyDiaperTestValue = new BabyDiaperTestValue() }
             };
             var testSheetInDb = new TestSheet
             {
@@ -92,7 +92,7 @@ namespace Intranet.Labor.Bll.Test
                 new TestValue
                 {
                     TestValueId = 1,
-                    TestSheetRefId = 1,
+                    TestSheetId = 1,
                     LastEditedPerson = "Hans",
                     DayInYearOfArticleCreation = 123,
                     BabyDiaperTestValue =
@@ -169,7 +169,7 @@ namespace Intranet.Labor.Bll.Test
                 new TestValue
                 {
                     TestValueId = 1,
-                    TestSheetRefId = 1,
+                    TestSheetId = 1,
                     LastEditedPerson = "Hans",
                     DayInYearOfArticleCreation = 123,
                     BabyDiaperTestValue =
@@ -235,7 +235,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1 }
+                new TestValue { TestValueId = 1, TestSheetId = 1 }
             };
             var testSheetInDb = new TestSheet
             {
@@ -270,7 +270,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1, BabyDiaperTestValue = new BabyDiaperTestValue() }
+                new TestValue { TestValueId = 1, TestSheetId = 1, BabyDiaperTestValue = new BabyDiaperTestValue() }
             };
             var testSheetInDb = new TestSheet
             {

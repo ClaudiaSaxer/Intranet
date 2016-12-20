@@ -111,14 +111,14 @@ namespace Intranet.Labor.Bll.Test
             };
             var testValueReturnedFromHelper = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedDateTime = new DateTime( 2016, 1, 2 ),
                 LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
                 ArticleTestType = ArticleType.BabyDiaper,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorId = 1, Message = "Testnote" } }
             };
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
@@ -164,14 +164,14 @@ namespace Intranet.Labor.Bll.Test
             };
             var testValueReturnedFromHelper = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedDateTime = new DateTime( 2016, 1, 2 ),
                 LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
                 ArticleTestType = ArticleType.BabyDiaper,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorId = 1, Message = "Testnote" } }
             };
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
@@ -219,14 +219,14 @@ namespace Intranet.Labor.Bll.Test
             };
             var testValueReturnedFromHelper = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 CreatedDateTime = new DateTime( 2016, 1, 2 ),
                 LastEditedDateTime = new DateTime( 2016, 1, 2 ),
                 CreatedPerson = "Hans",
                 LastEditedPerson = "Hans",
                 DayInYearOfArticleCreation = 123,
                 ArticleTestType = ArticleType.BabyDiaper,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } }
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorId = 1, Message = "Testnote" } }
             };
             var testSheetDataFromDb = GetTestSheetTestData();
             var productionOrderDataFromDb = GetProductionOrderTestData();
@@ -295,7 +295,7 @@ namespace Intranet.Labor.Bll.Test
             };
             var testValueReturnedFromDb = new TestValue
             {
-                TestSheetRefId = 1,
+                TestSheetId = 1,
                 TestValueId = 2,
                 CreatedDateTime = new DateTime( 2016, 1, 2 ),
                 LastEditedDateTime = new DateTime( 2016, 1, 2 ),
@@ -303,7 +303,7 @@ namespace Intranet.Labor.Bll.Test
                 LastEditedPerson = "Fritz",
                 DayInYearOfArticleCreation = 123,
                 ArticleTestType = ArticleType.BabyDiaper,
-                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorRefId = 1, Message = "Testnote" } },
+                TestValueNote = new List<TestValueNote> { new TestValueNote { ErrorId = 1, Message = "Testnote" } },
                 BabyDiaperTestValue = new BabyDiaperTestValue
                 {
                     DiaperCreatedTime = new TimeSpan( 11, 11, 0 ),

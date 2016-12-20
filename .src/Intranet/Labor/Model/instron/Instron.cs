@@ -28,13 +28,16 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the ProductionOrder Number
         /// </summary>
         /// <value>The ProductionOrder Number of Instron.</value>
-        [UniqueKey]
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
+        [Index("IX_Instron_FaNr", IsUnique = true)]
         public String FaNr { get; set; }
 
         /// <summary>
         ///     Gets or sets the DateTime from the Instron Test
         /// </summary>
         /// <value>The Date and Time from the Test</value>
+        [Column(TypeName = "datetime2")]
         public DateTime TestDateTime { get; set; }
 
         /// <summary>

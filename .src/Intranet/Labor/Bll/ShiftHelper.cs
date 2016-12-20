@@ -87,8 +87,8 @@ namespace Intranet.Labor.Bll
                                                        ( ( schedule.StartDay == dayInWeekNow ) || ( schedule.EndDay == dayInWeekNow ) ) && ( schedule.StartTime.Hours <= now.Hour )
                                                        && ( schedule.StartTime.Minutes <= now.Minute ) && ( schedule.EndTime.Hours >= now.Hour )
                                                        && ( schedule.EndTime.Minutes >= now.Minute ) )
-                                               ?.ToList();
-            if ( shift?.Count == 1 )
+                                               .ToList();
+            if ( shift.Count == 1 )
                 return shift[0];
             Logger.Error( "More than one or no shift found for " + now );
             return null;
@@ -122,7 +122,7 @@ namespace Intranet.Labor.Bll
                                                         )
                                                         .OrderByDescending( schedule => schedule.StartDay )
                                                         .ThenByDescending( schedule => schedule.StartTime )
-                                                        ?.ToList();
+                                                        .ToList();
 
                 shift.AddRange( shiftafter );
             }

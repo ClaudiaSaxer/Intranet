@@ -53,7 +53,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1, IncontinencePadTestValue = new IncontinencePadTestValue(), ArticleTestType = ArticleType.IncontinencePad }
+                new TestValue { TestValueId = 1, TestSheetId = 1, IncontinencePadTestValue = new IncontinencePadTestValue(), ArticleTestType = ArticleType.IncontinencePad }
             };
             var testSheetInDb = new TestSheet
             {
@@ -91,7 +91,7 @@ namespace Intranet.Labor.Bll.Test
                 new TestValue
                 {
                     TestValueId = 1,
-                    TestSheetRefId = 1,
+                    TestSheetId = 1,
                     LastEditedPerson = "Hans",
                     DayInYearOfArticleCreation = 123,
                     IncontinencePadTestValue =
@@ -152,7 +152,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1 }
+                new TestValue { TestValueId = 1, TestSheetId = 1 }
             };
             var testSheetInDb = new TestSheet
             {
@@ -187,7 +187,7 @@ namespace Intranet.Labor.Bll.Test
         {
             var listOfTestValues = new List<TestValue>
             {
-                new TestValue { TestValueId = 1, TestSheetRefId = 1, IncontinencePadTestValue = new IncontinencePadTestValue(), ArticleTestType = ArticleType.IncontinencePad }
+                new TestValue { TestValueId = 1, TestSheetId = 1, IncontinencePadTestValue = new IncontinencePadTestValue(), ArticleTestType = ArticleType.IncontinencePad }
             };
             var testSheetInDb = new TestSheet
             {

@@ -24,6 +24,7 @@ namespace Intranet.Web
             FilterConfig.RegisterGlobalFilters( GlobalFilters.Filters );
             RouteConfig.RegisterRoutes( RouteTable.Routes );
             BundleConfig.RegisterBundles( BundleTable.Bundles );
+            ResourceConfig.Configurate();
         }
     }
 }

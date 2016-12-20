@@ -21,12 +21,14 @@ namespace Intranet.Labor.Model
         /// <value>the id of the shift shedule</value>
         [Key]
         [DatabaseGenerated( DatabaseGeneratedOption.Identity )]
-        public Int32 ShiftScheduleID { get; set; }
+        public Int32 ShiftScheduleId { get; set; }
 
         /// <summary>
         ///     Gets or sets the name of the shift shedule
         /// </summary>
         /// <value>the name of the shift shedule</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String Name { get; set; }
 
         /// <summary>

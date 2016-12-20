@@ -473,7 +473,7 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet };
 
-            var actual = serviceHelper.ToAcquisitionTimeAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkAcquisitionTimeAverage( expected ) );
+            serviceHelper.ToAcquisitionTimeAverage( IncontinencePadLaborCreatorServiceHelperData.TestValuesOkAcquisitionTimeAverage( expected ) );
         }
 
         /// <summary>
@@ -515,7 +515,7 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new IncontinencePadTestValue { TestType = TestTypeIncontinencePad.AcquisitionTimeAndRewet };
 
-            var actual = serviceHelper.ToAcquisitionTimeStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesOKAcquisitionTimeStandardDeviation( expected ) );
+            serviceHelper.ToAcquisitionTimeStandardDeviation( IncontinencePadLaborCreatorServiceHelperData.TestValuesOKAcquisitionTimeStandardDeviation( expected ) );
         }
 
         /// <summary>
@@ -1005,11 +1005,9 @@ namespace Intranet.Labor.Bll.Test
         {
             var serviceHelper = new IncontinencePadLaborCreatorServiceHelper( new NLogLoggerFactory() );
 
-            String something = null;
-
             Exception ex =
                 Assert.Throws<InvalidDataException>(
-                    () => serviceHelper.ValidateRequiredItem( something, "something" ) );
+                    () => serviceHelper.ValidateRequiredItem( (String) null, "something" ) );
 
             Assert.Equal( "Item something of type " + typeof(String) + " is required and can not be null", ex.Message );
         }

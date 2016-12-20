@@ -362,8 +362,8 @@ namespace Intranet.Labor.Bll.Test
                 EndDateTime = now,
                 StartDateTime = now,
                 FaId = 1,
-                ArticleRefId = 1,
-                MachineRefId = 1
+                ArticleId = 1,
+                MachineId = 1
             };
             var productionOrderListQuery = new List<ProductionOrder>
             {

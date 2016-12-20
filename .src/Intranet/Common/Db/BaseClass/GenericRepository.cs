@@ -49,11 +49,11 @@ namespace Intranet.Common
         {
             get
             {
-                if ( _context == null )
-                {
-                    Logger.Debug( "Request DbContext form database factory." );
-                    _context = DatabaseFactory.GetDb();
-                }
+                if ( _context != null )
+                    return _context;
+
+                Logger.Debug( "Request DbContext form database factory." );
+                _context = DatabaseFactory.GetDb();
                 return _context;
             }
         }

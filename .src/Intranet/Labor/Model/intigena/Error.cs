@@ -28,12 +28,16 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the value of the error Code
         /// </summary>
         /// <value>the value of the error code</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String ErrorCode { get; set; }
 
         /// <summary>
         ///     Gets or sets the value of the error
         /// </summary>
         /// <value>the value or a description of the error</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String Value { get; set; }
 
         /// <summary>

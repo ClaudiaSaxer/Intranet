@@ -11,6 +11,7 @@ namespace Intranet.Common
     /// <summary>
     ///     Interface representing a class able to commit changes to the database.
     /// </summary>
+    // ReSharper disable once UnusedTypeParameter
     public interface IDbCommit<TContext> : IDisposable
     {
         /// <summary>

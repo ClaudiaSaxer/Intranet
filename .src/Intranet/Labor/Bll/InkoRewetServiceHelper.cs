@@ -161,7 +161,7 @@ namespace Intranet.Labor.Bll
         /// <returns>The RwType</returns>
         private static RwType GetRewetFreeRwType( Double value, ProductionOrder productOrder ) => productOrder.Article.MaxInkoRewet > value ? RwType.Ok : RwType.Worse;
 
-        private TestValue UpdateInkoRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
+        private void UpdateInkoRewetAvg( TestSheet testSheet, TestValue rewetTestAvg )
         {
             var productionOrder = TestBll.GetProductionOrder( testSheet.FaNr );
             var tempInko = new IncontinencePadTestValue { RewetFreeRw = RwType.Ok };
@@ -189,10 +189,9 @@ namespace Intranet.Labor.Bll
             if ( GetRewetFreeRwType( rewetTestAvg.IncontinencePadTestValue.RewetFreeDifference, productionOrder ) == RwType.Worse )
                 tempInko.RewetFreeRw = RwType.Worse;
             rewetTestAvg.IncontinencePadTestValue.RewetFreeRw = tempInko.RewetFreeRw;
-            return rewetTestAvg;
         }
 
-        private static TestValue UpdateInkoRewetStDev( TestSheet testSheet, TestValue rewetTestAvg, TestValue rewetTestStDev )
+        private static void UpdateInkoRewetStDev( TestSheet testSheet, TestValue rewetTestAvg, TestValue rewetTestStDev )
         {
             var tempInko = new IncontinencePadTestValue();
             var counter = 0;
@@ -222,7 +221,6 @@ namespace Intranet.Labor.Bll
                 rewetTestStDev.IncontinencePadTestValue.RewetFreeWetValue = Math.Sqrt( tempInko.RewetFreeWetValue / counter );
                 rewetTestStDev.IncontinencePadTestValue.RewetFreeDifference = Math.Sqrt( tempInko.RewetFreeDifference / counter );
             }
-            return rewetTestStDev;
         }
 
         #endregion

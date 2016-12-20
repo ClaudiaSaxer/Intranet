@@ -114,7 +114,7 @@ namespace Intranet.Web.Test
             var testVaule = new TestValue
             {
                 TestValueId = 4,
-                TestSheetRefId = 5
+                TestSheetId = 5
             };
             var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionServiceForDeleteAndSave( testVaule );
             var controller = new BabyDiaperRetentionController( new NLogLoggerFactory() )
@@ -195,7 +195,7 @@ namespace Intranet.Web.Test
             var testVaule = new TestValue
             {
                 TestValueId = 4,
-                TestSheetRefId = 5
+                TestSheetId = 5
             };
             var babyDiaperRetentionService = MockHelperLaborControllerService.GetBabyDiaperRetentionServiceForDeleteAndSave( testVaule );
             var controller = new BabyDiaperRetentionController( new NLogLoggerFactory() )

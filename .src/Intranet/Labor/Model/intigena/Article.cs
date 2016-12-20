@@ -28,13 +28,17 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the number of the article
         /// </summary>
         /// <value>the number of the article</value>
-        [UniqueKey]
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
+        [Index("IX_Article_ArticleNr", IsUnique = true)]
         public String ArticleNr { get; set; }
 
         /// <summary>
         ///     Gets or sets the name of the article
         /// </summary>
         /// <value>the name of the article</value>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String Name { get; set; }
 
         /// <summary>
@@ -107,11 +111,15 @@ namespace Intranet.Labor.Model
         /// <summary>
         ///     Gets or sets the product name
         /// </summary>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String ProductName { get; set; }
 
         /// <summary>
         ///     Gets or sets the size name
         /// </summary>
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
         public String SizeName { get; set; }
 
         #endregion

@@ -28,7 +28,9 @@ namespace Intranet.Labor.Model
         ///     Gets or sets the number of the machine
         /// </summary>
         /// <value>the number of the machine</value>
-        [UniqueKey]
+        [Column(TypeName = "varchar")]
+        [StringLength(255)]
+        [Index("IX_Machine_MachineNr", IsUnique = true)]
         public String MachineNr { get; set; }
 
         /// <summary>

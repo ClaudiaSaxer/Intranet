@@ -85,7 +85,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Delete( Int32 id )
         {
             var deletedTest = BabyDiaperRetentionService.Delete( id );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = deletedTest.TestSheetId } );
         }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Intranet.Web.Areas.Labor.Controllers
         public ActionResult Save( BabyDiaperRetentionEditViewModel viewModel )
         {
             var savedModel = BabyDiaperRetentionService.Save( viewModel );
-            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetRefId } );
+            return RedirectToAction( "Edit", "LaborCreatorBaby", new { area = "Labor", id = savedModel.TestSheetId } );
         }
     }
 }

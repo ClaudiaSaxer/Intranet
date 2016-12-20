@@ -646,7 +646,7 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime, PenetrationRwType = RwType.Ok };
 
-            var actual = serviceHelper.ToPenetrationTimeAverage( BabyDiaperLaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage( expected ) );
+            serviceHelper.ToPenetrationTimeAverage( BabyDiaperLaborCreatorServiceHelperData.TestValuesOkPenetrationTimeAverage( expected ) );
         }
 
         /// <summary>
@@ -687,7 +687,7 @@ namespace Intranet.Labor.Bll.Test
             var serviceHelper = new BabyDiaperLaborCreatorServiceHelper( new NLogLoggerFactory() );
             var expected = new BabyDiaperTestValue { TestType = TestTypeBabyDiaper.RewetAndPenetrationTime, PenetrationRwType = RwType.Ok };
 
-            var actual = serviceHelper.ToPenetrationTimeStandardDeviation( BabyDiaperLaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected ) );
+            serviceHelper.ToPenetrationTimeStandardDeviation( BabyDiaperLaborCreatorServiceHelperData.TestValuesOKPenetrationTimeStandardDeviation( expected ) );
         }
 
         /// <summary>
@@ -1017,7 +1017,7 @@ namespace Intranet.Labor.Bll.Test
                 TestValueId = 1
             };
 
-            var actual = serviceHelper.toTestInfo( "gandalf", "you shall not pass", 666, 1 );
+            var actual = serviceHelper.ToTestInfo( "gandalf", "you shall not pass", 666, 1 );
 
             actual.ShouldBeEquivalentTo( expected );
         }
@@ -1128,6 +1128,7 @@ namespace Intranet.Labor.Bll.Test
 
             Exception ex =
                 Assert.Throws<InvalidDataException>(
+                    // ReSharper disable once ExpressionIsAlwaysNull
                     () => serviceHelper.ValidateRequiredItem( something, "something" ) );
 
             Assert.Equal( "Item something of type " + typeof(String) + " is required and can not be null", ex.Message );

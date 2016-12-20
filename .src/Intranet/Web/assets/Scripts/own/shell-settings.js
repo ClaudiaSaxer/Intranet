@@ -9,6 +9,9 @@ function sendForm(id, name, visibleStatus) {
             Name: name,
             Visible: visibleStatus
         }),
+        success: function () {
+            location.reload();
+        },
         error: function () {
             alert('Interner Server Error - Sichtbarkeitsänderung wurde nicht ausgeführt.');
         }
@@ -17,8 +20,9 @@ function sendForm(id, name, visibleStatus) {
 $(function () {
     $('.visible-toggle')
         .change(function () {
-        console.log('Toggle: ' + $(this).prop('checked'));
-        sendForm($(this).prop('id'), $(this).prop('name'), $(this).prop('checked'));
+        var $this = $(this);
+        console.log('Toggle: ' + $this.prop('checked'));
+        sendForm($this.prop('id'), $this.prop('name'), $this.prop('checked'));
     });
 });
 //# sourceMappingURL=shell-settings.js.map

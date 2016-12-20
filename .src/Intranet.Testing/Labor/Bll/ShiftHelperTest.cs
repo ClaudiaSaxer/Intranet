@@ -48,9 +48,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .Be( ShiftType.Morning );
+            target.GetCurrentShift()
+                  .Should()
+                  .Be( ShiftType.Morning );
         }
 
         /// <summary>
@@ -84,9 +84,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>
@@ -120,9 +120,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>
@@ -156,9 +156,9 @@ namespace Intranet.Labor.Bll.Test
                 ShiftScheduleRepository = shiftSheduleRepository
             };
 
-            var actual = target.GetCurrentShift()
-                               .Should()
-                               .BeNull( "because not existing" );
+            target.GetCurrentShift()
+                  .Should()
+                  .BeNull( "because not existing" );
         }
 
         /// <summary>
